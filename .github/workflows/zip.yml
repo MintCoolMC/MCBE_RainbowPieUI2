@@ -20,5 +20,5 @@ jobs:
       - name: Upload zip file
         uses: actions/upload-artifact@v3
         with:
-          name: project-zip
-          path: "*.zip"
+          name: MintUI_Project
+          path: "*.mcpack"

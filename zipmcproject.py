@@ -12,7 +12,7 @@ branch = data.get("$rainbowpieui_branch_name")
 mcversion = data.get("$rainbowpieui_version_minecraft_target")
 
 # Create the zip file name
-zip_file_name = f"{name}-v{version}.{branch}_{mcversion}.zip"
+zip_file_name = f"{name}-v{version}.{branch}_{mcversion}.mcpack"
 
 # Run the zip command
 os.system(f"zip -r \"{zip_file_name}\" . -x '.github/*' -x '.git/*' -x 'zipmcproject.py'")
