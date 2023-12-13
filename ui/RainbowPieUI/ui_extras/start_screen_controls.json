@@ -873,6 +873,7 @@
                 "controls": [
                   {
                     "rainbowpie_version_label@rainbowpie_ui_common.text_label": {
+                      "ignored": "$rainbowpieui_ci",
                       "$rainbowpie_localui_this_device_os|default": "NULL",
                       "$rainbowpie_localui_this_device_osc|default": "NULL",
                       "$rainbowpie_localui_this_control_mode|default": "NULL",
@@ -882,6 +883,87 @@
                       "size": [ "80% - 2px", 10 ],
                       "text_alignment": "left",
                       "text": "($mintui_pack_name + ' ' + $rainbowpieui_branch_display_name + ' ' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version + ' | ' + $rainbowpie_localui_this_device_osc + ' - ' + $rainbowpie_localui_this_device_os + ' | ' + $rainbowpie_localui_this_control_mode)",
+                      "layer": 1,
+                      "variables": [
+                        {
+                          "requires": "$game_pad",
+                          "$rainbowpie_localui_this_control_mode": "Controller"
+                        },
+                        {
+                          "requires": "$mouse",
+                          "$rainbowpie_localui_this_control_mode": "Keyboard & Mouse"
+                        },
+                        {
+                          "requires": "$touch",
+                          "$rainbowpie_localui_this_control_mode": "Touch"
+                        },
+                        {
+                          "requires": "$win10_edition",
+                          "$rainbowpie_localui_this_device_os": "Windows"
+                        },
+                        {
+                          "requires": "$is_win10_arm",
+                          "$rainbowpie_localui_this_device_os": "Windows ARM"
+                        },
+                        {
+                          "requires": "$is_windows_10_mobile",
+                          "$rainbowpie_localui_this_device_os": "Windows Mobile"
+                        },
+                        {
+                          "requires": "$xbox_one",
+                          "$rainbowpie_localui_this_device_os": "Xbox One"
+                        },
+                        {
+                          "requires": "$is_ios",
+                          "$rainbowpie_localui_this_device_os": "iOS"
+                        },
+                        {
+                          "requires": "$osx_edition",
+                          "$rainbowpie_localui_this_device_os": "Mac OS"
+                        },
+                        {
+                          "requires": "$is_android",
+                          "$rainbowpie_localui_this_device_os": "Android"
+                        },
+                        {
+                          "requires": "$google_os",
+                          "$rainbowpie_localui_this_device_osc": "Google"
+                        },
+                        {
+                          "requires": "$apple_os",
+                          "$rainbowpie_localui_this_device_osc": "Apple"
+                        },
+                        {
+                          "requires": "$microsoft_os",
+                          "$rainbowpie_localui_this_device_osc": "Microsoft"
+                        },
+                        {
+                          "requires": "$nx_os",
+                          "$rainbowpie_localui_this_device_osc": "NX"
+                        },
+                        {
+                          "requires": "$is_ps4",
+                          "$rainbowpie_localui_this_device_os": "PS4"
+                        },
+                        {
+                          "requires": "$console_edition",
+                          "$rainbowpie_localui_this_device_os": "Console"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rainbowpie_ci_version_label@rainbowpie_ui_common.text_label": {
+                      "ignored": "(not $rainbowpieui_ci)",
+                      "$rainbowpie_localui_this_device_os|default": "NULL",
+                      "$rainbowpie_localui_this_device_osc|default": "NULL",
+                      "$rainbowpie_localui_this_control_mode|default": "NULL",
+                      "offset": [ 2, 0 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "size": [ "80% - 2px", 10 ],
+                      "text_alignment": "left",
+                      "text": "($mintui_pack_name + ' ' + $rainbowpieui_branch_display_name + ' ' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_hotfix_version + '-' + $rainbowpieui_commit_id + ' | ' + $rainbowpie_localui_this_device_osc + ' - ' + $rainbowpie_localui_this_device_os + ' | ' + $rainbowpie_localui_this_control_mode)",
                       "layer": 1,
                       "variables": [
                         {
