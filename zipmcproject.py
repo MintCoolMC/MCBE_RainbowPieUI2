@@ -4,12 +4,12 @@ import zipfile
 import re
 
 def writeGlobalVarStr(key,value):
-  with open("ui/_global_variables.json", "r+", encoding="utf-8") as f:
+  with open("ui/_global_variables.json", "w", encoding="utf-8") as f:
     text = f.read()
-    pattern = r'"\$'+key+'": ".*?"$'
+    pattern = r'"\$'+key+'": ".*?"'
     text = re.sub(pattern, f'"$'+key+'": "'+value+'"', text)
     print("[writeVar] "+text)
-    f.seek(0)
+    # f.seek(0)
     f.write(text)
     # f.close()
 
