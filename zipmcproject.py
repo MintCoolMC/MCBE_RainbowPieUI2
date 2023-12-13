@@ -7,8 +7,8 @@ with open("ui/_global_variables.json", "r") as f:
   data = json.load(f)
 
 # Get the name and version values
-name = data["$mintui_pack_name"]
-version = data["$mintui_pack_version"]
+name = data.get("$mintui_pack_name")
+version = data.get("$mintui_pack_version")
 
 # Create the zip file name
 zip_file_name = f"{name}_{version}.zip"
