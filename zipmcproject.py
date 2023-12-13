@@ -5,6 +5,14 @@ import zipfile
 # Get the current commit id
 commit_id = os.popen("git rev-parse HEAD").read().strip()
 
+with open("ui/_global_variables.json", "r+", encoding="utf-8") as f:
+    text = f.read()
+    pattern = r'\$rainbowpieui_commit_id": ".*?"'
+    text = re.sub(pattern, f'$rainbowpieui_commit_id": "{commit_id}"', text)
+    f.seek(0)
+    f.write(text)
+    f.close()
+
 # Read the json file
 data = demjson.decode_file("ui/_global_variables.json")
 
