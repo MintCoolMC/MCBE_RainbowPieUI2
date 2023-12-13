@@ -16,7 +16,7 @@ def writeGlobalVarStr(key,value):
 commit_id = os.popen("git rev-parse --short HEAD").read().strip()
 branch = os.popen("git rev-parse --abbrev-ref HEAD").read().strip()
 
-writeGlobalVarStr("rainbowpieui_commit_id",commit_id)
+# writeGlobalVarStr("rainbowpieui_commit_id",commit_id)
 writeGlobalVarStr("rainbowpieui_branch_name",branch)
 os.system(f"zip -r \"test.mcpack\" . -x '.github/*' -x '.git/*' -x 'zipmcproject.py'")
 
