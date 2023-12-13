@@ -8,7 +8,6 @@ def writeGlobalVarStr(key,value):
     text = f.read()
     pattern = r'"\$'+key+'": ".*?"'
     text = re.sub(pattern, f'"$'+key+'": "'+value+'"', text)
-    print("[writeVar] "+text)
     f.seek(0)
     f.truncate(0)
     f.write(text)
