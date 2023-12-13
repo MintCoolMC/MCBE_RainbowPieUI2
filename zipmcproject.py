@@ -18,6 +18,7 @@ branch = os.popen("git rev-parse --abbrev-ref HEAD").read().strip()
 
 writeGlobalVarStr("rainbowpieui_commit_id",commit_id)
 writeGlobalVarStr("rainbowpieui_branch_name",branch)
+os.system(f"zip -r \"test.mcpack\" . -x '.github/*' -x '.git/*' -x 'zipmcproject.py'")
 
 # Read the json file
 data = demjson.decode_file("ui/_global_variables.json")
