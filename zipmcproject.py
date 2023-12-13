@@ -28,6 +28,8 @@ version = data.get("$mintui_pack_version")
 branch = data.get("$rainbowpieui_branch_name")
 mcversion = data.get("$rainbowpieui_version_minecraft_target")
 
+writeGlobalVarStr("rainbowpieui_full_version_name",version+"."+branch)
+
 # Create the zip file name
 zip_file_name = f"{name}-v{version}.{branch}_{mcversion}.mcpack"
 
