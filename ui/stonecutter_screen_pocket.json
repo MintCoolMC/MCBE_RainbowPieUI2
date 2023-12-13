@@ -7,7 +7,7 @@
     "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
   },
 
-  "right_navigation_tabs/pocket_tab_close_and_help_button": {
+  "right_navigation_tabs/close": {
     "ignored": true
   },
 
