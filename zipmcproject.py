@@ -2,6 +2,15 @@ import demjson
 import os
 import zipfile
 
+# Get the current commit id
+commit_id = os.popen("git rev-parse HEAD").read().strip()
+
+data["$rainbowpieui_commit_id"] = commit_id
+
+# Write back to the json file
+with open("ui/_global_variables.json", "w") as f:
+  demjson.encode(data, f, indent=4)
+
 # Read the json file
 data = demjson.decode_file("ui/_global_variables.json")
 
