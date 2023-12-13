@@ -8,12 +8,6 @@ commit_id = os.popen("git rev-parse HEAD").read().strip()
 # Read the json file
 data = demjson.decode_file("ui/_global_variables.json")
 
-data["$rainbowpieui_commit_id"] = commit_id
-
-# Write back to the json file
-with open("ui/_global_variables.json", "w") as f:
-  demjson.encode(data, f, indent=2, compactly=False)
-
 # Get the values
 name = data.get("$mintui_pack_name").replace(" ","")
 version = data.get("$mintui_pack_version")
