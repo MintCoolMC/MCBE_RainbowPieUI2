@@ -1,10 +1,10 @@
-import json
+import demjson
 import os
 import zipfile
 
 # Read the json file
 with open("ui/_global_variables.json", "r") as f:
-  data = json.load(f)
+  data = demjson.load(f)
 
 # Get the name and version values
 name = data.get("$mintui_pack_name")
