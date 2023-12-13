@@ -12,7 +12,7 @@ data["$rainbowpieui_commit_id"] = commit_id
 
 # Write back to the json file
 with open("ui/_global_variables.json", "w") as f:
-  demjson.encode(data, f, indent=4, compactly=False)
+  demjson.encode(data, f, compactly=False)
 
 # Get the values
 name = data.get("$mintui_pack_name").replace(" ","")
