@@ -3,10 +3,9 @@ import os
 import zipfile
 
 # Read the json file
-with open("ui/_global_variables.json", "r") as f:
-  data = demjson.decode(f)
+data = demjson.decode_file("ui/_global_variables.json")
 
-# Get the name and version values
+# Get the values
 name = data.get("$mintui_pack_name")
 version = data.get("$mintui_pack_version")
 
@@ -18,6 +17,3 @@ with zipfile.ZipFile(zip_file_name, "w") as z:
   for file in os.listdir("."):
     if file != "ui/_global_variables.json" and file != zip_file_name:
       z.write(file)
-
-# Upload the zip file
-# You can use the same upload action as before
