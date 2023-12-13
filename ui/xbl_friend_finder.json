@@ -1,0 +1,33 @@
+{
+  "namespace": "xbl_friend_finder",
+
+  "progress_loading/progress_loading_outline": {
+    "ignored": true
+  },
+
+  "message_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "main_panel/searching_profile_panel": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha"
+  },
+
+  "text_edit_panel/text_edit_box": {
+    "$rainbowpie_localui_editbox_enabled": true
+  },
+
+  "main_panel/find_friends_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "xbl_friend_finder": {
+    "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screenbackground_blur": true,
+    "$screen_content": "rainbowpieui_xbl_friend_finder.xbl_friend_finder_screen_content"
+  }
+}

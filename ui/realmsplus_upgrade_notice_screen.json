@@ -1,0 +1,17 @@
+{
+  "namespace": "realmsplus_upgrade_notice_screen",
+
+  "content/wall_of_text/the_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "content/buttons_row": {
+    "ignored": true
+  },
+
+  "screen": {
+    "$rainbowpie_localui_modified": true,
+    "$screen_content": "rainbowpieui_realmsplus_upgrade_notice_screen.main_content"
+  }
+}

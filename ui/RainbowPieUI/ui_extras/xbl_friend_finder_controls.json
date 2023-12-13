@@ -1,0 +1,36 @@
+{
+  "namespace": "rainbowpieui_xbl_friend_finder",
+
+  "xbl_friend_finder_screen_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "screen_content@rainbowpie_ui_common.screen_content": {
+          "$rainbowpie_localui_screen_content": [
+            {
+              "dialog@rainbowpie_ui_dialog.dialog_panel": {
+                "size": [ 250, 110 ],
+                "offset": [ 0, "-20%" ],
+                "$rainbowpie_localui_dialogheader_title": "xbox.profile.addFriend",
+                "$rainbowpie_localui_dialog_content": "rainbowpieui_xbl_friend_finder.dialog_content"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "dialog_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "main_panel@xbl_friend_finder.main_panel": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "namespace": "rainbowpie_ui_inventory",
+
+  "header_background": {
+    "type": "image",
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_inventory_header_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_header_alpha"
+  },
+
+  "live_player_renderer": {
+    "type": "panel",
+    "size": [ 40, 40 ],
+    "offset": [ "100%x", -10 ],
+    "anchor_to": "right_middle",
+    "anchor_from": "right_middle",
+    "controls": [
+      {
+        "live_player": {
+          "type": "custom",
+          "renderer": "live_player_renderer",
+          "property_bag": {
+            "#look_at_cursor": true
+          },
+          "layer": 1,
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@common.screen_exit_size_animation_push",
+            "@common.screen_exit_size_animation_pop",
+            "@common.screen_entrance_size_animation_push",
+            "@common.screen_entrance_size_animation_pop"
+          ]
+        }
+      }
+    ]
+  },
+
+  "header": {
+    "type": "panel",
+    "size": [ "100% - 8px", 23 ],
+    "offset": [ 0, 3 ],
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "layer": 10,
+
+    "$rainbowpie_localui_inventoryheader_title|default": "Default Inventory Header Title",
+    "$rainbowpie_localui_inventoryheader_title_bindings|default": [],
+    "$rainbowpie_localui_inventoryheader_extra_controls|default": "common.empty_panel",
+
+    "controls": [
+      {
+        "debug01@rainbowpie_ui_common.debug_draw": {
+          "$rainbowpie_localui_debug_name": "inventory_header"
+        }
+      },
+      {
+        "header_stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "title_background@rainbowpie_ui_inventory.header_background": {
+                "size": [ "fill", "100%" ],
+                "controls": [
+                  {
+                    "title_stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%", "100%" ],
+                      "controls": [
+                        {
+                          "padding_border": {
+                            "type": "panel",
+                            "size": [ 2, 0 ]
+                          }
+                        },
+                        {
+                          "title_panel": {
+                            "type": "panel",
+                            "size": [ "100%c", "100%" ],
+                            "controls": [
+                              {
+                                "title_label@rainbowpie_ui_common.text_label_notheme": {
+                                  "anchor_to": "center",
+                                  "anchor_from": "center",
+                                  "color": "$rainbowpie_ui_theme_inventory_header_title_color",
+                                  "text": "$rainbowpie_localui_inventoryheader_title",
+                                  "layer": 10,
+                                  "bindings": "$rainbowpie_localui_inventoryheader_title_bindings"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "padding_border2": {
+                            "type": "panel",
+                            "size": [ 2, 0 ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "$rainbowpie_localui_inventoryheader_extra_controls@$rainbowpie_localui_inventoryheader_extra_controls": {
+                "ignored": "($rainbowpie_localui_inventoryheader_extra_controls = 'common.empty_panel')"
+              }
+            },
+            // add tab in ft
+            {
+              "button_background@rainbowpie_ui_inventory.header_background": {
+                "size": [ "100%y", "100%" ],
+                "controls": [
+                  {
+                    "close_button@rainbowpie_ui_common.close_button": {
+                      "$rainbowpie_ui_theme_closebutton_default_color": "$rainbowpie_ui_theme_inventory_header_title_color",
+                      "$close_button_panel_size": [ "100%", "100%" ],
+                      "layer": 10,
+                      "size": [ "100%", "100%" ],
+                      "offset": [ 0, 0 ],
+                      "anchor_from": "center",
+                      "anchor_to": "center"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "header_pocket": {
+    "type": "panel",
+    "size": [ "100%", 25 ],
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "layer": 10,
+
+    "$rainbowpie_localui_inventoryheader_single_title|default": false,
+
+    "$rainbowpie_localui_inventoryheader_title|default": "Default Inventory Header Title",
+    "$rainbowpie_localui_inventoryheader_title_bindings|default": [],
+
+    "$rainbowpie_localui_inventoryheader_inventory_title|default": "Default Inventory Header Title",
+    "$rainbowpie_localui_inventoryheader_inventory_title_bindings|default": [],
+
+    "$rainbowpie_localui_inventoryheader_container_title|default": "Default Container Header Title",
+    "$rainbowpie_localui_inventoryheader_container_title_bindings|default": [],
+
+    "controls": [
+      {
+        "close_button@rainbowpie_ui_common.close_button": {
+          "$rainbowpie_ui_theme_closebutton_default_color": "$rainbowpie_ui_theme_inventory_header_title_color",
+          "$close_button_panel_size": [ "100%", "100%" ],
+          "layer": 10,
+          "size": [ "100%y", "100%" ],
+          "offset": [ 0, 0 ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle"
+        }
+      },
+      {
+        "title_background@rainbowpie_ui_inventory.header_background": {
+          "size": [ "100%", "100%" ]
+        }
+      },
+      {
+        "title_label@rainbowpie_ui_common.text_label_notheme": {
+          "ignored": "(not $rainbowpie_localui_inventoryheader_single_title)",
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "color": "$rainbowpie_ui_theme_inventory_header_title_color",
+          "text": "$rainbowpie_localui_inventoryheader_title",
+          "layer": 10,
+          "bindings": "$rainbowpie_localui_inventoryheader_title_bindings"
+        }
+      },
+      {
+        "header_stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", "100%" ],
+          "ignored": "$rainbowpie_localui_inventoryheader_single_title",
+          "controls": [
+            {
+              "inventory_title": {
+                "type": "panel",
+                "size": [ "50%", "100%" ],
+                "controls": [
+                  {
+                    "title_label@rainbowpie_ui_common.text_label_notheme": {
+                      "anchor_to": "center",
+                      "anchor_from": "center",
+                      "color": "$rainbowpie_ui_theme_inventory_header_title_color",
+                      "text": "$rainbowpie_localui_inventoryheader_inventory_title",
+                      "layer": 10,
+                      "bindings": "$rainbowpie_localui_inventoryheader_inventory_title_bindings"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "container_title": {
+                "type": "panel",
+                "size": [ "50%", "100%" ],
+                "controls": [
+                  {
+                    "title_label@rainbowpie_ui_common.text_label_notheme": {
+                      "anchor_to": "center",
+                      "anchor_from": "center",
+                      "color": "$rainbowpie_ui_theme_inventory_header_title_color",
+                      "text": "$rainbowpie_localui_inventoryheader_container_title",
+                      "layer": 10,
+                      "bindings": "$rainbowpie_localui_inventoryheader_container_title_bindings"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

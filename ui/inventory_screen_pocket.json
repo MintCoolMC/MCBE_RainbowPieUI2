@@ -1,0 +1,138 @@
+{
+  "namespace": "crafting_pocket",
+
+  "crafting_arrow_down": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/arrow_down')",
+    "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  },
+
+  "scroll_panel_pocket": {
+    "$rainbowpie_localui_scrollbar_enabled": true
+  },
+
+  "right_tab_navigation_panel_pocket/content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "close_panel": {
+              "type": "panel",
+              "size": [ "100%", 33 ],
+              "controls": [
+                {
+                  "close_background@rainbowpie_ui_inventory.header_background": {
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "size": [ "100% - 4px", 33 ],
+                    "controls": [
+                      {
+                        "close_button@rainbowpie_ui_common.close_button": {
+                          "$rainbowpie_ui_theme_closebutton_default_color": "$rainbowpie_ui_theme_inventory_header_title_color",
+                          "layer": 10,
+                          "size": [ "100%", "100%" ],
+                          "offset": [ 0, 0 ],
+                          "anchor_from": "center",
+                          "anchor_to": "center"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "right_tab_navigation_panel_pocket/content/close": {
+    "ignored": true
+  },
+
+  "pocket_armor_tab_content/label_and_renderer/label_panel/armor_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_inventory_title_color"
+  },
+
+  "pocket_armor_tab_content/label_and_renderer/renderer_panel": {
+  },
+
+  "pocket_armor_tab_content/equipment_and_renderer/armor_panel/armor_and_player/player_preview_border/player_bg": {
+    "size": [ "100%", "100%" ],
+    "alpha": 0.4
+  },
+
+  "pocket_armor_tab_content/equipment_and_renderer/armor_panel/armor_and_player/player_preview_border": {
+    "texture": ""
+  },
+
+  "pocket_armor_tab_content/equipment_and_renderer/equipment/offhand_grid": {
+    "$background_images": "rainbowpie_ui_common.cell_image"
+  },
+
+  "pocket_armor_tab_content/equipment_and_renderer/equipment/armor_grid": {
+    "$background_images": "rainbowpie_ui_common.cell_image"
+  },
+
+  "hotbar_panel/bg": {
+    "ignored": true
+  },
+
+  "right_tab_content/bg": {
+    "ignored": true,
+    "$dialog_background": "rainbowpie_ui_common.inventory_background"
+  },
+
+  "right_tab": {
+    "$checked_bar_anchor": "right",
+    "$tab_panel": "rainbowpie_ui_tab.tab_panel",
+    "$tab_image_size": [ "100% - 4px", "100%" ],
+    "$tab_image_anchor": "right_middle",
+    "$tab_content_size": [ "100% - 4px", "100% - 8px" ],
+    "$tab_content_offset": [ 0, 0 ],
+    "$tab_content_anchor": "right_middle",
+    "$rainbowpie_toggle_unchecked_default_color": "$rainbowpie_ui_theme_inventory_header_color",
+    "$rainbowpie_toggle_unchecked_default_alpha": "$rainbowpie_ui_theme_inventory_header_alpha",
+    "$rainbowpie_toggle_unchecked_hover_color": "$rainbowpie_ui_theme_inventory_header_color",
+    "$rainbowpie_toggle_unchecked_hover_alpha": 0.4,
+    "$rainbowpie_toggle_checked_default_color": "$rainbowpie_ui_theme_inventory_background_color",
+    "$rainbowpie_toggle_checked_default_alpha": 0.5,
+    "$rainbowpie_toggle_checked_hover_color": "$rainbowpie_ui_theme_inventory_background_color",
+    "$rainbowpie_toggle_checked_hover_alpha": 0.6
+  },
+
+  "right_panel/right_background": {
+    "$dialog_background": "rainbowpie_ui_common.inventory_background"
+  },
+
+  "both_panels/offset_panel/center_bg": {
+    "ignored": true
+  },
+
+  "left_tab": {
+    "$checked_bar_anchor": "left",
+    "$tab_panel": "rainbowpie_ui_tab.tab_panel",
+    "$tab_image_size": [ "100% - 4px", "100%" ],
+    "$tab_image_anchor": "left_middle",
+    "$tab_content_size": [ "100% - 4px", "100% - 8px" ],
+    "$tab_content_offset": [ 0, 0 ],
+    "$tab_content_anchor": "left_middle",
+    "$rainbowpie_toggle_unchecked_default_color": "$rainbowpie_ui_theme_inventory_header_color",
+    "$rainbowpie_toggle_unchecked_default_alpha": "$rainbowpie_ui_theme_inventory_header_alpha",
+    "$rainbowpie_toggle_unchecked_hover_color": "$rainbowpie_ui_theme_inventory_header_color",
+    "$rainbowpie_toggle_unchecked_hover_alpha": 0.4,
+    "$rainbowpie_toggle_checked_default_color": "$rainbowpie_ui_theme_inventory_background_color",
+    "$rainbowpie_toggle_checked_default_alpha": 0.5,
+    "$rainbowpie_toggle_checked_hover_color": "$rainbowpie_ui_theme_inventory_background_color",
+    "$rainbowpie_toggle_checked_hover_alpha": 0.6
+  },
+
+  "left_panel/left_background": {
+    "$dialog_background": "rainbowpie_ui_common.inventory_background"
+  }
+}

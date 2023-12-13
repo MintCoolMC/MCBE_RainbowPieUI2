@@ -1,0 +1,40 @@
+{
+  "namespace": "pocket_containers",
+
+  "inventory_panel/scrolling_panel": {
+    "$rainbowpie_localui_scrollbar_enabled": true,
+    "$scroll_background_image_control": "rainbowpie_ui_common.container_scroll_background_image",
+    "$background_images": "rainbowpie_ui_common.cell_image"
+  },
+
+  "generic_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_inventory_title_color"
+  },
+
+  "panel/header": {
+    "ignored": true
+  },
+
+  "panel/bg": {
+    "ignored": true
+  },
+
+  "panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "inventory_header@rainbowpie_ui_inventory.header_pocket": {
+              "$rainbowpie_localui_inventoryheader_inventory_title": "chestScreen.header.player",
+              "$rainbowpie_localui_inventoryheader_container_title": "$container_title"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "namespace": "rainbowpie_ui_theme_preview",
+
+  "theme_preview": {
+    "type": "panel",
+    "controls": [
+      {
+        "background_preview": {
+          "type": "panel",
+          "size": [ 230, "100%" ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "controls": [
+            {
+              "background@mintui_background.background_fullscreen": {
+                "ignored": false,
+                "$background_layer": 1
+              }
+            },
+            {
+              "blur_layer_top@mintui_background.background_blur": {
+                "$background_ingame": true,
+                "$background_offset": [ 0, "-100% + 10px" ],
+                "$background_children_offset": [ 0, "100% - 10px" ],
+                "$background_layer": 2
+              }
+            },
+            {
+              "blur_layer_bottom@mintui_background.background_blur": {
+                "$background_ingame": true,
+                "$background_offset": [ 0, "100% - 6px" ],
+                "$background_children_offset": [ 0, "-100% + 6px" ],
+                "$background_layer": 2
+              }
+            },
+            {
+              "title_image@rainbowpie_ui_common.title_text": {
+                "$title_text_scale": 1.8,
+                "offset": [ 2, 8 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "layer": 3
+              }
+            },
+            {
+              "default_fake_button_1": {
+                "type": "image",
+                "size": [ 60, 9 ],
+                "offset": [ 2, -20 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "texture": "textures/ui/White",
+                "color": "$rainbowpie_ui_theme_button_background_default_color",
+                "alpha": "$rainbowpie_ui_theme_button_background_default_alpha",
+                "layer": 4,
+                "controls": [
+                  {
+                    "mini_text_1@rainbowpie_ui_common.text_label_notheme": {
+                      "size": [ "default", 6 ],
+                      "offset": [ 0, 0 ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "text": "Play",
+                      "font_scale_factor": 0.6,
+                      "layer": 4,
+                      "color": "$rainbowpie_ui_theme_button_text_default_color"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "hover_fake_button_2": {
+                "type": "image",
+                "size": [ 60, 9 ],
+                "offset": [ 2, -10 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "texture": "textures/ui/White",
+                "color": "$rainbowpie_ui_theme_button_background_hover_color",
+                "alpha": "$rainbowpie_ui_theme_button_background_hover_alpha",
+                "layer": 4,
+                "controls": [
+                  {
+                    "mini_text_1@rainbowpie_ui_common.text_label_notheme": {
+                      "size": [ "default", 6 ],
+                      "offset": [ 0, 0 ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "text": "Settings",
+                      "font_scale_factor": 0.6,
+                      "layer": 4,
+                      "color": "$rainbowpie_ui_theme_button_text_hover_color"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "default_fake_button_3": {
+                "type": "image",
+                "size": [ 60, 9 ],
+                "offset": [ 2, 0 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "texture": "textures/ui/White",
+                "color": "$rainbowpie_ui_theme_button_background_default_color",
+                "alpha": "$rainbowpie_ui_theme_button_background_default_alpha",
+                "layer": 4,
+                "controls": [
+                  {
+                    "mini_text_1@rainbowpie_ui_common.text_label_notheme": {
+                      "size": [ "default", 6 ],
+                      "offset": [ 0, 0 ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "text": "Marketplace",
+                      "font_scale_factor": 0.6,
+                      "layer": 4,
+                      "color": "$rainbowpie_ui_theme_button_text_default_color"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "default_fake_button_4": {
+                "type": "image",
+                "size": [ 60, 9 ],
+                "offset": [ 2, 10 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "texture": "textures/ui/White",
+                "color": "$rainbowpie_ui_theme_button_background_default_color",
+                "alpha": "$rainbowpie_ui_theme_button_background_default_alpha",
+                "layer": 4,
+                "controls": [
+                  {
+                    "mini_text_1@rainbowpie_ui_common.text_label_notheme": {
+                      "size": [ "default", 6 ],
+                      "offset": [ 0, 0 ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "text": "Music",
+                      "font_scale_factor": 0.6,
+                      "layer": 4,
+                      "color": "$rainbowpie_ui_theme_button_text_default_color"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "default_fake_button_5": {
+                "type": "image",
+                "size": [ 60, 9 ],
+                "offset": [ 2, 20 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "texture": "textures/ui/White",
+                "color": "$rainbowpie_ui_theme_button_background_default_color",
+                "alpha": "$rainbowpie_ui_theme_button_background_default_alpha",
+                "layer": 4,
+                "controls": [
+                  {
+                    "mini_text_1@rainbowpie_ui_common.text_label_notheme": {
+                      "size": [ "default", 6 ],
+                      "offset": [ 0, 0 ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "text": "Achievements",
+                      "font_scale_factor": 0.6,
+                      "layer": 4,
+                      "color": "$rainbowpie_ui_theme_button_text_default_color"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "red_fake_button_6": {
+                "type": "image",
+                "size": [ 60, 9 ],
+                "offset": [ 2, 30 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "texture": "textures/ui/White",
+                "color": [ 0.85098, 0.301961, 0.301961 ],
+                "alpha": 0.5,
+                "layer": 4,
+                "controls": [
+                  {
+                    "mini_text_1@rainbowpie_ui_common.text_label_notheme": {
+                      "size": [ "default", 6 ],
+                      "offset": [ 0, 0 ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "text": "Exit",
+                      "font_scale_factor": 0.6,
+                      "layer": 4,
+                      "color": [ 1.0, 1.0, 1.0 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "top_panel": {
+                "type": "image",
+                "size": [ "100%", 10 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "texture": "textures/ui/White",
+                "color": "$rainbowpie_ui_theme_topbar_background_color",
+                "alpha": "$rainbowpie_ui_theme_topbar_background_alpha",
+                "layer": 5,
+                "controls": [
+                  {
+                    "mini_text_1@rainbowpie_ui_common.text_label_notheme": {
+                      "size": [ "default", 6 ],
+                      "offset": [ 2, 0 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "text": "Theme Preview",
+                      "font_scale_factor": 0.6,
+                      "layer": 4,
+                      "color": "$rainbowpie_ui_theme_topbar_text_color"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "bottom_panel": {
+                "type": "image",
+                "size": [ "100%", 6 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "texture": "textures/ui/White",
+                "color": "$rainbowpie_ui_theme_text_background_color",
+                "alpha": "$rainbowpie_ui_theme_text_background_alpha",
+                "layer": 5,
+                "controls": [
+                  {
+                    "mini_text_1@rainbowpie_ui_common.text_label_notheme": {
+                      "size": [ "default", 6 ],
+                      "offset": [ 0.5, -0.5 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "text": "Rainbow Pie UI Theme Preview",
+                      "font_scale_factor": 0.6,
+                      "layer": 4,
+                      "color": "$rainbowpie_ui_theme_text_text_color"
+                    }
+                  },
+                  {
+                    "mini_text_2@rainbowpie_ui_common.text_label_notheme": {
+                      "size": [ "default", 6 ],
+                      "offset": [ -0.5, -0.5 ],
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "text": "v1.19.70",
+                      "font_scale_factor": 0.6,
+                      "layer": 4,
+                      "color": "$rainbowpie_ui_theme_text_text_color"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

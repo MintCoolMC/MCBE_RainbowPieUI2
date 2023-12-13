@@ -1,0 +1,54 @@
+{
+  "namespace": "grindstone_pocket",
+
+  "slots_panel/arrow": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/arrow_large')",
+    "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  },
+
+  "slots_panel/arrow/cross_out": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/crossout')"
+  },
+
+  "slots_panel": {
+    "$background_images": "rainbowpie_ui_common.cell_image"
+  },
+
+  "inventory_content/scrolling_panel": {
+    "$rainbowpie_localui_scrollbar_enabled": true,
+    "$scroll_background_image_control": "rainbowpie_ui_common.container_scroll_background_image",
+    "$background_images": "rainbowpie_ui_common.cell_image"
+  },
+
+  "repair_title_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_inventory_title_color"
+  },
+
+  "grindstone_panel/bg": {
+    "ignored": true
+  },
+
+  "header_and_content_stack_panel/header": {
+    "ignored": true
+  },
+
+  "header_and_content_stack_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "inventory_header@rainbowpie_ui_inventory.header_pocket": {
+              "$rainbowpie_localui_inventoryheader_single_title": true,
+              "$rainbowpie_localui_inventoryheader_title": "tile.grindstone.name"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "namespace": "toast_screen",
+
+  "text_stack_panel": {
+    "offset": [ -3, 3 ],
+    "controls": [
+      {
+        "title_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "title@toast_screen.toast_label": {
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "text": "#toast_title",
+                "text_alignment": "center",
+                "font_type": "$rainbowpie_ui_theme_global_font_name",
+                "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+                "color": "$rainbowpie_ui_theme_title_text_color",
+                "size": [ "100%", 10 ],
+                "offset": [ 0, 0 ],
+                "layer": 2,
+                "bindings": [
+                  {
+                    "binding_name": "#toast_title"
+                  },
+                  {
+                    "binding_name": "(not #toast_subtitle_visible)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "title_and_subtitle": {
+                "type": "panel",
+                "size": [ "100%", "100%" ],
+                "offset": [ 0, 2 ],
+                "controls": [
+                  {
+                    "title@toast_screen.toast_label": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "text": "#toast_title",
+                      "text_alignment": "center",
+                      "font_type": "$rainbowpie_ui_theme_global_font_name",
+                      "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+                      "color": "$rainbowpie_ui_theme_title_text_color",
+                      "size": [ "100%", 10 ],
+                      "offset": [ 0, 0 ],
+                      "layer": 2,
+                      "bindings": [
+                        {
+                          "binding_name": "#toast_title"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "subtext@toast_screen.toast_label": {
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "size": [ "100%", 10 ],
+                      "offset": [ 0, 0 ],
+                      "text": "#toast_subtitle",
+                      "text_alignment": "center",
+                      "font_type": "$rainbowpie_ui_theme_global_font_name",
+                      "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+                      "color": "$rainbowpie_ui_theme_title_text_color",
+                      "layer": 2,
+                      "bindings": [
+                        {
+                          "binding_name": "#toast_subtitle"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#toast_subtitle_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "toast_image": {
+    "size": [ 20, 20 ]
+  },
+
+  "resource_pack_icon/resource_pack_image": {
+    "size": [ 20, 20 ]
+  },
+
+  "popup": {
+    "$popup_size": [ "60%", 26 ],
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "background_toast_subtitle_visible": {
+              "type": "image",
+              "anchor_from": "center",
+              "anchor_to": "center",
+              "size": [ "100% - 6px", "100% - 2px" ],
+              "offset": [ 0, 2 ],
+              "texture": "textures/ui/White",
+              "color": "$rainbowpie_ui_theme_toast_background_color",
+              "alpha": "$rainbowpie_ui_theme_toast_background_alpha",
+              "bindings": [
+                {
+                  "binding_name": "#toast_subtitle_visible",
+                  "binding_name_override": "#visible"
+                }
+              ]
+            }
+          },
+          {
+            "icon": {
+              "layer": 3,
+              "type": "stack_panel",
+              "anchor_from": "left_middle",
+              "anchor_to": "left_middle",
+              "size": [ "100%c", "100%" ],
+              "offset": [ 3, 0 ],
+              "factory": {
+                "name": "toast_image_factory",
+                "control_ids": {
+                  "xbox_icon": "@toast_screen.xbox_icon",
+                  "third_party_achievement_icon": "@toast_screen.third_party_achievement_icon",
+                  "third_party_invite_icon": "@toast_screen.third_party_invite_icon",
+                  "icon_resource_pack": "@toast_screen.resource_pack_icon",
+                  "key_art_image": "@toast_screen.key_art_image",
+                  "persona_icon": "@toast_screen.persona_icon"
+                },
+                "factory_variables": [
+                  "$hide_xbox_live_icon"
+                ]
+              },
+              "bindings": [
+                {
+                  "binding_type": "global",
+                  "binding_name": "#toast_icon_section_content",
+                  "binding_name_override": "#collection_length"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "popup/popup_content/icon_padding": {
+    "ignored": true
+  },
+
+  "popup/popup_content/text_padding": {
+    "ignored": true
+  },
+
+  "popup/popup_content": {
+    "size": [ "100% - 6px", "100% - 6px" ]
+  },
+
+  "popup/background": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ "100% - 6px", "100% - 6px" ],
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_toast_background_color",
+    "alpha": "$rainbowpie_ui_theme_toast_background_alpha",
+    "bindings": [
+      {
+        "binding_name": "(not #toast_subtitle_visible)",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "formfitting_alpha_toast/bg/label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_title_text_color"
+  },
+
+  "formfitting_alpha_toast/bg": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_toast_background_color",
+    "alpha": "$rainbowpie_ui_theme_toast_background_alpha"
+  },
+
+  "toast_screen": {
+    "$rainbowpie_localui_screenbackground_ignored": true
+  }
+}

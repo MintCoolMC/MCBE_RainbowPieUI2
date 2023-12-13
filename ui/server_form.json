@@ -1,0 +1,38 @@
+{
+  "namespace": "server_form",
+
+  "third_party_server_screen": {
+    "$rainbowpie_localui_modified": true,
+    "force_render_below": true,
+    "$screen_content": "rainbowpieui_server_form.main_screen_content"
+  },
+
+  "custom_dropdown/dropdown": {
+    "$rainbowpie_localui_dropdown_rainbowpiebutton_enabled": true,
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_688c902f",
+        "$rainbowpie_localui_dropdown_show_button": true,
+        "$rainbowpie_localui_dropdown_enabled": true,
+        "$rainbowpie_localui_dropdown_content_panel": "rainbowpieui_server_form.custom_dropdown_content_panel"
+      }
+    ]
+  },
+
+  "custom_toggle": {
+    "$rainbowpie_localui_toggle_enabled": true
+  },
+
+  "custom_slider": {
+    "$rainbowpie_localui_sliderbar_enabled": true
+  },
+
+  "custom_step_slider": {
+    "$rainbowpie_localui_sliderbar_enabled": true
+  },
+
+  "custom_input": {
+    "$rainbowpie_localui_editbox_enabled": true,
+    "$max_text_edit_length": 32500
+  }
+}

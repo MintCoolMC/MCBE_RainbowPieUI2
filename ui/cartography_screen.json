@@ -1,0 +1,76 @@
+{
+  "namespace": "cartography",
+
+  "arrow_icon": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/arrow')",
+    "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  },
+
+  "plus_sign_icon": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/anvil-plus')",
+    "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  },
+
+  "text_edit_control": {
+    "$rainbowpie_localui_editbox_enabled": true,
+    "$edit_box_indent_size": [ "100% - 2px", "100% - 1px" ]
+  },
+
+  "output_description_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_inventory_title_color"
+  },
+
+  "text_box_panel/map_name_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_inventory_title_color"
+  },
+
+  "title_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_inventory_title_color"
+  },
+
+  "cartography_panel/root_panel/tab_close_and_help_button": {
+    "ignored": true
+  },
+
+  "top_half_panel": {
+    "offset": [ 0, 18 ]
+  },
+
+  "top_half_panel/title_panel/title_label": {
+    "ignored": true
+  },
+
+  "cartography_panel/root_panel/common_panel": {
+    "$dialog_background": "rainbowpie_ui_common.inventory_background",
+    "$show_close_button": false,
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "offset": [ 0, -2 ],
+    "size": [ "100% - 8px", "100% - 28px" ]
+  },
+
+  "cartography_panel/root_panel/cartography_screen_inventory": {
+    "$background_images": "rainbowpie_ui_common.cell_image",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "inventory_header@rainbowpie_ui_inventory.header": {
+              "$rainbowpie_localui_inventoryheader_title": "tile.cartography_table.name"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "namespace": "rainbowpieui_structure_editor",
+
+  "structure_editor_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$rainbowpie_localui_scrollbar_enabled": true,
+    "$rainbowpie_localui_sliderbar_enabled": true,
+    "$rainbowpie_localui_toggle_enabled": true,
+    "$rainbowpie_localui_editbox_enabled": true,
+    "controls": [
+      {
+        "header@rainbowpie_ui_common.screen_header": {
+          "$rainbowpie_localui_screenheader_ingame_anim1": true,
+          "$rainbowpie_localui_screenheader_title": "structure_block.title"
+        }
+      },
+      {
+        "screen_content@rainbowpie_ui_common.screen_content": {
+          "$rainbowpie_localui_screen_ingame_anim1": true,
+          "$rainbowpie_localui_screen_content": [
+            {
+              "content_background@rainbowpie_ui_common.global_background": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "168px", "100% - 20px" ],
+                "offset": [ 0, 20 ],
+                "layer": 1
+              }
+            },
+            {
+              "left_side@structure_editor.scrolling_panel": {
+                "size": [ "168px", "100% - 20px" ],
+                "offset": [ 0, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "layer": 10
+      
+              }
+            },
+            {
+              "right_side@structure_editor.right_divider_content": {
+                "size": [ "100% - 170px", "100% - 31px" ],
+                "offset": [ "170px", 23 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+      
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

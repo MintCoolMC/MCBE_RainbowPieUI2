@@ -1,0 +1,41 @@
+{
+  "namespace": "redstone",
+
+  "item_dropper_label": {
+    "ignored": true
+  },
+
+  "redstone_panel_top_half": {
+    "offset": [ 0, 19 ]
+  },
+
+  "panel/root_panel/common_panel": {
+    "$dialog_background": "rainbowpie_ui_common.inventory_background",
+    "$show_close_button": false,
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "offset": [ 0, -2 ],
+    "size": [ "100% - 8px", "100% - 28px" ]
+  },
+
+  "panel/root_panel/redstone_screen_inventory": {
+    "$background_images": "rainbowpie_ui_common.cell_image",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "inventory_header@rainbowpie_ui_inventory.header": {
+              "$rainbowpie_localui_inventoryheader_title": "$container_title"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "dropper_screen": {
+
+  }
+}

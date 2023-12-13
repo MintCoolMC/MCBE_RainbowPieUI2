@@ -1,0 +1,111 @@
+{
+  "namespace": "anvil_pocket",
+
+  "anvil_title_and_text_panel/text_edit_control": {
+    "$enable_profanity_filter": "$rainbowpie_ui_flag_input_enable_profanity_filter"
+  },
+
+  "anvil_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "maximized_input_dialog_panel@rainbowpieui_anvil.maximized_input_dialog_panel": {}
+          }
+        ]
+      }
+    ]
+  },
+
+  "anvil_title_and_text_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "maximized_input_button@rainbowpieui_anvil.maximized_input_toggle_base": {
+              "$button_image_size": [ "100% - 4px", "100% - 4px" ],
+              "anchor_from": "right_middle",
+              "anchor_to": "right_middle",
+              "size": [ "100%y", 20 ],
+              "offset": [ 0, -8 ],
+              "$toggle_group_forced_index": 1000,
+              "$toggle_view_binding_name": "maximized_input",
+              "bindings": [
+                {
+                  "binding_type": "view",
+                  "source_control_name": "maximized_input",
+                  "source_property_name": "(not #toggle_state)",
+                  "target_property_name": "#enabled"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "slots_panel/plus_sign": {
+    "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  },
+
+  "slots_panel/arrow": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/arrow_inactive')",
+    "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  },
+
+  "slots_panel/arrow/cross_out": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/crossout')"
+  },
+
+  "slots_panel": {
+    "$background_images": "rainbowpie_ui_common.cell_image"
+  },
+
+  "text_edit_control": {
+    "$rainbowpie_localui_editbox_enabled": true
+  },
+
+  "inventory_content/scrolling_panel": {
+    "$rainbowpie_localui_scrollbar_enabled": true,
+    "$scroll_background_image_control": "rainbowpie_ui_common.container_scroll_background_image",
+    "$background_images": "rainbowpie_ui_common.cell_image"
+  },
+
+  "generic_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_inventory_title_color"
+  },
+
+  "anvil_panel/bg": {
+    "ignored": true
+  },
+
+  "header_and_content_stack_panel/header": {
+    "ignored": true
+  },
+
+  "header_and_content_stack_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "inventory_header@rainbowpie_ui_inventory.header_pocket": {
+              "$rainbowpie_localui_inventoryheader_single_title": true,
+              "$rainbowpie_localui_inventoryheader_title": "tile.anvil.name"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

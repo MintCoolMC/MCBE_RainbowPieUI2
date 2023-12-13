@@ -1,0 +1,27 @@
+{
+  "namespace": "rainbowpie_module_hud_selected_item_id",
+
+  "hud_selected_item_id": {
+    "type": "panel",
+    "ignored": "(not $rainbowpie_ui_module_hud_selected_item_id)",
+    "controls": [
+      {
+        "selected_slot_item_id_aux@rainbowpie_modulelib_hud_item.selected_slot_item_id_aux": {}
+      },
+      {
+        "item_id_text@rainbowpie_ui_common.text_label": {
+          "offset": [ 0, 50 ],
+          "text": "#selected_item_id_aux_str",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "selected_slot_item_id_aux",
+              "source_property_name": "('§§' + #selected_item_id_aux_int)",
+              "target_property_name": "#selected_item_id_aux_str"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "namespace": "rainbowpieui_pack_settings",
+
+  "dialog_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "pack_scroll_panel@pack_settings.pack_scroll_panel": {
+          "$rainbowpie_localui_scrollbar_enabled": true,
+          "$scroll_size": [ 4, "100% - 4px" ],
+          "$scrolling_pane_size": [ "100% - 4px", "100%" ],
+          "$scrolling_pane_offset": [ 2, 0 ],
+          "$scroll_bar_left_padding_size": [ 2, 0 ],
+          "$scroll_bar_right_padding_size": [ 0, 0 ]
+        }
+      }
+    ]
+  },
+
+  "main_screen_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "screen_content@rainbowpie_ui_common.screen_content": {
+          "$rainbowpie_localui_screen_content": [
+            {
+              "dialog@rainbowpie_ui_dialog.dialog_panel": {
+                "size": "$extra_large_screen_size",
+                "max_size": "$extra_large_max_screen_size",
+                "$rainbowpie_localui_dialogheader_title": "#pack_settings_title",
+                "$rainbowpie_localui_dialogheader_title_bindings": [
+                  {
+                    "binding_name": "#pack_settings_title",
+                    "binding_type": "global"
+                  }
+                ],
+                "$rainbowpie_localui_dialog_content": "rainbowpieui_pack_settings.dialog_content"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

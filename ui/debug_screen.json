@@ -1,0 +1,7 @@
+{
+  "namespace": "debug_screen",
+
+  "debug_screen": {
+    "$rainbowpie_localui_screenbackground_ignored": true
+  }
+}

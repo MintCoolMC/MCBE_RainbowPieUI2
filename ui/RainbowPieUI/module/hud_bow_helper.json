@@ -1,0 +1,103 @@
+{
+  "namespace": "rainbowpie_module_hud_bow_helper",
+
+  "hud_bow_helper": {
+    "type": "panel",
+    "ignored": "(not $rainbowpie_ui_module_hud_bow_helper)",
+    "controls": [
+      {
+        "selected_slot_item_id_aux@rainbowpie_modulelib_hud_item.selected_slot_item_id_aux": {}
+      },
+      {
+        "arrow_count@rainbowpie_modulelib_hud_item.inventory_item_count": {
+          "$rainbowpie_localui_inventory_target_item_ids": "$rainbowpie_ui_moduleflag_hud_bow_helper_arrowids"
+        }
+      },
+      {
+        "counter_panel": {
+          "type": "panel",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [ "100%c", "100%c" ],
+          "offset": [ "50% + 120px", -6 ],
+          "visible": false,
+          "controls": [
+            {
+              "tip_text_background": {
+                "type": "image",
+                "size": [ "100%c + 4px", "100%c + 4px" ],
+                "texture": "($rainbowpie_ui_path_home + '/r_black')",
+                "alpha": 0.5,
+                "layer": 30,
+                "controls": [
+                  {
+                    "stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%c", 10 ],
+                      "controls": [
+                        {
+                          "count_title_panel": {
+                            "type": "panel",
+                            "size": [ "100%c", 10 ],
+                            "controls": [
+                              {
+                                "count_title@rainbowpie_ui_common.text_label": {
+                                  "text": "rainbowpie.ui.hud.bow_helper.arrow_count"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "padding_0": {
+                            "type": "panel",
+                            "size": [ 2, 2 ]
+                          }
+                        },
+                        {
+                          "count_text_panel": {
+                            "type": "panel",
+                            "size": [ "100%c", 10 ],
+                            "controls": [
+                              {
+                                "count_text@rainbowpie_ui_common.text_label": {
+                                  "text": "#arrow_item_total_count_str",
+                                  "bindings": [
+                                    {
+                                      "binding_type": "view",
+                                      "source_control_name": "arrow_count",
+                                      "source_property_name": "('§§' + #inventory_target_item_total_count_int)",
+                                      "target_property_name": "#arrow_item_total_count_str"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "selected_slot_item_id_aux",
+              "source_property_name": "('aux' + #selected_item_id_aux_int + ',')",
+              "target_property_name": "#selected_item_id_aux_str"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (($rainbowpie_ui_moduleflag_hud_bow_helper_bowids - #selected_item_id_aux_str) = $rainbowpie_ui_moduleflag_hud_bow_helper_bowids))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

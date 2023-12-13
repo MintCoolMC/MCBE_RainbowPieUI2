@@ -1,0 +1,54 @@
+
+{
+  "namespace": "smithing_table_2",
+
+  "arrow_icon": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/arrow_large')",
+    "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  },
+
+  "cross_out_icon_image": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/crossout')"
+  },
+
+  "upgrade_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_inventory_title_color"
+  },
+
+  "icon_and_text_panel": {
+    "ignored": true
+  },
+
+  "smithing_table_panel/root_panel/toolbar_anchor": {
+    "ignored": true
+  },
+
+  "smithing_table_panel/root_panel/common_panel": {
+    "$dialog_background": "rainbowpie_ui_common.inventory_background",
+    "$show_close_button": false,
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "offset": [ 0, -2 ],
+    "size": [ "100% - 8px", "100% - 28px" ]
+  },
+
+  "smithing_table_panel/root_panel/smithing_table_screen_inventory": {
+    "$background_images": "rainbowpie_ui_common.cell_image",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "inventory_header@rainbowpie_ui_inventory.header": {
+              "$rainbowpie_localui_inventoryheader_title": "container.smithing_table.upgrade"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

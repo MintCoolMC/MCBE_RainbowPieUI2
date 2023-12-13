@@ -1,0 +1,815 @@
+{
+  "namespace": "rainbowpieui_manifest_validation",
+
+  "verified_pack_description_panel": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ]
+  },
+
+  "verified_pack_description_item": {
+    "type": "panel",
+    "size": [ "100%", "default" ],
+    "$rainbowpie_localui_packverifiy_packuuid|default": "",
+    "$rainbowpie_localui_packverifiy_packdesc|default": "",
+    "controls": [
+      {
+        "text@rainbowpie_ui_common.text_label": {
+          "size": [ "100%", "default" ],
+          "text": "$rainbowpie_localui_packverifiy_packdesc"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#pack_id"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#pack_id = $rainbowpie_localui_packverifiy_packuuid)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "verify_detail_button_toggle_base@common_toggles.light_ui_toggle": {
+    "$unchecked_control": "rainbowpie_ui_toggle.toggle_button_unchecked",
+    "$checked_control": "rainbowpie_ui_toggle.toggle_button_checked",
+    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_button_unchecked_hover",
+    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_button_checked_hover",
+    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_button_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_button_unchecked_locked_hover",
+    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_button_checked_locked",
+    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_button_checked_locked_hover",
+
+    "$button_text_binding_type": "none",
+    "$button_binding_condition": "none",
+    "$button_text_grid_collection_name": "none",
+    "$button_text": "rainbowpie.ui.manifest_validation.verifiedDetail",
+
+    "$button_offset": [ 0, 0 ],
+
+    "$radio_toggle_group": true,
+    "$toggle_name": "rainbowpie_verified_pack_detail",
+    "$toggle_group_default_selected": 1,
+
+    "$toggle_group_forced_index": 0,
+
+    "$toggle_view_binding_name": ""
+  },
+
+  "verified_pack_item": {
+    "type": "panel",
+    "size": [ "100%", 25 ],
+    "$rainbowpie_localui_packverifiy_packuuid|default": "",
+    "$rainbowpie_localui_packverifiy_packname|default": "",
+    "$rainbowpie_localui_packverifiy_packauther|default": "",
+    "visible": false,
+    "controls": [
+      {
+        "background@rainbowpie_ui_dialog.content_background": {
+          "size": [ "100%", "100% - 1px" ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "controls": [
+            {
+              "title_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "anchor_to": "left_middle",
+                "anchor_from": "left_middle",
+                "size": [ "100% - 84px", "100%cm" ],
+                "offset": [ 2, 0 ],
+                "controls": [
+                  {
+                    "title_text@rainbowpie_ui_common.text_label": {
+                      "size": [ "default", "default" ],
+                      "text": "rainbowpie.ui.manifest_validation.verifiedPack",
+                      "color": [ 0.333, 1.0, 0.333 ]
+                    }
+                  },
+                  {
+                    "space": {
+                      "type": "panel",
+                      "size": [ 2, 2 ]
+                    }
+                  },
+                  {
+                    "text@rainbowpie_ui_common.text_label": {
+                      "size": [ "fill", "default" ],
+                      "text": "($rainbowpie_localui_packverifiy_packname + ' | ' + $rainbowpie_localui_packverifiy_packauther)"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#pack_id"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#pack_id = $rainbowpie_localui_packverifiy_packuuid)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "verified_pack_list_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", "100%c" ],
+    "clips_children": true,
+    "$rainbowpie_localui_packverifiy_item|default": [],
+    "controls": [
+      {
+        "verified_pack_list_items": {
+          "type": "stack_panel",
+          "size": [ "fill", "100%c" ],
+          "controls": "$rainbowpie_localui_packverifiy_item"
+        }
+      },
+      {
+        "detail_button_panel": {
+          "type": "panel",
+          "size": [ "100%c", 0 ],
+          "controls": [
+            {
+              "background@rainbowpie_ui_dialog.content_background": {
+                "offset": [ 0, 1 ],
+                "size": [ 80, 24 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "controls": [
+                  {
+                    "detail_button@rainbowpieui_manifest_validation.verify_detail_button_toggle_base": {
+                      "$button_image_size": [ "100% - 2px", "100% - 1px" ],
+                      "anchor_to": "center",
+                      "anchor_from": "center",
+                      "size": [ 80, 23 ],
+                      "$toggle_group_forced_index": 1000,
+                      "$toggle_view_binding_name": "open_detail_dialog"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "title_label@rainbowpie_ui_common.text_label": {
+    "font_scale_factor": 1.5
+  },
+
+  "scrolling_content": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "content_panel@rainbowpie_ui_dialog.content_background": {
+          "size": [ "100%", 50 ],
+          "controls": [
+            {
+              "pack_info_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100%", "100%" ],
+                "controls": [
+                  {
+                    "icon@manifest_validation.icon_image": {
+                      "layer": 1,
+                      "size": [ "100%y", "100%" ]
+                    }
+                  },
+                  {
+                    "title_and_description": {
+                      "type": "stack_panel",
+                      "size": [ "fill", "100%" ],
+                      "controls": [
+                        {
+                          "title_panel": {
+                            "type": "panel",
+                            "size": [ "100%", "100%c" ],
+                            "controls": [
+                              {
+                                "title_text_stack_panel": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
+                                  "size": [ "100% - 4px", "100%c" ],
+                                  "anchor_to": "center",
+                                  "anchor_from": "center",
+                                  "controls": [
+                                    {
+                                      "title@rainbowpieui_manifest_validation.title_label": {
+                                        "text": "#pack_header_title",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#pack_header_title",
+                                            "binding_condition": "visible"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "description_panel": {
+                            "type": "panel",
+                            "size": [ "100%", "fill" ],
+                            "controls": [
+                              {
+                                "description@rainbowpie_ui_common.text_label": {
+                                  "size": [ "100% - 4px", "100%" ],
+                                  "anchor_to": "center",
+                                  "anchor_from": "center",
+                                  "text": "#pack_header_description",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#pack_header_description",
+                                      "binding_condition": "visible"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "button_panel": {
+                      "type": "panel",
+                      "size": [ 87, "100%" ],
+                      "controls": [
+                        {
+                          "refresh@manifest_validation.refresh_text_button": {
+                            "$button_image_size": [ "100%", "100%" ],
+                            "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                            "size": [ "100% - 7px", 20 ],
+                            "offset": [ 0, 3.5 ],
+                            "anchor_to": "top_middle",
+                            "anchor_from": "top_middle",
+                            "layer": 1
+                          }
+                        },
+                        {
+                          "delete@manifest_validation.delete_text_button": {
+                            "$button_image_size": [ "100%", "100%" ],
+                            "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                            "size": [ "100% - 7px", 20 ],
+                            "offset": [ 0, -3.5 ],
+                            "anchor_to": "bottom_middle",
+                            "anchor_from": "bottom_middle",
+                            "layer": 1
+                          }
+                        }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_name": "#pack_id",
+                          "binding_condition": "visible"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(not (#pack_id = $mintui_pack_uuid))",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_0": {
+          "type": "panel",
+          "size": [ 1, 1 ]
+        }
+      },
+      {
+        "secondary_panel@rainbowpie_ui_dialog.content_background": {
+          "size": [ "100%", "100%c + 4px" ],
+          "controls": [
+            {
+              "stack_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [ "100% - 6px", "100%c" ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "controls": [
+                  {
+                    "title_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%", "100%cm" ],
+                      "controls": [
+                        {
+                          "title_text@rainbowpie_ui_common.text_label": {
+                            "size": [ "default", "default" ],
+                            "text": "manifestvalidation.packid"
+                          }
+                        },
+                        {
+                          "space": {
+                            "type": "panel",
+                            "size": [ 2, 2 ]
+                          }
+                        },
+                        {
+                          "text@rainbowpie_ui_common.text_label": {
+                            "size": [ "fill", "default" ],
+                            "text": "#pack_id",
+                            "bindings": [
+                              {
+                                "binding_name": "#pack_id",
+                                "binding_condition": "visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "version_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%", "100%cm" ],
+                      "controls": [
+                        {
+                          "title_text@rainbowpie_ui_common.text_label": {
+                            "size": [ "default", "default" ],
+                            "text": "manifestvalidation.packversion"
+                          }
+                        },
+                        {
+                          "space": {
+                            "type": "panel",
+                            "size": [ 2, 2 ]
+                          }
+                        },
+                        {
+                          "text@rainbowpie_ui_common.text_label": {
+                            "size": [ "fill", "default" ],
+                            "text": "#pack_version",
+                            "bindings": [
+                              {
+                                "binding_name": "#pack_version",
+                                "binding_condition": "visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%", "100%cm" ],
+                      "controls": [
+                        {
+                          "title_text@rainbowpie_ui_common.text_label": {
+                            "size": [ "default", "default" ],
+                            "text": "manifestvalidation.filelocation"
+                          }
+                        },
+                        {
+                          "space": {
+                            "type": "panel",
+                            "size": [ 2, 2 ]
+                          }
+                        },
+                        {
+                          "text@rainbowpie_ui_common.text_label": {
+                            "size": [ "fill", "default" ],
+                            "text": "#pack_path",
+                            "bindings": [
+                              {
+                                "binding_name": "#pack_path",
+                                "binding_condition": "visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "verified_item@rainbowpieui_verified_pack.verified_pack_list": {}
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ 1, 1 ]
+        }
+      },
+      {
+        "error_list@rainbowpieui_manifest_validation.list_title": {
+          "$rainbowpie_localui_list_title_text": "manifestvalidation.errorlist"
+        }
+      },
+      {
+        "error@rainbowpieui_manifest_validation.error_content_grid": {}
+      },
+      {
+        "end_background": {
+          "type": "panel",
+          "size": [ "100%", 0 ],
+          "controls": [
+            {
+              "secondary_panel@rainbowpie_ui_dialog.content_background": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, 1 ],
+                "size": [ "100%", 5000 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "error_content_grid": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "factory": {
+      "name": "pack_error_factory",
+      "control_name": "rainbowpieui_manifest_validation.error_pack_content_layout"
+    },
+    "collection_name": "pack_errors",
+    "bindings": [
+      {
+        "binding_name": "#error_grid_dimensions",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  "error_pack_content_layout": {
+    "type": "panel",
+    "size": [ "100%", "100%c + 1px" ],
+    "controls": [
+      {
+        "background@rainbowpie_ui_dialog.content_background": {
+          "size": [ "100%", "100%c" ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "controls": [
+            {
+              "error_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [ "100% - 8px", "100%c + 8px" ],
+                "controls": [
+                  {
+                    "error_header_panel": {
+                      "type": "panel",
+                      "size": [ "100%", "100%cm + 2px" ],
+                      "controls": [
+                        {
+                          "title_text@rainbowpie_ui_common.text_label": {
+                            "size": [ "default", "default" ],
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "text": "#error_type_label",
+                            "font_scale_factor": 1.2,
+                            "bindings": [
+                              {
+                                "binding_collection_name": "pack_errors",
+                                "binding_name": "#error_type_label",
+                                "binding_type": "collection"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "button@manifest_validation.clipboard_button": {
+                            "$button_image_size": [ "100%", "100%" ],
+                            "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+                            "anchor_from": "right_middle",
+                            "anchor_to": "right_middle",
+                            "bindings": [
+                              {
+                                "binding_name": "#has_errors_or_warnings",
+                                "binding_name_override": "#visible"
+                              },
+                              {
+                                "binding_collection_name": "pack_errors",
+                                "binding_type": "collection_details"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "error_text_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%", "100%cm" ],
+                      "controls": [
+                        {
+                          "error_text@rainbowpie_ui_common.text_label": {
+                            "size": [ 30, 10 ],
+                            "text": "manifestvalidation.issue"
+                          }
+                        },
+                        {
+                          "space": {
+                            "type": "panel",
+                            "size": [ 2, 2 ]
+                          }
+                        },
+                        {
+                          "error_text@rainbowpie_ui_common.text_label": {
+                            "size": [ "fill", "default" ],
+                            "text": "#error_content_label",
+                            "bindings": [
+                              {
+                                "binding_collection_name": "pack_errors",
+                                "binding_name": "#error_content_label",
+                                "binding_type": "collection"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_name": "#has_errors_or_warnings",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "list_title": {
+    "type": "panel",
+    "size": [ "100%", 14 ],
+    "controls": [
+      {
+        "list_title@rainbowpie_ui_common.title_background": {
+          "$rainbowpie_localui_list_title_text|default": "TITLE TEXT",
+          "$rainbowpie_localui_list_title_bindings|default": [],
+          "size": [ "100%", 14 ],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "controls": [
+            {
+              "text_panel": {
+                "type": "panel",
+                "size": [ "100% - 4px", 10 ],
+                "controls": [
+                  {
+                    "title@rainbowpie_ui_common.title_label": {
+                      "size": [ "100%", "100%" ],
+                      "text": "$rainbowpie_localui_list_title_text",
+                      "layer": 1,
+                      "bindings": "$rainbowpie_localui_list_title_bindings"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "dialog_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "scrolling_panel@common.scrolling_panel": {
+          "$rainbowpie_localui_scrollbar_enabled": true,
+          "size": [ "100%", "100%" ],
+          "layer": 1,
+          "$scrolling_pane_size": [ "100%", "100%" ],
+          "$scrolling_content": "rainbowpieui_manifest_validation.scrolling_content",
+          "$scroll_size": [ 4, "100%" ],
+          "$scroll_bar_left_padding_size": [ 0.5, 0 ],
+          "$scroll_bar_right_padding_size": [ 0, 0 ],
+          "$show_background": false
+        }
+      }
+    ]
+  },
+
+  "detail_scrolling_content": {
+    "type": "panel",
+    "size": [ "100%", "100%c + 4px" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100% - 6px", "100%c" ],
+          "offset": [ 0, 2 ],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "controls": [
+            {
+              "label_0@rainbowpie_ui_common.text_label": {
+                "size": [ "100%", "default" ],
+                "text": "rainbowpie.ui.manifest_validation.verifiedDetail.warn",
+                "color": [ 1.0, 1.0, 0.333 ],
+                "layer": 1
+              }
+            },
+            {
+              "label_1@rainbowpie_ui_common.text_label": {
+                "size": [ "100%", "default" ],
+                "text": "rainbowpie.ui.manifest_validation.verifiedDetail.description",
+                "color": [ 0.333, 0.333, 1.0 ],
+                "layer": 1
+              }
+            },
+            {
+              "verified_item@rainbowpieui_verified_pack.verified_pack_description": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "detail_dialog_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "scrolling_panel@common.scrolling_panel": {
+          "$rainbowpie_localui_scrollbar_enabled": true,
+          "size": [ "100%", "100%" ],
+          "layer": 1,
+          "$scrolling_pane_size": [ "100%", "100%" ],
+          "$scrolling_content": "rainbowpieui_manifest_validation.detail_scrolling_content",
+          "$scroll_size": [ 4, "100%" ],
+          "$show_background": false
+        }
+      }
+    ]
+  },
+
+  "detail_dialog_button@rainbowpie_ui_dialog.header_background": {
+    "size": [ "100%c", "100%" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", "100%" ],
+          "controls": [
+            {
+              "close_detail_button@rainbowpieui_manifest_validation.verify_detail_button_toggle_base": {
+                "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
+                "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
+                "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
+                "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
+                "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
+                "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
+                "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
+                "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
+                "$toggle_focus_enabled": false,
+                "$rainbowpie_localui_button_default_alpha": 0.0,
+                "$rainbowpie_localui_button_hover_color": "$rainbowpie_ui_theme_closebutton_hover_background_color",
+                "$rainbowpie_localui_button_hover_alpha": "$rainbowpie_ui_theme_closebutton_hover_background_alpha",
+                "$rainbowpie_localui_button_pressed_color": "$rainbowpie_ui_theme_closebutton_pressed_background_color",
+                "$rainbowpie_localui_button_pressed_alpha": "$rainbowpie_ui_theme_closebutton_pressed_background_alpha",
+                "$button_image_size": [ "100%", "100%" ],
+                "$button_content": "rainbowpieui_manifest_validation.close_button_icon",
+                "size": [ "100%y", "100%" ],
+                "$toggle_group_forced_index": 10,
+                "$toggle_view_binding_name": "close_detail_dialog",
+                "$button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.menu_select",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.menu_select",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_cancel",
+                    "to_button_id": "button.menu_select",
+                    "mapping_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "close_button_icon": {
+    "type": "image",
+    "size": [ 15, 15 ],
+    "layer": 2,
+    "texture": "($rainbowpie_ui_path_theme + '/icon/global/close_button/close')",
+    "color": "$rainbowpie_localui_button_text_color"
+  },
+
+  "manifest_validation_screen_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "screen_content": {
+          "type": "panel",
+          "visible": true,
+          "controls": [
+            {
+              "screen_content@rainbowpie_ui_common.screen_content": {
+                "$rainbowpie_localui_screen_content": [
+                  {
+                    "dialog@rainbowpie_ui_dialog.dialog_panel": {
+                      "size": "$extra_large_screen_size",
+                      "max_size": "$extra_large_max_screen_size",
+                      "$rainbowpie_localui_dialogheader_title": "manifestvalidation.title",
+                      "$rainbowpie_localui_dialog_content": "rainbowpieui_manifest_validation.dialog_content",
+                      "$rainbowpie_localui_dialog_show_background": false
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "open_detail_dialog",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "subscreen_content": {
+          "type": "panel",
+          "visible": false,
+          "controls": [
+            {
+              "dialog@rainbowpie_ui_dialog.dialog_panel": {
+                "size": "$extra_large_screen_size",
+                "max_size": "$extra_large_max_screen_size",
+                "$rainbowpie_localui_dialogheader_title": "rainbowpie.ui.manifest_validation.verifiedDetail.title",
+                "$rainbowpie_localui_dialogheader_extra_controls": "rainbowpieui_manifest_validation.detail_dialog_button",
+                "$rainbowpie_localui_dialogheader_show_close": false,
+                "$rainbowpie_localui_dialog_content": "rainbowpieui_manifest_validation.detail_dialog_content"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "open_detail_dialog",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

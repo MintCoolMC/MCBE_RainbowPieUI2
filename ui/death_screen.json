@@ -1,0 +1,43 @@
+{
+  "namespace": "death",
+
+  "you_died_panel/you_died_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "death_reason_panel/death_reason_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "buttons_panel/respawn_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name": "#respawn_visible"
+        }
+      }
+    ]
+  },
+
+  "buttons_panel/main_menu_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name": "#quit_visible"
+        }
+      }
+    ]
+  },
+
+  "death_screen": {
+    "$rainbowpie_localui_modified": true
+  }
+}

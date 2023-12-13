@@ -1,0 +1,304 @@
+{
+  "namespace": "settings",
+
+  "selector_stack_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "xbox_live_panel": {
+              "type": "panel",
+              "ignored": "(not $include_controls_and_settings_sections or not $is_xboxlive_enabled or not $rainbowpie_ui_flag_settings_account_panel)",
+              "size": [ "100%", 50 ],
+              "controls": [
+                {
+                  "background": {
+                    "type": "image",
+                    "texture": "textures/ui/White",
+                    "size": [ "100%", "100%" ],
+                    "alpha": "$rainbowpie_ui_theme_text_background_alpha",
+                    "color": "$rainbowpie_ui_theme_text_background_color",
+                    "layer": -1,
+                    "controls": [
+                      {
+                        "gamerpic": {
+                          "type": "image",
+                          "size": [ 48, 48 ],
+                          "offset": [ 1, 0 ],
+                          "anchor_from": "left_middle",
+                          "anchor_to": "left_middle",
+                          "layer": 1,
+                          "bindings": [
+                            {
+                              "binding_name": "#gamerpic_texture_path",
+                              "binding_name_override": "#texture"
+                            },
+                            {
+                              "binding_name": "#gamerpic_texture_location_type",
+                              "binding_name_override": "#texture_file_system"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "gamertag_label@rainbowpie_ui_common.text_label": {
+                          "offset": [ 51, 6 ],
+                          "size": [ "100% - 51px", 20 ],
+                          "anchor_from": "top_left",
+                          "anchor_to": "top_left",
+                          "layer": 1,
+                          "text": "#gamertag_label",
+                          "font_scale_factor": 1.5,
+                          "bindings": [
+                            {
+                              "binding_name": "#gamertag_label"
+                            },
+                            {
+                              "binding_name": "#logged_in",
+                              "binding_name_override": "#visible"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "manage_account_button@settings_common.action_button": {
+                          "$button_image_size": [ "100% - 1px", "100% - 1px" ],
+                          "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                          "ignored": "($is_ios or $is_android)",
+                          "anchor_from": "top_left",
+                          "anchor_to": "top_left",
+                          "$pressed_button_name": "manage_account_button",
+                          "$button_text": "options.manageAccount",
+                          "size": [ "100% - 50px", 23 ],
+                          "offset": [ 49.5, 26.5 ],
+                          "bindings": [
+                            {
+                              "binding_name": "#logged_in",
+                              "binding_name_override": "#visible"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "sign_out_action_button@settings_common.action_button": {
+                          "$button_image_size": [ "100% - 1px", "100% - 1px" ],
+                          "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                          "ignored": "(not $is_ios and not $is_android)",
+                          "enabled": "$is_pregame",
+                          "$pressed_button_name": "sign_out_button",
+                          "$button_text": "xbox.signOutLong",
+                          "anchor_from": "top_left",
+                          "anchor_to": "top_left",
+                          "size": [ "100% - 50px", 23 ],
+                          "offset": [ 49.5, 26.5 ],
+                          "bindings": [
+                            {
+                              "binding_name": "#logged_in",
+                              "binding_name_override": "#visible"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "gamertag_label_offline@rainbowpie_ui_common.text_label": {
+                          "offset": [ 51, 6 ],
+                          "size": [ "100% - 51px", 20 ],
+                          "anchor_from": "top_left",
+                          "anchor_to": "top_left",
+                          "layer": 1,
+                          "text": "#player_name",
+                          "font_scale_factor": 1.5,
+                          "bindings": [
+                            {
+                              "binding_name": "#player_name"
+                            },
+                            {
+                              "binding_name": "#not_logged_in",
+                              "binding_name_override": "#visible"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "sign_in_action_button@settings_common.action_button": {
+                          "$button_image_size": [ "100% - 1px", "100% - 1px" ],
+                          "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                          "enabled": "$is_pregame",
+                          "$pressed_button_name": "sign_in_button",
+                          "$button_text": "xbox.signin",
+                          "anchor_from": "top_left",
+                          "anchor_to": "top_left",
+                          "size": [ "100% - 50px", 23 ],
+                          "offset": [ 49.5, 26.5 ],
+                          "bindings": [
+                            {
+                              "binding_name": "#not_logged_in",
+                              "binding_name_override": "#visible"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "rp_spacer_1": {
+              "type": "panel",
+              "ignored": "(not $include_controls_and_settings_sections or not $is_xboxlive_enabled or not $rainbowpie_ui_flag_settings_account_panel)",
+              "size": [ 1, 1 ]
+            }
+          },
+          {
+            "perspective_dropdown@settings_common.option_dropdown": {
+              "$option_generic_panel_size": [ "100%", 25 ],
+              "$show_option_label": false,
+              "$option_dropdown_size": [ "100%", 25 ],
+              "visible": "($include_controls_and_settings_sections and $touch)",
+              "ignored": "($is_holographic and $is_reality_mode or $is_pregame or not $rainbowpie_ui_flag_settings_quick_perspective)",
+              "$dropdown_content": "general_section.third_person_dropdown_content",
+              "$dropdown_area": "content_area",
+              "$dropdown_name": "third_person_dropdown",
+              "$option_enabled_binding_name": "#third_person_dropdown_enabled",
+              "$options_dropdown_toggle_label_binding": "#third_person_dropdown_toggle_label",
+              "$dropdown_scroll_content_size": [ "100%", "200%" ],
+
+              "$rainbowpie_localui_dropdown_show_button": false,
+              "$option_dropdown_type": "rainbowpie_ui_common.rainbowpie_ui_dropdown",
+              "$rainbowpie_localui_dropdown_offset": [ 0, 2 ],
+              "$rainbowpie_localui_dropdown_content": [
+                {
+                  "@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+                    "$rainbowpie_localui_dropdown_radio_image": true,
+                    "$rainbowpie_localui_dropdown_radio_image_texture": "($rainbowpie_ui_path_theme + '/icon/settings/firstperson')",
+                    "$toggle_state_binding_name": "#thirdperson_radio_first",
+                    "$radio_label_text": "options.thirdperson.firstperson"
+                  }
+                },
+                {
+                  "@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+                    "$rainbowpie_localui_dropdown_radio_image": true,
+                    "$rainbowpie_localui_dropdown_radio_image_texture": "($rainbowpie_ui_path_theme + '/icon/settings/thirdpersonback')",
+                    "$toggle_state_binding_name": "#thirdperson_radio_third_back",
+                    "$radio_label_text": "options.thirdperson.thirdpersonback"
+                  }
+                },
+                {
+                  "@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+                    "$rainbowpie_localui_dropdown_radio_image": true,
+                    "$rainbowpie_localui_dropdown_radio_image_texture": "($rainbowpie_ui_path_theme + '/icon/settings/thirdpersonfront')",
+                    "$toggle_state_binding_name": "#thirdperson_radio_third_front",
+                    "$radio_label_text": "options.thirdperson.thirdpersonfront"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "rp_spacer_2": {
+              "type": "panel",
+              "visible": "($include_controls_and_settings_sections and $touch)",
+              "ignored": "($is_holographic and $is_reality_mode or $is_pregame or not $rainbowpie_ui_flag_settings_quick_perspective)",
+              "size": [ 1, 1 ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "selector_stack_panel/controls_and_settings_selector_pane": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "rainbowpie_spacer_1": {
+              "type": "panel",
+              "size": [ 1, 1 ]
+            }
+          },
+          {
+            "rainbowpie_selector_group_label_1@settings_common.selector_group_label": {
+              "ignored": "($rainbowpie_ui_feature_markbest)",
+              "text": "rainbowpie.ui.global.title"
+            }
+          },
+          {
+            "uitest_button@rainbowpieui_general_section.uitest_button": {
+              "ignored": "(not $rainbowpie_ui_debug)",
+              "$toggle_group_forced_index": 3201
+            }
+          },
+          {
+            "theme_button@rainbowpieui_general_section.theme_button": {
+              "$toggle_group_forced_index": 3501
+            }
+          },
+          {
+            "module_button@rainbowpieui_general_section.module_button": {
+              "$toggle_group_forced_index": 3502
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "section_content_panels/general_and_controls_sections": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          { "uitest_tab_section@rainbowpieui_general_section.uitest_tab_section": { "visible": false } },
+          { "theme_section@rainbowpieui_general_section.theme_section": { "visible": false } },
+          { "module_section@rainbowpieui_general_section.module_section": { "visible": false } }
+        ]
+      }
+    ]
+  },
+
+  "section_content_panels/general_and_controls_sections/language_section": {
+    "ignored": false
+  },
+
+  "selector_stack_panel/controls_and_settings_selector_pane/language_button": {
+    "ignored": false
+  },
+
+  "selector_stack_panel/controls_and_settings_selector_pane/selector_group_label_2": {
+    "ignored": "($rainbowpie_ui_feature_markbest)"
+  },
+
+  "selector_stack_panel/controls_and_settings_selector_pane/spacer_2": {
+    "size": [ 1, 1 ]
+  },
+
+  "selector_stack_panel/controls_and_settings_selector_pane/selector_group_label_1": {
+    "ignored": "($rainbowpie_ui_feature_markbest)"
+  },
+
+  "selector_stack_panel/controls_and_settings_selector_pane/spacer_1": {
+    "size": [ 1, 1 ]
+  },
+
+  "selector_stack_panel/spacer_0": {
+    "ignored": "((not $include_world_section) or $rainbowpie_ui_feature_markbest)"
+  },
+
+  "selector_stack_panel/controls_and_settings_selector_pane/selector_group_label_3": {
+    "size": [ 1, 1 ],
+    "ignored": "($is_publish or $rainbowpie_ui_feature_markbest)"
+  },
+
+  "selector_stack_panel/controls_and_settings_selector_pane/spacer_3": {
+    "size": [ 1, 1 ],
+    "ignored": "$is_publish"
+  }
+}

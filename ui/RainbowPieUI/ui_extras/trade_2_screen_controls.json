@@ -1,0 +1,333 @@
+{
+  "namespace": "rainbowpieui_trade2",
+
+  "trade_screen_more_info": {
+    "type": "panel",
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "offset": [ 0, -2 ],
+    "size": [ "100% - 12px", "100% - 28px" ],
+    "visible": false,
+    "layer": 12,
+    "controls": [
+      {
+        "title_label@rainbowpie_ui_common.text_label": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "text": "More Info",
+          "layer": 1
+        }
+      },
+      {
+        "result_item_label@rainbowpie_ui_common.text_label": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "text": "Result Item Info",
+          "offset": [ 0, 10 ],
+          "layer": 1
+        }
+      },
+      {
+        "item_renderer@common.item_renderer": {
+          "size": [ 12, 12 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 20 ],
+          "$item_collection_name": "trade2_result_item",
+          "layer": 1
+        }
+      },
+      {
+        "result_item_rc_label@rainbowpie_ui_common.text_label": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "text": "Aux Rc: ",
+          "offset": [ 14, 20 ],
+          "layer": 1
+        }
+      },
+      {
+        "item_renderer_rc@rainbowpie_ui_common.item_renderer": {
+          "size": [ 12, 12 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 44, 20 ],
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#item_id_aux",
+              "binding_name_override": "#item_id_aux_int",
+              "binding_type": "collection",
+              "binding_collection_name": "trade2_result_item"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#item_id_aux_int / 65565)",
+              "target_property_name": "#item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#item_id * 65565)",
+              "target_property_name": "#item_id_aux"
+            }
+          ]
+        }
+      },
+      {
+        "result_item_info_label@rainbowpie_ui_common.text_label": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "text": "#text",
+          "offset": [ 0, 32 ],
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "trade2_result_item"
+            },
+            {
+              "binding_name": "#item_id_aux",
+              "binding_type": "collection",
+              "binding_collection_name": "trade2_result_item"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#item_id_aux / 65565)",
+              "target_property_name": "#item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#item_id * 65565)",
+              "target_property_name": "#item_id_aux_rc"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#hover_text + '\nitem_id_aux: ' + #item_id_aux + '\nitem_id: ' + #item_id + '\nitem_id_aux(rc): ' + #item_id_aux_rc)",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "more_navigation_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "header_controls": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", "100%" ],
+    "visible": "$rainbowpie_ui_flag_inventory_debug",
+    "controls": [
+      {
+        "inventory_navigation_tab@rainbowpieui_trade2.top_tab": {
+          "size": [ "100%y", "100%" ],
+          "$tab_view_binding_name": "inventory_navigation_tab_toggle",
+          "$tab_text": "INV",
+          "$toggle_group_forced_index": 10
+        }
+      },
+      {
+        "more_navigation_tab@rainbowpieui_trade2.top_tab": {
+          "size": [ "100%y", "100%" ],
+          "$tab_view_binding_name": "more_navigation_tab_toggle",
+          "$tab_text": "MORE",
+          "$toggle_group_forced_index": 11
+        }
+      }
+    ]
+  },
+
+  "top_tab@common_tabs.tab_top": {
+    "$tab_panel": "rainbowpie_ui_tab.tab_panel",
+    "$toggle_tts_enabled_binding_type": "global",
+    "$radio_toggle_group": true,
+    "$toggle_name": "rainbowpieui_navigation_tab",
+    "$toggle_group_default_selected": 10,
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$toggle_tts_type_priority": 1001,
+    "$toggle_tts_toggle_on_text": "",
+    "$toggle_tts_toggle_off_text": "",
+    "$toggle_tts_index_priority": 1002,
+    "$tab_content": "rainbowpieui_trade2.top_tab_content"
+  },
+
+  "top_tab_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "tab_label@rainbowpie_ui_common.text_label_notheme": {
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [ "default", "default" ],
+          "text_alignment": "center",
+          "text": "$tab_text",
+          "color": "$text_color",
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "tier_title": {
+    "type": "panel",
+    "size": [ "100%", 16 ],
+    "controls": [
+      {
+        "title_background@rainbowpie_ui_common.title_background": {
+          "size": [ "100%", 14 ],
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "controls": [
+            {
+              "text_panel": {
+                "type": "panel",
+                "size": [ "100% - 4px", 10 ],
+                "controls": [
+                  {
+                    "title_label@rainbowpie_ui_common.title_label": {
+                      "size": [ "100%", "100%" ],
+                      "text": "#tier_name",
+                      "layer": 1,
+                      "bindings": [
+                        {
+                          "binding_name": "#tier_name",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$collection_name"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#is_tier_unlocked",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      },
+      {
+        "title_background_locked@rainbowpie_ui_common.title_background": {
+          "color": [ 0.4, 0.4, 0.4 ],
+          "size": [ "100%", 14 ],
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "controls": [
+            {
+              "text_panel": {
+                "type": "panel",
+                "size": [ "100% - 4px", 10 ],
+                "controls": [
+                  {
+                    "title_label@rainbowpie_ui_common.title_label": {
+                      "size": [ "100%", "100%" ],
+                      "text": "#tier_name",
+                      "layer": 1,
+                      "bindings": [
+                        {
+                          "binding_name": "#tier_name",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$collection_name"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "(not #is_tier_unlocked)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "trade_toggle_unchecked": {
+    "type": "panel",
+    "controls": [
+      {
+        "toggle_checked_normal@rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked": {
+          "bindings": [
+            {
+              "binding_type": "collection_details"
+            },
+            {
+              "binding_name": "#trade_possible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "toggle_checked_red@rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked": {
+          "$rainbowpie_localui_button_default_color": [ 0.85098, 0.301961, 0.301961 ],
+          "bindings": [
+            {
+              "binding_type": "collection_details"
+            },
+            {
+              "binding_name": "(not #trade_possible)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "trade_toggle_checked": {
+    "type": "panel",
+    "controls": [
+      {
+        "toggle_checked_normal@rainbowpieui_settings_common.rainbowpie_ui_toggle_checked": {
+          "bindings": [
+            {
+              "binding_type": "collection_details"
+            },
+            {
+              "binding_name": "#trade_possible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "toggle_checked_red@rainbowpieui_settings_common.rainbowpie_ui_toggle_checked": {
+          "$rainbowpie_localui_button_default_color": [ 0.85098, 0.301961, 0.301961 ],
+          "bindings": [
+            {
+              "binding_type": "collection_details"
+            },
+            {
+              "binding_name": "(not #trade_possible)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

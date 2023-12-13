@@ -1,0 +1,23 @@
+{
+  "namespace": "realms_pending_invitations",
+
+  "banner_panel": {
+    "$banner_image": "rainbowpieui_realms_pending_invitations.dark_banner"
+  },
+
+  "banner_panel_hover": {
+    "$banner_image": "rainbowpieui_realms_pending_invitations.dark_banner_hover"
+  },
+
+  "panel_text": {
+    "color": "$rainbowpie_ui_theme_text_text_color",
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "realms_pending_invitations_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screenbackground_blur": true,
+    "$screen_content": "rainbowpieui_realms_pending_invitations.realms_invitation_screen_content"
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "namespace": "rainbowpieui_disconnect",
+
+  "realms_warning_button_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "check_store_button@disconnect.check_store_button": {
+          "size": [ "fill", "100%" ]
+        }
+      },
+      {
+        "continue_button@disconnect.continue_button": {
+          "size": [ "fill", "100%" ]
+        }
+      },
+      {
+        "cancel_button@disconnect.cancel_button": {
+          "size": [ "fill", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "realms_disconnect_button_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "check_store_button@disconnect.check_store_button": {
+          "size": [ "fill", "100%" ]
+        }
+      },
+      {
+        "ok_button@disconnect.ok_button": {
+          "size": [ "fill", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "button_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "ok_button@disconnect.ok_button": {
+          "size": [ "fill", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "dialog_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$rainbowpie_localui_disconnect_dialog_buttons|default": "common.empty_panel",
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "content_panel@rainbowpie_ui_dialog.content_background": {
+                "size": [ "100%", "fill" ],
+                "controls": [
+                  {
+                    "stack_panel": {
+                      "type": "stack_panel",
+                      "size": [ "100% - 8px", "100% - 4px" ],
+                      "controls": [
+                        {
+                          "disconnect_text@rainbowpie_ui_common.text_label_notheme": {
+                            "text": "#disconnect_text",
+                            "bindings": [
+                              {
+                                "binding_name": "#disconnect_text"
+                              },
+                              {
+                                "binding_name": "#tts_dialog_body",
+                                "binding_condition": "once"
+                              }
+                            ],
+                            "property_bag": {
+                              "#tts_dialog_body": "#disconnect_text"
+                            }
+                          }
+                        },
+                        {
+                          "disconnect_title_text@rainbowpie_ui_common.text_label_notheme": {
+                            "text": "#title_text",
+                            "bindings": [
+                              {
+                                "binding_name": "#title_text"
+                              },
+                              {
+                                "binding_name": "#tts_dialog_title",
+                                "binding_condition": "once"
+                              }
+                            ],
+                            "property_bag": {
+                              "#tts_dialog_title": "#title_text"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "button_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%c + 1px" ],
+                "ignored": "($rainbowpie_localui_disconnect_dialog_buttons = 'common.empty_panel')",
+                "controls": [
+                  {
+                    "button_panel": {
+                      "type": "panel",
+                      "anchor_to": "bottom_middle",
+                      "anchor_from": "bottom_middle",
+                      "size": [ "100% + 1px", "100%c" ],
+                      "controls": [
+                        {
+                          "button_panel@$rainbowpie_localui_disconnect_dialog_buttons": {
+                            "$button_image_size": [ "100% - 1px", "100%" ],
+                            "$rainbowpie_localui_button_default_alpha": "$rainbowpie_ui_theme_dialog_content_background_alpha",
+                            "anchor_to": "top_middle",
+                            "anchor_from": "top_middle",
+                            "size": [ "100%", 23 ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "disconnect_screen_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "background@rainbowpie_ui_common.global_background": {
+          "size": [ "100%", "100%" ],
+          "layer": 4
+        }
+      },
+      {
+        "screen_content": {
+          "type": "panel",
+          "layer": 10,
+          "ignored": "$rainbowpie_ui_flag_d39385b8",
+          "controls": [
+            { "disconnect_screen_content@disconnect.disconnect_screen_content": {} }
+          ]
+        }
+      },
+      {
+        "dialog_screen": {
+          "type": "panel",
+          "size": [ 204, 132 ],
+          "layer": 10,
+          "ignored": "(not $rainbowpie_ui_flag_d39385b8)",
+          "controls": [
+            {
+              "dialog_panel@rainbowpie_ui_dialog.dialog_panel": {
+                "$rainbowpie_localui_dialogheader_title": "disconnect.lost",
+                "$rainbowpie_localui_dialog_content": "rainbowpieui_disconnect.dialog_content",
+                "$rainbowpie_localui_dialog_show_background": false,
+                "$rainbowpie_localui_dialogheader_show_close": false
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blur_panel_2": {
+          "type": "panel",
+          "clips_children": true,
+          "size": [ "100%", "100%" ],
+          "offset": [ "50% - 102px", 0 ],
+          "layer": 8,
+          "ignored": "(not $rainbowpie_ui_flag_d39385b8 or not $rainbowpie_ui_flag_disconnect_ui_modified)",
+          "controls": [
+            {
+              "blur_panel_1": {
+                "type": "panel",
+                "clips_children": true,
+                "size": [ "100%", "100%" ],
+                "offset": [ 0, "50% - 66px" ],
+                "controls": [
+                  {
+                    "blur_layer_1@mintui_background.background_blur": {
+                      "$background_offset": [ "-100% + 204px", "-100% + 132px" ],
+                      "$background_children_offset": [ "50% - 102px", "50% - 66px" ],
+                      "$background_layer": 2
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

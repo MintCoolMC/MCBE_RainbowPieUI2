@@ -1,0 +1,109 @@
+{
+  "namespace": "world_templates",
+
+  "world_templates_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$screen_content": "rainbowpieui_world_templates.world_templates_picker_content"
+  },
+
+  "generate_random_button": {
+    "size": [ "100%", "100%c" ]
+  },
+
+  "world_template_screen_content_stack_panel/generate_random_button_bottom_padding": {
+    "ignored": true
+  },
+
+  "world_list_grids_stack/template_list_panel/template_bottom_padding": {
+    "ignored": true
+  },
+
+  "world_list_grids_stack/store_panel/store_grids/realms_plus_list_panel/realms_plus_template_bottom_padding": {
+    "ignored": true
+  },
+
+  "world_list_grids_stack/store_panel/store_grids/suggested_content_panel/suggested_template_bottom_padding": {
+    "ignored": true
+  },
+
+  "world_list_grids_stack/custom_template_panel/custom_template_list_bottom_padding": {
+    // "ignored": true
+  },
+
+  "world_list_grids_stack/realms_info_panel/padding": {
+    "ignored": true
+  },
+
+  "world_list_grids_stack/store_panel/store_grids/suggested_content_panel/suggested_content_offers_title_label": {
+    "ignored": true
+  },
+
+  "world_list_grids_stack/store_panel/store_grids/suggested_content_panel": {
+    "modifications": [
+      {
+        "control_name": "suggested_content_offers_title_label",
+        "operation": "insert_after",
+        "value": [
+          {
+            "suggested_content_offers_title@rainbowpieui_world_templates.list_title": {
+              "$rainbowpie_localui_list_title_text": "$section_header",
+              "bindings": [
+                {
+                  "binding_name": "(not #realms_info_visible)",
+                  "binding_name_override": "#visible"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "label_content_template": {
+    "controls": [
+      {
+        "list_title@rainbowpieui_world_templates.list_title": {
+          "$rainbowpie_localui_list_title_text": "$label_content_label"
+        }
+      }
+    ]
+  },
+
+  "world_list_grids_stack/store_panel/store_grids/realms_plus_list_panel/realms_plus_label_panel": {
+
+  },
+
+  "realms_plus_template_item/realms_plus_template_item_button": {
+    "size": [ "fill", "100%" ]
+  },
+
+  "world_template_item/world_template_item_button": {
+    "size": [ "fill", "100%" ]
+  },
+
+  "see_more_templates_button": {
+    "$button_image_size": [ "100%", "100% - 1px" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "world_template_item_button": {
+    "$button_image_size": [ "100%", "100% - 1px" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "realms_plus_template_item_button": {
+    "$button_image_size": [ "100%", "100% - 1px" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "help_button": {
+    "$button_image_size": [ "100%", "100% - 1px" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "generate_random": {
+    "$button_image_size": [ "100%", "100% - 1px" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  }
+}

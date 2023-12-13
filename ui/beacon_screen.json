@@ -1,0 +1,22 @@
+{
+  "namespace": "beacon",
+
+  "beacon_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_inventory_title_color"
+  },
+
+  "beacon_panel/root_panel/common_panel": {
+    "$dialog_background": "rainbowpie_ui_common.inventory_background",
+    "$show_close_button": false,
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "offset": [ 0, -2 ],
+    "size": [ "100% - 38px", "100% - 3px" ]
+  },
+
+  "beacon_panel/root_panel/beacon_inventory": {
+    "$background_images": "rainbowpie_ui_common.cell_image"
+  }
+}

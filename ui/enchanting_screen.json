@@ -1,0 +1,99 @@
+{
+  "namespace": "enchanting",
+
+  "enchant_runes": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_collection_name": "#enchant_buttons",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hover_text - '§o')",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+
+  "unselectable_button": {
+  },
+
+  "dark_background": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_button_background_locked_color",
+    "alpha": "$rainbowpie_ui_theme_button_background_locked_alpha"
+  },
+
+  "dark_background_with_hover_text": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_button_background_locked_color",
+    "alpha": "$rainbowpie_ui_theme_button_background_hover_alpha"
+  },
+
+  "active_background": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_button_background_default_color",
+    "alpha": "$rainbowpie_ui_theme_button_background_default_alpha"
+  },
+
+  "active_background_with_hover_text": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_button_background_hover_color",
+    "alpha": "$rainbowpie_ui_theme_button_background_hover_alpha"
+  },
+
+  "enchanting_panel_top_half/grid_panel/indent": {
+    "ignored": true
+  },
+
+  "enchanting_panel_top_half/grid_panel/dust_panel": {
+  },
+
+  "enchanting_panel_top_half/grid_panel": {
+  },
+  
+  "enchanting_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_inventory_title_color"
+  },
+
+  "enchanting_panel_top_half": {
+    "offset": [ 1, 15 ]
+  },
+
+  "enchanting_panel_top_half/enchanting_label": {
+    "ignored": true
+  },
+
+  "enchanting_panel/root_panel/common_panel": {
+    "$dialog_background": "rainbowpie_ui_common.inventory_background",
+    "$show_close_button": false,
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "offset": [ 0, -2 ],
+    "size": [ "100% - 8px", "100% - 21px" ]
+  },
+
+  "enchanting_panel/root_panel/enchanting_screen_inventory": {
+    "$background_images": "rainbowpie_ui_common.cell_image",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "inventory_header@rainbowpie_ui_inventory.header": {
+              "$rainbowpie_localui_inventoryheader_title": "container.repairAndDisenchant",
+              "offset": [ 0, -4 ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

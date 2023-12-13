@@ -1,0 +1,21 @@
+{
+  "namespace": "bed",
+
+  "in_bed_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$screen_content": "rainbowpieui_bed.in_bed_screen_content"
+  },
+
+  "in_bed_screen_content/wake_up_button_panel/wake_up_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button"
+  },
+
+  "in_bed_screen_content/wake_up_button_panel/chat_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button"
+  },
+
+  "in_bed_screen_content/wake_up_label_panel": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  }
+}

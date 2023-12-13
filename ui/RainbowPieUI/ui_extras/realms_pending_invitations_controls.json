@@ -1,0 +1,39 @@
+{
+  "namespace": "rainbowpieui_realms_pending_invitations",
+
+  "dark_banner": {
+    "type": "image",
+    "texture": "textures/ui/White",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha",
+    "layer": 1
+  },
+
+  "dark_banner_hover@rainbowpieui_realms_pending_invitations.dark_banner": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_button_background_hover_color",
+    "alpha": "$rainbowpie_ui_theme_button_background_hover_alpha"
+  },
+
+  "realms_invitation_screen_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "screen_content@rainbowpie_ui_common.screen_content": {
+          "$rainbowpie_localui_screen_content": [
+            {
+              "dialog@rainbowpie_ui_dialog.dialog_panel": {
+                "size": "$narrow_screen_size",
+                "$rainbowpie_localui_dialogheader_title": "realmsPendingInvitationsScreen.pendingInvitations",
+                "$rainbowpie_localui_dialog_content": "realms_pending_invitations.content_panel"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

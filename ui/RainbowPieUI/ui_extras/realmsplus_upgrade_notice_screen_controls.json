@@ -1,0 +1,119 @@
+{
+  "namespace": "rainbowpieui_realmsplus_upgrade_notice_screen",
+
+  "dialog_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "content_panel@rainbowpie_ui_dialog.content_background": {
+                "size": [ "100%", "fill" ],
+                "controls": [
+                  {
+                    "main_content@realmsplus_upgrade_notice_screen.content": {}
+                  }
+                ]
+              }
+            },
+            {
+              "button_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%c + 1px" ],
+                "controls": [
+                  {
+                    "button_panel": {
+                      "type": "panel",
+                      "anchor_to": "bottom_middle",
+                      "anchor_from": "bottom_middle",
+                      "size": [ "100% + 1px", "100%c" ],
+                      "controls": [
+                        {
+                          "button_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "$button_image_size": [ "100% - 1px", "100%" ],
+                            "$rainbowpie_localui_button_default_alpha": "$rainbowpie_ui_theme_dialog_content_background_alpha",
+                            "anchor_to": "top_middle",
+                            "anchor_from": "top_middle",
+                            "size": [ "100%", 23 ],
+                            "controls": [
+                              {
+                                "left@common_buttons.light_text_button": {
+                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                                  "size": [ "fill", "100%" ],
+                                  "$pressed_button_name": "button.continue_button",
+                                  "$button_text": "realmsPlusUpgradeNotice.continue"
+                                }
+                              },
+                              {
+                                "right@common_buttons.light_text_button": {
+                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                                  "size": [ "fill", "100%" ],
+                                  "$pressed_button_name": "button.viewpacks",
+                                  "$button_text": "realmsPlusUpgradeNotice.viewpacks"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "main_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "dialog_panel@rainbowpie_ui_dialog.dialog_panel": {
+          "layer": 18,
+          "size": [ 260, 204 ],
+          "$rainbowpie_localui_dialogheader_title": "realmsPlusUpgradeNotice.title",
+          "$rainbowpie_localui_dialog_content": "rainbowpieui_realmsplus_upgrade_notice_screen.dialog_content",
+          "$rainbowpie_localui_dialog_show_background": false
+        }
+      },
+      {
+        "blur_panel_2": {
+          "type": "panel",
+          "clips_children": true,
+          "size": [ "100%", "100%" ],
+          "offset": [ "50% - 130px", 0 ],
+          "layer": 8,
+          "controls": [
+            {
+              "blur_panel_1": {
+                "type": "panel",
+                "clips_children": true,
+                "size": [ "100%", "100%" ],
+                "offset": [ 0, "50% - 102px" ],
+                "controls": [
+                  {
+                    "blur_layer_1@mintui_background.background_blur": {
+                      "$background_offset": [ "-100% + 260px", "-100% + 204px" ],
+                      "$background_children_offset": [ "50% - 130px", "50% - 102px" ],
+                      "$background_layer": 2
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}  

@@ -1,0 +1,64 @@
+{
+  "namespace": "rainbowpieui_module_pack",
+
+  "module_list@rainbowpie_ui_module_list.module_list_panel": {
+    "controls": [
+      {
+        "hud_block_counter@rainbowpie_ui_module_list.module_item": {
+          "$module_icon_texture": "($rainbowpie_ui_path_home + '/module/hud_block_counter')",
+          "$module_name": "HUD Block Counter",
+          "$module_version": "1.7",
+          "$module_author": "MintCoolMC",
+          "$module_description": "Shows the total count of held blocks in the hotbar",
+          "$module_state_check": "$rainbowpie_ui_module_hud_block_counter",
+          "$module_max_engine_version": "999999",
+          "$module_max_engine_patch_version": "999999",
+          "$module_min_engine_version": "0",
+          "$module_min_engine_patch_version": "0"
+        }
+      },
+      {
+        "hud_bow_helper@rainbowpie_ui_module_list.module_item": {
+          "$module_icon_texture": "($rainbowpie_ui_path_home + '/module/hud_bow_helper')",
+          "$module_name": "HUD Bow Helper",
+          "$module_version": "1.4-v1.20.50",
+          "$module_author": "MintCoolMC",
+          "$module_description": "Shows the total count of arrows in the inventory",
+          "$module_state_check": "$rainbowpie_ui_module_hud_bow_helper",
+          "$module_max_engine_version": "999999",
+          "$module_max_engine_patch_version": "999999",
+          "$module_min_engine_version": "0",
+          "$module_min_engine_patch_version": "0"
+        }
+      },
+      {
+        "hud_selected_item_id@rainbowpie_ui_module_list.module_item": {
+          "$module_icon_texture": "($rainbowpie_ui_path_home + '/module/hud_selected_item_id')",
+          "$module_name": "HUD Selected Item ID",
+          "$module_version": "1.0",
+          "$module_author": "MintCoolMC",
+          "$module_description": "DEBUG",
+          "$module_state_check": "$rainbowpie_ui_module_hud_selected_item_id",
+          "$module_max_engine_version": "999999",
+          "$module_max_engine_patch_version": "999999",
+          "$module_min_engine_version": "0",
+          "$module_min_engine_patch_version": "0"
+        }
+      },
+      {
+        "lib_hud_item@rainbowpie_ui_module_list.module_item": {
+          "$module_icon_texture": "($rainbowpie_ui_path_home + '/icon/module')",
+          "$module_name": "HUD Item Lib",
+          "$module_version": "1.4",
+          "$module_author": "MintCoolMC, 衡川(Crosmover)",
+          "$module_description": "module lib hud item",
+          "$module_state_check": true,
+          "$module_max_engine_version": "999999",
+          "$module_max_engine_patch_version": "999999",
+          "$module_min_engine_version": "0",
+          "$module_min_engine_patch_version": "0"
+        }
+      }
+    ]
+  }
+}

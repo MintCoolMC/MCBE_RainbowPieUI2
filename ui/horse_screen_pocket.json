@@ -1,0 +1,235 @@
+{
+  "namespace": "horse_pocket",
+
+  "close_button": {
+    "ignored": true
+  },
+
+  "visual_tabs_equip": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "close_background@rainbowpie_ui_inventory.header_background": {
+              "anchor_from": "top_left",
+              "anchor_to": "top_left",
+              "size": [ 29, 32 ],
+              "controls": [
+                {
+                  "close_button@rainbowpie_ui_common.close_button": {
+                    "$rainbowpie_ui_theme_closebutton_default_color": "$rainbowpie_ui_theme_inventory_header_title_color",
+                    "layer": 10,
+                    "size": [ "100%", "100%" ],
+                    "offset": [ 0, 0 ],
+                    "anchor_from": "center",
+                    "anchor_to": "center"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "rainbowpie_chest": {
+              "type": "panel",
+              "anchor_from": "bottom_left",
+              "anchor_to": "bottom_left",
+              "size": [ 29, 32 ],
+              "offset": [ 0, -36 ],
+              "bindings": [
+                {
+                  "binding_name": "#is_chested",
+                  "binding_name_override": "#visible"
+                }
+              ],
+              "controls": [
+                {
+                  "background@rainbowpie_ui_inventory.header_background": {
+                    "controls": [
+                      {
+                        "chest_icon@horse_pocket.chest_icon_front": {}
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "rainbowpie_equip": {
+              "type": "panel",
+              "anchor_from": "bottom_left",
+              "anchor_to": "bottom_left",
+              "size": [ 29, 32 ],
+              "offset": [ 0, -2 ],
+              "controls": [
+                {
+                  "background@rainbowpie_ui_common.inventory_background": {
+                    "controls": [
+                      {
+                        "checked_left": {
+                          "type": "image",
+                          "texture": "textures/ui/White",
+                          "size": [ 2, "100%" ],
+                          "anchor_to": "left_middle",
+                          "anchor_from": "left_middle",
+                          "layer": 10,
+                          "color": "$rainbowpie_ui_theme_toggle_background_checked_default_btbar_color",
+                          "alpha": "$rainbowpie_ui_theme_toggle_background_checked_default_btbar_alpha"
+                        }
+                      },
+                      {
+                        "equip_icon@horse_pocket.saddle_icon_front": {}
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "visual_tabs_equip/close_tab": {
+    "ignored": true
+  },
+
+  "visual_tabs_equip/chest": {
+    "ignored": true
+  },
+
+  "visual_tabs_equip/equip": {
+    "ignored": true
+  },
+
+  "visual_tabs_chest": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "close_background@rainbowpie_ui_inventory.header_background": {
+              "anchor_from": "top_left",
+              "anchor_to": "top_left",
+              "size": [ 29, 32 ],
+              "controls": [
+                {
+                  "close_button@rainbowpie_ui_common.close_button": {
+                    "$rainbowpie_ui_theme_closebutton_default_color": "$rainbowpie_ui_theme_inventory_header_title_color",
+                    "layer": 10,
+                    "size": [ "100%", "100%" ],
+                    "offset": [ 0, 0 ],
+                    "anchor_from": "center",
+                    "anchor_to": "center"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "rainbowpie_chest": {
+              "type": "panel",
+              "anchor_from": "bottom_left",
+              "anchor_to": "bottom_left",
+              "size": [ 29, 32 ],
+              "offset": [ 0, -36 ],
+              "bindings": [
+                {
+                  "binding_name": "#is_chested",
+                  "binding_name_override": "#visible"
+                }
+              ],
+              "controls": [
+                {
+                  "background@rainbowpie_ui_common.inventory_background": {
+                    "controls": [
+                      {
+                        "checked_left": {
+                          "type": "image",
+                          "texture": "textures/ui/White",
+                          "size": [ 2, "100%" ],
+                          "anchor_to": "left_middle",
+                          "anchor_from": "left_middle",
+                          "layer": 10,
+                          "color": "$rainbowpie_ui_theme_toggle_background_checked_default_btbar_color",
+                          "alpha": "$rainbowpie_ui_theme_toggle_background_checked_default_btbar_alpha"
+                        }
+                      },
+                      {
+                        "chest_icon@horse_pocket.chest_icon_front": {}
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "rainbowpie_equip": {
+              "type": "panel",
+              "anchor_from": "bottom_left",
+              "anchor_to": "bottom_left",
+              "size": [ 29, 32 ],
+              "offset": [ 0, -2 ],
+              "controls": [
+                {
+                  "background@rainbowpie_ui_inventory.header_background": {
+                    "controls": [
+                      {
+                        "equip_icon@horse_pocket.saddle_icon_front": {}
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "visual_tabs_chest/close_tab": {
+    "ignored": true
+  },
+
+  "visual_tabs_chest/chest": {
+    "ignored": true
+  },
+
+  "visual_tabs_chest/equip": {
+    "ignored": true
+  },
+
+  "renderer_bg": {
+    "texture": "textures/ui/Black",
+    "alpha": 0.4
+  },
+
+  "equip_item_panel": {
+    "$background_images": "rainbowpie_ui_common.cell_image"
+  },
+
+  "base_grid_panel/panel_outline": {
+    "ignored": true
+  },
+
+  "base_grid_panel/dark_bg": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_inventory_content_background_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_content_background_alpha"
+  },
+
+  "base_grid_panel/scrolling_panel": {
+    "$rainbowpie_localui_scrollbar_enabled": true,
+    "$background_images": "rainbowpie_ui_common.cell_image"
+  },
+
+  "horse_panel/base_panel/bg": {
+    "$dialog_background": "rainbowpie_ui_common.inventory_background"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "namespace": "rainbowpieui_online_safety",
+
+  "online_safety_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "title_text@rainbowpie_ui_common.title_text": {
+          "offset": [ 0, "5%" ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "online_safety_ui@rainbowpieui_online_safety.online_safety_ui": {}
+      },
+      {
+        "online_safety_ui_blur@rainbowpieui_online_safety.online_safety_ui_blur": {}
+      }
+    ]
+  },
+
+  "exit_animation_push": {
+    "anim_type": "alpha",
+    "easing": "out_cubic",
+    "duration": 0,
+    "from": 1.0,
+    "to": 0.0,
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "exit_animation_pop": {
+    "anim_type": "alpha",
+    "easing": "out_cubic",
+    "duration": 0,
+    "from": 1.0,
+    "to": 0.0,
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "online_safety_ui_blur": {
+    "type": "panel",
+    "layer": 11,
+    "controls": [
+      {
+        "titlebar_control_blur": {
+          "type": "panel",
+          "clips_children": true,
+          "size": [ "100%", "100%" ],
+          "offset": [ "50% - 110px", "50% - 50px" ],
+          "controls": [
+            {
+              "blur_layer_1@mintui_background.background_blur": {
+                "$background_ingame": true,
+                "$background_offset": [ "-100% + 220px", "-100% + 27px" ],
+                "$background_children_offset": [ "50% - 110px", "50% + 23px" ],
+                "$background_layer": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "content_control_blur": {
+          "type": "panel",
+          "clips_children": true,
+          "size": [ "100%", "100%" ],
+          "offset": [ "50% - 110px", "50% - 23px" ],
+          "controls": [
+            {
+              "blur_layer_1@mintui_background.background_blur": {
+                "$background_mask": false,
+                "$background_ingame": true,
+                "$background_offset": [ "-100% + 220px", "-100% + 83px" ],
+                "$background_children_offset": [ "50% - 110px", "50% - 60px" ],
+                "$background_layer": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "online_safety_ui": {
+    "type": "panel",
+    "size": [ 220, 110 ],
+    "offset": [ 0, 5 ],
+    "layer": 12,
+    "$text_name|default": "onlinePlay.notRated",
+    "$description_text|default": "onlinePlay.message",
+    "variables": [
+      {
+        "requires": "$is_editor_mode_enabled",
+        "$text_name": "onlinePlay.editor.notRated",
+        "$description_text": "onlinePlay.editor.message"
+      }
+    ],
+    "controls": [
+      {
+        "titlebar_control@rainbowpie_ui_common.title_background": {
+          "size": [ "100%", 27 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 10,
+          "controls": [
+            {
+              "title_text@rainbowpie_ui_common.title_label": {
+                "anchor_to": "center",
+                "anchor_from": "center",
+                "size": [ "default", "default" ],
+                "max_size": [ "100% - 8px", "100% - 4px" ],
+                "text": "$text_name"
+              }
+            },
+            {
+              "close_button@rainbowpie_ui_common.close_button": {
+                "$close_button_to_button_id": "button.back",
+                "offset": [ -2, 0 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "content_control@rainbowpie_ui_common.text_background": {
+          "size": [ "100%", 83 ],
+          "offset": [ 0, 27 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 8,
+          "controls": [
+            {
+              "progress_bar_text_panel": {
+                "type": "panel",
+                "size": [ "100%", 46 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "controls": [
+                  {
+                    "progress_bar_text@rainbowpie_ui_common.title_label": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [ 0, 4 ],
+                      "size": [ "default", "default" ],
+                      "max_size": [ "100% - 18px", 40 ],
+                      "text": "$description_text"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "inside_content": {
+                "type": "panel",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "size": [ "100% - 1px", "100%c" ],
+                "offset": [ 0, -0.5 ],
+                "controls": [
+                  {
+                    "online_safety_proceed_button@common_buttons.light_text_button": {
+                      "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                      "$pressed_button_name": "button.proceed",
+                      "$button_text": "onlinePlay.proceed",
+                      "size": [ "50%", 22 ],
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right"
+                    }
+                  },
+                  {
+                    "do_not_show_checkbox@online_safety.do_not_show_checkbox": {
+                      "layer": 3,
+                      "size": [ "50%", 22 ],
+                      "anchor_from": "bottom_left",
+                      "anchor_to": "bottom_left",
+                      "$rainbowpie_localui_state_text": "onlinePlay.doNotShowAgain",
+                      "$rainbowpie_localui_state_text_on": "onlinePlay.doNotShowAgain",
+                      "$rainbowpie_localui_toggle_size": [ "100% - 1px", "100% - 1px" ],
+                      "$rainbowpie_localui_toggle_anchor": "center",
+                      "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+                      "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+                      "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+                      "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+                      "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+                      "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+                      "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+                      "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

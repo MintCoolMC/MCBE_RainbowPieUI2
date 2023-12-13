@@ -1,0 +1,140 @@
+{
+  "namespace": "permissions",
+
+  "permissions_options_grid_item/option_toggle": {
+    "$rainbowpie_localui_toggle_offset": [ 0, 2 ],
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked"
+  },
+
+  "permissions_options_stack_panel/permission_level_dropdown": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "permission_level_radio_visitor@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#permission_level_radio_visitor",
+          "$radio_label_text": "permissions.level.visitor"
+        }
+      },
+      {
+        "permission_level_radio_member@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#permission_level_radio_member",
+          "$radio_label_text": "permissions.level.member"
+        }
+      },
+      {
+        "permission_level_radio_operator@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#permission_level_radio_operator",
+          "$radio_label_text": "permissions.level.operator"
+        }
+      },
+      {
+        "permission_level_radio_custom@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#permission_level_radio_custom",
+          "$radio_label_text": "permissions.level.custom"
+        }
+      }
+    ]
+  },
+
+  "banner_background": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_global_background_color",
+    "alpha": "$rainbowpie_ui_theme_global_background_alpha"
+  },
+
+  "player_button_content/gamertag_panel/gamertag_label": {
+    "offset": [ 0, 0 ]
+  },
+
+  "player_local_icon": {
+    "size": [ 20, 20 ],
+    "texture": "textures/ui/icon_steve"
+  },
+
+  "player_gamer_pic/player_panel_black_border": {
+    "ignored": true
+  },
+
+  "player_gamer_pic": {
+    "size": [ 20, 20 ]
+  },
+
+  "player_button_content": {
+    "anchor_from": "center",
+		"anchor_to": "center",
+		"size": [ "100% - 4px", "100% - 4px" ]
+  },
+
+  "selector_area/player_scrolling_panel": {
+    "$rainbowpie_localui_scrollbar_enabled": true,
+    "$scroll_bar_left_padding_size": [ 0, 0 ],
+    "$scroll_bar_right_padding_size": [ 1, 0 ]
+  },
+
+  "player_grid_item/player_toggle": {
+    "size": [ "100%", "100%" ]
+  },
+
+  "player_toggle": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_checked",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_checked_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_checked_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_checked_locked"
+  },
+
+  "title_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "ip_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "world_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "gamertag_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+  
+  "option_state_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "option_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "radio_title_and_icon/radio_title": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "radio_content_with_title_bar/helper_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "permissions_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$screen_content": "rainbowpieui_permissions.permissions_screen_content"
+  }
+}

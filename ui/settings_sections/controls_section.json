@@ -1,0 +1,184 @@
+{
+  "namespace": "controls_section",
+
+  "touch_section/common_touch_settings/joystick_visibility_dropdown": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#joystick_visibility_visible",
+          "$radio_label_text": "options.joystickVisibilityOption.visibleJoystick"
+        }
+      },
+      {
+        "@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#joystick_visibility_hidden",
+          "$radio_label_text": "options.joystickVisibilityOption.hiddenJoystick"
+        }
+      },
+      {
+        "@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#joystick_visibility_hidden_when_unused",
+          "$radio_label_text": "options.joystickVisibilityOption.hiddenJoystickWhenUnused"
+        }
+      }
+    ]
+  },
+
+  "touch_section/common_touch_settings/sneak_dropdown": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#sneak_toggle",
+          "$radio_label_text": "options.sneakOption.toggle"
+        }
+      },
+      {
+        "@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#sneak_hold",
+          "$radio_label_text": "options.sneakOption.hold"
+        }
+      }
+    ]
+  },
+
+  "gamepad_mapping_item/keymapping_button_1": {
+    "ignored": true
+  },
+
+  "gamepad_mapping_item": {
+    "modifications": [
+      {
+        "control_name": "keymapping_button_0",
+        "operation": "insert_after",
+        "value": [
+          {
+            "padding_button": {
+              "type": "panel",
+              "size": [ 1, 1 ]
+            }
+          },
+          {
+            "keymapping_button_reset@common_buttons.light_content_button": {
+              "$button_image_size": [ "100%", "100%" ],
+              "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+              "size": [ "15% + 1px", "100% - 4px" ],
+              "layer": 1,
+              "$button_content": "controls_section.arrow_reset",
+              "$pressed_button_name": "button.reset_binding",
+              "$button_tts_header": "accessibility.settings.reset",
+              "bindings": [
+                {
+                  "binding_type": "collection_details",
+                  "binding_collection_name": "$keymapping_collection"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "image_binding_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "image_binding_button_content/default_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "gamepad_mapping_item/option_info_label_control": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha"
+  },
+
+  "gamepad_mapping_item/option_info_label_control/keymapping_label_control": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
+  "binding_button_content/default_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "keymapping_item/keymapping_button_1": {
+    "ignored": true
+  },
+
+  "keymapping_item": {
+    "modifications": [
+      {
+        "control_name": "keymapping_button_0",
+        "operation": "insert_after",
+        "value": [
+          {
+            "padding_button": {
+              "type": "panel",
+              "size": [ 1, 1 ]
+            }
+          },
+          {
+            "keymapping_button_reset@common_buttons.light_content_button": {
+              "$button_image_size": [ "100%", "100%" ],
+              "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+              "size": [ "15% + 1px", "100% - 4px" ],
+              "layer": 1,
+              "$button_content": "controls_section.arrow_reset",
+              "$pressed_button_name": "button.reset_binding",
+              "$button_tts_header": "accessibility.settings.reset",
+              "bindings": [
+                {
+                  "binding_type": "collection_details",
+                  "binding_collection_name": "$keymapping_collection"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "binding_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "keymapping_item/option_info_label_control": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha"
+  },
+
+  "keymapping_item/option_info_label_control/keymapping_label_control": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
+  "controller_section/option_toggle_4": {
+    "ignored": false
+  },
+
+  "keyboard_and_mouse_button": {
+    "$icon_group_name": "controls",
+    "$icon_texture_name": "keyboard_and_mouse"
+  },
+
+  "controller_button": {
+    "$icon_group_name": "controls",
+    "$icon_texture_name": "controller"
+  },
+
+  "touch_button": {
+    "$icon_group_name": "controls",
+    "$icon_texture_name": "touch"
+  }
+}

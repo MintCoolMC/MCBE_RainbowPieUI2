@@ -1,0 +1,121 @@
+{
+  "namespace": "rainbowpieui_safe_zone",
+
+  "background_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "layer": -1,
+    "controls": [
+      {
+        "background_blur@mintui_background.background_blur_fullscreen": {}
+      }
+    ]
+  },
+
+  "scrolling_content": {
+    "type": "panel",
+    "size": [ "100%", "100%c + 4px" ],
+    "controls": [
+      {
+        "content_panel@safe_zone.content_panel": {
+          "anchor_from": "center",
+          "anchor_to": "center"
+        }
+      }
+    ]
+  },
+
+  "dialog_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "content_panel@rainbowpie_ui_dialog.content_background": {
+                "size": [ "100%", "fill" ],
+                "controls": [
+                  {
+                    "scrolling_panel@common.scrolling_panel": {
+                      "$rainbowpie_localui_scrollbar_enabled": true,
+                      "$rainbowpie_localui_sliderbar_enabled": true,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ "100%", "100%" ],
+                      "$scrolling_pane_size": [ "100% - 4px", "100%" ],
+                      "$scrolling_pane_offset": [ 2, 0 ],
+                      "$scroll_size": [ 4, "100% - 4px" ],
+                      "$scrolling_content": "rainbowpieui_safe_zone.scrolling_content",
+                      "$scroll_bar_left_padding_size": [ 2, 0 ],
+                      "$scroll_bar_right_padding_size": [ 0, 0 ],
+                      "$show_background": false,
+                      "$bar_visible": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "button_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%c + 1px" ],
+                "controls": [
+                  {
+                    "button_panel": {
+                      "type": "panel",
+                      "anchor_to": "bottom_middle",
+                      "anchor_from": "bottom_middle",
+                      "size": [ "100% + 1px", "100%c" ],
+                      "controls": [
+                        {
+                          "button_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "$button_image_size": [ "100% - 1px", "100%" ],
+                            "$rainbowpie_localui_button_default_alpha": "$rainbowpie_ui_theme_dialog_content_background_alpha",
+                            "anchor_to": "top_middle",
+                            "anchor_from": "top_middle",
+                            "size": [ "100%", 23 ],
+                            "controls": [
+                              {
+                                "confirm_button@common_buttons.light_text_button": {
+                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                                  "size": [ "fill", "100%" ],
+                                  "$button_text": "gui.confirm",
+                                  "$pressed_button_name": "button.confirm_button"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "dialog_panel": {
+    "type": "panel",
+    "size": "$dialog_size",
+    "controls": [
+      {
+        "dialog_panel@rainbowpie_ui_dialog.dialog_panel": {
+          "layer": 18,
+          "$rainbowpie_localui_dialogheader_title": "options.safeZone.title",
+          "$rainbowpie_localui_dialog_content": "rainbowpieui_safe_zone.dialog_content",
+          "$rainbowpie_localui_dialog_show_background": false,
+          "$rainbowpie_localui_dialogheader_show_close": false
+        }
+      }
+    ]
+  }
+}

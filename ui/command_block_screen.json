@@ -1,0 +1,207 @@
+{
+  "namespace": "command_block",
+
+  "command_block_text_edit_box": {
+    "$enable_profanity_filter": "$rainbowpie_ui_flag_input_enable_profanity_filter"
+  },
+
+  "left_scroll_panel_content/content_stack_panel/offset2/hover_note_text": {
+    "$enable_profanity_filter": "$rainbowpie_ui_flag_input_enable_profanity_filter"
+  },
+
+  "plus_icon": {
+    "size": [ 18, 18 ],
+    "texture": "($rainbowpie_ui_path_theme + '/icon/global/maximize_icon')"
+  },
+
+  "right_scroll_panel_content": {
+    "size": [ "100% - 2px", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "spacer_bottom": {
+              "type": "panel",
+              "size": [ 0, 3 ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "previous_command_block_info_stack/start_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "previous_command_block_info_stack/start_label_dynamic_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "right_scroll_panel_content/command_block_previous_output_panel/command_output_text_centering_panel/command_output_text": {
+    "size": [ "100% - 4px", 60 ]
+  },
+
+  "right_scroll_panel_content/command_block_previous_output_panel/previous_output_label_stack_centering_panel/previous_output_label_stack/option_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "command_block_helper_stack/text_": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "right_scroll_panel_content/command_block_commands_panel/centering_panel1/command_block_commands_panel/paste_button": {
+    "ignored": true
+  },
+
+  "right_scroll_panel_content/command_block_commands_panel/centering_panel1/command_block_commands_panel/plus_button": {
+    "ignored": true
+  },
+
+  "right_scroll_panel_content/command_block_commands_panel/centering_panel1/command_block_commands_panel": {
+    "size": [ "100%", 30 ],
+    "modifications": [
+      {
+        "control_name": "paste_button",
+        "operation": "insert_after",
+        "value": [
+          {
+            "spacer": {
+              "type": "panel",
+              "size": [ 0.5, 0 ]
+            }
+          },
+          {
+            "paste_button_rainbowpie@rainbowpieui_command_block.paste_button": {
+              "layer": 2
+            }
+          }
+        ]
+      },
+      {
+        "control_name": "plus_button",
+        "operation": "insert_after",
+        "value": [
+          {
+            "plus_button_rainbowpie@rainbowpieui_command_block.plus_button": {
+              "layer": 2
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "right_scroll_panel_content/command_block_commands_panel/centering_panel/option_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "left_scroll_panel_content/content_stack_panel/option_label_tick_delay": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "left_scroll_panel_content/content_stack_panel/option_label_execute_on_first_tick": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "left_scroll_panel_content/content_stack_panel/offset8": {
+    "size": [ "100%", 2 ]
+  },
+
+  "cancel_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "block_type_panel": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "command_impulse_mode@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#command_impulse_mode",
+          "$radio_label_text": "commandBlockScreen.blockType.impulse"
+        }
+      },
+      {
+        "command_chain_mode@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#command_chain_mode",
+          "$radio_label_text": "commandBlockScreen.blockType.chain"
+        }
+      },
+      {
+        "command_repeat_mode@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#command_repeat_mode",
+          "$radio_label_text": "commandBlockScreen.blockType.repeat"
+        }
+      }
+    ]
+  },
+
+  "condition_mode_panel": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "command_conditional_mode@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#command_conditional_mode",
+          "$radio_label_text": "commandBlockScreen.condition.conditional"
+        }
+      },
+      {
+        "command_unconditional_mode@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#command_unconditional_mode",
+          "$radio_label_text": "commandBlockScreen.condition.unconditional"
+        }
+      }
+    ]
+  },
+
+  "redstone_mode_panel": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "command_always_on_mode@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#command_always_on_mode",
+          "$radio_label_text": "commandBlockScreen.redstone.always_on"
+        }
+      },
+      {
+        "command_needs_redstone_mode@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#command_needs_redstone_mode",
+          "$radio_label_text": "commandBlockScreen.redstone.needs_redstone"
+        }
+      }
+    ]
+  },
+
+  "right_scrolling_panel": {
+    "$scroll_bar_left_padding_size": [ 0, 0 ],
+    "$scroll_bar_right_padding_size": [ 1, 0 ]
+  },
+
+  "left_scroll_panel_content": {
+    "size": [ "100% - 3px", "100%c" ],
+    "offset": [ 2, 0 ]
+  },
+
+  "left_scrolling_panel": {
+    "$scroll_bar_left_padding_size": [ 0, 0 ],
+    "$scroll_bar_right_padding_size": [ 1, 0 ]
+  },
+
+  "command_block_screen": {
+    "$rainbowpie_localui_modified": true,
+    "force_render_below": true,
+    "$screen_content": "rainbowpieui_command_block.command_block_screen_content"
+  }
+}

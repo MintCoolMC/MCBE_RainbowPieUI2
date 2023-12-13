@@ -1,0 +1,10 @@
+{
+  "namespace": "manifest_validation",
+
+  "manifest_validation_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screenbackground_blur": true,
+    "force_render_below": false,
+    "$screen_content": "rainbowpieui_manifest_validation.manifest_validation_screen_content"
+  }
+}

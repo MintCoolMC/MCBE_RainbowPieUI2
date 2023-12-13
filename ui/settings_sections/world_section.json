@@ -1,0 +1,339 @@
+{
+  "namespace": "world_section",
+
+  "level_texture_pack_section": {
+    "$rainbowpie_localui_resource_packs_type": "texture",
+    "$rainbowpie_localui_resource_packs_search_box_control": "level_rp_search_text_box_display_text",
+    "$rainbowpie_localui_resource_packs_search_box_placeholder": "rainbowpie.ui.resource_packs.search.placeholder.resource"
+  },
+
+  "addon_section": {
+    "$rainbowpie_localui_resource_packs_type": "addon",
+    "$rainbowpie_localui_resource_packs_search_box_control": "level_bp_search_text_box_display_text",
+    "$rainbowpie_localui_resource_packs_search_box_placeholder": "rainbowpie.ui.resource_packs.search.placeholder.behavior"
+  },
+
+  "game_section/option_dropdown_0": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "world_survival_mode_toggle@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#world_game_mode_radio_survival",
+          "$radio_label_text": "createWorldScreen.gameMode.survival"
+        }
+      },
+      {
+        "world_creative_mode_toggle@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#world_game_mode_radio_creative",
+          "$radio_label_text": "createWorldScreen.gameMode.creative"
+        }
+      },
+      {
+        "world_adventure_mode_toggle@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "ignored": "($is_world_create or $trial)",
+          "$toggle_state_binding_name": "#world_game_mode_radio_adventure",
+          "$radio_label_text": "createWorldScreen.gameMode.adventure"
+        }
+      }
+    ]
+  },
+
+  "game_section/option_dropdown_1": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "player_default_mode_toggle@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_default",
+          "$radio_label_text": "createWorldScreen.gameMode.serverDefault"
+        }
+      },
+      {
+        "player_survival_mode_toggle@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_survival",
+          "$radio_label_text": "createWorldScreen.gameMode.survival"
+        }
+      },
+      {
+        "player_creative_mode_toggle@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_creative",
+          "$radio_label_text": "createWorldScreen.gameMode.creative"
+        }
+      },
+      {
+        "player_adventure_mode_toggle@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_adventure",
+          "$radio_label_text": "createWorldScreen.gameMode.adventure"
+        }
+      },
+      {
+        "player_spectator_mode_toggle@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_spectator",
+          "$radio_label_text": "createWorldScreen.gameMode.spectator"
+        }
+      }
+    ]
+  },
+
+  "game_section/option_dropdown_2": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#world_difficulty_radio_peaceful",
+          "$radio_label_text": "options.difficulty.peaceful"
+        }
+      },
+      {
+        "@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#world_difficulty_radio_easy",
+          "$radio_label_text": "options.difficulty.easy"
+        }
+      },
+      {
+        "@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#world_difficulty_radio_normal",
+          "$radio_label_text": "options.difficulty.normal"
+        }
+      },
+      {
+        "@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#world_difficulty_radio_hard",
+          "$radio_label_text": "options.difficulty.hard"
+        }
+      }
+    ]
+  },
+
+  "game_section/option_dropdown_permissions": {
+    "$is_world_settings|default": false,
+		"$is_in_realm|default": false,
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+				"permission_level_radio_visitor@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+					"ignored": "$is_world_settings",
+					"$toggle_state_binding_name": "#permission_level_radio_visitor",
+					"$radio_label_text": "permissions.level.visitor",
+					"$permissions_visuals_normal": "permissions.permissions_visitor_radio_visuals_normal",
+					"$permissions_visuals_hover": "permissions.permissions_visitor_radio_visuals_hover"
+				}
+			},
+			{
+				"permission_level_radio_visitor_settings@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+					"ignored": "(not $is_world_settings)",
+					"$toggle_state_binding_name": "#permission_level_radio_visitor",
+					"$radio_label_text": "permissions.level.visitor",
+					"$radio_label_desc": "permissions.description.visitors",
+					"$permissions_visuals_normal": "permissions.permissions_visitor_visuals_with_title_normal",
+					"$permissions_visuals_hover": "permissions.permissions_visitor_visuals_with_title_hover"
+				}
+			},
+			// MEMBER //
+			{
+				"permission_level_radio_member@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+					"ignored": "$is_world_settings",
+					"$toggle_state_binding_name": "#permission_level_radio_member",
+					"$radio_label_text": "permissions.level.member",
+					"$permissions_visuals_normal": "permissions.permissions_member_radio_visuals_normal",
+					"$permissions_visuals_hover": "permissions.permissions_member_radio_visuals_hover"
+				}
+			},
+			{
+				"permission_level_radio_member_settings@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+					"ignored": "(not $is_world_settings)",
+					"$toggle_state_binding_name": "#permission_level_radio_member",
+					"$radio_label_text": "permissions.level.member",
+					"$radio_label_desc": "permissions.description.members",
+					"$permissions_visuals_normal": "permissions.permissions_member_visuals_with_title_normal",
+					"$permissions_visuals_hover": "permissions.permissions_member_visuals_with_title_hover"
+				}
+			},
+			// OPERATOR //
+			{
+				"permission_level_radio_operator@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+					"ignored": "$is_world_settings",
+					"$toggle_state_binding_name": "#permission_level_radio_operator",
+					"$radio_label_text": "permissions.level.operator",
+					"$permissions_visuals_normal": "permissions.permissions_op_radio_visuals_normal",
+					"$permissions_visuals_hover": "permissions.permissions_op_radio_visuals_hover"
+				}
+			},
+			{
+				"permission_level_radio_operator_settings@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+					"ignored": "(not $is_world_settings)",
+					"$toggle_state_binding_name": "#permission_level_radio_operator",
+					"$radio_label_text": "permissions.level.operator",
+					"$radio_label_desc": "permissions.description.operators",
+					"$permissions_visuals_normal": "permissions.permissions_op_visuals_with_title_normal",
+					"$permissions_visuals_hover": "permissions.permissions_op_visuals_with_title_hover"
+				}
+			},
+			// CUSTOM //
+			{
+				"permission_level_radio_custom@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+					"ignored": "($is_world_settings or $is_in_realm)",
+					"$toggle_state_binding_name": "#permission_level_radio_custom",
+					"$radio_label_text": "permissions.level.custom",
+					"$permissions_visuals_normal": "permissions.permissions_custom_radio_visuals_normal",
+					"$permissions_visuals_hover": "permissions.permissions_custom_radio_visuals_hover"
+				}
+			}
+    ]
+  },
+
+  "game_section/option_dropdown_3": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "flat_world_type_toggle@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#world_type_radio_flat",
+          "$radio_label_text": "generator.flat"
+        }
+      },
+      {
+        "infinite_world_type_toggle@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#world_type_radio_infinite",
+          "$radio_label_text": "generator.infinite"
+        }
+      },
+      {
+        "old_world_type_toggle@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#world_type_radio_old",
+          "$radio_label_text": "generator.old"
+        }
+      }
+    ]
+  },
+
+  "multiplayer_section/xbl_settings_dropdown": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "invite_only_toggle@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#xbl_broadcast_invite_only",
+          "$radio_label_text": "options.xboxliveBroadcast.inviteOnly"
+        }
+      },
+      {
+        "friends_only_toggle@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#xbl_broadcast_friends_only",
+          "$radio_label_text": "options.xboxliveBroadcast.friendsOnly"
+        }
+      },
+      {
+        "friends_of_friends_toggle@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#xbl_broadcast_friends_of_friends",
+          "$radio_label_text": "options.xboxliveBroadcast.friendsOfFriends"
+        }
+      }
+    ]
+  },
+
+  "selector_pane_content": {
+    "modifications": [
+      {
+        "control_name": "world_snapshot_image",
+        "operation": "insert_after",
+        "value": [
+          {
+            "rp_spacer_1": {
+              "type": "panel",
+              "ignored": "(not $is_pregame)",
+              "size": [ 1, 1 ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "play_or_create_stack_bedrock": {
+    "size": [ "100%", 27 ],
+    "modifications": [
+      {
+        "control_name": "create_or_play_button",
+        "operation": "insert_after",
+        "value": [
+          {
+            "rp_spacer_1": {
+              "type": "panel",
+              "size": [ 1, 1 ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "play_or_create_stack_bedrock/create_or_play_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+    "size": [ "fill", 28 ]
+  },
+
+  "play_or_create_stack_bedrock/play_on_realm_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+    "size": [ "fill", 28 ],
+    "$rainbowpie_localui_button_default_color": [ 1.0, 0.7294117647058824, 0.9058823529411765 ],
+    "$rainbowpie_localui_button_hover_color": [ 0.7647058823529412, 0.2980392156862745, 0.9254901960784314 ],
+    "$rainbowpie_localui_button_pressed_color": [ 0.85098, 0.301961, 0.301961 ],
+    "$rainbowpie_localui_button_default_alpha": 0.5,
+    "$rainbowpie_localui_button_hover_alpha": 0.4,
+    "$rainbowpie_localui_button_pressed_alpha": 0.4,
+    "$rainbowpie_localui_button_text_default_color": [ 1.0, 1.0, 1.0 ],
+    "$rainbowpie_localui_button_text_hover_color": [ 1.0, 1.0, 1.0 ],
+    "$rainbowpie_localui_button_text_pressed_color": [ 1.0, 1.0, 1.0 ]
+  },
+
+  "selector_pane_content/world_snapshot_image/thumbnail/border": {
+    "ignored": true
+  },
+
+  "selector_pane_content/world_snapshot_image": {
+    "clips_children": true,
+    "size": [ "100%", "100%c" ]
+  },
+
+  "selector_pane_content/world_snapshot_image/thumbnail": {
+    "size": [ "100%", "56.25%x + 2.25px" ],
+    "offset": [ 0, 0 ]
+  },
+
+  "game_button": {
+    "$icon_group_name": "game",
+    "$icon_texture_name": "world"
+  },
+
+  "multiplayer_button": {
+    "$icon_group_name": "game",
+    "$icon_texture_name": "multiplayer"
+  },
+
+  "selector_pane_content/server_settings_visibility_panel": {
+  },
+
+  "selector_pane_content/server_settings_visibility_panel/selector_group_label_0": {
+    "ignored": "($is_pregame or $rainbowpie_ui_feature_markbest)"
+  },
+
+  "selector_pane_content/server_settings_visibility_panel/server_spacer": {
+    "size": [ 1, 1 ]
+  },
+
+  "selector_pane_content/selector_group_label_1": {
+    "ignored": "($rainbowpie_ui_feature_markbest)"
+  },
+
+  "selector_pane_content/spacer": {
+    "size": [ 1, 1 ]
+  },
+
+  "addons_selector_panel/spacer": {
+    "size": [ 1, 1 ]
+  },
+
+  "addons_selector_panel/selector_group_label_2": {
+    "ignored": "($rainbowpie_ui_feature_markbest)"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "namespace": "invite",
+
+  "msa_friend_button_layout/friend_grid_label_layout/spacer_01": {
+    "size": [ "100%", 1.5 ]
+  },
+
+  "msa_friend_button_layout/spacer_02": {
+    "size": [ 5, "100%" ]
+  },
+
+  "msa_friend_button_layout/spacer01": {
+    "size": [ 23, "100%" ]
+  },
+
+  "gamerpic_panel": {
+    "size": [ "100%y", "100%" ]
+  },
+
+  "gamerpic_panel/gamerpic": {
+    "size": [ "100%", "100%" ]
+  },
+
+  "template_msa_friend_button_layout": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "friend_background_hover@invite.friend_background_hover": {
+              "visible": "(($check_state_panel = 'invite.checked_hover_panel') or ($check_state_panel = 'invite.unchecked_hover_panel'))"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "template_platform_friend_button_layout": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "friend_background_hover@invite.friend_background_hover": {
+              "visible": "(($check_state_panel = 'invite.checked_hover_panel') or ($check_state_panel = 'invite.unchecked_hover_panel'))"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "template_linked_friend_button_layout": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "friend_background_hover@invite.friend_background_hover": {
+              "visible": "(($check_state_panel = 'invite.checked_hover_panel') or ($check_state_panel = 'invite.unchecked_hover_panel'))"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "template_msa_friend_button_layout/friend_background": {
+    "ignored": "(($check_state_panel = 'invite.checked_hover_panel') or ($check_state_panel = 'invite.unchecked_hover_panel'))"
+  },
+
+  "template_platform_friend_button_layout/friend_background": {
+    "ignored": "(($check_state_panel = 'invite.checked_hover_panel') or ($check_state_panel = 'invite.unchecked_hover_panel'))"
+  },
+
+  "template_linked_friend_button_layout/friend_background": {
+    "ignored": "(($check_state_panel = 'invite.checked_hover_panel') or ($check_state_panel = 'invite.unchecked_hover_panel'))"
+  },
+
+  "black_border": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha"
+  },
+
+  "black_border_hover": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_button_background_hover_color",
+    "alpha": "$rainbowpie_ui_theme_button_background_hover_alpha"
+  },
+
+  "frame_label": {
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
+  "label": {
+    "color": "$rainbowpie_ui_theme_text_text_color",
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "friends_pagination_controls/center_panel/page_counter": {
+    "color": "$rainbowpie_ui_theme_text_text_color",
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "friend_label": {
+    "color": "$rainbowpie_ui_theme_text_text_color",
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "panel_text": {
+    "color": "$rainbowpie_ui_theme_text_text_color",
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "invite_button_content/button_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "invite_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$screen_content": "rainbowpieui_invite.invite_screen_content"
+  }
+}

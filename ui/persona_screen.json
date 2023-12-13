@@ -1,0 +1,468 @@
+{
+  "namespace": "persona",
+
+  "persona_screen_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "background_blur_panel@rainbowpieui_persona.background_blur_panel": {}
+          }
+        ]
+      }
+    ]
+  },
+
+  "right_side_stack_debug_control": {
+    "bindings": [
+      {
+        "binding_name": "#is_using_dressing_room_debugging",
+        "binding_name_override": "#visible",
+        "ignored": "$rainbowpie_ui_flag_persona_debug"
+      }
+    ]
+  },
+
+  "persona_classic_skin_paper_doll": {
+    "camera_tilt_degrees": 0
+  },
+
+  "popup_dialog_skin_model/paper_doll": {
+    "camera_tilt_degrees": 0
+  },
+
+  "skin_viewer_panel_skin_model/skin_model": {
+    "camera_tilt_degrees": 0,
+    "starting_rotation": 0
+  },
+
+  "popup_dialog__restricted_content_popup": {
+    "controls": [
+      {
+        "dialog_panel@rainbowpie_ui_dialog.dialog_panel": {
+          "layer": 8,
+          "size": [ 204, 132 ],
+          "$rainbowpie_localui_dialogheader_title": "dr.modal.restricted_content_title",
+          "$rainbowpie_localui_dialog_content": "rainbowpieui_persona.restricted_content_popup_dialog_content",
+          "$rainbowpie_localui_dialog_show_background": false,
+          "$rainbowpie_localui_dialogheader_show_close": false
+        }
+      },
+      {
+        "background2@rainbowpieui_profile.background_panel_design2": {
+          "layer": 4
+        }
+      }
+    ]
+  },
+
+  "equip_button_content": {
+    "offset": [ 0, 0 ]
+  },
+
+  "cape_button_content/stack_content/content_label_panel/content_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "button_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "persona_skin_pack_panel/pack_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "skin_pack_expand_pack": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "switch_persona_and_classic_repeat_check_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "switch_persona_and_classic_message": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "switch_persona_and_classic_title": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "custom_skin_info_panel_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "limb_side_switcher/title/limb_title": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "piece_section_title_panel/title": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "label_image_button_content/content_label_panel/content_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "sub_category_label_image_button_content/stack_content/content_label_panel/content_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "skin_info_label_panel_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "color_picker_panel/top_bar/title/skin_title": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "loading_progress_bars/loading_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "body_size_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "arm_size_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "usage_limited_right_panel_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "to_realms_plus_screen_realms_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "realms_extra_info_panel_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "realms_plus_skin_pack_timer/content_sizer/realms_plus_timer/timer_container/timer_string": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "appearance_status_panel/appearance_status/label_panel/label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "info_text_box_description_stack_description_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "persona_getting_started_description": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "right_side_stack_debug_control/debug_preview_skin_name": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "right_side_stack_debug_control/debug_skin_names/debug_active_name": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "right_side_stack_debug_control/debug_skin_names/debug_current_name": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "special_offer_banner/banner_info/special_banner_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "title_rarity_right_title": {
+    "offset": [ 0, 0 ],
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "title_rarity_positionable_title": {
+    "offset": [ 0, 0 ],
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "equip_piece_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "realms_redeem_button_content/realms_text_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "realms_savings_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "roamable_status_notification_panel/appearance_status_notification": {
+    "ignored": "$rainbowpie_ui_flag_05aab186"
+  },
+
+  "appearance_status_panel": {
+   
+  },
+
+  "persona_getting_started_title": {
+    "offset": [ 2, 2 ],
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_title_text_color"
+  },
+
+  "right_panel_classic_skins_title/title_panel/title": {
+    "offset": [ 0, 0 ],
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_title_text_color"
+  },
+
+  "right_panel_classic_skins_title/author_panel/author": {
+    "offset": [ 0, 0 ],
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_title_text_color"
+  },
+
+  "select_custom_skin_stack": {
+    "size": [ "100% - 2px", 20 ]
+  },
+
+  "select_custom_skin": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button"
+  },
+
+  "cape_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "subcategory_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "realms_redeem_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "realms_subscription_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "offer_coin_purchase_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "equip_piece_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "right_realms_pack_button_more_info": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "right_panel_classic_skin_pack_bottom_buttons/ending_button/to_realms_plus": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "info_popup_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "info_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+  
+  "preview_skin_full": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+  
+  "color_picker_right_cycle": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+  
+  "color_picker_left_cycle": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+  
+  "leave_color_picker": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+  
+  "left_limb_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+  
+  "right_limb_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+    
+  "skin_color_picker": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+  
+  "color_grid_item": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+    
+  "popup_dialog_choose_skin_type_panel/choose_skin_type_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+    
+  "persona_skin_pack_panel/pack_body/skin_pack_panel/expand_view_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+    
+  "get_more_skins_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "offer_real_money_purchase_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "achievement_text_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "popup_dialog_close_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "right_panel_classic_skin_pack_bottom_buttons/ending_button/see_pack_in_store": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "none_piece_option_panel/none_piece_option_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "usage_limited_settings_profile_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "differences_popup_ok_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "see_more_skins_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "emotes_right_side_bottom_buttons/play_again": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "emote_offer_section_panel/remove_emote_option_panel/none_emote_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "scroll_section": {
+    "$rainbowpie_localui_scrollbar_enabled": true,
+    "$scroll_size": [ 4, "100% - 6px" ]
+  },
+
+  "right_side_classic_skin_featured_panel": {
+    "$right_side_dialog_bg_size": [ "100%", "100%c" ]
+  },
+
+  "persona_getting_started_panel": {
+    "$right_side_dialog_bg_size": [ "100%", "100%" ]
+  },
+
+  "piece_list_right_side_section": {
+    "$dialog_bg_size": [ "100%", "100%" ]
+  },
+
+  "right_side_dialog_panel": {
+    "$right_side_dialog_bg_size|default": [ "100%", "100%" ]
+  },
+
+  "dialog_background_object_content": {
+    "$dialog_bg_size|default": [ "100%", "100%" ],
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha"
+  },
+
+  "dialog_background_object": {
+    "texture": ""
+  },
+
+  "persona_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screenbackground_blur": "(not $rainbowpie_ui_flag_d28dfac0)",
+    "$screen_bg_content": "common.empty_panel",
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_d28dfac0",
+        "$rainbowpie_localui_screen_anims": []
+      }
+    ]
+  }
+}

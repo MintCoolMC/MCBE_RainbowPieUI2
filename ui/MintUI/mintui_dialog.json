@@ -1,0 +1,255 @@
+{
+  "namespace": "mintui_dialog",
+
+  "dialog_panel_destroy": {
+    "ignored": "($mintui_dialog_destory_id = '')",
+    "anim_type": "wait",
+    "duration": 0,
+    "destroy_at_end": "$mintui_dialog_control_name",
+    "play_event": "$mintui_dialog_destory_id"
+  },
+
+  "dialog_panel_hidden": {
+    "ignored": "($mintui_dialog_hidden_id = '')",
+    "anim_type": "offset",
+    "duration": 0,
+    "to": [ 0, "100%" ],
+    "from": [ 0, "100%" ],
+    "play_event": "$mintui_dialog_hidden_id"
+  },
+
+  "dialog_panel_hidden_size": {
+    "ignored": "($mintui_dialog_hidden_id = '')",
+    "anim_type": "size",
+    "duration": 0,
+    "to": [ 0, 0 ],
+    "from": [ 0, 0 ],
+    "play_event": "$mintui_dialog_hidden_id"
+  },
+
+  "dialog_panel_hidden_alpha": {
+    "ignored": "($mintui_dialog_hidden_id = '')",
+    "anim_type": "alpha",
+    "duration": 0,
+    "to": 0,
+    "from": 0,
+    "play_event": "$mintui_dialog_hidden_id"
+  },
+
+  "dialog_panel_shown": {
+    "anim_type": "offset",
+    "duration": 0,
+    "to": [ 0, 0 ],
+    "from": [ 0, 0 ],
+    "play_event": "$mintui_dialog_shown_id"
+  },
+
+  "dialog_panel_shown_size": {
+    "anim_type": "size",
+    "duration": 0,
+    "to": [ "default", "default" ],
+    "from": [ "default", "default" ],
+    "play_event": "$mintui_dialog_shown_id"
+  },
+
+  "dialog_panel_shown_alpha": {
+    "anim_type": "alpha",
+    "duration": 0,
+    "to": 1,
+    "from": 1,
+    "play_event": "$mintui_dialog_shown_id"
+  },
+
+  "dialog_panel": {
+    "type": "panel",
+    "$mintui_dialog_control_name|default": "dialog_panel", // 控件名：填写调用时使用的控件名。例：调用结构为{ "this_is_control@mintui_dialog.dialog_panel": {} } 那么此处请填写"this_is_control"
+    "$mintui_dialog_title|default": "DIALOG TITLE", // 对话框标题，请保证单行
+    "$mintui_dialog_text|default": "DIALOG TEXT", // 对话框文本
+    "$mintui_dialog_type|default": "1", // 0-2
+    "$mintui_dialog_button1_text|default": "gui.ok", // 第一个按钮的文本（左按钮）
+    "$mintui_dialog_button1_id|default": "mintui.close_dialog", // 第一个按钮的按下id
+    "$mintui_dialog_button2_text|default": "",  // 第二个按钮的文本（右按钮）
+    "$mintui_dialog_button2_id|default": "", // 第二个按钮的按下id
+    "$mintui_dialog_button3_text|default": "",  // 第三个按钮的文本（中间按钮）
+    "$mintui_dialog_button3_id|default": "", // 第三个按钮的按下id
+    "$mintui_dialog_button_mapping|default": true, // 按钮映射：按下返回键触发$mintui_dialog_close_id。已知bug：导致原本界面的按钮映射不可用
+    "$mintui_dialog_close_button|default": true, // 对话框右上角是否显示关闭按钮
+    "$mintui_dialog_close_id|default": "mintui.close_dialog", // 关闭按钮的按下id
+    "$mintui_dialog_shown_id|default": "mintui.shown_dialog", // 显示此对话框的id（请自写按钮触发）
+    "$mintui_dialog_destory_id|default": "mintui.close_dialog", // 摧毁对话框的id（请自写按钮触发）
+    "$mintui_dialog_hidden_id|default": "", // 隐藏对话框的id（请自写按钮触发）
+    "offset": [ 0, "100%" ],
+    "size": [ 0, 0 ],
+    "layer": 3000,
+    "alpha": 0,
+    "propagate_alpha": true,
+    "animation_reset_name": "$mintui_dialog_shown_id",
+    "anims": [
+      "@mintui_dialog.dialog_panel_destroy",
+      "@mintui_dialog.dialog_panel_hidden",
+      "@mintui_dialog.dialog_panel_hidden_size",
+      "@mintui_dialog.dialog_panel_hidden_alpha",
+      "@mintui_dialog.dialog_panel_shown",
+      "@mintui_dialog.dialog_panel_shown_size",
+      "@mintui_dialog.dialog_panel_shown_alpha"
+    ],
+    "controls": [
+      {
+        "dialog_0@common_dialogs.main_panel_no_buttons": {
+          "ignored": "(not ($mintui_dialog_type = '0'))",
+          "$text_name": "$mintui_dialog_title",
+          "$child_control": "mintui_dialog.label_panel",
+          "$show_close_button": "$mintui_dialog_close_button",
+          "$close_button_to_button_id": "$mintui_dialog_close_id",
+          "size": [ 214, 100 ],
+          "layer": 3100
+        }
+      },
+      {
+        "dialog_1@common_dialogs.main_panel_one_button": {
+          "ignored": "(not ($mintui_dialog_type = '1'))",
+          "$text_name": "$mintui_dialog_title",
+          "$child_control": "mintui_dialog.label_panel",
+          "$button_panel": "mintui_dialog.button1_dialog",
+          "$show_close_button": "$mintui_dialog_close_button",
+          "$close_button_to_button_id": "$mintui_dialog_close_id",
+          "size": [ 214, 130 ],
+          "layer": 3100
+        }
+      },
+      {
+        "dialog_2@common_dialogs.main_panel_two_buttons": {
+          "ignored": "(not ($mintui_dialog_type = '2'))",
+          "$text_name": "$mintui_dialog_title",
+          "$child_control": "mintui_dialog.label_panel",
+          "$top_button_panel": "mintui_dialog.button1_dialog",
+          "$bottom_button_panel": "mintui_dialog.button2_dialog",
+          "$show_close_button": "$mintui_dialog_close_button",
+          "$close_button_to_button_id": "$mintui_dialog_close_id",
+          "size": [ 214, 175 ],
+          "layer": 3100
+        }
+      },
+      {
+        "dialog_3@common_dialogs.main_panel_three_buttons": {
+          "ignored": "(not ($mintui_dialog_type = '3'))",
+          "$text_name": "$mintui_dialog_title",
+          "$child_control": "mintui_dialog.label_panel",
+          "$top_button_panel": "mintui_dialog.button1_dialog",
+          "$middle_button_panel": "mintui_dialog.button3_dialog",
+          "$bottom_button_panel": "mintui_dialog.button2_dialog",
+          "$show_close_button": "$mintui_dialog_close_button",
+          "$close_button_to_button_id": "$mintui_dialog_close_id",
+          "size": [ 214, 190 ],
+          "layer": 3100
+        }
+      },
+      {
+        "anti_click_panel": {
+          "type": "input_panel",
+          "size": [ "100%", "100%" ],
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "focus_enabled": false,
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "$mintui_dialog_close_id",
+              "mapping_type": "focused",
+              "ignored": "(not $mintui_dialog_button_mapping)"
+            },
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "mintui.empty",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "mintui.empty",
+              "mapping_type": "pressed"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button1_dialog@common_buttons.light_text_button": {
+    "focus_change_down": "FOCUS_OVERRIDE_STOP",
+    "focus_change_up": "FOCUS_OVERRIDE_STOP",
+    "focus_change_right": "$fcr",
+    "focus_change_left": "FOCUS_OVERRIDE_STOP",
+    "$fcr": "",
+    "default_focus_precedence": 1,
+    "layer": 1,
+    "$pressed_button_name": "$mintui_dialog_button1_id",
+    "$button_text": "$mintui_dialog_button1_text",
+    "variables": [
+      {
+        "requires": "($mintui_dialog_type = '1')",
+        "$fcr": "FOCUS_OVERRIDE_STOP"
+      }
+    ]
+  },
+
+  "button2_dialog@common_buttons.light_text_button": {
+    "focus_change_down": "FOCUS_OVERRIDE_STOP",
+    "focus_change_up": "FOCUS_OVERRIDE_STOP",
+    "focus_change_right": "FOCUS_OVERRIDE_STOP",
+    "default_focus_precedence": 1,
+    "layer": 1,
+    "$pressed_button_name": "$mintui_dialog_button2_id",
+    "$button_text": "$mintui_dialog_button2_text"
+  },
+
+  "button3_dialog@common_buttons.light_text_button": {
+    "focus_change_down": "FOCUS_OVERRIDE_STOP",
+    "focus_change_up": "FOCUS_OVERRIDE_STOP",
+    "default_focus_precedence": 1,
+    "layer": 1,
+    "$pressed_button_name": "$mintui_dialog_button3_id",
+    "$button_text": "$mintui_dialog_button3_text"
+  },
+
+  "label_panel@common.scrolling_panel": {
+    "$scrolling_pane_size": [ "100% - 1px", "100%" ],
+    "$scrolling_pane_offset": [ 2, 0 ],
+    "$scrolling_content": "mintui_dialog.dialog_text_panel",
+    "$scroll_size": [ 5, "100% - 4px" ],
+    "$show_background": false,
+    "layer": 1,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$always_handle_scrolling": true
+  },
+
+  "dialog_text_panel": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "offset": [ 0, 0 ],
+    "controls": [
+      {
+        "padding": {
+          "type": "panel",
+          "size": [ 0, 2 ]
+        }
+      },
+      {
+        "dialog_text": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "layer": 2,
+          "font_type": "smooth",
+          "text": "$text",
+          "$text": "$mintui_dialog_text",
+          "color": "$body_text_color",
+          "shadow": false
+        }
+      }
+    ]
+  }
+}

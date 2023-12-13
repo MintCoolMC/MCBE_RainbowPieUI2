@@ -1,0 +1,230 @@
+{
+  "namespace": "rainbowpieui_progress",
+
+  "world_loading_progress_screen": {
+    "type": "panel",
+    "controls": [
+      { "mobile_data_icon@progress.mobile_data_icon": {} },
+      {
+        "title_text@rainbowpie_ui_common.title_text": {
+          "offset": [ 0, "5%" ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "world_loading_progress_ui@rainbowpieui_progress.world_loading_progress_ui": {
+          "$modal_button_panel_type": "progress.modal_button_panel"
+        }
+      },
+      {
+        "loading_progress_ui_blur@rainbowpieui_progress.loading_progress_ui_blur": {}
+      },
+      { "popup_dialog_factory@progress.popup_dialog_factory": {} }
+    ]
+  },
+
+  "world_saving_progress_screen": {
+    "type": "panel",
+    "controls": [
+      {
+        "title_text@rainbowpie_ui_common.title_text": {
+          "offset": [ 0, "5%" ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "world_loading_progress_ui@rainbowpieui_progress.world_loading_progress_ui": {
+          "$modal_button_panel_type": "progress.modal_button_panel_with_retry"
+        }
+      },
+      {
+        "loading_progress_ui_blur@rainbowpieui_progress.loading_progress_ui_blur": {}
+      },
+      { "popup_dialog_factory@progress.popup_dialog_factory": {} }
+    ]
+  },
+
+  "loading_progress_ui_blur": {
+    "type": "panel",
+    "layer": 11,
+    "controls": [
+      {
+        "titlebar_control_blur": {
+          "type": "panel",
+          "clips_children": true,
+          "size": [ "100%", "100%" ],
+          "offset": [ "50% - 110px", "50% - 50px" ],
+          "controls": [
+            {
+              "blur_layer_1@mintui_background.background_blur": {
+                "$background_ingame": true,
+                "$background_offset": [ "-100% + 220px", "-100% + 27px" ],
+                "$background_children_offset": [ "50% - 110px", "50% + 23px" ],
+                "$background_layer": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "content_control_blur": {
+          "type": "panel",
+          "clips_children": true,
+          "size": [ "100%", "100%" ],
+          "offset": [ "50% - 110px", "50% - 23px" ],
+          "controls": [
+            {
+              "blur_layer_1@mintui_background.background_blur": {
+                "$background_mask": false,
+                "$background_ingame": true,
+                "$background_offset": [ "-100% + 220px", "-100% + 83px" ],
+                "$background_children_offset": [ "50% - 110px", "50% - 60px" ],
+                "$background_layer": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "world_loading_progress_ui": {
+    "type": "panel",
+    "size": [ 220, 110 ],
+    "offset": [ 0, 5 ],
+    "layer": 12,
+    "controls": [
+      {
+        "titlebar_control@rainbowpie_ui_common.title_background": {
+          "size": [ "100%", 27 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 10,
+          "controls": [
+            {
+              "title_text@rainbowpie_ui_common.title_label": {
+                "anchor_to": "center",
+                "anchor_from": "center",
+                "size": [ "default", "default" ],
+                "max_size": [ "100% - 8px", "100% - 4px" ],
+                "text": "#title_text",
+                "bindings": [
+                  {
+                    "binding_name": "#title_text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "content_control@rainbowpie_ui_common.text_background": {
+          "size": [ "100%", 83 ],
+          "offset": [ 0, 27 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 8,
+          "controls": [
+            {
+              "progress_bar_text_panel": {
+                "type": "panel",
+                "size": [ "100%", 46 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "controls": [
+                  {
+                    "progress_bar_text@rainbowpie_ui_common.title_label": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [ 0, 4 ],
+                      "size": [ "default", "default" ],
+                      "max_size": [ "100% - 18px", 40 ],
+                      "localize": false,
+                      "text": "#progress_text",
+                      "bindings": [
+                        {
+                          "binding_name": "#progress_text"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "inside_content": {
+                "type": "stack_panel",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "size": [ "100%-12px", "100%c" ],
+                "controls": [
+                  {
+                    "loading_bar_panel": {
+                      "type": "panel",
+                      "size": [ "100%", "100%c" ],
+                      "controls": [
+                        {
+                          "fancy_progress_loading_bars@rainbowpie_ui_common.fancy_progress_loading_bars": {
+                            "size": [ "90%", 3 ],
+                            "layer": 15,
+                            "$rainbowpie_localui_loading_bars_bindings": [
+                              {
+                                "binding_name": "#loading_bar_percentage",
+                                "binding_name_override": "#clip_ratio"
+                              }
+                            ],
+                            "bindings": [
+                              {
+                                "binding_name": "#loading_bar_visible",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "progress_loading_bars@rainbowpie_ui_common.progress_loading_bars": {
+                            "size": [ 65, 3 ],
+                            "offset": [ 0, 0 ],
+                            "layer": 2,
+                            "bindings": [
+                              {
+                                "binding_name": "#bar_animation_visible",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "vertical_padding": {
+                      "type": "panel",
+                      "size": [ 0, 5 ]
+                    }
+                  },
+                  {
+                    "modal_button_panel@$modal_button_panel_type": {
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "size": [ "100%", "100%c" ]
+                    }
+                  },
+                  {
+                    "vertical_padding_2": {
+                      "type": "panel",
+                      "size": [ 0, 14 ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

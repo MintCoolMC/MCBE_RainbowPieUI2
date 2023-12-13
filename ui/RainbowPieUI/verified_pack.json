@@ -1,0 +1,39 @@
+{
+  "namespace": "rainbowpieui_verified_pack",
+
+  "verified_pack_list@rainbowpieui_manifest_validation.verified_pack_list_panel": {
+    "$rainbowpie_localui_packverifiy_item": [
+      {
+        "rainbowpie@rainbowpieui_manifest_validation.verified_pack_item": {
+          "$rainbowpie_localui_packverifiy_packuuid": "$mintui_pack_uuid",
+          "$rainbowpie_localui_packverifiy_packname": "Rainbow Pie UI",
+          "$rainbowpie_localui_packverifiy_packauther": "MintCoolMC"
+        }
+      },
+      {
+        "old_rainbowpie@rainbowpieui_manifest_validation.verified_pack_item": {
+          "$rainbowpie_localui_packverifiy_packuuid": "2a6c2264-0401-4cd8-aad8-824fa7672084",
+          "$rainbowpie_localui_packverifiy_packname": "Rainbow Pie UI (Old)",
+          "$rainbowpie_localui_packverifiy_packauther": "MintCoolMC"
+        }
+      }
+    ]
+  },
+
+  "verified_pack_description@rainbowpieui_manifest_validation.verified_pack_description_panel": {
+    "controls": [
+      {
+        "rainbowpie@rainbowpieui_manifest_validation.verified_pack_description_item": {
+          "$rainbowpie_localui_packverifiy_packuuid": "$mintui_pack_uuid",
+          "$rainbowpie_localui_packverifiy_packdesc": "Rainbow Pie UI By Mintraspberry Cool\nWebsite: §ehttps://mintraspberry.cool/rainbowpieui"
+        }
+      },
+      {
+        "old_rainbowpie@rainbowpieui_manifest_validation.verified_pack_description_item": {
+          "$rainbowpie_localui_packverifiy_packuuid": "2a6c2264-0401-4cd8-aad8-824fa7672084",
+          "$rainbowpie_localui_packverifiy_packdesc": "Rainbow Pie UI By Mintraspberry Cool\n§cDO NOT USE WITH NEW PACK!!!§r\nWebsite: §ehttps://mintraspberry.cool/rainbowpieui"
+        }
+      }
+    ]
+  }
+}

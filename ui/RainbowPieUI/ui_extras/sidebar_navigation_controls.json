@@ -1,0 +1,141 @@
+{
+  "namespace": "rainbowpieui_sidebar_navigation",
+
+  "sidebar_and_blur_background_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "clips_children": true,
+    "controls": [
+      {
+        "simple_sidebar_background_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "background_overlay": {
+                "type": "image",
+                "size": [ 32, "100%" ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "texture": "textures/ui/White",
+                "color": "$color",
+                "alpha": "$alpha",
+                "$color|default": [ 0.0, 0.0, 0.0 ],
+                "$alpha|default": 0.3,
+                "layer": 10,
+                "variables": [
+                  {
+                    "requires": "(not $rainbowpie_ui_feature_background_blur and $is_pregame)",
+                    "$color": "$rainbowpie_ui_theme_sidebar_oqaque_background_color",
+                    "$alpha": "$rainbowpie_ui_theme_sidebar_oqaque_background_alpha"
+                  },
+                  {
+                    "requires": "($rainbowpie_ui_feature_background_blur and $is_pregame)",
+                    "$color": "$rainbowpie_ui_theme_sidebar_background_color",
+                    "$alpha": "$rainbowpie_ui_theme_sidebar_background_alpha"
+                  },
+                  {
+                    "requires": "(not $is_pregame)",
+                    "$color": "$rainbowpie_ui_theme_sidebar_oqaque_background_color",
+                    "$alpha": "$rainbowpie_ui_theme_sidebar_oqaque_background_alpha"
+                  }
+                ]
+              }
+            },
+            {
+              "blur_layer@mintui_background.background_blur": {
+                "size": [ "100%", "100% + 20px" ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "$background_offset": [ "-100% + 32px", 0 ],
+                "$background_children_offset": [ "100% - 32px", 0 ],
+                "$background_layer": 3
+              }
+            },
+            {
+              "mask_layer@mintui_background.background_mask": {
+                "size": [ "100%", "100% + 20px" ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "$background_offset": [ "-100% + 32px", 0 ],
+                "$background_children_offset": [ "100% - 32px", 0 ],
+                "$background_layer": 3
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#is_simple_sidebar_state_active",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "verbose_sidebar_background_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "background_overlay": {
+                "type": "image",
+                "size": [ "142px", "100%" ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "texture": "textures/ui/White",
+                "color": "$color",
+                "alpha": "$alpha",
+                "$color|default": [ 0.0, 0.0, 0.0 ],
+                "$alpha|default": 0.3,
+                "layer": 1,
+                "variables": [
+                  {
+                    "requires": "(not $rainbowpie_ui_feature_background_blur and $is_pregame)",
+                    "$color": "$rainbowpie_ui_theme_sidebar_verbose_oqaque_background_color",
+                    "$alpha": "$rainbowpie_ui_theme_sidebar_verbose_oqaque_background_alpha"
+                  },
+                  {
+                    "requires": "($rainbowpie_ui_feature_background_blur and $is_pregame)",
+                    "$color": "$rainbowpie_ui_theme_sidebar_verbose_background_color",
+                    "$alpha": "$rainbowpie_ui_theme_sidebar_verbose_background_alpha"
+                  },
+                  {
+                    "requires": "(not $is_pregame)",
+                    "$color": "$rainbowpie_ui_theme_sidebar_verbose_oqaque_background_color",
+                    "$alpha": "$rainbowpie_ui_theme_sidebar_verbose_oqaque_background_alpha"
+                  }
+                ]
+              }
+            },
+            {
+              "blur_layer@mintui_background.background_blur": {
+                "size": [ "100%", "100% + 20px" ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "$background_offset": [ "-100% + 142px", 0 ],
+                "$background_children_offset": [ "100% - 142px", 0 ],
+                "$background_layer": -3
+              }
+            },
+            {
+              "mask_layer@mintui_background.background_mask": {
+                "size": [ "100%", "100% + 20px" ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "$background_offset": [ "-100% + 142px", 0 ],
+                "$background_children_offset": [ "100% - 142px", 0 ],
+                "$background_layer": -3
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "(not #is_simple_sidebar_state_active)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

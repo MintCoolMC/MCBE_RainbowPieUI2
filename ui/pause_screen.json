@@ -1,0 +1,108 @@
+{
+  "namespace": "pause",
+
+  "pause_screen": {
+    "cache_screen": false,
+    "force_render_below": true,
+    "modifications": [
+      {
+        "array_name": "variables",
+        "operation": "insert_back",
+        "value": [
+          {
+            "requires": "$rainbowpie_ui_feature_markbest",
+            "$screen_content": "rainbowpieui_pause.pause_screen_content",
+            "$rainbowpie_localui_screen_watermark": true,
+            "$rainbowpie_localui_modified": true
+          }
+        ]
+      }
+    ]
+  },
+
+  "player_gamertag": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$text_color"
+  },
+
+  "player_button_content/player_pic_panel": {
+    "size": [ 24, "100%" ]
+  },
+
+  "player_gamer_pic": {
+    "size": [ 20, 20 ]
+  },
+
+  "player_gamer_pic/player_panel_black_border": {
+    "ignored": true
+  },
+
+  "player_button_content": {
+    "size": [ "100%", "100%" ],
+    "offset": [ 0, 0 ]
+  },
+
+  "player_button": {
+    "$button_image_size": [ "100%", "100% - 1px" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "players_collection"
+      }
+    ]
+  },
+
+  "player_permission_button": {
+    "$button_image_size": [ "100%", "100% - 1px" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "binding_name": "#permissions_button_visible",
+            "binding_name_override": "#enabled"
+          }
+        ]
+      }
+    ]
+  },
+
+  "player_grid_item_content/player_button_panel/player_permission_button_padding": {
+    "size": [ 29, "100%" ],
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name": "#permissions_button_visible"
+        }
+      }
+    ]
+  },
+
+  "player_grid_item_content/player_button_panel/player_button_banner/player_banner": {
+    "ignored": true
+  },
+
+  "player_grid_item_content/player_button_panel": {
+    "size": [ "100%", "100%" ]
+  },
+
+  "player_grid_item_content/player_permission_button_panel": {
+    "offset": [ 0, 0 ],
+    "size": [ "100%c", "100%" ],
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name": "#permissions_button_visible"
+        }
+      }
+    ]
+  }
+}

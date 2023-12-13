@@ -1,0 +1,90 @@
+{
+  "namespace": "rainbowpie_ui_module_list",
+
+  "module_item": {
+    "type": "panel",
+    "size": [ "100%", 52 ],
+    "$module_icon_texture|default": "($rainbowpie_ui_path_home + '/icon/module')",
+    "$module_name|default": "module_name",
+    "$module_version|default": "module_version",
+    "$module_author|default": "module_author",
+    "$module_description|default": "module_description",
+    "$module_state_check|default": false,
+    "$module_max_engine_version|default": "999999",
+    "$module_max_engine_patch_version|default": "999999",
+    "$module_min_engine_version|default": "0",
+    "$module_min_engine_patch_version|default": "0",
+    "controls": [
+      {
+        "background@rainbowpie_ui_common.text_background": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [ "100%", 50 ],
+          "controls": [
+            {
+              "icon_image": {
+                "type": "image",
+                "size": [ "100%y", "100%" ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "texture": "$module_icon_texture"
+              }
+            },
+            {
+              "label_1@rainbowpie_ui_common.text_label": {
+                "layer": 1,
+                "size": [ "100% - 54px", 15 ],
+                "offset": [ 52, 1 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text": "('§§' + $module_name + ' [' + $module_state + ']' + $module_update_state)",
+                "font_scale_factor": 1.5,
+                "$module_state|default": "§cINACTIVE§r",
+                "$module_update_state|default": "",
+                "variables": [
+                  {
+                    "requires": "$module_state_check",
+                    "$module_state": "§aACTIVE§r"
+                  },
+                  {
+                    "requires": "(($module_max_engine_version < $rainbowpieui_engine_version) or ($module_max_engine_patch_version < $rainbowpieui_patch_version))",
+                    "$module_update_state": " [§eNEEDUPDATE§r]"
+                  },
+                  {
+                    "requires": "(($module_min_engine_version > $rainbowpieui_engine_version) or ($module_min_engine_patch_version > $rainbowpieui_patch_version))",
+                    "$module_update_state": " [§cUNSUPPORTED§r]"
+                  }
+                ]
+              }
+            },
+            {
+              "label_2@rainbowpie_ui_common.text_label": {
+                "layer": 1,
+                "size": [ "100% - 44px", 10 ],
+                "offset": [ 52, 16 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text": "('§§' + $module_version + ', §o§l' + $module_author)"
+              }
+            },
+            {
+              "label_3@rainbowpie_ui_common.text_label": {
+                "layer": 1,
+                "size": [ "100% - 44px", 20 ],
+                "offset": [ 52, 27 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text": "('§§' + $module_description)"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "module_list_panel": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ]
+  }
+}

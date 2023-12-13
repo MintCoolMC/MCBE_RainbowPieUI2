@@ -1,0 +1,225 @@
+{
+  "namespace": "resource_packs",
+
+  "selected_stack_panel/top_panel": {
+    "size": [ "100%", 25 ]
+  },
+
+  "panel_bg/black_background": {
+    "texture": "textures/ui/Black",
+    "alpha": 0.5
+  },
+
+  "panel_bg/gray": {
+    "ignored": true
+  },
+
+  "selected_stack_panel/offset_3": {
+    "ignored": "$rainbowpie_ui_flag_840d1a5c"
+  },
+
+  "selected_stack_panel/realms_packs_title_button": {
+    "ignored": "$rainbowpie_ui_flag_840d1a5c"
+  },
+
+  "selected_stack_panel/realms_packs_section": {
+    "ignored": "$rainbowpie_ui_flag_840d1a5c"
+  },
+
+  "selected_stack_panel/offset_4": {
+    "ignored": "$rainbowpie_ui_flag_840d1a5c"
+  },
+
+  "selected_stack_panel/unowned_packs_title_button": {
+    "ignored": "($education_edition or $rainbowpie_ui_flag_840d1a5c)"
+  },
+
+  "selected_stack_panel/unowned_packs_section": {
+    "ignored": "($education_edition or $rainbowpie_ui_flag_840d1a5c)"
+  },
+
+  "selected_pack_panel": {
+    "$rainbowpie_localui_resource_packs_search_box_control|default": "rp_search_text_box_display_text",
+    "bindings": [
+      {
+        "binding_name": "#name",
+        "binding_type": "collection",
+        "binding_collection_name": "$button_collection_name"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((((((((((((((((((((((('|' + #name) - '§r') - '§o') - '§n') - '§m') - '§l') - '§k') - '§f') - '§e') - '§d') - '§c') - '§b') - '§a') - '§9') - '§8') - '§7') - '§6') - '§5') - '§4') - '§3') - '§2') - '§1') - '§0')",
+        "target_property_name": "#formatted_name"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "$rainbowpie_localui_resource_packs_search_box_control",
+        "source_property_name": "#item_name",
+        "target_property_name": "#output_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((not ((#formatted_name - #output_text) = #formatted_name)) or (#output_text = ''))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "available_pack_panel": {
+    "$rainbowpie_localui_resource_packs_search_box_control|default": "rp_search_text_box_display_text",
+    "bindings": [
+      {
+        "binding_name": "#name",
+        "binding_type": "collection",
+        "binding_collection_name": "$button_collection_name"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((((((((((((((((((((((('|' + #name) - '§r') - '§o') - '§n') - '§m') - '§l') - '§k') - '§f') - '§e') - '§d') - '§c') - '§b') - '§a') - '§9') - '§8') - '§7') - '§6') - '§5') - '§4') - '§3') - '§2') - '§1') - '§0')",
+        "target_property_name": "#formatted_name"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "$rainbowpie_localui_resource_packs_search_box_control",
+        "source_property_name": "#item_name",
+        "target_property_name": "#output_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((not ((#formatted_name - #output_text) = #formatted_name)) or (#output_text = ''))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "selected_stack_panel": {
+    "$rainbowpie_localui_resource_packs_type|default": "null",
+    "modifications": [
+      {
+        "control_name": "top_panel",
+        "operation": "insert_after",
+        "value": [
+          {
+            "padding_top_panel": {
+              "type": "panel",
+              "size": [ "100%", "2px" ],
+              "visible": "$show_checkbox",
+              "$force_pack_download_binding_type|default": "none",
+              "bindings": [
+                {
+                  "binding_name": "#force_pack_download_enabled_level",
+                  "binding_name_override": "#visible",
+                  "binding_type": "$force_pack_download_binding_type"
+                },
+                {
+                  "binding_name": "#force_pack_download_locked_level",
+                  "binding_name_override": "#enabled",
+                  "binding_type": "$force_pack_download_binding_type"
+                }
+              ]
+            }
+          },
+          {
+            "rainbowpie_resource_packs_screen@rainbowpieui_resource_packs.resource_packs_screen": {}
+          }
+        ]
+      }
+    ]
+  },
+
+  "selected_stack_panel/offset_0": {
+    "ignored": "($rainbowpie_ui_flag_54edd49d and (not ($rainbowpie_localui_resource_packs_type = 'null')))"
+  },
+
+  "selected_stack_panel/selected_packs_title_panel": {
+    "ignored": "($rainbowpie_ui_flag_54edd49d and (not ($rainbowpie_localui_resource_packs_type = 'null')))"
+  },
+
+  "selected_stack_panel/selected_pack_section": {
+    "ignored": "($rainbowpie_ui_flag_54edd49d and (not ($rainbowpie_localui_resource_packs_type = 'null')))"
+  },
+
+  "selected_stack_panel/offset_1": {
+    "ignored": "($rainbowpie_ui_flag_54edd49d and (not ($rainbowpie_localui_resource_packs_type = 'null')))"
+  },
+
+  "selected_stack_panel/available_packs_title_panel": {
+    "ignored": "($rainbowpie_ui_flag_54edd49d and (not ($rainbowpie_localui_resource_packs_type = 'null')))"
+  },
+
+  "selected_stack_panel/available_packs_section": {
+    "ignored": "($rainbowpie_ui_flag_54edd49d and (not ($rainbowpie_localui_resource_packs_type = 'null')))"
+  },
+
+  "resource_packs_toggle_button_control": {
+    "$icon_theme_dir|default": "($rainbowpie_ui_path_theme + '/icon/settings')",
+    "$icon_size|default": [ 15, 15 ],
+    "$icon_texture_name|default": "null",
+    "$icon_group_name|default": "null",
+    "$icon_offset|default": [ 5, 0 ],
+    "$icon_anchor_from|default": "left_middle",
+    "$icon_anchor_to|default": "left_middle",
+    "$state_collection_name|default": "null",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "section_icon": {
+              "type": "image",
+              "ignored": "(not $rainbowpie_ui_feature_settings_themedIcon)",
+              "anchor_from": "$icon_anchor_from",
+              "anchor_to": "$icon_anchor_to",
+              "offset": "$icon_offset",
+              "texture": "($icon_theme_dir + '/' + $icon_group_name + '/' + $icon_texture_name)",
+              "size": "$icon_size",
+              "layer": 3,
+              "color": "$text_color",
+              "alpha": 1
+            }
+          },
+          {
+            "tooltip_image_wrapper@resource_packs.tooltip_image_wrapper": {
+              "ignored": "($state_collection_name = 'null')",
+              "anchor_from": "right_middle",
+              "anchor_to": "right_middle",
+              "$button_collection_name": "$state_collection_name"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "resource_packs_toggle_button_control/icon_border": {
+    "ignored": "$rainbowpie_ui_feature_settings_themedIcon"
+  },
+
+  "resource_packs_toggle_button_control/cycling_icon": {
+    "ignored": "$rainbowpie_ui_feature_settings_themedIcon"
+  },
+
+  "resource_packs_toggle_button_control/tab_button_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "offset": "$rainbowpie_localui_this_offset",
+    "$rainbowpie_localui_this_offset": [ 34, 0 ],
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_feature_settings_themedIcon",
+        "$rainbowpie_localui_this_offset": [ 28, 0 ]
+      }
+    ]
+  },
+
+  "resource_packs_section_toggle_base": {
+    "$icon_texture_name": "global_texture",
+    "$icon_group_name": "general",
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_checked",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_checked_hover",
+    "size": [ "100%", "25px" ]
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "namespace": "storage_management",
+
+  "storage_header_panel/header_panel/clear_cache_button_panel/clear_cache_button": {
+    "offset": [ 0, 0 ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+    "$button_image_size": [ "100%", "100%" ]
+  },
+
+  "storage_main_panel/scroll_content": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "binding_type": "view",
+            "source_control_name": "storage_management_navigation_tab_toggle",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible",
+            "ignored": "(not $rainbowpie_ui_flag_e9c6dfdb)"
+          }
+        ]
+      }
+    ]
+  },
+
+  "storage_header_panel/header_panel/panel": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "binding_type": "view",
+            "source_control_name": "storage_management_navigation_tab_toggle",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible",
+            "ignored": "(not $rainbowpie_ui_flag_e9c6dfdb)"
+          }
+        ]
+      }
+    ]
+  },
+
+  "storage_header_panel/header_panel/file_storage_dropdown": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#storage_location_radio_external",
+          "$radio_label_text": "options.filelocation.external"
+        }
+      },
+      {
+        "@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#storage_location_radio_package",
+          "$radio_label_text": "options.filelocation.appdata"
+        }
+      }
+    ],
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "binding_type": "view",
+            "source_control_name": "storage_settings_navigation_tab_toggle",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible",
+            "ignored": "(not $rainbowpie_ui_flag_e9c6dfdb)"
+          }
+        ]
+      }
+    ]
+  },
+
+  "storage_header_panel/header_panel/clear_cache_button_panel": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "binding_type": "view",
+            "source_control_name": "storage_settings_navigation_tab_toggle",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible",
+            "ignored": "(not $rainbowpie_ui_flag_e9c6dfdb)"
+          }
+        ]
+      }
+    ]
+  },
+
+  "storage_header_panel/header_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "navigation_tab_panel@rainbowpieui_storage_management.navigation_tab_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_e9c6dfdb)"
+            }
+          },
+          {
+            "padding_t0": {
+              "type": "panel",
+              "size": [ 2, 2 ],
+              "ignored": "(not $rainbowpie_ui_flag_e9c6dfdb)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

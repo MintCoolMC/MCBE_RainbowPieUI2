@@ -1,0 +1,525 @@
+{
+  "namespace": "rainbowpie_ui_animations",
+  
+  "container_screen_exit_animation_push": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_container_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_container_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ "-3%", 0 ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "container_screen_exit_animation_pop": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_container_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_container_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ 0, "6%" ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "container_screen_entrance_animation_push": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_container_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_container_transition_time",
+    "from": [ 0, "6%" ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "container_screen_entrance_animation_pop": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_container_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_container_transition_time",
+    "from": [ "-3%", 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "screen_exit_animation_push_offset": {
+    "ignored": "$rainbowpie_localui_screen_ingame_anim2",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ "-3%", 0 ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "screen_exit_animation_pop_offset": {
+    "ignored": "$rainbowpie_localui_screen_ingame_anim1",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ "3%", 0 ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "screen_entrance_animation_push_offset": {
+    "ignored": "$rainbowpie_localui_screen_ingame_anim1",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ "3%", 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "screen_entrance_animation_pop_offset": {
+    "ignored": "$rainbowpie_localui_screen_ingame_anim2",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ "-3%", 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "screen_exit_animation_push_offset_ingame": {
+    "ignored": "(not $rainbowpie_localui_screen_ingame_anim2)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ 0, "6%"],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "screen_exit_animation_pop_offset_ingame": {
+    "ignored": "(not $rainbowpie_localui_screen_ingame_anim1)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ 0, "6%" ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "screen_entrance_animation_push_offset_ingame": {
+    "ignored": "(not $rainbowpie_localui_screen_ingame_anim1)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "6%" ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "screen_entrance_animation_pop_offset_ingame": {
+    "ignored": "(not $rainbowpie_localui_screen_ingame_anim2)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "6%" ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "header_exit_animation_push_offset": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim2",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ "-6%", 0 ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_exit_animation_pop_offset": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim1",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ "6%", 0 ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_entrance_animation_push_offset": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim1",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ "6%", 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "header_entrance_animation_pop_offset": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim2",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ "-6%", 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "header_exit_animation_push_offset_ingame": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim2)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_exit_animation_pop_offset_ingame": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim1)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_entrance_animation_push_offset_ingame": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim1)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "header_entrance_animation_pop_offset_ingame": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim2)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "header_exit_animation_push_offset_both": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim2",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_exit_animation_pop_offset_both": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim1",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_entrance_animation_push_offset_both": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim1",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "header_entrance_animation_pop_offset_both": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim2",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "header_exit_animation_push_offset_both_ingame": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim2)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ 0, -16 ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_exit_animation_pop_offset_both_ingame": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim1)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ 0, -16 ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_entrance_animation_push_offset_both_ingame": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim1)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, -16 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "header_entrance_animation_pop_offset_both_ingame": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim2)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, -16 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  // Header Background Animations
+
+  "header_background_exit_animation_push_offset1": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim2",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "-100% + 20px" ],
+    "to": [ 0, "-100% + 20px" ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_background_exit_animation_push_offset2": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim2",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "100% - 20px" ],
+    "to": [ 0, "100% - 20px" ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_background_exit_animation_pop_offset1": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim1",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "-100% + 20px" ],
+    "to": [ 0, "-100% + 20px" ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_background_exit_animation_pop_offset2": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim1",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "100% - 20px" ],
+    "to": [ 0, "100% - 20px" ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_background_entrance_animation_push_offset1": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim1",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "-100% + 20px" ],
+    "to": [ 0, "-100% + 20px" ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "header_background_entrance_animation_push_offset2": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim1",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "100% - 20px" ],
+    "to": [ 0, "100% - 20px" ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "header_background_entrance_animation_pop_offset1": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim2",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "-100% + 20px" ],
+    "to": [ 0, "-100% + 20px" ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "header_background_entrance_animation_pop_offset2": {
+    "ignored": "$rainbowpie_localui_screenheader_ingame_anim2",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "100% - 20px" ],
+    "to": [ 0, "100% - 20px" ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "header_background_exit_animation_push_offset_ingame1": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim2)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "-100% + 20px" ],
+    "to": [ 0, "-100% + 4px" ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_background_exit_animation_push_offset_ingame2": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim2)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "100% - 20px" ],
+    "to": [ 0, "100% - 4px" ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_background_exit_animation_pop_offset_ingame1": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim1)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "-100% + 20px" ],
+    "to": [ 0, "-100% + 4px" ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_background_exit_animation_pop_offset_ingame2": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim1)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "100% - 20px" ],
+    "to": [ 0, "100% - 4px" ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_background_entrance_animation_push_offset_ingame1": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim1)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "-100% + 4px" ],
+    "to": [ 0, "-100% + 20px" ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "header_background_entrance_animation_push_offset_ingame2": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim1)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "100% - 4px" ],
+    "to": [ 0, "100% - 20px" ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "header_background_entrance_animation_pop_offset_ingame1": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim2)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "-100% + 4px" ],
+    "to": [ 0, "-100% + 20px" ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "header_background_entrance_animation_pop_offset_ingame2": {
+    "ignored": "(not $rainbowpie_localui_screenheader_ingame_anim2)",
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "100% - 4px" ],
+    "to": [ 0, "100% - 20px" ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+
+  "background_entrance_animation_push_fade_long@rainbowpie_ui_animations.background_entrance_animation_push_fade": {
+    "ignored": "$rainbowpie_localui_background_longer_anim",
+    "from": 0.0
+  },
+
+  "background_entrance_animation_push_fade": {
+    "ignored": "(not $rainbowpie_localui_background_longer_anim)",
+    "anim_type": "alpha",
+    "duration": "$transition_time_pop",
+    "from": 1.0,
+    "to": 0.0,
+    "play_event": "screen.entrance_push"
+  },
+
+  "background_entrance_animation_pop_fade": {
+    "anim_type": "alpha",
+    "duration": "$transition_time_pop",
+    "from": 1.0,
+    "to": 0.0,
+    "play_event": "screen.entrance_pop"
+  },
+
+  "background_exit_animation_push_fade": {
+    "anim_type": "alpha",
+    "easing": "out_cubic",
+    "duration": "$loading_bar_transition",
+    "from": 1.0,
+    "to": 1.0,
+    "play_event": "screen.exit_push"
+  },
+
+  "background_exit_animation_pop_fade": {
+    "anim_type": "alpha",
+    "duration": "$transition_time_pop",
+    "from": 1.0,
+    "to": 0.0,
+    "play_event": "screen.exit_pop"
+  }
+}

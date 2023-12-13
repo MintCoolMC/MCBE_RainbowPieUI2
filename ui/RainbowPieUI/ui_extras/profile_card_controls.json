@@ -1,0 +1,48 @@
+{
+  "namespace": "rainbowpieui_profile_card",
+
+  "profile_card_screen_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "screen_content@rainbowpie_ui_common.screen_content": {
+          "$rainbowpie_localui_screen_content": [
+            {
+              "dialog@rainbowpie_ui_dialog.dialog_panel": {
+                "size": "$dialog_size",
+                "max_size": "$dialog_max_size",
+                "$rainbowpie_localui_dialogheader_title": "options.profile",
+                "$rainbowpie_localui_dialog_content": "rainbowpieui_profile_card.dialog_content",
+                "variables": [
+                  {
+                    "requires": "(not $hide_skin)",
+                    "$dialog_size": [ 300, 235 ],
+                    "$dialog_max_size": [ 300, "100% - 4px" ]
+                  },
+                  {
+                    "requires": "$hide_skin",
+                    "$dialog_size": [ 230, 235 ],
+                    "$dialog_max_size": [ 230, "100% - 4px" ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "dialog_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "dialog_content_with_skin@profile_card.dialog_content_with_skin": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      }
+    ]
+  }
+}

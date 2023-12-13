@@ -1,0 +1,85 @@
+{
+  "namespace": "sign",
+
+  "sign_background": {
+    "offset": [ 0, -5 ]
+  },
+
+  "sign_screen_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "achievements_button@common_buttons.light_text_button": {
+              "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+              "$pressed_button_name": "button.menu_exit",
+              "$button_text": "gui.done",
+              "size": [ 185, 30 ],
+              "offset": [ 0, 68 ],
+              "anchor_from": "center",
+              "anchor_to": "center"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "base_sign_text_multiline": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$text_edit_box_selected_to_button_id",
+        "handle_select": true,
+        "handle_deselect": false,
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$text_edit_box_selected_to_button_id",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global",
+        "consume_event": false
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$text_edit_box_selected_to_button_id",
+        "handle_select": true,
+        "handle_deselect": false,
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "$text_edit_box_deselected_to_button_id",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global"
+      },
+      {
+        "to_button_id": "$text_edit_box_hovered_button_id",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "$text_edit_box_clear_from_button_id",
+        "to_button_id": "$text_edit_box_clear_to_button_id",
+        "handle_select": false,
+        "handle_deselect": false,
+        "mapping_type": "focused"
+      }
+    ]
+  },
+
+  "sign_screen_content/invisible_exit_background": {
+    "ignored": true
+  },
+
+  "sign_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$screen_content": "rainbowpieui_sign.sign_screen_content",
+    "force_render_below": true,
+    "close_on_player_hurt": false
+  }
+}

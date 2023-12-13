@@ -1,0 +1,26 @@
+{
+  "namespace": "safe_zone",
+
+  "instructions_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "safe_zone_screen/main_content_panel": {
+    "ignored": true
+  },
+
+  "safe_zone_screen": {
+    "$is_publish": false,
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "background_panel@rainbowpieui_safe_zone.background_panel": {} },
+          { "dialog_panel@rainbowpieui_safe_zone.dialog_panel": {} }
+        ]
+      }
+    ]
+  }
+}

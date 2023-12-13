@@ -1,0 +1,154 @@
+{
+  "namespace": "rainbowpie_ui_store_common",
+
+  "wallet_button_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "purchase_coin_panel_alignment_hack": {
+          "type": "panel",
+          "size": [ "100% - 100%y", "100%" ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "controls": [
+            {
+              "purchase_coin_panel@common_store.coin_balance_panel": {
+                "texture": "",
+                "size": [ "100%", "100%" ],
+                "offset": [ 0, 0 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "plus_image": {
+          "type": "panel",
+          "size": [ "100%y", "100%" ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "controls": [
+            {
+              "plus_image@common_store.plus_icon": {
+                "anchor_from": "center",
+                "anchor_to": "center"
+              }
+            }
+          ]
+        }
+      }
+      
+    ]
+  },
+
+  "header_content_panel": {
+    "type": "panel",
+    "$ignore_inventory_button": true,
+    "controls": [
+      {
+        "title_stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%" ],
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "padding1": {
+                "type": "panel",
+                "size": [ "fill", "100%" ]
+              }
+            },
+            {
+              "status_and_coins@common_store.status_with_coins": {
+                "ignored": "$store_disabled",
+                "$top_status_and_coins_visible_binding_type|default": "none",
+                "$top_status_and_coins_visible_binding|default": "",
+                "bindings": [
+                  {
+                    "binding_type": "$top_status_and_coins_visible_binding_type",
+                    "binding_name": "$top_status_and_coins_visible_binding",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "padding5": {
+                "type": "panel",
+                "size": [ 1, "100%" ]
+              }
+            },
+            {
+              "search_header_stack": {
+                "ignored": "($is_on_3p_server or $ignore_search)",
+                "type": "stack_panel",
+                "size": [ "100%c", "100%" ],
+                "orientation": "horizontal",
+                "controls": [
+                  {
+                    "search_header_text_box_panel": {
+                      "type": "panel",
+                      "size": [ 80, "100%" ],
+                      "$text_edit_clipping_panel_size": [ 57, 15 ],
+                      "$text_edit_box_label_anchor_point": "left_middle",
+                      "controls": [
+                        {
+                          "search_header_text_box@common.text_edit_box": {
+                            "$rainbowpie_localui_editbox_enabled": true,
+                            "$edit_box_indent_size": [ "100%", "100%" ],
+                            "size": [ "100%", "100% - 3px" ],
+                            "max_length": 50,
+                            "$text_box_name": "search_header_text_box",
+                            "$text_edit_box_enabled_binding_type": "none",
+                            "$text_edit_box_content_binding_name": "#search_header_box_text_content",
+                            "$place_holder_text": "realmsSettingsScreen.searchBox",
+                            "$enabled": true,
+                            "$focus_override_left": "purchase_coins_panel",
+                            "$focus_override_right": "store_layout_search_button",
+                            "$focus_id": "search_header_text_box",
+                            "focus_wrap_enabled": false,
+                            "focus_enabled": true
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "store_layout_search_button_panel": {
+                      "type": "panel",
+                      "size": [ "100%c", "100%" ],
+                      "controls": [
+                        {
+                          "store_layout_search_button@store_layout.store_layout_ribbon_search_button": {
+                            "$button_image_size": [ "100%", "100%" ],
+                            "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+                            "size": [ "100%y", "100% - 3px" ],
+                            "$focus_id": "store_layout_search_button",
+                            "$button_tts_header": "store.search.button"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "padding0": {
+                      "type": "panel",
+                      "size": [ 1, "100%" ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#search_header_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

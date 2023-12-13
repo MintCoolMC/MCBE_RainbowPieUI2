@@ -1,0 +1,332 @@
+{
+  "namespace": "rainbowpie_ui_toggle",
+
+  "toggle_content_button_panel@rainbowpie_ui_button.rainbowpie_ui_content_button": {
+  },
+
+  "toggle_content_button_unchecked@rainbowpie_ui_toggle.toggle_content_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$default_state": true
+  },
+
+  "toggle_content_button_unchecked_hover@rainbowpie_ui_toggle.toggle_content_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$hover_state": true
+  },
+
+  "toggle_content_button_unchecked_locked@rainbowpie_ui_toggle.toggle_content_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$locked_state": true
+  },
+
+  "toggle_content_button_unchecked_locked_hover@rainbowpie_ui_toggle.toggle_content_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$locked_state": true
+  },
+
+  "toggle_content_button_checked@rainbowpie_ui_toggle.toggle_content_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$default_state": true,
+    "$check_state": true
+  },
+
+  "toggle_content_button_checked_hover@rainbowpie_ui_toggle.toggle_content_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$hover_state": true,
+    "$check_state": true
+  },
+
+  "toggle_content_button_checked_locked@rainbowpie_ui_toggle.toggle_content_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$locked_state": true,
+    "$check_state": true
+  },
+
+  "toggle_content_button_checked_locked_hover@rainbowpie_ui_toggle.toggle_content_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$locked_state": true,
+    "$check_state": true
+  },
+
+  "toggle_button_panel@rainbowpie_ui_button.rainbowpie_ui_text_button": {
+  },
+
+  "toggle_button_unchecked@rainbowpie_ui_toggle.toggle_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$default_state": true
+  },
+
+  "toggle_button_unchecked_hover@rainbowpie_ui_toggle.toggle_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$hover_state": true
+  },
+
+  "toggle_button_unchecked_locked@rainbowpie_ui_toggle.toggle_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$locked_state": true
+  },
+
+  "toggle_button_unchecked_locked_hover@rainbowpie_ui_toggle.toggle_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$locked_state": true
+  },
+
+  "toggle_button_checked@rainbowpie_ui_toggle.toggle_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$default_state": true,
+    "$check_state": true
+  },
+
+  "toggle_button_checked_hover@rainbowpie_ui_toggle.toggle_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$hover_state": true,
+    "$check_state": true
+  },
+
+  "toggle_button_checked_locked@rainbowpie_ui_toggle.toggle_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$locked_state": true,
+    "$check_state": true
+  },
+
+  "toggle_button_checked_locked_hover@rainbowpie_ui_toggle.toggle_button_panel": {
+    // Rainbow Pie UI Variables
+    // Button State
+    "$locked_state": true,
+    "$check_state": true
+  },
+
+  "toggle_tab_panel@rainbowpie_ui_button.rainbowpie_ui_button_default": {
+    "$rainbowpie_localui_toggle_btbar_color|default": [],
+    "$rainbowpie_localui_toggle_btbar_alpha|default": 1.0,
+    "$check_state|default": false,
+    "$button_image_size": [
+      "100%",
+      "100%"
+    ],
+    "$toggle_image": "common.empty_panel",
+    "$checked_bar_anchor|default": "top",
+    "$is_checked_bar_enabled|default": true,
+    "$rainbowpie_localui_button_controls": [
+      {
+        "button_background": {
+          "type": "image",
+          "ignored": "(not $button_image_visible)",
+          "size": "$button_image_size",
+          "texture": "textures/ui/White",
+          "color": "$rainbowpie_localui_button_color",
+          "alpha": "$rainbowpie_localui_button_alpha",
+          "layer": 1
+        }
+      },
+      {
+        "checked_image": {
+          "visible": "$is_checked_bar_enabled",
+          "type": "panel",
+          "layer": 10,
+          "controls": [
+            {
+              "checked_top": {
+                "ignored": "(not $check_state)",
+                "visible": "($checked_bar_anchor = 'top')",
+                "type": "image",
+                "texture": "textures/ui/White",
+                "size": [
+                  "100%",
+                  2
+                ],
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "layer": 10,
+                "color": "$rainbowpie_localui_toggle_btbar_color",
+                "alpha": "$rainbowpie_localui_toggle_btbar_alpha"
+              }
+            },
+            {
+              "checked_left": {
+                "ignored": "(not $check_state)",
+                "visible": "($checked_bar_anchor = 'left')",
+                "type": "image",
+                "texture": "textures/ui/White",
+                "size": [
+                  2,
+                  "100%"
+                ],
+                "anchor_to": "left_middle",
+                "anchor_from": "left_middle",
+                "layer": 10,
+                "color": "$rainbowpie_localui_toggle_btbar_color",
+                "alpha": "$rainbowpie_localui_toggle_btbar_alpha"
+              }
+            },
+            {
+              "checked_right": {
+                "ignored": "(not $check_state)",
+                "visible": "($checked_bar_anchor = 'right')",
+                "type": "image",
+                "texture": "textures/ui/White",
+                "size": [
+                  2,
+                  "100%"
+                ],
+                "anchor_to": "right_middle",
+                "anchor_from": "right_middle",
+                "layer": 10,
+                "color": "$rainbowpie_localui_toggle_btbar_color",
+                "alpha": "$rainbowpie_localui_toggle_btbar_alpha"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "button_content": {
+          "type": "panel",
+          "$button_content_size|default": [
+            "100% - 6px",
+            "100% - 6px"
+          ],
+          "size": "$button_content_size",
+          "controls": [
+            {
+              "$button_type_panel@$button_type_panel": {
+                "layer": 3
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "toggle_tab_unchecked@rainbowpie_ui_toggle.toggle_tab_panel": {
+    // Rainbow Pie UI Variables
+    "$rainbowpie_localui_button_text_default_color|default": "$rainbowpie_ui_theme_toggle_text_default_default_color",
+    "$rainbowpie_localui_button_text_hover_color|default": "$rainbowpie_ui_theme_toggle_text_unchecked_hover_color",
+    "$rainbowpie_localui_button_text_pressed_color|default": "$rainbowpie_ui_theme_toggle_text_unchecked_hover_color",
+    "$rainbowpie_localui_button_default_color|default": "$rainbowpie_ui_theme_toggle_background_unchecked_default_color",
+    "$rainbowpie_localui_button_hover_color|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_color",
+    "$rainbowpie_localui_button_pressed_color|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_color",
+    "$rainbowpie_localui_toggle_btbar_color|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_btbar_color",
+    "$rainbowpie_localui_button_default_alpha|default": "$rainbowpie_ui_theme_toggle_background_unchecked_default_alpha",
+    "$rainbowpie_localui_button_hover_alpha|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_alpha",
+    "$rainbowpie_localui_button_pressed_alpha|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_alpha",
+    "$rainbowpie_localui_toggle_btbar_alpha|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_btbar_alpha",
+    // Button State
+    "$default_state": true
+  },
+
+  "toggle_tab_unchecked_hover@rainbowpie_ui_toggle.toggle_tab_panel": {
+    // Rainbow Pie UI Variables
+    "$rainbowpie_localui_button_text_default_color|default": "$rainbowpie_ui_theme_toggle_text_default_default_color",
+    "$rainbowpie_localui_button_text_hover_color|default": "$rainbowpie_ui_theme_toggle_text_unchecked_hover_color",
+    "$rainbowpie_localui_button_text_pressed_color|default": "$rainbowpie_ui_theme_toggle_text_unchecked_hover_color",
+    "$rainbowpie_localui_button_default_color|default": "$rainbowpie_ui_theme_toggle_background_unchecked_default_color",
+    "$rainbowpie_localui_button_hover_color|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_color",
+    "$rainbowpie_localui_button_pressed_color|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_color",
+    "$rainbowpie_localui_toggle_btbar_color|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_btbar_color",
+    "$rainbowpie_localui_button_default_alpha|default": "$rainbowpie_ui_theme_toggle_background_unchecked_default_alpha",
+    "$rainbowpie_localui_button_hover_alpha|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_alpha",
+    "$rainbowpie_localui_button_pressed_alpha|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_alpha",
+    "$rainbowpie_localui_toggle_btbar_alpha|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_btbar_alpha",
+    // Button State
+    "$hover_state": true
+  },
+
+  "toggle_tab_unchecked_locked@rainbowpie_ui_toggle.toggle_tab_panel": {
+    // Rainbow Pie UI Variables
+    "$rainbowpie_localui_button_text_color": "$rainbowpie_ui_theme_toggle_text_locked_checked_color",
+    "$rainbowpie_localui_button_locked_color|default": "$rainbowpie_ui_theme_toggle_background_locked_default_color",
+    "$rainbowpie_localui_toggle_btbar_color|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_btbar_color",
+    "$rainbowpie_localui_button_locked_alpha|default": "$rainbowpie_ui_theme_toggle_background_locked_default_alpha",
+    "$rainbowpie_localui_toggle_btbar_alpha|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_btbar_alpha",
+    // Button State
+    "$locked_state": true
+  },
+
+  "toggle_tab_unchecked_locked_hover@rainbowpie_ui_toggle.toggle_tab_panel": {
+    // Rainbow Pie UI Variables
+    "$rainbowpie_localui_button_text_color": "$rainbowpie_ui_theme_toggle_text_locked_checked_color",
+    "$rainbowpie_localui_button_locked_color|default": "$rainbowpie_ui_theme_toggle_background_locked_default_color",
+    "$rainbowpie_localui_toggle_btbar_color|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_btbar_color",
+    "$rainbowpie_localui_button_locked_alpha|default": "$rainbowpie_ui_theme_toggle_background_locked_default_alpha",
+    "$rainbowpie_localui_toggle_btbar_alpha|default": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_btbar_alpha",
+    // Button State
+    "$locked_state": true
+  },
+
+  "toggle_tab_checked@rainbowpie_ui_toggle.toggle_tab_panel": {
+    // Rainbow Pie UI Variables
+    "$rainbowpie_localui_button_text_default_color|default": "$rainbowpie_ui_theme_toggle_text_checked_default_color",
+    "$rainbowpie_localui_button_text_hover_color|default": "$rainbowpie_ui_theme_toggle_text_checked_hover_color",
+    "$rainbowpie_localui_button_text_pressed_color|default": "$rainbowpie_ui_theme_toggle_text_checked_hover_color",
+    "$rainbowpie_localui_button_default_color|default": "$rainbowpie_ui_theme_toggle_background_checked_default_color",
+    "$rainbowpie_localui_button_hover_color|default": "$rainbowpie_ui_theme_toggle_background_checked_hover_color",
+    "$rainbowpie_localui_button_pressed_color|default": "$rainbowpie_ui_theme_toggle_background_checked_hover_color",
+    "$rainbowpie_localui_toggle_btbar_color|default": "$rainbowpie_ui_theme_toggle_background_checked_hover_btbar_color",
+    "$rainbowpie_localui_button_default_alpha|default": "$rainbowpie_ui_theme_toggle_background_checked_default_alpha",
+    "$rainbowpie_localui_button_hover_alpha|default": "$rainbowpie_ui_theme_toggle_background_checked_hover_alpha",
+    "$rainbowpie_localui_button_pressed_alpha|default": "$rainbowpie_ui_theme_toggle_background_checked_hover_alpha",
+    "$rainbowpie_localui_toggle_btbar_alpha|default": "$rainbowpie_ui_theme_toggle_background_checked_hover_btbar_alpha",
+    // Button State
+    "$default_state": true,
+    "$check_state": true
+  },
+
+  "toggle_tab_checked_hover@rainbowpie_ui_toggle.toggle_tab_panel": {
+    // Rainbow Pie UI Variables
+    "$rainbowpie_localui_button_text_default_color|default": "$rainbowpie_ui_theme_toggle_text_checked_default_color",
+    "$rainbowpie_localui_button_text_hover_color|default": "$rainbowpie_ui_theme_toggle_text_checked_hover_color",
+    "$rainbowpie_localui_button_text_pressed_color|default": "$rainbowpie_ui_theme_toggle_text_checked_hover_color",
+    "$rainbowpie_localui_button_default_color|default": "$rainbowpie_ui_theme_toggle_background_checked_default_color",
+    "$rainbowpie_localui_button_hover_color|default": "$rainbowpie_ui_theme_toggle_background_checked_hover_color",
+    "$rainbowpie_localui_button_pressed_color|default": "$rainbowpie_ui_theme_toggle_background_checked_hover_color",
+    "$rainbowpie_localui_toggle_btbar_color|default": "$rainbowpie_ui_theme_toggle_background_checked_hover_btbar_color",
+    "$rainbowpie_localui_button_default_alpha|default": "$rainbowpie_ui_theme_toggle_background_checked_default_alpha",
+    "$rainbowpie_localui_button_hover_alpha|default": "$rainbowpie_ui_theme_toggle_background_checked_hover_alpha",
+    "$rainbowpie_localui_button_pressed_alpha|default": "$rainbowpie_ui_theme_toggle_background_checked_hover_alpha",
+    "$rainbowpie_localui_toggle_btbar_alpha|default": "$rainbowpie_ui_theme_toggle_background_checked_hover_btbar_alpha",
+    // Button State
+    "$hover_state": true,
+    "$check_state": true
+  },
+
+  "toggle_tab_checked_locked@rainbowpie_ui_toggle.toggle_tab_panel": {
+    // Rainbow Pie UI Variables
+    "$rainbowpie_localui_button_text_color": "$rainbowpie_ui_theme_toggle_text_locked_checked_color",
+    "$rainbowpie_localui_button_locked_color|default": "$rainbowpie_ui_theme_toggle_background_locked_checked_color",
+    "$rainbowpie_localui_toggle_btbar_color|default": "$rainbowpie_ui_theme_toggle_background_locked_checked_btbar_color",
+    "$rainbowpie_localui_button_locked_alpha|default": "$rainbowpie_ui_theme_toggle_background_locked_checked_alpha",
+    "$rainbowpie_localui_toggle_btbar_alpha|default": "$rainbowpie_ui_theme_toggle_background_locked_checked_btbar_alpha",
+    // Button State
+    "$locked_state": true,
+    "$check_state": true
+  },
+
+  "toggle_tab_checked_locked_hover@rainbowpie_ui_toggle.toggle_tab_panel": {
+    // Rainbow Pie UI Variables
+    "$rainbowpie_localui_button_text_color": "$rainbowpie_ui_theme_toggle_text_locked_checked_color",
+    "$rainbowpie_localui_button_locked_color|default": "$rainbowpie_ui_theme_toggle_background_locked_checked_color",
+    "$rainbowpie_localui_toggle_btbar_color|default": "$rainbowpie_ui_theme_toggle_background_locked_checked_btbar_color",
+    "$rainbowpie_localui_button_locked_alpha|default": "$rainbowpie_ui_theme_toggle_background_locked_checked_alpha",
+    "$rainbowpie_localui_toggle_btbar_alpha|default": "$rainbowpie_ui_theme_toggle_background_locked_checked_btbar_alpha",
+    // Button State
+    "$locked_state": true,
+    "$check_state": true
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "namespace": "hud",
+
+  "boss_name_panel/boss_name": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "hud_actionbar_text": {
+    "texture": "($rainbowpie_ui_path_home + '/r_black')"
+  },
+
+  "hud_actionbar_text/actionbar_message": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "hud_tip_text": {
+    "texture": "($rainbowpie_ui_path_home + '/r_black')"
+  },
+
+  "hud_tip_text/item_text_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "item_name_text_root/item_text_aligner/item_text_control/item_text_background": {
+    "texture": "($rainbowpie_ui_path_home + '/r_black')"
+  },
+
+  "item_name_text_root/item_text_aligner/item_text_control/item_text_label": {
+    "max_size": [ 200, 100 ],
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "hud_player_renderer/hud_player": {
+    "ignored": "($rainbowpie_ui_flag_0ffd0593)"
+  },
+
+  "hud_player_renderer": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "live_player_renderer@rainbowpieui_hud.live_player_renderer": {} }
+        ]
+      }
+    ]
+  },
+
+  "player_position": {
+    // Ignore player_position when using HotbarMode 2
+    "ignored": "(($rainbowpie_ui_flag_hud_hotbar_mode = '2') or (not $touch) or $rainbowpie_ui_flag_6d2ac350)"
+  },
+
+  "chat_panel": {
+    "ignored": "((not $touch) or $rainbowpie_ui_flag_6d2ac350)"
+  },
+
+  "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar": {
+    "ignored": "(not ($rainbowpie_ui_flag_hud_hotbar_mode = '0'))"
+  },
+
+  "hotbar_chooser": {
+    "ignored": "(not ($rainbowpie_ui_flag_hud_hotbar_mode = '0'))"
+  },
+
+  "root_panel": {
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@rainbowpieui_hud.hud_root_panel_back_animation",
+      "@rainbowpieui_hud.hud_root_panel_back_animation_pop",
+      "@rainbowpieui_hud.hud_root_panel_animation",
+      "@rainbowpieui_hud.hud_root_panel_animation_pop"
+    ],
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "rainbowpie_root_panel@rainbowpieui_hud.rainbowpie_root_panel": {} }
+        ]
+      }
+    ]
+  },
+
+  "hud_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "rainbowpie_hud_panel@rainbowpieui_hud.rainbowpie_hud_panel": {} }
+        ]
+      }
+    ]
+  },
+
+  "hud_screen": {
+    "render_only_when_topmost": "(not $desktop_screen)",
+    "$use_loading_bars": false,
+    "$rainbowpie_localui_screen_watermark": false,
+    "$rainbowpie_localui_modified": true
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "namespace": "furnace",
+
+  "furnace_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_inventory_title_color"
+  },
+
+  "furnace_arrow_empty_image": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/arrow_inactive')",
+    "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  },
+
+  "furnace_arrow_full_image": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/arrow_active')"
+  },
+
+  "flame_empty_image": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/flame_empty_image')",
+    "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  },
+
+  "flame_full_image": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/flame_full_image')"
+  },
+
+  "furnace_panel_top_half": {
+    "offset": [ 0, 20 ]
+  },
+
+  "furnace_panel_top_half/furnace_label": {
+    "ignored": true
+  },
+
+  "furnace_panel/root_panel/common_panel": {
+    "$dialog_background": "rainbowpie_ui_common.inventory_background",
+    "$show_close_button": false,
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "offset": [ 0, -2 ],
+    "size": [ "100% - 8px", "100% - 27px" ]
+  },
+
+  "furnace_panel/root_panel/furnace_screen_inventory": {
+    "$background_images": "rainbowpie_ui_common.cell_image",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "inventory_header@rainbowpie_ui_inventory.header": {
+              "$rainbowpie_localui_inventoryheader_title": "$container_title",
+              "offset": [ 0, 2 ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

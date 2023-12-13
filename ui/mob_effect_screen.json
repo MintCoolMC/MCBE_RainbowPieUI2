@@ -1,0 +1,7 @@
+{
+  "namespace": "mob_effect",
+  
+  "mob_effect_screen": {
+    "close_on_player_hurt": false
+  }
+}

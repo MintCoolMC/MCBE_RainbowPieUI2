@@ -1,0 +1,147 @@
+{
+  "namespace": "rainbowpieui_invite",
+
+  "horizontal_invite_panel@rainbowpie_ui_dialog.dialog_panel": {
+    "size": "$large_screen_size",
+    "$rainbowpie_localui_dialog_content": "rainbowpieui_invite.horizontal_invite_dialog_content",
+    "$rainbowpie_localui_dialog_show_background": false,
+    "variables": [
+      {
+        "requires": "$is_inviting_to_realm",
+        "$rainbowpie_localui_dialogheader_title": "invite.titleRealms"
+      },
+      {
+        "requires": "(not $is_inviting_to_realm)",
+        "$rainbowpie_localui_dialogheader_title": "invite.title"
+      }
+    ]
+  },
+
+  "horizontal_invite_dialog_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "content_panel@rainbowpie_ui_dialog.content_background": {
+                "size": [ "100%", "fill" ],
+                "controls": [
+                  {
+                    "stack_panel": {
+                      "type": "stack_panel",
+                      "size": [ "100%", "100%" ],
+                      "controls": [
+                        {
+                          "scrolling_area@invite.scrolling_area": {
+                            "$rainbowpie_localui_scrollbar_enabled": true
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "button_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%c + 1px" ],
+                "controls": [
+                  {
+                    "button_panel": {
+                      "type": "panel",
+                      "anchor_to": "bottom_middle",
+                      "anchor_from": "bottom_middle",
+                      "size": [ "100% + 1px", "100%c" ],
+                      "controls": [
+                        {
+                          "button_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "$button_image_size": [ "100% - 1px", "100%" ],
+                            "$rainbowpie_localui_button_default_alpha": "$rainbowpie_ui_theme_dialog_content_background_alpha",
+                            "anchor_to": "top_middle",
+                            "anchor_from": "top_middle",
+                            "size": [ "100%", 23 ],
+                            "$add_button_mappings": [
+                              {
+                                "from_button_id": "button.controller_secondary_select",
+                                "to_button_id": "$pressed_button_name",
+                                "mapping_type": "global"
+                              },
+                              {
+                                "from_button_id": "button.menu_select",
+                                "to_button_id": "$pressed_button_name",
+                                "mapping_type": "pressed"
+                              },
+                              {
+                                "from_button_id": "button.menu_ok",
+                                "to_button_id": "$pressed_button_name",
+                                "mapping_type": "focused"
+                              }
+                            ],
+                            "controls": [
+                              {
+                                "add_friend_button@invite.add_friend_button": {
+                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+                                  "size": [ "fill", "100%" ],
+                                  "$focus_override_down": "FOCUS_OVERRIDE_STOP"
+                                }
+                              },
+                              {
+                                "add_member_button@invite.add_member_button": {
+                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+                                  "size": [ "fill", "100%" ],
+                                  "$focus_override_down": "FOCUS_OVERRIDE_STOP"
+                                }
+                              },
+                              {
+                                "send_button@invite.send_button": {
+                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+                                  "size": [ "fill", "100%" ],
+                                  "$focus_override_down": "FOCUS_OVERRIDE_STOP"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "invite_screen_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$invite_panel|default": "rainbowpieui_invite.horizontal_invite_panel",
+    "variables": [
+      {
+        "requires": "($use_vertical_button_stack_panel and (not $is_inviting_to_realm or $is_realm_owner))",
+        "$invite_panel": "invite.vertical_invite_panel"
+      }
+    ],
+    "controls": [
+      {
+        "screen_content@rainbowpie_ui_common.screen_content": {
+          "$rainbowpie_localui_screen_content": [
+            {
+              "invite_panel@rainbowpieui_invite.horizontal_invite_panel": {
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

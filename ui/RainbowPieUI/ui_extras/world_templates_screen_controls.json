@@ -1,0 +1,60 @@
+{
+  "namespace": "rainbowpieui_world_templates",
+
+  "world_templates_picker_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "header@rainbowpie_ui_common.screen_header": {
+          "$rainbowpie_localui_screenheader_title": "$screen_title"
+        }
+      },
+      {
+        "screen_content@rainbowpie_ui_common.screen_content": {
+          "$rainbowpie_localui_screen_content": [
+            {
+              "template_scroll_content@world_templates.template_scroll_content": {
+                "$rainbowpie_localui_scrollbar_enabled": true,
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "size": [ "100%", "100% - 20px" ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "list_title": {
+    "type": "panel",
+    "size": [ "100%", 15 ],
+    "controls": [
+      {
+        "list_title@rainbowpie_ui_common.title_background": {
+          "$rainbowpie_localui_list_title_text|default": "TITLE TEXT",
+          "size": [ "100%", 14 ],
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "controls": [
+            {
+              "text_panel": {
+                "type": "panel",
+                "size": [ "100% - 4px", 10 ],
+                "controls": [
+                  {
+                    "title@rainbowpie_ui_common.title_label": {
+                      "size": [ "100%", "100%" ],
+                      "text": "$rainbowpie_localui_list_title_text",
+                      "layer": 1
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

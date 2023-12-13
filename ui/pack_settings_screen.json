@@ -1,0 +1,43 @@
+{
+  "namespace": "pack_settings",
+
+  "content_tiering_panel/slider_panel/content_tier_slider": {
+    "$rainbowpie_localui_sliderbar_enabled": true,
+    "size": [ "100% - 10px", 10 ]
+  },
+
+  "content_tiering_panel/label_panel/content_tier_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "size": [ "100%", "default" ],
+    "offset": [ 0, 2 ]
+  },
+
+  "content_tiering_panel/label_panel/unsupported_content_tier_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "size": [ "100%", "default" ],
+    "offset": [ 0, 2 ]
+  },
+
+  "content_tiering_panel/incompatible_label_panel/label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "size": [ "100%", "default" ],
+    "offset": [ 0, -2 ]
+  },
+
+  "scrolling_content/generated_form": {
+  },
+
+  "scrolling_content": {
+    "size": [ "100%", "100%c" ]
+  },
+
+  "screen": {
+    "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screenbackground_blur": true,
+    "force_render_below": false,
+    "$screen_content": "rainbowpieui_pack_settings.main_screen_content"
+  }
+}

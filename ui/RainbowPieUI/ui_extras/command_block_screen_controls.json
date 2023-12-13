@@ -1,0 +1,167 @@
+{
+  "namespace": "rainbowpieui_command_block",
+
+  "command_block_screen_content": {
+    "type": "panel",
+
+    "$rainbowpie_localui_scrollbar_enabled": true,
+    "$rainbowpie_localui_toggle_enabled": true,
+    "$rainbowpie_localui_editbox_enabled": true,
+
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "screen_content@rainbowpie_ui_common.screen_content": {
+          "$rainbowpie_localui_screen_ingame_anim1": true,
+          "$rainbowpie_localui_screen_content": [
+            {
+              "dialog_panel@rainbowpie_ui_dialog.dialog_panel": {
+                "$rainbowpie_localui_dialogheader_title": "commandBlock.genericName",
+                "$rainbowpie_localui_dialog_content": "rainbowpieui_command_block.command_block_dialog_content",
+                "size": "$extra_large_screen_size",
+                "max_size": "$extra_large_max_screen_size",
+                "bindings": [
+                  {
+                    "binding_name": "(not #maximized_input_visible)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "maximized_input_dialog_panel@rainbowpie_ui_dialog.dialog_panel": {
+                "$rainbowpie_localui_dialogheader_title": "advMode.command",
+                "$rainbowpie_localui_dialogheader_extra_controls": "rainbowpieui_command_block.maximized_input_dialog_button",
+                "$rainbowpie_localui_dialog_content": "rainbowpieui_command_block.maximized_input_dialog_content",
+                "$close_button_to_button_id": "command_block.input_minimize",
+                "size": "$extra_large_screen_size",
+                "max_size": "$extra_large_max_screen_size",
+                "bindings": [
+                  {
+                    "binding_name": "#maximized_input_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "maximized_input_dialog_button@rainbowpie_ui_dialog.header_background": {
+    "size": [ "100%c", "100%" ],
+    "controls": [
+      {
+        "maximized_input_close_button": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", "100%" ],
+          "controls": [
+            {
+              "paste_button_rainbowpie@rainbowpieui_command_block.paste_button": {
+                "$rainbowpie_localui_button_default_alpha": 0,
+                "$button_image_size": [ "100%", "100%" ],
+                "size": [ "100%y", "100%" ],
+                "layer": 2
+              }
+            },
+            {
+              "autocompleteback@common_buttons.light_text_button": {
+                "$rainbowpie_localui_button_default_alpha": 0.0,
+                "$button_image_size": [ "100%", "100%" ],
+                "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                "$button_text": "TAB▲",
+                "$pressed_button_name": "button.chat_autocomplete_back",
+                "size": [ "100%y", "100%" ]
+              }
+            },
+            {
+              "autocomplete@common_buttons.light_text_button": {
+                "$rainbowpie_localui_button_default_alpha": 0.0,
+                "$button_image_size": [ "100%", "100%" ],
+                "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                "$button_text": "TAB▼",
+                "$pressed_button_name": "button.chat_autocomplete",
+                "size": [ "100%y", "100%" ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "maximized_input_dialog_content": {
+    "type": "input_panel",
+    "controls": [
+      {
+        "maximized_command_block_text@command_block.command_block_multiline_text_edit_box": {
+          "$edit_box_indent_size": [ "100%", "100%" ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 17,
+          "size": [ "100% - 4px", "100% - 4px" ],
+          "max_length": 32500,
+          "$text_box_name": "command_block.command_text",
+          "$text_edit_box_content_binding_name": "#command_text_edit",
+          "$place_holder_text": "Enter your command input here",
+          "$cancel_button_id": "command_block.input_minimize",
+          "$enable_profanity_filter": "$rainbowpie_ui_flag_input_enable_profanity_filter"
+        }
+      }
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "command_block.input_minimize",
+        "mapping_type": "global"
+      }
+    ]
+  },
+
+  "command_block_dialog_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "left_side@command_block.left_divider_content": {
+          "size": [ "40%", "100%" ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle"
+        }
+      },
+      {
+        "right_side@command_block.right_divider_content": {
+          "size": [ "60%", "100%" ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle"
+        }
+      }
+    ]
+  },
+
+  "plus_button@common_buttons.light_content_button": {
+    "$button_image_size": [ "100% - 1px", "100% - 2px" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+    "size": [ 29, 30 ],
+    "layer": 1,
+    "$button_content": "command_block.plus_icon",
+    "$pressed_button_name": "command_block.input_maximize",
+    "bindings": [
+      {
+        "binding_name": "(not #maximized_input_visible)",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
+  "paste_button@common_buttons.light_content_button": {
+    "$button_image_size": [ "100% - 1px", "100% - 2px" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+    "size": [ 29, 30 ],
+    "layer": 1,
+    "$button_content": "command_block.paste_icon",
+    "$pressed_button_name": "command_block.paste"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "namespace": "rainbowpie_ui_tab",
+
+  "tab_panel": {
+    "type": "panel",
+    "$tab_content|default": "common_tabs.empty_tab_content",
+    "$is_transparent_enabled|default": false,
+    "$is_checked_bar_enabled|default": true,
+    "$checked_bar_anchor|default": "top",
+    "$tab_image_size|default": [ "100%", "100%" ],
+    "$tab_image_offset|default": [ 0, 0 ],
+    "$tab_image_anchor|default": "center",
+    "$tab_content_size|default": [ "100% - 4px", "100% - 4px" ],
+    "$tab_content_offset|default": [ 0, 0 ],
+    "$tab_content_anchor|default": "center",
+    "$rainbowpie_localui_button_text_color|default": [],
+    "controls": [
+      {
+        "checked_image": {
+          "visible": "$is_checked_bar_enabled",
+          "type": "panel",
+          "size": "$tab_image_size",
+          "offset": "$tab_image_offset",
+          "anchor_to": "$tab_image_anchor",
+          "anchor_from": "$tab_image_anchor",
+          "layer": 10,
+          "controls": [
+            {
+              "checked_top": {
+                "ignored": "(not $is_checked_state)",
+                "visible": "($checked_bar_anchor = 'top')",
+                "type": "image",
+                "texture": "textures/ui/White",
+                "size": [ "100%", 2 ],
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "layer": 10,
+                "color": "$rainbowpie_ui_theme_toggle_background_checked_default_btbar_color",
+                "alpha": "$rainbowpie_ui_theme_toggle_background_checked_default_btbar_alpha"
+              }
+            },
+            {
+              "checked_left": {
+                "ignored": "(not $is_checked_state)",
+                "visible": "($checked_bar_anchor = 'left')",
+                "type": "image",
+                "texture": "textures/ui/White",
+                "size": [ 2, "100%" ],
+                "anchor_to": "left_middle",
+                "anchor_from": "left_middle",
+                "layer": 10,
+                "color": "$rainbowpie_ui_theme_toggle_background_checked_default_btbar_color",
+                "alpha": "$rainbowpie_ui_theme_toggle_background_checked_default_btbar_alpha"
+              }
+            },
+            {
+              "checked_right": {
+                "ignored": "(not $is_checked_state)",
+                "visible": "($checked_bar_anchor = 'right')",
+                "type": "image",
+                "texture": "textures/ui/White",
+                "size": [ 2, "100%" ],
+                "anchor_to": "right_middle",
+                "anchor_from": "right_middle",
+                "layer": 10,
+                "color": "$rainbowpie_ui_theme_toggle_background_checked_default_btbar_color",
+                "alpha": "$rainbowpie_ui_theme_toggle_background_checked_default_btbar_alpha"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "tab_image": {
+          "type": "image",
+          "size": "$tab_image_size",
+          "offset": "$tab_image_offset",
+          "anchor_to": "$tab_image_anchor",
+          "anchor_from": "$tab_image_anchor",
+          "$texture|default": "textures/ui/White",
+          "texture": "$texture",
+          "$rainbowpie_toggle_color|default": [ 0.0, 0.0, 0.0 ],
+          "$rainbowpie_toggle_alpha|default": 0.5,
+          "color": "$rainbowpie_toggle_color",
+          "alpha": "$rainbowpie_toggle_alpha",
+          "layer": 2,
+          "variables": [
+            {
+              "requires": "$is_transparent_enabled",
+              "$texture": ""
+            }
+          ]
+        }
+      },
+      {
+        "tab_content_sizer": {
+          "type": "panel",
+          "$text_color": "$rainbowpie_localui_button_text_color",
+          "$glyph_color": "$rainbowpie_localui_button_text_color",
+          "size": "$tab_content_size",
+          "offset": "$tab_content_offset",
+          "anchor_to": "$tab_content_anchor",
+          "anchor_from": "$tab_content_anchor",
+          "controls": [
+            {
+              "tab_content@$tab_content": {
+                "layer": 3
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

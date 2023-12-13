@@ -1,0 +1,146 @@
+{
+  "namespace": "rainbowpieui_profile",
+
+  "delete_persona_dialog_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "content_panel@rainbowpie_ui_dialog.content_background": {
+                "size": [ "100%", "fill" ],
+                "controls": [
+                  {
+                    "image@profile.alex_warning": {
+                      "offset": [ 4, 0 ],
+                      "anchor_from": "bottom_left",
+                      "anchor_to": "bottom_left",
+                      "layer": 10
+                    }
+                  },
+                  {
+                    "message@profile.delete_popup_dialog_message": {
+                      "font_type": "$rainbowpie_ui_theme_global_font_name",
+                      "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+                      "offset": [ 26, 4 ],
+                      "layer": 12
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "button_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%c + 1px" ],
+                "controls": [
+                  {
+                    "button_panel": {
+                      "type": "panel",
+                      "anchor_to": "bottom_middle",
+                      "anchor_from": "bottom_middle",
+                      "size": [ "100% + 1px", "100%c" ],
+                      "controls": [
+                        {
+                          "button_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "$button_image_size": [ "100% - 1px", "100%" ],
+                            "$rainbowpie_localui_button_default_alpha": "$rainbowpie_ui_theme_dialog_content_background_alpha",
+                            "anchor_to": "top_middle",
+                            "anchor_from": "top_middle",
+                            "size": [ "100%", 23 ],
+                            "controls": [
+                              {
+                                "right_button@profile.delete_persona_right_button": {
+                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                                  "size": [ "fill", "100%" ]
+                                }
+                              },
+                              {
+                                "left_button@profile.delete_persona_left_button": {
+                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                                  "size": [ "fill", "100%" ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "background_panel_design2": {
+    "type": "panel",
+    "controls": [
+      {
+        "full_screen_background@rainbowpie_ui_common.global_background": {
+          "color": [ 0.0, 0.0, 0.0 ],
+          "alpha": 0.3,
+          "layer": 1
+        }
+      },
+      {
+        "ingame_background": {
+          "type": "panel",
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "size": [ 204, 132 ],
+          "ignored": "$is_pregame",
+          "layer": 2,
+          "controls": [
+            {
+              "popup_dialog_background": {
+                "type": "image",
+                "texture": "textures/ui/White",
+                "size": [ "100%", "100%" ],
+                "color": "$rainbowpie_ui_theme_dialog_background_color",
+                "alpha": "$rainbowpie_ui_theme_dialog_background_alpha"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blur_panel_2": {
+          "type": "panel",
+          "clips_children": true,
+          "size": [ "100%", "100%" ],
+          "offset": [ "50% - 102px", 0 ],
+          "layer": 4,
+          "controls": [
+            {
+              "blur_panel_1": {
+                "type": "panel",
+                "clips_children": true,
+                "size": [ "100%", "100%" ],
+                "offset": [ 0, "50% - 66px" ],
+                "controls": [
+                  {
+                    "blur_layer_1@mintui_background.background_blur": {
+                      "$background_offset": [ "-100% + 204px", "-100% + 132px" ],
+                      "$background_children_offset": [ "50% - 102px", "50% - 66px" ],
+                      "$background_layer": 2
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

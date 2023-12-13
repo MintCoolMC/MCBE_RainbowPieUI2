@@ -1,0 +1,263 @@
+{
+  "namespace": "mintui_background",
+
+  "background_fullscreen": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$background_mask|default": false,
+    "ignored": "(not $is_pregame)",
+    "controls": [
+      {
+        "image_background": {
+          "type": "image",
+          "fill": true,
+          "size": [ "100%", "100%" ],
+          "texture": "$rainbowpie_ui_theme_background_texture",
+          "layer": 1
+        }
+      },
+      {
+        "image_mask": {
+          "type": "image",
+          "visible": "($background_mask and $rainbowpie_ui_flag_bg_mask)",
+          "fill": true,
+          "size": [ "100%", "100%" ],
+          "texture": "$rainbowpie_ui_theme_background_mask_texture",
+          "layer": 2
+        }
+      }
+    ]
+  },
+
+  "background_blur_fullscreen": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$background_mask|default": false,
+    "ignored": "(not $is_pregame)",
+    "controls": [
+      {
+        "image_background": {
+          "type": "image",
+          "fill": true,
+          "size": [ "100%", "100%" ],
+          "texture": "$rainbowpie_ui_theme_background_blur_texture",
+          "layer": 1
+        }
+      },
+      {
+        "image_mask": {
+          "type": "image",
+          "visible": "($background_mask and $rainbowpie_ui_flag_bg_mask)",
+          "fill": true,
+          "size": [ "100%", "100%" ],
+          "texture": "$rainbowpie_ui_theme_background_mask_texture",
+          "layer": 2
+        }
+      }
+    ]
+  },
+
+  "background": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$background_mask|default": false,
+    "$background_ingame|default": false,
+    "$background_layer|default": 1,
+    "$background_offset|default": [],
+    "$background_children_offset|default": [],
+    "$background_anim_reset|default": "screen_animation_reset",
+    "$background_anims|default": [],
+    "$background_children_anim_reset|default": "screen_animation_reset",
+    "$background_children_anims|default": [],
+    "$background_size|default": [ "100%", "100%" ],
+    "$background_children_size|default": [ "100%", "100%" ],
+    "$background_anchor|default": "center",
+    "$background_children_anchor|default": "center",
+    "controls": [
+      {
+        "background_panel_1": {
+          "type": "panel",
+          "ignored": "((not $is_pregame) and (not $background_ingame))",
+          "clips_children": true,
+          "size": [ "100%", "100%" ],
+          "offset": "$background_offset",
+          "anchor_from": "$background_anchor",
+          "anchor_to": "$background_anchor",
+          "layer": 2,
+          "$background_blur|default": "$rainbowpie_ui_theme_background_blur_texture",
+          "$background_normal|default": "$rainbowpie_ui_theme_background_texture",
+          "animation_reset_name": "$background_anim_reset",
+          "anims": "$background_anims",
+          "controls": [
+            {
+              "image_background": {
+                "type": "image",
+                "visible": "$rainbowpie_ui_feature_background_blur",
+                "fill": true,
+                "size": "$background_children_size",
+                "offset": "$background_children_offset",
+                "anchor_from": "$background_children_anchor",
+                "anchor_to": "$background_children_anchor",
+                "texture": "$background_normal",
+                "layer": "($background_layer + 1)",
+                "animation_reset_name": "$background_children_anim_reset",
+                "anims": "$background_children_anims"
+              }
+            },
+            {
+              "image_mask": {
+                "type": "image",
+                "ignored": "(not $rainbowpie_ui_feature_background_mask)",
+                "visible": "($background_mask and $rainbowpie_ui_flag_bg_mask)",
+                "fill": true,
+                "size": "$background_children_size",
+                "offset": "$background_children_offset",
+                "anchor_from": "$background_children_anchor",
+                "anchor_to": "$background_children_anchor",
+                "texture": "$rainbowpie_ui_theme_background_mask_texture",
+                "layer": "($background_layer + 2)",
+                "animation_reset_name": "$background_children_anim_reset",
+                "anims": "$background_children_anims"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "background_blur": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$background_mask|default": true,
+    "$background_ingame|default": false,
+    "$background_layer|default": 1,
+    "$background_offset|default": [],
+    "$background_children_offset|default": [],
+    "$background_anim_reset|default": "screen_animation_reset",
+    "$background_anims|default": [],
+    "$background_children_anim_reset|default": "screen_animation_reset",
+    "$background_children_anims|default": [],
+    "$background_size|default": [ "100%", "100%" ],
+    "$background_children_size|default": [ "100%", "100%" ],
+    "$background_anchor|default": "center",
+    "$background_children_anchor|default": "center",
+    "controls": [
+      {
+        "background_panel_1": {
+          "type": "panel",
+          "ignored": "((not $is_pregame) and (not $background_ingame))",
+          "clips_children": true,
+          "size": "$background_size",
+          "offset": "$background_offset",
+          "anchor_from": "$background_anchor",
+          "anchor_to": "$background_anchor",
+          "layer": 2,
+          "$background_blur|default": "$rainbowpie_ui_theme_background_blur_texture",
+          "$background_normal|default": "$rainbowpie_ui_theme_background_texture",
+          "animation_reset_name": "$background_anim_reset",
+          "anims": "$background_anims",
+          "controls": [
+            {
+              "image_background": {
+                "type": "image",
+                "visible": "$rainbowpie_ui_feature_background_blur",
+                "fill": true,
+                "size": "$background_children_size",
+                "offset": "$background_children_offset",
+                "anchor_from": "$background_children_anchor",
+                "anchor_to": "$background_children_anchor",
+                "texture": "$background_blur",
+                "layer": "($background_layer + 1)",
+                "animation_reset_name": "$background_children_anim_reset",
+                "anims": "$background_children_anims"
+              }
+            },
+            {
+              "image_mask": {
+                "type": "image",
+                "ignored": "(not $rainbowpie_ui_feature_background_mask)",
+                "visible": "($background_mask and $rainbowpie_ui_flag_bg_mask)",
+                "fill": true,
+                "size": "$background_children_size",
+                "offset": "$background_children_offset",
+                "anchor_from": "$background_children_anchor",
+                "anchor_to": "$background_children_anchor",
+                "texture": "$rainbowpie_ui_theme_background_mask_texture",
+                "layer": "($background_layer + 2)",
+                "animation_reset_name": "$background_children_anim_reset",
+                "anims": "$background_children_anims"
+              }
+            },
+            {
+              "image_noise": {
+                "ignored": true,
+                "type": "image",
+                "tiled": true,
+                "alpha": 0.05,
+                "size": "$background_children_size",
+                "offset": "$background_children_offset",
+                "anchor_from": "$background_children_anchor",
+                "anchor_to": "$background_children_anchor",
+                "texture": "textures/MintUI/background/background_noise",
+                "layer": "($background_layer + 2)",
+                "animation_reset_name": "$background_children_anim_reset",
+                "anims": "$background_children_anims"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "background_mask": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$background_layer|default": 1,
+    "$background_offset|default": [],
+    "$background_children_offset|default": [],
+    "$background_anim_reset|default": "screen_animation_reset",
+    "$background_anims|default": [],
+    "$background_children_anim_reset|default": "screen_animation_reset",
+    "$background_children_anims|default": [],
+    "$background_size|default": [ "100%", "100%" ],
+    "$background_children_size|default": [ "100%", "100%" ],
+    "$background_anchor|default": "center",
+    "$background_children_anchor|default": "center",
+    "controls": [
+      {
+        "background_panel_1": {
+          "type": "panel",
+          "ignored": "(not $rainbowpie_ui_flag_bg_mask_ingame or $is_pregame)",
+          "clips_children": true,
+          "size": [ "100%", "100%" ],
+          "offset": "$background_offset",
+          "anchor_from": "$background_anchor",
+          "anchor_to": "$background_anchor",
+          "layer": 2,
+          "animation_reset_name": "$background_anim_reset",
+          "anims": "$background_anims",
+          "controls": [
+            {
+              "image_mask": {
+                "type": "image",
+                "ignored": "(not $rainbowpie_ui_feature_background_mask)",
+                "visible": "$rainbowpie_ui_flag_bg_mask",
+                "fill": true,
+                "size": "$background_children_size",
+                "offset": "$background_children_offset",
+                "anchor_from": "$background_children_anchor",
+                "anchor_to": "$background_children_anchor",
+                "texture": "$rainbowpie_ui_theme_background_mask_texture_ingame",
+                "layer": "($background_layer + 2)",
+                "animation_reset_name": "$background_children_anim_reset",
+                "anims": "$background_children_anims"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

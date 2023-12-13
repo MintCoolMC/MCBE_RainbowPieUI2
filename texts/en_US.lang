@@ -1,0 +1,76 @@
+## Comments can be added anywhere on a valid line by starting with '##'
+##
+## Note, trailing spaces will NOT be trimmed. If you want room between the end of the string and the start of a
+## comment on the same line, use TABs.
+
+rainbowpie.ui.global.title=Rainbow Pie UI
+
+rainbowpie.ui.theme.default_name=Rainbow Pie UI Default Theme
+rainbowpie.ui.theme.default_auther=MintCoolMC
+rainbowpie.ui.theme.default_description=Rainbow Pie UI
+
+rainbowpie.ui.themesystem.description.title=Description:
+rainbowpie.ui.themesystem.version_toolow=This theme version is too low! please update!
+rainbowpie.ui.themesystem.version_toohight=This theme version is too hight!
+
+rainbowpie.ui.settings.theme.title=Theme
+rainbowpie.ui.settings.module.title=Module
+
+rainbowpie.ui.storage_management.tab.management=Management
+rainbowpie.ui.storage_management.tab.settings=Settings
+
+rainbowpie.ui.hud.bow_helper.arrow_count=Arrows
+
+rainbowpie.ui.manifest_validation.verifiedPack=Verified Pack:
+rainbowpie.ui.manifest_validation.verifiedDetail=Detail
+rainbowpie.ui.manifest_validation.verifiedDetail.title=Verified Pack
+rainbowpie.ui.manifest_validation.verifiedDetail.warn=This information may be modified by third-party packs, so please use it as a reference only
+rainbowpie.ui.manifest_validation.verifiedDetail.description=Information provided by the verifier:
+
+rainbowpie.ui.music.button=Music
+rainbowpie.ui.music.title=Music Player
+rainbowpie.ui.music.button.seeAll=See All
+rainbowpie.ui.music.section.home=Home
+rainbowpie.ui.music.section.record=Music Disc
+rainbowpie.ui.music.category.single=Minecraft Music
+
+rainbowpie.ui.book.tab.title=Book Title
+rainbowpie.ui.book.tab.auther=Auther
+
+rainbowpie.ui.chat.tab.chat=Messages
+rainbowpie.ui.chat.tab.playerlist=Players
+
+rainbowpie.ui.resource_packs.tab.selected_packs=Selected
+rainbowpie.ui.resource_packs.tab.available_packs=Available
+rainbowpie.ui.resource_packs.search.placeholder.resource=Search resource packs
+rainbowpie.ui.resource_packs.search.placeholder.behavior=Search behavior packs
+rainbowpie.ui.resource_packs.tag.module=[Module]
+rainbowpie.ui.resource_packs.tag.package=[Package]
+rainbowpie.ui.resource_packs.tag.theme=[Theme]
+
+rainbowpie.ui.toast.gamepad_connected=Controller connected!
+
+rainbowpie.ui.pause.tab.pause=Pause
+rainbowpie.ui.pause.tab.playerlist=Players
+rainbowpie.ui.pause.tab.scoreboard=Score
+rainbowpie.ui.pause.tab.persona=My Profile
+rainbowpie.ui.pause.title.unscored_players=Unscored players
+rainbowpie.ui.pause.quit.tiptext=Double click to Save & Quit
+
+rainbowpie.ui.version.warn=Warning!
+rainbowpie.ui.version.supported=Supported Versions:
+rainbowpie.ui.version.warn_unsupport=This version may have bugs or problems
+rainbowpie.ui.version.dev.err_variable=[ForDEV]Please check variables about version!
+
+rainbowpie.ui.hud.tablist.maxplayers=Only 22 players can be shown here!
+rainbowpie.ui.hud.tablist.player_count=PLAYERS
+rainbowpie.ui.hud.tablist.player_count.single=PLAYER
+rainbowpie.ui.hud.tablist.playertag.self=[ME]
+rainbowpie.ui.hud.tablist.playertag.offline=[OFFLINE]
+rainbowpie.ui.hud.clickspace.tiptext=Click this space to show HUD
+
+rainbowpie.ui.verify.title=You need to authenticate to use this version of RainbowPieUI
+rainbowpie.ui.verify.text=If you don't know the password, Please don't use this version.
+rainbowpie.ui.verify.password_placeholder=Enter password here
+
+rainbowpie.ui.dialog.title_default=Alert

@@ -1,0 +1,178 @@
+{
+  "namespace": "structure_editor",
+
+  "image_panel_wrapper": {
+    "texture": ""
+  },
+
+  "button_panel_wrapper": {
+    "texture": ""
+  },
+
+  "export_disabled_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "import_failed_message_text/save_message_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "import_message_text/save_message_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "save_message_text/save_message_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "load_mode_panel/animation_time_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "load_mode_panel/mirror_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "mirror_checkbox/label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "common_text_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "3d_export_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "save_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "export_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "load_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "detect_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "import_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "reset_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "help_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "redstone_save_mode_panel": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "structure_redstone_memory@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#structure_redstone_memory",
+          "$radio_label_text": "structure_block.save_to_memory"
+        }
+      },
+      {
+        "structure_redstone_disk@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#structure_redstone_disk",
+          "$radio_label_text": "structure_block.save_to_disk"
+        }
+      }
+    ]
+  },
+
+  "animation_mode_dropdown": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "structure_animation_none@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#structure_animation_none",
+          "$radio_label_text": "structure_block.place_by_none"
+        }
+      },
+      {
+        "structure_animation_layers@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#structure_animation_layers",
+          "$radio_label_text": "structure_block.place_by_layer"
+        }
+      },
+      {
+        "structure_animation_blocks@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#structure_animation_blocks",
+          "$radio_label_text": "structure_block.place_by_block"
+        }
+      }
+    ]
+  },
+
+  "mode_panel": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "structure_save_mode@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#structure_save_mode",
+          "$radio_label_text|default": "structure_block.mode.save"
+        }
+      },
+      {
+        "structure_load_mode@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#structure_load_mode",
+          "$radio_label_text|default": "structure_block.mode.load"
+        }
+      },
+      {
+        "structure_data_mode@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "ignored": "(not $data_support)",
+          "$toggle_state_binding_name": "#structure_data_mode",
+          "$radio_label_text": "structure_block.mode.data"
+        }
+      },
+      {
+
+        "structure_corner_mode@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#structure_corner_mode",
+          "$radio_label_text": "structure_block.mode.corner"
+        }
+      },
+      {
+        "structure_3d_export_mode@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "ignored": "(not $3DExport_support)",
+          "$toggle_state_binding_name": "#structure_3d_export_mode",
+          "$radio_label_text": "structure_block.mode.export"
+        }
+      }
+    ]
+  },
+
+  "structure_editor_screen": {
+    "$rainbowpie_localui_modified": true,
+    "force_render_below": true,
+    "$screen_content": "rainbowpieui_structure_editor.structure_editor_content"
+  }
+}

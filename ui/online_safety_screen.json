@@ -1,0 +1,68 @@
+{
+  "namespace": "online_safety",
+
+  "ip_safety_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_background_animations": [
+      "@rainbowpieui_online_safety.exit_animation_push",
+      "@rainbowpieui_online_safety.exit_animation_pop"
+    ],
+    "$screen_animations": [
+      "@rainbowpieui_online_safety.exit_animation_push",
+      "@rainbowpieui_online_safety.exit_animation_pop"
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.back",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.proceed",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_content": "rainbowpieui_online_safety.online_safety_screen_content",
+    "$text_name": "onlinePlay.untrustedIp.title",
+    "$description_text": "onlinePlay.untrustedIp.message"
+  },
+
+  "do_not_show_checkbox/header_description_stack_panel/checkbox_visuals": {
+    "size": [ "100%", "100%" ]
+  },
+
+  "do_not_show_checkbox/header_description_stack_panel/buffer_panel": {
+    "ignored": true
+  },
+
+  "do_not_show_checkbox/header_description_stack_panel/another_panel": {
+    "ignored": true
+  },
+
+  "online_safety_screen": {
+    "$rainbowpie_localui_screenbackground_ingame": true,
+    "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_background_animations": [
+      "@rainbowpieui_online_safety.exit_animation_push",
+      "@rainbowpieui_online_safety.exit_animation_pop"
+    ],
+    "$screen_animations": [
+      "@rainbowpieui_online_safety.exit_animation_push",
+      "@rainbowpieui_online_safety.exit_animation_pop"
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.back",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.proceed",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_content": "rainbowpieui_online_safety.online_safety_screen_content"
+  }
+}

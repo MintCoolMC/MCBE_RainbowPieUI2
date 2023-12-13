@@ -1,0 +1,280 @@
+{
+  "namespace": "rainbowpieui_book",
+
+  "top_tab@common_tabs.tab_top": {
+    "$rainbowpie_toggle_unchecked_default_alpha": 0.0,
+    "$rainbowpie_toggle_checked_default_color": "$rainbowpie_ui_theme_dialog_content_background_color",
+    "$rainbowpie_toggle_checked_default_alpha": "$rainbowpie_ui_theme_dialog_content_background_alpha",
+
+    "$tab_panel": "rainbowpie_ui_tab.tab_panel",
+    "$toggle_tts_enabled_binding_type": "global",
+    "$radio_toggle_group": true,
+    "$toggle_name": "rainbowpieui_navigation_tab",
+    "$toggle_group_default_selected": 10,
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$toggle_tts_type_priority": 1001,
+    "$toggle_tts_toggle_on_text": "",
+    "$toggle_tts_toggle_off_text": "",
+    "$toggle_tts_index_priority": 1002,
+    "$tab_content": "rainbowpieui_book.top_tab_content"
+  },
+
+  "top_tab_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "tab_label@rainbowpie_ui_common.text_label_notheme": {
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [ "default", "default" ],
+          "text_alignment": "center",
+          "text": "$tab_text",
+          "color": "$text_color",
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "maximized_input_dialog@rainbowpie_ui_dialog.dialog_panel": {
+    "$rainbowpie_localui_dialogheader_title": "item.writable_book.name",
+    "$rainbowpie_localui_dialogheader_extra_controls": "rainbowpieui_book.maximized_input_dialog_button",
+    "$rainbowpie_localui_dialogheader_show_close": false,
+    "$rainbowpie_localui_dialog_content": "rainbowpieui_book.maximized_input_dialog_content",
+    "size": "$extra_large_screen_size",
+    "max_size": "$extra_large_max_screen_size",
+    "layer": 110
+  },
+
+  "maximized_input_dialog_button@rainbowpie_ui_dialog.header_background": {
+    "size": [ "100%c", "100%" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", "100%" ],
+          "controls": [
+            {
+              "tab_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ 100, "100%" ],
+                "controls": [
+                  {
+                    "title_navigation_tab@rainbowpieui_book.top_tab": {
+                      "size": [ "fill", "100%" ],
+                      "$tab_view_binding_name": "title_navigation_tab_toggle",
+                      "$tab_text": "rainbowpie.ui.book.tab.title",
+                      "$toggle_group_forced_index": 10
+                    }
+                  },
+                  {
+                    "auther_navigation_tab@rainbowpieui_book.top_tab": {
+                      "size": [ "fill", "100%" ],
+                      "$tab_view_binding_name": "auther_navigation_tab_toggle",
+                      "$tab_text": "rainbowpie.ui.book.tab.auther",
+                      "$toggle_group_forced_index": 11
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "minimized_input_button@rainbowpieui_book.maximized_input_toggle_base": {
+                "$rainbowpie_localui_button_default_alpha": 0.0,
+                "$rainbowpie_localui_button_hover_color": "$rainbowpie_ui_theme_closebutton_hover_background_color",
+                "$rainbowpie_localui_button_hover_alpha": "$rainbowpie_ui_theme_closebutton_hover_background_alpha",
+                "$rainbowpie_localui_button_pressed_color": "$rainbowpie_ui_theme_closebutton_pressed_background_color",
+                "$rainbowpie_localui_button_pressed_alpha": "$rainbowpie_ui_theme_closebutton_pressed_background_alpha",
+                "$button_content": "rainbowpieui_book.close_button_icon",
+                "$button_image_size": [ "100%", "100%" ],
+                "size": [ "100%y", "100%" ],
+                "$toggle_group_forced_index": 1001,
+                "$toggle_view_binding_name": "minimized_input",
+                "$button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.menu_select",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.menu_select",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_cancel",
+                    "to_button_id": "button.menu_select",
+                    "mapping_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "maximized_input_dialog_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "title_text_box": {
+          "type": "panel",
+          "controls": [
+            { "title_multiline_text_edit_box@rainbowpieui_book.title_multiline_text_edit_box": {} }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "title_navigation_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "author_text_box": {
+          "type": "panel",
+          "controls": [
+            { "auther_multiline_text_edit_box@rainbowpieui_book.auther_multiline_text_edit_box": {} }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "auther_navigation_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "title_multiline_text_edit_box@common.multiline_text_edit_box": {
+    "$rainbowpie_localui_editbox_enabled": true,
+    "$edit_box_indent_size": [ "100%", "100%" ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 1,
+    "size": [ "100% - 4px", "100% - 4px" ],
+    "offset": [ 0, 0 ],
+    "max_length": 32500,
+    "$text_box_name": "#title_text_box",
+    "$text_box_enabled_binding_name": "#editable",
+    "$text_edit_box_content_binding_name": "#title_text_box_item_name",
+    "$place_holder_text": "Enter your content here...",
+    "$enable_profanity_filter": true
+  },
+
+  "auther_multiline_text_edit_box@common.multiline_text_edit_box": {
+    "$rainbowpie_localui_editbox_enabled": true,
+    "$edit_box_indent_size": [ "100%", "100%" ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 1,
+    "size": [ "100% - 4px", "100% - 4px" ],
+    "offset": [ 0, 0 ],
+    "max_length": 32500,
+    "$text_box_name": "#author_text_box",
+    "$text_box_enabled_binding_name": "#author_editable",
+    "$text_edit_box_content_binding_name": "#author_text_box_item_name",
+    "$place_holder_text": "Enter your content here...",
+    "$enable_profanity_filter": true
+  },
+
+  "close_button_icon": {
+    "type": "image",
+    "size": [ 15, 15 ],
+    "layer": 2,
+    "texture": "($rainbowpie_ui_path_theme + '/icon/global/close_button/close')",
+    "color": "$rainbowpie_localui_button_text_color"
+  },
+
+  "maximize_icon": {
+    "type": "image",
+    "size": [ 18, 18 ],
+    "texture": "($rainbowpie_ui_path_theme + '/icon/global/maximize_icon')"
+  },
+
+  "maximized_input_toggle_base@common_toggles.light_ui_toggle": {
+    "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
+    "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
+    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
+    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
+    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
+    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
+    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
+    "$button_content": "rainbowpieui_book.maximize_icon",
+
+    "$button_type_panel": "common_buttons.new_ui_binding_button_label",
+    "$button_text_binding_type": "none",
+    "$button_binding_condition": "none",
+    "$button_text_grid_collection_name": "none",
+    "$button_text": "",
+    "$button_offset": [ 0, 0 ],
+
+    "$radio_toggle_group": true,
+    "$toggle_name": "rainbowpie_book_maximized_input",
+    "$toggle_group_default_selected": 1001,
+
+    "$toggle_group_forced_index": 0,
+
+    "$toggle_view_binding_name": ""
+  },
+
+  "book_screen_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "screen_content@rainbowpie_ui_common.screen_content": {
+          "$rainbowpie_localui_screen_ingame_anim1": true,
+          "$rainbowpie_localui_screen_content": [
+            {
+              "screen_content": {
+                "type": "panel",
+                "controls": [
+                  { "book_screen_content@book.book_screen_content": {} }
+                ],
+                "visible": true,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "maximized_input",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "subscreen_content": {
+                "type": "panel",
+                "controls": [
+                  { "maximized_input_dialog@rainbowpieui_book.maximized_input_dialog": {} }
+                ],
+                "visible": false,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "maximized_input",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

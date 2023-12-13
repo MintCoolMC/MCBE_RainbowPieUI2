@@ -1,0 +1,52 @@
+{
+  "namespace": "progress",
+
+  "progress_screen_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "modal_progress_panel_with_cancel/common_panel": {
+    "ignored": true
+  },
+
+  "progress_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screenbackground_ingamebg_ignored": true,
+    "$rainbowpie_localui_screenbackground_ignored": "$force_render_below",
+    "$rainbowpie_localui_screenbackground_override_ignored": false,
+    "$rainbowpie_localui_background_bsf_need": "(not $force_render_below)"
+  },
+
+  "mobile_data_icon_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "cancel_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "retry_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "abort_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "world_loading_progress_screen": {
+    "$rainbowpie_localui_screenbackground_ingame": true,
+    "$screen_content": "rainbowpieui_progress.world_loading_progress_screen"
+  },
+
+  "world_saving_progress_screen": {
+    "$rainbowpie_localui_background_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade"
+    ],
+    "$rainbowpie_localui_screenbackground_ingame": true,
+    "$screen_content": "rainbowpieui_progress.world_saving_progress_screen"
+  }
+}
+

@@ -1,0 +1,217 @@
+{
+  "namespace": "rainbowpieui_persona",
+
+  "background_blur_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "ignored": "(not $rainbowpie_ui_flag_d28dfac0)",
+    "layer": 1,
+    "controls": [
+      {
+        "blur_panel_2": {
+          "type": "panel",
+          "clips_children": true,
+          "size": [ "100%", "100%" ],
+          "offset": [ 34, 22 ],
+          "controls": [
+            {
+              "blur_layer_1@mintui_background.background_blur": {
+                "$background_size": [ "100%", "100%" ],
+                "$background_children_size": [ "100%", "100%" ],
+                "$background_offset": [ "-50% - 16px", -24 ],
+                "$background_children_offset": [ "50% - 18px", 2 ],
+                "$background_layer": 0
+              }
+            },
+            {
+              "mask_layer_1@mintui_background.background_mask": {
+                "$background_size": [ "100%", "100%" ],
+                "$background_children_size": [ "100%", "100%" ],
+                "$background_offset": [ "-50% - 16px", -24 ],
+                "$background_children_offset": [ "50% - 18px", 2 ],
+                "$background_layer": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blur_panel_1": {
+          "type": "panel",
+          "clips_children": true,
+          "size": [ "100%", "100%" ],
+          "offset": [ "50% + 19px", "100% - 65px" ],
+          "controls": [
+            {
+              "blur_layer_1@mintui_background.background_blur": {
+                "$background_size": [ "100%", "100%" ],
+                "$background_children_size": [ "100%", "100%" ],
+                "$background_offset": [ "-50% - 21px", "-100% + 63px" ],
+                "$background_children_offset": [ 2, 2 ],
+                "$background_layer": 0
+              }
+            },
+            {
+              "mask_layer_1@mintui_background.background_mask": {
+                "$background_size": [ "100%", "100%" ],
+                "$background_children_size": [ "100%", "100%" ],
+                "$background_offset": [ "-50% - 21px", "-100% + 63px" ],
+                "$background_children_offset": [ 2, 2 ],
+                "$background_layer": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "(not #preview_appearance_on)",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "restricted_content_popup_dialog_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "content_panel@rainbowpie_ui_dialog.content_background": {
+                "size": [ "100%", "fill" ],
+                "controls": [
+                  {
+                    "popup_dialog_message@rainbowpie_ui_common.text_label_notheme": {
+                      "layer": 2,
+                      "size": [ "100% - 18px", "default" ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [ 0, 4 ],
+                      "text_alignment": "center",
+                      "text": "dr.modal.restricted_content_text",
+                      "color": "$dressing_room_right_side_default_text_color"
+                    }
+                  },
+                  {
+                    "image": {
+                      "type": "image",
+                      "size": [ "60%", "50%x" ],
+                      "layer": 2,
+                      "texture": "textures/ui/warning_sad_steve",
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "offset": [ 0, 0 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "button_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%c + 1px" ],
+                "controls": [
+                  {
+                    "button_panel": {
+                      "type": "panel",
+                      "anchor_to": "bottom_middle",
+                      "anchor_from": "bottom_middle",
+                      "size": [ "100% + 1px", "100%c" ],
+                      "controls": [
+                        {
+                          "button_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "anchor_to": "top_middle",
+                            "anchor_from": "top_middle",
+                            "size": [ "100%", 23 ],
+                            "controls": [
+                              {
+                                "Ok_button@persona.differences_popup_ok_button": {
+                                  "$rainbowpie_localui_button_default_alpha": "$rainbowpie_ui_theme_dialog_content_background_alpha",
+                                  "$button_image_size": [ "100% - 1px", "100%" ],
+                                  "size": [ "fill", "100%" ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "background_panel_design2": {
+    "type": "panel",
+    "controls": [
+      {
+        "full_screen_background@rainbowpie_ui_common.global_background": {
+          "color": [ 0.0, 0.0, 0.0 ],
+          "alpha": 0.3,
+          "layer": 1
+        }
+      },
+      {
+        "ingame_background": {
+          "type": "panel",
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "size": [ 204, 132 ],
+          "ignored": "$is_pregame",
+          "layer": 2,
+          "controls": [
+            {
+              "popup_dialog_background": {
+                "type": "image",
+                "texture": "textures/ui/White",
+                "size": [ "100%", "100%" ],
+                "color": "$rainbowpie_ui_theme_dialog_background_color",
+                "alpha": "$rainbowpie_ui_theme_dialog_background_alpha"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blur_panel_2": {
+          "type": "panel",
+          "clips_children": true,
+          "size": [ "100%", "100%" ],
+          "offset": [ "50% - 102px", 0 ],
+          "layer": 4,
+          "controls": [
+            {
+              "blur_panel_1": {
+                "type": "panel",
+                "clips_children": true,
+                "size": [ "100%", "100%" ],
+                "offset": [ 0, "50% - 66px" ],
+                "controls": [
+                  {
+                    "blur_layer_1@mintui_background.background_blur": {
+                      "$background_offset": [ "-100% + 204px", "-100% + 132px" ],
+                      "$background_children_offset": [ "50% - 102px", "50% - 66px" ],
+                      "$background_layer": 2
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

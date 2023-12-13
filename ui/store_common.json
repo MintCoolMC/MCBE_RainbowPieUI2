@@ -1,0 +1,54 @@
+{
+  "namespace": "common_store",
+
+  "purchase_coins_panel/plus_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+    "$button_content": "rainbowpie_ui_store_common.wallet_button_content"
+  },
+
+  "inventory_panel/inventory_button": {
+  },
+
+  "status_with_coins/inventory_panel/inventory_button": {
+    "offset": [ 0, 0 ]
+  },
+
+  "status_with_coins/coin_balance_panel/coin_balance_panel": {
+    "offset": [ 0, 0 ]
+  },
+
+  "store_header_with_coins": {
+    "type": "panel",
+    "$screen_header_title|default": "#screen_header_title",
+    "$screen_header_title_binding_type|default": "none",
+    "controls": [
+      {
+        "header@rainbowpie_ui_common.screen_header": {
+          "$rainbowpie_localui_screenheader_title": "$screen_header_title",
+          "$rainbowpie_localui_screenheader_title_bindings": [
+            {
+              "binding_type": "$screen_header_title_binding_type",
+              "binding_name": "$screen_header_title",
+              "binding_name_override": "$screen_header_title"
+            }
+          ],
+          "$rainbowpie_localui_screenheader_content_panel": "rainbowpie_ui_store_common.header_content_panel"
+        }
+      },
+      {
+        "child_control@$child_control": {
+          "size": [ "100%", "100% - 20px" ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "layer": 2
+        }
+      }
+    ]
+  },
+
+  "store_base_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$use_animation": true
+  }
+}

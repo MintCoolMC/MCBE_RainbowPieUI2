@@ -1,0 +1,33 @@
+{
+  "namespace": "rainbowpieui_permissions",
+
+  "permissions_screen_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "header@rainbowpie_ui_common.screen_header": {
+          "$rainbowpie_localui_screenheader_title": "permissions.title"
+        }
+      },
+      {
+        "screen_content@rainbowpie_ui_common.screen_content": {
+          "$rainbowpie_localui_screen_content": [
+            {
+              "content_panel": {
+                "type": "stack_panel",
+                "size": [ "100%", "100% - 20px" ],
+                "orientation": "vertical",
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "controls": [
+                  { "content_panel@permissions.content_panel": {} }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

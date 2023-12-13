@@ -1,0 +1,126 @@
+{
+  "namespace": "sidebar_navigation",
+
+  "content_view/content_view_stack": {
+    "modifications": [
+      {
+        "control_name": "divider",
+        "operation": "insert_after",
+        "value": [
+          {
+            "padding": {
+              "ignored": "(not $is_sidebar_navigation_enabled)",
+              "type": "panel",
+              "size": [ 2, 2 ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "sidebar_views/verbose_side_bar_view_modal/verbose_sidebar_view": {
+    "$sidebar_view_size": [ 143, "100%" ]
+  },
+
+  "sidebar_section_scroll_panel": {
+    "$rainbowpie_localui_scrollbar_enabled": true,
+    "$scroll_size": [ 0, "100% - 8px" ],
+    "$scroll_bar_left_padding_size": [ 0, 0 ],
+    "$scroll_bar_right_padding_size": [ 0, 0 ]
+  },
+
+  "verbose_toggle": {
+    "$content_toggle_label_font_type": "$rainbowpie_ui_theme_global_font_name"
+  },
+
+  "verbose_button_content/button_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "verbose_screen_nav_button": {
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "sidebar_view_content_panel/verbose_view_exit": {
+    "$search_filter_sort_bg_alpha": 0
+  },
+
+  "sidebar_view_content_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "sidebar_and_blur_background_panel@rainbowpieui_sidebar_navigation.sidebar_and_blur_background_panel": {}
+          }
+        ]
+      }
+    ]
+  },
+
+  "sidebar_divider": {
+    "ignored": true
+  },
+
+  "sidebar_toggle": {
+    "$unchecked_locked_texture": "",
+    "$checked_locked_texture": "",
+    "$default_texture": "",
+
+    "$default_checked_texture_color": [ 1.0, 1.0, 1.0 ],
+    "$default_checked_texture_alpha": 0.4,
+    "$hover_texture": "textures/ui/White",
+    "$hover_texture_color": [ 1.0, 1.0, 1.0 ],
+    "$hover_texture_alpha": 0.4,
+    "$hover_checked_texture_color": [ 1.0, 1.0, 1.0 ],
+    "$hover_checked_texture_alpha": 0.5
+  },
+
+  "edge_bar": {
+    "texture": ""
+  },
+
+  "verbose_sidebar_expand_section_bg": {
+    "texture": ""
+  },
+
+  "sidebar_view_content_panel/view_stack_panel/sidebar_view": {
+    "texture": ""
+  },
+
+  "sidebar_views/simple_sidebar_view": {
+    "$sidebar_view_size": [ 32, "100%" ]
+  },
+
+  "content_view/content_view_stack/divider": {
+    "ignored": true
+  },
+
+  "sidebar_view": {
+    "modifications": [
+      {
+        "control_name": "sidebar_content",
+        "operation": "insert_after",
+        "value": [
+          {
+            "screen_content@rainbowpie_ui_common.screen_content": {
+              "$rainbowpie_localui_screen_content": [
+                {
+                  "content_view@sidebar_navigation.content_view": {}
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "sidebar_view/content_view": {
+    "ignored": true
+  }
+}

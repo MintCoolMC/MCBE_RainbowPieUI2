@@ -1,0 +1,105 @@
+{
+  "namespace": "trade2_pocket",
+
+  "right_navigation_tabs/pocket_tab_close_button": {
+    "ignored": true
+  },
+
+  "right_navigation_tabs": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "close_panel": {
+              "type": "panel",
+              "size": [ "100%", 33 ],
+              "controls": [
+                {
+                  "close_background@rainbowpie_ui_inventory.header_background": {
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "size": [ "100% - 4px", 33 ],
+                    "controls": [
+                      {
+                        "close_button@rainbowpie_ui_common.close_button": {
+                          "$rainbowpie_ui_theme_closebutton_default_color": "$rainbowpie_ui_theme_inventory_header_title_color",
+                          "layer": 10,
+                          "size": [ "100%", "100%" ],
+                          "offset": [ 0, 0 ],
+                          "anchor_from": "center",
+                          "anchor_to": "center"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "trade_slots_panel": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_inventory_content_background_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_content_background_alpha"
+  },
+
+  "name_and_trade_slots_stack_panel/exp_progress_bar_holder/exp_progress_bar": {
+    "size": [ "100%", 3 ]
+  },
+
+  "inventory_scroll_panel": {
+    "$rainbowpie_localui_scrollbar_enabled": true,
+    "$scroll_background_image_control": "rainbowpie_ui_common.container_scroll_background_image",
+    "$background_images": "rainbowpie_ui_common.cell_image"
+  },
+
+  "right_panel/content/bg": {
+    "$dialog_background": "rainbowpie_ui_common.inventory_background"
+  },
+
+  "left_tab_trade": {
+    "$checked_bar_anchor": "left",
+    "$tab_panel": "rainbowpie_ui_tab.tab_panel",
+    "$tab_image_size": [ "100% - 4px", "100%" ],
+    "$tab_image_anchor": "left_middle",
+    "$tab_content_size": [ "100% - 4px", "100% - 8px" ],
+    "$tab_content_offset": [ 0, 0 ],
+    "$tab_content_anchor": "left_middle",
+    "$rainbowpie_toggle_unchecked_default_color": "$rainbowpie_ui_theme_inventory_header_color",
+    "$rainbowpie_toggle_unchecked_default_alpha": "$rainbowpie_ui_theme_inventory_header_alpha",
+    "$rainbowpie_toggle_unchecked_hover_color": "$rainbowpie_ui_theme_inventory_header_color",
+    "$rainbowpie_toggle_unchecked_hover_alpha": 0.4,
+    "$rainbowpie_toggle_checked_default_color": "$rainbowpie_ui_theme_inventory_background_color",
+    "$rainbowpie_toggle_checked_default_alpha": 0.5,
+    "$rainbowpie_toggle_checked_hover_color": "$rainbowpie_ui_theme_inventory_background_color",
+    "$rainbowpie_toggle_checked_hover_alpha": 0.6
+  },
+
+  "left_tab_inventory": {
+    "$checked_bar_anchor": "left",
+    "$tab_panel": "rainbowpie_ui_tab.tab_panel",
+    "$tab_image_size": [ "100% - 4px", "100%" ],
+    "$tab_image_anchor": "left_middle",
+    "$tab_content_size": [ "100% - 4px", "100% - 8px" ],
+    "$tab_content_offset": [ 0, 0 ],
+    "$tab_content_anchor": "left_middle",
+    "$rainbowpie_toggle_unchecked_default_color": "$rainbowpie_ui_theme_inventory_header_color",
+    "$rainbowpie_toggle_unchecked_default_alpha": "$rainbowpie_ui_theme_inventory_header_alpha",
+    "$rainbowpie_toggle_unchecked_hover_color": "$rainbowpie_ui_theme_inventory_header_color",
+    "$rainbowpie_toggle_unchecked_hover_alpha": 0.4,
+    "$rainbowpie_toggle_checked_default_color": "$rainbowpie_ui_theme_inventory_background_color",
+    "$rainbowpie_toggle_checked_default_alpha": 0.5,
+    "$rainbowpie_toggle_checked_hover_color": "$rainbowpie_ui_theme_inventory_background_color",
+    "$rainbowpie_toggle_checked_hover_alpha": 0.6
+  },
+
+  "left_panel/content/bg": {
+    "$dialog_background": "rainbowpie_ui_common.inventory_background"
+  }
+}

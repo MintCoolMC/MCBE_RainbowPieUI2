@@ -1,0 +1,14 @@
+{
+  "namespace": "realms_plus_ended",
+
+  "main_content_panel/main_content_stack_panel/text_panel/text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "subscription_ended_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$screen_content": "rainbowpieui_realms_plus_ended.subscription_ended_screen_content"
+  }
+}
+

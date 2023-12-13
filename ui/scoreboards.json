@@ -1,0 +1,71 @@
+{
+  "namespace": "scoreboard",
+
+  "player_icon_panel/player_icon": {
+    "size": [ "80% + 4px", "80% + 4px" ]
+  },
+
+  "player_icon_panel/player_icon/player_panel_black_border": {
+    "ignored": true
+  },
+
+  "player_score": {
+    "shadow": false,
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "player_name": {
+    "shadow": false,
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "list_objective_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "scoreboard_sidebar/main/displayed_objective": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "scoreboard_sidebar_player": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "scoreboard_sidebar_score": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "player_rank_panel/player_rank_bg/player_rank": {
+    "offset": [ 0, -1 ],
+    "font_scale_factor": 1.2,
+    "font_type": "MinecraftTen",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
+  "player_rank_panel/player_rank_bg": {
+    "size": [ "100%y", "100% - 1px" ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [ 0, 0 ],
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha"
+  },
+
+  "player_panel/rank_base": {
+    "size": [ "100%y", "100%" ]
+  },
+
+  "base_player_button": {
+    "size": [ "fill", "100%" ],
+    "$button_image_size": [ "100%", "100% - 1px" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  }
+}

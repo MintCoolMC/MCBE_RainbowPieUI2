@@ -1,0 +1,32 @@
+{
+  "namespace": "disconnect",
+
+  "disconnect_screen_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "menu_button_template": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "open_account_setting_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "disconnect_screen": {
+    "$rainbowpie_localui_modified": "$rainbowpie_ui_flag_disconnect_ui_modified",
+    "$rainbowpie_localui_disconnect_dialog_buttons": "rainbowpieui_disconnect.button_panel",
+    "$rainbowpie_localui_screenbackground_blur": "(not $rainbowpie_ui_flag_d39385b8)",
+    "$is_pregame": true,
+    "$screen_content": "rainbowpieui_disconnect.disconnect_screen_content"
+  },
+
+  "realms_disconnect_screen": {
+    "$rainbowpie_localui_disconnect_dialog_buttons": "rainbowpieui_disconnect.realms_disconnect_button_panel"
+  },
+
+  "realms_warning_screen": {
+    "$rainbowpie_localui_disconnect_dialog_buttons": "rainbowpieui_disconnect.realms_warning_button_panel"
+  }
+}

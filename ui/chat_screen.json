@@ -1,0 +1,276 @@
+{
+  "namespace": "chat",
+
+  "chat_screen_content/popup_factory": {
+    "$rainbowpie_localui_this_control_ids": {
+      "chat_setting_popup": "@chat_settings.chat_settings_popup"
+    },
+    "control_ids": "$rainbowpie_localui_this_control_ids",
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_b3c44822",
+        "$rainbowpie_localui_this_control_ids": {
+          "chat_setting_popup": "@rainbowpieui_chat.chat_settings_panel"
+        }
+      }
+    ]
+  },
+
+  "auto_complete_panel_contents_with_item/auto_complete_item_renderer": {
+    "offset": [ 0, 0 ]
+  },
+
+  "auto_complete_panel_contents_with_item/text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "auto_complete_panel_contents_with_item/autocomplete_button": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name": "#is_autocomplete_suggestion"
+        }
+      },
+      {
+        "array_name": "bindings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "binding_name": "(not #chat_visible)",
+            "binding_name_override": "#visible"
+          },
+          {
+            "binding_type": "collection",
+            "binding_name": "#auto_complete_text",
+            "binding_collection_name": "auto_complete"
+          },
+          {
+            "binding_name": "#host_teleport_main_visible"
+          },
+          {
+            "binding_name": "#host_time_visible"
+          },
+          {
+            "binding_name": "#host_weather_visible"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(not (#auto_complete_text = '') and not #host_teleport_main_visible and not #host_time_visible and not #host_weather_visible)",
+            "target_property_name": "#enabled"
+          }
+        ]
+      }
+    ]
+  },
+
+  "chat_background": {
+    "texture": ""
+  },
+
+  "message_tts_wrapper": {
+  },
+
+  "messages_text": {
+    "anims": ["@rainbowpieui_chat.chat_message_panel_size_animation"],
+    "clips_children": true
+  },
+
+  "messages_text/text": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "anims": ["@rainbowpieui_chat.chat_message_panel_animation"]
+  },
+
+  "messages_scrolling_panel": {
+    "$rainbowpie_localui_scrollbar_enabled": true,
+    "$scroll_bar_left_padding_size": [ 0, 0 ],
+    "$scroll_bar_right_padding_size": [ 1, 0 ],
+    "size": [ "100%-2px", "100%-47px" ]
+  },
+
+  "send_button": {
+    "$button_size_override": [ "100%c + 1px", "100%c" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_form_fitting_button"
+  },
+
+  "text_edit_box": {
+    "$rainbowpie_localui_editbox_enabled": true,
+    "$edit_box_indent_size": [ "100% - 1px", "100% - 2px" ],
+    "$enable_profanity_filter": "$rainbowpie_ui_flag_input_enable_profanity_filter"
+  },
+
+  "keyboard_image": {
+    "texture": "textures/ui/chat_keyboard_hover",
+    "color": "$text_color"
+  },
+
+  "small_button": {
+    "size": [ 26, 27 ],
+    "$button_image_size": [ "100% - 1px", "100% - 2px" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "chat_screen_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "chat_settings_animation_panel@rainbowpieui_chat.chat_settings_animation_panel": {}
+          },
+          {
+            "maximized_input_dialog_panel@rainbowpieui_chat.maximized_input_dialog_panel": {}
+          },
+          {
+            "chat_messages_and_playerlist@rainbowpieui_chat.chat_messages_and_playerlist": {}
+          },
+          {
+            "rainbowpie_chat_header@rainbowpieui_chat.chat_header": {}
+          },
+          {
+            "mask_layer@mintui_background.background_mask": {
+              "$background_offset": [ 0, "100% - 27px" ],
+              "$background_children_offset":  [ 0, "-100% + 27px" ],
+              "$background_layer": -3,
+              "$background_anims": [
+                "@rainbowpieui_chat.chat_bottom_background_back_animation1",
+                "@rainbowpieui_chat.chat_bottom_background_back_animation_pop1",
+                "@rainbowpieui_chat.chat_bottom_background_animation1",
+                "@rainbowpieui_chat.chat_bottom_background_animation_pop1"
+              ],
+              "$background_children_anims": [
+                "@rainbowpieui_chat.chat_bottom_background_back_animation2",
+                "@rainbowpieui_chat.chat_bottom_background_back_animation_pop2",
+                "@rainbowpieui_chat.chat_bottom_background_animation2",
+                "@rainbowpieui_chat.chat_bottom_background_animation_pop2"
+              ]
+            }
+          },
+          {
+            "chat_bottom_panel_background": {
+              "type": "image",
+              "texture": "textures/ui/White",
+              "anchor_from": "bottom_middle",
+              "anchor_to": "bottom_middle",
+              "size": [ "100%", 27 ],
+              "color": "$rainbowpie_ui_theme_text_background_color",
+              "alpha": "$rainbowpie_ui_theme_text_background_alpha",
+              "animation_reset_name": "screen_animation_reset",
+              "anims": [
+                "@rainbowpieui_chat.chat_bottom_panel_back_animation",
+                "@rainbowpieui_chat.chat_bottom_panel_back_animation_pop",
+                "@rainbowpieui_chat.chat_bottom_panel_animation",
+                "@rainbowpieui_chat.chat_bottom_panel_animation_pop"
+              ],
+              "layer": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "chat_bottom_panel/host_main_button": {
+    "size": [ 26, 27 ],
+    "$button_size_override": [ "100%c + 1px", "100%c" ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_form_fitting_button"
+  },
+
+  "chat_bottom_panel": {
+    "size": [ "100% - 1px", 27 ],
+    "min_size": [ "100% - 1px", 27 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@rainbowpieui_chat.chat_bottom_panel_back_animation",
+      "@rainbowpieui_chat.chat_bottom_panel_back_animation_pop",
+      "@rainbowpieui_chat.chat_bottom_panel_animation",
+      "@rainbowpieui_chat.chat_bottom_panel_animation_pop"
+    ],
+    "modifications": [
+      {
+        "control_name": "keyboard_button",
+        "operation": "insert_after",
+        "value": [
+          {
+            "autocompleteback@common_buttons.light_text_button": {
+              "$button_image_size": [ "100% - 1px", "100% - 2px" ],
+              "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+              "$button_text": "TAB▲",
+              "$pressed_button_name": "button.chat_autocomplete_back",
+              "size": [ 26, 27 ],
+              "ignored": "(not $touch)"
+            }
+          },
+          {
+            "autocomplete@common_buttons.light_text_button": {
+              "$button_image_size": [ "100% - 1px", "100% - 2px" ],
+              "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+              "$button_text": "TAB▼",
+              "$pressed_button_name": "button.chat_autocomplete",
+              "size": [ 26, 27 ],
+              "ignored": "(not $touch)"
+            }
+          },
+          {
+            "previous@common_buttons.light_text_button": {
+              "$button_image_size": [ "100% - 1px", "100% - 2px" ],
+              "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+              "$button_text": "▲",
+              "$pressed_button_name": "button.chat_previous_message",
+              "size": [ 26, 27 ],
+              "ignored": "(not $touch)"
+            }
+          },
+          {
+            "next@common_buttons.light_text_button": {
+              "$button_image_size": [ "100% - 1px", "100% - 2px" ],
+              "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+              "$button_text": "▼",
+              "$pressed_button_name": "button.chat_next_message",
+              "size": [ 26, 27 ],
+              "ignored": "(not $touch)"
+            }
+          }
+        ]
+      },
+      {
+        "control_name": "text_box",
+        "operation": "insert_after",
+        "value": [
+          {
+            "maximized_input_button@rainbowpieui_chat.maximized_input_toggle_base": {
+              "$button_image_size": [ "100% - 1px", "100% - 2px" ],
+              "size": [ 26, 27 ],
+              "$toggle_group_forced_index": 1000,
+              "$toggle_view_binding_name": "maximized_input",
+              "bindings": [
+                {
+                  "binding_type": "view",
+                  "source_control_name": "maximized_input",
+                  "source_property_name": "(not #toggle_state)",
+                  "target_property_name": "#enabled"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "chat_header": {
+    "ignored": true
+  },
+
+  "chat_screen": {
+    "close_on_player_hurt": false,
+    "$rainbowpie_localui_screen_watermark": false,
+    "$rainbowpie_localui_modified": true,
+    "$rainbowpie_ui_theme_global_background_alpha": 0.5,
+    "$screen_bg_content": "common.empty_panel"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "namespace": "add_external_server",
+
+  "text_edit_group/name_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "text_edit_group/edit_box": {
+    "$rainbowpie_localui_editbox_enabled": true
+  },
+
+  "save_button": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name_override": "#visible"
+        }
+      }
+    ]
+  },
+
+  "add_external_server_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$screen_content": "rainbowpieui_add_external_server.add_external_server_screen_content"
+  }
+}

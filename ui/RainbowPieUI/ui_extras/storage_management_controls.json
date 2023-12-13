@@ -1,0 +1,56 @@
+{
+  "namespace": "rainbowpieui_storage_management",
+
+  "navigation_tab_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "size": [ "100%", 20 ],
+    "controls": [
+      {
+        "selected_packs_navigation_tab@rainbowpieui_storage_management.top_tab": {
+          "size": [ "fill", "100%" ],
+          "$tab_view_binding_name": "storage_management_navigation_tab_toggle",
+          "$tab_text": "rainbowpie.ui.storage_management.tab.management",
+          "$toggle_group_forced_index": 0
+        }
+      },
+      {
+        "available_packs_navigation_tab@rainbowpieui_storage_management.top_tab": {
+          "size": [ "fill", "100%" ],
+          "$tab_view_binding_name": "storage_settings_navigation_tab_toggle",
+          "$tab_text": "rainbowpie.ui.storage_management.tab.settings",
+          "$toggle_group_forced_index": 1
+        }
+      }
+    ]
+  },
+
+  "top_tab@common_tabs.tab_top": {
+    "$tab_panel": "rainbowpie_ui_tab.tab_panel",
+    "$radio_toggle_group": true,
+    "$toggle_name": "storage_management_rainbowpieui_navigation_tab",
+    "$toggle_group_default_selected": 0,
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$tab_content": "rainbowpieui_storage_management.top_tab_content"
+  },
+
+  "top_tab_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "tab_label@rainbowpie_ui_common.text_label_notheme": {
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [ "default", "default" ],
+          "text_alignment": "center",
+          "text": "$tab_text",
+          "color": "$text_color",
+          "layer": 1
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "namespace": "brewing_stand",
+
+  "brewing_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_inventory_title_color"
+  },
+
+  "brewing_pipes": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/brewing_pipes')",
+    "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  },
+
+  "brewing_fuel_pipes": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/brewing_fuel_pipes')",
+    "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  },
+
+  // "bottle_empty_image": {
+  //   "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/bottle_empty')",
+  //   "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+  //   "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  // },
+
+  // "fuel_empty_image": {
+  //   "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/brewing_fuel_empty')",
+  //   "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+  //   "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  // },
+
+  "bubbles_empty_image": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/bubbles_empty')",
+    "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  },
+
+  "bubbles_full_image": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/bubbles_full')"
+  },
+
+  "brewing_arrow_empty_image": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/brewing_arrow_empty')",
+    "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  },
+
+  "brewing_arrow_full_image": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/brewing_arrow_full')"
+  },
+
+  "brewing_fuel_bar_empty_image": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/brewing_fuel_bar_empty')",
+    "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
+  },
+
+  "brewing_fuel_bar_full_image": {
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/brewing_fuel_bar_full')"
+  },
+
+  "brewing_panel_top_half": {
+    "offset": [ 0, 16 ]
+  },
+
+  "brewing_panel_top_half/brewing_label": {
+    "ignored": true
+  },
+
+  "brewing_stand_panel/root_panel/common_panel": {
+    "$dialog_background": "rainbowpie_ui_common.inventory_background",
+    "$show_close_button": false,
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "offset": [ 0, -2 ],
+    "size": [ "100% - 8px", "100% - 25px" ]
+  },
+  
+  "brewing_stand_panel/root_panel/furnace_screen_inventory": {
+    "$background_images": "rainbowpie_ui_common.cell_image",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "inventory_header@rainbowpie_ui_inventory.header": {
+              "$rainbowpie_localui_inventoryheader_title": "$container_title",
+              "offset": [ 0, 0 ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

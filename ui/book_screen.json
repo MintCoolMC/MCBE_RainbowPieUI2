@@ -1,0 +1,121 @@
+{
+  "namespace": "book",
+
+  "cover_buttons_stack_panel_holder/cover_buttons_stack_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "maximized_input_button_panel": {
+              "type": "panel",
+              "size": [ 0, 20 ],
+              "controls": [
+                {
+                  "maximized_input_button@rainbowpieui_book.maximized_input_toggle_base": {
+                    "$button_image_size": [ "100%", "100%" ],
+                    "size": [ "100%y", 18 ],
+                    "offset": [ 12, 0 ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "$toggle_group_forced_index": 1000,
+                    "$toggle_view_binding_name": "maximized_input"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "cover_buttons_stack_panel_holder/cover_buttons_stack_panel/finalize_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button"
+  },
+
+  "cover_buttons_stack_panel_holder/cover_buttons_stack_panel/cancel_sign_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button"
+  },
+
+  "book_buttons_panel/sign_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button"
+  },
+
+  "author_text_box": {
+    "$place_holder_text_font_type": "$rainbowpie_ui_theme_global_font_name",
+    "$place_holder_text_backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "title_text_box": {
+    "$place_holder_text_font_type": "$rainbowpie_ui_theme_global_font_name",
+    "$place_holder_text_backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "warning_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "author_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "title_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "page_number_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "header": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "page_text_edit": {
+    "$place_holder_text_font_type": "$rainbowpie_ui_theme_global_font_name",
+    "$place_holder_text_backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  // "base_button/hover": {
+  //   "controls": [
+  //     {
+  //       "hover_text@common.hover_text": {
+  //         "layer": 30,
+  //         "property_bag": {
+  //           "#hover_text": "base_button"
+  //         }
+  //       }
+  //     }
+  //   ]
+  // },
+
+  // "page_content_panel/edit_page": {
+  //   "ignored": true
+  // },
+
+  // "page_buttons_panel": {
+  //   "modifications": [
+  //     {
+  //       "array_name": "bindings",
+  //       "operation": "remove",
+  //       "where": {
+  //         "binding_name_override": "#visible"
+  //       }
+  //     }
+  //   ]
+  // },
+
+  "book_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$screen_content": "rainbowpieui_book.book_screen_content",
+    "force_render_below": true,
+    "close_on_player_hurt": false
+  }
+}

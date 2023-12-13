@@ -1,0 +1,95 @@
+{
+  "namespace": "profile",
+
+  "popup_dialog__delete_persona": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "dialog_panel@rainbowpie_ui_dialog.dialog_panel": {
+          "layer": 8,
+          "size": [ 204, 132 ],
+          "$rainbowpie_localui_dialogheader_title": "dr.modal.persona_delete_confirm_title",
+          "$rainbowpie_localui_dialog_content": "rainbowpieui_profile.delete_persona_dialog_content",
+          "$rainbowpie_localui_dialog_show_background": false,
+          "$close_button_to_button_id": "button.close_dialog"
+        }
+      },
+      {
+        "background2@rainbowpieui_profile.background_panel_design2": {
+          "layer": 4
+        }
+      }
+    ]
+  },
+
+  "lower_button_label_section/persona_label": {
+    "ignored": "$rainbowpie_ui_flag_05aab186"
+  },
+
+  "lower_button_section/differences_info_button": {
+    "ignored": "$rainbowpie_ui_flag_05aab186"
+  },
+
+  "edit_appearance_preset_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "delete_appearance_preset_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "preset_arrow_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "skin_retry_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "edit_appearance_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "delete_appearance_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "differences_information_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "settings_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "differences_popup_ok_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "select_default_character_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "skin_model_renderer": {
+    "camera_tilt_degrees": 0,
+    "starting_rotation": 0
+  },
+
+  "profile_screen_main_content/featured_section": {
+    "ignored": "($store_disabled or $rainbowpie_ui_flag_05aab186)"
+  },
+
+  "profile_screen_main_content/featured_section_disabled_padding": {
+    "ignored": "((not $store_disabled) or $rainbowpie_ui_flag_05aab186)"
+  },
+
+  "profile_screen_background_content": {
+    "ignored": true
+  },
+
+  "profile_screen": {
+    "$rainbowpie_localui_modified": true,
+    // "$rainbowpie_localui_screenbackground_blur": true,
+    "$screen_bg_content": "common.empty_panel"
+  }
+}
