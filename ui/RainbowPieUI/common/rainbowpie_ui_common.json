@@ -529,11 +529,26 @@
       },
       {
         "label_1": {
+          "ignored": "$rainbowpieui_ci",
           "type": "label",
           "color": "$main_header_text_color",
           "layer": 2,
-          // "text": "$rainbowpieui_full_version_name",
           "text": "('§§' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version + '.' + $rainbowpieui_branch_name)",
+          "font_type": "$rainbowpie_ui_theme_global_font_name",
+          "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+          "size": [ "default", 10 ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [ -1, -22 ]
+        }
+      },
+      {
+        "label_1_ci": {
+          "ignored": "(not $rainbowpieui_ci)",
+          "type": "label",
+          "color": "$main_header_text_color",
+          "layer": 2,
+          "text": "('§§' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version + '.' + $rainbowpieui_branch_name + '/' + $rainbowpieui_commit_id)",
           "font_type": "$rainbowpie_ui_theme_global_font_name",
           "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
           "size": [ "default", 10 ],

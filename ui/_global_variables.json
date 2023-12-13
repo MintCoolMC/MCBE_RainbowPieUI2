@@ -1,11 +1,12 @@
 {
-  "$rainbowpieui_commit_id": "",
+  "$rainbowpieui_ci": true,
+  "$rainbowpieui_commit_id": "local",
   "$rainbowpieui_branch_type": "preview",
   "$rainbowpieui_branch_name": "rm_preview",
   "$rainbowpieui_branch_display_name": "Preview",
 
   "$rainbowpieui_engine_version": "20",
-  "$rainbowpieui_patch_version": "10081",
+  "$rainbowpieui_patch_version": "10082",
   "$rainbowpieui_hotfix_version": "1",
   "$rainbowpieui_engine_version_name": "2.0",
   "$rainbowpieui_full_version_name": "2.0.10081.rm_preview",
