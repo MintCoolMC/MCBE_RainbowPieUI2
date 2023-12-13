@@ -34,10 +34,29 @@
         }
       },
       {
+        "popup_dialog_background_ingame": {
+          "type": "image",
+          "ignored": "$is_pregame",
+          "visible": "$rainbowpie_ui_flag_d36e5f2a",
+          "texture": "textures/ui/White",
+          "size": [ "100%", "100%" ],
+          "color": "$rainbowpie_ui_theme_dialog_background_color",
+          "alpha": "$rainbowpie_ui_theme_dialog_background_alpha",
+          "layer": 8,
+          "variables": [
+            {
+              "requires": "$rainbowpie_ui_flag_dialog_ingame_oqaque",
+              "$rainbowpie_ui_theme_dialog_background_alpha": 1.0
+            }
+          ]
+        }
+      },
+      {
         "header_stack_panel": {
           "type": "stack_panel",
           "orientation": "horizontal",
           "size": [ "100%", "100%" ],
+          "layer": 10,
           "controls": [
             {
               "title_background@rainbowpie_ui_dialog.header_background": {
@@ -142,6 +161,24 @@
           "anchor_from": "bottom_middle",
           "layer": 8,
           "controls": [
+            {
+              "popup_dialog_background_ingame": {
+                "type": "image",
+                "ignored": "$is_pregame",
+                "visible": "$rainbowpie_ui_flag_d36e5f2a",
+                "texture": "textures/ui/White",
+                "size": [ "100%", "100%" ],
+                "color": "$rainbowpie_ui_theme_dialog_background_color",
+                "alpha": "$rainbowpie_ui_theme_dialog_background_alpha",
+                "layer": -10,
+                "variables": [
+                  {
+                    "requires": "$rainbowpie_ui_flag_dialog_ingame_oqaque",
+                    "$rainbowpie_ui_theme_dialog_background_alpha": 1.0
+                  }
+                ]
+              }
+            },
             {
               "$rainbowpie_localui_dialog_content@$rainbowpie_localui_dialog_content": {}
             }

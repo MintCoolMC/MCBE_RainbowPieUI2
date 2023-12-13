@@ -5,7 +5,13 @@
     "type": "image",
     "texture": "textures/ui/White",
     "color": "$rainbowpie_ui_theme_inventory_header_color",
-    "alpha": "$rainbowpie_ui_theme_inventory_header_alpha"
+    "alpha": "$rainbowpie_ui_theme_inventory_header_alpha",
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_inventory_oqaque",
+        "$rainbowpie_ui_theme_inventory_header_alpha": 1.0
+      }
+    ]
   },
 
   "live_player_renderer": {

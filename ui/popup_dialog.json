@@ -48,14 +48,7 @@
           "size": [ "100%", "100%" ],
           "layer": 50,
           "color": "$rainbowpie_ui_theme_dialog_background_color",
-          "alpha": "$alpha",
-          "$alpha": "$rainbowpie_ui_theme_dialog_background_alpha",
-          "variables": [
-            {
-              "requires": "$is_pregame",
-              "$alpha": "$rainbowpie_ui_theme_dialog_background_alpha_pregame"
-            }
-          ],
+          "alpha": "$rainbowpie_ui_theme_dialog_background_alpha",
           "controls": [
             {
               "title_panel": {

@@ -134,7 +134,13 @@
                 "texture": "textures/ui/White",
                 "size": [ "100%", "100%" ],
                 "color": "$rainbowpie_ui_theme_dialog_background_color",
-                "alpha": "$rainbowpie_ui_theme_dialog_background_alpha"
+                "alpha": "$rainbowpie_ui_theme_dialog_background_alpha",
+                "variables": [
+                  {
+                    "requires": "$rainbowpie_ui_flag_dialog_ingame_oqaque",
+                    "$rainbowpie_ui_theme_dialog_background_alpha": 1.0
+                  }
+                ]
               }
             }
           ]

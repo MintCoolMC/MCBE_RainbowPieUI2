@@ -36,7 +36,13 @@
   "inventory_background@rainbowpie_ui_common.dialog_background_opaque": {
     "ignored": "(not $rainbowpie_ui_theme_inventory_background_enabled)",
     "color": "$rainbowpie_ui_theme_inventory_background_color",
-    "alpha": "$rainbowpie_ui_theme_inventory_background_alpha"
+    "alpha": "$rainbowpie_ui_theme_inventory_background_alpha",
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_inventory_oqaque",
+        "$rainbowpie_ui_theme_inventory_background_alpha": 1.0
+      }
+    ]
   },
 
   "rainbowpie_gamepad_connect_tip_anim_start": {
