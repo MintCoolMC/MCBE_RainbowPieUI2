@@ -1,6 +1,7 @@
 import demjson
 import os
 import zipfile
+import re
 
 # Get the current commit id
 commit_id = os.popen("git rev-parse HEAD").read().strip()
