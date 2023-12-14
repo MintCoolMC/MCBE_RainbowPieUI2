@@ -1,0 +1,8 @@
+{
+  "namespace": "screenshot",
+
+  "screenshot_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$screen_content": "rainbowpieui_screenshot.screenshot_screen_content"
+  }
+}
