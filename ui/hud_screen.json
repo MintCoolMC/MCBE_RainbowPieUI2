@@ -1,6 +1,45 @@
 {
   "namespace": "hud",
 
+  "root_panel/layout_customization_hint_drag_frame": {
+    "texture": "($rainbowpie_ui_path_home + '/r_white')",
+    "size": [ "100%c + 12px", "100%c + 5px" ],
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha"
+  },
+
+  "root_panel/layout_customization_hint_drag_frame/layout_customization_hint_drag": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
+  "root_panel/layout_customization_hint_deselect_frame": {
+    "texture": "($rainbowpie_ui_path_home + '/r_white')",
+    "size": [ "100%c + 12px", "100%c + 5px" ],
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha"
+  },
+
+  "root_panel/layout_customization_hint_deselect_frame/layout_customization_hint_deselect": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
+  "root_panel/layout_customization_hint_saved": {
+    "texture": "($rainbowpie_ui_path_home + '/r_white')",
+    "size": [ "100%c + 12px", "100%c + 5px" ],
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha"
+  },
+
+  "root_panel/layout_customization_hint_saved/layout_customization_hint_saved": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
   "layout_customization_main_panel_button/button": {
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
   },
