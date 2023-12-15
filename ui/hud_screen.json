@@ -95,6 +95,7 @@
             "rainbowpie_background@mintui_background.background_fullscreen": {
               "ignored": false,
               "visible": false,
+              "layer": -100,
               "bindings": [
                 {
                   "binding_name": "#layout_customization_main_panel_visible",
