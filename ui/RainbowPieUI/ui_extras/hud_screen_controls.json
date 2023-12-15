@@ -13,6 +13,7 @@
       {
         "hotbar_hidehud_button@rainbowpieui_hud.borderless_button": {
           "ignored": "(($rainbowpie_ui_flag_hud_hotbar_mode = '0') or $rainbowpie_ui_flag_hud_hidehud_clickspace)",
+          "enabled": true,
           "$pressed_button_name": "button.hide_gui_all",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
@@ -25,6 +26,16 @@
                 "alpha": 0.5,
                 "layer": 10
               }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#layout_customization_main_panel_visible"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not #layout_customization_main_panel_visible)",
+              "target_property_name": "#enabled"
             }
           ]
         }
