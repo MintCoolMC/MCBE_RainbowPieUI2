@@ -1,6 +1,23 @@
 {
   "namespace": "hud",
 
+  "root_panel/layout_customization_close_without_saving/layout_customization_close_without_saving_modal": {
+    "ignored": true
+  },
+
+  "root_panel/layout_customization_close_without_saving": {
+    "alpha": 0.3,
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "rainbowpie_layout_customization_close_without_saving@rainbowpieui_hud.layout_customization_close_without_saving": {} }
+        ]
+      }
+    ]
+  },
+
   "root_panel/layout_customization_reset/layout_customization_reset_modal": {
     "ignored": true
   },
