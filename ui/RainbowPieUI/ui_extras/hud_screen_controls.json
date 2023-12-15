@@ -15,14 +15,14 @@
       {
         "dialog_panel@rainbowpie_ui_dialog.dialog_panel": {
           "$rainbowpie_localui_dialogheader_title": "rainbowpie.ui.dialog.title_default",
-          "$rainbowpie_localui_dialog_content": "rainbowpieui_hud.dialog_content",
+          "$rainbowpie_localui_dialog_content": "rainbowpieui_hud.layout_customization_reset_modal_dialog_content",
           "$rainbowpie_localui_dialog_show_background": false
         }
       }
     ]
   },
 
-  "dialog_content": {
+  "layout_customization_reset_modal_dialog_content": {
     "type": "panel",
     "size": [ "100%", "100%" ],
     "controls": [
@@ -36,9 +36,12 @@
                 "size": [ "100%", "fill" ],
                 "controls": [
                   {
-                    "text@popup_dialog.modal_label_panel": {
+                    "text@rainbowpie_ui_common.text_label_notheme": {
+                      "size": [ "100%", "100%" ],
                       "anchor_from": "top_middle",
-                      "anchor_to": "top_middle"
+                      "anchor_to": "top_middle",
+                      "color": "$rainbowpie_ui_theme_dialog_content_color",
+                      "text": "hudScreen.controlCustomization.resetModalText"
                     }
                   }
                 ]
@@ -48,7 +51,6 @@
               "button_panel": {
                 "type": "panel",
                 "size": [ "100%", "100%c + 1px" ],
-                "ignored": "($rainbowpie_localui_popupdialog_button_panel = 'common.empty_panel')",
                 "controls": [
                   {
                     "button_panel": {
@@ -58,12 +60,32 @@
                       "size": [ "100% + 1px", "100%c" ],
                       "controls": [
                         {
-                          "button_panel@$rainbowpie_localui_popupdialog_button_panel": {
+                          "button_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
                             "$button_image_size": [ "100% - 1px", "100%" ],
                             "$rainbowpie_localui_button_default_alpha": "$rainbowpie_ui_theme_dialog_content_background_alpha",
                             "anchor_to": "top_middle",
                             "anchor_from": "top_middle",
-                            "size": [ "100%", 23 ]
+                            "size": [ "100%", 23 ],
+                            "controls": [
+                              {
+                                "reset_modal_ok@common_buttons.light_text_button": {
+                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                                  "$pressed_button_name": "button.confirm_reset",
+                                  "$button_text": "hudScreen.controlCustomization.resetConfirm",
+                                  "size": [ "fill", "100%" ]
+                                }
+                              },
+                              {
+                                "reset_modal_cancel@common_buttons.light_text_button": {
+                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                                  "$pressed_button_name": "button.cancel_reset",
+                                  "$button_text": "hudScreen.controlCustomization.resetCancel",
+                                  "size": [ "fill", "100%" ]
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
