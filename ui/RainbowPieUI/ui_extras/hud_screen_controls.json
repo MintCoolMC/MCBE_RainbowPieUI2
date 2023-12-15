@@ -226,6 +226,11 @@
               "binding_type": "view",
               "source_property_name": "(not #layout_customization_main_panel_visible)",
               "target_property_name": "#enabled"
+            },
+            {
+              "binding_name": "#inventory_touch_button",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
             }
           ]
         }
@@ -1165,6 +1170,11 @@
               "binding_type": "view",
               "source_property_name": "(not #layout_customization_main_panel_visible)",
               "target_property_name": "#enabled"
+            },
+            {
+              "binding_name": "#inventory_touch_button",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
             }
           ]
         }
