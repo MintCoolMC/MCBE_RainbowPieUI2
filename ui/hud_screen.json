@@ -1,6 +1,16 @@
 {
   "namespace": "hud",
 
+  "layout_customization_main_panel_button/button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
+  },
+
+  "layout_customization_main_panel/main_panel_frame": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha"
+  },
+
   "boss_name_panel/boss_name": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
@@ -80,7 +90,19 @@
         "array_name": "controls",
         "operation": "insert_front",
         "value": [
-          { "rainbowpie_root_panel@rainbowpieui_hud.rainbowpie_root_panel": {} }
+          { "rainbowpie_root_panel@rainbowpieui_hud.rainbowpie_root_panel": {} },
+          {
+            "rainbowpie_background@mintui_background.background_fullscreen": {
+              "ignored": false,
+              "visible": false,
+              "bindings": [
+                {
+                  "binding_name": "#layout_customization_main_panel_visible",
+                  "binding_name_override": "#visible"
+                }
+              ]
+            }
+          }
         ]
       }
     ]
