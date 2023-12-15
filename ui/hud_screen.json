@@ -1,6 +1,23 @@
 {
   "namespace": "hud",
 
+  "root_panel/layout_customization_reset/layout_customization_reset_modal": {
+    "ignored": true
+  },
+
+  "root_panel/layout_customization_reset": {
+    "alpha": 0.3,
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "rainbowpie_layout_customization_reset_modal@rainbowpieui_hud.layout_customization_reset_modal": {} }
+        ]
+      }
+    ]
+  },
+
   "layout_customization_option_content/apply_to_all_toggle/caption_frame/caption": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
