@@ -16,7 +16,8 @@
         "dialog_panel@rainbowpie_ui_dialog.dialog_panel": {
           "$rainbowpie_localui_dialogheader_title": "rainbowpie.ui.dialog.title_default",
           "$rainbowpie_localui_dialog_content": "rainbowpieui_hud.layout_customization_reset_modal_dialog_content",
-          "$rainbowpie_localui_dialog_show_background": false
+          "$rainbowpie_localui_dialog_show_background": false,
+          "$close_button_to_button_id": "button.cancel_reset"
         }
       }
     ]
