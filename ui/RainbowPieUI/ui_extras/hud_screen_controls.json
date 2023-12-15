@@ -37,9 +37,9 @@
                 "controls": [
                   {
                     "text@rainbowpie_ui_common.text_label_notheme": {
-                      "size": [ "100%", "100%" ],
-                      "anchor_from": "top_middle",
-                      "anchor_to": "top_middle",
+                      "size": [ "100% - 4px", "100% - 4px" ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
                       "color": "$rainbowpie_ui_theme_dialog_content_color",
                       "text": "hudScreen.controlCustomization.resetModalText"
                     }
