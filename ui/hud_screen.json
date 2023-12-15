@@ -1,6 +1,12 @@
 {
   "namespace": "hud",
 
+  "layout_customization_option_content/apply_to_all_toggle/caption_frame/caption": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
   "layout_customization_option_slider/slider": {
     "$rainbowpie_localui_sliderbar_enabled": true
   },
