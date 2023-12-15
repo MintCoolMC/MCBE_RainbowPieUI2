@@ -197,7 +197,7 @@
                       "anchor_to": "left_middle",
                       "size": [ "80% - 2px", 10 ],
                       "text_alignment": "left",
-                      "text": "($mintui_pack_name + ' ' + $rainbowpieui_branch_display_name + ' ' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_hotfix_version + '-' + $rainbowpieui_commit_id + ' | ' + $rainbowpie_localui_this_device_osc + ' - ' + $rainbowpie_localui_this_device_os + ' | ' + $rainbowpie_localui_this_control_mode)",
+                      "text": "($mintui_pack_name + ' ' + $rainbowpieui_branch_display_name + ' ' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version + ' ' + $rainbowpieui_branch_name + '/' + $rainbowpieui_commit_id + ' | ' + $rainbowpie_localui_this_device_osc + ' - ' + $rainbowpie_localui_this_device_os + ' | ' + $rainbowpie_localui_this_control_mode)",
                       "layer": 1,
                       "variables": [
                         {
