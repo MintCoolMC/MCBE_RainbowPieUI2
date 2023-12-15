@@ -1,6 +1,20 @@
 {
   "namespace": "hud",
 
+  "layout_customization_option_slider/slider": {
+    "$rainbowpie_localui_sliderbar_enabled": true
+  },
+
+  "layout_customization_sub_panel/background": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha"
+  },
+
+  "layout_customization_sub_panel": {
+    "visible": false
+  },
+
   "root_panel/layout_customization_hint_drag_frame": {
     "texture": "($rainbowpie_ui_path_home + '/r_white')",
     "size": [ "100%c + 12px", "100%c + 5px" ],
