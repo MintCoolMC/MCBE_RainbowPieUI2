@@ -90,20 +90,7 @@
         "array_name": "controls",
         "operation": "insert_front",
         "value": [
-          { "rainbowpie_root_panel@rainbowpieui_hud.rainbowpie_root_panel": {} },
-          {
-            "rainbowpie_background@mintui_background.background_fullscreen": {
-              "ignored": false,
-              "visible": false,
-              "layer": -100,
-              "bindings": [
-                {
-                  "binding_name": "#layout_customization_main_panel_visible",
-                  "binding_name_override": "#visible"
-                }
-              ]
-            }
-          }
+          { "rainbowpie_root_panel@rainbowpieui_hud.rainbowpie_root_panel": {} }
         ]
       }
     ]
@@ -122,7 +109,6 @@
   },
 
   "hud_screen": {
-    "render_only_when_topmost": "(not $desktop_screen)",
     "$use_loading_bars": false,
     "$rainbowpie_localui_screen_watermark": false,
     "$rainbowpie_localui_modified": true
