@@ -210,6 +210,17 @@
     ],
     "controls": [
       {
+        "title_01_anim@rainbowpie_ui_common.text_label": {
+          "text": "String Test"
+        }
+      },
+      {
+        "title_011_anim@rainbowpie_ui_common.text_label": {
+          "$var_1": "TEST STRING",
+          "text": "('This is a test string variable: %s, and this is end' * $var_1)"
+        }
+      },
+      {
         "title_1_anim@rainbowpie_ui_common.text_label": {
           "text": "UI Animation Test"
         }
