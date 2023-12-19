@@ -32,7 +32,9 @@
         "operation": "insert_front",
         "value": [
           {
-            "chest_fastpick@rainbowpie_module_chest_fastpick.chest_fastpick": {}
+            "chest_fastpick@rainbowpie_module_chest_fastpick.chest_fastpick": {
+              "$large_chest": true
+            }
           },
           {
             "inventory_header@rainbowpie_ui_inventory.header": {

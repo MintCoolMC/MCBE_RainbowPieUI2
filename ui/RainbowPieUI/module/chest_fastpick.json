@@ -15,20 +15,536 @@
     "color": "$text_color"
   },
 
+  "slot_item": {
+    "type": "panel",  
+    "size": [ "100%", 0 ],
+    "controls": [
+      {
+        "input_panel": {
+          "type": "input_panel",
+          "size": [ "100%", "100%x" ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "consume_hover_events": false,
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "$item_collection_name"
+            },
+            {
+              "binding_name": "#item_id_aux",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#item_id_aux = -1))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.container_auto_place",
+              "mapping_type": "pressed",
+              "consume_event": false
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.container_auto_place",
+              "mapping_type": "focused",
+              "consume_event": false
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "pickup_input_panel": {
+    "type": "stack_panel",
+    "collection_name": "container_items",
+    "$item_collection_name": "container_items",
+    "$large_chest|default": false,
+    "controls": [
+      {
+        "container_slot_0@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 0
+        }
+      },
+      {
+        "container_slot_1@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 1
+        }
+      },
+      {
+        "container_slot_2@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 2
+        }
+      },
+      {
+        "container_slot_3@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 3
+        }
+      },
+      {
+        "container_slot_4@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 4
+        }
+      },
+      {
+        "container_slot_5@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 5
+        }
+      },
+      {
+        "container_slot_6@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 6
+        }
+      },
+      {
+        "container_slot_7@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 7
+        }
+      },
+      {
+        "container_slot_8@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 8
+        }
+      },
+      {
+        "container_slot_9@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 9
+        }
+      },
+      {
+        "container_slot_10@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 10
+        }
+      },
+      {
+        "container_slot_11@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 11
+        }
+      },
+      {
+        "container_slot_12@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 12
+        }
+      },
+      {
+        "container_slot_13@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 13
+        }
+      },
+      {
+        "container_slot_14@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 14
+        }
+      },
+      {
+        "container_slot_15@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 15
+        }
+      },
+      {
+        "container_slot_16@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 16
+        }
+      },
+      {
+        "container_slot_17@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 17
+        }
+      },
+      {
+        "container_slot_18@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 18
+        }
+      },
+      {
+        "container_slot_19@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 19
+        }
+      },
+      {
+        "container_slot_20@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 20
+        }
+      },
+      {
+        "container_slot_21@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 21
+        }
+      },
+      {
+        "container_slot_22@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 22
+        }
+      },
+      {
+        "container_slot_23@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 23
+        }
+      },
+      {
+        "container_slot_24@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 24
+        }
+      },
+      {
+        "container_slot_25@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 25
+        }
+      },
+      {
+        "container_slot_26@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 26
+        }
+      },
+      {
+        "container_slot_27@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 27
+        }
+      },
+      {
+        "container_slot_28@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 28
+        }
+      },
+      {
+        "container_slot_29@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 29
+        }
+      },
+      {
+        "container_slot_30@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 30
+        }
+      },
+      {
+        "container_slot_31@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 31
+        }
+      },
+      {
+        "container_slot_32@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 32
+        }
+      },
+      {
+        "container_slot_33@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 33
+        }
+      },
+      {
+        "container_slot_34@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 34
+        }
+      },
+      {
+        "container_slot_35@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 35
+        }
+      },
+      {
+        "container_slot_36@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 36
+        }
+      },
+      {
+        "container_slot_37@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 37
+        }
+      },
+      {
+        "container_slot_38@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 38
+        }
+      },
+      {
+        "container_slot_39@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 39
+        }
+      },
+      {
+        "container_slot_40@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 40
+        }
+      },
+      {
+        "container_slot_41@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 41
+        }
+      },
+      {
+        "container_slot_42@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 42
+        }
+      },
+      {
+        "container_slot_43@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 43
+        }
+      },
+      {
+        "container_slot_44@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 44
+        }
+      },
+      {
+        "container_slot_45@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 45
+        }
+      },
+      {
+        "container_slot_46@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 46
+        }
+      },
+      {
+        "container_slot_47@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 47
+        }
+      },
+      {
+        "container_slot_48@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 48
+        }
+      },
+      {
+        "container_slot_49@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 49
+        }
+      },
+      {
+        "container_slot_50@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 50
+        }
+      },
+      {
+        "container_slot_51@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 51
+        }
+      },
+      {
+        "container_slot_52@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 52
+        }
+      },
+      {
+        "container_slot_53@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "(not $large_chest)",
+          "collection_index": 53
+        }
+      }
+    ]
+  },
+
+  "putin_input_panel": {
+    "type": "stack_panel",
+    "collection_name": "inventory_items",
+    "$item_collection_name": "inventory_items",
+    "controls": [
+      {
+        "inventory_slot_0@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 0
+        }
+      },
+      {
+        "inventory_slot_1@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 1
+        }
+      },
+      {
+        "inventory_slot_2@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 2
+        }
+      },
+      {
+        "inventory_slot_3@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 3
+        }
+      },
+      {
+        "inventory_slot_4@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 4
+        }
+      },
+      {
+        "inventory_slot_5@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 5
+        }
+      },
+      {
+        "inventory_slot_6@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 6
+        }
+      },
+      {
+        "inventory_slot_7@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 7
+        }
+      },
+      {
+        "inventory_slot_8@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 8
+        }
+      },
+      {
+        "inventory_slot_9@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 9
+        }
+      },
+      {
+        "inventory_slot_10@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 10
+        }
+      },
+      {
+        "inventory_slot_11@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 11
+        }
+      },
+      {
+        "inventory_slot_12@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 12
+        }
+      },
+      {
+        "inventory_slot_13@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 13
+        }
+      },
+      {
+        "inventory_slot_14@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 14
+        }
+      },
+      {
+        "inventory_slot_15@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 15
+        }
+      },
+      {
+        "inventory_slot_16@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 16
+        }
+      },
+      {
+        "inventory_slot_17@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 17
+        }
+      },
+      {
+        "inventory_slot_18@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 18
+        }
+      },
+      {
+        "inventory_slot_19@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 19
+        }
+      },
+      {
+        "inventory_slot_20@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 20
+        }
+      },
+      {
+        "inventory_slot_21@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 21
+        }
+      },
+      {
+        "inventory_slot_22@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 22
+        }
+      },
+      {
+        "inventory_slot_23@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 23
+        }
+      },
+      {
+        "inventory_slot_24@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 24
+        }
+      },
+      {
+        "inventory_slot_25@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 25
+        }
+      },
+      {
+        "inventory_slot_26@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 26
+        }
+      }
+    ]
+  },
+
   "chest_fastpick": {
     "type": "panel",
     "ignored": "(not $rainbowpie_ui_module_chest_fastpick)",
     "controls": [
+      {
+        "putin_input_panel@rainbowpie_module_chest_fastpick.putin_input_panel": {
+          "size": [ 22, 22 ],
+          "offset": [ 20, -26 ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "layer": 50
+        }
+      },
+      {
+        "pickup_input_panel@rainbowpie_module_chest_fastpick.pickup_input_panel": {
+          "size": [ 22, 22 ],
+          "offset": [ 20, -2 ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "layer": 50
+        }
+      },
       {
         "putin_button@common_buttons.light_content_button": {
           "$button_image_size": [ "100%", "100%" ],
           "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
           "$pressed_button_name": "rainbowpie.chestputin",
           "$button_content": "rainbowpie_module_chest_fastpick.putin_icon",
+          "consume_hover_events": false,
           "size": [ 22, 22 ],
           "offset": [ 20, -26 ],
           "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right"
+          "anchor_to": "bottom_right",
+          "layer": 48
         }
       },
       {
@@ -37,10 +553,12 @@
           "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
           "$pressed_button_name": "rainbowpie.chestpickup",
           "$button_content": "rainbowpie_module_chest_fastpick.pickup_icon",
+          "consume_hover_events": false,
           "size": [ 22, 22 ],
           "offset": [ 20, -2 ],
           "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right"
+          "anchor_to": "bottom_right",
+          "layer": 48
         }
       }
     ]
