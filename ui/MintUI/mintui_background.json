@@ -45,13 +45,25 @@
         }
       },
       {
+        "image_noise": {
+          "ignored": "(not $rainbowpie_ui_flag_a3a3e4ee)",
+          "type": "image",
+          "tiled": true,
+          "tiled_scale": [ 0.05, 0.05 ],
+          "alpha": 0.05,
+          "size": [ "100%", "100%" ],
+          "texture": "textures/MintUI/background/background_noise",
+          "layer": 2
+        }
+      },
+      {
         "image_mask": {
           "type": "image",
           "visible": "($background_mask and $rainbowpie_ui_flag_bg_mask)",
           "fill": true,
           "size": [ "100%", "100%" ],
           "texture": "$rainbowpie_ui_theme_background_mask_texture",
-          "layer": 2
+          "layer": 3
         }
       }
     ]
