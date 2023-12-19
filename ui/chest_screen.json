@@ -32,6 +32,9 @@
         "operation": "insert_front",
         "value": [
           {
+            "chest_fastpick@rainbowpie_module_chest_fastpick.chest_fastpick": {}
+          },
+          {
             "inventory_header@rainbowpie_ui_inventory.header": {
               "$rainbowpie_localui_inventoryheader_title": "$container_title"
             }
@@ -70,6 +73,9 @@
         "array_name": "controls",
         "operation": "insert_front",
         "value": [
+          {
+            "chest_fastpick@rainbowpie_module_chest_fastpick.chest_fastpick": {}
+          },
           {
             "inventory_header@rainbowpie_ui_inventory.header": {
               "$rainbowpie_localui_inventoryheader_title": "$container_title"

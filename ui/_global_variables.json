@@ -137,7 +137,8 @@
   "$rainbowpie_ui_feature_musicplayer": true,
   "$rainbowpie_ui_feature_command_chat": true,
 
-  // Rainbow Pie UI Modules
+  // Rainbow Pie UI Internal Modules
+  "$rainbowpie_ui_module_chest_fastpick": true,
   "$rainbowpie_ui_module_hud_block_counter": false,
   "$rainbowpie_ui_module_hud_bow_helper": true,
   "$rainbowpie_ui_module_hud_selected_item_id": false,

@@ -1,0 +1,48 @@
+{
+  "namespace": "rainbowpie_module_chest_fastpick",
+
+  "pickup_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/chest_pickup')",
+    "color": "$text_color"
+  },
+
+  "putin_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/chest_putin')",
+    "color": "$text_color"
+  },
+
+  "chest_fastpick": {
+    "type": "panel",
+    "ignored": "(not $rainbowpie_ui_module_chest_fastpick)",
+    "controls": [
+      {
+        "putin_button@common_buttons.light_content_button": {
+          "$button_image_size": [ "100%", "100%" ],
+          "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+          "$pressed_button_name": "rainbowpie.chestputin",
+          "$button_content": "rainbowpie_module_chest_fastpick.putin_icon",
+          "size": [ 22, 22 ],
+          "offset": [ 20, -26 ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right"
+        }
+      },
+      {
+        "pickup_button@common_buttons.light_content_button": {
+          "$button_image_size": [ "100%", "100%" ],
+          "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+          "$pressed_button_name": "rainbowpie.chestpickup",
+          "$button_content": "rainbowpie_module_chest_fastpick.pickup_icon",
+          "size": [ 22, 22 ],
+          "offset": [ 20, -2 ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right"
+        }
+      }
+    ]
+  }
+}

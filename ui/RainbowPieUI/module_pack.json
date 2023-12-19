@@ -4,6 +4,20 @@
   "module_list@rainbowpie_ui_module_list.module_list_panel": {
     "controls": [
       {
+        "chest_fastpick@rainbowpie_ui_module_list.module_item": {
+          "$module_icon_texture": "($rainbowpie_ui_path_home + '/icon/module')",
+          "$module_name": "Chest Fastpickup",
+          "$module_version": "1.0",
+          "$module_author": "MintCoolMC",
+          "$module_description": "Quickly pick items from chest",
+          "$module_state_check": "$rainbowpie_ui_module_chest_fastpick",
+          "$module_max_engine_version": "999999",
+          "$module_max_engine_patch_version": "999999",
+          "$module_min_engine_version": "0",
+          "$module_min_engine_patch_version": "0"
+        }
+      },
+      {
         "hud_block_counter@rainbowpie_ui_module_list.module_item": {
           "$module_icon_texture": "($rainbowpie_ui_path_home + '/module/hud_block_counter')",
           "$module_name": "HUD Block Counter",

@@ -13,6 +13,7 @@
     "ui/RainbowPieUI/common/rainbowpie_ui_toggle.json",
     // Removeable Module
     // 在这里移除即可，不要删除文件
+    "ui/RainbowPieUI/module/chest_fastpick.json",
     "ui/RainbowPieUI/module/hud_block_counter.json",
     "ui/RainbowPieUI/module/hud_bow_helper.json",
     "ui/RainbowPieUI/module/hud_selected_item_id.json",
