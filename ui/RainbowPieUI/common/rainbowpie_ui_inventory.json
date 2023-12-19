@@ -17,9 +17,9 @@
   "live_player_renderer": {
     "type": "panel",
     "size": [ 40, 40 ],
-    "offset": [ "100%x", -10 ],
-    "anchor_to": "right_middle",
-    "anchor_from": "right_middle",
+    "offset": [ "-100%x", -16 ],
+    "anchor_to": "left_middle",
+    "anchor_from": "left_middle",
     "controls": [
       {
         "live_player": {
