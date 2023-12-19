@@ -1,6 +1,9 @@
 {
   "namespace": "common",
 
+  "button": {
+  },
+
   "empty_progress_bar": {
     "texture": "textures/ui/White",
     "alpha": 0.5
