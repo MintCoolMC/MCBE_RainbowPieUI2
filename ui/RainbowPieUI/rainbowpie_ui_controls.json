@@ -72,8 +72,6 @@
     "visible": "$rainbowpie_ui_feature_background_blur",
     "$BlurLayer|default": 10,
     "layer": "$BlurLayer",
-    "$background_blur|default": "$rainbowpie_ui_theme_background_blur_texture",
-    "$background_normal|default": "$rainbowpie_ui_theme_background_texture",
     "controls": [
       {
         "blur_layer@mintui_background.background_blur": {
