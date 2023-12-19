@@ -191,9 +191,10 @@
             },
             {
               "image_noise": {
-                "ignored": true,
+                "ignored": "(not $rainbowpie_ui_flag_a3a3e4ee)",
                 "type": "image",
                 "tiled": true,
+                "tiled_scale": [ 0.05, 0.05 ],
                 "alpha": 0.05,
                 "size": "$background_children_size",
                 "offset": "$background_children_offset",
