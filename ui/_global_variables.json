@@ -163,6 +163,7 @@
   // Theme Background //
   "$rainbowpie_ui_theme_background_mask_texture_ingame": "textures/MintUI/background/background_mask",
   "$rainbowpie_ui_theme_background_mask_texture": "", // 如需使用请添加，默认不使用。default: "textures/MintUI/background/background_mask"
+  "$rainbowpie_ui_theme_background_noise_texture": "textures/MintUI/background/background_noise",
   "$rainbowpie_ui_theme_background_blur_texture": "textures/MintUI/background/background_blur",
   "$rainbowpie_ui_theme_background_texture": "textures/MintUI/background/background",
 

@@ -52,7 +52,7 @@
           "tiled_scale": [ 0.05, 0.05 ],
           "alpha": 0.05,
           "size": [ "100%", "100%" ],
-          "texture": "textures/MintUI/background/background_noise",
+          "texture": "$rainbowpie_ui_theme_background_noise_texture",
           "layer": 2
         }
       },
@@ -212,7 +212,7 @@
                 "offset": "$background_children_offset",
                 "anchor_from": "$background_children_anchor",
                 "anchor_to": "$background_children_anchor",
-                "texture": "textures/MintUI/background/background_noise",
+                "texture": "$rainbowpie_ui_theme_background_noise_texture",
                 "layer": "($background_layer + 2)",
                 "animation_reset_name": "$background_children_anim_reset",
                 "anims": "$background_children_anims"
