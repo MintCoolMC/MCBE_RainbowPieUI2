@@ -35,11 +35,11 @@
   },
 
   "highlight_slot_panel/highlight/hover_text": {
-    "ignored": "($rainbowpie_ui_flag_inventory_debug)"
+    "ignored": "($rainbowpie_ui_flag_inventory_debug or $rainbowpie_ui_flag_86c54726)"
   },
 
   "highlight_slot_panel/highlight/bundle_tooltip": {
-    "ignored": "($rainbowpie_ui_flag_inventory_debug)"
+    "ignored": "($rainbowpie_ui_flag_inventory_debug or $rainbowpie_ui_flag_86c54726)"
   },
 
   "pocket_hotbar_panel/bg": {
@@ -130,8 +130,63 @@
         "operation": "insert_front",
         "value": [
           {
+            "custom_hover_text": {
+              "type": "button",
+              "ignored": "(not $rainbowpie_ui_flag_86c54726)",
+              "visible": false,
+              "allow_clipping": false,
+              "consume_hover_events": false,
+              "follows_cursor": "(not $touch)",
+              "always_handle_pointer": "(not $touch)",
+              "focus_enabled": false,
+              "hover_control": "hover_text",
+              "controls": [
+                {
+                  "hover_text": {
+                    "type": "image",
+                    "texture": "($rainbowpie_ui_path_home + '/r_black')",
+                    "size": [ "100%c + 8px", "100%c + 5px" ],
+                    "offset": [ 20, 0 ],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "layer": 200,
+                    "alpha": 0.8,
+                    "controls": [
+                      {
+                        "hover_text_label@rainbowpie_ui_common.text_label_notheme": {
+                          "size": [ "default", "default" ],
+                          "text": "#text",
+                          "bindings": [
+                            {
+                              "binding_name": "#hover_text",
+                              "binding_name_override": "#text",
+                              "binding_type": "collection",
+                              "binding_collection_name": "$item_collection_name"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "bindings": [
+                {
+                  "binding_name": "#item_id_aux",
+                  "binding_type": "collection",
+                  "binding_collection_name": "$item_collection_name"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(not (#item_id_aux = -1))",
+                  "target_property_name": "#visible"
+                }
+              ]
+            }
+          },
+          {
             "hover_text_debug@common.hover_text": {
-              "ignored": "(not $rainbowpie_ui_flag_inventory_debug)",
+              "ignored": "((not $rainbowpie_ui_flag_inventory_debug) or $rainbowpie_ui_flag_86c54726)",
               "layer": 29,
               "$hover_text_binding_name|default": "#hover_text",
               "bindings": [
