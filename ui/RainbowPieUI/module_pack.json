@@ -6,7 +6,7 @@
       {
         "chest_fastpick@rainbowpie_ui_module_list.module_item": {
           "$module_icon_texture": "($rainbowpie_ui_path_home + '/icon/module')",
-          "$module_name": "Chest Fastpickup",
+          "$module_name": "Chest Fast Pickup",
           "$module_version": "1.0",
           "$module_author": "MintCoolMC",
           "$module_description": "Quickly pick items from chest",
