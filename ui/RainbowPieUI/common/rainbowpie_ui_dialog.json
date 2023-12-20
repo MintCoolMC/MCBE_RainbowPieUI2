@@ -116,7 +116,7 @@
                 "controls": [
                   {
                     "close_button@rainbowpie_ui_common.close_button": {
-                      "$rainbowpie_ui_theme_closebutton_default_color": "$rainbowpie_ui_theme_inventory_header_title_color",
+                      "$rainbowpie_ui_theme_closebutton_default_color": "$rainbowpie_ui_theme_dialog_title_color",
                       "$close_button_panel_size": [ "100%", "100%" ],
                       "layer": 10,
                       "size": [ "100%", "100%" ],
