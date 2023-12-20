@@ -50,7 +50,7 @@
           "type": "image",
           "tiled": true,
           "tiled_scale": [ 0.05, 0.05 ],
-          "alpha": 0.05,
+          "alpha": 0.02,
           "size": [ "100%", "100%" ],
           "texture": "$rainbowpie_ui_theme_background_noise_texture",
           "layer": 2
@@ -196,7 +196,7 @@
                 "anchor_from": "$background_children_anchor",
                 "anchor_to": "$background_children_anchor",
                 "texture": "$rainbowpie_ui_theme_background_mask_texture",
-                "layer": "($background_layer + 2)",
+                "layer": "($background_layer + 3)",
                 "animation_reset_name": "$background_children_anim_reset",
                 "anims": "$background_children_anims"
               }
@@ -207,7 +207,7 @@
                 "type": "image",
                 "tiled": true,
                 "tiled_scale": [ 0.05, 0.05 ],
-                "alpha": 0.05,
+                "alpha": 0.02,
                 "size": "$background_children_size",
                 "offset": "$background_children_offset",
                 "anchor_from": "$background_children_anchor",
@@ -263,6 +263,23 @@
                 "anchor_from": "$background_children_anchor",
                 "anchor_to": "$background_children_anchor",
                 "texture": "$rainbowpie_ui_theme_background_mask_texture_ingame",
+                "layer": "($background_layer + 3)",
+                "animation_reset_name": "$background_children_anim_reset",
+                "anims": "$background_children_anims"
+              }
+            },
+            {
+              "image_noise": {
+                "ignored": "((not $rainbowpie_ui_flag_a3a3e4ee) or (not $rainbowpie_ui_flag_1dc354bd))",
+                "type": "image",
+                "tiled": true,
+                "tiled_scale": [ 0.05, 0.05 ],
+                "alpha": 0.02,
+                "size": "$background_children_size",
+                "offset": "$background_children_offset",
+                "anchor_from": "$background_children_anchor",
+                "anchor_to": "$background_children_anchor",
+                "texture": "$rainbowpie_ui_theme_background_noise_texture",
                 "layer": "($background_layer + 2)",
                 "animation_reset_name": "$background_children_anim_reset",
                 "anims": "$background_children_anims"

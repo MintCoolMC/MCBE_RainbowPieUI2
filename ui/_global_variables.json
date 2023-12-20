@@ -105,6 +105,7 @@
   "$rainbowpie_ui_flag_d36e5f2a": true, // InGame dialog background
   "$rainbowpie_ui_flag_86c54726": true, // Custom HoverText
   "$rainbowpie_ui_flag_a3a3e4ee": true, // Background Noise
+  "$rainbowpie_ui_flag_1dc354bd": false, // InGame Background Noise
 
   // Debug
   "$rainbowpie_ui_debug": false,
