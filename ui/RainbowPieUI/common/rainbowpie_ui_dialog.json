@@ -83,7 +83,7 @@
                                 "title_label@rainbowpie_ui_common.text_label_notheme": {
                                   "anchor_to": "center",
                                   "anchor_from": "center",
-                                  "color": "$rainbowpie_ui_theme_inventory_header_title_color",
+                                  "color": "$rainbowpie_ui_theme_dialog_title_color",
                                   "text": "$rainbowpie_localui_dialogheader_title",
                                   "layer": 10,
                                   "bindings": "$rainbowpie_localui_dialogheader_title_bindings"
