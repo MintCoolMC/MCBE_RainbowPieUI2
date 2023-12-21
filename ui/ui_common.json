@@ -2,16 +2,13 @@
   "namespace": "common",
 
   "durability_bar": {
-    "$durability_bar_size|default": [ 14, 2 ],
+    "$durability_bar_size|default": [ 14, 1.5 ],
     "$durability_bar_offset|default": [ 0, 6 ],
     "property_bag": {
       "drop_shadow": false,
       "is_durability": true,
       "round_value": true
     }
-  },
-
-  "button": {
   },
 
   "empty_progress_bar": {
