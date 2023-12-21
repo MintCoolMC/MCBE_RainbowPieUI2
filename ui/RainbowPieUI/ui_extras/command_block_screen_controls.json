@@ -50,7 +50,8 @@
     ]
   },
 
-  "maximized_input_dialog_button@rainbowpie_ui_dialog.header_background": {
+  "maximized_input_dialog_button": {
+    "type": "panel",
     "size": [ "100%c", "100%" ],
     "controls": [
       {

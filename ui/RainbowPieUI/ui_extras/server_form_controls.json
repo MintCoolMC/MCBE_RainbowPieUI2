@@ -158,7 +158,8 @@
     "size": [ 225, 200 ]
   },
 
-  "custom_form_dialog_button@rainbowpie_ui_dialog.header_background": {
+  "custom_form_dialog_button": {
+    "type": "panel",
     "size": [ "100%c", "100%" ],
     "controls": [
       {

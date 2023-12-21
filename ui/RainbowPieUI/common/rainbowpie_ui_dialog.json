@@ -85,7 +85,8 @@
                           "title_panel": {
                             "type": "panel",
                             "size": [ "100%c", "100%" ],
-                            "max_size": [ "100% - 100%y", "100%" ],
+                            "max_size": [ "100% - 100%y - 8px", "100%" ],
+                            "clips_children": true,
                             "controls": [
                               {
                                 "title_label@rainbowpie_ui_common.text_label_notheme": {
@@ -110,15 +111,8 @@
                         {
                           "header_button_panel": {
                             "type": "panel",
-                            "size": "$header_button_panel_size",
+                            "size": [ "fill", "100%" ],
                             "min_size": [ "100%c", "100%" ],
-                            "$header_button_panel_size": [ "100%c", "100%" ],
-                            "variables": [
-                              {
-                                "requires": "$rainbowpie_ui_flag_3f247b1e",
-                                "$header_button_panel_size": [ "fill", "100%" ]
-                              }
-                            ],
                             "controls": [
                               {
                                 "header_stack_panel": {
@@ -134,7 +128,8 @@
                                       }
                                     },
                                     {
-                                      "button_background@rainbowpie_ui_dialog.header_background": {
+                                      "button_background": {
+                                        "type": "panel",
                                         "visible": "$rainbowpie_localui_dialogheader_show_close",
                                         "size": [ "100%y", "100%" ],
                                         "controls": [
