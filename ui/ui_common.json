@@ -154,13 +154,14 @@
                 {
                   "hover_text": {
                     "type": "image",
-                    "texture": "($rainbowpie_ui_path_home + '/r_black')",
+                    "texture": "($rainbowpie_ui_path_home + '/r_white')",
                     "size": [ "100%c + 8px", "100%c + 5px" ],
                     "offset": [ 20, 0 ],
                     "anchor_from": "top_left",
                     "anchor_to": "top_left",
                     "layer": 200,
-                    "alpha": 0.8,
+                    "color": "$rainbowpie_ui_theme_hovertext_background_color",
+                    "alpha": "$rainbowpie_ui_theme_hovertext_background_alpha",
                     "controls": [
                       {
                         "hover_text_controls": {

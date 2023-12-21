@@ -156,7 +156,7 @@
   "$rainbowpie_ui_moduleflag_hud_bow_helper_arrowids": "aux19922944,aux19922950,aux19922951,aux19922952,aux19922953,aux19922954,aux19922955,aux19922956,aux19922957,aux19922958,aux19922959,aux19922960,aux19922961,aux19922962,aux19922963,aux19922964,aux19922965,aux19922966,aux19922967,aux19922968,aux19922969,aux19922970,aux19922971,aux19922972,aux19922973,aux19922974,aux19922975,aux19922976,aux19922977,aux19922978,aux19922979,aux19922980,aux19922981,aux19922982,aux19922983,aux19922984,aux19922985,aux19922986,aux19922987,",
 
   // Theme System //
-  "$rainbowpie_ui_themesystem_version": "1070",
+  "$rainbowpie_ui_themesystem_version": "1080",
 
   // Theme Info //
   "$rainbowpie_ui_theme_icon": "textures/MintUI/pack_icon",
@@ -164,7 +164,7 @@
   "$rainbowpie_ui_theme_author": "rainbowpie.ui.theme.default_auther",
   "$rainbowpie_ui_theme_desc": "rainbowpie.ui.theme.default_description",
   "$rainbowpie_ui_theme_description": "rainbowpie.ui.theme.default_description",
-  "$rainbowpie_ui_theme_version": "1070",
+  "$rainbowpie_ui_theme_version": "1080",
 
   // Theme Background //
   "$rainbowpie_ui_theme_background_mask_texture_ingame": "textures/MintUI/background/background_mask",
@@ -181,6 +181,11 @@
   "$rainbowpie_ui_theme_global_background_alpha": 0.3,
   "$rainbowpie_ui_theme_global_font_name": "OldSmoothFont",
   "$rainbowpie_ui_theme_global_font_backup_name": "default",
+
+  // Theme HoverText Variables //
+  "$rainbowpie_ui_theme_hovertext_background_color": [ 0.011, 0.011, 0.011 ],
+  "$rainbowpie_ui_theme_hovertext_background_alpha": 0.8,
+  "$rainbowpie_ui_theme_hovertext_text_color": [ 1.0, 1.0, 1.0 ],
 
   // Theme HUD Item Name Variables //
   "$rainbowpie_ui_theme_hud_itemname_background_color": [ 0.011, 0.011, 0.011 ],
