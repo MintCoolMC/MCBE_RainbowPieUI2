@@ -336,9 +336,9 @@
           "type": "button",
           "ignored": "(not $rainbowpie_ui_flag_86c54726)",
           "allow_clipping": false,
+          "follows_cursor": true,
+          "consume_event": false,
           "consume_hover_events": false,
-          "follows_cursor": "(not $touch)",
-          "always_handle_pointer": "(not $touch)",
           "focus_enabled": false,
           "hover_control": "hover_text",
           "controls": [
