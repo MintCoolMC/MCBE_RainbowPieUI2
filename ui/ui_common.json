@@ -144,10 +144,11 @@
               "type": "button",
               "ignored": "(not $rainbowpie_ui_flag_86c54726)",
               "visible": false,
+              "size": [ "100%", "100%" ],
               "allow_clipping": false,
-              "consume_hover_events": false,
               "follows_cursor": "(not $touch)",
               "always_handle_pointer": "(not $touch)",
+              "consume_hover_events": false,
               "focus_enabled": false,
               "hover_control": "hover_text",
               "controls": [
@@ -159,6 +160,7 @@
                     "offset": [ 20, 0 ],
                     "anchor_from": "top_left",
                     "anchor_to": "top_left",
+                    "allow_clipping": false,
                     "layer": 200,
                     "color": "$rainbowpie_ui_theme_hovertext_background_color",
                     "alpha": "$rainbowpie_ui_theme_hovertext_background_alpha",
@@ -172,6 +174,7 @@
                             {
                               "hover_text_label@rainbowpie_ui_common.text_label_notheme": {
                                 "size": [ "default", "default" ],
+                                "color": "$rainbowpie_ui_theme_hovertext_text_color",
                                 "text": "#text",
                                 "bindings": [
                                   {
