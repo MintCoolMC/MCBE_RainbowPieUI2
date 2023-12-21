@@ -1,6 +1,16 @@
 {
   "namespace": "common",
 
+  "durability_bar": {
+    "$durability_bar_size|default": [ 14, 2 ],
+    "$durability_bar_offset|default": [ 0, 6 ],
+    "property_bag": {
+      "drop_shadow": false,
+      "is_durability": true,
+      "round_value": true
+    }
+  },
+
   "button": {
   },
 
@@ -179,6 +189,7 @@
                               "hover_text_debug@rainbowpie_ui_common.text_label_notheme": {
                                 "ignored": "(not $rainbowpie_ui_flag_inventory_debug)",
                                 "size": [ "default", "default" ],
+                                "color": [ 0.0, 0.667, 0.667 ],
                                 "text": "#text",
                                 "bindings": [
                                   {
@@ -203,7 +214,12 @@
                                   },
                                   {
                                     "binding_type": "view",
-                                    "source_property_name": "('§7' + #item_id_aux_string + '\n' + #item_id_string)",
+                                    "source_property_name": "('item_id_aux(cb): ' + (#item_id * 65536))",
+                                    "target_property_name": "#item_id_aux_cb_string"
+                                  },
+                                  {
+                                    "binding_type": "view",
+                                    "source_property_name": "(#item_id_aux_string + '\n' + #item_id_string + '\n' + #item_id_aux_cb_string)",
                                     "target_property_name": "#text"
                                   }
                                 ]
