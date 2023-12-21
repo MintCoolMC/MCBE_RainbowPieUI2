@@ -1,6 +1,61 @@
 {
   "namespace": "cartography",
 
+  "cartography_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "maximized_input_dialog_panel@rainbowpieui_cartography.maximized_input_dialog_panel": {}
+          }
+        ]
+      }
+    ]
+  },
+
+  "text_box_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "maximized_input_button_panel": {
+              "type": "panel",
+              "size": [ "100%", 0 ],
+              "controls": [
+                {
+                  "maximized_input_button@rainbowpieui_cartography.maximized_input_toggle_base": {
+                    "$button_image_size": [ "100% - 1px", "100% - 1px" ],
+                    "anchor_from": "bottom_right",
+                    "anchor_to": "bottom_right",
+                    "size": [ "100%y", "20px" ],
+                    "$toggle_group_forced_index": 1000,
+                    "$toggle_view_binding_name": "maximized_input",
+                    "bindings": [
+                      {
+                        "binding_type": "view",
+                        "source_control_name": "maximized_input",
+                        "source_property_name": "(not #toggle_state)",
+                        "target_property_name": "#enabled"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "text_box_panel/text_edit_control": {
+    "size": [ "100% - 20px", 20 ]
+  },
+
   "arrow_icon": {
     "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/arrow')",
     "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
