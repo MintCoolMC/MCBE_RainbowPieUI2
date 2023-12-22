@@ -38,6 +38,7 @@
     "ui/RainbowPieUI/ui_extras/invite_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/manifest_validation_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/mob_effect_screen_controls.json",
+    "ui/RainbowPieUI/ui_extras/npc_interact_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/pack_settings_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/pause_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/permissions_screen_controls.json",

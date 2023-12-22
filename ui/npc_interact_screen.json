@@ -1,0 +1,81 @@
+{
+  "namespace": "npc_interact",
+
+  "npc_screen": {
+    "$rainbowpie_localui_modified": true,
+    "force_render_below": true,
+    "$screen_content": "rainbowpieui_npc_interact.npc_screen_contents",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ]
+  },
+
+  "basic_stack_panel/name_label": {
+    "color": "$rainbowpie_ui_theme_dialog_content_color",
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "basic_stack_panel/appearance_label": {
+    "color": "$rainbowpie_ui_theme_dialog_content_color",
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "npc_message/label": {
+    "color": "$rainbowpie_ui_theme_dialog_content_color",
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "student_message_bubble": {
+    "texture": ""
+  },
+
+  "student_message_section/point": {
+    "ignored": true
+  },
+
+  "message_model/model": {
+    "offset": [ 0, 15 ]
+  },
+
+  "message_model_window": {
+    "texture": ""
+  },
+
+  "student_button_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "student_button/button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+    "$button_content": "npc_interact.student_button_label_panel"
+  },
+  
+  "basic_stack_panel/dialog_label": {
+    "ignored": true
+  },
+
+  "basic_stack_panel/dialog_post_padding": {
+    "ignored": true
+  },
+
+  "basic_stack_panel/dialog__padding": {
+    "ignored": true
+  },
+
+  "basic_stack_panel/dialog_button": {
+    "ignored": true
+  }
+}
