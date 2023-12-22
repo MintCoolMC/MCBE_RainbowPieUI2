@@ -52,9 +52,9 @@ rainbowpie.ui.resource_packs.tab.selected_packs=已选择
 rainbowpie.ui.resource_packs.tab.available_packs=可用的
 rainbowpie.ui.resource_packs.search.placeholder.resource=搜索资源包
 rainbowpie.ui.resource_packs.search.placeholder.behavior=搜索行为包
-rainbowpie.ui.resource_packs.tag.module=[Module]
+rainbowpie.ui.resource_packs.tag.module=[模块]
 rainbowpie.ui.resource_packs.tag.package=[Package]
-rainbowpie.ui.resource_packs.tag.theme=[Theme]
+rainbowpie.ui.resource_packs.tag.theme=[主题]
 
 rainbowpie.ui.toast.gamepad_connected=控制器已连接！
 
