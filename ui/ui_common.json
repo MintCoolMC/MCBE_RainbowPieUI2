@@ -186,6 +186,84 @@
                               }
                             },
                             {
+                              "durability_panel": {
+                                "type": "stack_panel",
+                                "orientation": "horizontal",
+                                "size": [ "100%c", "100%cm" ],
+                                "ignored": "(not $rainbowpie_ui_feature_inventory_durability)",
+                                "controls": [
+                                  {
+                                    "hover_text_durability_title@rainbowpie_ui_common.text_label_notheme": {
+                                      "size": [ "default", "default" ],
+                                      "color": [ 0.0, 0.667, 0 ],
+                                      "text": "rainbowpie.ui.inventory.durability"
+                                    }
+                                  },
+                                  {
+                                    "padding": {
+                                      "type": "panel",
+                                      "size": [ 1, 0 ]
+                                    }
+                                  },
+                                  {
+                                    "hover_text_durability_value@rainbowpie_ui_common.text_label_notheme": {
+                                      "size": [ "default", "default" ],
+                                      "color": [ 0.0, 0.667, 0 ],
+                                      "text": "#text",
+                                      "property_bag": {
+                                        "#amount_current": 0,
+                                        "#amount_total": 0
+                                      },
+                                      "bindings": [
+                                        {
+                                          "binding_name": "#item_durability_total_amount",
+                                          "binding_type": "collection",
+                                          "binding_collection_name": "$item_collection_name"
+                                        },
+                                        {
+                                          "binding_name": "#item_durability_current_amount",
+                                          "binding_type": "collection",
+                                          "binding_collection_name": "$item_collection_name"
+                                        },
+                                        {
+                                          "binding_type": "view",
+                                          "source_property_name": "(((#amount_current>#item_durability_current_amount)*-1+1)*((#amount_current<#item_durability_current_amount)*1+#amount_current))",
+                                          "target_property_name": "#amount_current"
+                                        },
+                                        {
+                                          "binding_type": "view",
+                                          "source_property_name": "(((#amount_total>#item_durability_total_amount)*-1+1)*((#amount_total<#item_durability_total_amount)*1+#amount_total))",
+                                          "target_property_name": "#amount_total"
+                                        },
+                                        {
+                                          "binding_type": "view",
+                                          "source_property_name": "('§2' + #amount_current + '/' + #amount_total)",
+                                          "target_property_name": "#text"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                "bindings": [
+                                  {
+                                    "binding_name": "#item_durability_total_amount",
+                                    "binding_type": "collection",
+                                    "binding_collection_name": "$item_collection_name"
+                                  },
+                                  {
+                                    "binding_name": "#item_durability_current_amount",
+                                    "binding_type": "collection",
+                                    "binding_collection_name": "$item_collection_name"
+                                  },
+                                  {
+                                    "binding_type": "view",
+                                    "source_property_name": "(not ((#item_durability_current_amount = 0) and (#item_durability_total_amount = 0)))",
+                                    "target_property_name": "#visible"
+                                  }
+                                ]
+                              }
+                            },
+                            {
                               "hover_text_debug@rainbowpie_ui_common.text_label_notheme": {
                                 "ignored": "(not $rainbowpie_ui_flag_inventory_debug)",
                                 "size": [ "default", "default" ],

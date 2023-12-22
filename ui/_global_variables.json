@@ -145,6 +145,7 @@
   "$rainbowpie_ui_feature_gamepad_connect_tip": false, // 暂时没有做完
   "$rainbowpie_ui_feature_musicplayer": true,
   "$rainbowpie_ui_feature_command_chat": true,
+  "$rainbowpie_ui_feature_inventory_durability": true,
 
   // Rainbow Pie UI Internal Modules
   "$rainbowpie_ui_module_chest_fastpick": true,

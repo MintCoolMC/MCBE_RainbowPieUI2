@@ -13,6 +13,8 @@ rainbowpie.ui.themesystem.description.title=Description:
 rainbowpie.ui.themesystem.version_toolow=This theme version is too low! please update!
 rainbowpie.ui.themesystem.version_toohight=This theme version is too hight!
 
+rainbowpie.ui.inventory.durability=Durability:
+
 rainbowpie.ui.chest.fastpick.pickall=Pick all items from this chest
 rainbowpie.ui.chest.fastpick.putall=Place all items from the inventory intro this chest 
 

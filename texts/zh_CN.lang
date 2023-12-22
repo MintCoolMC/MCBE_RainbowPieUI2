@@ -13,6 +13,8 @@ rainbowpie.ui.themesystem.description.title=简介:	#
 rainbowpie.ui.themesystem.version_toolow=当前主题版本太低！请更新！	#
 rainbowpie.ui.themesystem.version_toohight=当前主题版本太高！	#
 
+rainbowpie.ui.inventory.durability=耐久:
+
 rainbowpie.ui.chest.fastpick.pickall=拿取箱子内全部物品
 rainbowpie.ui.chest.fastpick.putall=放入物品栏内全部物品
 
