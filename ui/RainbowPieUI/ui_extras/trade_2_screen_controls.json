@@ -127,18 +127,10 @@
     "visible": "$rainbowpie_ui_flag_inventory_debug",
     "controls": [
       {
-        "inventory_navigation_tab@rainbowpieui_trade2.top_tab": {
-          "size": [ "100%y", "100%" ],
-          "$tab_view_binding_name": "inventory_navigation_tab_toggle",
-          "$tab_text": "INV",
-          "$toggle_group_forced_index": 10
-        }
-      },
-      {
         "more_navigation_tab@rainbowpieui_trade2.top_tab": {
-          "size": [ "100%y", "100%" ],
+          "size": [ "200%y", "100%" ],
           "$tab_view_binding_name": "more_navigation_tab_toggle",
-          "$tab_text": "MORE",
+          "$tab_text": "MORE INFO",
           "$toggle_group_forced_index": 11
         }
       }
@@ -146,9 +138,12 @@
   },
 
   "top_tab@common_tabs.tab_top": {
+    "$rainbowpie_toggle_unchecked_default_alpha": 0.0,
+    "$rainbowpie_toggle_checked_default_alpha": 0.2,
+
     "$tab_panel": "rainbowpie_ui_tab.tab_panel",
     "$toggle_tts_enabled_binding_type": "global",
-    "$radio_toggle_group": true,
+    "$radio_toggle_group": false,
     "$toggle_name": "rainbowpieui_navigation_tab",
     "$toggle_group_default_selected": 10,
     "anchor_to": "top_left",

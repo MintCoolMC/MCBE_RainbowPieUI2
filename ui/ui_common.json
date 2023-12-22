@@ -190,7 +190,8 @@
                                 "type": "stack_panel",
                                 "orientation": "horizontal",
                                 "size": [ "100%c", "100%cm" ],
-                                "ignored": "(not $rainbowpie_ui_feature_inventory_durability)",
+                                "ignored": "((not $rainbowpie_ui_feature_inventory_durability) or (not $durability_bar_required))",
+                                "visible": false,
                                 "controls": [
                                   {
                                     "hover_text_durability_title@rainbowpie_ui_common.text_label_notheme": {
@@ -227,12 +228,12 @@
                                         },
                                         {
                                           "binding_type": "view",
-                                          "source_property_name": "(((#amount_current>#item_durability_current_amount)*-1+1)*((#amount_current<#item_durability_current_amount)*1+#amount_current))",
+                                          "source_property_name": "(((#amount_current > #item_durability_current_amount) * - 1 + 1) * ((#amount_current < #item_durability_current_amount) * 1 + #amount_current))",
                                           "target_property_name": "#amount_current"
                                         },
                                         {
                                           "binding_type": "view",
-                                          "source_property_name": "(((#amount_total>#item_durability_total_amount)*-1+1)*((#amount_total<#item_durability_total_amount)*1+#amount_total))",
+                                          "source_property_name": "(((#amount_total > #item_durability_total_amount) * - 1 + 1) * ((#amount_total < #item_durability_total_amount) * 1 + #amount_total))",
                                           "target_property_name": "#amount_total"
                                         },
                                         {
@@ -456,7 +457,7 @@
   "inventory_screen_common": {
     "$rainbowpie_localui_modified": true,
     "$rainbowpie_localui_inventory_screen": true,
-    "cache_screen": false,
+    "cache_screen": true,
     "force_render_below": "$desktop_screen",
     "$screen_animations|default": [
       "@rainbowpie_ui_animations.container_screen_exit_animation_push",
