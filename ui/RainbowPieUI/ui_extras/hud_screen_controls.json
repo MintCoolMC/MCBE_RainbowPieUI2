@@ -198,14 +198,112 @@
 
   "hotbar_items_durability_item": {
     "type": "panel",
+    "size": [ "100%c", "100%c" ],
+    "visible": false,
+    "controls": [
+      {
+        "tip_text_background": {
+          "type": "image",
+          "size": [ "100%c + 4px", "100%c + 4px" ],
+          "texture": "($rainbowpie_ui_path_home + '/r_white')",
+          "color": "$rainbowpie_ui_theme_text_background_color",
+          "alpha": "$rainbowpie_ui_theme_text_background_alpha",
+          "layer": 30,
+          "controls": [
+            {
+              "stack_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100%c", 12 ],
+                "controls": [
+                  {
+                    "item_renderer@rainbowpie_ui_common.item_renderer": {
+                      "size": [ "100%y", "100%" ],
+                      "bindings": [
+                        {
+                          "binding_name": "#item_id_aux",
+                          "binding_type": "collection",
+                          "binding_collection_name": "hotbar_items"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "padding_0": {
+                      "type": "panel",
+                      "size": [ 2, 2 ]
+                    }
+                  },
+                  {
+                    "selected_durability_text_panel": {
+                      "type": "panel",
+                      "size": [ "100%c", "100%" ],
+                      "controls": [
+                        {
+                          "stack_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%c", "100%cm" ],
+                            "controls": [
+                              {
+                                "durability_title@rainbowpie_ui_common.text_label": {
+                                  "text": "rainbowpie.ui.inventory.durability"
+                                }
+                              },
+                              {
+                                "padding": {
+                                  "type": "panel",
+                                  "size": [ 1, 0 ]
+                                }
+                              },
+                              {
+                                "durability_text@rainbowpie_ui_common.text_label": {
+                                  "text": "#text",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#item_durability_total_amount",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "hotbar_items"
+                                    },
+                                    {
+                                      "binding_name": "#item_durability_current_amount",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "hotbar_items"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "(((#amount_current>#item_durability_current_amount)*-1+1)*((#amount_current<#item_durability_current_amount)*1+#amount_current))",
+                                      "target_property_name": "#amount_current"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "(((#amount_total>#item_durability_total_amount)*-1+1)*((#amount_total<#item_durability_total_amount)*1+#amount_total))",
+                                      "target_property_name": "#amount_total"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "('§§' + #amount_current + '/' + #amount_total)",
+                                      "target_property_name": "#text"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
     "bindings": [
       {
         "binding_name": "#slot_selected",
-        "binding_type": "collection",
-        "binding_collection_name": "hotbar_items"
-      },
-      {
-        "binding_name": "#item_id_aux",
         "binding_type": "collection",
         "binding_collection_name": "hotbar_items"
       },
@@ -221,28 +319,8 @@
       },
       {
         "binding_type": "view",
-        "source_property_name": "(((#amount_current>#item_durability_current_amount)*-1+1)*((#amount_current<#item_durability_current_amount)*1+#amount_current))",
-        "target_property_name": "#amount_current"
-      },
-      {
-        "binding_type": "view",
-        "source_property_name": "(((#amount_total>#item_durability_total_amount)*-1+1)*((#amount_total<#item_durability_total_amount)*1+#amount_total))",
-        "target_property_name": "#amount_total"
-      },
-      {
-        "binding_type": "view",
-        "source_property_name": "(#amount_current * #slot_selected)",
-        "target_property_name": "#amount_current_output"
-      },
-      {
-        "binding_type": "view",
-        "source_property_name": "(#amount_total * #slot_selected)",
-        "target_property_name": "#amount_total_output"
-      },
-      {
-        "binding_type": "view",
-        "source_property_name": "(#item_id_aux * #slot_selected)",
-        "target_property_name": "#item_id_aux_output"
+        "source_property_name": "((not ((#item_durability_total_amount = 0) and (#item_durability_current_amount = 0))) and #slot_selected)",
+        "target_property_name": "#visible"
       }
     ]
   },
@@ -250,6 +328,10 @@
   "hotbar_items_durability": {
     "type": "stack_panel",
     "collection_name": "hotbar_items",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "size": [ "100%cm", "100%c" ],
+    "offset": [ -7, -6 ],
     "controls": [
       {
         "hotbar_items_durability_slot_0@rainbowpieui_hud.hotbar_items_durability_item": {
@@ -296,185 +378,6 @@
           "collection_index": 8
         }
       }
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_0",
-        "source_property_name": "#amount_current_output",
-        "target_property_name": "#amount_current_output_slot_0"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_1",
-        "source_property_name": "#amount_current_output",
-        "target_property_name": "#amount_current_output_slot_1"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_2",
-        "source_property_name": "#amount_current_output",
-        "target_property_name": "#amount_current_output_slot_2"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_3",
-        "source_property_name": "#amount_current_output",
-        "target_property_name": "#amount_current_output_slot_3"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_4",
-        "source_property_name": "#amount_current_output",
-        "target_property_name": "#amount_current_output_slot_4"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_5",
-        "source_property_name": "#amount_current_output",
-        "target_property_name": "#amount_current_output_slot_5"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_6",
-        "source_property_name": "#amount_current_output",
-        "target_property_name": "#amount_current_output_slot_6"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_7",
-        "source_property_name": "#amount_current_output",
-        "target_property_name": "#amount_current_output_slot_7"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_8",
-        "source_property_name": "#amount_current_output",
-        "target_property_name": "#amount_current_output_slot_8"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_0",
-        "source_property_name": "#amount_total_output",
-        "target_property_name": "#amount_total_output_slot_0"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_1",
-        "source_property_name": "#amount_total_output",
-        "target_property_name": "#amount_total_output_slot_1"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_2",
-        "source_property_name": "#amount_total_output",
-        "target_property_name": "#amount_total_output_slot_2"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_3",
-        "source_property_name": "#amount_total_output",
-        "target_property_name": "#amount_total_output_slot_3"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_4",
-        "source_property_name": "#amount_total_output",
-        "target_property_name": "#amount_total_output_slot_4"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_5",
-        "source_property_name": "#amount_total_output",
-        "target_property_name": "#amount_total_output_slot_5"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_6",
-        "source_property_name": "#amount_total_output",
-        "target_property_name": "#amount_total_output_slot_6"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_7",
-        "source_property_name": "#amount_total_output",
-        "target_property_name": "#amount_total_output_slot_7"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_8",
-        "source_property_name": "#amount_total_output",
-        "target_property_name": "#amount_total_output_slot_8"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_0",
-        "source_property_name": "#item_id_aux_output",
-        "target_property_name": "#item_id_aux_output_slot_0"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_1",
-        "source_property_name": "#item_id_aux_output",
-        "target_property_name": "#item_id_aux_output_slot_1"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_2",
-        "source_property_name": "#item_id_aux_output",
-        "target_property_name": "#item_id_aux_output_slot_2"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_3",
-        "source_property_name": "#item_id_aux_output",
-        "target_property_name": "#item_id_aux_output_slot_3"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_4",
-        "source_property_name": "#item_id_aux_output",
-        "target_property_name": "#item_id_aux_output_slot_4"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_5",
-        "source_property_name": "#item_id_aux_output",
-        "target_property_name": "#item_id_aux_output_slot_5"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_6",
-        "source_property_name": "#item_id_aux_output",
-        "target_property_name": "#item_id_aux_output_slot_6"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_7",
-        "source_property_name": "#item_id_aux_output",
-        "target_property_name": "#item_id_aux_output_slot_7"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "hotbar_items_durability_slot_8",
-        "source_property_name": "#item_id_aux_output",
-        "target_property_name": "#item_id_aux_output_slot_8"
-      },
-      {
-        "binding_type": "view",
-        "source_property_name": "(#amount_current_output_slot_0 + #amount_current_output_slot_1 + #amount_current_output_slot_2 + #amount_current_output_slot_3 + #amount_current_output_slot_4 + #amount_current_output_slot_5 + #amount_current_output_slot_6 + #amount_current_output_slot_7 + #amount_current_output_slot_8)",
-        "target_property_name": "#selected_item_amount_current"
-      },
-      {
-        "binding_type": "view",
-        "source_property_name": "(#amount_total_output_slot_0 + #amount_total_output_slot_1 + #amount_total_output_slot_2 + #amount_total_output_slot_3 + #amount_total_output_slot_4 + #amount_total_output_slot_5 + #amount_total_output_slot_6 + #amount_total_output_slot_7 + #amount_total_output_slot_8)",
-        "target_property_name": "#selected_item_amount_total"
-      },
-      {
-        "binding_type": "view",
-        "source_property_name": "(#item_id_aux_output_slot_0 + #item_id_aux_output_slot_1 + #item_id_aux_output_slot_2 + #item_id_aux_output_slot_3 + #item_id_aux_output_slot_4 + #item_id_aux_output_slot_5 + #item_id_aux_output_slot_6 + #item_id_aux_output_slot_7 + #item_id_aux_output_slot_8)",
-        "target_property_name": "#selected_item_aux_id"
-      }
     ]
   },
 
@@ -484,129 +387,6 @@
     "controls": [
       {
         "hotbar_items_durability@rainbowpieui_hud.hotbar_items_durability": {}
-      },
-      {
-        "durability_panel": {
-          "type": "panel",
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "size": [ "100%c", "100%c" ],
-          "offset": [ -6, -6 ],
-          "visible": false,
-          "controls": [
-            {
-              "tip_text_background": {
-                "type": "image",
-                "size": [ "100%c + 4px", "100%c + 4px" ],
-                "texture": "($rainbowpie_ui_path_home + '/r_white')",
-                "color": "$rainbowpie_ui_theme_text_background_color",
-                "alpha": "$rainbowpie_ui_theme_text_background_alpha",
-                "layer": 30,
-                "controls": [
-                  {
-                    "stack_panel": {
-                      "type": "stack_panel",
-                      "orientation": "horizontal",
-                      "size": [ "100%c", 12 ],
-                      "controls": [
-                        {
-                          "item_renderer@rainbowpie_ui_common.item_renderer": {
-                            "size": [ "100%y", "100%" ],
-                            "bindings": [
-                              {
-                                "binding_type": "view",
-                                "source_control_name": "hotbar_items_durability",
-                                "source_property_name": "#selected_item_aux_id",
-                                "target_property_name": "#item_id_aux"
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "padding_0": {
-                            "type": "panel",
-                            "size": [ 2, 2 ]
-                          }
-                        },
-                        {
-                          "selected_durability_text_panel": {
-                            "type": "panel",
-                            "size": [ "100%c", "100%" ],
-                            "controls": [
-                              {
-                                "stack_panel": {
-                                  "type": "stack_panel",
-                                  "orientation": "horizontal",
-                                  "size": [ "100%c", "100%cm" ],
-                                  "controls": [
-                                    {
-                                      "durability_title@rainbowpie_ui_common.text_label": {
-                                        "text": "rainbowpie.ui.inventory.durability"
-                                      }
-                                    },
-                                    {
-                                      "padding": {
-                                        "type": "panel",
-                                        "size": [ 1, 0 ]
-                                      }
-                                    },
-                                    {
-                                      "durability_text@rainbowpie_ui_common.text_label": {
-                                        "text": "#text",
-                                        "bindings": [
-                                          {
-                                            "binding_type": "view",
-                                            "source_control_name": "hotbar_items_durability",
-                                            "source_property_name": "#selected_item_amount_current",
-                                            "target_property_name": "#selected_item_amount_current"
-                                          },
-                                          {
-                                            "binding_type": "view",
-                                            "source_control_name": "hotbar_items_durability",
-                                            "source_property_name": "#selected_item_amount_total",
-                                            "target_property_name": "#selected_item_amount_total"
-                                          },
-                                          {
-                                            "binding_type": "view",
-                                            "source_property_name": "('§§' + #selected_item_amount_current + '/' + #selected_item_amount_total)",
-                                            "target_property_name": "#text"
-                                          }
-                                        ]
-                                      }
-                                    }
-                                  ]
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "hotbar_items_durability",
-              "source_property_name": "#selected_item_amount_current",
-              "target_property_name": "#selected_item_amount_current"
-            },
-            {
-              "binding_type": "view",
-              "source_control_name": "hotbar_items_durability",
-              "source_property_name": "#selected_item_amount_total",
-              "target_property_name": "#selected_item_amount_total"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#selected_item_amount_current = 0) and (#selected_item_amount_total = 0)))",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
       }
     ]
   },
