@@ -113,7 +113,7 @@
   "$rainbowpie_ui_flag_1dc354bd": false, // InGame Background Noise
   "$rainbowpie_ui_flag_3f247b1e": false, // Dialog Title Center
   "$rainbowpie_ui_flag_3f611894": false, // Inventory Title Center
-  "$rainbowpie_ui_flag_fc1ae899": true, // HUD Durability
+  "$rainbowpie_ui_flag_fc1ae899": false, // HUD Durability
 
   // Debug
   "$rainbowpie_ui_debug": false,
