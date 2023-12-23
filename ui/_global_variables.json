@@ -83,6 +83,8 @@
   "$rainbowpie_ui_flag_dialog_ingame_oqaque": false,
   "$rainbowpie_ui_flag_inventory_oqaque": false,
 
+  "$rainbowpie_ui_flag_chat_use_ui_font": true,
+
   "$rainbowpie_ui_flag_start_dialog_alert": true,
   "$rainbowpie_ui_flag_start_dialog_alert_title": "Rainbow Pie UI Insider Preview",
   "$rainbowpie_ui_flag_start_dialog_alert_text": "You are using an CI version of Rainbow Pie UI,\nIf you find any bugs please send to my email:\n§esunshine@20percent.cool",

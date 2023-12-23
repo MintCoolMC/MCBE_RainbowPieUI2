@@ -1184,6 +1184,12 @@
     "anims": [
       "@hud.anim_chat_txt_wait"
     ],
+    "variables": [
+      {
+        "requires": "($rainbowpie_ui_flag_chat_use_ui_font and ($chat_font_type = 'default'))",
+        "$chat_font_type": "$rainbowpie_ui_theme_global_font_name"
+      }
+    ],
     "bindings": [
       {
         "binding_name": "#chat_text",

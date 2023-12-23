@@ -81,7 +81,20 @@
   "messages_text/text": {
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "anims": ["@rainbowpieui_chat.chat_message_panel_animation"]
+    "anims": ["@rainbowpieui_chat.chat_message_panel_animation"],
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "modifications": [
+      {
+        "array_name": "variables",
+        "operation": "insert_front",
+        "value": [
+          {
+            "requires": "($rainbowpie_ui_flag_chat_use_ui_font and ($chat_font_type = 'default'))",
+            "$chat_font_type": "$rainbowpie_ui_theme_global_font_name"
+          }
+        ]
+      }
+    ]
   },
 
   "messages_scrolling_panel": {
