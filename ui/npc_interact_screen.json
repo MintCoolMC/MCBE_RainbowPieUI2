@@ -33,6 +33,7 @@
 
   "npc_message/label": {
     "color": "$rainbowpie_ui_theme_dialog_content_color",
+    "locked_color": "$rainbowpie_ui_theme_dialog_content_color",
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
