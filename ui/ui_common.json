@@ -1,6 +1,13 @@
 {
   "namespace": "common",
 
+  "slot_selected": {
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_inventory_cell_highlight_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_highlight_alpha"
+  },
+
   "durability_bar": {
     "$durability_bar_size|default": [ 14, 1.5 ],
     "$durability_bar_offset|default": [ 0, 6 ],
