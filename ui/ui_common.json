@@ -143,6 +143,13 @@
     "alpha": "$rainbowpie_ui_theme_inventory_cell_highlight_alpha",
     "modifications": [
       {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name_override": "#visible"
+        }
+      },
+      {
         "array_name": "controls",
         "operation": "insert_front",
         "value": [
