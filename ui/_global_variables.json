@@ -109,7 +109,7 @@
   "$rainbowpie_ui_flag_ca81cc28": true, // Trade2 Result Item Name Panel
   "$rainbowpie_ui_flag_aa8421c9": true,
   "$rainbowpie_ui_flag_e9c6dfdb": true, // Storage management Tab
-  "$rainbowpie_ui_flag_d36e5f2a": true, // InGame dialog background
+  "$rainbowpie_ui_flag_d36e5f2a": false, // InGame dialog background
   "$rainbowpie_ui_flag_86c54726": true, // Custom HoverText
   "$rainbowpie_ui_flag_a3a3e4ee": true, // Background Noise
   "$rainbowpie_ui_flag_1dc354bd": false, // InGame Background Noise
