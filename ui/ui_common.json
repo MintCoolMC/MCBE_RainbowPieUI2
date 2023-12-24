@@ -1,6 +1,10 @@
 {
   "namespace": "common",
 
+  "selected_item_details_factory": {
+    "ignored": true
+  },
+
   "slot_selected": {
     "size": [ "100%", "100%" ],
     "texture": "textures/ui/White",
