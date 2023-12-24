@@ -30,7 +30,9 @@ mcversion = data.get("$rainbowpieui_version_minecraft_target")
 writeGlobalVarStr("rainbowpieui_full_version_name",version+"."+branch)
 
 # Create the zip file name
-zip_file_name = f"{name}-v{version}.{branch}_{mcversion}.mcpack"
+zip_file_name = f"{name}-v{version}.{branch}-{commit_id}.mcpack"
+if data.get("$rainbowpieui_branch_type") == "release":
+  zip_file_name = f"{name}_{mcversion}.mcpack" 
 
 # Run the zip command
 os.system(f"zip -r \"{zip_file_name}\" . -x '.github/*' -x '.git/*' -x 'zipmcproject.py' -x 'README.md'")
