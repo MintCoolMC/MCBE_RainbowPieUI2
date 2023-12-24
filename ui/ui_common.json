@@ -158,15 +158,24 @@
               "type": "button",
               "ignored": "(not $rainbowpie_ui_flag_86c54726)",
               "visible": false,
-              "enabled": "(not $touch)",
+              "enabled": false,//"(not $touch)",
               "size": [ "100%", "100%" ],
               "allow_clipping": false,
               "follows_cursor": true,
               "consume_event": false,
               "consume_hover_events": false,
               "focus_enabled": false,
-              "hover_control": "hover_text",
-              "locked_control": "hover_text",
+              "hover_control": "$hover_control",
+              "locked_control": "$locked_control",
+              "$hover_control": "hover_text",
+              "$locked_control": "",
+              "variables": [
+                {
+                  "requires": "$touch",
+                  "$hover_control": "",
+                  "$locked_control": "hover_text"
+                }
+              ],
               "controls": [
                 {
                   "hover_text": {
