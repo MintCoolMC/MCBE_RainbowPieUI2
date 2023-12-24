@@ -116,6 +116,7 @@
   "$rainbowpie_ui_flag_3f247b1e": false, // Dialog Title Center
   "$rainbowpie_ui_flag_3f611894": false, // Inventory Title Center
   "$rainbowpie_ui_flag_fc1ae899": true, // HUD Durability
+  "$rainbowpie_ui_flag_9ce040c1": true, // Inventory Durability Panel
 
   // Debug
   "$rainbowpie_ui_debug": false,
