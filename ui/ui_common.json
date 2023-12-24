@@ -158,7 +158,7 @@
               "type": "button",
               "ignored": "(not $rainbowpie_ui_flag_86c54726)",
               "visible": false,
-              "enabled": false,//"(not $touch)",
+              "enabled": "(not $touch)",
               "size": [ "100%", "100%" ],
               "allow_clipping": false,
               "follows_cursor": true,
