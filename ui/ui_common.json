@@ -161,7 +161,7 @@
               "enabled": "(not $touch)",
               "size": [ "100%", "100%" ],
               "allow_clipping": false,
-              "follows_cursor": true,
+              "follows_cursor": "(not $touch)",
               "consume_event": false,
               "consume_hover_events": false,
               "focus_enabled": false,

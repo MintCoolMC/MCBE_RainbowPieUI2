@@ -337,7 +337,7 @@
           "ignored": "(not $rainbowpie_ui_flag_86c54726)",
           "enabled": "(not $touch)",
           "allow_clipping": false,
-          "follows_cursor": true,
+          "follows_cursor": "(not $touch)",
           "consume_event": false,
           "consume_hover_events": false,
           "focus_enabled": false,
