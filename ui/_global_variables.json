@@ -92,7 +92,7 @@
   "$rainbowpie_ui_flag_start_dialog_alert_button": "gui.ok",
   
   // Unnamed Flags
-  "$rainbowpie_ui_flag_71042f58": true, // Disable background on selector
+  "$rainbowpie_ui_flag_71042f58": false, // Disable background on selector
   "$rainbowpie_ui_flag_54edd49d": true, // Resource Packs Tab Mode
   "$rainbowpie_ui_flag_840d1a5c": true, // Resource Packs Hide More
   "$rainbowpie_ui_flag_8dcce82d": false, // New start
