@@ -834,6 +834,7 @@
       "@common.screen_entrance_animation_push_fade",
       "@common.screen_entrance_animation_pop_fade"
     ],
+    "$rainbowpie_localui_screen_alias|default": "",
     "modifications": [
       {
         "array_name": "controls",
@@ -1445,6 +1446,27 @@
           {
             "requires": "$touch",
             "$rainbowpie_ui_flag_8dcce82d": false
+          },
+          // Force use Rainbow Pie UI style server_form
+          {
+            "requires": "($rainbowpie_ui_flag_server_form_force and ((('%.12s' * $screen_content) = 'server_form.') or ($rainbowpie_localui_screen_alias = 'server_form')))",
+            "$screen_content": "rainbowpieui_server_form.main_screen_content",
+            "$screen_animations": [
+              "@common.screen_exit_animation_push_offset",
+              "@common.screen_exit_animation_pop_offset",
+              "@common.screen_entrance_animation_push_offset",
+              "@common.screen_entrance_animation_pop_offset",
+              "@common.screen_exit_animation_push_fade",
+              "@common.screen_exit_animation_pop_fade",
+              "@common.screen_entrance_animation_push_fade",
+              "@common.screen_entrance_animation_pop_fade"
+            ],
+            "$background_animations": [
+              "@common.screen_exit_animation_push_alpha",
+              "@common.screen_exit_animation_pop_alpha",
+              "@common.screen_entrance_animation_push_alpha",
+              "@common.screen_entrance_animation_pop_alpha"
+            ]
           }
         ]
       }
