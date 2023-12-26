@@ -84,6 +84,7 @@
   "$rainbowpie_ui_flag_inventory_oqaque": false,
 
   "$rainbowpie_ui_flag_chat_use_ui_font": true,
+  "$rainbowpie_ui_flag_server_form_force": false,
 
   "$rainbowpie_ui_flag_start_dialog_alert": false,
   "$rainbowpie_ui_flag_start_dialog_alert_title": "",
@@ -91,7 +92,7 @@
   "$rainbowpie_ui_flag_start_dialog_alert_button": "gui.ok",
   
   // Unnamed Flags
-  "$rainbowpie_ui_flag_71042f58": true, // Disable background on selector
+  "$rainbowpie_ui_flag_71042f58": false, // Disable background on selector
   "$rainbowpie_ui_flag_54edd49d": true, // Resource Packs Tab Mode
   "$rainbowpie_ui_flag_840d1a5c": true, // Resource Packs Hide More
   "$rainbowpie_ui_flag_8dcce82d": false, // New start
@@ -116,6 +117,7 @@
   "$rainbowpie_ui_flag_3f247b1e": false, // Dialog Title Center
   "$rainbowpie_ui_flag_3f611894": false, // Inventory Title Center
   "$rainbowpie_ui_flag_fc1ae899": true, // HUD Durability
+  "$rainbowpie_ui_flag_9ce040c1": true, // Inventory Durability Panel
 
   // Debug
   "$rainbowpie_ui_debug": false,

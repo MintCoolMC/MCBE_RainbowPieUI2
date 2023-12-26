@@ -1,6 +1,10 @@
 {
   "namespace": "common",
 
+  "selected_item_details_factory": {
+    "ignored": true
+  },
+
   "slot_selected": {
     "size": [ "100%", "100%" ],
     "texture": "textures/ui/White",
@@ -143,6 +147,13 @@
     "alpha": "$rainbowpie_ui_theme_inventory_cell_highlight_alpha",
     "modifications": [
       {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name_override": "#visible"
+        }
+      },
+      {
         "array_name": "controls",
         "operation": "insert_front",
         "value": [
@@ -151,13 +162,24 @@
               "type": "button",
               "ignored": "(not $rainbowpie_ui_flag_86c54726)",
               "visible": false,
+              "enabled": "(not $touch)",
               "size": [ "100%", "100%" ],
               "allow_clipping": false,
-              "follows_cursor": true,
+              "follows_cursor": "(not $touch)",
               "consume_event": false,
               "consume_hover_events": false,
               "focus_enabled": false,
-              "hover_control": "hover_text",
+              "hover_control": "$hover_control",
+              "locked_control": "$locked_control",
+              "$hover_control": "hover_text",
+              "$locked_control": "",
+              "variables": [
+                {
+                  "requires": "$touch",
+                  "$hover_control": "",
+                  "$locked_control": "hover_text"
+                }
+              ],
               "controls": [
                 {
                   "hover_text": {
@@ -812,6 +834,7 @@
       "@common.screen_entrance_animation_push_fade",
       "@common.screen_entrance_animation_pop_fade"
     ],
+    "$rainbowpie_localui_screen_alias|default": "",
     "modifications": [
       {
         "array_name": "controls",
@@ -1423,6 +1446,27 @@
           {
             "requires": "$touch",
             "$rainbowpie_ui_flag_8dcce82d": false
+          },
+          // Force use Rainbow Pie UI style server_form
+          {
+            "requires": "($rainbowpie_ui_flag_server_form_force and ((('%.12s' * $screen_content) = 'server_form.') or ($rainbowpie_localui_screen_alias = 'server_form')))",
+            "$screen_content": "rainbowpieui_server_form.main_screen_content",
+            "$screen_animations": [
+              "@common.screen_exit_animation_push_offset",
+              "@common.screen_exit_animation_pop_offset",
+              "@common.screen_entrance_animation_push_offset",
+              "@common.screen_entrance_animation_pop_offset",
+              "@common.screen_exit_animation_push_fade",
+              "@common.screen_exit_animation_pop_fade",
+              "@common.screen_entrance_animation_push_fade",
+              "@common.screen_entrance_animation_pop_fade"
+            ],
+            "$background_animations": [
+              "@common.screen_exit_animation_push_alpha",
+              "@common.screen_exit_animation_pop_alpha",
+              "@common.screen_entrance_animation_push_alpha",
+              "@common.screen_entrance_animation_pop_alpha"
+            ]
           }
         ]
       }

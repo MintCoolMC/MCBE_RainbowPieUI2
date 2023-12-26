@@ -1807,7 +1807,8 @@
       {
         "from_button_id": "button.scoreboard",
         "to_button_id": "button.scoreboard",
-        "mapping_type": "global"
+        "mapping_type": "global",
+        "consume_event": false
       }
     ],
     "controls": [

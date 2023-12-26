@@ -1,6 +1,18 @@
 {
   "namespace": "crafting",
 
+  "survival_panel_top_half": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "armor_durability_panel@rainbowpieui_crafting.armor_durability_panel": {} }
+        ]
+      }
+    ]
+  },
+
   "work_bench_panel_3x3/inventory_label": {
     "offset": [ -21, 74 ]
   },
