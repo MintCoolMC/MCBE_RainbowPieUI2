@@ -1449,10 +1449,10 @@
             "$rainbowpie_ui_feature_background_mask": false,
             "$rainbowpie_ui_feature_background_blur": false
           },
-          // 对触摸屏禁用新开始界面（暂）
           {
             "requires": "$touch",
-            "$rainbowpie_ui_flag_8dcce82d": false
+            "$rainbowpie_ui_flag_8dcce82d": false,
+            "$rainbowpie_ui_flag_86c54726": false
           },
           // Force use Rainbow Pie UI style server_form
           {
