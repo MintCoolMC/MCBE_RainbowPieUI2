@@ -56,7 +56,33 @@
   },
 
   "highlight_slot_panel/highlight/hover_text": {
-    "ignored": "($rainbowpie_ui_flag_inventory_debug or $rainbowpie_ui_flag_86c54726)"
+    "ignored": "($rainbowpie_ui_flag_inventory_debug or $rainbowpie_ui_flag_86c54726)",
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_back",
+        "value": [
+          {
+            "binding_name": "#item_durability_total_amount",
+            "binding_type": "collection",
+            "binding_collection_name": "$item_collection_name",
+            "ignored": "((not $rainbowpie_ui_feature_inventory_durability) or (not $durability_bar_required))"
+          },
+          {
+            "binding_name": "#item_durability_current_amount",
+            "binding_type": "collection",
+            "binding_collection_name": "$item_collection_name",
+            "ignored": "((not $rainbowpie_ui_feature_inventory_durability) or (not $durability_bar_required))"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "((#item_durability_current_amount = 0) and (#item_durability_total_amount = 0))",
+            "target_property_name": "#visible",
+            "ignored": "((not $rainbowpie_ui_feature_inventory_durability) or (not $durability_bar_required))"
+          }
+        ]
+      }
+    ]
   },
 
   "highlight_slot_panel/highlight/bundle_tooltip": {
@@ -361,6 +387,56 @@
                 {
                   "binding_type": "view",
                   "source_property_name": "((not (#item_id_aux = -1)) and (not (#hover_text = '')))",
+                  "target_property_name": "#visible"
+                }
+              ]
+            }
+          },
+          {
+            "hover_text_with_durability@common.hover_text": {
+              "ignored": "(($rainbowpie_ui_flag_inventory_debug) or $rainbowpie_ui_flag_86c54726 or (not $rainbowpie_ui_feature_inventory_durability) or (not $durability_bar_required))",
+              "layer": 29,
+              "$hover_text_binding_name|default": "#hover_text",
+              "bindings": [
+                {
+                  "binding_name": "$hover_text_binding_name",
+                  "binding_name_override": "#hover_text_str",
+                  "binding_type": "collection",
+                  "binding_collection_name": "$item_collection_name"
+                },
+                {
+                  "binding_name": "#item_durability_total_amount",
+                  "binding_type": "collection",
+                  "binding_collection_name": "$item_collection_name"
+                },
+                {
+                  "binding_name": "#item_durability_current_amount",
+                  "binding_type": "collection",
+                  "binding_collection_name": "$item_collection_name"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(((#amount_current > #item_durability_current_amount) * - 1 + 1) * ((#amount_current < #item_durability_current_amount) * 1 + #amount_current))",
+                  "target_property_name": "#amount_current"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(((#amount_total > #item_durability_total_amount) * - 1 + 1) * ((#amount_total < #item_durability_total_amount) * 1 + #amount_total))",
+                  "target_property_name": "#amount_total"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "('\n§2Durability: ' + #amount_current + '/' + #amount_total)",
+                  "target_property_name": "#durability_text"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(#hover_text_str + #durability_text)",
+                  "target_property_name": "#hover_text"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(not ((#item_durability_current_amount = 0) and (#item_durability_total_amount = 0)))",
                   "target_property_name": "#visible"
                 }
               ]
