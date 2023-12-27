@@ -426,12 +426,7 @@
                 },
                 {
                   "binding_type": "view",
-                  "source_property_name": "('\n§2Durability: ' + #amount_current + '/' + #amount_total)",
-                  "target_property_name": "#durability_text"
-                },
-                {
-                  "binding_type": "view",
-                  "source_property_name": "(#hover_text_str + #durability_text)",
+                  "source_property_name": "(#hover_text_str + '\n§2Durability: ' + #amount_current + '/' + #amount_total)",
                   "target_property_name": "#hover_text"
                 },
                 {
