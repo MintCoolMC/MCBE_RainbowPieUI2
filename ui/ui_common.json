@@ -164,6 +164,7 @@
               "visible": false,
               "enabled": "(not $touch)",
               "size": [ "100%", "100%" ],
+              "always_handle_pointer": true,
               "allow_clipping": false,
               "follows_cursor": "(not $touch)",
               "consume_event": false,
@@ -186,12 +187,18 @@
                     "type": "image",
                     "texture": "($rainbowpie_ui_path_home + '/r_white')",
                     "size": [ "100%c + 8px", "100%c + 5px" ],
-                    "offset": [ 20, 0 ],
+                    "offset": "$offset",
+                    "$offset": [ 20, 0 ],
                     "anchor_from": "top_left",
                     "anchor_to": "top_left",
                     "layer": 200,
                     "color": "$rainbowpie_ui_theme_hovertext_background_color",
                     "alpha": "$rainbowpie_ui_theme_hovertext_background_alpha",
+                    "variables": [
+                      {
+                        "requires": "$touch"
+                      }
+                    ],
                     "controls": [
                       {
                         "hover_text_controls": {
