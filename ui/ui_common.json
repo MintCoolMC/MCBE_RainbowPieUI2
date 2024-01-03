@@ -85,10 +85,6 @@
     ]
   },
 
-  "highlight_slot_panel/highlight/bundle_tooltip": {
-    "ignored": "($rainbowpie_ui_flag_inventory_debug or $rainbowpie_ui_flag_86c54726)"
-  },
-
   "pocket_hotbar_panel/bg": {
     "ignored": true
   },
