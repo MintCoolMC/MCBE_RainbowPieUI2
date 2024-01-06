@@ -31,7 +31,7 @@
         "operation": "insert_front",
         "value": [
           {
-            "large_chest_root_panel@rainbowpie_ui_inventory_and_container.large_chest_root_panel": {
+            "large_chest_root_panel@rainbowpieui_chest.large_chest_root_panel": {
               "ignored": "(not $rainbowpie_ui_flag_84df7492)"
             }
           }
@@ -78,7 +78,7 @@
         "operation": "insert_front",
         "value": [
           {
-            "small_chest_root_panel@rainbowpie_ui_inventory_and_container.small_chest_root_panel": {
+            "small_chest_root_panel@rainbowpieui_chest.small_chest_root_panel": {
               "ignored": "(not $rainbowpie_ui_flag_84df7492)"
             }
           }
