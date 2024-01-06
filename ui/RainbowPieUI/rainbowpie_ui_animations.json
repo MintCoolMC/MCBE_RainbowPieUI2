@@ -4,8 +4,8 @@
   "container_panel_exit_animation_push": {
     "ignored": "(not $rainbowpie_ui_flag_84df7492)",
     "anim_type": "size",
-    "easing": "$rainbowpie_ui_animation_container_transition_effect_exit",
-    "duration": "$rainbowpie_ui_animation_container_transition_time",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
     "from": [ "100%", "100%" ],
     "to": [ "50%", "50%" ],
     "play_event": "screen.exit_push",
@@ -15,8 +15,8 @@
   "container_panel_exit_animation_pop": {
     "ignored": "(not $rainbowpie_ui_flag_84df7492)",
     "anim_type": "size",
-    "easing": "$rainbowpie_ui_animation_container_transition_effect_exit",
-    "duration": "$rainbowpie_ui_animation_container_transition_time",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
     "from": [ "100%", "100%" ],
     "to": [ "50%", "50%" ],
     "play_event": "screen.exit_pop",
@@ -26,8 +26,8 @@
   "container_panel_entrance_animation_push": {
     "ignored": "(not $rainbowpie_ui_flag_84df7492)",
     "anim_type": "size",
-    "easing": "$rainbowpie_ui_animation_container_transition_effect_entrance",
-    "duration": "$rainbowpie_ui_animation_container_transition_time",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
     "from": [ "50%", "50%" ],
     "to": [ "100%", "100%" ],
     "play_event": "screen.entrance_push",
@@ -37,8 +37,8 @@
   "container_panel_entrance_animation_pop": {
     "ignored": "(not $rainbowpie_ui_flag_84df7492)",
     "anim_type": "size",
-    "easing": "$rainbowpie_ui_animation_container_transition_effect_entrance",
-    "duration": "$rainbowpie_ui_animation_container_transition_time",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
     "from": [ "50%", "50%" ],
     "to": [ "100%", "100%" ],
     "play_event": "screen.entrance_pop",
