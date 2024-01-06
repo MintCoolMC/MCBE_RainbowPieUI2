@@ -24,6 +24,26 @@
     "size": [ "100% - 8px", "100% - 28px" ]
   },
 
+  "large_chest_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "large_chest_root_panel@rainbowpie_ui_inventory_and_container.large_chest_root_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "large_chest_panel/root_panel": {
+    "ignored": "$rainbowpie_ui_flag_84df7492"
+  },
+
   "large_chest_panel/root_panel/chest_panel": {
     "$background_images": "rainbowpie_ui_common.cell_image",
     "modifications": [
@@ -50,6 +70,26 @@
   },
 
   // small_chest_panel
+
+  "small_chest_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "small_chest_root_panel@rainbowpie_ui_inventory_and_container.small_chest_root_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "small_chest_panel/root_panel": {
+    "ignored": "$rainbowpie_ui_flag_84df7492"
+  },
 
   "small_chest_panel_top_half": {
     "offset": [ 0, 20 ]

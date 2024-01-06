@@ -27,6 +27,7 @@
     "ui/RainbowPieUI/ui_extras/book_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/cartography_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/chat_screen_controls.json",
+    "ui/RainbowPieUI/ui_extras/chest_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/command_block_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/content_log_history_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/disconnect_screen_controls.json",
@@ -67,6 +68,7 @@
     "ui/RainbowPieUI/module_pack.json",
     "ui/RainbowPieUI/rainbowpie_ui_animations.json",
     "ui/RainbowPieUI/rainbowpie_ui_controls.json",
+    "ui/RainbowPieUI/rainbowpie_ui_inventory_and_container.json",
     "ui/RainbowPieUI/rainbowpie_ui_module_list.json",
     "ui/RainbowPieUI/rainbowpie_ui_theme_preview.json",
     "ui/RainbowPieUI/verified_pack.json"

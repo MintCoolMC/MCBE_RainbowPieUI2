@@ -118,6 +118,7 @@
   "$rainbowpie_ui_flag_3f611894": false, // Inventory Title Center
   "$rainbowpie_ui_flag_fc1ae899": true, // HUD Durability
   "$rainbowpie_ui_flag_9ce040c1": true, // Inventory Durability Panel
+  "$rainbowpie_ui_flag_84df7492": true, // New UI animation for inventory and containers
 
   // Debug
   "$rainbowpie_ui_debug": false,
