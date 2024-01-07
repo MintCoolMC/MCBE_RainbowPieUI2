@@ -26,6 +26,7 @@
             },
             {
               "chest_fastpick@rainbowpie_module_chest_fastpick.chest_fastpick": {
+                "$large_chest": true,
                 "$putin_button_size": [ "100%y", "10.23255813953488%" ],
                 "$putin_button_offset": [ "100%x + 1.19047619047619%", "-11.16279069767442%" ],
                 "$pickup_button_size": [ "100%y", "10.23255813953488%" ],
