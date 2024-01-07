@@ -286,6 +286,165 @@
               }
             },
             {
+              "crafting_top_half": {
+                "type": "panel",
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [ "70.23809523809524%", "40.22346368715084%" ], // 118x72
+                "offset": [ 0, "-45.25139664804469%"],
+                "visible": "($top_half_variant = 'crafting.crafting_panel_top_half')",
+                "controls": [
+                  {
+                    "crafting_label@crafting.crafting_label": {
+                      "size": [ "91.66666666666667%", "13.88888888888889%" ],
+                      "offset": [ 0, "2.777777777777778%" ],
+                      "text_alignment": "left"
+                    }
+                  },
+                  {
+                    "crafting_grid_3x3": {
+                      "type": "stack_panel",
+                      "anchor_to": "left_middle",
+                      "anchor_from": "left_middle",
+                      "size": [ "54%", "75%" ], // 54x54
+                      "offset": [ 0, 3 ],
+                      "$cell_image_size": [ "100%y", "100%" ],
+                      "$item_renderer_panel_size": [ "100%y", "100%" ],
+                      "controls": [
+                        {
+                          "crafting_grid_3x3_1": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "collection_name": "crafting_input_items",
+                            "$item_collection_name": "crafting_input_items",
+                            "size": [ "100%", "33.33333333333333%" ],
+                           
+                            "controls": [
+                              {
+                                "container_item_0@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "size": [ "100%y", "100%" ],
+                                  "collection_index": 0
+                                }
+                              },
+                              {
+                                "container_item_1@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "size": [ "100%y", "100%" ],
+                                  "collection_index": 1
+                                }
+                              },
+                              {
+                                "container_item_2@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "size": [ "100%y", "100%" ],
+                                  "collection_index": 2
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "crafting_grid_3x3_2": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "collection_name": "crafting_input_items",
+                            "$item_collection_name": "crafting_input_items",
+                            "size": [ "100%", "33.33333333333333%" ],
+                           
+                            "controls": [
+                              {
+                                "container_item_3@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "size": [ "100%y", "100%" ],
+                                  "collection_index": 3
+                                }
+                              },
+                              {
+                                "container_item_4@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "size": [ "100%y", "100%" ],
+                                  "collection_index": 4
+                                }
+                              },
+                              {
+                                "container_item_5@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "size": [ "100%y", "100%" ],
+                                  "collection_index": 5
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "crafting_grid_3x3_3": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "collection_name": "crafting_input_items",
+                            "$item_collection_name": "crafting_input_items",
+                            "size": [ "100%", "33.33333333333333%" ],
+                           
+                            "controls": [
+                              {
+                                "container_item_6@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "size": [ "100%y", "100%" ],
+                                  "collection_index": 6
+                                }
+                              },
+                              {
+                                "container_item_7@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "size": [ "100%y", "100%" ],
+                                  "collection_index": 7
+                                }
+                              },
+                              {
+                                "container_item_8@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "size": [ "100%y", "100%" ],
+                                  "collection_index": 8
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "output_grid_3x3": {
+                      "type": "stack_panel",
+                      "collection_name": "crafting_output_items",
+                      "$item_collection_name": "crafting_output_items",
+                      "anchor_to": "right_middle",
+                      "anchor_from": "right_middle",
+                      "size": [ "100%y", "36.11111111111111%" ],
+                      "offset": [ 0, "4.166666666666667%" ],
+                      "controls": [
+                        {
+                          "container_item_0@rainbowpie_ui_inventory_and_container.container_item": {
+                            "size": [ "100%y", "100%" ],
+                            "collection_index": 0,
+                            "$button_ref": "crafting.output_no_coalesce_container_slot_button",
+                            "$stack_count_binding_condition": "always",
+                            "$item_renderer_binding_condition": "always",
+                            "$background_images": "crafting.crafting_container_cell_images",
+                  
+                            "$focus_id_binding_type": "none",
+                            "$focus_id": "crafting_output_item",
+                  
+                            "$focus_override_right_binding_type": "none",
+                            "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "crafting_arrow_large@crafting.crafting_arrow_large": {
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "size": [ "18.64406779661017%", "20.83333333333333%" ],
+                      "offset": [ "53.38983050847458%", "4.166666666666667%" ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
               "inventory_top_half": {
                 "type": "panel",
                 "anchor_to": "bottom_middle",
@@ -302,15 +461,6 @@
                       "size": [ "44.44444444444444%", "100%" ], // 72x72
                       "offset": [ "55.55555555555556%", 0 ],
                       "controls": [
-                        // {
-                        //   "common_panel@common.common_panel": {
-                        //     "$dialog_background": "rainbowpie_ui_common.inventory_background",
-                        //     "$show_close_button": false,
-                        //     "size": [ "100%", "100%" ],
-                        //     "anchor_to": "bottom_middle",
-                        //     "anchor_from": "bottom_middle"
-                        //   }
-                        // },
                         {
                           "crafting_label@crafting.crafting_label": {
                             "size": [ "91.66666666666667%", "13.88888888888889%" ],
