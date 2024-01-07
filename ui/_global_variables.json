@@ -41,18 +41,18 @@
   "$rainbowpie_ui_alert_title": "",
   "$rainbowpie_ui_alert_text": "",
 
-  "$rainbowpie_ui_animation_container_transition_time": 0.4,
+  "$rainbowpie_ui_animation_container_transition_time": 0.35,
   "$rainbowpie_ui_animation_container_transition_effect_exit": "out_quart",
   "$rainbowpie_ui_animation_container_transition_effect_entrance": "out_quart",
   "$rainbowpie_ui_animation_container_v2_transition_time": 0.35,
   "$rainbowpie_ui_animation_container_v2_transition_effect_exit": "out_quart",
-  "$rainbowpie_ui_animation_container_v2_transition_effect_entrance": "out_back",
-  "$rainbowpie_ui_animation_transition_time": 0.4,
+  "$rainbowpie_ui_animation_container_v2_transition_effect_entrance": "out_quart",
+  "$rainbowpie_ui_animation_transition_time": 0.35,
   "$rainbowpie_ui_animation_header_transition_effect_exit": "out_quart",
   "$rainbowpie_ui_animation_header_transition_effect_entrance": "out_quart",
   "$rainbowpie_ui_animation_transition_effect_exit": "out_quart",
   "$rainbowpie_ui_animation_transition_effect_entrance": "out_quart",
-  "$rainbowpie_ui_animation_chat_transition_time": 0.4,
+  "$rainbowpie_ui_animation_chat_transition_time": 0.35,
 
   // Flags
   "$rainbowpie_ui_flag_bg_mask_ingame": true, // 在游戏内是否显示mask
