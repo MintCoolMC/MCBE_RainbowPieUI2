@@ -418,6 +418,7 @@
                           "container_item_0@rainbowpie_ui_inventory_and_container.container_item": {
                             "size": [ "100%y", "100%" ],
                             "collection_index": 0,
+                            "$item_renderer_panel_size": [ "100%y", "69.23076923076923%" ],
                             "$button_ref": "crafting.output_no_coalesce_container_slot_button",
                             "$stack_count_binding_condition": "always",
                             "$item_renderer_binding_condition": "always",
