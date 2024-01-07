@@ -104,6 +104,14 @@
               "size": [ "100%c", 23 ],
               "anchor_from": "top_right",
               "anchor_to": "bottom_right",
+              "bindings": [
+                {
+                  "binding_type": "global",
+                  "binding_name": "#is_creative_layout",
+                  "binding_name_override": "#visible",
+                  "ignored": "(not $rainbowpie_ui_flag_84df7492)"
+                }
+              ],
               "controls": [
                 {
                   "toolbar_stack_panel": {
