@@ -38,7 +38,9 @@
                 "offset": [ 0, 0 ],
                 "anchor_to": "top_middle",
                 "anchor_from": "top_middle",
-                "$rainbowpie_localui_inventoryheader_title": "$container_title"
+                "$rainbowpie_localui_inventoryheader_title": "$container_title",
+                "$rainbowpie_localui_inventoryheader_title_border1_size": [ "2.38%", 0 ],
+                "$rainbowpie_localui_inventoryheader_title_border2_size": [ "2.38%", 0 ]
               }
             },
             {
@@ -162,7 +164,9 @@
                 "offset": [ 0, 0 ],
                 "anchor_to": "top_middle",
                 "anchor_from": "top_middle",
-                "$rainbowpie_localui_inventoryheader_title": "$container_title"
+                "$rainbowpie_localui_inventoryheader_title": "$container_title",
+                "$rainbowpie_localui_inventoryheader_title_border1_size": [ "2.38%", 0 ],
+                "$rainbowpie_localui_inventoryheader_title_border2_size": [ "2.38%", 0 ]
               }
             },
             {

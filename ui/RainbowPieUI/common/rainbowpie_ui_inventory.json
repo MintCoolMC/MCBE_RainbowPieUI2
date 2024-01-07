@@ -53,6 +53,9 @@
     "$rainbowpie_localui_inventoryheader_title_bindings|default": [],
     "$rainbowpie_localui_inventoryheader_extra_controls|default": "common.empty_panel",
 
+    "$rainbowpie_localui_inventoryheader_title_border1_size|default": [ 4, 0 ],
+    "$rainbowpie_localui_inventoryheader_title_border2_size|default": [ 4, 0 ],
+
     "controls": [
       {
         "debug01@rainbowpie_ui_common.debug_draw": {
