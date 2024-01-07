@@ -18,6 +18,7 @@
     "type": "panel",
     "size": [ 168, 179 ],
     "controls": [
+      { "armor_durability_panel@rainbowpieui_crafting.armor_durability_panel_v2": {} },
       {
         "inventory_ui_panel": {
           "type": "panel",
@@ -564,6 +565,20 @@
           "anchor_from": "top_right",
           "anchor_to": "top_right",
           "offset": [ "100%x + 2px", 4 ]
+        }
+      }
+    ]
+  },
+
+  "armor_durability_panel_v2": {
+    "type": "panel",
+    "ignored": "(not $rainbowpie_ui_flag_9ce040c1)",
+    "controls": [
+      {
+        "armor_and_offhand_durability@rainbowpieui_crafting.armor_and_offhand_durability": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ "100%x + 2px", 23 ]
         }
       }
     ]
