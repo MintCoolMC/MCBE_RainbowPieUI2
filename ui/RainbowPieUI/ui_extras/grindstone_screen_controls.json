@@ -1,0 +1,166 @@
+{
+  "namespace": "rainbowpieui_grindstone",
+
+  "grindstone_root_panel": {
+    "type": "panel",
+    "size": [ 168, 161 ],
+    "controls": [
+      { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+      { "gamepad_cursor@common.gamepad_cursor_button": {} },
+      { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
+      {
+        "inventory_ui_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "anims": [
+            "@rainbowpie_ui_animations.container_panel_exit_animation_push",
+            "@rainbowpie_ui_animations.container_panel_exit_animation_pop",
+            "@rainbowpie_ui_animations.container_panel_entrance_animation_push",
+            "@rainbowpie_ui_animations.container_panel_entrance_animation_pop"
+          ],
+          "animation_reset_name": "screen_animation_reset",
+          "controls": [
+            {
+              "inventory_header@rainbowpie_ui_inventory.header": {
+                "size": [ "100%", "14.28571428571429%" ],
+                "offset": [ 0, 0 ],
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "$rainbowpie_localui_inventoryheader_title": "container.repairAndDisenchant",
+                "$rainbowpie_localui_inventoryheader_title_border1_size": [ "2.380952380952381%", 0 ],
+                "$rainbowpie_localui_inventoryheader_title_border2_size": [ "2.380952380952381%", 0 ]
+              }
+            },
+            {
+              "common_panel@common.common_panel": {
+                "$dialog_background": "rainbowpie_ui_common.inventory_background",
+                "$show_close_button": false,
+                "size": [ "100%", "100% - 14.28571428571429%" ],
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle"
+              }
+            },
+            {
+              "top_half_panel": {
+                "type": "panel",
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [ "96.42857142857143%", "33.54037267080745%" ], // 162x54
+                "offset": [ 0, "-50.31055900621118%" ],
+                "controls": [
+                  {
+                    "grindstone_slots_panel": {
+                      "type": "panel",
+                      "size": [ "55.55555555555556%", "100%" ], // 90x54 (56)
+                      "controls": [
+                        {
+                          "grindstone_middle_panel": {
+                            "type": "panel",
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "size": [ "20%", "75.92592592592593%" ], // 18x41
+                            "controls": [
+                              {
+                                "input_item_slot@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "anchor_from": "top_middle",
+                                  "anchor_to": "top_middle",
+                                  "size": [ "100%y", "43.90243902439024%" ],
+                                  "offset": [ 0, "2.439024390243902%" ],
+                                  "$item_collection_name": "grindstone_input_items",
+                        
+                                  "$focus_id_binding_type": "none",
+                                  "$focus_id": "grindstone_input",
+                        
+                                  "$focus_override_down_binding_type": "none",
+                                  "$focus_override_down": "grindstone_additional",
+                        
+                                  "$focus_override_right_binding_type": "none",
+                                  "$focus_override_right": "grindstone_result"
+                                }
+                              },
+                              {
+                                "additional_item_slot@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "anchor_from": "bottom_middle",
+                                  "anchor_to": "bottom_middle",
+                                  "size": [ "100%y", "43.90243902439024%" ],
+                                  "offset": [ 0, "-2.439024390243902%" ],
+                                  "$item_collection_name": "grindstone_additional_items",
+                        
+                                  "$focus_id_binding_type": "none",
+                                  "$focus_id": "grindstone_additional",
+                        
+                                  "$focus_override_up_binding_type": "none",
+                                  "$focus_override_up": "grindstone_input",
+                        
+                                  "$focus_override_right_binding_type": "none",
+                                  "$focus_override_right": "grindstone_result"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "yields": {
+                            "type": "panel",
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "size": [ "24.44444444444444%", "27.77777777777778%" ], // 22x15
+                            "controls": [
+                              {
+                                "arrow_icon@grindstone.arrow_icon": {
+                                  "size": [ "100%", "100%" ],
+                                  "layer": 3
+                                }
+                              },
+                              {
+                                "cross_out_icon@grindstone.cross_out_icon": {
+                                  "size": [ "100%y", "100%" ],
+                                  "layer": 4
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "result_item_slot@rainbowpie_ui_inventory_and_container.container_item": {
+                            "anchor_from": "right_middle",
+                            "anchor_to": "right_middle",
+                            "size": [ "100%y", "33.33333333333333%" ],
+                            "$item_collection_name": "grindstone_result_items",
+                            "$button_ref": "grindstone.grindstone_output_slot_button",
+                  
+                            "$focus_id_binding_type": "none",
+                            "$focus_id": "grindstone_result",
+                  
+                            "$focus_override_left_binding_type": "none",
+                            "$focus_override_left": "grindstone_additional"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "inventory@rainbowpie_ui_inventory_and_container.inventory_panel_bottom_half": {
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [ "96.42857142857143%", "33.54037267080745%" ],
+                "offset": [ 0, "-14.90683229813665%" ]
+              }
+            },
+            {
+              "hotbar@rainbowpie_ui_inventory_and_container.hotbar_grid_template": {
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [ "96.42857142857143%", "11.18012422360248%" ],
+                "offset": [ 0, "-1.863354037267081%" ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
