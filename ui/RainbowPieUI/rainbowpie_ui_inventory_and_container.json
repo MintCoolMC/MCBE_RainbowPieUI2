@@ -71,6 +71,17 @@
     "$collection_index_start": 0
   },
 
+  // "grid_item_for_hotbar@rainbowpie_ui_inventory_and_container.container_item": {
+  //   "$item_collection_name": "hotbar_items"
+  // },
+
+  // "hotbar_grid_template": {
+  //   "type": "grid",
+  //   "grid_dimensions": [ 9, 1 ],
+  //   "grid_item_template": "rainbowpie_ui_inventory_and_container.grid_item_for_hotbar",
+  //   "collection_name": "hotbar_items"
+  // },
+
   "inventory_panel_bottom_half": {
     "type": "stack_panel",
     "controls": [
