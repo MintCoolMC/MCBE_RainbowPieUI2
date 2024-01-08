@@ -35,6 +35,26 @@
     "ignored": true
   },
 
+  "furnace_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "furnace_root_panel@rainbowpieui_furnace.furnace_root_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "furnace_panel/root_panel": {
+    "ignored": "$rainbowpie_ui_flag_84df7492"
+  },
+
   "furnace_panel/root_panel/common_panel": {
     "$dialog_background": "rainbowpie_ui_common.inventory_background",
     "$show_close_button": false,
