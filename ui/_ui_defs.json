@@ -25,6 +25,7 @@
     "ui/RainbowPieUI/ui_extras/add_external_server_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/anvil_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/book_screen_controls.json",
+    "ui/RainbowPieUI/ui_extras/brewing_stand_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/cartography_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/chat_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/chest_screen_controls.json",
