@@ -61,7 +61,7 @@
                       "anchor_to": "right_middle",
                       "$item_collection_name": "stonecutter_result_items",
                       "$button_ref": "stonecutter.result_slot_button",
-                      "$item_renderer_panel_size": [ "100%y", "61.53846153846154%" ],
+                      "$item_renderer_panel_size": [ "100%y", "69.23076923076923%" ],
                       "size": [ "100%y", "47.27272727272727%" ]
                     }
                   }
