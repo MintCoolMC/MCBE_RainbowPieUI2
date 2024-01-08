@@ -1048,7 +1048,12 @@
             "$transition_time_pop": "$rainbowpie_ui_animation_transition_time"
           },
           {
-            "requires": "($rainbowpie_localui_modified and $rainbowpie_localui_inventory_screen)",
+            "requires": "($rainbowpie_localui_modified and $rainbowpie_localui_inventory_screen and $rainbowpie_ui_flag_84df7492)",
+            "$transition_time_push": "$rainbowpie_ui_animation_container_v2_transition_time",
+            "$transition_time_pop": "$rainbowpie_ui_animation_container_v2_transition_time"
+          },
+          {
+            "requires": "($rainbowpie_localui_modified and $rainbowpie_localui_inventory_screen and not $rainbowpie_ui_flag_84df7492)",
             "$transition_time_push": "$rainbowpie_ui_animation_container_transition_time",
             "$transition_time_pop": "$rainbowpie_ui_animation_container_transition_time"
           }
