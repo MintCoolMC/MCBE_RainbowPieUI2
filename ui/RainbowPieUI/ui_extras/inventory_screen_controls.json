@@ -29,19 +29,27 @@
   "player_inventory_root_panel": {
     "type": "panel",
     "size": [ 168, 179 ],
+    "$animation_ignored|default": false,
     "controls": [
       { "armor_durability_panel@rainbowpieui_crafting.armor_durability_panel_v2": {} },
       {
         "inventory_ui_panel": {
           "type": "panel",
           "size": [ "100%", "100%" ],
-          "anims": [
+          "$anims": [
             "@rainbowpie_ui_animations.container_panel_exit_animation_push",
             "@rainbowpie_ui_animations.container_panel_exit_animation_pop",
             "@rainbowpie_ui_animations.container_panel_entrance_animation_push",
             "@rainbowpie_ui_animations.container_panel_entrance_animation_pop"
           ],
+          "anims": "$anims",
           "animation_reset_name": "screen_animation_reset",
+          "variables": [
+            {
+              "requires": "$animation_ignored",
+              "$anims": []
+            }
+          ],
           "controls": [
             {
               "toolbar_panel": {

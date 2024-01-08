@@ -26,10 +26,23 @@
           {
             "player_inventory_root_panel@rainbowpieui_crafting.player_inventory": {
               "ignored": "(not $rainbowpie_ui_flag_84df7492)",
+              "$animation_ignored": true,
               "bindings": [
                 {
                   "binding_type": "global",
-                  "binding_name": "(not #is_creative_layout)",
+                  "binding_name": "#is_recipe_book_layout",
+                  "binding_name_override": "#visible"
+                }
+              ]
+            }
+          },
+          {
+            "player_inventory_root_panel_animated@rainbowpieui_crafting.player_inventory": {
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)",
+              "bindings": [
+                {
+                  "binding_type": "global",
+                  "binding_name": "#is_survival_layout",
                   "binding_name_override": "#visible"
                 }
               ]
