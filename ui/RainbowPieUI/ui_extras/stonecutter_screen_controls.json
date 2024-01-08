@@ -1,0 +1,92 @@
+{
+  "namespace": "rainbowpieui_stonecutter",
+
+  "stonecutter_inventory_root_panel": {
+    "type": "panel",
+    "size": [ 168, 162 ],
+    "controls": [
+      {
+        "inventory_ui_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "anims": [
+            "@rainbowpie_ui_animations.container_panel_exit_animation_push",
+            "@rainbowpie_ui_animations.container_panel_exit_animation_pop",
+            "@rainbowpie_ui_animations.container_panel_entrance_animation_push",
+            "@rainbowpie_ui_animations.container_panel_entrance_animation_pop"
+          ],
+          "animation_reset_name": "screen_animation_reset",
+          "controls": [
+            {
+              "inventory_header@rainbowpie_ui_inventory.header": {
+                "size": [ "100%", "14.19753086419753%" ],
+                "offset": [ 0, 0 ],
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "$rainbowpie_localui_inventoryheader_title": "container.stonecutter",
+                "$rainbowpie_localui_inventoryheader_title_border1_size": [ "2.380952380952381%", 0 ],
+                "$rainbowpie_localui_inventoryheader_title_border2_size": [ "2.380952380952381%", 0 ]
+              }
+            },
+            {
+              "common_panel@common.common_panel": {
+                "$dialog_background": "rainbowpie_ui_common.inventory_background",
+                "$show_close_button": false,
+                "size": [ "100%", "100% - 14.19753086419753%" ],
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle"
+              }
+            },
+            {
+              "top_half_panel": {
+                "type": "panel",
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [ "96.42857142857143%", "33.95061728395062%" ], // 162x55
+                "offset": [ 0, "-50%" ],
+                "controls": [
+                  {
+                    "input_item_slot@rainbowpie_ui_inventory_and_container.container_item": {
+                      "size": [ "100%y", "32.72727272727273%" ],
+                      "offset": [ "22.22222222222222%", 0 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "$item_collection_name": "stonecutter_input_items"
+                    }
+                  },
+                  {
+                    "result_item_slot@rainbowpie_ui_inventory_and_container.container_item": {
+                      "offset": [ "-22.22222222222222%", 0 ],
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "$item_collection_name": "stonecutter_result_items",
+                      "$button_ref": "stonecutter.result_slot_button",
+                      "$item_renderer_panel_size": [ "100%y", "61.53846153846154%" ],
+                      "size": [ "100%y", "47.27272727272727%" ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "inventory@rainbowpie_ui_inventory_and_container.inventory_panel_bottom_half": {
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [ "96.42857142857143%", "33.33333333333333%" ],
+                "offset": [ 0, "-14.81481481481481%" ]
+              }
+            },
+            {
+              "hotbar@rainbowpie_ui_inventory_and_container.hotbar_grid_template": {
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [ "96.42857142857143%", "11.11111111111111%" ],
+                "offset": [ 0, "-1.851851851851852%" ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

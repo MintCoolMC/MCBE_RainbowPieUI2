@@ -61,6 +61,7 @@
     "ui/RainbowPieUI/ui_extras/sidebar_navigation_controls.json",
     "ui/RainbowPieUI/ui_extras/sign_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/start_screen_controls.json",
+    "ui/RainbowPieUI/ui_extras/stonecutter_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/storage_management_controls.json",
     "ui/RainbowPieUI/ui_extras/structure_editor_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/toast_screen_controls.json",
