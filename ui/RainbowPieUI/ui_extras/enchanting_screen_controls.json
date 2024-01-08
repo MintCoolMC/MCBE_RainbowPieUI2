@@ -14,6 +14,7 @@
     "controls": [
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
       { "gamepad_cursor@common.gamepad_cursor_button": {} },
+      { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
       {
         "inventory_ui_panel": {
           "type": "panel",
