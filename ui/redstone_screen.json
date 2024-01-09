@@ -1,12 +1,44 @@
 {
   "namespace": "redstone",
 
+  "hopper_screen": {
+    "$is_hopper": true
+  },
+
   "item_dropper_label": {
     "ignored": true
   },
 
   "redstone_panel_top_half": {
     "offset": [ 0, 19 ]
+  },
+
+  "panel": {
+    "$is_hopper|default": false,
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "redstone_root_panel@rainbowpieui_redstone.redstone_root_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)",
+              "visible": "(not $is_hopper)"
+            }
+          },
+          {
+            "hopper_root_panel@rainbowpieui_redstone.hopper_root_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)",
+              "visible": "($is_hopper)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "panel/root_panel": {
+    "ignored": "$rainbowpie_ui_flag_84df7492"
   },
 
   "panel/root_panel/common_panel": {

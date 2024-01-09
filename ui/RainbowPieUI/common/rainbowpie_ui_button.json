@@ -42,6 +42,9 @@
     "$rainbowpie_localui_button_offset|default": [ 0, 0 ],
     "$rainbowpie_localui_button_panel_size|default": [ "default", "default" ],
     "$rainbowpie_localui_button_border_enabled|default": false,
+    "$rainbowpie_localui_button_desc_enabled|default": false,
+    "$rainbowpie_localui_button_desc_text|default": "HoverText",
+    "$rainbowpie_localui_button_desc_text_bindings|default": [],
 
     "controls": [
       {
@@ -125,6 +128,9 @@
         }
       },
       {
+        "button_desc@rainbowpie_ui_button.button_desc": {}
+      },
+      {
         "button_content": {
           "type": "panel",
           "$button_content_size|default": [ "100% - 6px", "100% - 6px" ],
@@ -180,6 +186,9 @@
           "alpha": "$rainbowpie_localui_button_alpha",
           "layer": 1
         }
+      },
+      {
+        "button_desc@rainbowpie_ui_button.button_desc": {}
       },
       {
         "button_content": {
@@ -302,6 +311,80 @@
                           "binding_collection_name": "$button_text_grid_collection_name",
                           "binding_name": "$button_text",
                           "binding_name_override": "$button_text"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_desc": {
+    "type": "panel",
+    "visible": "$hover_state",
+    "ignored": "(not $rainbowpie_localui_button_desc_enabled)",
+    "size": "$button_image_size",
+    "offset": "$rainbowpie_localui_button_both_offset",
+    "controls": [
+      {
+        "custom_hover_text": {
+          "type": "button",
+          "enabled": "(not $touch)",
+          "allow_clipping": false,
+          "follows_cursor": "(not $touch)",
+          "consume_event": false,
+          "consume_hover_events": false,
+          "focus_enabled": false,
+          "hover_control": "$hover_control",
+          "locked_control": "$locked_control",
+          "$hover_control": "hover_text",
+          "$locked_control": "",
+          "variables": [
+            {
+              "requires": "$touch",
+              "$hover_control": "",
+              "$locked_control": "hover_text"
+            }
+          ],
+          "controls": [
+            {
+              "hover_text": {
+                "type": "panel",
+                "size": [ "0px", "0px" ],
+                "controls": [
+                  {
+                    "hover_text_background": {
+                      "type": "image",
+                      "texture": "($rainbowpie_ui_path_home + '/r_white')",
+                      "size": [ "100%c + 8px", "100%c + 5px" ],
+                      "offset": [ 10, -10 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "layer": 200,
+                      "color": "$rainbowpie_ui_theme_hovertext_background_color",
+                      "alpha": "$rainbowpie_ui_theme_hovertext_background_alpha",
+                      "controls": [
+                        {
+                          "hover_text_controls": {
+                            "type": "stack_panel",
+                            "orientation": "vertical",
+                            "size": [ "100%cm", "100%c" ],
+                            "controls": [
+                              {
+                                "hover_text_label@rainbowpie_ui_common.text_label_notheme": {
+                                  "size": [ "default", "default" ],
+                                  "color": "$rainbowpie_ui_theme_hovertext_text_color",
+                                  "text": "$rainbowpie_localui_button_desc_text",
+                                  "bindings": "$rainbowpie_localui_button_desc_text_bindings"
+                                }
+                              }
+                            ]
+                          }
                         }
                       ]
                     }

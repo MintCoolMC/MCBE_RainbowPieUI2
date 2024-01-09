@@ -13,6 +13,15 @@ rainbowpie.ui.themesystem.description.title=简介:	#
 rainbowpie.ui.themesystem.version_toolow=当前主题版本太低！请更新！	#
 rainbowpie.ui.themesystem.version_toohight=当前主题版本太高！	#
 
+rainbowpie.ui.inventory.actions.destroy_selection=销毁物品
+rainbowpie.ui.inventory.actions.quick_craft=快速合成
+rainbowpie.ui.inventory.actions.drop_selection=丟出
+
+rainbowpie.ui.inventory.durability=耐久度:
+
+rainbowpie.ui.chest.fastpick.pickall=拿取箱子内全部物品
+rainbowpie.ui.chest.fastpick.putall=放入物品栏内全部物品
+
 rainbowpie.ui.screenshot.screenshotPathButton=图片路径
 rainbowpie.ui.screenshot.screenshotPathTitle=截图已经保存到：
 
@@ -47,9 +56,9 @@ rainbowpie.ui.resource_packs.tab.selected_packs=已选择
 rainbowpie.ui.resource_packs.tab.available_packs=可用的
 rainbowpie.ui.resource_packs.search.placeholder.resource=搜索资源包
 rainbowpie.ui.resource_packs.search.placeholder.behavior=搜索行为包
-rainbowpie.ui.resource_packs.tag.module=[Module]
+rainbowpie.ui.resource_packs.tag.module=[模块]
 rainbowpie.ui.resource_packs.tag.package=[Package]
-rainbowpie.ui.resource_packs.tag.theme=[Theme]
+rainbowpie.ui.resource_packs.tag.theme=[主题]
 
 rainbowpie.ui.toast.gamepad_connected=控制器已连接！
 

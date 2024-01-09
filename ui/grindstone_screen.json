@@ -25,6 +25,26 @@
     "ignored": true
   },
 
+  "grindstone_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "grindstone_root_panel@rainbowpieui_grindstone.grindstone_root_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "grindstone_panel/root_panel": {
+    "ignored": "$rainbowpie_ui_flag_84df7492"
+  },
+
   "grindstone_panel/root_panel/common_panel": {
     "$dialog_background": "rainbowpie_ui_common.inventory_background",
     "$show_close_button": false,

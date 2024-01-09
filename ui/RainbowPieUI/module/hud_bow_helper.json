@@ -26,8 +26,9 @@
               "tip_text_background": {
                 "type": "image",
                 "size": [ "100%c + 4px", "100%c + 4px" ],
-                "texture": "($rainbowpie_ui_path_home + '/r_black')",
-                "alpha": 0.5,
+                "texture": "($rainbowpie_ui_path_home + '/r_white')",
+                "color": "$rainbowpie_ui_theme_text_background_color",
+                "alpha": "$rainbowpie_ui_theme_text_background_alpha",
                 "layer": 30,
                 "controls": [
                   {

@@ -301,7 +301,8 @@
     "layer": 110
   },
 
-  "maximized_input_dialog_button@rainbowpie_ui_dialog.header_background": {
+  "maximized_input_dialog_button": {
+    "type": "panel",
     "size": [ "100%c", "100%" ],
     "controls": [
       {
@@ -1200,7 +1201,7 @@
       {
         "open_second_chat_button@rainbowpieui_chat.second_chat_toggle_base": {
           "size": [ 20, 25 ],
-          "layer": 150,
+          "layer": 20,
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "$button_text": "<",
@@ -1220,7 +1221,7 @@
         "close_second_chat_button@rainbowpieui_chat.second_chat_toggle_base": {
           "size": [ 20, 25 ],
           "offset": [ -150, 0 ],
-          "layer": 150,
+          "layer": 20,
           "$button_text": ">",
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",

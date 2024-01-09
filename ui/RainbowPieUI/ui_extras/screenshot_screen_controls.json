@@ -3,8 +3,7 @@
 
   "top_tab@common_tabs.tab_top": {
     "$rainbowpie_toggle_unchecked_default_alpha": 0.0,
-    "$rainbowpie_toggle_checked_default_color": "$rainbowpie_ui_theme_dialog_content_background_color",
-    "$rainbowpie_toggle_checked_default_alpha": "$rainbowpie_ui_theme_dialog_content_background_alpha",
+    "$rainbowpie_toggle_checked_default_alpha": 0.2,
 
     "$tab_panel": "rainbowpie_ui_tab.tab_panel",
     "$toggle_tts_enabled_binding_type": "global",
@@ -59,7 +58,8 @@
     ]
   },
 
-  "screenshot_panel_dialog_button@rainbowpie_ui_dialog.header_background": {
+  "screenshot_panel_dialog_button": {
+    "type": "panel",
     "size": [ "100%c", "100%" ],
     "controls": [
       {

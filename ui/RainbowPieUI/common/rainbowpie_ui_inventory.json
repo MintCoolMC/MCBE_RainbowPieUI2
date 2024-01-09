@@ -17,9 +17,9 @@
   "live_player_renderer": {
     "type": "panel",
     "size": [ 40, 40 ],
-    "offset": [ "100%x", -10 ],
-    "anchor_to": "right_middle",
-    "anchor_from": "right_middle",
+    "offset": [ "-100%x", -16 ],
+    "anchor_to": "left_middle",
+    "anchor_from": "left_middle",
     "controls": [
       {
         "live_player": {
@@ -53,6 +53,9 @@
     "$rainbowpie_localui_inventoryheader_title_bindings|default": [],
     "$rainbowpie_localui_inventoryheader_extra_controls|default": "common.empty_panel",
 
+    "$rainbowpie_localui_inventoryheader_title_border1_size|default": [ 4, 0 ],
+    "$rainbowpie_localui_inventoryheader_title_border2_size|default": [ 4, 0 ],
+
     "controls": [
       {
         "debug01@rainbowpie_ui_common.debug_draw": {
@@ -76,20 +79,30 @@
                       "size": [ "100%", "100%" ],
                       "controls": [
                         {
+                          "padding_border_center": {
+                            "type": "panel",
+                            "ignored": "(not $rainbowpie_ui_flag_3f611894)",
+                            "size": [ "fill", 0 ]
+                          }
+                        },
+                        {
                           "padding_border": {
                             "type": "panel",
-                            "size": [ 2, 0 ]
+                            "size": [ 4, 0 ]
                           }
                         },
                         {
                           "title_panel": {
                             "type": "panel",
                             "size": [ "100%c", "100%" ],
+                            "max_size": [ "100% - 100%y - 8px", "100%" ],
+                            "clips_children": true,
                             "controls": [
                               {
                                 "title_label@rainbowpie_ui_common.text_label_notheme": {
-                                  "anchor_to": "center",
-                                  "anchor_from": "center",
+                                  "size": [ "default", "default" ],
+                                  "anchor_to": "left_middle",
+                                  "anchor_from": "left_middle",
                                   "color": "$rainbowpie_ui_theme_inventory_header_title_color",
                                   "text": "$rainbowpie_localui_inventoryheader_title",
                                   "layer": 10,
@@ -102,34 +115,55 @@
                         {
                           "padding_border2": {
                             "type": "panel",
-                            "size": [ 2, 0 ]
+                            "size": [ 4, 0 ]
+                          }
+                        },
+                        {
+                          "header_button_panel": {
+                            "type": "panel",
+                            "size": [ "fill", "100%" ],
+                            "min_size": [ "100%c", "100%" ],
+                            "controls": [
+                              {
+                                "header_stack_panel": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
+                                  "size": [ "100%c", "100%" ],
+                                  "anchor_to": "right_middle",
+                                  "anchor_from": "right_middle",
+                                  "controls": [
+                                    {
+                                      "$rainbowpie_localui_inventoryheader_extra_controls@$rainbowpie_localui_inventoryheader_extra_controls": {
+                                        "ignored": "($rainbowpie_localui_inventoryheader_extra_controls = 'common.empty_panel')"
+                                      }
+                                    },
+                                    // add tab in ft
+                                    {
+                                      "button_background": {
+                                        "type": "panel",
+                                        "size": [ "100%y", "100%" ],
+                                        "controls": [
+                                          {
+                                            "close_button@rainbowpie_ui_common.close_button": {
+                                              "$rainbowpie_ui_theme_closebutton_default_color": "$rainbowpie_ui_theme_inventory_header_title_color",
+                                              "$close_button_panel_size": [ "100%", "100%" ],
+                                              "layer": 10,
+                                              "size": [ "100%", "100%" ],
+                                              "offset": [ 0, 0 ],
+                                              "anchor_from": "center",
+                                              "anchor_to": "center"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "$rainbowpie_localui_inventoryheader_extra_controls@$rainbowpie_localui_inventoryheader_extra_controls": {
-                "ignored": "($rainbowpie_localui_inventoryheader_extra_controls = 'common.empty_panel')"
-              }
-            },
-            // add tab in ft
-            {
-              "button_background@rainbowpie_ui_inventory.header_background": {
-                "size": [ "100%y", "100%" ],
-                "controls": [
-                  {
-                    "close_button@rainbowpie_ui_common.close_button": {
-                      "$rainbowpie_ui_theme_closebutton_default_color": "$rainbowpie_ui_theme_inventory_header_title_color",
-                      "$close_button_panel_size": [ "100%", "100%" ],
-                      "layer": 10,
-                      "size": [ "100%", "100%" ],
-                      "offset": [ 0, 0 ],
-                      "anchor_from": "center",
-                      "anchor_to": "center"
                     }
                   }
                 ]

@@ -1,6 +1,20 @@
 {
   "namespace": "cartography_pocket",
 
+  "cartography_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "maximized_input_dialog_panel@rainbowpieui_cartography.maximized_input_dialog_panel": {}
+          }
+        ]
+      }
+    ]
+  },
+
   "right_navigation_tabs/pocket_tab_close_and_help_button": {
     "ignored": true
   },

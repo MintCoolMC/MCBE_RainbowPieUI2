@@ -46,7 +46,24 @@
     "ignored": true
   },
 
+  "right_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "stonecutter_inventory_root_panel@rainbowpieui_stonecutter.stonecutter_inventory_root_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
   "right_panel/common_panel": {
+    "ignored": "$rainbowpie_ui_flag_84df7492",
     "$dialog_background": "rainbowpie_ui_common.inventory_background",
     "$show_close_button": false,
     "anchor_to": "bottom_middle",
@@ -56,6 +73,7 @@
   },
 
   "right_panel/stonecutter_screen_inventory": {
+    "ignored": "$rainbowpie_ui_flag_84df7492",
     "$background_images": "rainbowpie_ui_common.cell_image",
     "modifications": [
       {

@@ -70,6 +70,26 @@
     "ignored": true
   },
 
+  "enchanting_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "enchanting_root_panel@rainbowpieui_enchanting.enchanting_root_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "enchanting_panel/root_panel": {
+    "ignored": "$rainbowpie_ui_flag_84df7492"
+  },
+
   "enchanting_panel/root_panel/common_panel": {
     "$dialog_background": "rainbowpie_ui_common.inventory_background",
     "$show_close_button": false,
@@ -88,7 +108,7 @@
         "value": [
           {
             "inventory_header@rainbowpie_ui_inventory.header": {
-              "$rainbowpie_localui_inventoryheader_title": "container.repairAndDisenchant",
+              "$rainbowpie_localui_inventoryheader_title": "$container_title",
               "offset": [ 0, -4 ]
             }
           }

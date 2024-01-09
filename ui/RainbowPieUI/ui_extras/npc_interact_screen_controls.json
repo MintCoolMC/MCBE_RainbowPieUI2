@@ -1,0 +1,282 @@
+{
+  "namespace": "rainbowpieui_npc_interact",
+
+  "top_tab@common_tabs.tab_top": {
+    "$rainbowpie_toggle_unchecked_default_alpha": 0.0,
+    "$rainbowpie_toggle_checked_default_alpha": 0.2,
+
+    "$tab_panel": "rainbowpie_ui_tab.tab_panel",
+    "$toggle_tts_enabled_binding_type": "global",
+    "$radio_toggle_group": true,
+    "$toggle_name": "rainbowpieui_navigation_tab",
+    "$toggle_group_default_selected": 10,
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$toggle_tts_type_priority": 1001,
+    "$toggle_tts_toggle_on_text": "",
+    "$toggle_tts_toggle_off_text": "",
+    "$toggle_tts_index_priority": 1002,
+    "$tab_content": "rainbowpieui_npc_interact.top_tab_content"
+  },
+
+  "top_tab_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "tab_label@rainbowpie_ui_common.text_label_notheme": {
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [ "default", "default" ],
+          "text_alignment": "center",
+          "text": "$tab_text",
+          "color": "$text_color",
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "tab_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ 100, "100%" ],
+    "controls": [
+      {
+        "teacher_navigation_tab@rainbowpieui_npc_interact.top_tab": {
+          "size": [ "fill", "100%" ],
+          "$tab_view_binding_name": "teacher_navigation_tab_toggle",
+          "$tab_text": "gui.edit",
+          "$toggle_group_forced_index": 11
+        }
+      },
+      {
+        "student_navigation_tab@rainbowpieui_npc_interact.top_tab": {
+          "size": [ "fill", "100%" ],
+          "$tab_view_binding_name": "student_navigation_tab_toggle",
+          "$tab_text": "npcscreen.dialog",
+          "$toggle_group_forced_index": 10
+        }
+      }
+    ]
+  },
+
+  "dialog_button_panel": {
+    "type": "panel",
+    "size": [ "100%c", "100%" ],
+    "controls": [
+      {
+        "button_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", "100%" ],
+          "controls": [
+            {
+              "tab_panel_student_view_visible@rainbowpieui_npc_interact.tab_panel": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "npc_screen_contents": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "screen_content@rainbowpie_ui_common.screen_content": {
+          "$rainbowpie_localui_screen_ingame_anim1": true,
+          "$rainbowpie_localui_screen_content": [
+            {
+              "dialog_panel@rainbowpie_ui_dialog.dialog_panel": {
+                "$rainbowpie_localui_dialogheader_title": "#name_text",
+                "$rainbowpie_localui_dialogheader_extra_controls": "rainbowpieui_npc_interact.dialog_button_panel",
+                "$rainbowpie_localui_dialogheader_title_bindings": [
+                  {
+                    "binding_name": "#name_text",
+                    "binding_type": "global"
+                  }
+                ],
+                "$rainbowpie_localui_dialog_content": "rainbowpieui_npc_interact.dialog_content",
+                "size": [ 325, 200 ],
+                "bindings": [
+                  {
+                    "binding_name": "#teacher_view_visible",
+                    "binding_type": "global"
+                  },
+                  {
+                    "binding_name": "#student_view_visible",
+                    "binding_type": "global"
+                  },
+                  {
+                    "binding_name": "#advanced_visible",
+                    "binding_type": "global"
+                  },
+                  {
+                    "binding_name": "#maximized_edit_visible"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(((not #advanced_visible) and (not #maximized_edit_visible)) and (#teacher_view_visible or #student_view_visible))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "dialog_panel_advanced@rainbowpie_ui_dialog.dialog_panel": {
+                "$rainbowpie_localui_dialogheader_title": "#title_text",
+                "$rainbowpie_localui_dialogheader_title_bindings": [
+                  {
+                    "binding_name": "#title_text",
+                    "binding_type": "global"
+                  }
+                ],
+                "$rainbowpie_localui_dialog_content": "npc_interact.advanced_scrolling_panel",
+                "$close_button_to_button_id": "button.exit_advanced",
+                "size": [ 325, 200 ],
+                "bindings": [
+                  {
+                    "binding_name": "#advanced_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            {
+              "dialog_panel_maximized@rainbowpie_ui_dialog.dialog_panel": {
+                "$rainbowpie_localui_dialogheader_title": "#title_text",
+                "$rainbowpie_localui_dialogheader_title_bindings": [
+                  {
+                    "binding_name": "#title_text",
+                    "binding_type": "global"
+                  }
+                ],
+                "$rainbowpie_localui_dialog_content": "npc_interact.maximized_action_edit",
+                "$close_button_to_button_id": "button.exit_maximized",
+                "size": [ 325, 200 ],
+                "bindings": [
+                  {
+                    "binding_name": "#maximized_edit_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            {
+              "exit_advanced@rainbowpieui_npc_interact.override_hotkey_input_panel": {
+                "$pressed_button_name": "button.exit_advanced",
+                "bindings": [
+                  {
+                    "binding_name": "#advanced_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            {
+              "exit_maximized@rainbowpieui_npc_interact.override_hotkey_input_panel": {
+                "$pressed_button_name": "button.exit_maximized",
+                "bindings": [
+                  {
+                    "binding_name": "#maximized_edit_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "override_hotkey_input_panel": {
+    "type": "input_panel",
+    "visible": false,
+    "$pressed_button_name": "rainbowpie.placeholder",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "global"
+      }
+    ]
+  },
+
+  "dialog_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "teacher": {
+          "type": "panel",
+          "controls": [
+            {
+              "basic@npc_interact.basic_stack_panel": {}
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "teacher_navigation_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "student": {
+          "type": "panel",
+          "controls": [
+            {
+              "message@npc_interact.student_message_section": {
+                "size": [ "100%", "100% - 46px" ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+              }
+            },
+            {
+              "bottom_panel": {
+                "type": "image",
+                "texture": "textures/ui/White",
+                "color": "$rainbowpie_ui_theme_dialog_background_color",
+                "alpha": "$rainbowpie_ui_theme_dialog_background_alpha",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "size": [ "100%", 46 ],
+                "layer": 12,
+                "controls": [
+                  {
+                    "buttons@npc_interact.student_buttons": {
+                      "size": [ "100% - 8px", "100%c" ],
+                      "anchor_from": "center",
+                      "anchor_to": "center"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "student_navigation_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+##注释可以以'##'开头添加到有效行的任意位置
+##
+##请注意，尾随空格将不会被修剪。 如果要在字符串末尾和a的开头之间留出空间
+##在同一行上注释，使用TAB。
+
+rainbowpie.ui.global.title=Rainbow Pie UI
+
+rainbowpie.ui.theme.default_name=Rainbow Pie UI 默認外觀
+rainbowpie.ui.theme.default_auther=MintCoolMC
+rainbowpie.ui.theme.default_description=Rainbow Pie UI
+
+rainbowpie.ui.themesystem.description.title=介紹:	#
+rainbowpie.ui.themesystem.version_toolow=當前外觀包版本太低！	#
+rainbowpie.ui.themesystem.version_toohight=當前外觀包版本太高！	#
+
+rainbowpie.ui.inventory.actions.destroy_selection=銷毀物品
+rainbowpie.ui.inventory.actions.quick_craft=快速合成
+rainbowpie.ui.inventory.actions.drop_selection=丟出
+
+rainbowpie.ui.inventory.durability=耐用性:
+
+rainbowpie.ui.chest.fastpick.pickall=從箱子内拿取全部
+rainbowpie.ui.chest.fastpick.putall=從物品欄放入全部
+
+rainbowpie.ui.screenshot.screenshotPathButton=圖片路徑
+rainbowpie.ui.screenshot.screenshotPathTitle=截屏已保存至：
+
+rainbowpie.ui.settings.theme.title=外觀
+rainbowpie.ui.settings.module.title=模組
+
+rainbowpie.ui.storage_management.tab.management=存儲空間
+rainbowpie.ui.storage_management.tab.settings=存儲設定
+
+rainbowpie.ui.hud.bow_helper.arrow_count=箭矢
+
+rainbowpie.ui.manifest_validation.verifiedPack=已認證的包：
+rainbowpie.ui.manifest_validation.verifiedDetail=更多資訊
+rainbowpie.ui.manifest_validation.verifiedDetail.title=認證訊息
+rainbowpie.ui.manifest_validation.verifiedDetail.warn=此認證咨詢可能由其他第三方修改和提供，僅供參考
+rainbowpie.ui.manifest_validation.verifiedDetail.description=由認證者提供的資訊：
+
+rainbowpie.ui.music.button=音樂
+rainbowpie.ui.music.title=音樂播放器
+rainbowpie.ui.music.button.seeAll=查看全部
+rainbowpie.ui.music.section.home=主頁
+rainbowpie.ui.music.section.record=唱片
+rainbowpie.ui.music.category.single=Minecraft音樂
+
+rainbowpie.ui.book.tab.title=書名
+rainbowpie.ui.book.tab.auther=作者
+
+rainbowpie.ui.chat.tab.chat=聊天訊息
+rainbowpie.ui.chat.tab.playerlist=玩家列表
+
+rainbowpie.ui.resource_packs.tab.selected_packs=已選擇
+rainbowpie.ui.resource_packs.tab.available_packs=可用的
+rainbowpie.ui.resource_packs.search.placeholder.resource=搜尋資源套件
+rainbowpie.ui.resource_packs.search.placeholder.behavior=搜尋行爲模式包
+rainbowpie.ui.resource_packs.tag.module=[模組]
+rainbowpie.ui.resource_packs.tag.package=[Package]
+rainbowpie.ui.resource_packs.tag.theme=[外觀]
+
+rainbowpie.ui.toast.gamepad_connected=控制器已連接！
+
+rainbowpie.ui.pause.tab.pause=暫停遊戲
+rainbowpie.ui.pause.tab.playerlist=玩家列表
+rainbowpie.ui.pause.tab.scoreboard=記分牌
+rainbowpie.ui.pause.tab.persona=個人檔案
+rainbowpie.ui.pause.title.unscored_players=未得分的玩家
+rainbowpie.ui.pause.quit.tiptext=雙擊退出按鈕即可儲存並退出
+
+rainbowpie.ui.version.warn=版本警告！
+rainbowpie.ui.version.supported=支援的版本：
+rainbowpie.ui.version.warn_unsupport=使用不支援的版本可能會出現崩潰或錯誤等問題
+rainbowpie.ui.version.dev.err_variable=[開發者注意]請檢查設定檔中的版本是否配置正確！
+
+rainbowpie.ui.hud.tablist.maxplayers=這裡只能顯示22個玩家！ 去暫停介面查看全部玩家
+rainbowpie.ui.hud.tablist.player_count=名玩家
+rainbowpie.ui.hud.tablist.player_count.single=名玩家
+rainbowpie.ui.hud.tablist.playertag.self=[自己]
+rainbowpie.ui.hud.tablist.playertag.offline=[離線帳戶]
+rainbowpie.ui.hud.clickspace.tiptext=點擊這個區域來顯示HUD
+
+rainbowpie.ui.verify.title=你需要驗證來使用此版本的RainbowPieUI
+rainbowpie.ui.verify.text=如果你不知道密碼是什麼，請前往內測群詢問。
+rainbowpie.ui.verify.password_placeholder=在此鍵入密碼
+
+rainbowpie.ui.dialog.title_default=警告

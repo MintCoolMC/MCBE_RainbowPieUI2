@@ -9,6 +9,11 @@
         "value": [
           {
             "maximized_input_dialog_panel@rainbowpieui_anvil.maximized_input_dialog_panel": {}
+          },
+          {
+            "anvil_root_panel@rainbowpieui_anvil.anvil_root_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)"
+            }
           }
         ]
       }
@@ -92,6 +97,10 @@
 
   "top_half_panel": {
     "offset": [ 7, 15 ]
+  },
+
+  "anvil_panel/root_panel": {
+    "ignored": "$rainbowpie_ui_flag_84df7492"
   },
 
   "anvil_panel/root_panel/common_panel": {

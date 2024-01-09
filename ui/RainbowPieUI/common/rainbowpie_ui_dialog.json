@@ -69,21 +69,31 @@
                       "size": [ "100%", "100%" ],
                       "controls": [
                         {
+                          "padding_border_center": {
+                            "type": "panel",
+                            "ignored": "(not $rainbowpie_ui_flag_3f247b1e)",
+                            "size": [ "fill", 0 ]
+                          }
+                        },
+                        {
                           "padding_border": {
                             "type": "panel",
-                            "size": [ 2, 0 ]
+                            "size": [ 4, 0 ]
                           }
                         },
                         {
                           "title_panel": {
                             "type": "panel",
                             "size": [ "100%c", "100%" ],
+                            "max_size": [ "100% - 100%y - 8px", "100%" ],
+                            "clips_children": true,
                             "controls": [
                               {
                                 "title_label@rainbowpie_ui_common.text_label_notheme": {
-                                  "anchor_to": "center",
-                                  "anchor_from": "center",
-                                  "color": "$rainbowpie_ui_theme_inventory_header_title_color",
+                                  "size": [ "default", "default" ],
+                                  "anchor_to": "left_middle",
+                                  "anchor_from": "left_middle",
+                                  "color": "$rainbowpie_ui_theme_dialog_title_color",
                                   "text": "$rainbowpie_localui_dialogheader_title",
                                   "layer": 10,
                                   "bindings": "$rainbowpie_localui_dialogheader_title_bindings"
@@ -95,34 +105,55 @@
                         {
                           "padding_border2": {
                             "type": "panel",
-                            "size": [ 2, 0 ]
+                            "size": [ 4, 0 ]
+                          }
+                        },
+                        {
+                          "header_button_panel": {
+                            "type": "panel",
+                            "size": [ "fill", "100%" ],
+                            "min_size": [ "100%c", "100%" ],
+                            "controls": [
+                              {
+                                "header_stack_panel": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
+                                  "size": [ "100%c", "100%" ],
+                                  "anchor_to": "right_middle",
+                                  "anchor_from": "right_middle",
+                                  "controls": [
+                                    {
+                                      "$rainbowpie_localui_dialogheader_extra_controls@$rainbowpie_localui_dialogheader_extra_controls": {
+                                        "ignored": "($rainbowpie_localui_dialogheader_extra_controls = 'common.empty_panel')"
+                                      }
+                                    },
+                                    {
+                                      "button_background": {
+                                        "type": "panel",
+                                        "visible": "$rainbowpie_localui_dialogheader_show_close",
+                                        "size": [ "100%y", "100%" ],
+                                        "controls": [
+                                          {
+                                            "close_button@rainbowpie_ui_common.close_button": {
+                                              "$rainbowpie_ui_theme_closebutton_default_color": "$rainbowpie_ui_theme_dialog_title_color",
+                                              "$close_button_panel_size": [ "100%", "100%" ],
+                                              "layer": 10,
+                                              "size": [ "100%", "100%" ],
+                                              "offset": [ 0, 0 ],
+                                              "anchor_from": "center",
+                                              "anchor_to": "center"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "$rainbowpie_localui_dialogheader_extra_controls@$rainbowpie_localui_dialogheader_extra_controls": {
-                "ignored": "($rainbowpie_localui_dialogheader_extra_controls = 'common.empty_panel')"
-              }
-            },
-            {
-              "button_background@rainbowpie_ui_dialog.header_background": {
-                "visible": "$rainbowpie_localui_dialogheader_show_close",
-                "size": [ "100%y", "100%" ],
-                "controls": [
-                  {
-                    "close_button@rainbowpie_ui_common.close_button": {
-                      "$rainbowpie_ui_theme_closebutton_default_color": "$rainbowpie_ui_theme_inventory_header_title_color",
-                      "$close_button_panel_size": [ "100%", "100%" ],
-                      "layer": 10,
-                      "size": [ "100%", "100%" ],
-                      "offset": [ 0, 0 ],
-                      "anchor_from": "center",
-                      "anchor_to": "center"
                     }
                   }
                 ]

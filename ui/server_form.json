@@ -3,6 +3,7 @@
 
   "third_party_server_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "server_form",
     "force_render_below": true,
     "$screen_content": "rainbowpieui_server_form.main_screen_content"
   },

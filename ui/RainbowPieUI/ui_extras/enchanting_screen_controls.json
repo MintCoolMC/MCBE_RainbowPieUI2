@@ -1,0 +1,185 @@
+{
+  "namespace": "rainbowpieui_enchanting",
+
+  "lapis_image@enchanting.lapis_image": {
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "offset": [ 0, 0 ],
+    "size": [ "88.88888888888889%", "88.88888888888889%" ]
+  },
+
+  "enchanting_root_panel": {
+    "type": "panel",
+    "size": [ 168, 168 ],
+    "controls": [
+      { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+      { "gamepad_cursor@common.gamepad_cursor_button": {} },
+      { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
+      {
+        "inventory_ui_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "anims": [
+            "@rainbowpie_ui_animations.container_panel_exit_animation_push",
+            "@rainbowpie_ui_animations.container_panel_exit_animation_pop",
+            "@rainbowpie_ui_animations.container_panel_entrance_animation_push",
+            "@rainbowpie_ui_animations.container_panel_entrance_animation_pop"
+          ],
+          "animation_reset_name": "screen_animation_reset",
+          "controls": [
+            {
+              "inventory_header@rainbowpie_ui_inventory.header": {
+                "size": [ "100%", "13.69047619047619%" ],
+                "offset": [ 0, 0 ],
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "$rainbowpie_localui_inventoryheader_title": "$container_title",
+                "$rainbowpie_localui_inventoryheader_title_border1_size": [ "2.380952380952381%", 0 ],
+                "$rainbowpie_localui_inventoryheader_title_border2_size": [ "2.380952380952381%", 0 ]
+              }
+            },
+            {
+              "common_panel@common.common_panel": {
+                "$dialog_background": "rainbowpie_ui_common.inventory_background",
+                "$show_close_button": false,
+                "size": [ "100%", "100% - 13.69047619047619%" ],
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle"
+              }
+            },
+            {
+              "enchanting_panel_top_half": {
+                "type": "panel",
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [ "96.42857142857143%", "36.30952380952381%" ], // 162x61
+                "offset": [ 0, "-48.21428571428571%" ],
+                "controls": [
+                  {
+                    "enchanting_book_panel": {
+                      "type": "panel",
+                      "offset": [ "4.938271604938272%", "-24.59016393442623%" ],
+                      "size": [ "100%y", "65.57377049180328%" ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "controls": [
+                        {
+                          "enchanting_book": {
+                            "type": "custom",
+                            "renderer": "enchanting_book_renderer",
+                            "layer": 13,
+                            "animation_reset_name": "screen_animation_reset",
+                            "anims": [
+                              "@common.screen_exit_size_animation_push",
+                              "@common.screen_exit_size_animation_pop",
+                              "@common.screen_entrance_size_animation_push",
+                              "@common.screen_entrance_size_animation_pop"
+                            ],
+                            "bindings": [
+                              {
+                                "binding_name": "#open",
+                                "binding_type": "global"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "item_grid": {
+                      "type": "grid",
+                      "grid_dimensions": [ 1, 1 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "offset": [ "4.938271604938272%", "19.67213114754098%" ],
+                      "size": [ "100%y", "29.50819672131148%" ],
+                      "collection_name": "enchanting_input_items",
+                      "controls": [
+                        {
+                          "item_slot@rainbowpie_ui_inventory_and_container.container_item": {
+                            "grid_position": [ 0, 0 ],
+                            "$item_collection_name": "enchanting_input_items"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "lapis_grid": {
+                      "type": "grid",
+                      "grid_dimensions": [ 1, 1 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "offset": [ "17.28395061728395%", "19.67213114754098%" ],
+                      "size": [ "100%y", "29.50819672131148%" ],
+                      "collection_name": "enchanting_lapis_items",
+                      "controls": [
+                        {
+                          "lapis@rainbowpie_ui_inventory_and_container.container_item": {
+                            "grid_position": [ 0, 0 ],
+                            "$cell_overlay_ref": "rainbowpieui_enchanting.lapis_image",
+                            "$item_collection_name": "enchanting_lapis_items",
+            
+                            "$focus_id_binding_type": "none",
+                            "$focus_id": "enchanting_lapis"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "grid_panel": {
+                      "type": "panel",
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "offset": [ 0, 0 ],
+                      "size": [ "65%", "100%" ],
+                      "controls": [
+                        {
+                          "dust_panel@enchanting.dust_panel": {
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "layer": 10
+                          }
+                        },
+                        {
+                          "enchantments_grid": {
+                            "type": "grid",
+                            "collection_name": "#enchant_buttons",
+                            "size": [ "100%", "100%" ],
+                            "layer": 2,
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "grid_dimensions": [ 1, 3 ],
+                            "grid_item_template": "enchanting.enchant_button_panel"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "inventory@rainbowpie_ui_inventory_and_container.inventory_panel_bottom_half": {
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [ "96.42857142857143%", "32.14285714285714%" ],
+                "offset": [ 0, "-14.28571428571429%" ]
+              }
+            },
+            {
+              "hotbar@rainbowpie_ui_inventory_and_container.hotbar_grid_template": {
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [ "96.42857142857143%", "10.71428571428571%" ],
+                "offset": [ 0, "-1.785714285714286%" ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

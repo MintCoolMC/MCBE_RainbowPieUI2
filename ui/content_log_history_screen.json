@@ -1,0 +1,36 @@
+{
+  "namespace": "content_log_history",
+
+  "clipboard_icon_wrapper/stack_panel/label_panel/label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_localui_button_text_color"
+  },
+
+  "clear_icon_wrapper/stack_panel/label_panel/label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_localui_button_text_color"
+  },
+
+  "horizontal_button_stack_panel/clipboard_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+    "size": [ "25%", "100%" ]
+  },
+
+  "horizontal_button_stack_panel/clear_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+    "size": [ "25%", "100%" ]
+  },
+
+  "messages_stack_panel": {
+    "$scrolling_content_anchor_from": "bottom_right",
+    "$scrolling_content_anchor_to": "bottom_right",
+    "size": [ "100% - 4px", "default" ]
+  },
+
+  "content_log_history_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$screen_content": "rainbowpieui_content_log_history.content_log_history_panel"
+  }
+}

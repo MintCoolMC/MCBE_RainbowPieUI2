@@ -1,0 +1,72 @@
+{
+  "namespace": "rainbowpieui_content_log_history",
+
+  "content_log_history_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "header@rainbowpie_ui_common.screen_header": {
+          "$rainbowpie_localui_screenheader_title": "contentlog.history.title"
+        }
+      },
+      {
+        "blur_layer@mintui_background.background_blur": {
+          "$background_offset": [ 0, "100% - 30px" ],
+          "$background_children_offset": [ 0, "-100% + 30px" ],
+          "$background_layer": -3
+        }
+      },
+      {
+        "mask_layer@mintui_background.background_mask": {
+          "$background_offset": [ 0, "100% - 30px" ],
+          "$background_children_offset": [ 0, "-100% + 30px" ],
+          "$background_layer": -3
+        }
+      },
+      {
+        "screen_content@rainbowpie_ui_common.screen_content": {
+          "$rainbowpie_localui_screen_content": [
+            {
+              "bottom_panel@rainbowpie_ui_common.text_background": {
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "size": [ "100%", "100% - 20px" ],
+                "layer": 10,
+                "controls": [
+                  {
+                    "messages_scrolling_panel@content_log_history.messages_scrolling_panel": {
+                      "$rainbowpie_localui_scrollbar_enabled": true,
+                      "size": [ "100%", "100% - 30px" ],
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "offset": [ 0, -30 ],
+                      "layer": 11
+                    }
+                  },
+                  {
+                    "bottom_panel@rainbowpie_ui_common.text_background": {
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "size": [ "100%", 30 ],
+                      "layer": 12,
+                      "controls": [
+                        {
+                          "horizontal_button_stack_panel@content_log_history.horizontal_button_stack_panel": {
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "size": [ "100% - 2px", "100% - 2px" ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

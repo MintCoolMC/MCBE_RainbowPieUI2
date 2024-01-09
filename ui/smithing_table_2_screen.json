@@ -22,6 +22,26 @@
     "ignored": true
   },
 
+  "smithing_table_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "smithing_table_root_panel@rainbowpieui_smithing_table_2.smithing_table_root_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "smithing_table_panel/root_panel": {
+    "ignored": "$rainbowpie_ui_flag_84df7492"
+  },
+
   "smithing_table_panel/root_panel/toolbar_anchor": {
     "ignored": true
   },

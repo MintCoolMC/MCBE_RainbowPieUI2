@@ -197,8 +197,8 @@
     "bindings": [
       {
         "binding_type": "view",
-        "source_control_name": "inventory_navigation_tab_toggle",
-        "source_property_name": "#toggle_state",
+        "source_control_name": "more_navigation_tab_toggle",
+        "source_property_name": "(not #toggle_state)",
         "target_property_name": "#visible"
       }
     ]

@@ -210,6 +210,164 @@
     ],
     "controls": [
       {
+        "title_3_anim@rainbowpie_ui_common.text_label": {
+          "text": "Item Renderer Test"
+        }
+      },
+      {
+        "item_renderer_test_1": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "controls": [
+            {
+              "item_id@common.text_edit_box": {
+                "layer": 5,
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "size": [ 80, 20 ],
+                "$text_box_name": "item_id_text_box",
+                "$text_edit_text_control": "item_id_text",
+                "$place_holder_text": "Item ID",
+                "focus_wrap_enabled": false,
+                "max_length": 32767
+              }
+            },
+            {
+              "item_render@common.item_renderer": {
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "size": [ 16, 16 ],
+                "offset": [ 80, 0 ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "item_id_text",
+                    "source_property_name": "#item_name",
+                    "target_property_name": "#output_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((#output_text * 1) * 65536)",
+                    "target_property_name": "#item_id_aux"
+                  }
+                ]
+              }
+            },
+            {
+              "item_id_label@rainbowpie_ui_common.text_label": {
+                "layer": 1,
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [ 96, 0 ],
+                "size": [ "default", "default" ],
+                "text": "#text",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "item_id_text",
+                    "source_property_name": "#item_name",
+                    "target_property_name": "#output_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('item_id_aux: ' + ((#output_text * 1) * 65536))",
+                    "target_property_name": "#text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "item_renderer_test_2": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "controls": [
+            {
+              "item_id@common.text_edit_box": {
+                "layer": 5,
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "size": [ 80, 20 ],
+                "$text_box_name": "item_id_text_box",
+                "$text_edit_text_control": "item_aux_id_text",
+                "$place_holder_text": "Item Aux ID",
+                "focus_wrap_enabled": false,
+                "max_length": 32767
+              }
+            },
+            {
+              "item_render@common.item_renderer": {
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "size": [ 16, 16 ],
+                "offset": [ 80, 0 ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "item_aux_id_text",
+                    "source_property_name": "#item_name",
+                    "target_property_name": "#output_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#output_text * 1)",
+                    "target_property_name": "#item_id_aux"
+                  }
+                ]
+              }
+            },
+            {
+              "item_id_label@rainbowpie_ui_common.text_label": {
+                "layer": 1,
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [ 96, 0 ],
+                "size": [ "default", "default" ],
+                "text": "#text",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "item_aux_id_text",
+                    "source_property_name": "#item_name",
+                    "target_property_name": "#output_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('item_id: ' + ((#output_text * 1) / 65536))",
+                    "target_property_name": "#text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "spacer_3": {
+          "type": "panel",
+          "size": [ 1, 1 ]
+        }
+      },
+      {
+        "title_01_anim@rainbowpie_ui_common.text_label": {
+          "text": "String Test"
+        }
+      },
+      {
+        "title_011_anim@rainbowpie_ui_common.text_label": {
+          "$var_1": "TEST STRING",
+          "text": "('This is a test string variable: %s, and this is end' * $var_1)"
+        }
+      },
+      {
+        "spacer_2": {
+          "type": "panel",
+          "size": [ 1, 1 ]
+        }
+      },
+      {
         "title_1_anim@rainbowpie_ui_common.text_label": {
           "text": "UI Animation Test"
         }
