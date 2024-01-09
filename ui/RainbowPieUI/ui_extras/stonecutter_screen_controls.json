@@ -10,10 +10,10 @@
           "type": "panel",
           "size": [ "100%", "100%" ],
           "anims": [
-            "@rainbowpie_ui_animations.container_panel_exit_animation_push",
-            "@rainbowpie_ui_animations.container_panel_exit_animation_pop",
-            "@rainbowpie_ui_animations.container_panel_entrance_animation_push",
-            "@rainbowpie_ui_animations.container_panel_entrance_animation_pop"
+            // "@rainbowpie_ui_animations.container_panel_exit_animation_push",
+            // "@rainbowpie_ui_animations.container_panel_exit_animation_pop",
+            // "@rainbowpie_ui_animations.container_panel_entrance_animation_push",
+            // "@rainbowpie_ui_animations.container_panel_entrance_animation_pop"
           ],
           "animation_reset_name": "screen_animation_reset",
           "controls": [
