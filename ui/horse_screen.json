@@ -35,6 +35,22 @@
     "offset": [ 79, 29 ]
   },
 
+  "horse_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "horse_root_panel@rainbowpieui_horse.horse_root_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
   "horse_panel/root_panel/common_panel": {
     "$dialog_background": "rainbowpie_ui_common.inventory_background",
     "$show_close_button": false,
@@ -45,6 +61,7 @@
   },
 
   "horse_panel/root_panel": {
+    "ignored": "$rainbowpie_ui_flag_84df7492",
     "$background_images": "rainbowpie_ui_common.cell_image",
     "modifications": [
       {
