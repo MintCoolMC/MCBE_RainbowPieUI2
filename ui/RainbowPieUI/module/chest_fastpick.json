@@ -552,7 +552,7 @@
           "offset": "$putin_button_offset",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "layer": 48
+          "layer": 1
         }
       },
       {
@@ -569,7 +569,7 @@
           "offset": "$pickup_button_offset",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "layer": 48
+          "layer": 1
         }
       }
     ]
