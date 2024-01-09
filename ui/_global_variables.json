@@ -167,6 +167,11 @@
   "$rainbowpie_ui_moduleflag_hud_block_counter_blockids": "aux65536,aux327680,aux327681,aux327682,aux327683,aux327684,aux327685,aux-31850496,aux-35192832,aux-33423360,aux-33357824,aux-15859712,aux-15925248,aux196608,aux196609,aux131072,aux15925248,aux7208960,aux65539,aux65541,aux1572864,aux1310720,aux2293760,aux-36175872,aux-36241408,aux-36306944,aux-36372480,aux-36438016,aux-36503552,aux-36569088,aux-36634624,aux-36700160,aux-36765696,aux-36831232,aux-36896768,aux-36962304,aux-37027840,aux-37093376,aux2949120,aux15466496,aux-41615360,aux-41549824,aux-42074112,aux-41877504,aux-42008576,aux-41156608,aux-41353216,aux-41418752,aux-41943040,aux-41680896,aux-41287680,aux-41811968,aux-41746432,aux-41222144,aux-41484288,aux11272192,aux10420224,aux10420232,aux10420231,aux10420239,aux10420236,aux10420238,aux10420225,aux10420228,aux10420229,aux10420237,aux10420233,aux10420227,aux10420235,aux10420234,aux10420226,aux10420230,",
   "$rainbowpie_ui_moduleflag_hud_bow_helper_bowids": "aux19857408,aux38207488,aux19890176,aux38240256,",
   "$rainbowpie_ui_moduleflag_hud_bow_helper_arrowids": "aux19922944,aux19922950,aux19922951,aux19922952,aux19922953,aux19922954,aux19922955,aux19922956,aux19922957,aux19922958,aux19922959,aux19922960,aux19922961,aux19922962,aux19922963,aux19922964,aux19922965,aux19922966,aux19922967,aux19922968,aux19922969,aux19922970,aux19922971,aux19922972,aux19922973,aux19922974,aux19922975,aux19922976,aux19922977,aux19922978,aux19922979,aux19922980,aux19922981,aux19922982,aux19922983,aux19922984,aux19922985,aux19922986,aux19922987,",
+  "$rainbowpie_ui_moduleflag_inventory_actions_delete_item_enabled": true,
+  "$rainbowpie_ui_moduleflag_inventory_actions_delete_all_item_enabled": true,
+  "$rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled": true,
+  "$rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled": true,
+  "$rainbowpie_ui_moduleflag_inventory_actions_quick_craft_enabled": true,
 
   // Theme System //
   "$rainbowpie_ui_themesystem_version": "1080",

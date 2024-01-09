@@ -394,6 +394,7 @@
           "controls": [
             {
               "quick_craft_button@common_buttons.light_content_button": {
+                "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_quick_craft_enabled)",
                 "$button_focus_precedence": -1,
                 "$rainbowpie_localui_button_desc_enabled": true,
                 "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.inventory.actions.quick_craft",
@@ -414,7 +415,7 @@
               "padding_1": {
                 "type": "panel",
                 "size": "$padding_size",
-                "ignored": "(not ($top_half_variant = 'crafting.survival_panel_top_half'))"
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled))"
               }
             },
             {
@@ -422,25 +423,29 @@
                 "type": "panel",
                 "size": [ "100%", 0 ],
                 "layer": 50,
-                "ignored": "(not ($top_half_variant = 'crafting.survival_panel_top_half'))",
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled))",
                 "controls": [
                   {
                     "armor_input_panel@rainbowpie_module_inventory_actions.armor_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled)",
                       "$button_auto_place": "button.drop_all"
                     }
                   },
                   {
                     "offhand_input_panel@rainbowpie_module_inventory_actions.offhand_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled)",
                       "$button_auto_place": "button.drop_all"
                     }
                   },
                   {
                     "inventory_input_panel@rainbowpie_module_inventory_actions.inventory_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled)",
                       "$button_auto_place": "button.drop_all"
                     }
                   },
                   {
                     "hotbar_input_panel@rainbowpie_module_inventory_actions.hotbar_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled)",
                       "$button_auto_place": "button.drop_all"
                     }
                   },
@@ -484,7 +489,7 @@
             },
             {
               "drop_item_button@common_buttons.light_content_button": {
-                "ignored": "(not ($top_half_variant = 'crafting.survival_panel_top_half'))",
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled))",
                 "$button_focus_precedence": -1,
                 "$rainbowpie_localui_button_desc_enabled": true,
                 "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.inventory.actions.drop_selection",
@@ -501,7 +506,7 @@
               "padding_0": {
                 "type": "panel",
                 "size": "$padding_size",
-                "ignored": "(not ($top_half_variant = 'crafting.survival_panel_top_half'))",
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_delete_item_enabled))",
                 "bindings": [
                   {
                     "binding_type": "global",
@@ -516,25 +521,29 @@
                 "type": "panel",
                 "size": [ "100%", 0 ],
                 "layer": 50,
-                "ignored": "(not ($top_half_variant = 'crafting.survival_panel_top_half'))",
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_delete_item_enabled))",
                 "controls": [
                   {
                     "armor_input_panel@rainbowpie_module_inventory_actions.armor_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_delete_all_item_enabled)",
                       "$button_auto_place": "button.container_auto_destroy"
                     }
                   },
                   {
                     "offhand_input_panel@rainbowpie_module_inventory_actions.offhand_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_delete_all_item_enabled)",
                       "$button_auto_place": "button.container_auto_destroy"
                     }
                   },
                   {
                     "inventory_input_panel@rainbowpie_module_inventory_actions.inventory_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_delete_all_item_enabled)",
                       "$button_auto_place": "button.container_auto_destroy"
                     }
                   },
                   {
                     "hotbar_input_panel@rainbowpie_module_inventory_actions.hotbar_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_delete_all_item_enabled)",
                       "$button_auto_place": "button.container_auto_destroy"
                     }
                   }
@@ -550,7 +559,7 @@
             },
             {
               "delete_item_button@common_buttons.light_content_button": {
-                "ignored": "(not ($top_half_variant = 'crafting.survival_panel_top_half'))",
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_delete_item_enabled))",
                 "$button_focus_precedence": -1,
                 "$rainbowpie_localui_button_desc_enabled": true,
                 "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.inventory.actions.destroy_selection",
