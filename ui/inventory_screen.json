@@ -1,6 +1,21 @@
 {
   "namespace": "crafting",
 
+  "player_inventory": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "inventory_actions_inventory@rainbowpie_module_inventory_actions.inventory_actions_inventory": {
+            }
+          }
+        ]
+      }
+    ]
+  },
+
   "recipe_inventory_screen_content/content_stack_panel": {
     "size": "$inventory_screen_size",
     "$inventory_screen_size": [ 326, 166 ],
