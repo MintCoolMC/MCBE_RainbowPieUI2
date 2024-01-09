@@ -1,6 +1,46 @@
 {
   "namespace": "rainbowpieui_crafting",
 
+  "armor_durability_panel_exit_animation_push": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ "30%x", 0 ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "armor_durability_panel_exit_animation_pop": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ "30%x", 0 ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "armor_durability_panel_entrance_animation_push": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "from": [ "30%x", 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "armor_durability_panel_entrance_animation_pop": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "from": [ "30%x", 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
   "inventory_icon@crafting.inventory_icon": {
     "size": [ "100%", "100%" ]
   },
@@ -31,7 +71,24 @@
     "size": [ 168, 179 ],
     "$animation_ignored|default": false,
     "controls": [
-      { "armor_durability_panel@rainbowpieui_crafting.armor_durability_panel_v2": {} },
+      {
+        "armor_durability_panel@rainbowpieui_crafting.armor_durability_panel_v2": {
+          "$anims": [
+            "@rainbowpieui_crafting.armor_durability_panel_exit_animation_push",
+            "@rainbowpieui_crafting.armor_durability_panel_exit_animation_pop",
+            "@rainbowpieui_crafting.armor_durability_panel_entrance_animation_push",
+            "@rainbowpieui_crafting.armor_durability_panel_entrance_animation_pop"
+          ],
+          "anims": "$anims",
+          "animation_reset_name": "screen_animation_reset",
+          "variables": [
+            {
+              "requires": "$animation_ignored",
+              "$anims": []
+            }
+          ]
+        }
+      },
       {
         "inventory_ui_panel": {
           "type": "panel",
