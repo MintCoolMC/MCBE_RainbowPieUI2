@@ -17,6 +17,7 @@
     "ui/RainbowPieUI/module/hud_block_counter.json",
     "ui/RainbowPieUI/module/hud_bow_helper.json",
     "ui/RainbowPieUI/module/hud_selected_item_id.json",
+    "ui/RainbowPieUI/module/inventory_actions.json",
 
     "ui/RainbowPieUI/module_lib/hud_item.json",
     "ui/RainbowPieUI/screen/music_player_screen.json",

@@ -52,6 +52,13 @@
           ],
           "controls": [
             {
+              "inventory_actions_inventory@rainbowpie_module_inventory_actions.inventory_actions_inventory": {
+                "$action_button_stack_panel_size": [ "13.0952380952381%", "100%c" ],
+                "$action_button_stack_panel_max_size": [ "13.0952380952381%", "100%" ],
+                "$padding_size": [ "100%", "9.090909090909091%x" ]
+              }
+            },
+            {
               "toolbar_panel": {
                 "type": "panel",
                 "anchor_to": "top_middle",

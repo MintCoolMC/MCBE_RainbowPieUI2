@@ -13,6 +13,10 @@ rainbowpie.ui.themesystem.description.title=介紹:	#
 rainbowpie.ui.themesystem.version_toolow=當前外觀包版本太低！	#
 rainbowpie.ui.themesystem.version_toohight=當前外觀包版本太高！	#
 
+rainbowpie.ui.inventory.actions.destroy_selection=銷毀物品
+rainbowpie.ui.inventory.actions.quick_craft=快速合成
+rainbowpie.ui.inventory.actions.drop_selection=丟出
+
 rainbowpie.ui.inventory.durability=耐用性:
 
 rainbowpie.ui.chest.fastpick.pickall=從箱子内拿取全部
