@@ -101,12 +101,23 @@
                 "size": [ 325, 200 ],
                 "bindings": [
                   {
+                    "binding_name": "#teacher_view_visible",
+                    "binding_type": "global"
+                  },
+                  {
+                    "binding_name": "#student_view_visible",
+                    "binding_type": "global"
+                  },
+                  {
                     "binding_name": "#advanced_visible",
                     "binding_type": "global"
                   },
                   {
+                    "binding_name": "#maximized_edit_visible"
+                  },
+                  {
                     "binding_type": "view",
-                    "source_property_name": "(not #advanced_visible)",
+                    "source_property_name": "(((not #advanced_visible) and (not #maximized_edit_visible)) and (#teacher_view_visible or #student_view_visible))",
                     "target_property_name": "#visible"
                   }
                 ]
@@ -134,32 +145,70 @@
               }
             },
             {
-              "exit_advanced_input_panel": {
-                "type": "input_panel",
-                "visible": false,
+              "dialog_panel_maximized@rainbowpie_ui_dialog.dialog_panel": {
+                "$rainbowpie_localui_dialogheader_title": "#title_text",
+                "$rainbowpie_localui_dialogheader_title_bindings": [
+                  {
+                    "binding_name": "#title_text",
+                    "binding_type": "global"
+                  }
+                ],
+                "$rainbowpie_localui_dialog_content": "npc_interact.maximized_action_edit",
+                "$close_button_to_button_id": "button.exit_maximized",
+                "size": [ 325, 200 ],
+                "bindings": [
+                  {
+                    "binding_name": "#maximized_edit_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            {
+              "exit_advanced@rainbowpieui_npc_interact.override_hotkey_input_panel": {
+                "$pressed_button_name": "button.exit_advanced",
                 "bindings": [
                   {
                     "binding_name": "#advanced_visible",
                     "binding_name_override": "#visible",
                     "binding_type": "global"
                   }
-                ],
-                "button_mappings": [
+                ]
+              }
+            },
+            {
+              "exit_maximized@rainbowpieui_npc_interact.override_hotkey_input_panel": {
+                "$pressed_button_name": "button.exit_maximized",
+                "bindings": [
                   {
-                    "from_button_id": "button.menu_exit",
-                    "to_button_id": "button.exit_advanced",
-                    "mapping_type": "global"
-                  },
-                  {
-                    "from_button_id": "button.menu_cancel",
-                    "to_button_id": "button.exit_advanced",
-                    "mapping_type": "global"
+                    "binding_name": "#maximized_edit_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
                   }
                 ]
               }
             }
           ]
         }
+      }
+    ]
+  },
+
+  "override_hotkey_input_panel": {
+    "type": "input_panel",
+    "visible": false,
+    "$pressed_button_name": "rainbowpie.placeholder",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "global"
       }
     ]
   },

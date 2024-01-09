@@ -1,6 +1,87 @@
 {
   "namespace": "crafting",
 
+  "player_inventory": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "inventory_actions_inventory@rainbowpie_module_inventory_actions.inventory_actions_inventory": {
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "recipe_inventory_screen_content/content_stack_panel": {
+    "size": "$inventory_screen_size",
+    "$inventory_screen_size": [ 326, 166 ],
+    "modifications": [
+      {
+        "control_name": "player_inventory",
+        "operation": "insert_before",
+        "value": [
+          {
+            "center_padding": {
+              "type": "panel",
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)",
+              "size": [ 4, 0 ],
+              "bindings": [
+                {
+                  "binding_type": "global",
+                  "binding_name": "#is_recipe_book_layout",
+                  "binding_name_override": "#visible"
+                }
+              ]
+            }
+          },
+          {
+            "player_inventory_root_panel@rainbowpieui_crafting.player_inventory": {
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)",
+              "$animation_ignored": true,
+              "bindings": [
+                {
+                  "binding_type": "global",
+                  "binding_name": "#is_recipe_book_layout",
+                  "binding_name_override": "#visible"
+                }
+              ]
+            }
+          },
+          {
+            "player_inventory_root_panel_animated@rainbowpieui_crafting.player_inventory": {
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)",
+              "bindings": [
+                {
+                  "binding_type": "global",
+                  "binding_name": "#is_survival_layout",
+                  "binding_name_override": "#visible"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "array_name": "variables",
+        "operation": "insert_front",
+        "value": [
+          {
+            "requires": "$rainbowpie_ui_flag_84df7492",
+            "$inventory_screen_size": [ 326, 156 ]
+          }
+        ]
+      }
+    ]
+  },
+
+  "recipe_inventory_screen_content/content_stack_panel/player_inventory": {
+    "ignored": "$rainbowpie_ui_flag_84df7492"
+  },
+
   "survival_panel_top_half": {
     "modifications": [
       {
@@ -51,6 +132,14 @@
               "size": [ "100%c", 23 ],
               "anchor_from": "top_right",
               "anchor_to": "bottom_right",
+              "bindings": [
+                {
+                  "binding_type": "global",
+                  "binding_name": "#is_creative_layout",
+                  "binding_name_override": "#visible",
+                  "ignored": "(not $rainbowpie_ui_flag_84df7492)"
+                }
+              ],
               "controls": [
                 {
                   "toolbar_stack_panel": {

@@ -3,14 +3,14 @@
 
   "pickup_icon": {
     "type": "image",
-    "size": [ 16, 16 ],
+    "size": [ "100%", "100%" ],
     "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/chest_pickup')",
     "color": "$text_color"
   },
 
   "putin_icon": {
     "type": "image",
-    "size": [ 16, 16 ],
+    "size": [ "100%", "100%" ],
     "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/chest_putin')",
     "color": "$text_color"
   },
@@ -514,11 +514,16 @@
   "chest_fastpick": {
     "type": "panel",
     "ignored": "(not $rainbowpie_ui_module_chest_fastpick)",
+
+    "$putin_button_size|default": [ 22, 22 ],
+    "$putin_button_offset|default": [ 20, -26 ],
+    "$pickup_button_size|default": [ 22, 22 ],
+    "$pickup_button_offset|default": [ 20, -2 ],
     "controls": [
       {
         "putin_input_panel@rainbowpie_module_chest_fastpick.putin_input_panel": {
-          "size": [ 22, 22 ],
-          "offset": [ 20, -26 ],
+          "size": "$putin_button_size",
+          "offset": "$putin_button_offset",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
           "layer": 50
@@ -526,8 +531,8 @@
       },
       {
         "pickup_input_panel@rainbowpie_module_chest_fastpick.pickup_input_panel": {
-          "size": [ 22, 22 ],
-          "offset": [ 20, -2 ],
+          "size": "$pickup_button_size",
+          "offset": "$pickup_button_offset",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
           "layer": 50
@@ -543,11 +548,11 @@
           "$pressed_button_name": "rainbowpie.chestputin",
           "$button_content": "rainbowpie_module_chest_fastpick.putin_icon",
           "consume_hover_events": false,
-          "size": [ 22, 22 ],
-          "offset": [ 20, -26 ],
+          "size": "$putin_button_size",
+          "offset": "$putin_button_offset",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "layer": 48
+          "layer": 1
         }
       },
       {
@@ -560,11 +565,11 @@
           "$pressed_button_name": "rainbowpie.chestpickup",
           "$button_content": "rainbowpie_module_chest_fastpick.pickup_icon",
           "consume_hover_events": false,
-          "size": [ 22, 22 ],
-          "offset": [ 20, -2 ],
+          "size": "$pickup_button_size",
+          "offset": "$pickup_button_offset",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "layer": 48
+          "layer": 1
         }
       }
     ]

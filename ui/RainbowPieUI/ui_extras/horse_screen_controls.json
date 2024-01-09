@@ -1,0 +1,209 @@
+{
+  "namespace": "rainbowpieui_horse",
+
+  "equip_container_item@rainbowpie_ui_inventory_and_container.container_item": {
+    "size": [ "100%", "100%x" ]
+  },
+
+  "container_item@rainbowpie_ui_inventory_and_container.container_item": {
+    "size": [ "100%y", "33.33333333333333%" ]
+  },
+
+  "horse_root_panel": {
+    "type": "panel",
+    "size": [ 168, 161 ],
+    "controls": [
+      { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+      { "gamepad_cursor@common.gamepad_cursor_button": {} },
+      { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
+      {
+        "inventory_ui_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "anims": [
+            "@rainbowpie_ui_animations.container_panel_exit_animation_push",
+            "@rainbowpie_ui_animations.container_panel_exit_animation_pop",
+            "@rainbowpie_ui_animations.container_panel_entrance_animation_push",
+            "@rainbowpie_ui_animations.container_panel_entrance_animation_pop"
+          ],
+          "animation_reset_name": "screen_animation_reset",
+          "controls": [
+            {
+              "inventory_header@rainbowpie_ui_inventory.header": {
+                "size": [ "100%", "14.28571428571429%" ],
+                "offset": [ 0, 0 ],
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "$rainbowpie_localui_inventoryheader_title": "$container_title",
+                "$rainbowpie_localui_inventoryheader_title_border1_size": [ "2.380952380952381%", 0 ],
+                "$rainbowpie_localui_inventoryheader_title_border2_size": [ "2.380952380952381%", 0 ]
+              }
+            },
+            {
+              "common_panel@common.common_panel": {
+                "$dialog_background": "rainbowpie_ui_common.inventory_background",
+                "$show_close_button": false,
+                "size": [ "100%", "100% - 14.28571428571429%" ],
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle"
+              }
+            },
+            {
+              "top_half_panel": {
+                "type": "panel",
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [ "96.42857142857143%", "33.54037267080745%" ], // 162x54
+                "offset": [ 0, "-50.31055900621118%" ],
+                "controls": [
+                  {
+                    "equip_grid": {
+                      "type": "grid",
+                      "anchor_to": "top_left",
+                      "anchor_from": "top_left",
+                      "size": [ "11.11111111111111%", "66.66666666666667%" ],
+                      "collection_name": "horse_equip_items",
+                      "grid_item_template": "rainbowpieui_horse.equip_container_item",
+                      "grid_dimension_binding": "#equip_grid_dimensions",
+                      "$item_collection_name": "horse_equip_items",
+                      "bindings": [
+                        {
+                          "binding_name": "#equip_grid_dimensions"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "saddle@horse.saddle_image": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ "100%y", "29.62962962962963%" ],
+                      "offset": [ "6.25%y", "1.851851851851852%" ],
+                      "layer": 4,
+                      "bindings": [
+                        {
+                          "binding_name": "#has_saddle_slot",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "armor_0@horse.armor_image": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ "100%y", "29.62962962962963%" ],
+                      "offset": [ "6.25%y", "1.851851851851852%" ],
+                      "layer": 4,
+                      "bindings": [
+                        {
+                          "binding_name": "#has_only_armor_slot",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "carpet_0@horse.carpet_image": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ "100%y", "29.62962962962963%" ],
+                      "offset": [ "6.25%y", "1.851851851851852%" ],
+                      "layer": 4,
+                      "bindings": [
+                        {
+                          "binding_name": "#has_only_carpet_slot",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "armor_1@horse.armor_image": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ "100%y", "29.62962962962963%" ],
+                      "offset": [ "6.25%y", "35.18518518518519%" ],
+                      "layer": 4,
+                      "bindings": [
+                        {
+                          "binding_name": "#has_armor_and_saddle_slot",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "carpet_1@horse.carpet_image": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ "100%y", "29.62962962962963%" ],
+                      "offset": [ "6.25%y", "35.18518518518519%" ],
+                      "layer": 4,
+                      "bindings": [
+                        {
+                          "binding_name": "#has_carpet_and_saddle_slot",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "renderer@horse.horse_renderer": {
+                      "size": [ "100%y", "100%" ],
+                      "offset": [ "11.11111111111111%", 0 ]
+                    }
+                  },
+                  {
+                    "inv_panel": {
+                      "type": "panel",
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ "44.44444444444444%", 0 ],
+                      "controls": [
+                        {
+                          "inv_grid": {
+                            "type": "grid",
+                            "anchor_to": "top_left",
+                            "anchor_from": "top_left",
+                            "size": [ "100% - 44.44444444444444%", "100%" ],
+                            "layer": 3,
+                            "collection_name": "container_items",
+                            "grid_item_template": "rainbowpieui_horse.container_item",
+                            "grid_dimension_binding": "#inv_grid_dimensions",
+                            "$item_collection_name": "container_items",
+                            "bindings": [
+                              {
+                                "binding_name": "#inv_grid_dimensions"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "inventory@rainbowpie_ui_inventory_and_container.inventory_panel_bottom_half": {
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [ "96.42857142857143%", "33.54037267080745%" ],
+                "offset": [ 0, "-14.90683229813665%" ]
+              }
+            },
+            {
+              "hotbar@rainbowpie_ui_inventory_and_container.hotbar_grid_template": {
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [ "96.42857142857143%", "11.18012422360248%" ],
+                "offset": [ 0, "-1.863354037267081%" ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

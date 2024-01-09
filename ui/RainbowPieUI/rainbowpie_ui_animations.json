@@ -1,7 +1,52 @@
 {
   "namespace": "rainbowpie_ui_animations",
-  
+
+  "container_panel_exit_animation_push": {
+    "ignored": "(not $rainbowpie_ui_flag_84df7492)",
+    "anim_type": "size",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "from": [ "100%", "100%" ],
+    "to": [ "50%", "50%" ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "container_panel_exit_animation_pop": {
+    "ignored": "(not $rainbowpie_ui_flag_84df7492)",
+    "anim_type": "size",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "from": [ "100%", "100%" ],
+    "to": [ "50%", "50%" ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "container_panel_entrance_animation_push": {
+    "ignored": "(not $rainbowpie_ui_flag_84df7492)",
+    "anim_type": "size",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "from": [ "50%", "50%" ],
+    "to": [ "100%", "100%" ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "container_panel_entrance_animation_pop": {
+    "ignored": "(not $rainbowpie_ui_flag_84df7492)",
+    "anim_type": "size",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "from": [ "50%", "50%" ],
+    "to": [ "100%", "100%" ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
   "container_screen_exit_animation_push": {
+    "ignored": "$rainbowpie_ui_flag_84df7492",
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_container_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_container_transition_time",
@@ -12,6 +57,7 @@
   },
 
   "container_screen_exit_animation_pop": {
+    "ignored": "$rainbowpie_ui_flag_84df7492",
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_container_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_container_transition_time",
@@ -22,6 +68,7 @@
   },
 
   "container_screen_entrance_animation_push": {
+    "ignored": "$rainbowpie_ui_flag_84df7492",
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_container_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_container_transition_time",
@@ -32,6 +79,7 @@
   },
 
   "container_screen_entrance_animation_pop": {
+    "ignored": "$rainbowpie_ui_flag_84df7492",
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_container_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_container_transition_time",
