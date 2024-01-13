@@ -132,7 +132,7 @@
   // 仅控制不同的UI显示，不会影响bindings中的判定，留空保持默认
   "$rainbowpie_ui_debug_ui_device_override": "", // windows;windows_arm;windows_mobile;android;apple_ios;apple_osx;apple_tv;console;console_xboxone;console_ps4
   "$rainbowpie_ui_debug_ui_input_override": "", // touch;mouse;game_pad
-  "$rainbowpie_ui_debug_ui_new_video_settings": true,
+  "$rainbowpie_ui_debug_ui_new_video_settings": false,
   "$rainbowpie_ui_debug_ui_var_override": false, // 启用后将使用下面的值
   "$rainbowpie_ui_debug_ui_var_override_file_picking_supported": true,
   "$rainbowpie_ui_debug_ui_var_override_world_archive_support": true,
