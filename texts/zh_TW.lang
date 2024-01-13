@@ -25,6 +25,8 @@ rainbowpie.ui.chest.fastpick.putall=從物品欄放入全部
 rainbowpie.ui.screenshot.screenshotPathButton=圖片路徑
 rainbowpie.ui.screenshot.screenshotPathTitle=截屏已保存至：
 
+rainbowpie.ui.settings.raytracing.title=光纖追蹤設定
+
 rainbowpie.ui.settings.theme.title=外觀
 rainbowpie.ui.settings.module.title=模組
 

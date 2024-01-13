@@ -25,6 +25,8 @@ rainbowpie.ui.chest.fastpick.putall=Place all items from the inventory intro thi
 rainbowpie.ui.screenshot.screenshotPathButton=IMAGE PATH
 rainbowpie.ui.screenshot.screenshotPathTitle=The screenshot has been saved to:
 
+rainbowpie.ui.settings.raytracing.title=Ray Tracing Settings
+
 rainbowpie.ui.settings.theme.title=Theme
 rainbowpie.ui.settings.module.title=Module
 
