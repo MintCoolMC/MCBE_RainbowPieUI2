@@ -171,6 +171,38 @@
                         }
                       ]
                     }
+                  },
+                  {
+                    "cost_label_0@anvil.cost_label": {
+                      "offset": [ 0, 2 ],
+                      "color": "$anvil_cost_fail_text_color",
+                      "bindings": [
+                        {
+                          "binding_name": "#cost_text",
+                          "binding_name_override": "#text"
+                        },
+                        {
+                          "binding_name": "#cost_text_red",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "cost_label_1@anvil.cost_label": {
+                      "offset": [ 0, 2 ],
+                      "color": "$anvil_cost_success_text_color",
+                      "bindings": [
+                        {
+                          "binding_name": "#cost_text",
+                          "binding_name_override": "#text"
+                        },
+                        {
+                          "binding_name": "#cost_text_green",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
                   }
                 ]
               }
