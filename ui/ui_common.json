@@ -1541,6 +1541,10 @@
               "@common.screen_entrance_animation_push_alpha",
               "@common.screen_entrance_animation_pop_alpha"
             ]
+          },
+          {
+            "requires": "$rainbowpie_ui_debug_ui_new_video_settings",
+            "$new_video_settings": true
           }
         ]
       }
