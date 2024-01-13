@@ -1,8 +1,7 @@
 {
   "namespace": "rainbowpieui_redstone",
 
-  "hopper_root_panel": {
-    "type": "panel",
+  "hopper_root_panel@common.root_panel": {
     "size": [ 168, 125 ],
     "controls": [
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
@@ -101,8 +100,7 @@
     ]
   },
 
-  "redstone_root_panel": {
-    "type": "panel",
+  "redstone_root_panel@common.root_panel": {
     "size": [ 168, 161 ],
     "controls": [
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },

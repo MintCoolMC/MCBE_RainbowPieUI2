@@ -66,8 +66,7 @@
     ]
   },
 
-  "player_inventory_root_panel": {
-    "type": "panel",
+  "player_inventory_root_panel@common.root_panel": {
     "size": [ 168, 179 ],
     "$animation_ignored|default": false,
     "controls": [

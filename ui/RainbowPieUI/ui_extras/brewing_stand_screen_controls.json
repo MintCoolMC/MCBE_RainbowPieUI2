@@ -16,8 +16,7 @@
     "$item_collection_name": "brewing_result_items"
   },
 
-  "brewing_stand_root_panel": {
-    "type": "panel",
+  "brewing_stand_root_panel@common.root_panel": {
     "size": [ 168, 166 ],
     "controls": [
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },

@@ -8,8 +8,7 @@
     "size": [ "88.88888888888889%", "88.88888888888889%" ]
   },
 
-  "enchanting_root_panel": {
-    "type": "panel",
+  "enchanting_root_panel@common.root_panel": {
     "size": [ 168, 168 ],
     "controls": [
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
