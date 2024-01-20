@@ -1,6 +1,26 @@
 {
   "namespace": "profile_card",
 
+  "dialog_content_with_skin/skin_pane/paper_doll_panel/paper_doll": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "skin_pane",
+        "source_property_name": "#gesture_delta_source",
+        "target_property_name": "#gesture_delta_source"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "skin_pane",
+        "source_property_name": "#gesture_mouse_delta_x",
+        "target_property_name": "#gesture_mouse_delta_x"
+      },
+      {
+        "binding_name": "#player_uuid"
+      }
+    ]
+  },
+
   "xbl_dialog_scrolling_content/add_friend_button": {
     "size": [ "100%", 27 ],
     "$button_image_size": [ "100%", "100% - 2px" ],
