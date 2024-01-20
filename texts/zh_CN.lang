@@ -71,6 +71,11 @@ rainbowpie.ui.pause.tab.persona=我的档案
 rainbowpie.ui.pause.title.unscored_players=未得分玩家
 rainbowpie.ui.pause.quit.tiptext=双击退出按钮即可保存并退出
 
+rainbowpie.ui.pause.permissions.custom=自定义
+rainbowpie.ui.pause.permissions.member=成员
+rainbowpie.ui.pause.permissions.op=操作员
+rainbowpie.ui.pause.permissions.visitor=访客
+
 rainbowpie.ui.version.warn=版本警告！
 rainbowpie.ui.version.supported=支持的版本：
 rainbowpie.ui.version.warn_unsupport=使用不支持的版本可能出现崩溃或界面错误等问题
