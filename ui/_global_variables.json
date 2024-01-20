@@ -104,7 +104,7 @@
   "$rainbowpie_ui_flag_6d2ac350": true, // New chat for touch
   "$rainbowpie_ui_flag_6bb756a3": true, // New dialog style for popup dialog
   "$rainbowpie_ui_flag_b3c44822": true, // Rainbow Pie UI Chat Settings
-  "$rainbowpie_ui_flag_0ffd0593": true, // HUD Paper doll
+  "$rainbowpie_ui_flag_0ffd0593": false, // HUD Paper doll
   "$rainbowpie_ui_flag_d9ed3763": true, // New HUD Tab list
   "$rainbowpie_ui_flag_82f66bc6": false, // Chat Extra Message Panel Animation
   "$rainbowpie_ui_flag_84d26622": true, // Show All dropdown
