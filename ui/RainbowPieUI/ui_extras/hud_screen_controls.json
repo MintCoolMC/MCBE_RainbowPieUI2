@@ -602,6 +602,7 @@
         "hud_player": {
           "type": "custom",
           "renderer": "hud_player_renderer",
+          "ignored": "(not $rainbowpie_ui_flag_0ffd0593)",
           "size": [ 0, 0 ],
           "offset": [ 0, "200%" ]
         }
