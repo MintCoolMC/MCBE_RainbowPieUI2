@@ -2,7 +2,7 @@
   <img src="https://github.com/MintCoolMC/MCBE_RainbowPieUI2/blob/main/pack_icon.png?raw=true" alt="LOGO" width="200">
   <br>MCBE Rainbow Pie UI V2<br>
 </h1>
-| [简体中文](/README_CHS.md) | [English](/README.md) |
+[简体中文](/README_CHS.md) | [English](/README.md)
 
 Resource Pack for Minecraft Bedrock Edition
 
