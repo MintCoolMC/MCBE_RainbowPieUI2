@@ -17,7 +17,7 @@ rainbowpie.ui.inventory.actions.destroy_selection=銷毀物品
 rainbowpie.ui.inventory.actions.quick_craft=快速合成
 rainbowpie.ui.inventory.actions.drop_selection=丟出
 
-rainbowpie.ui.inventory.durability=耐用性:
+rainbowpie.ui.inventory.durability=耐久度:
 
 rainbowpie.ui.chest.fastpick.pickall=從箱子内拿取全部
 rainbowpie.ui.chest.fastpick.putall=從物品欄放入全部
