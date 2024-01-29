@@ -4,14 +4,14 @@
         "description": "Minecraft UI Pack",
         "name": "Rainbow Pie UI",
         "uuid": "82d610e8-0968-4c0a-a47e-38e6663ee6ff",
-        "version": [ 2, 0, 10097 ],
+        "version": [ 2, 2, 10100 ],
         "min_engine_version": [ 1, 20, 50 ]
     },
     "modules": [
         {
             "type": "resources",
             "uuid": "d983a931-3833-458c-93b4-58e6c1ed9255",
-            "version": [ 2, 0, 10097 ]
+            "version": [ 2, 2, 10100 ]
         }
     ],
     "settings": [

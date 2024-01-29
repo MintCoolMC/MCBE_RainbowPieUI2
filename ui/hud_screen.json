@@ -1,6 +1,10 @@
 {
   "namespace": "hud",
 
+  "vignette_renderer": {
+    "ignored": true
+  },
+
   "root_panel/layout_customization_close_without_saving/layout_customization_close_without_saving_modal": {
     "ignored": true
   },

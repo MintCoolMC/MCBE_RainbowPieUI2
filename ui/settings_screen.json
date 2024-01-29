@@ -214,6 +214,23 @@
   "selector_stack_panel/controls_and_settings_selector_pane": {
     "modifications": [
       {
+        "control_name": "video_button",
+        "operation": "insert_after",
+        "value": [
+          {
+            "raytracing_button@rainbowpieui_general_section.raytracing_button": {
+              "$toggle_group_forced_index": 3503,
+              "bindings": [
+                {
+                  "binding_name": "#raytracing_enabled",
+                  "binding_name_override": "#visible"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
         "array_name": "controls",
         "operation": "insert_back",
         "value": [
@@ -252,6 +269,17 @@
 
   "section_content_panels/general_and_controls_sections": {
     "modifications": [
+      {
+        "control_name": "video_section",
+        "operation": "insert_after",
+        "value": [
+          {
+            "raytracing_section@rainbowpieui_general_section.raytracing_section": {
+              "ignored": "(not $rainbowpie_ui_flag_settings_ray_tracing_section)"
+            }
+          }
+        ]
+      },
       {
         "array_name": "controls",
         "operation": "insert_back",

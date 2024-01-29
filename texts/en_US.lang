@@ -25,6 +25,8 @@ rainbowpie.ui.chest.fastpick.putall=Place all items from the inventory intro thi
 rainbowpie.ui.screenshot.screenshotPathButton=IMAGE PATH
 rainbowpie.ui.screenshot.screenshotPathTitle=The screenshot has been saved to:
 
+rainbowpie.ui.settings.raytracing.title=Ray Tracing Settings
+
 rainbowpie.ui.settings.theme.title=Theme
 rainbowpie.ui.settings.module.title=Module
 
@@ -68,6 +70,11 @@ rainbowpie.ui.pause.tab.scoreboard=Score
 rainbowpie.ui.pause.tab.persona=My Profile
 rainbowpie.ui.pause.title.unscored_players=Unscored players
 rainbowpie.ui.pause.quit.tiptext=Double click to Save & Quit
+
+rainbowpie.ui.pause.permissions.custom=Custom
+rainbowpie.ui.pause.permissions.member=Member
+rainbowpie.ui.pause.permissions.op=Operator
+rainbowpie.ui.pause.permissions.visitor=Visitor
 
 rainbowpie.ui.version.warn=Warning!
 rainbowpie.ui.version.supported=Supported Versions:

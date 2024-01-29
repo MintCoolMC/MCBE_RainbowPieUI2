@@ -25,6 +25,8 @@ rainbowpie.ui.chest.fastpick.putall=放入物品栏内全部物品
 rainbowpie.ui.screenshot.screenshotPathButton=图片路径
 rainbowpie.ui.screenshot.screenshotPathTitle=截图已经保存到：
 
+rainbowpie.ui.settings.raytracing.title=光线追踪设置
+
 rainbowpie.ui.settings.theme.title=主题
 rainbowpie.ui.settings.module.title=模块
 
@@ -68,6 +70,11 @@ rainbowpie.ui.pause.tab.scoreboard=计分板
 rainbowpie.ui.pause.tab.persona=我的档案
 rainbowpie.ui.pause.title.unscored_players=未得分玩家
 rainbowpie.ui.pause.quit.tiptext=双击退出按钮即可保存并退出
+
+rainbowpie.ui.pause.permissions.custom=自定义
+rainbowpie.ui.pause.permissions.member=成员
+rainbowpie.ui.pause.permissions.op=操作员
+rainbowpie.ui.pause.permissions.visitor=访客
 
 rainbowpie.ui.version.warn=版本警告！
 rainbowpie.ui.version.supported=支持的版本：

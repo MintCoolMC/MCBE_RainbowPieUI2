@@ -1,8 +1,7 @@
 {
   "namespace": "rainbowpieui_chest",
 
-  "large_chest_root_panel": {
-    "type": "panel",
+  "large_chest_root_panel@common.root_panel": {
     "size": [ 168, 215 ],
     "controls": [
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
@@ -129,8 +128,7 @@
     ]
   },
 
-  "small_chest_root_panel": {
-    "type": "panel",
+  "small_chest_root_panel@common.root_panel": {
     "size": [ 168, 161 ],
     "controls": [
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
