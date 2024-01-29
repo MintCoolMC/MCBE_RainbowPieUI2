@@ -356,7 +356,18 @@
             },
             {
               "binding_type": "view",
+              "source_control_name": "arrow_count",
+              "source_property_name": "(#inventory_target_item_total_count_int = 0)",
+              "target_property_name": "#is_arrow_empty"
+            },
+            {
+              "binding_type": "view",
               "source_property_name": "(not (($rainbowpie_ui_moduleflag_hud_bow_helper_bowids - #selected_item_id_aux_str) = $rainbowpie_ui_moduleflag_hud_bow_helper_bowids))",
+              "target_property_name": "#is_holding_bow"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#is_holding_bow and (not #is_arrow_empty))",
               "target_property_name": "#visible"
             }
           ]
