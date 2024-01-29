@@ -6,10 +6,8 @@
   },
 
   "slot_selected": {
-    "size": [ "100%", "100%" ],
-    "texture": "textures/ui/White",
-    "color": "$rainbowpie_ui_theme_inventory_cell_highlight_color",
-    "alpha": "$rainbowpie_ui_theme_inventory_cell_highlight_alpha"
+    "texture": "textures/ui/focus_border_white",
+    "size": [ "100%", "100%" ]
   },
 
   "durability_bar": {
