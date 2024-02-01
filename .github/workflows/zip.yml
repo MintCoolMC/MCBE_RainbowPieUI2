@@ -1,7 +1,10 @@
 name: Zip and Upload
 
 on:
-  push
+  push:
+    branches:
+      - main
+      - dev_progress
   workflow_dispatch:
 
 jobs:
