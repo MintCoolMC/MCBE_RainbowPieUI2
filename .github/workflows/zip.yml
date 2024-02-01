@@ -1,6 +1,11 @@
 name: Zip and Upload
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+      - dev_progress
+  workflow_dispatch:
 
 jobs:
   zip-and-upload:
@@ -25,3 +30,8 @@ jobs:
         with:
           name: MintUI_Project
           path: "*.mcpack"
+      - name: Cleanup Workflow
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          retain_days: 1
+          keep_minimum_runs: 10
