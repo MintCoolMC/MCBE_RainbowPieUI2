@@ -1966,11 +1966,21 @@
               }
             },
             {
-              "center_panel": {
+              "pause_playerlist_panel": {
                 "type": "panel",
                 "size": [ "fill", "100% - 2px" ],
                 "controls": [
-                  { "player_list_scrolling_panel@pause.player_list_scrolling_panel": {} }
+                  {
+                    "player_list_scrolling_panel@common.scrolling_panel": {
+                      "$rainbowpie_localui_scrollbar_enabled": true,
+                      "size": [ "100% - 2px", "100% - 3px" ],
+                      "$show_background": false,
+                      "$scroll_size": [ "5px", "100% - 4px" ],
+                      "$scroll_bar_left_padding_size": [ 1, 0 ],
+                      "$scroll_bar_right_padding_size": [ 1, 0 ],
+                      "$scrolling_content": "rainbowpieui_pause.player_list"
+                    }
+                  }
                 ]
               }
             }
