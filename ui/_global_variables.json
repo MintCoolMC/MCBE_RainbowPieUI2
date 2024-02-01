@@ -1,9 +1,9 @@
 {
   "$rainbowpieui_ci": true,
   "$rainbowpieui_commit_id": "local",
-  "$rainbowpieui_branch_type": "dev",
+  "$rainbowpieui_branch_type": "release",
   "$rainbowpieui_branch_name": "master",
-  "$rainbowpieui_branch_display_name": "DEV",
+  "$rainbowpieui_branch_display_name": "MAIN",
 
   "$rainbowpieui_engine_version": "22",
   "$rainbowpieui_patch_version": "10101",
