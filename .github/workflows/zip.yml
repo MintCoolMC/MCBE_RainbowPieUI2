@@ -25,3 +25,8 @@ jobs:
         with:
           name: MintUI_Project
           path: "*.mcpack"
+      - name: Cleanup Workflow
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          retain_days: 1
+          keep_minimum_runs: 10
