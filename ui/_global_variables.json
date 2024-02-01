@@ -1,9 +1,9 @@
 {
-  "$rainbowpieui_ci": false,
+  "$rainbowpieui_ci": true,
   "$rainbowpieui_commit_id": "local",
-  "$rainbowpieui_branch_type": "release",
+  "$rainbowpieui_branch_type": "dev",
   "$rainbowpieui_branch_name": "master",
-  "$rainbowpieui_branch_display_name": "Release",
+  "$rainbowpieui_branch_display_name": "DEV",
 
   "$rainbowpieui_engine_version": "22",
   "$rainbowpieui_patch_version": "10101",
@@ -91,9 +91,9 @@
   "$rainbowpie_ui_flag_chat_use_ui_font": true,
   "$rainbowpie_ui_flag_server_form_force": false,
 
-  "$rainbowpie_ui_flag_start_dialog_alert": false,
-  "$rainbowpie_ui_flag_start_dialog_alert_title": "",
-  "$rainbowpie_ui_flag_start_dialog_alert_text": "",
+  "$rainbowpie_ui_flag_start_dialog_alert": true,
+  "$rainbowpie_ui_flag_start_dialog_alert_title": "Rainbow Pie UI Insider Preview",
+  "$rainbowpie_ui_flag_start_dialog_alert_text": "You are using an CI version of Rainbow Pie UI,\nIf you find any bugs please write an issue:\n§ehttps://github.com/MintCoolMC/MCBE_RainbowPieUI2/issues",
   "$rainbowpie_ui_flag_start_dialog_alert_button": "gui.ok",
   
   // Unnamed Flags
