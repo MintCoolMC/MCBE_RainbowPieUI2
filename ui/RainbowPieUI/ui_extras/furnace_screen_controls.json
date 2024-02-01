@@ -1,8 +1,7 @@
 {
   "namespace": "rainbowpieui_furnace",
 
-  "furnace_root_panel": {
-    "type": "panel",
+  "furnace_root_panel@common.root_panel": {
     "size": [ 168, 161 ],
     "controls": [
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },

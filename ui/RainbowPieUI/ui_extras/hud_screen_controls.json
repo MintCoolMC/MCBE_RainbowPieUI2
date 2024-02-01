@@ -602,6 +602,7 @@
         "hud_player": {
           "type": "custom",
           "renderer": "hud_player_renderer",
+          "ignored": "(not $rainbowpie_ui_flag_0ffd0593)",
           "size": [ 0, 0 ],
           "offset": [ 0, "200%" ]
         }
@@ -955,6 +956,10 @@
       {
         "requires": "$rainbowpie_ui_flag_hud_chat_halfscreen",
         "$chat_panel_size": [ "50%", "100% - 24px" ]
+      },
+      {
+        "requires": "$rainbowpie_ui_flag_149baa36",
+        "$chat_panel_size": [ "288px", "100% - 24px" ]
       }
     ],
     "controls": [
@@ -1049,11 +1054,18 @@
           "anchor_to": "bottom_left",
           "factory": {
             "name": "chat_item_factory",
-            "max_children_size": 50,
+            "max_children_size": "$max_children_size",
             "control_ids": {
               "chat_item": "chat_item@rainbowpieui_hud.chat_grid_item"
             }
-          }
+          },
+          "$max_children_size": 50,
+          "variables": [
+            {
+              "requires": "$rainbowpie_ui_flag_149baa36",
+              "$max_children_size": 10
+            }
+          ]
         }
       }
     ]

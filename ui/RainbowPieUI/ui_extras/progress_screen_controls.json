@@ -1,6 +1,60 @@
 {
   "namespace": "rainbowpieui_progress",
 
+  "modal_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "background@rainbowpie_ui_common.global_background": {
+          "size": [ "500%", "500%" ]
+        }
+      },
+      {
+        "modal_progress_panel_with_cancel": {
+          "type": "panel",
+          "size": "$modal_screen_size",
+          "layer": 1,
+          "controls": [
+            {
+              "content": {
+                "type": "panel",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100%-12px", "100%-60px" ],
+                "offset": [ 6, 20 ],
+                "controls": [
+                  {
+                    "title_panel@progress.title_panel": {}
+                  },
+                  {
+                    "progress_loading_bars@rainbowpie_ui_common.progress_loading_bars": {
+                      "size": [ 65, 3 ],
+                      "offset": [ 0, 24 ],
+                      "layer": 2,
+                      "bindings": [
+                        {
+                          "binding_name": "#bar_animation_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "modal_button_panel@progress.modal_button_panel": {
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "size": [ "100%", 40 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "world_loading_progress_screen": {
     "type": "panel",
     "controls": [

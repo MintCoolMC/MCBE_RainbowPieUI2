@@ -5,11 +5,11 @@
   "$rainbowpieui_branch_name": "master",
   "$rainbowpieui_branch_display_name": "Release",
 
-  "$rainbowpieui_engine_version": "21",
-  "$rainbowpieui_patch_version": "10097",
+  "$rainbowpieui_engine_version": "22",
+  "$rainbowpieui_patch_version": "10101",
   "$rainbowpieui_hotfix_version": "1",
-  "$rainbowpieui_engine_version_name": "2.1",
-  "$rainbowpieui_full_version_name": "2.1.10097.master",
+  "$rainbowpieui_engine_version_name": "2.2",
+  "$rainbowpieui_full_version_name": "2.2.10101.master",
   "$rainbowpieui_codename": "sunshine2024y",
   "$rainbowpieui_watermark": true,
 
@@ -27,7 +27,7 @@
   "$mintui_pack_name": "Rainbow Pie UI",
   "$mintui_pack_description": "Minecraft UI Pack",
   "$mintui_pack_uuid": "82d610e8-0968-4c0a-a47e-38e6663ee6ff",
-  "$mintui_pack_version": "2.1.10097",
+  "$mintui_pack_version": "2.2.10101",
 
   "$rainbowpie_ui_verify_enabled": false,
   "$rainbowpie_ui_verify_mode": "default", // blacklist|whitelist|[default]
@@ -64,6 +64,8 @@
   "$rainbowpie_ui_flag_settings_quick_perspective": true,
   "$rainbowpie_ui_flag_tablist_selfTag": true,
   "$rainbowpie_ui_flag_play_bottom_panel": true,
+
+  "$rainbowpie_ui_flag_settings_ray_tracing_section": true,
 
   "$rainbowpie_ui_flag_pause_myinfo_disabled": true,
   "$rainbowpie_ui_flag_pause_tab_scoreboard": false,
@@ -102,7 +104,7 @@
   "$rainbowpie_ui_flag_6d2ac350": true, // New chat for touch
   "$rainbowpie_ui_flag_6bb756a3": true, // New dialog style for popup dialog
   "$rainbowpie_ui_flag_b3c44822": true, // Rainbow Pie UI Chat Settings
-  "$rainbowpie_ui_flag_0ffd0593": true, // HUD Paper doll
+  "$rainbowpie_ui_flag_0ffd0593": false, // HUD Paper doll
   "$rainbowpie_ui_flag_d9ed3763": true, // New HUD Tab list
   "$rainbowpie_ui_flag_82f66bc6": false, // Chat Extra Message Panel Animation
   "$rainbowpie_ui_flag_84d26622": true, // Show All dropdown
@@ -122,6 +124,7 @@
   "$rainbowpie_ui_flag_fc1ae899": true, // HUD Durability
   "$rainbowpie_ui_flag_9ce040c1": true, // Inventory Durability Panel
   "$rainbowpie_ui_flag_84df7492": true, // New UI animation for inventory and containers
+  "$rainbowpie_ui_flag_149baa36": true, // Set hud chat max line to 10
 
   // Debug
   "$rainbowpie_ui_debug": false,
@@ -131,6 +134,7 @@
   // 仅控制不同的UI显示，不会影响bindings中的判定，留空保持默认
   "$rainbowpie_ui_debug_ui_device_override": "", // windows;windows_arm;windows_mobile;android;apple_ios;apple_osx;apple_tv;console;console_xboxone;console_ps4
   "$rainbowpie_ui_debug_ui_input_override": "", // touch;mouse;game_pad
+  "$rainbowpie_ui_debug_ui_new_video_settings": false,
   "$rainbowpie_ui_debug_ui_var_override": false, // 启用后将使用下面的值
   "$rainbowpie_ui_debug_ui_var_override_file_picking_supported": true,
   "$rainbowpie_ui_debug_ui_var_override_world_archive_support": true,

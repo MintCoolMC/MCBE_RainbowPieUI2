@@ -1,6 +1,98 @@
 {
   "namespace": "rainbowpieui_general_section",
 
+  "raytracing_button@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "raytracing_button_toggle",
+    "$glyph_texture": "textures/ui/video_glyph",
+    "$glyph_color_texture": "textures/ui/video_glyph_color",
+    "$glyph_size": [ 15, 12 ],
+    "$icon_group_name": "general",
+    "$icon_texture_name": "raytracing",
+    "$button_text": "options.raytracing",
+    "$toggle_property_bag": {
+      "#panel_title": "rainbowpie.ui.settings.raytracing.title"
+    }
+  },
+
+  "raytracing_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "raytracing_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "raytracing_toggle@settings_common.option_toggle": {
+          "ignored": "($is_holographic)",
+          "$option_label": "options.raytracing",
+          "$option_binding_name": "#raytracing",
+          "$option_enabled_binding_name": "#raytracing_enabled",
+          "$toggle_name": "raytracing",
+          "controls": [
+            { "rtx_disabled_option_upsell@general_section.rtx_disabled_option_upsell": {} },
+            { "option_generic_core@settings_common.option_generic_core": {} }
+          ]
+        }
+      },
+      {
+        "upscaling_toggle@general_section.upscaling_toggle": {}
+      },
+      {
+        "raytracing_render_distance_slider@settings_common.option_slider": {
+          "ignored": "($is_holographic)",
+          "$option_label": "#raytracing_render_distance_slider_label",
+          "$slider_name": "raytracing_render_distance",
+          "$slider_value_binding_name": "#raytracing_render_distance",
+          "$slider_tts_text_value": "#raytracing_render_distance_text_value",
+          "$option_enabled_binding_name": "#raytracing_render_distance_enabled",
+          "$slider_steps_binding_name": "#raytracing_render_distance_steps",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ],
+          "controls": [
+            { "rtx_render_distance_warning@general_section.rtx_render_distance_warning": {} },
+            { "option_generic_core@settings_common.option_generic_core": {} }
+          ]
+        }
+      },
+      {
+        "fancy_leaves_toggle@settings_common.option_toggle": {
+          "ignored": "($pocket_edition or $is_holographic)",
+          "$option_label": "options.transparentleaves",
+          "$option_binding_name": "#transparent_leaves",
+          "$option_enabled_binding_name": "#transparent_leaves_enabled",
+          "$toggle_name": "transparent_leaves"
+        }
+      },
+      {
+        "render_clouds_toggle@settings_common.option_toggle": {
+          "$option_label": "options.renderclouds",
+          "$option_binding_name": "#render_clouds",
+          "$option_enabled_binding_name": "#render_clouds_enabled",
+          "$toggle_name": "render_clouds"
+        }
+      },
+      {
+        "fancy_clouds_toggle@settings_common.option_toggle": {
+          "ignored": "($new_video_settings)",
+          "$option_label": "options.fancyskies",
+          "$option_binding_name": "#fancy_skies",
+          "$option_enabled_binding_name": "#fancy_skies_enabled",
+          "$toggle_name": "fancy_skies"
+        }
+      }
+    ]
+  },
+
   "module_button@settings_common.section_toggle_base": {
     "$toggle_view_binding_name": "module_button_toggle",
     "$glyph_texture": "",

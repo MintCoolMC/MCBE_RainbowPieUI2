@@ -1,6 +1,10 @@
 {
   "namespace": "anvil",
 
+  "cost_label/gray": {
+    "ignored": true
+  },
+
   "anvil_panel": {
     "modifications": [
       {

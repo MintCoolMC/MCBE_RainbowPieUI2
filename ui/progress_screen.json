@@ -1,6 +1,10 @@
 {
   "namespace": "progress",
 
+  "modal_progress_screen": {
+    "$screen_content": "rainbowpieui_progress.modal_screen_content"
+  },
+
   "progress_screen_text": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"

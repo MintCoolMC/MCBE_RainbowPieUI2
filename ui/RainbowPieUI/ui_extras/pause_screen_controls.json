@@ -268,17 +268,28 @@
                     }
                   },
                   {
-                    "worldname_label@rainbowpie_ui_common.text_label": {
+                    "permission_label@rainbowpie_ui_common.text_label": {
                       "offset": [ -2, 0 ],
                       "anchor_from": "right_middle",
                       "anchor_to": "right_middle",
                       "size": [ "20% - 2px", 10 ],
                       "text_alignment": "right",
-                      "text": "#worldname",
+                      "text": "#player_permission_text",
                       "layer": 1,
+                      "property_bag": {
+                        "#collection_name": "players_collection",
+                        "#collection_index": 0
+                      },
                       "bindings": [
                         {
-                          "binding_name": "#worldname"
+                          "binding_name": "#player_permission_level_icon_texture",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('rainbowpie.ui.pause.permissions.' + ((#player_permission_level_icon_texture - 'textures/ui/permissions_') - '_hand' - '_star'- '_crown'- '_dots'))",
+                          "target_property_name": "#player_permission_text"
                         }
                       ]
                     }
@@ -1955,11 +1966,21 @@
               }
             },
             {
-              "center_panel": {
+              "pause_playerlist_panel": {
                 "type": "panel",
                 "size": [ "fill", "100% - 2px" ],
                 "controls": [
-                  { "player_list_scrolling_panel@pause.player_list_scrolling_panel": {} }
+                  {
+                    "player_list_scrolling_panel@common.scrolling_panel": {
+                      "$rainbowpie_localui_scrollbar_enabled": true,
+                      "size": [ "100% - 2px", "100% - 3px" ],
+                      "$show_background": false,
+                      "$scroll_size": [ "5px", "100% - 4px" ],
+                      "$scroll_bar_left_padding_size": [ 1, 0 ],
+                      "$scroll_bar_right_padding_size": [ 1, 0 ],
+                      "$scrolling_content": "rainbowpieui_pause.player_list"
+                    }
+                  }
                 ]
               }
             }
