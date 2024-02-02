@@ -432,7 +432,15 @@
   "$rainbowpie_ui_theme_inventory_cell_highlight_alpha": 0.4,
 
   "$rainbowpie_ui_theme_inventory_cell_highlight_pocket_color": [ 0.0, 0.5803921568627451, 1.0 ],
-  "$rainbowpie_ui_theme_inventory_cell_highlight_pocket_alpha": 0.7
+  "$rainbowpie_ui_theme_inventory_cell_highlight_pocket_alpha": 0.7,
+
+  "$rainbowpie_ui_theme_inventory_bgicon_enabled": true,
+  "$rainbowpie_ui_theme_inventory_bgicon_texture_inventory": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_texture_container": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_inventory_bgicon_size": [ "42%", "100%x" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_offset": [ 0, -6 ],
+  "$rainbowpie_ui_theme_inventory_bgicon_alpha": 0.8
   // Theme End
 
 }

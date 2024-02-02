@@ -1,6 +1,17 @@
 {
   "namespace": "rainbowpie_ui_inventory",
 
+  "background_icon": {
+    "type": "image",
+    "size": "$rainbowpie_ui_theme_inventory_bgicon_size",
+    "offset": "$rainbowpie_ui_theme_inventory_bgicon_offset",
+    "anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_anchor",
+    "anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_anchor",
+    "texture": "$rainbowpie_ui_theme_inventory_bgicon_texture_container",
+    "alpha": "$rainbowpie_ui_theme_inventory_bgicon_alpha",
+    "layer": 3
+  },
+
   "header_background": {
     "type": "image",
     "texture": "textures/ui/White",

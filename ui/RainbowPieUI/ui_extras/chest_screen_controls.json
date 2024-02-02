@@ -20,6 +20,9 @@
           "animation_reset_name": "screen_animation_reset",
           "controls": [
             {
+              "background_icon@rainbowpie_ui_inventory.background_icon": {}
+            },
+            {
               "live_player_renderer@rainbowpie_ui_inventory.live_player_renderer": {
                 "offset": [ "-100%x - 2.380952380952381%", -16 ]
               }
@@ -146,6 +149,9 @@
           ],
           "animation_reset_name": "screen_animation_reset",
           "controls": [
+            {
+              "background_icon@rainbowpie_ui_inventory.background_icon": {}
+            },
             {
               "live_player_renderer@rainbowpie_ui_inventory.live_player_renderer": {
                 "offset": [ "-100%x - 2.380952380952381%", -16 ]

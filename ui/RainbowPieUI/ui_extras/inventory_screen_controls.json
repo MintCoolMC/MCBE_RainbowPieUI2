@@ -108,6 +108,11 @@
           ],
           "controls": [
             {
+              "background_icon@rainbowpie_ui_inventory.background_icon": {
+                "texture": "$rainbowpie_ui_theme_inventory_bgicon_texture_inventory"
+              }
+            },
+            {
               "inventory_actions_inventory@rainbowpie_module_inventory_actions.inventory_actions_inventory": {
                 "$action_button_stack_panel_size": [ "13.0952380952381%", "100%c" ],
                 "$action_button_stack_panel_max_size": [ "13.0952380952381%", "100%" ],
