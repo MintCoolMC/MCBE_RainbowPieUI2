@@ -27,6 +27,9 @@
           "animation_reset_name": "screen_animation_reset",
           "controls": [
             {
+              "background_icon@rainbowpie_ui_inventory.background_icon": {}
+            },
+            {
               "inventory_header@rainbowpie_ui_inventory.header": {
                 "size": [ "100%", "13.69047619047619%" ],
                 "offset": [ 0, 0 ],
