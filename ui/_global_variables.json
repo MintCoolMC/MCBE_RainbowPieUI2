@@ -75,6 +75,7 @@
   "$rainbowpie_ui_flag_hud_hidehud_clickspace": true,
   "$rainbowpie_ui_flag_hud_chat_halfscreen": true, // Chat Panel Half Screen
   "$rainbowpie_ui_flag_hud_hotbar_rounded": false,
+  "$rainbowpie_ui_flag_hud_expbar_empty_text": "o.0",
 
   "$rainbowpie_ui_flag_input_enable_profanity_filter": true,
   "$rainbowpie_ui_flag_dropdown_default_show_button": true,

@@ -1298,6 +1298,24 @@
               }
             },
             {
+              "expbar_empty_text@rainbowpie_ui_common.text_label_notheme": {
+                "shadow": true,
+                "offset": [ 0, 0 ],
+                "layer": 7,
+                "text": "$rainbowpie_ui_flag_hud_expbar_empty_text",
+                "color": "$experience_text_color",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "bindings": [
+                  {
+                    "binding_name": "(not #level_number_visible)",
+                    "binding_type": "global",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
               "empty_progress_bar": {
                 "type": "image",
                 "$rainbowpie_localui_this_expbar_texture": "textures/ui/White",
