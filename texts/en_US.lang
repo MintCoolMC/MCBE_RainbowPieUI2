@@ -33,8 +33,6 @@ rainbowpie.ui.settings.module.title=Module
 rainbowpie.ui.storage_management.tab.management=Management
 rainbowpie.ui.storage_management.tab.settings=Settings
 
-rainbowpie.ui.hud.bow_helper.arrow_count=Arrows
-
 rainbowpie.ui.manifest_validation.verifiedPack=Verified Pack:
 rainbowpie.ui.manifest_validation.verifiedDetail=Detail
 rainbowpie.ui.manifest_validation.verifiedDetail.title=Verified Pack

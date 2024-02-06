@@ -33,8 +33,6 @@ rainbowpie.ui.settings.module.title=模块
 rainbowpie.ui.storage_management.tab.management=存储管理
 rainbowpie.ui.storage_management.tab.settings=存储设置
 
-rainbowpie.ui.hud.bow_helper.arrow_count=箭矢数量
-
 rainbowpie.ui.manifest_validation.verifiedPack=已验证的包：
 rainbowpie.ui.manifest_validation.verifiedDetail=更多信息
 rainbowpie.ui.manifest_validation.verifiedDetail.title=验证信息
