@@ -1292,7 +1292,9 @@
                             "type": "panel",
                             "anchor_from": "bottom_middle",
                             "anchor_to": "bottom_middle",
+                            "offset": [ 0, -3 ],
                             "size": [ "100% - 16px", 14 ],
+                            "layer": 10,
                             "controls": [
                               {
                                 "rainbowpie_version_label@rainbowpie_ui_common.text_label": {
@@ -1300,7 +1302,9 @@
                                   "anchor_to": "left_middle",
                                   "size": [ "80% - 2px", 10 ],
                                   "text_alignment": "left",
-                                  "text": "($mintui_pack_name + ' ' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version)",
+                                  "text": "($mintui_pack_name + ' ' + $rainbowpieui_branch_display_name + ' ' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version)",
+                                  "color": [ 0.85, 0.85, 0.85 ],
+                                  "alpha": 0.85,
                                   "layer": 1
                                 }
                               },
@@ -1311,6 +1315,8 @@
                                   "size": [ "20% - 2px", 10 ],
                                   "text_alignment": "right",
                                   "text": "#version",
+                                  "color": [ 0.85, 0.85, 0.85 ],
+                                  "alpha": 0.85,
                                   "layer": 1,
                                   "shadow": false,
                                   "bindings": [
