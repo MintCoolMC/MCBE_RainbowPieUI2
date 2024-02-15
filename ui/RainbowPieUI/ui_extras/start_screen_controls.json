@@ -77,7 +77,7 @@
   "startv2_big_button_template@common_buttons.light_content_button": {
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
     "$button_content": "rainbowpieui_start.startv2_big_button_panel",
-    "size": [ 150, 32 ]
+    "size": [ "100%", 32 ]
   },
 
   "startv2_big_button_panel": {
@@ -1077,7 +1077,7 @@
                         {
                           "button_panel": {
                             "type": "stack_panel",
-                            "size": [ "100%cm", "100%c" ],
+                            "size": [ "150px", "100%c" ],
                             "offset": [ 8, 0 ],
                             "anchor_from": "left_middle",
                             "anchor_to": "left_middle",
@@ -1087,11 +1087,11 @@
                                 "play_button_stack": {
                                   "type": "stack_panel",
                                   "orientation": "horizontal",
-                                  "size": [ "100%c", "100%cm" ],
+                                  "size": [ "100%", "100%cm" ],
                                   "controls": [
                                     {
                                       "play_button@rainbowpieui_start.startv2_big_button_template": {
-                                        "size": [ 118, 32 ],
+                                        "size": [ "fill", 32 ],
                                         "$icon_texture_name": "play",
                                         "$pressed_button_name": "$play_button_target",
                                         "$button_text": "menu.play"
