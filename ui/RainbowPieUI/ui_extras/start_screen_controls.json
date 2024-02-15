@@ -1033,7 +1033,7 @@
                         {
                           "title_text@rainbowpie_ui_common.title_text": {
                             "$title_text_scale": 3.4,
-                            "offset": [ 8, "3%" ],
+                            "offset": [ 8, "2.5%" ],
                             "anchor_from": "top_left",
                             "anchor_to": "top_left",
                             "controls": [
