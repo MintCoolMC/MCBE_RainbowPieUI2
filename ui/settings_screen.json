@@ -292,6 +292,31 @@
     ]
   },
 
+  "section_header_panels/general_and_controls_sections": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          { "global_texture_pack_header@rainbowpieui_general_section.global_texture_pack_header": { "visible": false } }
+        ]
+      }
+    ]
+  },
+
+  "section_header_panels/world_sections": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          { "level_texture_pack_header@rainbowpieui_world_section.level_texture_pack_header": { "visible": false } },
+          { "addon_header@rainbowpieui_world_section.addon_header": { "visible": false } }
+        ]
+      }
+    ]
+  },
+
   "section_content_panels/general_and_controls_sections/language_section": {
     "ignored": false
   },

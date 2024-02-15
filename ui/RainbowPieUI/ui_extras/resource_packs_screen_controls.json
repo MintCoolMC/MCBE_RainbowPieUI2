@@ -744,29 +744,92 @@
     ]
   },
 
+  "resource_packs_header": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "header_stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100% - 4px", "100%c" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "top_padding": {
+                "type": "panel",
+                "size": [ 0, 2 ]
+              }
+            },
+            {
+              "top_panel": {
+                "type": "panel",
+                "visible": "$show_checkbox",
+                "size": [ "100%", 20 ],
+                "$force_pack_download_binding_type|default": "none",
+      
+                "controls": [
+                  { "panel_bg@resource_packs.panel_bg": {} },
+                  { "header_control@resource_packs.header_control": {} }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#force_pack_download_enabled_level",
+                    "binding_name_override": "#visible",
+                    "binding_type": "$force_pack_download_binding_type"
+                  },
+                  {
+                    "binding_name": "#force_pack_download_locked_level",
+                    "binding_name_override": "#enabled",
+                    "binding_type": "$force_pack_download_binding_type"
+                  }
+                ]
+              }
+            },
+            {
+              "top_panel_padding": {
+                "type": "panel",
+                "size": [ 0, 1 ],
+                "visible": "$show_checkbox",
+                "$force_pack_download_binding_type|default": "none",
+                "bindings": [
+                  {
+                    "binding_name": "#force_pack_download_enabled_level",
+                    "binding_name_override": "#visible",
+                    "binding_type": "$force_pack_download_binding_type"
+                  }
+                ]
+              }
+            },
+            {
+              "navigation_tab_panel@rainbowpieui_resource_packs.navigation_tab_panel": {
+                "ignored": "((not $rainbowpie_ui_flag_54edd49d) or ($rainbowpie_localui_resource_packs_type = 'null')"
+              }
+            },
+            {
+              "search_text_box@common.text_edit_box": {
+                "layer": 5,
+                "size": [ "100%", 22 ],
+                "$text_box_name": "rp_search_text_box",
+                "$text_edit_text_control": "$rainbowpie_localui_resource_packs_search_box_control",
+                "$place_holder_control": "rainbowpieui_resource_packs.search_text_box_place_holder_control",
+                "$place_holder_text": "$rainbowpie_localui_resource_packs_search_box_placeholder",
+                "focus_wrap_enabled": false,
+                "max_length": 32767
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "resource_packs_screen": {
     "type": "stack_panel",
     "$rainbowpie_localui_resource_packs_type|default": "null",
     "$rainbowpie_localui_resource_packs_search_box_control|default": "rp_search_text_box_display_text",
     "$rainbowpie_localui_resource_packs_search_box_placeholder|default": "rainbowpie.ui.resource_packs.search.placeholder.resource",
     "controls": [
-      {
-        "navigation_tab_panel@rainbowpieui_resource_packs.navigation_tab_panel": {
-          "ignored": "((not $rainbowpie_ui_flag_54edd49d) or ($rainbowpie_localui_resource_packs_type = 'null')"
-        }
-      },
-      {
-        "search_text_box@common.text_edit_box": {
-          "layer": 5,
-          "size": [ "100%", 22 ],
-          "$text_box_name": "rp_search_text_box",
-          "$text_edit_text_control": "$rainbowpie_localui_resource_packs_search_box_control",
-          "$place_holder_control": "rainbowpieui_resource_packs.search_text_box_place_holder_control",
-          "$place_holder_text": "$rainbowpie_localui_resource_packs_search_box_placeholder",
-          "focus_wrap_enabled": false,
-          "max_length": 32767
-        }
-      },
       {
         "section_panel": {
           "type": "stack_panel",
@@ -795,8 +858,6 @@
                   },
                   {
                     "default_item@rainbowpie_ui_common.text_background": {
-                      "anchor_from": "top_middle",
-                      "anchor_to": "top_middle",
                       "size": [ "100%", 50 ],
                       "layer": 1,
                       "controls": [

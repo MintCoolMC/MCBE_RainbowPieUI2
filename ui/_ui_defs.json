@@ -23,6 +23,7 @@
     "ui/RainbowPieUI/screen/music_player_screen.json",
     "ui/RainbowPieUI/ui_extras/settings_sections/general_section_controls.json",
     "ui/RainbowPieUI/ui_extras/settings_sections/settings_common_controls.json",
+    "ui/RainbowPieUI/ui_extras/settings_sections/world_section_controls.json",
     "ui/RainbowPieUI/ui_extras/add_external_server_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/anvil_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/book_screen_controls.json",

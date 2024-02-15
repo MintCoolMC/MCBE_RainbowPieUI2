@@ -1,6 +1,25 @@
 {
   "namespace": "rainbowpieui_general_section",
 
+  "global_texture_pack_header@rainbowpieui_resource_packs.resource_packs_header": {
+    "$rainbowpie_localui_resource_packs_type": "global",
+    "$rainbowpie_localui_resource_packs_search_box_control": "global_rp_search_text_box_display_text",
+    "$rainbowpie_localui_resource_packs_search_box_placeholder": "rainbowpie.ui.resource_packs.search.placeholder.resource",
+    "$selected_pack_items": "#selected_pack_items_global",
+    "$available_pack_items": "#available_pack_items_global",
+    "$selected_label_text": "resourcePack.selected.title.packs",
+    "$available_label_text": "resourcePack.available.title.packs",
+    "$show_checkbox": false,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "global_texture_pack_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
   "raytracing_button@settings_common.section_toggle_base": {
     "$toggle_view_binding_name": "raytracing_button_toggle",
     "$glyph_texture": "textures/ui/video_glyph",
