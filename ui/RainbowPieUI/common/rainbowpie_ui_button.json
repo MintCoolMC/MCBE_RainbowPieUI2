@@ -49,15 +49,10 @@
     "controls": [
       {
         "hover@common.focus_border_white": {
+          "size": "$button_image_size",
           "ignored": "((not $rainbowpie_localui_button_border_enabled) or (not $hover_state))",
-          "visible": false,
-          "layer": 50,
-          "bindings": [
-            {
-              "binding_name": "#is_using_gamepad",
-              "binding_name_override": "#visible"
-            }
-          ]
+          "alpha": 0.5,
+          "layer": 50
         }
       },
       {
