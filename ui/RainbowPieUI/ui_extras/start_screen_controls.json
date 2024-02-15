@@ -1288,60 +1288,6 @@
                           }
                         },
                         {
-                          "button_panel_legacy": {
-                            "ignored": true,
-                            "type": "stack_panel",
-                            "size": [ 160, 155 ],
-                            "offset": [ 0, 33 ],
-                            "layer": 30,
-                            "controls": [
-                              {
-                                "play_button@start.play_button": {
-                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-                                  "focus_change_up": "FOCUS_OVERRIDE_STOP",
-                                  "focus_change_right": "FOCUS_OVERRIDE_STOP",
-                                  "focus_change_left": "FOCUS_OVERRIDE_STOP",
-                                  "size": [ "100%", 23 ]
-                                }
-                              },
-                              {
-                                "settings_button@start.settings_button": {
-                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-                                  "focus_change_right": "FOCUS_OVERRIDE_STOP",
-                                  "focus_change_left": "FOCUS_OVERRIDE_STOP",
-                                  "size": [ "100%", 23 ]
-                                }
-                              },
-                              {
-                                "store_button@start.store_button": {
-                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-                                  "ignored": "($trial and not $use_single_column_for_buttons)",
-                                  "focus_change_right": "FOCUS_OVERRIDE_STOP",
-                                  "focus_change_left": "FOCUS_OVERRIDE_STOP",
-                                  "size": [ "100%", 23 ]
-                                }
-                              },
-                              {
-                                "music_button@rainbowpieui_start.music_button": {
-                                  "size": [ "100%", 23 ]
-                                }
-                              },
-                              {
-                                "xbox_live_panel@rainbowpieui_start.xbox_live_panel": {}
-                              },
-                              {
-                                "exit_button@rainbowpieui_start.exit_button": {
-                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-                                  "focus_change_right": "FOCUS_OVERRIDE_STOP",
-                                  "focus_change_left": "FOCUS_OVERRIDE_STOP",
-                                  "focus_change_down": "FOCUS_OVERRIDE_STOP",
-                                  "size": [ "100%", 23 ]
-                                }
-                              }
-                            ]
-                          }
-                        },
-                        {
                           "version_panel": {
                             "type": "panel",
                             "anchor_from": "bottom_middle",
@@ -1372,43 +1318,6 @@
                                       "binding_name": "#version"
                                     }
                                   ]
-                                }
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "background": {
-                            "ignored": true,
-                            "type": "image",
-                            "size": [ 161, 156 ],
-                            "offset": [ 0, 33 ],
-                            "texture": "textures/ui/White",
-                            "color": [ 0.12941176470588237, 0.12941176470588237, 0.12941176470588237 ],
-                            "alpha": 0.2,
-                            "layer": 20
-                          }
-                        },
-                        {
-                          "background_blur": {
-                            "ignored": true,
-                            "type": "panel",
-                            "clips_children": true,
-                            "size": [ "100%", "100%" ],
-                            "offset": [ "50% - 80.5px", "50% - 45px" ],
-                            "layer": 10,
-                            "controls": [
-                              {
-                                "debug01@rainbowpie_ui_common.debug_draw": {
-                                  "$rainbowpie_localui_debug_name": "background_blur"
-                                }
-                              },
-                              {
-                                "blur_layer_1@mintui_background.background_blur": {
-                                  "$background_ingame": true,
-                                  "$background_offset": [ "-100% + 161px", "-100% + 156px" ],
-                                  "$background_children_offset": [ "50% - 80.5px", "50% - 111px" ],
-                                  "$background_layer": 1
                                 }
                               }
                             ]
