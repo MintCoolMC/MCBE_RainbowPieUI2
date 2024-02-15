@@ -1,6 +1,14 @@
 {
   "namespace": "rainbowpieui_start",
 
+  "get_started_icon": {
+    "type": "image",
+    "size": [ 18, 18 ],
+    "texture": "($rainbowpie_ui_path_theme + '/icon/start/get_started')",
+    "color": "$text_color",
+    "layer": 8
+  },
+
   "close_button_icon": {
     "type": "image",
     "size": [ 30, 30 ],
@@ -117,6 +125,7 @@
           "anchor_to": "left_middle",
           "texture": "textures/ui/White",
           "color": [ 0.407843137254902, 0.5254901960784314, 0.8 ],
+          "alpha": 0,
           "layer": 8,
           "clips_children": true,
           "controls": [
@@ -1022,13 +1031,44 @@
                         {
                           "title_text@rainbowpie_ui_common.title_text": {
                             "$title_text_scale": 3.4,
-                            "offset": [ 8, 0 ],
+                            "offset": [ 8, "3%" ],
                             "anchor_from": "top_left",
                             "anchor_to": "top_left",
                             "controls": [
                               {
                                 "splash_text@common_art.splash_text": {
                                   "ignored": "(not $rainbowpie_ui_flag_start_splash_text)"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "gathering_panel": {
+                            "type": "panel",
+                            "size": [ "100%cm", 25 ],
+                            "offset": [ 8.5, -20 ],
+                            "anchor_from": "bottom_left",
+                            "anchor_to": "bottom_left",
+                            "layer": 32,
+                            "bindings": [
+                              {
+                                "binding_name": "#gathering_enabled",
+                                "binding_name_override": "#visible"
+                              }
+                            ],
+                            "controls": [
+                              {
+                                "badge_and_caption@start.badge_and_caption": {
+                                  "offset": [ 0, -18 ],
+                                  "anchor_from": "bottom_right",
+                                  "anchor_to": "bottom_right"
+                                }
+                              },
+                              {
+                                "gathering_button@start.gathering_button": {
+                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button",
+                                  "$button_image_size_override": [ "100%c + 8px", "25px" ]
                                 }
                               }
                             ]
@@ -1044,10 +1084,30 @@
                             "layer": 30,
                             "controls": [
                               {
-                                "play_button@rainbowpieui_start.startv2_big_button_template": {
-                                  "$icon_texture_name": "play",
-                                  "$pressed_button_name": "$play_button_target",
-                                  "$button_text": "menu.play"
+                                "play_button_stack": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
+                                  "size": [ "100%c", "100%cm" ],
+                                  "controls": [
+                                    {
+                                      "play_button@rainbowpieui_start.startv2_big_button_template": {
+                                        "size": [ 118, 32 ],
+                                        "$icon_texture_name": "play",
+                                        "$pressed_button_name": "$play_button_target",
+                                        "$button_text": "menu.play"
+                                      }
+                                    },
+                                    {
+                                      "get_started_button@common_buttons.light_content_button": {
+                                        "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+                                        "$rainbowpie_localui_button_desc_enabled": true,
+                                        "$rainbowpie_localui_button_desc_text": "menu.quickplay",
+                                        "$pressed_button_name": "button.menu_get_started",
+                                        "$button_content": "rainbowpieui_start.get_started_icon",
+                                        "size": [ "100%y", 32 ]
+                                      }
+                                    }
+                                  ]
                                 }
                               },
                               {
