@@ -361,6 +361,7 @@
               "header@rainbowpie_ui_common.screen_header": {
                 "ignored": "$rainbowpie_ui_flag_8dcce82d",
                 "$rainbowpie_localui_screenheader_ingame_anim1": true,
+                "$rainbowpie_localui_screenheader_ingame_anim2": "($rainbowpie_ui_flag_8dcce82d and $rainbowpie_ui_flag_fbadd01f)",
                 "$rainbowpie_localui_screenheader_title": "Minecraft | @Mojang Studio",
                 "$rainbowpie_localui_screenheader_content_panel": "rainbowpieui_start.player_name_panel"
               }
@@ -368,6 +369,7 @@
             {
               "screen_content@rainbowpie_ui_common.screen_content": {
                 "$rainbowpie_localui_screen_ingame_anim1": true,
+                "$rainbowpie_localui_screen_ingame_anim2": "($rainbowpie_ui_flag_8dcce82d and $rainbowpie_ui_flag_fbadd01f)",
                 "$rainbowpie_localui_screen_content": [
                   {
                     "verify_panel": {
@@ -1099,6 +1101,7 @@
                                     },
                                     {
                                       "get_started_button@common_buttons.light_content_button": {
+                                        "ignored": "(not $rainbowpie_ui_flag_be13f8d7)",
                                         "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
                                         "$rainbowpie_localui_button_desc_enabled": true,
                                         "$rainbowpie_localui_button_desc_text": "menu.quickplay",
