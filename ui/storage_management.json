@@ -59,6 +59,8 @@
         }
       }
     ],
+    "ignored": "(($is_holographic and $is_reality_mode) or (not ($storage_location_switch_enabled and not $gear_vr)))",
+    "visible": true,
     "modifications": [
       {
         "array_name": "bindings",
