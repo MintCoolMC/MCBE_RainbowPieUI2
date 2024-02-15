@@ -101,7 +101,7 @@
   "$rainbowpie_ui_flag_71042f58": false, // Disable background on selector
   "$rainbowpie_ui_flag_54edd49d": true, // Resource Packs Tab Mode
   "$rainbowpie_ui_flag_840d1a5c": true, // Resource Packs Hide More
-  "$rainbowpie_ui_flag_8dcce82d": false, // New start
+  "$rainbowpie_ui_flag_8dcce82d": true, // New start
   "$rainbowpie_ui_flag_6d2ac350": true, // New chat for touch
   "$rainbowpie_ui_flag_6bb756a3": true, // New dialog style for popup dialog
   "$rainbowpie_ui_flag_b3c44822": true, // Rainbow Pie UI Chat Settings

@@ -1516,7 +1516,7 @@
           },
           {
             "requires": "$touch",
-            "$rainbowpie_ui_flag_8dcce82d": false,
+            // "$rainbowpie_ui_flag_8dcce82d": false,
             "$rainbowpie_ui_flag_86c54726": false
           },
           // Force use Rainbow Pie UI style server_form
