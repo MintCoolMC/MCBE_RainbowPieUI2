@@ -119,12 +119,13 @@
     "controls": [
       {
         "button_icon": {
-          "type": "image",
+          "type": "custom",
+          "renderer": "gradient_renderer",
           "size": [ 28, "100%" ],
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
-          "texture": "textures/ui/White",
-          "color": [ 0.407843137254902, 0.5254901960784314, 0.8 ],
+          "color1": [ 0.407843137254902, 0.5254901960784314, 0.8, 1.0 ],
+          "color2": [ 0.5098039215686275, 0.6549019607843137, 1.0, 1.0 ],
           "layer": 8,
           "clips_children": true,
           "controls": [
