@@ -120,12 +120,11 @@
       {
         "button_icon": {
           "type": "image",
-          "size": [ "100%y", "100%" ],
+          "size": [ 28, "100%" ],
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "texture": "textures/ui/White",
           "color": [ 0.407843137254902, 0.5254901960784314, 0.8 ],
-          "alpha": 0,
           "layer": 8,
           "clips_children": true,
           "controls": [
@@ -134,10 +133,10 @@
                 "type": "custom",
                 "renderer": "paper_doll_renderer",
                 "layer": 2,
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "size": [ 80, "100%x" ],
-                "offset": [ 0, 8 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "size": [ 92, "100%x" ],
+                "offset": [ 0, 38 ],
                 "enable_scissor_test": true
               }
             }
