@@ -463,8 +463,11 @@
                           "binding_condition": "always"
                         },
                         {
+                          "binding_name": "#using_touch"
+                        },
+                        {
                           "binding_type": "view",
-                          "source_property_name": "(not (#inventory_selected_item = -1))",
+                          "source_property_name": "((not (#inventory_selected_item = -1)) or #using_touch)",
                           "target_property_name": "#visible"
                         }
                       ],
