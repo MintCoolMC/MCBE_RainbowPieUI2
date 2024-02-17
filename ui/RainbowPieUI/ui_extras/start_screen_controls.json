@@ -1207,7 +1207,8 @@
                                               "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button",
                                               "$button_content_size_override": [ "100%c", "100%c" ],
                                               "$button_image_size_override": [ "100%c + 8px", "28px" ],
-                                              "size": [ "100%c", "100%" ]
+                                              "size": [ "100%c", "100%" ],
+                                              "$form_fitting_min_size": [ 44, 0 ]
                                             }
                                           }
                                         ]
