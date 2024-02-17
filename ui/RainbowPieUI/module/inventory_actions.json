@@ -2,10 +2,39 @@
   "namespace": "rainbowpie_module_inventory_actions",
 
   "delete_icon": {
-    "type": "image",
+    "type": "panel",
     "size": [ "100%", "100%" ],
-    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/destroy_selection')",
-    "color": "$text_color"
+    "$chest_visible|default": false,
+    "controls": [
+      {
+        "delete_icon": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/destroy_selection')",
+          "color": "$text_color",
+          "layer": 1
+        }
+      },
+      {
+        "chest@crafting.item_renderer": {
+          "visible": "$chest_visible",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "size": [ 10, 10 ],
+          "offset": [ 2, 0 ],
+          "layer": 2,
+          "property_bag": {
+            "#item_id_aux": 3538946
+          },
+          "bindings": [
+            {
+              "binding_name": "#using_touch",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
   },
 
   "craft_icon": {
@@ -40,6 +69,7 @@
   "drop_icon": {
     "type": "panel",
     "size": [ "100%", "100%" ],
+    "$count_text|default": "x1",
     "controls": [
       {
         "chest@crafting.item_renderer": {
@@ -61,6 +91,21 @@
           "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/arrow_down')",
           "color": "$text_color",
           "layer": 2
+        }
+      },
+      {
+        "count_label@rainbowpie_ui_common.text_label_notheme": {
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "text": "$count_text",
+          "font_scale_factor": 0.85,
+          "layer": 3,
+          "bindings": [
+            {
+              "binding_name": "#using_touch",
+              "binding_name_override": "#visible"
+            }
+          ]
         }
       }
     ]
@@ -823,6 +868,12 @@
     "$padding_size|default": [ "100%", "9.090909090909091%x" ],
     "controls": [
       {
+        "inventory_bindings_panel@rainbowpie_module_inventory_actions.inventory_bindings_panel": {}
+      },
+      {
+        "hotbar_bindings_panel@rainbowpie_module_inventory_actions.hotbar_bindings_panel": {}
+      },
+      {
         "action_button_stack_panel": {
           "type": "stack_panel",
           "anchor_from": "bottom_right",
@@ -832,17 +883,12 @@
           "offset": [ "109.0909090909091%x", 0 ],
           "controls": [
             {
-              "inventory_bindings_panel@rainbowpie_module_inventory_actions.inventory_bindings_panel": {}
-            },
-            {
-              "hotbar_bindings_panel@rainbowpie_module_inventory_actions.hotbar_bindings_panel": {}
-            },
-            {
               "quick_craft_button@common_buttons.light_content_button": {
                 "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_quick_craft_enabled)",
                 "$button_focus_precedence": -1,
                 "$rainbowpie_localui_button_desc_enabled": true,
                 "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.inventory.actions.quick_craft",
+                "$rainbowpie_localui_button_hover_border_layer": 30,
                 "$button_image_size": [ "100%", "100%" ],
                 "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
                 "$pressed_button_name": "button.crafting_output_tertiary",
@@ -950,6 +996,7 @@
                 "$button_focus_precedence": -1,
                 "$rainbowpie_localui_button_desc_enabled": true,
                 "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.inventory.actions.drop_selection",
+                "$rainbowpie_localui_button_hover_border_layer": 30,
                 "$button_image_size": [ "100%", "100%" ],
                 "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
                 "$pressed_button_name": "rainbowpie.drop_one",
@@ -1020,6 +1067,7 @@
                 "$button_focus_precedence": -1,
                 "$rainbowpie_localui_button_desc_enabled": true,
                 "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.inventory.actions.destroy_selection",
+                "$rainbowpie_localui_button_hover_border_layer": 30,
                 "$button_image_size": [ "100%", "100%" ],
                 "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
                 "$pressed_button_name": "button.destroy_selection",
@@ -1035,6 +1083,154 @@
                   }
                 ]
               }
+            }
+          ]
+        }
+      },
+      {
+        "secondary_action_button_stack_panel": {
+          "type": "stack_panel",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "size": "$action_button_stack_panel_size",
+          "max_size": "$action_button_stack_panel_max_size",
+          "offset": [ "218.1818181818182%x", 0 ],
+          "controls": [
+            {
+              "drop_all_item": {
+                "type": "panel",
+                "size": [ "100%", 0 ],
+                "layer": 50,
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled))",
+                "controls": [
+                  {
+                    "armor_input_panel@rainbowpie_module_inventory_actions.armor_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled)",
+                      "$button_take_all_place_all": "button.drop_all"
+                    }
+                  },
+                  {
+                    "offhand_input_panel@rainbowpie_module_inventory_actions.offhand_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled)",
+                      "$button_take_all_place_all": "button.drop_all"
+                    }
+                  },
+                  {
+                    "inventory_input_panel@rainbowpie_module_inventory_actions.inventory_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled)",
+                      "$button_take_all_place_all": "button.drop_all"
+                    }
+                  },
+                  {
+                    "hotbar_input_panel@rainbowpie_module_inventory_actions.hotbar_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled)",
+                      "$button_take_all_place_all": "button.drop_all"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "drop_item_button@common_buttons.light_content_button": {
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled))",
+                "$button_focus_precedence": -1,
+                "$rainbowpie_localui_button_desc_enabled": true,
+                "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.inventory.actions.drop_inventory",
+                "$rainbowpie_localui_button_hover_border_layer": 30,
+                "$button_image_size": [ "100%", "100%" ],
+                "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+                "$pressed_button_name": "rainbowpie.drop_one",
+                "$button_content": "rainbowpie_module_inventory_actions.drop_icon",
+                "$count_text": "All",
+                "consume_hover_events": false,
+                "size": [ "100%", "100%x" ],
+                "layer": 1
+              }
+            },
+            {
+              "padding_0": {
+                "type": "panel",
+                "size": "$padding_size",
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_delete_item_enabled))",
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#is_creative_mode",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "delete_all_item": {
+                "type": "panel",
+                "size": [ "100%", 0 ],
+                "layer": 50,
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_delete_item_enabled))",
+                "controls": [
+                  {
+                    "armor_input_panel@rainbowpie_module_inventory_actions.armor_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_delete_all_item_enabled)",
+                      "$button_take_all_place_all": "button.container_auto_destroy"
+                    }
+                  },
+                  {
+                    "offhand_input_panel@rainbowpie_module_inventory_actions.offhand_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_delete_all_item_enabled)",
+                      "$button_take_all_place_all": "button.container_auto_destroy"
+                    }
+                  },
+                  {
+                    "inventory_input_panel@rainbowpie_module_inventory_actions.inventory_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_delete_all_item_enabled)",
+                      "$button_take_all_place_all": "button.container_auto_destroy"
+                    }
+                  },
+                  {
+                    "hotbar_input_panel@rainbowpie_module_inventory_actions.hotbar_input_panel": {
+                      "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_delete_all_item_enabled)",
+                      "$button_take_all_place_all": "button.container_auto_destroy"
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#is_creative_mode",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "delete_item_button@common_buttons.light_content_button": {
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_delete_item_enabled))",
+                "$button_focus_precedence": -1,
+                "$rainbowpie_localui_button_desc_enabled": true,
+                "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.inventory.actions.destroy_inventory",
+                "$rainbowpie_localui_button_hover_border_layer": 30,
+                "$button_image_size": [ "100%", "100%" ],
+                "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+                "$pressed_button_name": "button.destroy_selection",
+                "$button_content": "rainbowpie_module_inventory_actions.delete_icon",
+                "$chest_visible": true,
+                "consume_hover_events": false,
+                "size": [ "100%", "100%x" ],
+                "layer": 1,
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#is_creative_mode",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#using_touch",
+              "binding_name_override": "#visible"
             }
           ]
         }
