@@ -14,8 +14,10 @@ rainbowpie.ui.themesystem.version_toolow=當前外觀包版本太低！	#
 rainbowpie.ui.themesystem.version_toohight=當前外觀包版本太高！	#
 
 rainbowpie.ui.inventory.actions.destroy_selection=銷毀物品
+rainbowpie.ui.inventory.actions.destroy_inventory=從物品欄銷毀全部
 rainbowpie.ui.inventory.actions.quick_craft=快速合成
 rainbowpie.ui.inventory.actions.drop_selection=丟出
+rainbowpie.ui.inventory.actions.drop_inventory=從物品欄丟出全部
 
 rainbowpie.ui.inventory.durability=耐久度:
 

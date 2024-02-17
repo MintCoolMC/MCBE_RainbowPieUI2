@@ -14,12 +14,14 @@ rainbowpie.ui.themesystem.version_toolow=This theme version is too low! please u
 rainbowpie.ui.themesystem.version_toohight=This theme version is too hight!
 
 rainbowpie.ui.inventory.actions.destroy_selection=Destroy
+rainbowpie.ui.inventory.actions.destroy_inventory=Destroy all items from inventory
 rainbowpie.ui.inventory.actions.quick_craft=Quick Craft
 rainbowpie.ui.inventory.actions.drop_selection=Drop
+rainbowpie.ui.inventory.actions.drop_inventory=Drop all items from inventory
 
 rainbowpie.ui.inventory.durability=Durability:
 
-rainbowpie.ui.chest.fastpick.dropall=Drop all item from this chest
+rainbowpie.ui.chest.fastpick.dropall=Drop all items from this chest
 rainbowpie.ui.chest.fastpick.pickall=Pick all items from this chest
 rainbowpie.ui.chest.fastpick.putall=Place all items from the inventory intro this chest 
 
