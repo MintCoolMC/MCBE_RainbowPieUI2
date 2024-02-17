@@ -19,6 +19,7 @@ rainbowpie.ui.inventory.actions.drop_selection=丟出
 
 rainbowpie.ui.inventory.durability=耐久度:
 
+rainbowpie.ui.chest.fastpick.dropall=丟出箱子内全部物品
 rainbowpie.ui.chest.fastpick.pickall=拿取箱子内全部物品
 rainbowpie.ui.chest.fastpick.putall=放入物品栏内全部物品
 

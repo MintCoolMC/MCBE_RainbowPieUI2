@@ -19,6 +19,7 @@ rainbowpie.ui.inventory.actions.drop_selection=Drop
 
 rainbowpie.ui.inventory.durability=Durability:
 
+rainbowpie.ui.chest.fastpick.dropall=Drop all item from this chest
 rainbowpie.ui.chest.fastpick.pickall=Pick all items from this chest
 rainbowpie.ui.chest.fastpick.putall=Place all items from the inventory intro this chest 
 
