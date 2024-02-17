@@ -17,7 +17,7 @@
       },
       {
         "chest@crafting.item_renderer": {
-          "visible": "$chest_visible",
+          "ignored": "(not $chest_visible)",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
           "size": [ 10, 10 ],
