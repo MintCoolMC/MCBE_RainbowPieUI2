@@ -517,7 +517,6 @@
           "anchor_to": "top_middle",
           "consume_hover_events": false,
           "visible": false,
-          "ignored": "",
           "$button_take_all_place_all|default": "rainbowpie.placeholder",
           "$button_auto_place|default": "rainbowpie.placeholder",
           "bindings": [
