@@ -30,6 +30,8 @@
             {
               "chest_fastpick@rainbowpie_module_chest_fastpick.chest_fastpick": {
                 "$large_chest": true,
+                "$drop_button_size": [ "100%y", "10.23255813953488%" ],
+                "$drop_button_offset": [ "100%x + 1.19047619047619%", "-36.27906976744186%" ],
                 "$putin_button_size": [ "100%y", "10.23255813953488%" ],
                 "$putin_button_offset": [ "100%x + 1.19047619047619%", "-11.16279069767442%" ],
                 "$pickup_button_size": [ "100%y", "10.23255813953488%" ],
@@ -159,6 +161,8 @@
             },
             {
               "chest_fastpick@rainbowpie_module_chest_fastpick.chest_fastpick": {
+                "$drop_button_size": [ "100%y", "13.66459627329193%" ],
+                "$drop_button_offset": [ "100%x + 1.19047619047619%", "-48.4472049689441%" ],
                 "$putin_button_size": [ "100%y", "13.66459627329193%" ],
                 "$putin_button_offset": [ "100%x + 1.19047619047619%", "-14.90683229813665%" ],
                 "$pickup_button_size": [ "100%y", "13.66459627329193%" ],

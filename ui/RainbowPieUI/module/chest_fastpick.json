@@ -15,6 +15,36 @@
     "color": "$text_color"
   },
 
+  "drop_icon": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$count_text|default": "x1",
+    "controls": [
+      {
+        "chest@crafting.item_renderer": {
+          "size": [ "100%", "100%" ],
+          "offset": [ 0, 0 ],
+          "layer": 1,
+          "property_bag": {
+            "#item_id_aux": 3538946
+          }
+        }
+      },
+      {
+        "down_arrow": {
+          "type": "image",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "size": [ 10, 10 ],
+          "offset": [ 2, 0 ],
+          "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/arrow_down')",
+          "color": "$text_color",
+          "layer": 2
+        }
+      }
+    ]
+  },
+
   "slot_item": {
     "type": "panel",  
     "size": [ "100%", 0 ],
@@ -27,6 +57,7 @@
           "anchor_to": "top_middle",
           "consume_hover_events": false,
           "visible": false,
+          "$button_take_all_place_all|default": "button.container_auto_place",
           "bindings": [
             {
               "binding_type": "collection_details",
@@ -46,13 +77,13 @@
           "button_mappings": [
             {
               "from_button_id": "button.menu_select",
-              "to_button_id": "button.container_auto_place",
+              "to_button_id": "$button_take_all_place_all",
               "mapping_type": "pressed",
               "consume_event": false
             },
             {
               "from_button_id": "button.menu_ok",
-              "to_button_id": "button.container_auto_place",
+              "to_button_id": "$button_take_all_place_all",
               "mapping_type": "focused",
               "consume_event": false
             }
@@ -515,11 +546,23 @@
     "type": "panel",
     "ignored": "(not $rainbowpie_ui_module_chest_fastpick)",
 
+    "$drop_button_size|default": [ 22, 22 ],
+    "$drop_button_offset|default": [ 20, -80 ],
     "$putin_button_size|default": [ 22, 22 ],
     "$putin_button_offset|default": [ 20, -26 ],
     "$pickup_button_size|default": [ 22, 22 ],
     "$pickup_button_offset|default": [ 20, -2 ],
     "controls": [
+      {
+        "drop_input_panel@rainbowpie_module_chest_fastpick.pickup_input_panel": {
+          "$button_take_all_place_all": "button.drop_all",
+          "size": "$drop_button_size",
+          "offset": "$drop_button_offset",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "layer": 50
+        }
+      },
       {
         "putin_input_panel@rainbowpie_module_chest_fastpick.putin_input_panel": {
           "size": "$putin_button_size",
@@ -536,6 +579,24 @@
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
           "layer": 50
+        }
+      },
+      {
+        "drop_button@common_buttons.light_content_button": {
+          "$button_focus_precedence": -1,
+          "$rainbowpie_localui_button_desc_enabled": true,
+          "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.chest.fastpick.dropall",
+          "$rainbowpie_localui_button_hover_border_layer": 30,
+          "$button_image_size": [ "100%", "100%" ],
+          "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+          "$pressed_button_name": "rainbowpie.chestdropall",
+          "$button_content": "rainbowpie_module_chest_fastpick.drop_icon",
+          "consume_hover_events": false,
+          "size": "$drop_button_size",
+          "offset": "$drop_button_offset",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "layer": 1
         }
       },
       {
