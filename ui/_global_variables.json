@@ -135,7 +135,7 @@
   "$rainbowpie_ui_debug": false,
   "$rainbowpie_ui_debug_screen_animation": false,
   "$rainbowpie_ui_debug_screen_content": true,
-  "$rainbowpie_ui_debug_errcheck_debug": true,
+  "$rainbowpie_ui_debug_errcheck_debug": false,
   // 仅控制不同的UI显示，不会影响bindings中的判定，留空保持默认
   "$rainbowpie_ui_debug_ui_device_override": "", // windows;windows_arm;windows_mobile;android;apple_ios;apple_osx;apple_tv;console;console_xboxone;console_ps4
   "$rainbowpie_ui_debug_ui_input_override": "", // touch;mouse;game_pad

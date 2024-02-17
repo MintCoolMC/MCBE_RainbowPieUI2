@@ -74,6 +74,11 @@ rainbowpie.ui.pause.permissions.member=成員
 rainbowpie.ui.pause.permissions.op=操作者
 rainbowpie.ui.pause.permissions.visitor=訪客
 
+rainbowpie.ui.warning.text.error=檢查到一個嚴重的錯誤，這可能會影響到你正常使用。如果你沒有使用其他資源套件并且正在使用受支持的游戲版本，請把此錯誤報告到issues。
+rainbowpie.ui.warning.text.warning=檢查到一個錯誤。如果你沒有使用其他資源套件并且正在使用受支持的游戲版本，請把此錯誤報告到issues。
+rainbowpie.ui.warning.button.check=查看報錯
+rainbowpie.ui.warning.button.deactivate=禁用資源套件
+
 rainbowpie.ui.version.warn=版本警告！
 rainbowpie.ui.version.supported=支援的版本：
 rainbowpie.ui.version.warn_unsupport=使用不支援的版本可能會出現崩潰或錯誤等問題

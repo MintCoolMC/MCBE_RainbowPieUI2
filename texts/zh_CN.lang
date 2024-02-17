@@ -74,6 +74,11 @@ rainbowpie.ui.pause.permissions.member=成员
 rainbowpie.ui.pause.permissions.op=操作员
 rainbowpie.ui.pause.permissions.visitor=访客
 
+rainbowpie.ui.warning.text.error=检查到一个致命的错误，这可能影响到你正常使用。如果你没有使用其他资源包并且正在使用受支持的游戏版本，请把此错误报告到issues。
+rainbowpie.ui.warning.text.warning=检查到一个错误。如果你没有使用其他资源包并且正在使用受支持的游戏版本，请把此错误报告到issues。
+rainbowpie.ui.warning.button.check=查看报错
+rainbowpie.ui.warning.button.deactivate=禁用资源包
+
 rainbowpie.ui.version.warn=版本警告！
 rainbowpie.ui.version.supported=支持的版本：
 rainbowpie.ui.version.warn_unsupport=使用不支持的版本可能出现崩溃或界面错误等问题
