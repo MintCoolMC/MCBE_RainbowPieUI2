@@ -463,8 +463,11 @@
                           "binding_condition": "always"
                         },
                         {
+                          "binding_name": "#recipe_details_label"
+                        },
+                        {
                           "binding_type": "view",
-                          "source_property_name": "(not (#inventory_selected_item = -1))",
+                          "source_property_name": "((not (#inventory_selected_item = -1)) or #recipe_details_label)",
                           "target_property_name": "#visible"
                         }
                       ],
