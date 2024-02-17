@@ -45,6 +45,7 @@
     "$rainbowpie_localui_button_desc_enabled|default": false,
     "$rainbowpie_localui_button_desc_text|default": "HoverText",
     "$rainbowpie_localui_button_desc_text_bindings|default": [],
+    "$rainbowpie_localui_button_hover_border_layer|default": 50,
 
     "controls": [
       {
@@ -52,7 +53,7 @@
           "size": "$button_image_size",
           "ignored": "((not $rainbowpie_localui_button_border_enabled) or (not $hover_state))",
           "alpha": 0.5,
-          "layer": 50
+          "layer": "$rainbowpie_localui_button_hover_border_layer"
         }
       },
       {
