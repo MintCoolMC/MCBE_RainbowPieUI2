@@ -1,6 +1,125 @@
 {
   "namespace": "rainbowpieui_online_safety",
 
+  "ip_safety_dialog_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "content_panel@rainbowpie_ui_dialog.content_background": {
+                "size": [ "100%", "fill" ],
+                "controls": [
+                  {
+                    "text_default@rainbowpie_ui_common.text_label_notheme": {
+                      "size": [ "100% - 8px", "100% - 4px" ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "color": "$rainbowpie_ui_theme_dialog_content_color",
+                      "text": "$description_text"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "button_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%c + 1px" ],
+                "controls": [
+                  {
+                    "button_panel": {
+                      "type": "panel",
+                      "anchor_to": "bottom_middle",
+                      "anchor_from": "bottom_middle",
+                      "size": [ "100% + 1px", 46 ],
+                      "controls": [
+                        {
+                          "do_not_show_checkbox@online_safety.do_not_show_checkbox": {
+                            "layer": 3,
+                            "size": [ "100%", 23 ],
+                            "offset": [ 0, -0.5 ],
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "$rainbowpie_localui_state_text": "onlinePlay.doNotShowAgain",
+                            "$rainbowpie_localui_state_text_on": "onlinePlay.doNotShowAgain",
+                            "$rainbowpie_localui_toggle_size": [ "100% - 1px", "100% - 1px" ],
+                            "$rainbowpie_localui_toggle_anchor": "center",
+                            "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+                            "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+                            "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+                            "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+                            "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+                            "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+                            "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+                            "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked"
+                          }
+                        },
+                        {
+                          "back_button@common_buttons.light_text_button": {
+                            "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                            "$button_image_size": [ "100% - 1px", "100%" ],
+                            "$pressed_button_name": "button.back",
+                            "$button_text": "onlinePlay.back",
+                            "anchor_to": "bottom_right",
+                            "anchor_from": "bottom_right",
+                            "size": [ "50%", 23 ],
+                            "layer": 5,
+                            "bindings": [
+                              {
+                                "binding_collection_name": "#selected_pack_items_global",
+                                "binding_type": "collection_details"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "proceed_button@common_buttons.light_text_button": {
+                            "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                            "$button_image_size": [ "100% - 1px", "100%" ],
+                            "$pressed_button_name": "button.proceed",
+                            "$button_text": "onlinePlay.proceed",
+                            "anchor_to": "bottom_left",
+                            "anchor_from": "bottom_left",
+                            "size": [ "50%", 23 ],
+                            "layer": 5
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "ip_safety_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "dialog_panel@rainbowpie_ui_dialog.dialog_panel": {
+          "size": [ 204, 132 ],
+          "layer": 100,
+          "$rainbowpie_localui_dialogheader_title": "$text_name",
+          "$rainbowpie_localui_dialog_content": "rainbowpieui_online_safety.ip_safety_dialog_content",
+          "$rainbowpie_localui_dialog_show_background": false,
+          "$rainbowpie_localui_dialogheader_show_close": false
+        }
+      },
+      {
+        "background2@rainbowpie_popup_dialog.background_panel_design2": {}
+      }
+    ]
+  },
+
   "online_safety_screen_content": {
     "type": "panel",
     "controls": [
@@ -114,14 +233,6 @@
                 "max_size": [ "100% - 8px", "100% - 4px" ],
                 "text": "$text_name"
               }
-            },
-            {
-              "close_button@rainbowpie_ui_common.close_button": {
-                "$close_button_to_button_id": "button.back",
-                "offset": [ -2, 0 ],
-                "anchor_from": "right_middle",
-                "anchor_to": "right_middle"
-              }
             }
           ]
         }
@@ -173,23 +284,13 @@
                     }
                   },
                   {
-                    "do_not_show_checkbox@online_safety.do_not_show_checkbox": {
-                      "layer": 3,
+                    "close_button@common_buttons.light_text_button": {
+                      "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                      "$pressed_button_name": "button.back",
+                      "$button_text": "onlinePlay.back",
                       "size": [ "50%", 22 ],
                       "anchor_from": "bottom_left",
-                      "anchor_to": "bottom_left",
-                      "$rainbowpie_localui_state_text": "onlinePlay.doNotShowAgain",
-                      "$rainbowpie_localui_state_text_on": "onlinePlay.doNotShowAgain",
-                      "$rainbowpie_localui_toggle_size": [ "100% - 1px", "100% - 1px" ],
-                      "$rainbowpie_localui_toggle_anchor": "center",
-                      "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
-                      "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
-                      "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
-                      "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
-                      "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
-                      "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
-                      "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
-                      "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked"
+                      "anchor_to": "bottom_left"
                     }
                   }
                 ]

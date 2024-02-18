@@ -23,7 +23,7 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_content": "rainbowpieui_online_safety.online_safety_screen_content",
+    "$screen_content": "rainbowpieui_online_safety.ip_safety_screen_content",
     "$text_name": "onlinePlay.untrustedIp.title",
     "$description_text": "onlinePlay.untrustedIp.message"
   },
