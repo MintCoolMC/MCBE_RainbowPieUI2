@@ -105,6 +105,11 @@
     ]
   },
 
+  "selected_stack_panel/world_template_option_lock_panel": {
+    "ignored": "(($rainbowpie_ui_flag_54edd49d and (not ($rainbowpie_localui_resource_packs_type = 'null'))) or (not $is_world_create and not $is_template_create and not $is_world_edit))",
+    "size": [ "100%", "100%c" ]
+  },
+
   "selected_stack_panel/top_panel": {
     "ignored": "($rainbowpie_ui_flag_54edd49d and (not ($rainbowpie_localui_resource_packs_type = 'null')))",
     "size": [ "100%", 25 ]
