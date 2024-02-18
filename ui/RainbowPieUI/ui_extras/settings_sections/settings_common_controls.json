@@ -398,7 +398,7 @@
               "binding_name": "#dialog_title"
             }
           ],
-          "$rainbowpie_localui_screenheader_content_panel": "rainbowpieui_settings_common.section_title_label"
+          "$rainbowpie_localui_screenheader_content_panel": "rainbowpieui_settings_common.header_controls_panel"
         }
       },
       {
@@ -447,6 +447,65 @@
               }
             }
           ]
+        }
+      }
+    ]
+  },
+
+  "header_controls_panel": {
+    "type": "panel",
+    "$rainbowpie_localui_settings_header_extra_controls|default": "common.empty_panel",
+    "controls": [
+      {
+        "section_title_label@rainbowpieui_settings_common.section_title_label": {}
+      },
+      {
+        "copy_and_delete_button@rainbowpieui_settings_common.copy_and_delete_button": {
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "icon_delete": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "($rainbowpie_ui_path_theme + '/icon/settings/world_edit/delete')",
+    "color": "$text_color"
+  },
+
+  "icon_copy": {
+    "type": "image",
+    "size": [ 12, 12 ],
+    "texture": "($rainbowpie_ui_path_theme + '/icon/settings/world_edit/copy')",
+    "color": "$text_color"
+  },
+
+  "copy_and_delete_button": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "size": [ "100%c", "100%" ],
+    "visible": "$is_world_edit",
+    "ignored": "$include_controls_and_settings_sections",
+    "controls": [
+      {
+        "copy_button@common_buttons.light_content_button": {
+          "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+          "$pressed_button_name": "copy_world_button",
+          "$button_content": "rainbowpieui_settings_common.icon_copy",
+          "size": [ "100%y", "100%" ],
+          "layer": 2
+        }
+      },
+      {
+        "delete_button@common_buttons.light_content_button": {
+          "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+          "$pressed_button_name": "delete_world_button",
+          "$button_content": "rainbowpieui_settings_common.icon_delete",
+          "size": [ "100%y", "100%" ],
+          "layer": 2
         }
       }
     ]
