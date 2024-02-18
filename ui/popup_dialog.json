@@ -1,6 +1,11 @@
 {
   "namespace": "popup_dialog",
 
+  "modal_label_panel": {
+    "$rainbowpie_localui_scrollbar_enabled": true,
+    "$scrolling_pane_size": [ "100% - 1px", "100%" ]
+  },
+
   "modal_dialog_popup/modal_input/modal_bg_buttons": {
     "ignored": "$rainbowpie_ui_flag_6bb756a3",
     "layer": 100
