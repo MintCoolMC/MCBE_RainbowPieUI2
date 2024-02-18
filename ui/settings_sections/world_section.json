@@ -1,6 +1,14 @@
 {
   "namespace": "world_section",
 
+  "game_section/export_template_panel/template_version": {
+    "ignored": false
+  },
+
+  "game_section/export_template_panel/template_buttons": {
+    "ignored": "(not $file_picking_supported)"
+  },
+
   "level_texture_pack_section": {
     "$rainbowpie_localui_resource_packs_type": "texture",
     "$rainbowpie_localui_resource_packs_search_box_control": "level_rp_search_text_box_display_text",

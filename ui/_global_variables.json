@@ -140,13 +140,13 @@
   "$rainbowpie_ui_debug_ui_device_override": "", // windows;windows_arm;windows_mobile;android;apple_ios;apple_osx;apple_tv;console;console_xboxone;console_ps4
   "$rainbowpie_ui_debug_ui_input_override": "", // touch;mouse;game_pad
   "$rainbowpie_ui_debug_ui_new_video_settings": false,
-  "$rainbowpie_ui_debug_ui_var_override": false, // 启用后将使用下面的值
+  "$rainbowpie_ui_debug_ui_var_override": true, // 启用后将使用下面的值
   "$rainbowpie_ui_debug_ui_var_override_file_picking_supported": true,
   "$rainbowpie_ui_debug_ui_var_override_world_archive_support": true,
   "$rainbowpie_ui_debug_ui_var_override_is_low_memory_device": false,
   "$rainbowpie_ui_debug_ui_var_override_pre_release": true,
   "$rainbowpie_ui_debug_ui_var_override_trial": false,
-  "$rainbowpie_ui_debug_ui_var_override_is_publish": true,
+  "$rainbowpie_ui_debug_ui_var_override_is_publish": false,
   "$rainbowpie_ui_debug_ui_var_override_education_edition": false,
   
   // Path

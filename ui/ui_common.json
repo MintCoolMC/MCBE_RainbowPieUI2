@@ -1636,6 +1636,10 @@
           {
             "requires": "$rainbowpie_ui_debug_ui_new_video_settings",
             "$new_video_settings": true
+          },
+          {
+            "requires": "($screen_content = 'rainbowpieui_settings_common.settings_content')",
+            "$export_template_disabled": false
           }
         ]
       }
