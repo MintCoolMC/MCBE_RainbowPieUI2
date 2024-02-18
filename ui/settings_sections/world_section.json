@@ -1,6 +1,74 @@
 {
   "namespace": "world_section",
 
+  "game_section": {
+    "modifications": [
+      {
+        "control_name": "world_cheats_label",
+        "operation": "insert_before",
+        "value": [
+          {
+            "education_settings_label@settings_common.option_group_label": {
+              "$text": "Education Edition Settings",
+              "variables": [
+                {
+                  "requires": "$education_edition",
+                  "$font_type": "MinecraftTen",
+                  "$font_scale_factor": 1.2
+                }
+              ]
+            }
+          },
+          {
+            "perfect_weather@settings_common.option_toggle": {
+              "$tts_section_header": "createWorldScreen.cheatSettings",
+              "$option_label": "Perfect Weather",
+              "$option_binding_name": "#perfect_weather",
+              "$option_enabled_binding_name": "#perfect_weather_enabled",
+              "$toggle_name": "perfect_weather",
+              "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+              "$toggle_binding_condition": "always_when_visible"
+            }
+          },
+          {
+            "immutable_world@settings_common.option_toggle": {
+              "$tts_section_header": "createWorldScreen.cheatSettings",
+              "$option_label": "Immutable World",
+              "$option_binding_name": "#immutable_world",
+              "$option_enabled_binding_name": "#immutable_world_enabled",
+              "$toggle_name": "immutable_world",
+              "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+              "$toggle_binding_condition": "always_when_visible"
+            }
+          },
+          {
+            "show_border_effect@settings_common.option_toggle": {
+              "ignored": true,
+              "$tts_section_header": "createWorldScreen.cheatSettings",
+              "$option_label": "createWorldScreen.showbordereffect",
+              "$option_binding_name": "#show_border_effect",
+              "$option_enabled_binding_name": "#show_border_effect_enabled",
+              "$toggle_name": "show_border_effect",
+              "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+              "$toggle_binding_condition": "always_when_visible"
+            }
+          },
+          {
+            "player_damage@settings_common.option_toggle": {
+              "$tts_section_header": "createWorldScreen.cheatSettings",
+              "$option_label": "Player Damage",
+              "$option_binding_name": "#player_damage",
+              "$option_enabled_binding_name": "#player_damage_enabled",
+              "$toggle_name": "player_damage",
+              "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+              "$toggle_binding_condition": "always_when_visible"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
   "game_section/export_template_panel/template_version": {
     "ignored": false
   },
