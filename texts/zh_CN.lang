@@ -9,6 +9,10 @@ rainbowpie.ui.theme.default_name=Rainbow Pie UI 默认主题
 rainbowpie.ui.theme.default_auther=MintCoolMC
 rainbowpie.ui.theme.default_description=Rainbow Pie UI
 
+rainbowpie.ui.themesystem.background.title=背景信息
+rainbowpie.ui.themesystem.background.name=名称：
+rainbowpie.ui.themesystem.background.description=简介：
+
 rainbowpie.ui.themesystem.description.title=简介:	#
 rainbowpie.ui.themesystem.version_toolow=当前主题版本太低！请更新！	#
 rainbowpie.ui.themesystem.version_toohight=当前主题版本太高！	#

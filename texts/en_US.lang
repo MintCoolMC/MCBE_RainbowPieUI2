@@ -9,6 +9,10 @@ rainbowpie.ui.theme.default_name=Rainbow Pie UI Default Theme
 rainbowpie.ui.theme.default_auther=MintCoolMC
 rainbowpie.ui.theme.default_description=Rainbow Pie UI
 
+rainbowpie.ui.themesystem.background.title=Information
+rainbowpie.ui.themesystem.background.name=Name:
+rainbowpie.ui.themesystem.background.description=Description:
+
 rainbowpie.ui.themesystem.description.title=Description:
 rainbowpie.ui.themesystem.version_toolow=This theme version is too low! please update!
 rainbowpie.ui.themesystem.version_toohight=This theme version is too hight!

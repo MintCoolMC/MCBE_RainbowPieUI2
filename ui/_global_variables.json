@@ -130,6 +130,7 @@
   "$rainbowpie_ui_flag_be13f8d7": true, // StartV2 UI Get Started Button
   "$rainbowpie_ui_flag_9c39ae19": false, // Inventory Item Preview
   "$rainbowpie_ui_flag_135972c6": true, // UI Error Check
+  "$rainbowpie_ui_flag_82d2c0e7": true, // Background Information
 
   // Debug
   "$rainbowpie_ui_debug": false,
@@ -191,6 +192,8 @@
   "$rainbowpie_ui_theme_author": "rainbowpie.ui.theme.default_auther",
   "$rainbowpie_ui_theme_desc": "rainbowpie.ui.theme.default_description",
   "$rainbowpie_ui_theme_description": "rainbowpie.ui.theme.default_description",
+  "$rainbowpie_ui_theme_background_name": "Bridge (Rainy Day)",
+  "$rainbowpie_ui_theme_background_description": "Java edition\nComplementaryUnbound_r5.1.1",
   "$rainbowpie_ui_theme_version": "1080",
 
   // Theme Background //

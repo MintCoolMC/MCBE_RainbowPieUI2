@@ -1,6 +1,192 @@
 {
   "namespace": "rainbowpieui_start",
 
+  "background_icon": {
+    "type": "image",
+    "size": [ 15, 15 ],
+    "texture": "($rainbowpie_ui_path_theme + '/icon/start/background')",
+    "color": "$text_color",
+    // "color": [ 0.85, 0.85, 0.85 ],
+    // "alpha": 0.85,
+    "layer": 8
+  },
+
+  "background_dialog_toggle_base@common_toggles.light_ui_toggle": {
+    "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
+    "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
+    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
+    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
+    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
+    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
+    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
+    "$button_content": "rainbowpieui_start.background_icon",
+
+    "$radio_toggle_group": true,
+    "$toggle_name": "rainbowpie_start_background_dialog",
+    "$toggle_group_default_selected": 1001,
+
+    "$toggle_group_forced_index": 0,
+
+    "$toggle_view_binding_name": ""
+  },
+
+  "modal_label_panel@common.scrolling_panel": {
+    "$rainbowpie_localui_scrollbar_enabled": true,
+    "$scrolling_pane_size": [ "100% - 1px", "100%" ],
+    "$scrolling_pane_offset": [ 2, 0 ],
+    "$scroll_size": [ 5, "100% - 4px" ],
+    "$show_background": false,
+    "layer": 1,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$always_handle_scrolling": true
+  },
+
+  "background_text_panel": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "offset": [ 2, 0 ],
+    "controls": [
+      {
+        "padding": {
+          "type": "panel",
+          "layer": 2,
+          "size": [ 0, 2 ]
+        }
+      },
+      {
+        "name": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", "100%cm" ],
+          "controls": [
+            {
+              "name_title@rainbowpie_ui_common.text_label_notheme": {
+                "color": "$rainbowpie_ui_theme_dialog_content_color",
+                "text": "rainbowpie.ui.themesystem.background.name"
+              }
+            },
+            {
+              "name_text@rainbowpie_ui_common.text_label_notheme": {
+                "color": "$rainbowpie_ui_theme_dialog_content_color",
+                "text": "$rainbowpie_ui_theme_background_name"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "description": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", "100%cm" ],
+          "controls": [
+            {
+              "description_title@rainbowpie_ui_common.text_label_notheme": {
+                "color": "$rainbowpie_ui_theme_dialog_content_color",
+                "text": "rainbowpie.ui.themesystem.background.description"
+              }
+            },
+            {
+              "description_text@rainbowpie_ui_common.text_label_notheme": {
+                "color": "$rainbowpie_ui_theme_dialog_content_color",
+                "text": "$rainbowpie_ui_theme_background_description"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "background_path@rainbowpie_ui_common.text_label_notheme": {
+          "ignored": "(not ($rainbowpieui_branch_type = 'dev'))",
+          "visible": false,
+          "color": "$rainbowpie_ui_theme_dialog_content_color",
+          "text": "('\n' + $rainbowpie_ui_theme_background_texture + '\n' + $rainbowpie_ui_theme_background_blur_texture)"
+        }
+      }
+    ]
+  },
+
+
+  "background_dialog_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "content_panel@rainbowpie_ui_dialog.content_background": {
+                "size": [ "100%", "fill" ],
+                "controls": [
+                  {
+                    "modal_label_panel@rainbowpieui_start.modal_label_panel": {
+                      "$scrolling_content": "rainbowpieui_start.background_text_panel"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "button_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%c + 1px" ],
+                "controls": [
+                  {
+                    "button_panel": {
+                      "type": "panel",
+                      "anchor_to": "bottom_middle",
+                      "anchor_from": "bottom_middle",
+                      "size": [ "100% + 1px", "100%c" ],
+                      "controls": [
+                        {
+                          "close_dialog_button@rainbowpieui_start.background_dialog_toggle_base": {
+                            "$button_content": "rainbowpieui_start.button_text",
+                            "$button_image_size": [ "100% - 1px", "100%" ],
+                            "$button_text": "gui.ok",
+                            "$rainbowpie_localui_button_default_alpha": "$rainbowpie_ui_theme_dialog_content_background_alpha",
+                            "anchor_to": "top_middle",
+                            "anchor_from": "top_middle",
+                            "size": [ "100%", 23 ],
+                            "$toggle_group_forced_index": 1001,
+                            "$toggle_view_binding_name": "close_background_dialog",
+                            "layer": 2000,
+                            "$button_mappings": [
+                              {
+                                "from_button_id": "button.menu_cancel",
+                                "to_button_id": "button.menu_select",
+                                "mapping_type": "global"
+                              },
+                              {
+                                "from_button_id": "button.menu_select",
+                                "to_button_id": "button.menu_select",
+                                "mapping_type": "pressed"
+                              },
+                              {
+                                "from_button_id": "button.menu_ok",
+                                "to_button_id": "button.menu_ok",
+                                "mapping_type": "focused"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "get_started_icon": {
     "type": "image",
     "size": [ 18, 18 ],
@@ -274,6 +460,84 @@
   "start_screen_content": {
     "type": "panel",
     "controls": [
+      {
+        "background_dialog_screen": {
+          "type": "panel",
+          "visible": false,
+          "ignored": "((not $rainbowpie_ui_flag_82d2c0e7) or ($rainbowpie_ui_theme_background_texture = ''))",
+          "controls": [
+            {
+              "modal_input@common.input_panel": {
+                "layer": 100,
+                "controls": [
+                  {
+                    "dialog_panel@rainbowpie_ui_dialog.dialog_panel": {
+                      "size": [ 204, 132 ],
+                      "layer": 100,
+                      "$rainbowpie_localui_dialogheader_title": "rainbowpie.ui.themesystem.background.title",
+                      "$rainbowpie_localui_dialog_content": "rainbowpieui_start.background_dialog_content",
+                      "$rainbowpie_localui_dialog_show_background": false,
+                      "$rainbowpie_localui_dialogheader_show_close": false
+                    }
+                  },
+                  {
+                    "background2@rainbowpie_popup_dialog.background_panel_design2": {}
+                  }
+                ],
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.menu_select",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_secondary_select",
+                    "to_button_id": "button.menu_secondary_select",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.menu_ok",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_up",
+                    "to_button_id": "button.menu_up",
+                    "mapping_type": "global",
+                    "scope": "view"
+                  },
+                  {
+                    "from_button_id": "button.menu_down",
+                    "to_button_id": "button.menu_down",
+                    "mapping_type": "global",
+                    "scope": "view"
+                  },
+                  {
+                    "from_button_id": "button.menu_left",
+                    "to_button_id": "button.menu_left",
+                    "mapping_type": "global",
+                    "scope": "view"
+                  },
+                  {
+                    "from_button_id": "button.menu_right",
+                    "to_button_id": "button.menu_right",
+                    "mapping_type": "global",
+                    "scope": "view"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "open_background_dialog",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
       {
         "dialog_alert_screen": {
           "type": "panel",
@@ -1308,6 +1572,18 @@
                                 }
                               }
                             ]
+                          }
+                        },
+                        {
+                          "background_button@rainbowpieui_start.background_dialog_toggle_base": {
+                            "ignored": "((not $rainbowpie_ui_flag_82d2c0e7) or ($rainbowpie_ui_theme_background_texture = ''))",
+                            "anchor_to": "bottom_right",
+                            "anchor_from": "bottom_right",
+                            "offset": [ -8, -17 ],
+                            "size": [ 28, 28 ],
+                            "$toggle_group_forced_index": 1000,
+                            "$toggle_view_binding_name": "open_background_dialog",
+                            "layer": 30
                           }
                         },
                         {
