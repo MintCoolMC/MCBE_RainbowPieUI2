@@ -53,50 +53,26 @@
       {
         "padding": {
           "type": "panel",
-          "layer": 2,
           "size": [ 0, 2 ]
         }
       },
       {
-        "name": {
-          "type": "stack_panel",
-          "orientation": "horizontal",
-          "size": [ "100%c", "100%cm" ],
-          "controls": [
-            {
-              "name_title@rainbowpie_ui_common.text_label_notheme": {
-                "color": "$rainbowpie_ui_theme_dialog_content_color",
-                "text": "rainbowpie.ui.themesystem.background.name"
-              }
-            },
-            {
-              "name_text@rainbowpie_ui_common.text_label_notheme": {
-                "color": "$rainbowpie_ui_theme_dialog_content_color",
-                "text": "$rainbowpie_ui_theme_background_name"
-              }
-            }
-          ]
+        "name_text@rainbowpie_ui_common.text_label_notheme": {
+          "color": "$rainbowpie_ui_theme_dialog_content_color",
+          "text": "$rainbowpie_ui_theme_background_name",
+          "font_scale_factor": 1.2
         }
       },
       {
-        "description": {
-          "type": "stack_panel",
-          "orientation": "horizontal",
-          "size": [ "100%c", "100%cm" ],
-          "controls": [
-            {
-              "description_title@rainbowpie_ui_common.text_label_notheme": {
-                "color": "$rainbowpie_ui_theme_dialog_content_color",
-                "text": "rainbowpie.ui.themesystem.background.description"
-              }
-            },
-            {
-              "description_text@rainbowpie_ui_common.text_label_notheme": {
-                "color": "$rainbowpie_ui_theme_dialog_content_color",
-                "text": "$rainbowpie_ui_theme_background_description"
-              }
-            }
-          ]
+        "padding_1": {
+          "type": "panel",
+          "size": [ 0, 2 ]
+        }
+      },
+      {
+        "description_text@rainbowpie_ui_common.text_label_notheme": {
+          "color": "$rainbowpie_ui_theme_dialog_content_color",
+          "text": "$rainbowpie_ui_theme_background_description"
         }
       },
       {
