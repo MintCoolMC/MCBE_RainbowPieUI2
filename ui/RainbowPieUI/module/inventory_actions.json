@@ -564,6 +564,7 @@
           "visible": false,
           "$button_take_all_place_all|default": "rainbowpie.placeholder",
           "$button_auto_place|default": "rainbowpie.placeholder",
+          "$button_mapping_type|default": "pressed",
           "bindings": [
             {
               "binding_type": "collection_details",
@@ -584,25 +585,25 @@
             {
               "from_button_id": "button.menu_select",
               "to_button_id": "$button_take_all_place_all",
-              "mapping_type": "pressed",
+              "mapping_type": "$button_mapping_type",
               "consume_event": false
             },
             {
               "from_button_id": "button.menu_ok",
               "to_button_id": "$button_take_all_place_all",
-              "mapping_type": "pressed",
+              "mapping_type": "$button_mapping_type",
               "consume_event": false
             },
             {
               "from_button_id": "button.menu_auto_place",
               "to_button_id": "$button_auto_place",
-              "mapping_type": "pressed",
+              "mapping_type": "$button_mapping_type",
               "consume_event": false
             },
             {
               "from_button_id": "button.controller_secondary_select",
               "to_button_id": "$button_auto_place",
-              "mapping_type": "pressed",
+              "mapping_type": "$button_mapping_type",
               "consume_event": false
             }
           ]
@@ -1106,25 +1107,29 @@
                   {
                     "armor_input_panel@rainbowpie_module_inventory_actions.armor_input_panel": {
                       "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled)",
-                      "$button_take_all_place_all": "button.drop_all"
+                      "$button_take_all_place_all": "button.drop_all",
+                      "$button_mapping_type": "double_pressed"
                     }
                   },
                   {
                     "offhand_input_panel@rainbowpie_module_inventory_actions.offhand_input_panel": {
                       "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled)",
-                      "$button_take_all_place_all": "button.drop_all"
+                      "$button_take_all_place_all": "button.drop_all",
+                      "$button_mapping_type": "double_pressed"
                     }
                   },
                   {
                     "inventory_input_panel@rainbowpie_module_inventory_actions.inventory_input_panel": {
                       "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled)",
-                      "$button_take_all_place_all": "button.drop_all"
+                      "$button_take_all_place_all": "button.drop_all",
+                      "$button_mapping_type": "double_pressed"
                     }
                   },
                   {
                     "hotbar_input_panel@rainbowpie_module_inventory_actions.hotbar_input_panel": {
                       "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled)",
-                      "$button_take_all_place_all": "button.drop_all"
+                      "$button_take_all_place_all": "button.drop_all",
+                      "$button_mapping_type": "double_pressed"
                     }
                   }
                 ]
@@ -1171,25 +1176,29 @@
                   {
                     "armor_input_panel@rainbowpie_module_inventory_actions.armor_input_panel": {
                       "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_delete_all_item_enabled)",
-                      "$button_take_all_place_all": "button.container_auto_destroy"
+                      "$button_take_all_place_all": "button.container_auto_destroy",
+                      "$button_mapping_type": "double_pressed"
                     }
                   },
                   {
                     "offhand_input_panel@rainbowpie_module_inventory_actions.offhand_input_panel": {
                       "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_delete_all_item_enabled)",
-                      "$button_take_all_place_all": "button.container_auto_destroy"
+                      "$button_take_all_place_all": "button.container_auto_destroy",
+                      "$button_mapping_type": "double_pressed"
                     }
                   },
                   {
                     "inventory_input_panel@rainbowpie_module_inventory_actions.inventory_input_panel": {
                       "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_delete_all_item_enabled)",
-                      "$button_take_all_place_all": "button.container_auto_destroy"
+                      "$button_take_all_place_all": "button.container_auto_destroy",
+                      "$button_mapping_type": "double_pressed"
                     }
                   },
                   {
                     "hotbar_input_panel@rainbowpie_module_inventory_actions.hotbar_input_panel": {
                       "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_delete_all_item_enabled)",
-                      "$button_take_all_place_all": "button.container_auto_destroy"
+                      "$button_take_all_place_all": "button.container_auto_destroy",
+                      "$button_mapping_type": "double_pressed"
                     }
                   }
                 ],
