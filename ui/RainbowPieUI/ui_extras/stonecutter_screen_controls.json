@@ -1,6 +1,35 @@
 {
   "namespace": "rainbowpieui_stonecutter",
 
+  "craft_icon": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "crafting_table@crafting.item_renderer": {
+          "size": [ "100%", "100%" ],
+          "offset": [ 0, 0 ],
+          "layer": 1,
+          "property_bag": {
+            "#item_id_aux": 3801088
+          }
+        }
+      },
+      {
+        "down_arrow": {
+          "type": "image",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "size": [ 10, 10 ],
+          "offset": [ 2, 0 ],
+          "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/arrow_down')",
+          "color": "$text_color",
+          "layer": 2
+        }
+      }
+    ]
+  },
+
   "stonecutter_inventory_root_panel": {
     "type": "panel",
     "size": [ 168, 162 ],
@@ -66,6 +95,23 @@
                       "$button_ref": "stonecutter.result_slot_button",
                       "$item_renderer_panel_size": [ "100%y", "69.23076923076923%" ],
                       "size": [ "100%y", "47.27272727272727%" ]
+                    }
+                  },
+                  {
+                    "quick_craft_button@common_buttons.light_content_button": {
+                      "$rainbowpie_localui_button_hover_border_layer": 30,
+                      "$button_image_size": [ "100%", "100%" ],
+                      "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+                      "$pressed_button_name": "button.container_auto_place",
+                      "$button_content": "rainbowpieui_stonecutter.craft_icon",
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "size": [ "100%y", "40.74074074074074%" ],
+                      "layer": 1,
+                      "property_bag": {
+                        "#collection_name": "stonecutter_result_items",
+                        "#collection_index": 0
+                      }
                     }
                   }
                 ]
