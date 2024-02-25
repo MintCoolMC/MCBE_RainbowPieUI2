@@ -17,6 +17,8 @@ rainbowpie.ui.themesystem.description.title=介紹:	#
 rainbowpie.ui.themesystem.version_toolow=當前外觀包版本太低！	#
 rainbowpie.ui.themesystem.version_toohight=當前外觀包版本太高！	#
 
+rainbowpie.ui.trade2.tradeAll=交易全部
+
 rainbowpie.ui.inventory.actions.destroy_selection=銷毀物品
 rainbowpie.ui.inventory.actions.destroy_inventory=從物品欄銷毀全部
 rainbowpie.ui.inventory.actions.quick_craft=快速合成

@@ -1,6 +1,33 @@
 {
   "namespace": "trade2",
 
+  "top_half_stack_panel/trade_button_holder/trade_button": {
+    "offset": [ 0, "-50%y" ]
+  },
+
+  "top_half_stack_panel/trade_button_holder": {
+    "size": [ "100%cm", 0 ],
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "trade_all_button@trade2.trade_button": {
+              "$button_text": "rainbowpie.ui.trade2.tradeAll",
+              "$pressed_button_name": "button.container_auto_place",
+              "property_bag": {
+                "#collection_name": "trade2_result_item",
+                "#collection_index": 0
+              },
+              "offset": [ 0, "50%y" ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
   "screen_stack_panel": {
     "modifications": [
       {
