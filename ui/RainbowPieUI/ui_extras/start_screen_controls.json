@@ -211,7 +211,7 @@
             {
               "gamertag": {
                 "type": "panel",
-                "size": [ "100%c + 8px", "100%" ],
+                "size": [ "100%cm + 8px", "100%" ],
                 "layer": 2,
                 "controls": [
                   {
@@ -223,6 +223,27 @@
                       "bindings": [
                         {
                           "binding_name": "#gamertag_label"
+                        },
+                        {
+                          "binding_name": "(not #sign_in_visible)",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "gamertag_label_offline@rainbowpie_ui_common.text_label": {
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "text": "#playername",
+                      "font_scale_factor": 1.4,
+                      "bindings": [
+                        {
+                          "binding_name": "#playername"
+                        },
+                        {
+                          "binding_name": "#sign_in_visible",
+                          "binding_name_override": "#visible"
                         }
                       ]
                     }
