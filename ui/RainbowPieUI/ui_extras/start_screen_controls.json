@@ -204,6 +204,10 @@
                   {
                     "binding_name": "#gamerpic_texture_location_type",
                     "binding_name_override": "#texture_file_system"
+                  },
+                  {
+                    "binding_name": "(not #sign_in_visible)",
+                    "binding_name_override": "#visible"
                   }
                 ]
               }
@@ -220,6 +224,7 @@
                       "anchor_to": "center",
                       "text": "#gamertag_label",
                       "font_scale_factor": 1.4,
+                      "color": "$text_color",
                       "bindings": [
                         {
                           "binding_name": "#gamertag_label"
@@ -232,11 +237,12 @@
                     }
                   },
                   {
-                    "gamertag_label_offline@rainbowpie_ui_common.text_label": {
+                    "gamertag_label_offline@rainbowpie_ui_common.text_label_notheme": {
                       "anchor_from": "center",
                       "anchor_to": "center",
                       "text": "#playername",
                       "font_scale_factor": 1.4,
+                      "color": "$text_color",
                       "bindings": [
                         {
                           "binding_name": "#playername"
@@ -1453,6 +1459,22 @@
                                   "anchor_to": "left_middle",
                                   "controls": [
                                     {
+                                      "profile_button@common_buttons.light_content_button": {
+                                        "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_form_fitting_button",
+                                        "$button_content_size_override": [ "100%c", "100%c" ],
+                                        "$button_image_size_override": [ "100%c", "100%c" ],
+                                        "$button_type_panel": "rainbowpieui_start.startv2_profile_button_panel",
+                                        "$pressed_button_name": "button.to_profile_screen",
+                                        "size": [ "100%c", "100%" ]
+                                      }
+                                    },
+                                    {
+                                      "profile_button_padding": {
+                                        "type": "panel",
+                                        "size": [ 4, 0 ]
+                                      }
+                                    },
+                                    {
                                       "xbl_signin_panel": {
                                         "type": "panel",
                                         "size": [ "100%c", "100%" ],
@@ -1487,22 +1509,6 @@
                                           }
                                         ],
                                         "controls": [
-                                          {
-                                            "profile_button@common_buttons.light_content_button": {
-                                              "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_form_fitting_button",
-                                              "$button_content_size_override": [ "100%c", "100%c" ],
-                                              "$button_image_size_override": [ "100%c", "100%c" ],
-                                              "$button_type_panel": "rainbowpieui_start.startv2_profile_button_panel",
-                                              "$pressed_button_name": "button.to_profile_screen",
-                                              "size": [ "100%c", "100%" ]
-                                            }
-                                          },
-                                          {
-                                            "profile_button_padding": {
-                                              "type": "panel",
-                                              "size": [ 4, 0 ]
-                                            }
-                                          },
                                           {
                                             "achievements_button@start.achievements_button": {
                                               "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
