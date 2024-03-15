@@ -28,7 +28,7 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
-          name: RainbowPie UI
+          name: MintUI_Project
           path: '*.mcpack'
           if-no-files-found: error
       - name: Cleanup Workflow
