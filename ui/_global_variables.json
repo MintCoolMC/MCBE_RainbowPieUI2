@@ -131,6 +131,7 @@
   "$rainbowpie_ui_flag_9c39ae19": false, // Inventory Item Preview
   "$rainbowpie_ui_flag_135972c6": true, // UI Error Check
   "$rainbowpie_ui_flag_82d2c0e7": true, // Background Information
+  "$rainbowpie_ui_flag_1c167cde": true, // Start V2 Topbar
 
   // Debug
   "$rainbowpie_ui_debug": false,

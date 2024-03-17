@@ -1300,6 +1300,7 @@
                         },
                         {
                           "title_text@rainbowpie_ui_common.title_text": {
+                            "ignored": "$rainbowpie_ui_flag_1c167cde",
                             "$title_text_scale": 3.4,
                             "offset": [ 8, "2.5%" ],
                             "anchor_from": "top_left",
@@ -1315,6 +1316,7 @@
                         },
                         {
                           "easteregg_button@common_buttons.light_text_button": {
+                            "ignored": "$rainbowpie_ui_flag_1c167cde",
                             "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
                             "$rainbowpie_localui_button_desc_enabled": true,
                             "$rainbowpie_localui_button_desc_text": "You found an easter egg!!!\nVisit the link below to claim your rewards.\n§ehttps://mintraspberry.cool/reward",
@@ -1448,6 +1450,7 @@
                             "offset": [ -8, 8 ],
                             "anchor_from": "top_right",
                             "anchor_to": "top_right",
+                            "ignored": "$rainbowpie_ui_flag_1c167cde",
                             "layer": 30,
                             "controls": [
                               {
@@ -1635,6 +1638,27 @@
                     }
                   }
                 ]
+              }
+            },
+            {
+              "startv2_topbar_background": {
+                "type": "image",
+                "texture": "textures/ui/White",
+                "size": [ "100%", 30 ],
+                "alpha": "$rainbowpie_ui_theme_topbar_background_alpha",
+                "color": "$rainbowpie_ui_theme_topbar_background_color",
+                "layer": 8,
+                "ignored": "(not $rainbowpie_ui_flag_1c167cde)",
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle"
+              }
+            },
+            {
+              "blur_layer_startv2_topbar@mintui_background.background_blur": {
+                "ignored": "(not $rainbowpie_ui_flag_1c167cde)",
+                "$background_offset": [ 0, "-100% + 30px" ],
+                "$background_children_offset": [ 0, "100% - 30px" ],
+                "$background_layer": 2
               }
             },
             {
