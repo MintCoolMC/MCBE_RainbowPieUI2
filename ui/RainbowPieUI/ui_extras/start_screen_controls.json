@@ -1334,6 +1334,15 @@
                           }
                         },
                         {
+                          "topbar_title_text@rainbowpie_ui_common.title_text": {
+                            "ignored": "(not $rainbowpie_ui_flag_1c167cde)",
+                            "$title_text_scale": 2.4,
+                            "offset": [ 6, 0 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left"
+                          }
+                        },
+                        {
                           "gathering_panel": {
                             "type": "panel",
                             "size": [ "100%cm", 25 ],
@@ -1446,12 +1455,21 @@
                         {
                           "online_button_panel": {
                             "type": "panel",
-                            "size": [ "100%c", "28px" ],
-                            "offset": [ -8, 8 ],
+                            "size": "$online_button_size",
+                            "$online_button_size": [ "100%c", "28px" ],
+                            "offset": "$online_button_offset",
+                            "$online_button_offset": [ -8, 8 ],
                             "anchor_from": "top_right",
                             "anchor_to": "top_right",
-                            "ignored": "$rainbowpie_ui_flag_1c167cde",
+                            // "ignored": "$rainbowpie_ui_flag_1c167cde",
                             "layer": 30,
+                            "variables": [
+                              {
+                                "requires": "$rainbowpie_ui_flag_1c167cde",
+                                "$online_button_size": [ "100%c", "28px" ],
+                                "$online_button_offset": [ -1, 1 ]
+                              }
+                            ],
                             "controls": [
                               {
                                 "button_stack_panel": {
