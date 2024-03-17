@@ -398,18 +398,21 @@
                             "controls": [
                               {
                                 "container_item_0@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "$background_images": "crafting.crafting_container_cell_images",
                                   "size": [ "100%y", "100%" ],
                                   "collection_index": 0
                                 }
                               },
                               {
                                 "container_item_1@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "$background_images": "crafting.crafting_container_cell_images",
                                   "size": [ "100%y", "100%" ],
                                   "collection_index": 1
                                 }
                               },
                               {
                                 "container_item_2@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "$background_images": "crafting.crafting_container_cell_images",
                                   "size": [ "100%y", "100%" ],
                                   "collection_index": 2
                                 }
@@ -428,18 +431,21 @@
                             "controls": [
                               {
                                 "container_item_3@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "$background_images": "crafting.crafting_container_cell_images",
                                   "size": [ "100%y", "100%" ],
                                   "collection_index": 3
                                 }
                               },
                               {
                                 "container_item_4@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "$background_images": "crafting.crafting_container_cell_images",
                                   "size": [ "100%y", "100%" ],
                                   "collection_index": 4
                                 }
                               },
                               {
                                 "container_item_5@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "$background_images": "crafting.crafting_container_cell_images",
                                   "size": [ "100%y", "100%" ],
                                   "collection_index": 5
                                 }
@@ -458,18 +464,21 @@
                             "controls": [
                               {
                                 "container_item_6@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "$background_images": "crafting.crafting_container_cell_images",
                                   "size": [ "100%y", "100%" ],
                                   "collection_index": 6
                                 }
                               },
                               {
                                 "container_item_7@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "$background_images": "crafting.crafting_container_cell_images",
                                   "size": [ "100%y", "100%" ],
                                   "collection_index": 7
                                 }
                               },
                               {
                                 "container_item_8@rainbowpie_ui_inventory_and_container.container_item": {
+                                  "$background_images": "crafting.crafting_container_cell_images",
                                   "size": [ "100%y", "100%" ],
                                   "collection_index": 8
                                 }
@@ -566,6 +575,7 @@
                                   "controls": [
                                     {
                                       "container_item_0@rainbowpie_ui_inventory_and_container.container_item": {
+                                        "$background_images": "crafting.crafting_container_cell_images",
                                         "size": [ "100%y", "100%" ],
                                         "collection_index": 0,
                                         "$focus_id_binding_type": "none",
@@ -576,6 +586,7 @@
                                     },
                                     {
                                       "container_item_1@rainbowpie_ui_inventory_and_container.container_item": {
+                                        "$background_images": "crafting.crafting_container_cell_images",
                                         "size": [ "100%y", "100%" ],
                                         "collection_index": 1,
                                         "$focus_id_binding_type": "none",
@@ -598,6 +609,7 @@
                                   "controls": [
                                     {
                                       "container_item_2@rainbowpie_ui_inventory_and_container.container_item": {
+                                        "$background_images": "crafting.crafting_container_cell_images",
                                         "size": [ "100%y", "100%" ],
                                         "collection_index": 2,
                                         "$focus_id_binding_type": "none",
@@ -608,6 +620,7 @@
                                     },
                                     {
                                       "container_item_3@rainbowpie_ui_inventory_and_container.container_item": {
+                                        "$background_images": "crafting.crafting_container_cell_images",
                                         "size": [ "100%y", "100%" ],
                                         "collection_index": 3,
                                         "$focus_override_right_binding_type": "none",
