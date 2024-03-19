@@ -151,7 +151,16 @@
                     "type": "panel",
                     "size": [ "fill", "100%" ],
                     "controls": [
-                      { "messages_panel@chat.messages_scrolling_panel": {} },
+                      {
+                        "messages_panel@chat.messages_scrolling_panel": {
+                          "bindings": [
+                            {
+                              "binding_name": "(not #host_main_visible)",
+                              "binding_name_override": "#visible"
+                            }
+                          ]
+                        }
+                      },
                       { "autocomplete_commands_panel@chat.commands_panel": { "layer": 3 } }
                     ]
                   }

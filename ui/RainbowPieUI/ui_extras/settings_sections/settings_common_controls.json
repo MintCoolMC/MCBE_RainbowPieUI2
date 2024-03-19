@@ -706,7 +706,7 @@
     "$rainbowpie_localui_toggle_btbar_color|default": [],
     "$rainbowpie_localui_toggle_btbar_alpha|default": 1.0,
     "$check_state|default": false,
-    "$button_image_size": [ "100%", "100%" ],
+    "$button_image_size|default": [ "100%", "100%" ],
     "$rainbowpie_localui_button_controls": [
       {
         "button_background": {

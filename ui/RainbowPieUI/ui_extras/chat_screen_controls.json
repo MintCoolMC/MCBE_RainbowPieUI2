@@ -828,10 +828,35 @@
     "size": [ "100%", 29 ],
     "controls": [
       {
+        "sub_command_button@common_buttons.light_content_button": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [ "100%", "100% - 1px" ],
+          "layer": 2,
+          "$rainbowpie_localui_button_default_alpha": 0,
+          "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+          "$button_image_size": [ "100%", "100%" ],
+          "$pressed_button_name": "button.sub_command",
+          "bindings": [
+            {
+              "binding_name": "#host_teleport_players_visible",
+              "binding_name_override": "#visible"
+            },
+            {
+              "binding_name": "#gamertag",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection",
+              "binding_name_override": "#sub_command"
+            }
+          ]
+        }
+      },
+      {
         "background@rainbowpie_ui_common.text_background": {
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "size": [ "100%", "100% - 1px" ],
+          "layer": 8,
           "controls": [
             {
               "player_image": {

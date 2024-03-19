@@ -1,0 +1,36 @@
+{
+  "namespace": "host_options",
+
+  "host_teleport_grid_item/host_option_toggle": {
+    "$button_image_size": [ "100%", "100% - 1px" ],
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_checked",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_checked_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_checked_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_checked_locked"
+  },
+
+  "scrollable_selector_area": {
+    "$rainbowpie_localui_scrollbar_enabled": true
+  },
+
+  "scrolling_panel": {
+    "$main_offset_scrollable_panel|default": [ 0, 0 ],
+    "$main_size_scrollable_panel|default": [ "100% - 2px", "100%" ]
+  },
+
+  "scrolling_panel/background": {
+    "ignored": true
+  },
+
+  "main_light_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "main_dark_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  }
+}
