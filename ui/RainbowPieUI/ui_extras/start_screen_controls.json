@@ -1461,7 +1461,6 @@
                             "$online_button_offset": [ -8, 8 ],
                             "anchor_from": "top_right",
                             "anchor_to": "top_right",
-                            // "ignored": "$rainbowpie_ui_flag_1c167cde",
                             "layer": 30,
                             "variables": [
                               {
@@ -1599,15 +1598,48 @@
                           }
                         },
                         {
-                          "background_button@rainbowpieui_start.background_dialog_toggle_base": {
-                            "ignored": "((not $rainbowpie_ui_flag_82d2c0e7) or ($rainbowpie_ui_theme_background_texture = ''))",
-                            "anchor_to": "bottom_right",
-                            "anchor_from": "bottom_right",
+                          "bottom_button_panel": {
+                            "type": "panel",
+                            "size": [ "100%c", "28px" ],
                             "offset": [ -8, -17 ],
-                            "size": [ 28, 28 ],
-                            "$toggle_group_forced_index": 1000,
-                            "$toggle_view_binding_name": "open_background_dialog",
-                            "layer": 30
+                            "anchor_from": "bottom_right",
+                            "anchor_to": "bottom_right",
+                            "layer": 30,
+                            "controls": [
+                              {
+                                "button_stack_panel": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
+                                  "size": [ "100%c", "100%" ],
+                                  "anchor_from": "left_middle",
+                                  "anchor_to": "left_middle",
+                                  "controls": [
+                                    {
+                                      "music_button@rainbowpieui_start.music_button": {
+                                        "size": [ "100%y", "100%" ],
+                                        "$button_image_size": [ "100%", "100%" ]
+                                      }
+                                    },
+                                    {
+                                      "music_button_padding": {
+                                        "type": "panel",
+                                        "size": [ 4, 0 ]
+                                      }
+                                    },
+                                    {
+                                      "background_button@rainbowpieui_start.background_dialog_toggle_base": {
+                                        "ignored": "((not $rainbowpie_ui_flag_82d2c0e7) or ($rainbowpie_ui_theme_background_texture = ''))",
+                                        "size": [ "100%y", "100%" ],
+                                        "$button_image_size": [ "100%", "100%" ],
+                                        "$toggle_group_forced_index": 1000,
+                                        "$toggle_view_binding_name": "open_background_dialog",
+                                        "layer": 30
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
                           }
                         },
                         {
