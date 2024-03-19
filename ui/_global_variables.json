@@ -127,7 +127,7 @@
   "$rainbowpie_ui_flag_9ce040c1": true, // Inventory Durability Panel
   "$rainbowpie_ui_flag_84df7492": true, // New UI animation for inventory and containers
   "$rainbowpie_ui_flag_149baa36": true, // Set hud chat max line to 10
-  "$rainbowpie_ui_flag_fbadd01f": true, // StartV2 UI animations
+  "$rainbowpie_ui_flag_fbadd01f": false, // StartV2 UI animations
   "$rainbowpie_ui_flag_be13f8d7": true, // StartV2 UI Get Started Button
   "$rainbowpie_ui_flag_9c39ae19": false, // Inventory Item Preview
   "$rainbowpie_ui_flag_135972c6": true, // UI Error Check

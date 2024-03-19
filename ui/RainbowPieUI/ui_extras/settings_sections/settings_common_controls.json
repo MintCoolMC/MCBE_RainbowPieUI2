@@ -392,6 +392,7 @@
       },
       {
         "header@rainbowpie_ui_common.screen_header": {
+          "$rainbowpie_localui_screenheader_ingame_anim1": "($rainbowpie_ui_flag_8dcce82d and $rainbowpie_ui_flag_fbadd01f and $is_pregame)",
           "$rainbowpie_localui_screenheader_title": "#dialog_title",
           "$rainbowpie_localui_screenheader_title_bindings": [
             {
@@ -417,6 +418,7 @@
       },
       {
         "screen_content@rainbowpie_ui_common.screen_content": {
+          "$rainbowpie_localui_screen_ingame_anim1": "($rainbowpie_ui_flag_8dcce82d and $rainbowpie_ui_flag_fbadd01f and $is_pregame)",
           "$rainbowpie_localui_screen_content": [
             {
               "selector_background@rainbowpie_ui_common.text_background": {
