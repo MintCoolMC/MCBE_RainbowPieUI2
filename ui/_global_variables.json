@@ -207,6 +207,7 @@
 
   // Theme Global Variables //
   "$rainbowpie_ui_theme_global_title_text": "§4R§ca§6i§en§ab§bo§5w §6Pie§r",
+  "$rainbowpie_ui_theme_global_title_text_font": "MinecraftTen",
   "$rainbowpie_ui_theme_global_title_text_scale": 3.0,
   "$rainbowpie_ui_theme_global_text_color": [ 1.0, 1.0, 1.0 ],
   "$rainbowpie_ui_theme_global_background_color": [ 0.011, 0.011, 0.011 ],
