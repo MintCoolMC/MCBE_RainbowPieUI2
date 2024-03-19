@@ -91,6 +91,7 @@
 
   "$rainbowpie_ui_flag_chat_use_ui_font": true,
   "$rainbowpie_ui_flag_server_form_force": false,
+  "$rainbowpie_ui_flag_host_options_advanced": true,
 
   "$rainbowpie_ui_flag_start_dialog_alert": true,
   "$rainbowpie_ui_flag_start_dialog_alert_title": "Rainbow Pie UI Insider Preview",

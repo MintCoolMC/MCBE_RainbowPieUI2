@@ -1,6 +1,87 @@
 {
   "namespace": "host_options",
 
+  "host_time_buttons/sub_tab": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "time_grid@scrolling_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_host_options_advanced)",
+              "offset": "$offset_sub_tabs",
+              "$main_scrolling_content": "rainbowpieui_host_options.host_time_panel"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "host_time_buttons/sub_tab/scrolli_scrolli_ravioli": {
+    "ignored": "$rainbowpie_ui_flag_host_options_advanced"
+  },
+
+  "host_weather_buttons/sub_tab": {
+    "size": [ "100%", "90px" ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "weather_grid@scrolling_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_host_options_advanced)",
+              "offset": "$offset_sub_tabs",
+              "$main_scrolling_content": "rainbowpieui_host_options.host_weather_panel"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "host_weather_buttons/sub_tab/host_main_grid": {
+    "ignored": "$rainbowpie_ui_flag_host_options_advanced"
+  },
+
+  "host_teleport_player_list_buttons": {
+    "size": "$panel_size",
+    "$panel_size": [ "default", "default" ],
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_host_options_advanced"
+      }
+    ]
+  },
+
+  "host_teleport_player_list_buttons/toggle": {
+    "size": "$inner_panel_size",
+    "$inner_panel_size": [ "100%", "90px" ],
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_host_options_advanced",
+        "$inner_panel_size": [ "100%", "210px" ]
+      }
+    ]
+  },
+
+  "host_friends_tab": {
+    "type": "stack_panel",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "advanced_host_friends_tab@rainbowpieui_host_options.advanced_host_friends_tab": {} }
+        ]
+      }
+    ]
+  },
+
   "player_pic_panel/player_gamer_pic": {
     "size": [ "100%", "100%" ]
   },
