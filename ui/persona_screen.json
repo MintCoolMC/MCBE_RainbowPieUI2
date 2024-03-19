@@ -302,11 +302,6 @@
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
   },
 
-  "right_panel_classic_skin_pack_bottom_buttons/ending_button/to_realms_plus": {
-    "$button_image_size": [ "100%", "100%" ],
-    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
-  },
-
   "info_popup_button": {
     "$button_image_size": [ "100%", "100%" ],
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
@@ -387,7 +382,7 @@
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
   },
 
-  "right_panel_classic_skin_pack_bottom_buttons/ending_button/see_pack_in_store": {
+  "see_skin_pack_in_store": {
     "$button_image_size": [ "100%", "100%" ],
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
   },

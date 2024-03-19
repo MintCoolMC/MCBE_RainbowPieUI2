@@ -6,17 +6,17 @@
   "$rainbowpieui_branch_display_name": "DEV",
 
   "$rainbowpieui_engine_version": "22",
-  "$rainbowpieui_patch_version": "10111",
+  "$rainbowpieui_patch_version": "10112",
   "$rainbowpieui_hotfix_version": "1",
   "$rainbowpieui_engine_version_name": "2.3",
-  "$rainbowpieui_full_version_name": "2.3.10111.master",
+  "$rainbowpieui_full_version_name": "2.3.10112.master",
   "$rainbowpieui_codename": "sunshine2024y",
   "$rainbowpieui_watermark": true,
 
-  "$rainbowpieui_version_minecraft_target": "v1.20.60",
+  "$rainbowpieui_version_minecraft_target": "v1.20.71",
   "$rainbowpieui_version_minecraft_bigver": "v1.20",
-  "$rainbowpieui_version_minecraft_max": "v1.20.69",
-  "$rainbowpieui_version_minecraft_min": "v1.20.60",
+  "$rainbowpieui_version_minecraft_max": "v1.20.79",
+  "$rainbowpieui_version_minecraft_min": "v1.20.70",
 
   "$mintui_bool": true,
   "$mintui_base_name": "MintUI",
@@ -27,7 +27,7 @@
   "$mintui_pack_name": "Rainbow Pie UI",
   "$mintui_pack_description": "Minecraft UI Pack\n§ehttps://mintraspberry.cool/rainbowpieui",
   "$mintui_pack_uuid": "82d610e8-0968-4c0a-a47e-38e6663ee6ff",
-  "$mintui_pack_version": "2.3.10111",
+  "$mintui_pack_version": "2.3.10112",
 
   "$rainbowpie_ui_verify_enabled": false,
   "$rainbowpie_ui_verify_mode": "default", // blacklist|whitelist|[default]
