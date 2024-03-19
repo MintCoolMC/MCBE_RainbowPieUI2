@@ -170,6 +170,7 @@
                     "type": "panel",
                     "size": [ 150, "100%" ],
                     "ignored": "(not $rainbowpie_ui_feature_command_chat)",
+                    "visible": false,
                     "bindings": [
                       {
                         "binding_type": "view",
