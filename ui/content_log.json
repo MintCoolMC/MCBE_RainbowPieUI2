@@ -1,0 +1,20 @@
+{
+  "namespace": "content_log",
+
+  "content_log_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "anim_content_log_bg_alpha": {
+    "from": 0.3
+  },
+
+  "content_log_grid_item/content_log_background": {
+    "alpha": 0.3,
+    "anims": [
+      "@content_log.anim_content_log_bg_wait",
+      "@rainbowpieui_content_log.anim_content_log_offset"
+    ]
+  }
+}

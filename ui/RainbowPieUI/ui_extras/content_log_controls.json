@@ -1,0 +1,27 @@
+{
+  "namespace": "rainbowpieui_content_log",
+
+  "anim_content_log_offset": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.8,
+    "from": [ 0, "-100%" ],
+    "to": [ 0, 0 ],
+    "next": "@rainbowpieui_content_log.anim_content_log_wait"
+  },
+
+  "anim_content_log_wait": {
+    "anim_type": "wait",
+    "duration": "($content_log_item_lifetime - 0.5)",
+    "next": "@rainbowpieui_content_log.anim_content_log_offset_back"
+  },
+
+  "anim_content_log_offset_back": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.8,
+    "to": [ 0, "-100%" ],
+    "from": [ 0, 0 ],
+    "next": "@rainbowpieui_content_log.anim_content_log_wait"
+  }
+}
