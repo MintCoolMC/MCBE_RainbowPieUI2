@@ -108,6 +108,16 @@
           ],
           "controls": [
             {
+              "crafting_background_icon@rainbowpie_ui_inventory.background_icon": {
+                "size": "$rainbowpie_ui_theme_inventory_bgicon_crafting_size",
+                "offset": "$rainbowpie_ui_theme_inventory_bgicon_crafting_offset",
+                "anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_crafting_anchor",
+                "anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_crafting_anchor",
+                "texture": "$rainbowpie_ui_theme_inventory_bgicon_crafting_texture",
+                "alpha": "$rainbowpie_ui_theme_inventory_bgicon_crafting_alpha"
+              }
+            },
+            {
               "background_icon@rainbowpie_ui_inventory.background_icon": {
                 "texture": "$rainbowpie_ui_theme_inventory_bgicon_texture_inventory"
               }

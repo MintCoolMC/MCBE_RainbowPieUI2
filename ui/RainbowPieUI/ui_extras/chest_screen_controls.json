@@ -20,6 +20,16 @@
           "animation_reset_name": "screen_animation_reset",
           "controls": [
             {
+              "chest_background_icon@rainbowpie_ui_inventory.background_icon": {
+                "size": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_size",
+                "offset": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_offset",
+                "anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_anchor",
+                "anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_anchor",
+                "texture": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_texture",
+                "alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_alpha"
+              }
+            },
+            {
               "background_icon@rainbowpie_ui_inventory.background_icon": {}
             },
             {
@@ -151,6 +161,52 @@
           ],
           "animation_reset_name": "screen_animation_reset",
           "controls": [
+            {
+              "chest_background_icon@rainbowpie_ui_inventory.background_icon": {
+                "size": "$size",
+                "offset": "$offset",
+                "anchor_to": "$anchor_to",
+                "anchor_from": "$anchor_from",
+                "texture": "$texture",
+                "alpha": "$alpha",
+
+                "$size": "$rainbowpie_ui_theme_inventory_bgicon_chest_size",
+                "$offset": "$rainbowpie_ui_theme_inventory_bgicon_chest_offset",
+                "$anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_chest_anchor",
+                "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_chest_anchor",
+                "$texture": "$rainbowpie_ui_theme_inventory_bgicon_chest_texture",
+                "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_chest_alpha",
+                "variables": [
+                  {
+                    "requires": "$is_ender_chest",
+                    "$size": "$rainbowpie_ui_theme_inventory_bgicon_chestender_size",
+                    "$offset": "$rainbowpie_ui_theme_inventory_bgicon_chestender_offset",
+                    "$anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_chestender_anchor",
+                    "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_chestender_anchor",
+                    "$texture": "$rainbowpie_ui_theme_inventory_bgicon_chestender_texture",
+                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestender_alpha"
+                  },
+                  {
+                    "requires": "$is_shulker_box",
+                    "$size": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_size",
+                    "$offset": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_offset",
+                    "$anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_anchor",
+                    "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_anchor",
+                    "$texture": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_texture",
+                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_alpha"
+                  },
+                  {
+                    "requires": "$is_barrel",
+                    "$size": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_size",
+                    "$offset": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_offset",
+                    "$anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_anchor",
+                    "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_anchor",
+                    "$texture": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_texture",
+                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_alpha"
+                  }
+                ]
+              }
+            },
             {
               "background_icon@rainbowpie_ui_inventory.background_icon": {}
             },

@@ -196,7 +196,7 @@
   "$rainbowpie_ui_theme_description": "rainbowpie.ui.theme.default_description",
   "$rainbowpie_ui_theme_background_name": "Bridge (Rainy Day)",
   "$rainbowpie_ui_theme_background_description": "Java edition\nComplementaryUnbound_r5.1.1",
-  "$rainbowpie_ui_theme_version": "1090",
+  "$rainbowpie_ui_theme_version": "1091",
 
   // Theme Background //
   "$rainbowpie_ui_theme_background_mask_texture_ingame": "textures/MintUI/background/background_mask",
@@ -451,7 +451,73 @@
   "$rainbowpie_ui_theme_inventory_bgicon_anchor": "bottom_right",
   "$rainbowpie_ui_theme_inventory_bgicon_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_offset": [ 0, -6 ],
-  "$rainbowpie_ui_theme_inventory_bgicon_alpha": 0.8
+  "$rainbowpie_ui_theme_inventory_bgicon_alpha": 0.8,
+  
+  // Inventory Background Icon
+
+  // Crafting (Player Inventory)
+  "$rainbowpie_ui_theme_inventory_bgicon_crafting_texture": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_crafting_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_inventory_bgicon_crafting_size": [ "42%", "100%x" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_crafting_offset": [ 0, -6 ],
+  "$rainbowpie_ui_theme_inventory_bgicon_crafting_alpha": 0.8,
+
+  // Chest (Small)
+  "$rainbowpie_ui_theme_inventory_bgicon_chest_texture": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_chest_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_inventory_bgicon_chest_size": [ "42%", "100%x" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_chest_offset": [ 0, -6 ],
+  "$rainbowpie_ui_theme_inventory_bgicon_chest_alpha": 0.8,
+
+  // Chest (Large)
+  "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_texture": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_size": [ "42%", "100%x" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_offset": [ 0, -6 ],
+  "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_alpha": 0.8,
+
+  // Ender Chest
+  "$rainbowpie_ui_theme_inventory_bgicon_chestender_texture": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_chestender_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_inventory_bgicon_chestender_size": [ "42%", "100%x" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_chestender_offset": [ 0, -6 ],
+  "$rainbowpie_ui_theme_inventory_bgicon_chestender_alpha": 0.8,
+
+  // Shulker Box
+  "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_texture": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_size": [ "42%", "100%x" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_offset": [ 0, -6 ],
+  "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_alpha": 0.8,
+
+   // Barrel
+   "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_texture": "",
+   "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_anchor": "bottom_right",
+   "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_size": [ "42%", "100%x" ],
+   "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_offset": [ 0, -6 ],
+   "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_alpha": 0.8,
+
+   // Furnace
+   "$rainbowpie_ui_theme_inventory_bgicon_furnace_texture": "",
+   "$rainbowpie_ui_theme_inventory_bgicon_furnace_anchor": "bottom_right",
+   "$rainbowpie_ui_theme_inventory_bgicon_furnace_size": [ "42%", "100%x" ],
+   "$rainbowpie_ui_theme_inventory_bgicon_furnace_offset": [ 0, -6 ],
+   "$rainbowpie_ui_theme_inventory_bgicon_furnace_alpha": 0.8,
+
+   // Blast Furnace
+   "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_texture": "",
+   "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_anchor": "bottom_right",
+   "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_size": [ "42%", "100%x" ],
+   "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_offset": [ 0, -6 ],
+   "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_alpha": 0.8,
+
+   // Smoker
+   "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_texture": "",
+   "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_anchor": "bottom_right",
+   "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_size": [ "42%", "100%x" ],
+   "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_offset": [ 0, -6 ],
+   "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_alpha": 0.8
+
   // Theme End
 
 }
