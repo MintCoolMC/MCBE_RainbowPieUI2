@@ -58,6 +58,8 @@
           "consume_hover_events": false,
           "visible": false,
           "$button_take_all_place_all|default": "button.container_auto_place",
+          "$button_auto_place|default": "rainbowpie.placeholder",
+          "$button_mapping_type|default": "pressed",
           "bindings": [
             {
               "binding_type": "collection_details",
@@ -78,13 +80,25 @@
             {
               "from_button_id": "button.menu_select",
               "to_button_id": "$button_take_all_place_all",
-              "mapping_type": "pressed",
+              "mapping_type": "$button_mapping_type",
               "consume_event": false
             },
             {
               "from_button_id": "button.menu_ok",
               "to_button_id": "$button_take_all_place_all",
-              "mapping_type": "focused",
+              "mapping_type": "$button_mapping_type",
+              "consume_event": false
+            },
+            {
+              "from_button_id": "button.menu_auto_place",
+              "to_button_id": "$button_auto_place",
+              "mapping_type": "$button_mapping_type",
+              "consume_event": false
+            },
+            {
+              "from_button_id": "button.controller_secondary_select",
+              "to_button_id": "$button_auto_place",
+              "mapping_type": "$button_mapping_type",
               "consume_event": false
             }
           ]
@@ -542,6 +556,59 @@
     ]
   },
 
+  "putin_hotbar_input_panel": {
+    "type": "stack_panel",
+    "collection_name": "hotbar_items",
+    "$item_collection_name": "hotbar_items",
+    "controls": [
+      {
+        "inventory_slot_8@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 8
+        }
+      },
+      {
+        "inventory_slot_7@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 7
+        }
+      },
+      {
+        "inventory_slot_6@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 6
+        }
+      },
+      {
+        "inventory_slot_5@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 5
+        }
+      },
+      {
+        "inventory_slot_4@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 4
+        }
+      },
+      {
+        "inventory_slot_3@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 3
+        }
+      },
+      {
+        "inventory_slot_2@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 2
+        }
+      },
+      {
+        "inventory_slot_1@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 1
+        }
+      },
+      {
+        "inventory_slot_0@rainbowpie_module_chest_fastpick.slot_item": {
+          "collection_index": 0
+        }
+      }
+    ]
+  },
+
   "chest_fastpick": {
     "type": "panel",
     "ignored": "(not $rainbowpie_ui_module_chest_fastpick)",
@@ -570,6 +637,42 @@
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
           "layer": 50
+        }
+      },
+      {
+        "putin_hotbar_input_panel@rainbowpie_module_chest_fastpick.putin_hotbar_input_panel": {
+          "$button_take_all_place_all": "rainbowpie.placeholder",
+          "$button_auto_place": "button.container_auto_place",
+          "$button_mapping_type": "pressed",
+          "size": "$putin_button_size",
+          "offset": "$putin_button_offset",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "layer": 50,
+          "bindings": [
+            {
+              "binding_name": "(not #using_touch)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "putin_hotbar_input_panel_touch@rainbowpie_module_chest_fastpick.putin_hotbar_input_panel": {
+          "$button_take_all_place_all": "button.container_auto_place",
+          "$button_auto_place": "rainbowpie.placeholder",
+          "$button_mapping_type": "double_pressed",
+          "size": "$putin_button_size",
+          "offset": "$putin_button_offset",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "layer": 50,
+          "bindings": [
+            {
+              "binding_name": "#using_touch",
+              "binding_name_override": "#visible"
+            }
+          ]
         }
       },
       {
