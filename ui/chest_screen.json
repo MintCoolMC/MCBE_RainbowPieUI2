@@ -8,7 +8,9 @@
   },
 
   "ender_chest_screen": {
-    "$is_ender_chest": true
+    "$is_ender_chest": true,
+    "$is_shulker_box": false,
+    "$is_barrel": false
   },
 
   "shulker_box_screen": {
