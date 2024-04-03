@@ -27,6 +27,16 @@
           "animation_reset_name": "screen_animation_reset",
           "controls": [
             {
+              "enchanting_background_icon@rainbowpie_ui_inventory.background_icon": {
+                "size": "$rainbowpie_ui_theme_inventory_bgicon_enchanting_size",
+                "offset": "$rainbowpie_ui_theme_inventory_bgicon_enchanting_offset",
+                "anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_enchanting_anchor",
+                "anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_enchanting_anchor",
+                "texture": "$rainbowpie_ui_theme_inventory_bgicon_enchanting_texture",
+                "alpha": "$rainbowpie_ui_theme_inventory_bgicon_enchanting_alpha"
+              }
+            },
+            {
               "background_icon@rainbowpie_ui_inventory.background_icon": {}
             },
             {

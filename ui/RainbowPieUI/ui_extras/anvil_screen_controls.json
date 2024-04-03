@@ -32,6 +32,16 @@
           "animation_reset_name": "screen_animation_reset",
           "controls": [
             {
+              "anvil_background_icon@rainbowpie_ui_inventory.background_icon": {
+                "size": "$rainbowpie_ui_theme_inventory_bgicon_anvil_size",
+                "offset": "$rainbowpie_ui_theme_inventory_bgicon_anvil_offset",
+                "anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_anvil_anchor",
+                "anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_anvil_anchor",
+                "texture": "$rainbowpie_ui_theme_inventory_bgicon_anvil_texture",
+                "alpha": "$rainbowpie_ui_theme_inventory_bgicon_anvil_alpha"
+              }
+            },
+            {
               "background_icon@rainbowpie_ui_inventory.background_icon": {}
             },
             {

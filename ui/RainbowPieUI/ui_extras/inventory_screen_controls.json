@@ -109,12 +109,30 @@
           "controls": [
             {
               "crafting_background_icon@rainbowpie_ui_inventory.background_icon": {
-                "size": "$rainbowpie_ui_theme_inventory_bgicon_crafting_size",
-                "offset": "$rainbowpie_ui_theme_inventory_bgicon_crafting_offset",
-                "anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_crafting_anchor",
-                "anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_crafting_anchor",
-                "texture": "$rainbowpie_ui_theme_inventory_bgicon_crafting_texture",
-                "alpha": "$rainbowpie_ui_theme_inventory_bgicon_crafting_alpha"
+                "size": "$size",
+                "offset": "$offset",
+                "anchor_to": "$anchor_to",
+                "anchor_from": "$anchor_from",
+                "texture": "$texture",
+                "alpha": "$alpha",
+
+                "$size": "$rainbowpie_ui_theme_inventory_bgicon_crafting_size",
+                "$offset": "$rainbowpie_ui_theme_inventory_bgicon_crafting_offset",
+                "$anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_crafting_anchor",
+                "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_crafting_anchor",
+                "$texture": "$rainbowpie_ui_theme_inventory_bgicon_crafting_texture",
+                "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_crafting_alpha",
+                "variables": [
+                  {
+                    "requires": "($top_half_variant = 'crafting.crafting_panel_top_half')",
+                    "$size": "$rainbowpie_ui_theme_inventory_bgicon_craftingtable_size",
+                    "$offset": "$rainbowpie_ui_theme_inventory_bgicon_craftingtable_offset",
+                    "$anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_craftingtable_anchor",
+                    "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_craftingtable_anchor",
+                    "$texture": "$rainbowpie_ui_theme_inventory_bgicon_craftingtable_texture",
+                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_craftingtable_alpha"
+                  }
+                ]
               }
             },
             {
