@@ -26,7 +26,8 @@
                 "anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_anchor",
                 "anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_anchor",
                 "texture": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_texture",
-                "alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_alpha"
+                "alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_alpha",
+                "fill": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_fill"
               }
             },
             {
@@ -169,6 +170,7 @@
                 "anchor_from": "$anchor_from",
                 "texture": "$texture",
                 "alpha": "$alpha",
+                "fill": "$fill",
 
                 "$size": "$rainbowpie_ui_theme_inventory_bgicon_chest_size",
                 "$offset": "$rainbowpie_ui_theme_inventory_bgicon_chest_offset",
@@ -176,6 +178,7 @@
                 "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_chest_anchor",
                 "$texture": "$rainbowpie_ui_theme_inventory_bgicon_chest_texture",
                 "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_chest_alpha",
+                "$fill": "$rainbowpie_ui_theme_inventory_bgicon_chest_fill",
                 "variables": [
                   {
                     "requires": "$is_ender_chest",
@@ -184,7 +187,8 @@
                     "$anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_chestender_anchor",
                     "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_chestender_anchor",
                     "$texture": "$rainbowpie_ui_theme_inventory_bgicon_chestender_texture",
-                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestender_alpha"
+                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestender_alpha",
+                    "$fill": "$rainbowpie_ui_theme_inventory_bgicon_chestender_fill"
                   },
                   {
                     "requires": "$is_shulker_box",
@@ -193,7 +197,8 @@
                     "$anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_anchor",
                     "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_anchor",
                     "$texture": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_texture",
-                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_alpha"
+                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_alpha",
+                    "$fill": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_fill"
                   },
                   {
                     "requires": "$is_barrel",
@@ -202,7 +207,8 @@
                     "$anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_anchor",
                     "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_anchor",
                     "$texture": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_texture",
-                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_alpha"
+                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_alpha",
+                    "$fill": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_fill"
                   }
                 ]
               }

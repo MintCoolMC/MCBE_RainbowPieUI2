@@ -41,7 +41,8 @@
                 "anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_anchor",
                 "anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_anchor",
                 "texture": "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_texture",
-                "alpha": "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_alpha"
+                "alpha": "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_alpha",
+                "fill": "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_fill"
               }
             },
             {

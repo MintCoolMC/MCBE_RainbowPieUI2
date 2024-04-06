@@ -33,7 +33,8 @@
                 "anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_enchanting_anchor",
                 "anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_enchanting_anchor",
                 "texture": "$rainbowpie_ui_theme_inventory_bgicon_enchanting_texture",
-                "alpha": "$rainbowpie_ui_theme_inventory_bgicon_enchanting_alpha"
+                "alpha": "$rainbowpie_ui_theme_inventory_bgicon_enchanting_alpha",
+                "fill": "$rainbowpie_ui_theme_inventory_bgicon_enchanting_fill"
               }
             },
             {

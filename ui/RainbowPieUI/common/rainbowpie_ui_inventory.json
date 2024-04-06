@@ -9,6 +9,7 @@
     "anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_anchor",
     "texture": "$rainbowpie_ui_theme_inventory_bgicon_texture_container",
     "alpha": "$rainbowpie_ui_theme_inventory_bgicon_alpha",
+    "fill": "$rainbowpie_ui_theme_inventory_bgicon_fill",
     "layer": 3
   },
 

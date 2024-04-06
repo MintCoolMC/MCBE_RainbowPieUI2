@@ -452,6 +452,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_size": [ "42%", "100%x" ], // Please always use % ; Since the X-axis is fixed, it is recommended to use the percentage of the X-axis on the Y-axis
   "$rainbowpie_ui_theme_inventory_bgicon_offset": [ 0, "-8.503401360544218%y" ], // Please always use % ; Since the X-axis is fixed, it is recommended to use the percentage of the X-axis on the Y-axis
   "$rainbowpie_ui_theme_inventory_bgicon_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_fill": false,
   
   // Inventory Background Icon
 
@@ -461,6 +462,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_crafting_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_crafting_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_crafting_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_crafting_fill": false,
 
   // Crafting (CraftingTable)
   "$rainbowpie_ui_theme_inventory_bgicon_craftingtable_texture": "",
@@ -468,6 +470,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_craftingtable_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_craftingtable_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_craftingtable_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_craftingtable_fill": false,
 
   // Chest (Small)
   "$rainbowpie_ui_theme_inventory_bgicon_chest_texture": "",
@@ -475,6 +478,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_chest_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_chest_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_chest_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_chest_fill": false,
 
   // Chest (Large)
   "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_texture": "",
@@ -482,6 +486,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_fill": false,
 
   // Ender Chest
   "$rainbowpie_ui_theme_inventory_bgicon_chestender_texture": "",
@@ -489,6 +494,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_chestender_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_chestender_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_chestender_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_chestender_fill": false,
 
   // Shulker Box
   "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_texture": "",
@@ -496,6 +502,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_fill": false,
 
   // Barrel
   "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_texture": "",
@@ -503,6 +510,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_fill": false,
 
   // Furnace
   "$rainbowpie_ui_theme_inventory_bgicon_furnace_texture": "",
@@ -510,6 +518,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_furnace_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_furnace_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_furnace_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_furnace_fill": false,
 
   // Blast Furnace
   "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_texture": "",
@@ -517,6 +526,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_fill": false,
 
   // Smoker
   "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_texture": "",
@@ -524,6 +534,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_fill": false,
 
   // Brewing Stand
   "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_texture": "",
@@ -531,6 +542,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_fill": false,
 
   // Anvil
   "$rainbowpie_ui_theme_inventory_bgicon_anvil_texture": "",
@@ -538,6 +550,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_anvil_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_anvil_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_anvil_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_anvil_fill": false,
 
   // Grindstone
   "$rainbowpie_ui_theme_inventory_bgicon_grindstone_texture": "",
@@ -545,6 +558,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_grindstone_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_grindstone_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_grindstone_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_grindstone_fill": false,
 
   // Enchanting
   "$rainbowpie_ui_theme_inventory_bgicon_enchanting_texture": "",
@@ -552,13 +566,15 @@
   "$rainbowpie_ui_theme_inventory_bgicon_enchanting_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_enchanting_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_enchanting_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_enchanting_fill": false,
 
   // Smithing Table 2
   "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_texture": "",
   "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_anchor": "bottom_right",
   "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_offset": [ 0, "-8.503401360544218%y" ],
-  "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_alpha": 0.8
+  "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_alpha": 0.8,
+  "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_fill": false
 
   // Theme End
 

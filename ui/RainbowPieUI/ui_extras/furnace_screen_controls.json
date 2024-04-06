@@ -27,6 +27,7 @@
                 "anchor_from": "$anchor_from",
                 "texture": "$texture",
                 "alpha": "$alpha",
+                "fill": "$fill",
 
                 "$size": "$rainbowpie_ui_theme_inventory_bgicon_furnace_size",
                 "$offset": "$rainbowpie_ui_theme_inventory_bgicon_furnace_offset",
@@ -34,6 +35,7 @@
                 "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_furnace_anchor",
                 "$texture": "$rainbowpie_ui_theme_inventory_bgicon_furnace_texture",
                 "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_furnace_alpha",
+                "$fill": "$rainbowpie_ui_theme_inventory_bgicon_furnace_fill",
                 "variables": [
                   {
                     "requires": "$is_blast_furnace",
@@ -42,7 +44,8 @@
                     "$anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_anchor",
                     "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_anchor",
                     "$texture": "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_texture",
-                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_alpha"
+                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_alpha",
+                    "$fill": "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_fill"
                   },
                   {
                     "requires": "$is_smoker",
@@ -51,7 +54,8 @@
                     "$anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_anchor",
                     "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_anchor",
                     "$texture": "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_texture",
-                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_alpha"
+                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_alpha",
+                    "$fill": "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_fill"
                   }
                 ]
               }
