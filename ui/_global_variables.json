@@ -497,68 +497,68 @@
   "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_alpha": 0.8,
 
-   // Barrel
-   "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_texture": "",
-   "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_anchor": "bottom_right",
-   "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_size": [ "42%", "100%x" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_offset": [ 0, "-8.503401360544218%y" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_alpha": 0.8,
+  // Barrel
+  "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_texture": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_size": [ "42%", "100%x" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_offset": [ 0, "-8.503401360544218%y" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_alpha": 0.8,
 
-   // Furnace
-   "$rainbowpie_ui_theme_inventory_bgicon_furnace_texture": "",
-   "$rainbowpie_ui_theme_inventory_bgicon_furnace_anchor": "bottom_right",
-   "$rainbowpie_ui_theme_inventory_bgicon_furnace_size": [ "42%", "100%x" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_furnace_offset": [ 0, "-8.503401360544218%y" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_furnace_alpha": 0.8,
+  // Furnace
+  "$rainbowpie_ui_theme_inventory_bgicon_furnace_texture": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_furnace_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_inventory_bgicon_furnace_size": [ "42%", "100%x" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_furnace_offset": [ 0, "-8.503401360544218%y" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_furnace_alpha": 0.8,
 
-   // Blast Furnace
-   "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_texture": "",
-   "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_anchor": "bottom_right",
-   "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_size": [ "42%", "100%x" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_offset": [ 0, "-8.503401360544218%y" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_alpha": 0.8,
+  // Blast Furnace
+  "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_texture": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_size": [ "42%", "100%x" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_offset": [ 0, "-8.503401360544218%y" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_furnaceblast_alpha": 0.8,
 
-   // Smoker
-   "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_texture": "",
-   "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_anchor": "bottom_right",
-   "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_size": [ "42%", "100%x" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_offset": [ 0, "-8.503401360544218%y" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_alpha": 0.8,
+  // Smoker
+  "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_texture": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_size": [ "42%", "100%x" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_offset": [ 0, "-8.503401360544218%y" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_furnacesmoker_alpha": 0.8,
 
-   // Brewing Stand
-   "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_texture": "",
-   "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_anchor": "bottom_right",
-   "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_size": [ "42%", "100%x" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_offset": [ 0, "-8.503401360544218%y" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_alpha": 0.8,
+  // Brewing Stand
+  "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_texture": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_size": [ "42%", "100%x" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_offset": [ 0, "-8.503401360544218%y" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_alpha": 0.8,
 
-   // Anvil
-   "$rainbowpie_ui_theme_inventory_bgicon_anvil_texture": "",
-   "$rainbowpie_ui_theme_inventory_bgicon_anvil_anchor": "bottom_right",
-   "$rainbowpie_ui_theme_inventory_bgicon_anvil_size": [ "42%", "100%x" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_anvil_offset": [ 0, "-8.503401360544218%y" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_anvil_alpha": 0.8,
+  // Anvil
+  "$rainbowpie_ui_theme_inventory_bgicon_anvil_texture": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_anvil_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_inventory_bgicon_anvil_size": [ "42%", "100%x" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_anvil_offset": [ 0, "-8.503401360544218%y" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_anvil_alpha": 0.8,
 
-   // Grindstone
-   "$rainbowpie_ui_theme_inventory_bgicon_grindstone_texture": "",
-   "$rainbowpie_ui_theme_inventory_bgicon_grindstone_anchor": "bottom_right",
-   "$rainbowpie_ui_theme_inventory_bgicon_grindstone_size": [ "42%", "100%x" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_grindstone_offset": [ 0, "-8.503401360544218%y" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_grindstone_alpha": 0.8,
+  // Grindstone
+  "$rainbowpie_ui_theme_inventory_bgicon_grindstone_texture": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_grindstone_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_inventory_bgicon_grindstone_size": [ "42%", "100%x" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_grindstone_offset": [ 0, "-8.503401360544218%y" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_grindstone_alpha": 0.8,
 
-   // Enchanting
-   "$rainbowpie_ui_theme_inventory_bgicon_enchanting_texture": "",
-   "$rainbowpie_ui_theme_inventory_bgicon_enchanting_anchor": "bottom_right",
-   "$rainbowpie_ui_theme_inventory_bgicon_enchanting_size": [ "42%", "100%x" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_enchanting_offset": [ 0, "-8.503401360544218%y" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_enchanting_alpha": 0.8,
+  // Enchanting
+  "$rainbowpie_ui_theme_inventory_bgicon_enchanting_texture": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_enchanting_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_inventory_bgicon_enchanting_size": [ "42%", "100%x" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_enchanting_offset": [ 0, "-8.503401360544218%y" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_enchanting_alpha": 0.8,
 
-   // Smithing Table 2
-   "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_texture": "",
-   "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_anchor": "bottom_right",
-   "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_size": [ "42%", "100%x" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_offset": [ 0, "-8.503401360544218%y" ],
-   "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_alpha": 0.8
+  // Smithing Table 2
+  "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_texture": "",
+  "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_size": [ "42%", "100%x" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_offset": [ 0, "-8.503401360544218%y" ],
+  "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_alpha": 0.8
 
   // Theme End
 
