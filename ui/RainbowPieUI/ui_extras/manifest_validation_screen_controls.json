@@ -712,6 +712,7 @@
                 "$rainbowpie_localui_button_hover_alpha": "$rainbowpie_ui_theme_closebutton_hover_background_alpha",
                 "$rainbowpie_localui_button_pressed_color": "$rainbowpie_ui_theme_closebutton_pressed_background_color",
                 "$rainbowpie_localui_button_pressed_alpha": "$rainbowpie_ui_theme_closebutton_pressed_background_alpha",
+                "$rainbowpie_localui_button_border_enabled": false,
                 "$button_image_size": [ "100%", "100%" ],
                 "$button_content": "rainbowpieui_manifest_validation.close_button_icon",
                 "size": [ "100%y", "100%" ],

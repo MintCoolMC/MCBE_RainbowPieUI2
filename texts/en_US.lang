@@ -9,16 +9,25 @@ rainbowpie.ui.theme.default_name=Rainbow Pie UI Default Theme
 rainbowpie.ui.theme.default_auther=MintCoolMC
 rainbowpie.ui.theme.default_description=Rainbow Pie UI
 
+rainbowpie.ui.themesystem.background.title=Information
+rainbowpie.ui.themesystem.background.name=Name:
+rainbowpie.ui.themesystem.background.description=Description:
+
 rainbowpie.ui.themesystem.description.title=Description:
 rainbowpie.ui.themesystem.version_toolow=This theme version is too low! please update!
 rainbowpie.ui.themesystem.version_toohight=This theme version is too hight!
 
+rainbowpie.ui.trade2.tradeAll=Trade All
+
 rainbowpie.ui.inventory.actions.destroy_selection=Destroy
+rainbowpie.ui.inventory.actions.destroy_inventory=Destroy all items from inventory
 rainbowpie.ui.inventory.actions.quick_craft=Quick Craft
 rainbowpie.ui.inventory.actions.drop_selection=Drop
+rainbowpie.ui.inventory.actions.drop_inventory=Drop all items from inventory
 
 rainbowpie.ui.inventory.durability=Durability:
 
+rainbowpie.ui.chest.fastpick.dropall=Drop all items from this chest
 rainbowpie.ui.chest.fastpick.pickall=Pick all items from this chest
 rainbowpie.ui.chest.fastpick.putall=Place all items from the inventory intro this chest 
 
@@ -32,8 +41,6 @@ rainbowpie.ui.settings.module.title=Module
 
 rainbowpie.ui.storage_management.tab.management=Management
 rainbowpie.ui.storage_management.tab.settings=Settings
-
-rainbowpie.ui.hud.bow_helper.arrow_count=Arrows
 
 rainbowpie.ui.manifest_validation.verifiedPack=Verified Pack:
 rainbowpie.ui.manifest_validation.verifiedDetail=Detail
@@ -75,6 +82,11 @@ rainbowpie.ui.pause.permissions.custom=Custom
 rainbowpie.ui.pause.permissions.member=Member
 rainbowpie.ui.pause.permissions.op=Operator
 rainbowpie.ui.pause.permissions.visitor=Visitor
+
+rainbowpie.ui.warning.text.error=A serious error has been detected, which may affect your normal use. If you are not using any other resource packs and are using a supported game version, please report this error to issues.
+rainbowpie.ui.warning.text.warning=An error has been detected. If you are not using any other resource packs and are using a supported game version, please report this error to issues.
+rainbowpie.ui.warning.button.check=Check error
+rainbowpie.ui.warning.button.deactivate=Deactivate Pack
 
 rainbowpie.ui.version.warn=Warning!
 rainbowpie.ui.version.supported=Supported Versions:

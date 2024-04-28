@@ -20,6 +20,17 @@
           "animation_reset_name": "screen_animation_reset",
           "controls": [
             {
+              "chest_background_icon@rainbowpie_ui_inventory.background_icon": {
+                "size": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_size",
+                "offset": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_offset",
+                "anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_anchor",
+                "anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_anchor",
+                "texture": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_texture",
+                "alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_alpha",
+                "fill": "$rainbowpie_ui_theme_inventory_bgicon_chestlarge_fill"
+              }
+            },
+            {
               "background_icon@rainbowpie_ui_inventory.background_icon": {}
             },
             {
@@ -30,6 +41,8 @@
             {
               "chest_fastpick@rainbowpie_module_chest_fastpick.chest_fastpick": {
                 "$large_chest": true,
+                "$drop_button_size": [ "100%y", "10.23255813953488%" ],
+                "$drop_button_offset": [ "100%x + 1.19047619047619%", "-36.27906976744186%" ],
                 "$putin_button_size": [ "100%y", "10.23255813953488%" ],
                 "$putin_button_offset": [ "100%x + 1.19047619047619%", "-11.16279069767442%" ],
                 "$pickup_button_size": [ "100%y", "10.23255813953488%" ],
@@ -150,6 +163,57 @@
           "animation_reset_name": "screen_animation_reset",
           "controls": [
             {
+              "chest_background_icon@rainbowpie_ui_inventory.background_icon": {
+                "size": "$size",
+                "offset": "$offset",
+                "anchor_to": "$anchor_to",
+                "anchor_from": "$anchor_from",
+                "texture": "$texture",
+                "alpha": "$alpha",
+                "fill": "$fill",
+
+                "$size": "$rainbowpie_ui_theme_inventory_bgicon_chest_size",
+                "$offset": "$rainbowpie_ui_theme_inventory_bgicon_chest_offset",
+                "$anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_chest_anchor",
+                "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_chest_anchor",
+                "$texture": "$rainbowpie_ui_theme_inventory_bgicon_chest_texture",
+                "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_chest_alpha",
+                "$fill": "$rainbowpie_ui_theme_inventory_bgicon_chest_fill",
+                "variables": [
+                  {
+                    "requires": "$is_ender_chest",
+                    "$size": "$rainbowpie_ui_theme_inventory_bgicon_chestender_size",
+                    "$offset": "$rainbowpie_ui_theme_inventory_bgicon_chestender_offset",
+                    "$anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_chestender_anchor",
+                    "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_chestender_anchor",
+                    "$texture": "$rainbowpie_ui_theme_inventory_bgicon_chestender_texture",
+                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestender_alpha",
+                    "$fill": "$rainbowpie_ui_theme_inventory_bgicon_chestender_fill"
+                  },
+                  {
+                    "requires": "$is_shulker_box",
+                    "$size": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_size",
+                    "$offset": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_offset",
+                    "$anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_anchor",
+                    "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_anchor",
+                    "$texture": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_texture",
+                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_alpha",
+                    "$fill": "$rainbowpie_ui_theme_inventory_bgicon_chestshulkerbox_fill"
+                  },
+                  {
+                    "requires": "$is_barrel",
+                    "$size": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_size",
+                    "$offset": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_offset",
+                    "$anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_anchor",
+                    "$anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_anchor",
+                    "$texture": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_texture",
+                    "$alpha": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_alpha",
+                    "$fill": "$rainbowpie_ui_theme_inventory_bgicon_chestbarrel_fill"
+                  }
+                ]
+              }
+            },
+            {
               "background_icon@rainbowpie_ui_inventory.background_icon": {}
             },
             {
@@ -159,6 +223,8 @@
             },
             {
               "chest_fastpick@rainbowpie_module_chest_fastpick.chest_fastpick": {
+                "$drop_button_size": [ "100%y", "13.66459627329193%" ],
+                "$drop_button_offset": [ "100%x + 1.19047619047619%", "-48.4472049689441%" ],
                 "$putin_button_size": [ "100%y", "13.66459627329193%" ],
                 "$putin_button_offset": [ "100%x + 1.19047619047619%", "-14.90683229813665%" ],
                 "$pickup_button_size": [ "100%y", "13.66459627329193%" ],

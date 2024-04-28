@@ -162,11 +162,6 @@
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
 
-  "realms_plus_skin_pack_timer/content_sizer/realms_plus_timer/timer_container/timer_string": {
-    "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  },
-
   "appearance_status_panel/appearance_status/label_panel/label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
@@ -302,11 +297,6 @@
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
   },
 
-  "right_panel_classic_skin_pack_bottom_buttons/ending_button/to_realms_plus": {
-    "$button_image_size": [ "100%", "100%" ],
-    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
-  },
-
   "info_popup_button": {
     "$button_image_size": [ "100%", "100%" ],
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
@@ -387,7 +377,7 @@
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
   },
 
-  "right_panel_classic_skin_pack_bottom_buttons/ending_button/see_pack_in_store": {
+  "see_skin_pack_in_store": {
     "$button_image_size": [ "100%", "100%" ],
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
   },

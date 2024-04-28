@@ -1,6 +1,144 @@
 {
   "namespace": "rainbowpieui_progress",
 
+  "simple_popup_dialog_base": {
+    "type": "panel",
+    "controls": [
+      {
+        "background_fullscreen@mintui_background.background_fullscreen": {}
+      },
+      {
+        "loading_progress_ui_blur@rainbowpieui_progress.loading_progress_ui_blur": {}
+      },
+      {
+        "resourcepacks_dialog_ui@rainbowpieui_progress.resourcepacks_dialog_ui": {}
+      },
+      { "mobile_data_icon@progress.mobile_data_icon": {} },
+      {
+        "title_text@rainbowpie_ui_common.title_text": {
+          "offset": [ 0, "5%" ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      }
+    ]
+  },
+
+  "resourcepacks_dialog_ui": {
+    "type": "panel",
+    "size": [ 220, 110 ],
+    "offset": [ 0, 5 ],
+    "layer": 12,
+    "controls": [
+      {
+        "titlebar_control@rainbowpie_ui_common.title_background": {
+          "size": [ "100%", 27 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 10,
+          "controls": [
+            {
+              "title_text@rainbowpie_ui_common.title_label": {
+                "anchor_to": "center",
+                "anchor_from": "center",
+                "size": [ "default", "default" ],
+                "max_size": [ "100% - 8px", "100% - 4px" ],
+                "text": "$title_text"
+              }
+            },
+            {
+              "close_button@rainbowpie_ui_common.close_button": {
+                "$close_button_to_button_id": "button.leave",
+                "offset": [ -2, 0 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "content_control@rainbowpie_ui_common.text_background": {
+          "size": [ "100%", 83 ],
+          "offset": [ 0, 27 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 8,
+          "controls": [
+            {
+              "progress_bar_text_panel": {
+                "type": "panel",
+                "size": [ "100%", 46 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "controls": [
+                  {
+                    "progress_bar_text@rainbowpie_ui_common.title_label": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [ 0, 4 ],
+                      "size": [ "default", "default" ],
+                      "max_size": [ "100% - 44px", 40 ],
+                      "text": "$description_text"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "inside_content": {
+                "type": "panel",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "size": [ "100% - 1px", "100%c" ],
+                "offset": [ 0, -0.5 ],
+                "controls": [
+                  {
+                    "top_button@common_buttons.light_text_button": {
+                      "visible": "$use_top_button",
+                      "enabled": "$use_top_button",
+                      "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                      "$pressed_button_name": "$top_button_press",
+                      "$button_binding_condition": "once",
+                      "$button_text_binding_type": "global",
+                      "$button_text": "$top_button_text",
+                      "size": [ "100%", 22 ],
+                      "offset": [ 0, -22 ],
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle"
+                    }
+                  },
+                  {
+                    "middle_button@common_buttons.light_text_button": {
+                      "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                      "$pressed_button_name": "$middle_button_press",
+                      "$button_binding_condition": "once",
+                      "$button_text_binding_type": "global",
+                      "$button_text": "$middle_button_text",
+                      "size": [ "50%", 22 ],
+                      "anchor_from": "bottom_left",
+                      "anchor_to": "bottom_left"
+                    }
+                  },
+                  {
+                    "bottom_button@common_buttons.light_text_button": {
+                      "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                      "$pressed_button_name": "$bottom_button_press",
+                      "$button_text": "$bottom_button_text",
+                      "size": [ "50%", 22 ],
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "modal_screen_content": {
     "type": "panel",
     "controls": [

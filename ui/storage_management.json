@@ -1,6 +1,9 @@
 {
   "namespace": "storage_management",
 
+  "storage_header_panel/header_panel/panel/multiselect_button": {
+  },
+
   "storage_header_panel/header_panel/clear_cache_button_panel/clear_cache_button": {
     "offset": [ 0, 0 ],
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
@@ -59,6 +62,8 @@
         }
       }
     ],
+    "ignored": "(($is_holographic and $is_reality_mode) or (not ($storage_location_switch_enabled and not $gear_vr)))",
+    "visible": true,
     "modifications": [
       {
         "array_name": "bindings",

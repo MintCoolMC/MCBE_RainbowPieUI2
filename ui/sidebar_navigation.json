@@ -1,7 +1,7 @@
 {
   "namespace": "sidebar_navigation",
 
-  "content_view/content_view_stack": {
+  "content_view/content_view_stack/sidebar_view_stack": {
     "modifications": [
       {
         "control_name": "divider",
@@ -19,7 +19,7 @@
     ]
   },
 
-  "sidebar_views/verbose_side_bar_view_modal/verbose_sidebar_view": {
+  "sidebar_views/sidebar_view_conent/verbose_side_bar_view_modal/verbose_sidebar_view": {
     "$sidebar_view_size": [ 143, "100%" ]
   },
 
@@ -92,11 +92,11 @@
     "texture": ""
   },
 
-  "sidebar_views/simple_sidebar_view": {
+  "sidebar_views/sidebar_view_conent/simple_sidebar_view": {
     "$sidebar_view_size": [ 32, "100%" ]
   },
 
-  "content_view/content_view_stack/divider": {
+  "content_view/content_view_stack/sidebar_view_stack/divider": {
     "ignored": true
   },
 

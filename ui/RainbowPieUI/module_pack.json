@@ -7,7 +7,7 @@
         "chest_fastpick@rainbowpie_ui_module_list.module_item": {
           "$module_icon_texture": "($rainbowpie_ui_path_home + '/icon/module')",
           "$module_name": "Chest Fast Pickup",
-          "$module_version": "1.0",
+          "$module_version": "1.1",
           "$module_author": "MintCoolMC",
           "$module_description": "Quickly pick items from chest",
           "$module_state_check": "$rainbowpie_ui_module_chest_fastpick",
@@ -63,7 +63,7 @@
         "inventory_actions@rainbowpie_ui_module_list.module_item": {
           "$module_icon_texture": "($rainbowpie_ui_path_home + '/icon/module')",
           "$module_name": "Inventory Actions",
-          "$module_version": "1.0",
+          "$module_version": "1.2",
           "$module_author": "MintCoolMC",
           "$module_description": "More Actions in inventory.",
           "$module_state_check": "$rainbowpie_ui_module_inventory_actions",

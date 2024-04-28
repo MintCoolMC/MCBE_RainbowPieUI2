@@ -1,6 +1,27 @@
 {
   "namespace": "furnace",
 
+  "furnace_screen": {
+    "$is_blast_furnace": false,
+    "$is_smoker": false,
+    "modifications": [
+      {
+        "array_name": "variables",
+        "operation": "insert_front",
+        "value": [
+          {
+            "requires": "($container_title = 'tile.blast_furnace.name')",
+            "$is_blast_furnace": true
+          },
+          {
+            "requires": "($container_title = 'tile.smoker.name')",
+            "$is_smoker": true
+          }
+        ]
+      }
+    ]
+  },
+
   "furnace_label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",

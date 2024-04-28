@@ -1,6 +1,14 @@
 {
   "namespace": "chat",
 
+  "chat_screen_content/autocomplete_commands_panel": {
+    "ignored": true
+  },
+
+  "chat_screen_content/messages_panel": {
+    "ignored": true
+  },
+
   "chat_screen_content/popup_factory": {
     "$rainbowpie_localui_this_control_ids": {
       "chat_setting_popup": "@chat_settings.chat_settings_popup"
@@ -132,6 +140,50 @@
         "array_name": "controls",
         "operation": "insert_front",
         "value": [
+          {
+            "messages_stack_panel": {
+              "type": "stack_panel",
+              "orientation": "horizontal",
+              "size": [ "100%", "100%" ],
+              "controls": [
+                {
+                  "messages_parent_panel": {
+                    "type": "panel",
+                    "size": [ "fill", "100%" ],
+                    "controls": [
+                      {
+                        "messages_panel@chat.messages_scrolling_panel": {
+                          "bindings": [
+                            {
+                              "binding_name": "(not #host_main_visible)",
+                              "binding_name_override": "#visible"
+                            }
+                          ]
+                        }
+                      },
+                      { "autocomplete_commands_panel@chat.commands_panel": { "layer": 3 } }
+                    ]
+                  }
+                },
+                {
+                  "chat_messages_padding": {
+                    "type": "panel",
+                    "size": [ 150, "100%" ],
+                    "ignored": "(not $rainbowpie_ui_feature_command_chat)",
+                    "visible": false,
+                    "bindings": [
+                      {
+                        "binding_type": "view",
+                        "source_control_name": "open_second_chat",
+                        "source_property_name": "(#toggle_state)",
+                        "target_property_name": "#visible"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
           {
             "chat_settings_animation_panel@rainbowpieui_chat.chat_settings_animation_panel": {}
           },

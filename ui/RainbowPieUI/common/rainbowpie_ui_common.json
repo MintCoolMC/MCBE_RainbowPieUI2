@@ -752,7 +752,7 @@
     "layer": 12,
     "text": "$rainbowpie_ui_theme_global_title_text",
     "shadow": false,
-    "font_type": "MinecraftTen",
+    "font_type": "$rainbowpie_ui_theme_global_title_text_font",
     "font_scale_factor": "$title_text_scale",
     "$title_text_scale|default": 5.0
   },

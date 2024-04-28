@@ -107,6 +107,16 @@
           "animation_reset_name": "screen_animation_reset",
           "controls": [
             {
+              "smithingtable2_background_icon@rainbowpie_ui_inventory.background_icon": {
+                "size": "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_size",
+                "offset": "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_offset",
+                "anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_anchor",
+                "anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_anchor",
+                "texture": "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_texture",
+                "alpha": "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_alpha"
+              }
+            },
+            {
               "background_icon@rainbowpie_ui_inventory.background_icon": {}
             },
             {

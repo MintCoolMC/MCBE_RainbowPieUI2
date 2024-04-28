@@ -1,10 +1,6 @@
 {
   "namespace": "resource_packs",
 
-  "selected_stack_panel/top_panel": {
-    "size": [ "100%", 25 ]
-  },
-
   "panel_bg/black_background": {
     "texture": "textures/ui/Black",
     "alpha": 0.5
@@ -40,6 +36,7 @@
 
   "selected_pack_panel": {
     "$rainbowpie_localui_resource_packs_search_box_control|default": "rp_search_text_box_display_text",
+    "visible": true,
     "bindings": [
       {
         "binding_name": "#name",
@@ -67,6 +64,7 @@
 
   "available_pack_panel": {
     "$rainbowpie_localui_resource_packs_search_box_control|default": "rp_search_text_box_display_text",
+    "visible": true,
     "bindings": [
       {
         "binding_name": "#name",
@@ -100,31 +98,21 @@
         "operation": "insert_after",
         "value": [
           {
-            "padding_top_panel": {
-              "type": "panel",
-              "size": [ "100%", "2px" ],
-              "visible": "$show_checkbox",
-              "$force_pack_download_binding_type|default": "none",
-              "bindings": [
-                {
-                  "binding_name": "#force_pack_download_enabled_level",
-                  "binding_name_override": "#visible",
-                  "binding_type": "$force_pack_download_binding_type"
-                },
-                {
-                  "binding_name": "#force_pack_download_locked_level",
-                  "binding_name_override": "#enabled",
-                  "binding_type": "$force_pack_download_binding_type"
-                }
-              ]
-            }
-          },
-          {
             "rainbowpie_resource_packs_screen@rainbowpieui_resource_packs.resource_packs_screen": {}
           }
         ]
       }
     ]
+  },
+
+  "selected_stack_panel/world_template_option_lock_panel": {
+    "ignored": "(($rainbowpie_ui_flag_54edd49d and (not ($rainbowpie_localui_resource_packs_type = 'null'))) or (not $is_world_create and not $is_template_create and not $is_world_edit))",
+    "size": [ "100%", "100%c" ]
+  },
+
+  "selected_stack_panel/top_panel": {
+    "ignored": "($rainbowpie_ui_flag_54edd49d and (not ($rainbowpie_localui_resource_packs_type = 'null')))",
+    "size": [ "100%", 25 ]
   },
 
   "selected_stack_panel/offset_0": {

@@ -35,6 +35,17 @@
           "animation_reset_name": "screen_animation_reset",
           "controls": [
             {
+              "brewingstand_background_icon@rainbowpie_ui_inventory.background_icon": {
+                "size": "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_size",
+                "offset": "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_offset",
+                "anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_anchor",
+                "anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_anchor",
+                "texture": "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_texture",
+                "alpha": "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_alpha",
+                "fill": "$rainbowpie_ui_theme_inventory_bgicon_brewingstand_fill"
+              }
+            },
+            {
               "background_icon@rainbowpie_ui_inventory.background_icon": {}
             },
             {

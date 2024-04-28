@@ -247,18 +247,22 @@
                             "controls": [
                               {
                                 "durability_title@rainbowpie_ui_common.text_label": {
-                                  "text": "rainbowpie.ui.inventory.durability"
+                                  "text": "rainbowpie.ui.inventory.durability",
+                                  "shadow": false,
+                                  "ignored": "(not $rainbowpie_ui_flag_durabilityview_title)"
                                 }
                               },
                               {
                                 "padding": {
                                   "type": "panel",
-                                  "size": [ 1, 0 ]
+                                  "size": [ 1, 0 ],
+                                  "ignored": "(not $rainbowpie_ui_flag_durabilityview_title)"
                                 }
                               },
                               {
                                 "durability_text@rainbowpie_ui_common.text_label": {
                                   "text": "#text",
+                                  "shadow": false,
                                   "bindings": [
                                     {
                                       "binding_name": "#item_durability_total_amount",
@@ -273,12 +277,14 @@
                                     {
                                       "binding_type": "view",
                                       "source_property_name": "(((#amount_current>#item_durability_current_amount)*-1+1)*((#amount_current<#item_durability_current_amount)*1+#amount_current))",
-                                      "target_property_name": "#amount_current"
+                                      "target_property_name": "#amount_current",
+                                      "binding_condition": "always_when_visible"
                                     },
                                     {
                                       "binding_type": "view",
                                       "source_property_name": "(((#amount_total>#item_durability_total_amount)*-1+1)*((#amount_total<#item_durability_total_amount)*1+#amount_total))",
-                                      "target_property_name": "#amount_total"
+                                      "target_property_name": "#amount_total",
+                                      "binding_condition": "always_when_visible"
                                     },
                                     {
                                       "binding_type": "view",
@@ -1291,6 +1297,24 @@
                   },
                   {
                     "binding_name": "#level_number_visible",
+                    "binding_type": "global",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "expbar_empty_text@rainbowpie_ui_common.text_label_notheme": {
+                "shadow": true,
+                "offset": [ 0, 0 ],
+                "layer": 7,
+                "text": "$rainbowpie_ui_flag_hud_expbar_empty_text",
+                "color": "$experience_text_color",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "bindings": [
+                  {
+                    "binding_name": "(not #level_number_visible)",
                     "binding_type": "global",
                     "binding_name_override": "#visible"
                   }

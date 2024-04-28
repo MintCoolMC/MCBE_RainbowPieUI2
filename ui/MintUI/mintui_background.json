@@ -8,12 +8,22 @@
     "ignored": "(not $is_pregame)",
     "controls": [
       {
-        "image_background": {
-          "type": "image",
-          "fill": true,
+        "image_background_panel": {
+          "type": "panel",
           "size": [ "100%", "100%" ],
-          "texture": "$rainbowpie_ui_theme_background_texture",
-          "layer": 1
+          "layer": 1,
+          "controls": [
+            {
+              "image_background": {
+                "type": "image",
+                "fill": true,
+                "size": [ "100%", "100%" ],
+                "offset": [ 0, 0 ],
+                "texture": "$rainbowpie_ui_theme_background_texture",
+                "layer": 1
+              }
+            }
+          ]
         }
       },
       {
@@ -23,7 +33,7 @@
           "fill": true,
           "size": [ "100%", "100%" ],
           "texture": "$rainbowpie_ui_theme_background_mask_texture",
-          "layer": 2
+          "layer": 3
         }
       }
     ]
@@ -36,12 +46,22 @@
     "ignored": "(not $is_pregame)",
     "controls": [
       {
-        "image_background": {
-          "type": "image",
-          "fill": true,
+        "image_background_panel": {
+          "type": "panel",
           "size": [ "100%", "100%" ],
-          "texture": "$rainbowpie_ui_theme_background_blur_texture",
-          "layer": 1
+          "layer": 1,
+          "controls": [
+            {
+              "image_background": {
+                "type": "image",
+                "fill": true,
+                "size": [ "100%", "100%" ],
+                "offset": [ 0, 0 ],
+                "texture": "$rainbowpie_ui_theme_background_blur_texture",
+                "layer": 1
+              }
+            }
+          ]
         }
       },
       {
@@ -49,11 +69,11 @@
           "ignored": "(not $rainbowpie_ui_flag_a3a3e4ee)",
           "type": "image",
           "tiled": true,
-          "tiled_scale": [ 0.05, 0.05 ],
+          "tiled_scale": [ 0.10, 0.10 ],
           "alpha": 0.025,
           "size": [ "100%", "100%" ],
           "texture": "$rainbowpie_ui_theme_background_noise_texture",
-          "layer": 2
+          "layer": 3
         }
       },
       {
@@ -63,7 +83,7 @@
           "fill": true,
           "size": [ "100%", "100%" ],
           "texture": "$rainbowpie_ui_theme_background_mask_texture",
-          "layer": 3
+          "layer": 4
         }
       }
     ]
@@ -102,18 +122,28 @@
           "anims": "$background_anims",
           "controls": [
             {
-              "image_background": {
-                "type": "image",
+              "image_background_panel": {
+                "type": "panel",
                 "visible": "$rainbowpie_ui_feature_background_blur",
-                "fill": true,
                 "size": "$background_children_size",
                 "offset": "$background_children_offset",
                 "anchor_from": "$background_children_anchor",
                 "anchor_to": "$background_children_anchor",
-                "texture": "$background_normal",
                 "layer": "($background_layer + 1)",
                 "animation_reset_name": "$background_children_anim_reset",
-                "anims": "$background_children_anims"
+                "anims": "$background_children_anims",
+                "controls": [
+                  {
+                    "image_background": {
+                      "type": "image",
+                      "fill": true,
+                      "size": [ "100%", "100%" ],
+                      "offset": [ 0, 0 ],
+                      "texture": "$background_normal",
+                      "layer": 1
+                    }
+                  }
+                ]
               }
             },
             {
@@ -171,18 +201,28 @@
           "anims": "$background_anims",
           "controls": [
             {
-              "image_background": {
-                "type": "image",
+              "image_background_panel": {
+                "type": "panel",
                 "visible": "$rainbowpie_ui_feature_background_blur",
-                "fill": true,
                 "size": "$background_children_size",
                 "offset": "$background_children_offset",
                 "anchor_from": "$background_children_anchor",
                 "anchor_to": "$background_children_anchor",
-                "texture": "$background_blur",
                 "layer": "($background_layer + 1)",
                 "animation_reset_name": "$background_children_anim_reset",
-                "anims": "$background_children_anims"
+                "anims": "$background_children_anims",
+                "controls": [
+                  {
+                    "image_background": {
+                      "type": "image",
+                      "fill": true,
+                      "size": [ "100%", "100%" ],
+                      "offset": [ 0, 0 ],
+                      "texture": "$background_blur",
+                      "layer": 1
+                    }
+                  }
+                ]
               }
             },
             {
@@ -206,7 +246,7 @@
                 "ignored": "(not $rainbowpie_ui_flag_a3a3e4ee)",
                 "type": "image",
                 "tiled": true,
-                "tiled_scale": [ 0.05, 0.05 ],
+                "tiled_scale": [ 0.10, 0.10 ],
                 "alpha": 0.025,
                 "size": "$background_children_size",
                 "offset": "$background_children_offset",
@@ -273,7 +313,7 @@
                 "ignored": "((not $rainbowpie_ui_flag_a3a3e4ee) or (not $rainbowpie_ui_flag_1dc354bd))",
                 "type": "image",
                 "tiled": true,
-                "tiled_scale": [ 0.05, 0.05 ],
+                "tiled_scale": [ 0.10, 0.10 ],
                 "alpha": 0.025,
                 "size": "$background_children_size",
                 "offset": "$background_children_offset",

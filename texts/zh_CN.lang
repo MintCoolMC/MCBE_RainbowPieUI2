@@ -9,16 +9,25 @@ rainbowpie.ui.theme.default_name=Rainbow Pie UI 默认主题
 rainbowpie.ui.theme.default_auther=MintCoolMC
 rainbowpie.ui.theme.default_description=Rainbow Pie UI
 
+rainbowpie.ui.themesystem.background.title=背景信息
+rainbowpie.ui.themesystem.background.name=名称：
+rainbowpie.ui.themesystem.background.description=简介：
+
 rainbowpie.ui.themesystem.description.title=简介:	#
 rainbowpie.ui.themesystem.version_toolow=当前主题版本太低！请更新！	#
 rainbowpie.ui.themesystem.version_toohight=当前主题版本太高！	#
 
+rainbowpie.ui.trade2.tradeAll=交易全部
+
 rainbowpie.ui.inventory.actions.destroy_selection=销毁物品
+rainbowpie.ui.inventory.actions.destroy_inventory=销毁物品栏内全部物品
 rainbowpie.ui.inventory.actions.quick_craft=快速合成
 rainbowpie.ui.inventory.actions.drop_selection=丟出
+rainbowpie.ui.inventory.actions.drop_inventory=丟出物品栏内全部物品
 
 rainbowpie.ui.inventory.durability=耐久度:
 
+rainbowpie.ui.chest.fastpick.dropall=丟出箱子内全部物品
 rainbowpie.ui.chest.fastpick.pickall=拿取箱子内全部物品
 rainbowpie.ui.chest.fastpick.putall=放入物品栏内全部物品
 
@@ -32,8 +41,6 @@ rainbowpie.ui.settings.module.title=模块
 
 rainbowpie.ui.storage_management.tab.management=存储管理
 rainbowpie.ui.storage_management.tab.settings=存储设置
-
-rainbowpie.ui.hud.bow_helper.arrow_count=箭矢数量
 
 rainbowpie.ui.manifest_validation.verifiedPack=已验证的包：
 rainbowpie.ui.manifest_validation.verifiedDetail=更多信息
@@ -75,6 +82,11 @@ rainbowpie.ui.pause.permissions.custom=自定义
 rainbowpie.ui.pause.permissions.member=成员
 rainbowpie.ui.pause.permissions.op=操作员
 rainbowpie.ui.pause.permissions.visitor=访客
+
+rainbowpie.ui.warning.text.error=检查到一个致命的错误，这可能影响到你正常使用。如果你没有使用其他资源包并且正在使用受支持的游戏版本，请把此错误报告到issues。
+rainbowpie.ui.warning.text.warning=检查到一个错误。如果你没有使用其他资源包并且正在使用受支持的游戏版本，请把此错误报告到issues。
+rainbowpie.ui.warning.button.check=查看报错
+rainbowpie.ui.warning.button.deactivate=禁用资源包
 
 rainbowpie.ui.version.warn=版本警告！
 rainbowpie.ui.version.supported=支持的版本：

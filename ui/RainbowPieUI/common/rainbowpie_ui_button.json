@@ -45,19 +45,15 @@
     "$rainbowpie_localui_button_desc_enabled|default": false,
     "$rainbowpie_localui_button_desc_text|default": "HoverText",
     "$rainbowpie_localui_button_desc_text_bindings|default": [],
+    "$rainbowpie_localui_button_hover_border_layer|default": 50,
 
     "controls": [
       {
         "hover@common.focus_border_white": {
+          "size": "$button_image_size",
           "ignored": "((not $rainbowpie_localui_button_border_enabled) or (not $hover_state))",
-          "visible": false,
-          "layer": 50,
-          "bindings": [
-            {
-              "binding_name": "#is_using_gamepad",
-              "binding_name_override": "#visible"
-            }
-          ]
+          "alpha": 0.5,
+          "layer": "$rainbowpie_localui_button_hover_border_layer"
         }
       },
       {

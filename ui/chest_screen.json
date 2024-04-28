@@ -1,6 +1,26 @@
 {
   "namespace": "chest",
 
+  "small_chest_screen": {
+    "$is_ender_chest": false,
+    "$is_shulker_box": false,
+    "$is_barrel": false
+  },
+
+  "ender_chest_screen": {
+    "$is_ender_chest": true,
+    "$is_shulker_box": false,
+    "$is_barrel": false
+  },
+
+  "shulker_box_screen": {
+    "$is_shulker_box": true
+  },
+
+  "barrel_screen": {
+    "$is_barrel": true
+  },
+
   "chest_label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",

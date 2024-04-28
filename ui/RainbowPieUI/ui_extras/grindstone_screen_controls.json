@@ -20,6 +20,17 @@
           "animation_reset_name": "screen_animation_reset",
           "controls": [
             {
+              "grindstone_background_icon@rainbowpie_ui_inventory.background_icon": {
+                "size": "$rainbowpie_ui_theme_inventory_bgicon_grindstone_size",
+                "offset": "$rainbowpie_ui_theme_inventory_bgicon_grindstone_offset",
+                "anchor_to": "$rainbowpie_ui_theme_inventory_bgicon_grindstone_anchor",
+                "anchor_from": "$rainbowpie_ui_theme_inventory_bgicon_grindstone_anchor",
+                "texture": "$rainbowpie_ui_theme_inventory_bgicon_grindstone_texture",
+                "alpha": "$rainbowpie_ui_theme_inventory_bgicon_grindstone_alpha",
+                "fill": "$rainbowpie_ui_theme_inventory_bgicon_grindstone_fill"
+              }
+            },
+            {
               "background_icon@rainbowpie_ui_inventory.background_icon": {}
             },
             {

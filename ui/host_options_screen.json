@@ -1,0 +1,155 @@
+{
+  "namespace": "host_options",
+
+  "host_time_buttons/sub_tab": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "time_grid@scrolling_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_host_options_advanced)",
+              "offset": "$offset_sub_tabs",
+              "$main_scrolling_content": "rainbowpieui_host_options.host_time_panel"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "host_time_buttons/sub_tab/scrolli_scrolli_ravioli": {
+    "ignored": "$rainbowpie_ui_flag_host_options_advanced"
+  },
+
+  "host_weather_buttons/sub_tab": {
+    "size": [ "100%", "90px" ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "weather_grid@scrolling_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_host_options_advanced)",
+              "offset": "$offset_sub_tabs",
+              "$main_scrolling_content": "rainbowpieui_host_options.host_weather_panel"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "host_weather_buttons/sub_tab/host_main_grid": {
+    "ignored": "$rainbowpie_ui_flag_host_options_advanced"
+  },
+
+  "host_teleport_player_list_buttons": {
+    "size": "$panel_size",
+    "$panel_size": [ "default", "default" ],
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_host_options_advanced"
+      }
+    ]
+  },
+
+  "host_teleport_player_list_buttons/toggle": {
+    "size": "$inner_panel_size",
+    "$inner_panel_size": [ "100%", "90px" ],
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_host_options_advanced",
+        "$inner_panel_size": [ "100%", "210px" ]
+      }
+    ]
+  },
+
+  "host_friends_tab": {
+    "type": "stack_panel",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "advanced_host_friends_tab@rainbowpieui_host_options.advanced_host_friends_tab": {} }
+        ]
+      }
+    ]
+  },
+
+  "player_pic_panel/player_gamer_pic": {
+    "size": [ "100%", "100%" ]
+  },
+
+  "player_pic_panel": {
+    "size": [ "100%y", "100%" ],
+    "offset": [ 0, 0 ]
+  },
+
+  "player_button_content": {
+    "size": [ "100%", "100%" ],
+    "offset": [ 0, 0 ],
+    "modifications": [
+      {
+        "control_name": "player_pic_panel",
+        "operation": "insert_after",
+        "value": [
+          {
+            "padding_panel": {
+              "type": "panel",
+              "size": [ 5, 0 ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "host_sub_command_grid_item/host_option_banner": {
+    "$glyph_size": [ "100%y", "100%" ],
+    "$button_content_offset_glyph": [ 0, 0 ]
+  },
+
+  "button_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "host_teleport_grid_item/host_option_toggle": {
+    "$button_image_size": [ "100%", "100% - 1px" ],
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_checked",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_checked_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_checked_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_checked_locked"
+  },
+
+  "scrollable_selector_area": {
+    "$rainbowpie_localui_scrollbar_enabled": true
+  },
+
+  "scrolling_panel": {
+    "$main_offset_scrollable_panel|default": [ 0, 0 ],
+    "$main_size_scrollable_panel|default": [ "100% - 2px", "100%" ]
+  },
+
+  "scrolling_panel/background": {
+    "ignored": true
+  },
+
+  "main_light_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  },
+
+  "main_dark_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
+  }
+}
