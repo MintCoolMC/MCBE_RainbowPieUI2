@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  release:
+    types: [created, published, prereleased]
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  zip-and-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Python version
+        run: |
+          python --version
+      - name: Downgrade setuptools
+        run: |
+          pip install "setuptools<58.0.0"
+      - name: Install demjson
+        run: |
+          pip install demjson
+      - name: Run zipmcproject.py
+        run: |
+          python zipmcproject.py
+      - name: Upload
+        uses: softprops/action-gh-release@v2
+        with:
+          files: "*.mcpack"
