@@ -273,12 +273,14 @@
                                     {
                                       "binding_type": "view",
                                       "source_property_name": "(((#amount_current>#item_durability_current_amount)*-1+1)*((#amount_current<#item_durability_current_amount)*1+#amount_current))",
-                                      "target_property_name": "#amount_current"
+                                      "target_property_name": "#amount_current",
+                                      "binding_condition": "always_when_visible"
                                     },
                                     {
                                       "binding_type": "view",
                                       "source_property_name": "(((#amount_total>#item_durability_total_amount)*-1+1)*((#amount_total<#item_durability_total_amount)*1+#amount_total))",
-                                      "target_property_name": "#amount_total"
+                                      "target_property_name": "#amount_total",
+                                      "binding_condition": "always_when_visible"
                                     },
                                     {
                                       "binding_type": "view",
