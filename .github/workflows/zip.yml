@@ -28,8 +28,8 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
-          name: MintUI_Project
-          path: '*.mcpack'
+          name: "MintUI_Project_${{ github.sha }}"
+          path: "*.mcpack"
           if-no-files-found: error
       - name: Cleanup Workflow
         uses: Mattraks/delete-workflow-runs@main
