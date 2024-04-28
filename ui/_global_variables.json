@@ -13,10 +13,10 @@
   "$rainbowpieui_codename": "pancake",
   "$rainbowpieui_watermark": true,
 
-  "$rainbowpieui_version_minecraft_target": "v1.20.71",
+  "$rainbowpieui_version_minecraft_target": "v1.20.80",
   "$rainbowpieui_version_minecraft_bigver": "v1.20",
-  "$rainbowpieui_version_minecraft_max": "v1.20.79",
-  "$rainbowpieui_version_minecraft_min": "v1.20.70",
+  "$rainbowpieui_version_minecraft_max": "v1.20.89",
+  "$rainbowpieui_version_minecraft_min": "v1.20.80",
 
   "$mintui_bool": true,
   "$mintui_base_name": "MintUI",
