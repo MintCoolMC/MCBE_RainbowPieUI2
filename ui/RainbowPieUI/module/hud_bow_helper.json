@@ -286,11 +286,23 @@
       {
         "counter_panel": {
           "type": "panel",
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
-          "size": [ "100%c", "100%c" ],
-          "offset": [ "50% + 120px", -6 ],
+          "anchor_from": "$anchor",
+          "anchor_to": "$anchor",
+          "size": "$size",
+          "offset": "$offset",
           "visible": false,
+
+          "$anchor": "bottom_left",
+          "$size": [ "100%c", "100%c" ],
+          "$offset": [ "50% + 120px", -6 ],
+          "variables": [
+            {
+              "requires": "$rainbowpie_ui_flag_fc1ae899", // HUD Durability
+              "$anchor": "bottom_right",
+              "$offset": [ -7, -26 ]
+            }
+          ],
+
           "controls": [
             {
               "tip_text_background": {
