@@ -162,11 +162,6 @@
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
 
-  "realms_plus_skin_pack_timer/content_sizer/realms_plus_timer/timer_container/timer_string": {
-    "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  },
-
   "appearance_status_panel/appearance_status/label_panel/label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
