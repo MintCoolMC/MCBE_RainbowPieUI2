@@ -1094,24 +1094,6 @@
                                   "sound_volume": 1.0,
                                   "sound_pitch": 1.0
                                 }
-                              },
-                              {
-                                "feed_button@common_buttons.light_content_button": {
-                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
-                                  "$pressed_button_name": "button.menu_feed",
-                                  "$button_content": "rainbowpieui_pause.feed_icon_extra",
-                                  "anchor_to": "top_left",
-                                  "anchor_from": "top_left",
-                                  "size": [ 30, 30 ],
-                                  "offset": [ 150, 0 ],
-                                  "bindings": [
-                                    {
-                                      "binding_name": "#show_clubs",
-                                      "binding_name_override": "#enabled",
-                                      "binding_type": "global"
-                                    }
-                                  ]
-                                }
                               }
                             ]
                           }
@@ -1795,24 +1777,6 @@
                                         "sound_name": "random.screenshot",
                                         "sound_volume": 1.0,
                                         "sound_pitch": 1.0
-                                      }
-                                    },
-                                    {
-                                      "feed_button@common_buttons.light_content_button": {
-                                        "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
-                                        "$pressed_button_name": "button.menu_feed",
-                                        "$button_content": "rainbowpieui_pause.feed_icon",
-                                        "anchor_to": "top_left",
-                                        "anchor_from": "top_left",
-                                        "size": [ 45, 45 ],
-                                        "offset": [ 135, 0 ],
-                                        "bindings": [
-                                          {
-                                            "binding_name": "#show_clubs",
-                                            "binding_name_override": "#enabled",
-                                            "binding_type": "global"
-                                          }
-                                        ]
                                       }
                                     },
                                     {
