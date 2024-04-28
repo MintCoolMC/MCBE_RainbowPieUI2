@@ -600,8 +600,8 @@
     "texture": "($rainbowpie_localui_path_mouse_icon + '/screenshot')"
   },
 
-  "feed_icon_extra@extra_button_icon": {
-    "texture": "($rainbowpie_localui_path_mouse_icon + '/feed')"
+  "feedback_icon_extra@extra_button_icon": {
+    "texture": "($rainbowpie_localui_path_mouse_icon + '/feedback')"
   },
 
   "gamepad_pause_screen_content": {
@@ -1080,6 +1080,17 @@
                                 }
                               },
                               {
+                                "feedback_button@common_buttons.light_content_button": {
+                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+                                  "$pressed_button_name": "button.feedback_button_pressed",
+                                  "$button_content": "rainbowpieui_pause.feedback_icon_extra",
+                                  "anchor_to": "top_left",
+                                  "anchor_from": "top_left",
+                                  "size": [ 30, 30 ],
+                                  "offset": [ 120, 0 ]
+                                }
+                              },
+                              {
                                 "take_screenshot_button@common_buttons.light_content_button": {
                                   "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
                                   "$pressed_button_name": "button.screenshot",
@@ -1088,7 +1099,7 @@
                                   "anchor_to": "top_left",
                                   "anchor_from": "top_left",
                                   "size": [ 30, 30 ],
-                                  "offset": [ 120, 0 ],
+                                  "offset": [ 150, 0 ],
                                   "$button_text": "key.screenshot",
                                   "sound_name": "random.screenshot",
                                   "sound_volume": 1.0,
@@ -1648,11 +1659,11 @@
     "size": [ 18, 18 ]
   },
 
-  "feed_icon": {
+  "feedback_icon": {
     "type": "image",
     "anchor_from": "center",
     "anchor_to": "center",
-    "texture": "textures/ui/feedIcon",
+    "texture": "textures/ui/Feedback",
     "layer": 3,
     "size": [ 18, 18 ]
   },
@@ -1777,6 +1788,17 @@
                                         "sound_name": "random.screenshot",
                                         "sound_volume": 1.0,
                                         "sound_pitch": 1.0
+                                      }
+                                    },
+                                    {
+                                      "feedback_button@common_buttons.light_content_button": {
+                                        "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+                                        "$pressed_button_name": "button.feedback_button_pressed",
+                                        "$button_content": "rainbowpieui_pause.feedback_icon",
+                                        "anchor_to": "top_left",
+                                        "anchor_from": "top_left",
+                                        "size": [ 45, 45 ],
+                                        "offset": [ 135, 0 ]
                                       }
                                     },
                                     {
