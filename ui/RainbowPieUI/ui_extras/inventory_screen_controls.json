@@ -950,13 +950,15 @@
                         {
                           "durability_title@rainbowpie_ui_common.text_label": {
                             "text": "rainbowpie.ui.inventory.durability",
-                            "shadow": true
+                            "shadow": true,
+                            "ignored": "(not $rainbowpie_ui_flag_durabilityview_title)"
                           }
                         },
                         {
                           "padding": {
                             "type": "panel",
-                            "size": [ 1, 0 ]
+                            "size": [ 1, 0 ],
+                            "ignored": "(not $rainbowpie_ui_flag_durabilityview_title)"
                           }
                         },
                         {
