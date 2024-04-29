@@ -213,7 +213,7 @@
                 "texture": "textures/ui/White",
                 "color": "$rainbowpie_ui_theme_topbar_background_color",
                 "alpha": "$rainbowpie_ui_theme_topbar_background_alpha",
-                "layer": 5,
+                "layer": 6,
                 "controls": [
                   {
                     "mini_text_1@rainbowpie_ui_common.text_label_notheme": {
@@ -239,7 +239,7 @@
                 "texture": "textures/ui/White",
                 "color": "$rainbowpie_ui_theme_text_background_color",
                 "alpha": "$rainbowpie_ui_theme_text_background_alpha",
-                "layer": 5,
+                "layer": 6,
                 "controls": [
                   {
                     "mini_text_1@rainbowpie_ui_common.text_label_notheme": {
