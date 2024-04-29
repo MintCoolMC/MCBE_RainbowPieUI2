@@ -950,7 +950,6 @@
                         {
                           "durability_title@rainbowpie_ui_common.text_label": {
                             "text": "rainbowpie.ui.inventory.durability",
-                            "shadow": true,
                             "ignored": "(not $rainbowpie_ui_flag_durabilityview_title)"
                           }
                         },
@@ -964,7 +963,6 @@
                         {
                           "durability_text@rainbowpie_ui_common.text_label": {
                             "text": "#text",
-                            "shadow": true  ,
                             "bindings": [
                               {
                                 "binding_name": "#item_durability_total_amount",
@@ -1064,14 +1062,27 @@
   },
 
   "armor_and_offhand_durability": {
-    "type": "stack_panel",
-    "size": [ "100%cm", "100%c" ],
+    "type": "image",
+    "size": [ "100%c + 8px", "100%c + 4px" ],
+    "texture": "($rainbowpie_ui_path_home + '/r_white')",
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha",
+    "layer": 30,
     "controls": [
       {
-        "armor_items_durability@rainbowpieui_crafting.armor_items_durability": {}
-      },
-      {
-        "offhand_items_durability@rainbowpieui_crafting.offhand_items_durability": {}
+        "armor_and_offhand_durability_stack_panel": {
+          "type": "stack_panel",
+          "offset": [ -1, 0 ],
+          "size": [ "100%cm", "100%c" ],
+          "controls": [
+            {
+              "armor_items_durability@rainbowpieui_crafting.armor_items_durability": {}
+            },
+            {
+              "offhand_items_durability@rainbowpieui_crafting.offhand_items_durability": {}
+            }
+          ]
+        }
       }
     ]
   },

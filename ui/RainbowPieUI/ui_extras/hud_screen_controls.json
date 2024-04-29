@@ -240,7 +240,7 @@
                       "size": [ "100%c", "100%" ],
                       "controls": [
                         {
-                          "stack_panel": {
+                          "durability_stack_panel": {
                             "type": "stack_panel",
                             "orientation": "horizontal",
                             "size": [ "100%c", "100%cm" ],
@@ -248,7 +248,6 @@
                               {
                                 "durability_title@rainbowpie_ui_common.text_label": {
                                   "text": "rainbowpie.ui.inventory.durability",
-                                  "shadow": false,
                                   "ignored": "(not $rainbowpie_ui_flag_durabilityview_title)"
                                 }
                               },
@@ -262,7 +261,6 @@
                               {
                                 "durability_text@rainbowpie_ui_common.text_label": {
                                   "text": "#text",
-                                  "shadow": false,
                                   "bindings": [
                                     {
                                       "binding_name": "#item_durability_total_amount",
