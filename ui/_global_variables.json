@@ -103,6 +103,8 @@
   "$rainbowpie_ui_flag_durabilityview_title": true,
 
   "$rainbowpie_ui_flag_screenbackground_gradient": true,
+  "$rainbowpie_ui_flag_ingamebackground_gradient": true,
+  "$rainbowpie_ui_flag_inventorybackground_gradient": true,
   
   // Unnamed Flags
   "$rainbowpie_ui_flag_71042f58": false, // Disable background on selector

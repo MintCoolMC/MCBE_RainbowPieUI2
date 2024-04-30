@@ -1279,6 +1279,32 @@
                     "layer": -1,
                     "controls": [
                       {
+                        "gradient_top": {
+                          "type": "custom",
+                          "renderer": "gradient_renderer",
+                          "ignored": "(not $rainbowpie_ui_flag_ingamebackground_gradient)",
+                          "size": [ "100%", 30 ],
+                          "anchor_from": "top_middle",
+                          "anchor_to": "top_middle",
+                          "color1": [ 0.0, 0.0, 0.0, 0.5 ],
+                          "color2": [ 0.0, 0.0, 0.0, 0.0 ],
+                          "layer": 2
+                        }
+                      },
+                      {
+                        "design02_gradient_bottom": {
+                          "type": "custom",
+                          "renderer": "gradient_renderer",
+                          "ignored": "(not $rainbowpie_ui_flag_ingamebackground_gradient)",
+                          "size": [ "100%", 30 ],
+                          "anchor_from": "bottom_middle",
+                          "anchor_to": "bottom_middle",
+                          "color1": [ 0.0, 0.0, 0.0, 0.0 ],
+                          "color2": [ 0.0, 0.0, 0.0, 0.5 ],
+                          "layer": 2
+                        }
+                      },
+                      {
                         "background@rainbowpie_ui_common.global_background": {
                           "size": [ "100%", "100%" ]
                         }
@@ -1296,6 +1322,32 @@
                     "disable_anim_fast_forward": true,
                     "layer": -1,
                     "controls": [
+                      {
+                        "gradient_top": {
+                          "type": "custom",
+                          "renderer": "gradient_renderer",
+                          "ignored": "(not $rainbowpie_ui_flag_inventorybackground_gradient)",
+                          "size": [ "100%", 30 ],
+                          "anchor_from": "top_middle",
+                          "anchor_to": "top_middle",
+                          "color1": [ 0.0, 0.0, 0.0, 0.5 ],
+                          "color2": [ 0.0, 0.0, 0.0, 0.0 ],
+                          "layer": 2
+                        }
+                      },
+                      {
+                        "design02_gradient_bottom": {
+                          "type": "custom",
+                          "renderer": "gradient_renderer",
+                          "ignored": "(not $rainbowpie_ui_flag_inventorybackground_gradient)",
+                          "size": [ "100%", 30 ],
+                          "anchor_from": "bottom_middle",
+                          "anchor_to": "bottom_middle",
+                          "color1": [ 0.0, 0.0, 0.0, 0.0 ],
+                          "color2": [ 0.0, 0.0, 0.0, 0.5 ],
+                          "layer": 2
+                        }
+                      },
                       {
                         "inventory_background@rainbowpie_ui_common.inventory_global_background": {
                           "size": [ "100%", "100%" ]
