@@ -1,6 +1,64 @@
 {
   "namespace": "rainbowpieui_progress",
 
+  "mobile_data_icon": {
+    "type": "image",
+    "size": [ "100%c + 6px", "100%c + 4px" ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -3, 10 ],
+    "texture": "($rainbowpie_ui_path_home + '/r_white')",
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha",
+    "ignored": "(not ($is_android or $is_ios))",
+    "controls": [
+      {
+        "mobile_data_stack_panel": {
+          "type": "panel",
+          "size": [ "100%cm", 30 ],
+          "controls": [
+            {
+              "icon_android": {
+                "type": "image",
+                "texture": "textures/ui/mobile_data_icon_android",
+                "size": [ 16, 9 ],
+                "offset": [ 0, 8 ],
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "ignored": "(not $is_android)"
+              }
+            },
+            {
+              "icon_ios@progress.mobile_data_ios_icon": {
+                "type": "image",
+                "texture": "textures/ui/mobile_data_icon_ios",
+                "size": [ 12, 13 ],
+                "offset": [ 0, 4 ],
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "ignored": "(not $is_ios)"
+              }
+            },
+            {
+              "text@rainbowpie_ui_common.text_label": {
+                "text": "progressScreen.label.mobileData",
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#mobile_data_icon_visible",
+        "binding_name_override": "#visible",
+        "binding_condition": "once"
+      }
+    ]
+  },
+
   "simple_popup_dialog_base": {
     "type": "panel",
     "controls": [
@@ -13,7 +71,7 @@
       {
         "resourcepacks_dialog_ui@rainbowpieui_progress.resourcepacks_dialog_ui": {}
       },
-      { "mobile_data_icon@progress.mobile_data_icon": {} },
+      { "mobile_data_icon@rainbowpieui_progress.mobile_data_icon": {} },
       {
         "title_text@rainbowpie_ui_common.title_text": {
           "offset": [ 0, "5%" ],
@@ -196,7 +254,7 @@
   "world_loading_progress_screen": {
     "type": "panel",
     "controls": [
-      { "mobile_data_icon@progress.mobile_data_icon": {} },
+      { "mobile_data_icon@rainbowpieui_progress.mobile_data_icon": {} },
       {
         "title_text@rainbowpie_ui_common.title_text": {
           "offset": [ 0, "5%" ],

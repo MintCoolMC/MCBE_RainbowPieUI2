@@ -1,7 +1,13 @@
 {
   "namespace": "progress",
 
+  "realms_stories_enabled_loading_progress_screen": {
+    "$rainbowpie_localui_screenbackground_ingame": true,
+    "$screen_content": "rainbowpieui_progress.world_loading_progress_screen"
+  },
+
   "world_convert_modal_progress_screen": {
+    "$rainbowpie_localui_screenbackground_ingame": true,
     "$screen_content": "rainbowpieui_progress.world_loading_progress_screen"
   },
 
