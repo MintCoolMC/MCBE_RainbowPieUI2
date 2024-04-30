@@ -986,6 +986,9 @@
                             "controls": [
                               {
                                 "achievements_button@common_buttons.light_content_button": {
+                                  "$rainbowpie_localui_button_desc_enabled": true,
+                                  "$rainbowpie_localui_button_desc_text": "menu.achievements",
+                                  "$rainbowpie_localui_button_hover_border_layer": 30,
                                   "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
                                   "$pressed_button_name": "button.menu_achievements",
                                   "$button_content": "rainbowpieui_pause.achievements_icon_extra",
@@ -997,6 +1000,9 @@
                               },
                               {
                                 "invite_players_button@common_buttons.light_content_button": {
+                                  "$rainbowpie_localui_button_desc_enabled": true,
+                                  "$rainbowpie_localui_button_desc_text": "invite.title",
+                                  "$rainbowpie_localui_button_hover_border_layer": 30,
                                   "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
                                   "$pressed_button_name": "button.menu_invite_players",
                                   "$button_content": "rainbowpieui_pause.invite_icon_extra",
@@ -1020,19 +1026,11 @@
                                   ]
                                 }
                               },
-                              // {
-                              //   "music_button@common_buttons.light_content_button": {
-                              //     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
-                              //     "$pressed_button_name": "rainbowpie.music",
-                              //     "$button_content": "rainbowpieui_pause.music_icon_extra",
-                              //     "anchor_to": "top_left",
-                              //     "anchor_from": "top_left",
-                              //     "size": [ 30, 30 ],
-                              //     "offset": [ 60, 0 ]
-                              //   }
-                              // },
                               {
                                 "music_button@rainbowpie_ui_music_player.music_player_button_toggle_base": {
+                                  "$rainbowpie_localui_button_desc_enabled": true,
+                                  "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.music.button",
+                                  "$rainbowpie_localui_button_hover_border_layer": 30,
                                   "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
                                   "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
                                   "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
@@ -1063,6 +1061,9 @@
                               },
                               {
                                 "store_button@common_buttons.light_content_button": {
+                                  "$rainbowpie_localui_button_desc_enabled": true,
+                                  "$rainbowpie_localui_button_desc_text": "menu.store",
+                                  "$rainbowpie_localui_button_hover_border_layer": 30,
                                   "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
                                   "$pressed_button_name": "button.menu_store",
                                   "$button_content": "rainbowpieui_pause.store_icon_extra",
@@ -1081,6 +1082,9 @@
                               },
                               {
                                 "feedback_button@common_buttons.light_content_button": {
+                                  "$rainbowpie_localui_button_desc_enabled": true,
+                                  "$rainbowpie_localui_button_desc_text": "options.group.feedback",
+                                  "$rainbowpie_localui_button_hover_border_layer": 30,
                                   "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
                                   "$pressed_button_name": "button.feedback_button_pressed",
                                   "$button_content": "rainbowpieui_pause.feedback_icon_extra",
@@ -1092,6 +1096,9 @@
                               },
                               {
                                 "take_screenshot_button@common_buttons.light_content_button": {
+                                  "$rainbowpie_localui_button_desc_enabled": true,
+                                  "$rainbowpie_localui_button_desc_text": "key.screenshot",
+                                  "$rainbowpie_localui_button_hover_border_layer": 30,
                                   "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
                                   "$pressed_button_name": "button.screenshot",
                                   "$button_tts_header": "key.screenshot",
