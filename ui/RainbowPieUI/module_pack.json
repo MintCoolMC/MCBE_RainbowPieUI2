@@ -35,7 +35,7 @@
         "hud_bow_helper@rainbowpie_ui_module_list.module_item": {
           "$module_icon_texture": "($rainbowpie_ui_path_home + '/module/hud_bow_helper')",
           "$module_name": "HUD Bow Helper",
-          "$module_version": "1.4-v1.20.50",
+          "$module_version": "1.5",
           "$module_author": "MintCoolMC",
           "$module_description": "Shows the total count of arrows in the inventory",
           "$module_state_check": "$rainbowpie_ui_module_hud_bow_helper",
