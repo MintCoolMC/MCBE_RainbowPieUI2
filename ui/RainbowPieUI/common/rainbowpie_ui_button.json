@@ -361,7 +361,7 @@
                       "offset": [ 10, -10 ],
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
-                      "clips_children": true, // Why "clips_children" doesn't work here
+                      // "clips_children": true, // Why "clips_children" doesn't work here
                       "layer": 200,
                       "color": "$rainbowpie_ui_theme_hovertext_background_color",
                       "alpha": "$rainbowpie_ui_theme_hovertext_background_alpha",
