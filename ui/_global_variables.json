@@ -98,6 +98,8 @@
   "$rainbowpie_ui_flag_start_dialog_alert_text": "You are using an CI version of Rainbow Pie UI,\nIf you find any bugs please write an issue:\n§ehttps://github.com/MintCoolMC/MCBE_RainbowPieUI2/issues",
   "$rainbowpie_ui_flag_start_dialog_alert_button": "gui.ok",
 
+  "$rainbowpie_ui_flag_start_design02_gradient": true,
+
   "$rainbowpie_ui_flag_durabilityview_title": true,
   
   // Unnamed Flags

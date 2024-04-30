@@ -625,6 +625,32 @@
           "visible": true,
           "controls": [
             {
+              "design02_gradient_top": {
+                "type": "custom",
+                "renderer": "gradient_renderer",
+                "ignored": "((not $rainbowpie_ui_flag_8dcce82d) and (not $rainbowpie_ui_flag_start_design02_gradient))",
+                "size": [ "100%", 30 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color1": [ 0.0, 0.0, 0.0, 0.5 ],
+                "color2": [ 0.0, 0.0, 0.0, 0.0 ],
+                "layer": -3
+              }
+            },
+            {
+              "design02_gradient_bottom": {
+                "type": "custom",
+                "renderer": "gradient_renderer",
+                "ignored": "((not $rainbowpie_ui_flag_8dcce82d) and (not $rainbowpie_ui_flag_start_design02_gradient))",
+                "size": [ "100%", 30 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "color1": [ 0.0, 0.0, 0.0, 0.0 ],
+                "color2": [ 0.0, 0.0, 0.0, 0.5 ],
+                "layer": -3
+              }
+            },
+            {
               "header@rainbowpie_ui_common.screen_header": {
                 "ignored": "$rainbowpie_ui_flag_8dcce82d",
                 "$rainbowpie_localui_screenheader_ingame_anim1": true,
