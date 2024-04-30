@@ -628,7 +628,7 @@
               "design02_gradient_top": {
                 "type": "custom",
                 "renderer": "gradient_renderer",
-                "ignored": "((not $rainbowpie_ui_flag_8dcce82d) and (not $rainbowpie_ui_flag_start_design02_gradient))",
+                "ignored": "(((not $rainbowpie_ui_flag_8dcce82d) and (not $rainbowpie_ui_flag_start_design02_gradient)) or $rainbowpie_ui_flag_screenbackground_gradient)",
                 "size": [ "100%", 30 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
@@ -641,7 +641,7 @@
               "design02_gradient_bottom": {
                 "type": "custom",
                 "renderer": "gradient_renderer",
-                "ignored": "((not $rainbowpie_ui_flag_8dcce82d) and (not $rainbowpie_ui_flag_start_design02_gradient))",
+                "ignored": "(((not $rainbowpie_ui_flag_8dcce82d) and (not $rainbowpie_ui_flag_start_design02_gradient)) or $rainbowpie_ui_flag_screenbackground_gradient)",
                 "size": [ "100%", 30 ],
                 "anchor_from": "bottom_middle",
                 "anchor_to": "bottom_middle",
