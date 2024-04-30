@@ -190,7 +190,7 @@
   "$rainbowpie_ui_moduleflag_inventory_actions_quick_craft_enabled": true,
 
   // Theme System //
-  "$rainbowpie_ui_themesystem_version": "1092",
+  "$rainbowpie_ui_themesystem_version": "1093",
 
   // Theme Info //
   "$rainbowpie_ui_theme_icon": "textures/MintUI/pack_icon",
@@ -200,7 +200,7 @@
   "$rainbowpie_ui_theme_description": "rainbowpie.ui.theme.default_description",
   "$rainbowpie_ui_theme_background_name": "Bridge (Rainy Day)",
   "$rainbowpie_ui_theme_background_description": "Java edition\nComplementaryUnbound_r5.1.1",
-  "$rainbowpie_ui_theme_version": "1092",
+  "$rainbowpie_ui_theme_version": "1093",
 
   // Theme Background //
   "$rainbowpie_ui_theme_background_mask_texture_ingame": "textures/MintUI/background/background_mask",
@@ -223,6 +223,14 @@
   "$rainbowpie_ui_theme_hovertext_background_color": [ 0.011, 0.011, 0.011 ],
   "$rainbowpie_ui_theme_hovertext_background_alpha": 0.8,
   "$rainbowpie_ui_theme_hovertext_text_color": [ 1.0, 1.0, 1.0 ],
+
+  "$rainbowpie_ui_theme_hovertext_bgicon_enabled": false,
+  "$rainbowpie_ui_theme_hovertext_bgicon_texture": "textures/items/apple",
+  "$rainbowpie_ui_theme_hovertext_bgicon_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_hovertext_bgicon_size": [ 14, "100%x" ],
+  "$rainbowpie_ui_theme_hovertext_bgicon_offset": [ -4, 0 ],
+  "$rainbowpie_ui_theme_hovertext_bgicon_alpha": 0.4,
+  "$rainbowpie_ui_theme_hovertext_bgicon_fill": false,
 
   // Theme HUD Item Name Variables //
   "$rainbowpie_ui_theme_hud_itemname_background_color": [ 0.011, 0.011, 0.011 ],
