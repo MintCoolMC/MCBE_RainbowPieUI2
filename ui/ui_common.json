@@ -1721,6 +1721,11 @@
           {
             "requires": "($screen_content = 'rainbowpieui_settings_common.settings_content')",
             "$export_template_disabled": false
+          },
+          {
+            "requires": "($is_zeqa)",
+            "$rainbowpie_ui_flag_56cd0456": true,
+            "$rainbowpie_ui_flag_scoreboard_default_font": true
           }
         ]
       }
