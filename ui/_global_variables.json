@@ -142,6 +142,7 @@
   "$rainbowpie_ui_flag_82d2c0e7": true, // Background Information
   "$rainbowpie_ui_flag_1c167cde": false, // Start V2 Topbar
   "$rainbowpie_ui_flag_282dd0a5": true, // StartUI Back To Vanilla Button
+  "$rainbowpie_ui_flag_56cd0456": true, // PauseUI Back To Vanilla Button
 
   // Debug
   "$rainbowpie_ui_debug": false,

@@ -88,6 +88,11 @@ rainbowpie.ui.pause.permissions.member=成员
 rainbowpie.ui.pause.permissions.op=操作员
 rainbowpie.ui.pause.permissions.visitor=访客
 
+rainbowpie.ui.pause.vanilla_tip=切换到原版样式的 PauseUI
+rainbowpie.ui.pause.pauseui_tip=回到 Rainbow Pie UI 样式的 PauseUI
+rainbowpie.ui.pause.vanilla=原版
+rainbowpie.ui.pause.pauseui=PauseUI
+
 rainbowpie.ui.warning.text.error=检查到一个致命的错误，这可能影响到你正常使用。如果你没有使用其他资源包并且正在使用受支持的游戏版本，请把此错误报告到issues。
 rainbowpie.ui.warning.text.warning=检查到一个错误。如果你没有使用其他资源包并且正在使用受支持的游戏版本，请把此错误报告到issues。
 rainbowpie.ui.warning.button.check=查看报错

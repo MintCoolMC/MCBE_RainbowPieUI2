@@ -1,6 +1,62 @@
 {
   "namespace": "rainbowpieui_pause",
 
+  "vanilla_button@common_toggles.light_ui_toggle": {
+    "$rainbowpie_localui_button_desc_enabled": true,
+    "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.pause.vanilla_tip",
+    "$rainbowpie_localui_button_desc_text_offset": [ -10, -10 ],
+    "$rainbowpie_localui_button_desc_text_anchor": "top_right",
+    "ignored": "(not $rainbowpie_ui_flag_56cd0456)",
+    "$unchecked_control": "rainbowpie_ui_toggle.toggle_button_unchecked",
+    "$checked_control": "rainbowpie_ui_toggle.toggle_button_checked",
+    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_button_unchecked_hover",
+    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_button_checked_hover",
+    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_button_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_button_unchecked_locked_hover",
+    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_button_checked_locked",
+    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_button_checked_locked_hover",
+
+    "$button_text_binding_type": "none",
+    "$button_binding_condition": "none",
+    "$button_text_grid_collection_name": "none",
+    "$button_text": "rainbowpie.ui.pause.vanilla",
+
+    "$button_offset": [ 0, 0 ],
+
+    "$radio_toggle_group": true,
+    "$toggle_name": "rainbowpie_pauseui_toggle",
+    "$toggle_group_default_selected": 903,
+
+    "$toggle_group_forced_index": 900,
+
+    "$toggle_view_binding_name": "vanilla_pauseui",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "vanilla_pauseui",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#enabled",
+        "ignored": "(not $rainbowpie_ui_flag_56cd0456)"
+      }
+    ]
+  },
+
+  "pauseui_button@rainbowpieui_pause.vanilla_button": {
+    "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.pause.pauseui_tip",
+    "$button_text": "rainbowpie.ui.pause.pauseui",
+    "$toggle_group_forced_index": 901,
+    "$toggle_view_binding_name": "rainbowpie_pauseui",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "rainbowpie_pauseui",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#enabled",
+        "ignored": "(not $rainbowpie_ui_flag_56cd0456)"
+      }
+    ]
+  },
+
   "pause_screen_content": {
     "type": "panel",
     "controls": [
@@ -65,6 +121,17 @@
                   }
                 ],
                 "$rainbowpie_localui_screen_content": [
+                  {
+                    "vanilla_button@rainbowpieui_pause.vanilla_button": {
+                      "size": [ "28px", "28px" ],
+                      "offset": [ -8, -17 ],
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right",
+                      "layer": 30,
+                      "$button_image_size": [ "100%", "100%" ],
+                      "ignored": "(not $rainbowpie_ui_flag_56cd0456)"
+                    }
+                  },
                   {
                     "screen@$rainbowpie_localui_this_screen": {}
                   }
@@ -298,13 +365,106 @@
               }
             }
           ],
+          "property_bag": {
+            "#is_music_player_ui_opened": false,
+            "#is_vanilla_pause_ui_opened": false
+          },
           "bindings": [
             {
               "binding_type": "view",
               "source_control_name": "open_music_player",
-              "source_property_name": "(not #toggle_state)",
-              "target_property_name": "#visible",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#is_music_player_ui_opened",
               "ignored": "(not $rainbowpie_ui_feature_musicplayer)"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "vanilla_pauseui",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#is_vanilla_pause_ui_opened",
+              "ignored": "(not $rainbowpie_ui_flag_56cd0456)"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#is_music_player_ui_opened or #is_vanilla_pause_ui_opened))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "vanilla_pauseui_content": {
+          "type": "panel",
+          "ignored": "(not $rainbowpie_ui_flag_56cd0456)",
+          "visible": false,
+          "controls": [
+            {
+              "screen_content@rainbowpie_ui_common.screen_content": {
+                "$rainbowpie_localui_screen_ingame_anim1": true,
+                "$rainbowpie_localui_screen_content": [
+                  {
+                    "pauseui_button@rainbowpieui_pause.pauseui_button": {
+                      "size": [ "28px", "28px" ],
+                      "offset": [ -8, -17 ],
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right",
+                      "layer": 30,
+                      "$button_image_size": [ "100%", "100%" ],
+                      "ignored": "(not $rainbowpie_ui_flag_56cd0456)"
+                    }
+                  },
+                  {
+                    "rainbowpie_version": {
+                      "type": "image",
+                      "texture": "textures/ui/Black",
+                      "size": [ "100%c + 4px", "100%c + 2px" ],
+                      "anchor_from": "bottom_left",
+                      "anchor_to": "bottom_left",
+                      "alpha": 0.6,
+                      "layer": 30,
+                      "controls": [
+                        {
+                          "label": {
+                            "type": "label",
+                            "color": "$main_header_text_color",
+                            "layer": 2,
+                            "text": "($mintui_pack_name + ' ' + $rainbowpieui_branch_display_name + ' ' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version)",
+                            "size": [ "default", 10 ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "pauseui@pause.pause_screen_content": {}
+                  }
+                ]
+              }
+            }
+          ],
+          "property_bag": {
+            "#is_music_player_ui_opened": false,
+            "#is_vanilla_pause_ui_opened": false
+          },
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "open_music_player_vanilla",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#is_music_player_ui_opened",
+              "ignored": "(not $rainbowpie_ui_feature_musicplayer)"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "vanilla_pauseui",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#is_vanilla_pause_ui_opened",
+              "ignored": "(not $rainbowpie_ui_flag_56cd0456)"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#is_vanilla_pause_ui_opened and (not #is_music_player_ui_opened))",
+              "target_property_name": "#visible"
             }
           ]
         }
@@ -317,11 +477,27 @@
           "controls": [
             { "music_player_screen@rainbowpie_ui_music_player.music_player_screen": {} }
           ],
+          "property_bag": {
+            "#is_music_player_ui_opened": false,
+            "#is_music_player_ui_opened_on_vanilla": false
+          },
           "bindings": [
             {
               "binding_type": "view",
               "source_control_name": "open_music_player",
               "source_property_name": "#toggle_state",
+              "target_property_name": "#is_music_player_ui_opened"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "open_music_player_vanilla",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#is_music_player_ui_opened_on_vanilla",
+              "ignored": "(not $rainbowpie_ui_flag_282dd0a5)"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#is_music_player_ui_opened or #is_music_player_ui_opened_on_vanilla)",
               "target_property_name": "#visible"
             }
           ]
