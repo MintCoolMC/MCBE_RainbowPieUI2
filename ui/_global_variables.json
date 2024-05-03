@@ -5,11 +5,11 @@
   "$rainbowpieui_branch_name": "master",
   "$rainbowpieui_branch_display_name": "DEV",
 
-  "$rainbowpieui_engine_version": "24",
-  "$rainbowpieui_patch_version": "10120",
+  "$rainbowpieui_engine_version": "25",
+  "$rainbowpieui_patch_version": "10121",
   "$rainbowpieui_hotfix_version": "1",
-  "$rainbowpieui_engine_version_name": "2.4",
-  "$rainbowpieui_full_version_name": "2.4.10120.master",
+  "$rainbowpieui_engine_version_name": "2.5",
+  "$rainbowpieui_full_version_name": "2.5.10121.master",
   "$rainbowpieui_codename": "pancake",
   "$rainbowpieui_watermark": true,
 
@@ -27,7 +27,7 @@
   "$mintui_pack_name": "Rainbow Pie UI",
   "$mintui_pack_description": "Minecraft UI Pack\n§ehttps://mintraspberry.cool/rainbowpieui",
   "$mintui_pack_uuid": "82d610e8-0968-4c0a-a47e-38e6663ee6ff",
-  "$mintui_pack_version": "2.4.10120",
+  "$mintui_pack_version": "2.5.10121",
 
   "$rainbowpie_ui_verify_enabled": false,
   "$rainbowpie_ui_verify_mode": "default", // blacklist|whitelist|[default]
