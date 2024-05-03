@@ -2183,14 +2183,14 @@
               "binding_type": "view",
               "source_control_name": "open_music_player",
               "source_property_name": "#toggle_state",
-              "target_property_name": "#is_music_player_ui_opened",
-              "ignored": "(not $rainbowpie_ui_flag_282dd0a5)"
+              "target_property_name": "#is_music_player_ui_opened"
             },
             {
               "binding_type": "view",
               "source_control_name": "open_music_player_vanilla",
               "source_property_name": "#toggle_state",
-              "target_property_name": "#is_music_player_ui_opened_on_vanilla"
+              "target_property_name": "#is_music_player_ui_opened_on_vanilla",
+              "ignored": "(not $rainbowpie_ui_flag_282dd0a5)"
             },
             {
               "binding_type": "view",
