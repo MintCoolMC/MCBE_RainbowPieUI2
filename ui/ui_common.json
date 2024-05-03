@@ -1725,7 +1725,9 @@
           {
             "requires": "($is_zeqa)",
             "$rainbowpie_ui_flag_56cd0456": true,
-            "$rainbowpie_ui_flag_scoreboard_default_font": true
+            "$rainbowpie_ui_flag_scoreboard_default_font": true,
+            "$rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled": false,
+            "$rainbowpie_ui_module_chest_fastpick": false
           }
         ]
       }
