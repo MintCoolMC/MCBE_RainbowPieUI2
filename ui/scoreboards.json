@@ -1,6 +1,21 @@
 {
   "namespace": "scoreboard",
 
+  "scoreboard_sidebar": {
+    "modifications": [
+      {
+        "array_name": "variables",
+        "operation": "insert_front",
+        "value": [
+          {
+            "requires": "$rainbowpie_ui_flag_scoreboard_default_font",
+            "$rainbowpie_ui_theme_global_font_name": "default"
+          }
+        ]
+      }
+    ]
+  },
+
   "player_icon_panel/player_icon": {
     "size": [ "80% + 4px", "80% + 4px" ]
   },

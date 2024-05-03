@@ -105,6 +105,8 @@
   "$rainbowpie_ui_flag_screenbackground_gradient": true,
   "$rainbowpie_ui_flag_ingamebackground_gradient": true,
   "$rainbowpie_ui_flag_inventorybackground_gradient": true,
+
+  "$rainbowpie_ui_flag_scoreboard_default_font": false,
   
   // Unnamed Flags
   "$rainbowpie_ui_flag_71042f58": false, // Disable background on selector
@@ -592,9 +594,11 @@
   "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_alpha": 0.8,
-  "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_fill": false
+  "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_fill": false,
 
   // Theme End
 
+  // Compatibility for servers or other resource packs
+  "$is_zeqa": false // Zeqa Network (Server)
 }
 
