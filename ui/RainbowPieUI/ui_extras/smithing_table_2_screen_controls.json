@@ -1,6 +1,203 @@
 {
   "namespace": "rainbowpieui_smithing_table_2",
 
+  "smithing_preview_turn_back_anim": {
+    "anim_type": "offset",
+    "easing": "out_quart",
+    "duration": 0.35,
+    "from": [ 0, 0 ],
+    "to": [ "-50%x", 0 ],
+    "play_event": "rainbowpie.smithing_preview_turn_back"
+  },
+
+  "smithing_preview_turn_front_anim": {
+    "anim_type": "offset",
+    "easing": "out_quart",
+    "duration": 0.35,
+    "from": [ "-50%x", 0 ],
+    "to": [ 0, 0 ],
+    "play_event": "rainbowpie.smithing_preview_turn_front"
+  },
+
+  "smithing_preview_reset_anim": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": 0,
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ]
+  },
+
+  "turn_front_icon": {
+    "type": "image",
+    "texture": "textures/ui/chevron_left",
+    "size": [ "88.88888888888889%", "88.88888888888889%" ],
+    "color": "$text_color"
+  },
+
+  "turn_back_icon": {
+    "type": "image",
+    "texture": "textures/ui/chevron_right",
+    "size": [ "88.88888888888889%", "88.88888888888889%" ],
+    "color": "$text_color"
+  },
+
+  "result_item_preview": {
+    "type": "panel",
+    "controls": [
+      {
+        "turn_front@common_buttons.light_content_button": {
+          "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+          "$pressed_button_name": "rainbowpie.smithing_preview_turn_front",
+          "$button_content": "rainbowpieui_smithing_table_2.turn_front_icon",
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle",
+          "size": [ 12, 12 ],
+          "offset": [ -14, 2 ]
+        }
+      },
+      {
+        "turn_back@common_buttons.light_content_button": {
+          "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+          "$pressed_button_name": "rainbowpie.smithing_preview_turn_back",
+          "$button_content": "rainbowpieui_smithing_table_2.turn_back_icon",
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle",
+          "size": [ 12, 12 ],
+          "offset": [ 18, 2 ]
+        }
+      },
+      {
+        "preview_outer_panel": {
+          "type": "panel",
+          "size": [ "166.6666666666667%", "200%x" ], // 30x60
+          "offset": [ "6.666666666666667%x", 0 ],
+          "clips_children": true,
+          "controls": [
+            {
+              "preview_outer_panel2": {
+                "type": "panel",
+                "anchor_to": "left_middle",
+                "anchor_from": "left_middle",
+                "size": [ "200%", "100%" ], // 30x60
+                "offset": [ 0, 0 ],
+                "animation_reset_name": "rainbowpie.smithing_preview_turn_front",
+                "anims": [
+                  "@rainbowpieui_smithing_table_2.smithing_preview_reset_anim",
+                  "@rainbowpieui_smithing_table_2.smithing_preview_turn_back_anim"
+                ],
+                "controls": [
+                  {
+                    "debug01@rainbowpie_ui_common.debug_draw": {
+                      "$rainbowpie_localui_debug_name": "outer_panel2"
+                    }
+                  },
+                  {
+                    "preview_stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "anchor_to": "left_middle",
+                      "anchor_from": "left_middle",
+                      "size": [ "100%", "100%" ],
+                      "offset": [ 0, 0 ],
+                      "animation_reset_name": "rainbowpie.smithing_preview_turn_back",
+                      "anims": [
+                        "@rainbowpieui_smithing_table_2.smithing_preview_reset_anim",
+                        "@rainbowpieui_smithing_table_2.smithing_preview_turn_front_anim"
+                      ],
+                      "controls": [
+                        {
+                          "preview_front_panel": {
+                            "type": "panel",
+                            "size": [ "50%", "100%" ],
+                            "controls": [
+                              {
+                                "debug01@rainbowpie_ui_common.debug_draw": {
+                                  "$rainbowpie_localui_debug_name": "front"
+                                }
+                              },
+                              {
+                                "inner@rainbowpieui_smithing_table_2.result_item_preview_inner": {}
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "preview_back_panel": {
+                            "type": "panel",
+                            "size": [ "50%", "100%" ],
+                            "controls": [
+                              {
+                                "debug01@rainbowpie_ui_common.debug_draw": {
+                                  "$rainbowpie_localui_debug_name": "back"
+                                }
+                              },
+                              {
+                                "inner@rainbowpieui_smithing_table_2.result_item_preview_inner": {
+                                  "$rotation_y": -140
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "result_item_preview_inner": {
+    "type": "panel",
+    "size": [ "83.33333333333333%", "100%x" ],
+    "$rotation_y|default": -30,
+    "controls": [
+      {
+        "smithing_preview_renderer": {
+          "type": "custom",
+          "renderer": "equipment_preview_renderer",
+          "enable_scissor_test": true,
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@common.screen_exit_size_animation_push",
+            "@common.screen_exit_size_animation_pop",
+            "@common.screen_entrance_size_animation_push",
+            "@common.screen_entrance_size_animation_pop"
+          ],
+          "layer": 8,
+          "rotation_x": 30,
+          "rotation_y": "$rotation_y",
+          "bindings": [
+            {
+              "binding_name": "#item_id_aux",
+              "binding_type": "collection",
+              "binding_collection_name": "smithing_table_result_items"
+            },
+            {
+              "binding_name": "#item_custom_color",
+              "binding_type": "collection",
+              "binding_collection_name": "smithing_table_result_items"
+            },
+            {
+              "binding_name": "#armor_trim_pattern",
+              "binding_type": "collection",
+              "binding_collection_name": "smithing_table_result_items"
+            },
+            {
+              "binding_name": "#armor_trim_material",
+              "binding_type": "collection",
+              "binding_collection_name": "smithing_table_result_items"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "smithing_table_item_slot": {
     "type": "panel",
     "controls": [
@@ -235,7 +432,7 @@
                           }
                         },
                         {
-                          "result_item_preview@smithing_table_2.result_item_preview": {
+                          "result_item_preview@rainbowpieui_smithing_table_2.result_item_preview": {
                             "grid_position": [ 7, 0 ]
                           }
                         }
