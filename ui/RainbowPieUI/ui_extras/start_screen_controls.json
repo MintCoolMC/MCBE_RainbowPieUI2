@@ -301,6 +301,40 @@
     ]
   },
 
+  "hide_paper_doll_anim": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": 0
+  },
+
+  "hide_paper_doll_anim_exit_push@rainbowpieui_start.hide_paper_doll_anim": {
+    "from": [ 0, 38 ],
+    "to": [ "100%x", 38 ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "hide_paper_doll_anim_exit_pop@rainbowpieui_start.hide_paper_doll_anim": {
+    "from": [ 0, 38 ],
+    "to": [ "100%x", 38 ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "hide_paper_doll_anim_entrance_push@rainbowpieui_start.hide_paper_doll_anim": {
+    "from": [ "100%x", 38 ],
+    "to": [ 0, 38 ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "hide_paper_doll_anim_entrance_pop@rainbowpieui_start.hide_paper_doll_anim": {
+    "from": [ "100%x", 38 ],
+    "to": [ 0, 38 ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
   "startv2_skin_button_panel": {
     "type": "panel",
     "size": [ "100% + 5px", "100% + 5px" ],
@@ -327,7 +361,14 @@
                 "anchor_to": "bottom_middle",
                 "size": [ 92, "100%x" ],
                 "offset": [ 0, 38 ],
-                "enable_scissor_test": true
+                "enable_scissor_test": true,
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@rainbowpieui_start.hide_paper_doll_anim_exit_push",
+                  "@rainbowpieui_start.hide_paper_doll_anim_exit_pop",
+                  "@rainbowpieui_start.hide_paper_doll_anim_entrance_push",
+                  "@rainbowpieui_start.hide_paper_doll_anim_entrance_pop"
+                ]
               }
             }
           ]
