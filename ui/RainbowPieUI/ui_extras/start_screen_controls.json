@@ -1589,7 +1589,9 @@
                                         "size": [ "fill", 32 ],
                                         "$icon_texture_name": "play",
                                         "$pressed_button_name": "$play_button_target",
-                                        "$button_text": "menu.play"
+                                        "$button_text": "menu.play",
+                                        "$focus_id": "play_button",
+                                        "$focus_override_up": "profile_button"
                                       }
                                     },
                                     {
@@ -1600,7 +1602,8 @@
                                         "$rainbowpie_localui_button_desc_text": "menu.quickplay",
                                         "$pressed_button_name": "button.menu_get_started",
                                         "$button_content": "rainbowpieui_start.get_started_icon",
-                                        "size": [ "100%y", 32 ]
+                                        "size": [ "100%y", 32 ],
+                                        "$focus_override_up": "profile_button"
                                       }
                                     }
                                   ]
@@ -1629,7 +1632,8 @@
                                 "store_button@rainbowpieui_start.startv2_big_button_template": {
                                   "$icon_texture_name": "marketplace",
                                   "$pressed_button_name": "button.menu_store",
-                                  "$button_text": "menu.store"
+                                  "$button_text": "menu.store",
+                                  "$focus_override_right": "bottom_button"
                                 }
                               },
                               {
@@ -1642,7 +1646,10 @@
                                 "profile_button@rainbowpieui_start.startv2_big_button_template": {
                                   "$button_content": "rainbowpieui_start.startv2_skin_button_panel",
                                   "$pressed_button_name": "button.to_profile_screen",
-                                  "$button_text": "profileScreen.header"
+                                  "$button_text": "profileScreen.header",
+                                  "$focus_id": "profile_button",
+                                  "$focus_override_down": "play_button",
+                                  "$focus_override_right": "bottom_button"
                                 }
                               }
                             ]
@@ -1814,7 +1821,9 @@
                                       "vanilla_button@rainbowpieui_start.vanilla_button": {
                                         "size": [ "100%y", "100%" ],
                                         "$button_image_size": [ "100%", "100%" ],
-                                        "ignored": "(not $rainbowpie_ui_flag_282dd0a5)"
+                                        "ignored": "(not $rainbowpie_ui_flag_282dd0a5)",
+                                        "$focus_id": "bottom_button",
+                                        "$focus_override_left": "profile_button"
                                       }
                                     },
                                     {
@@ -1827,7 +1836,14 @@
                                     {
                                       "music_button@rainbowpieui_start.music_button": {
                                         "size": [ "100%y", "100%" ],
-                                        "$button_image_size": [ "100%", "100%" ]
+                                        "$button_image_size": [ "100%", "100%" ],
+                                        "variables": [
+                                          {
+                                            "requires": "(not $rainbowpie_ui_flag_282dd0a5)",
+                                            "$focus_id": "bottom_button",
+                                            "$focus_override_left": "profile_button"
+                                          }
+                                        ]
                                       }
                                     },
                                     {

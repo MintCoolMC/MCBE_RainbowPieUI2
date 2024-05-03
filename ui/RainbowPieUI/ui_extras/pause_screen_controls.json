@@ -801,7 +801,9 @@
                     "return_to_game_button@pause.return_to_game_button": {
                       "$button_focus_precedence": 3,
                       "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-                      "size": [ "100%", 23 ]
+                      "size": [ "100%", 23 ],
+                      "focus_identifier": "play_button",
+                      "focus_change_up": "quit_button"
                     }
                   },
                   {
@@ -880,7 +882,9 @@
                       "$rainbowpie_localui_button_text_hover_color": [ 1.0, 1.0, 1.0 ],
                       "$rainbowpie_localui_button_text_pressed_color": [ 1.0, 1.0, 1.0 ],
                       "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-                      "size": [ "100%", 23 ]
+                      "size": [ "100%", 23 ],
+                      "focus_identifier": "quit_button",
+                      "focus_change_down": "play_button"
                     }
                   }
                 ]
