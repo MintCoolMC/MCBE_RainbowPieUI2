@@ -45,6 +45,9 @@
     "$rainbowpie_localui_button_desc_enabled|default": false,
     "$rainbowpie_localui_button_desc_text|default": "HoverText",
     "$rainbowpie_localui_button_desc_text_bindings|default": [],
+    "$rainbowpie_localui_button_desc_text_size|default": [ "100%c + 8px", "100%c + 5px" ],
+    "$rainbowpie_localui_button_desc_text_offset|default": [ 10, -10 ],
+    "$rainbowpie_localui_button_desc_text_anchor|default": "top_left",
     "$rainbowpie_localui_button_hover_border_layer|default": 50,
 
     "controls": [
@@ -357,10 +360,10 @@
                     "hover_text_background": {
                       "type": "image",
                       "texture": "($rainbowpie_ui_path_home + '/r_white')",
-                      "size": [ "100%c + 8px", "100%c + 5px" ],
-                      "offset": [ 10, -10 ],
-                      "anchor_from": "top_left",
-                      "anchor_to": "top_left",
+                      "size": "$rainbowpie_localui_button_desc_text_size",
+                      "offset": "$rainbowpie_localui_button_desc_text_offset",
+                      "anchor_from": "$rainbowpie_localui_button_desc_text_anchor",
+                      "anchor_to": "$rainbowpie_localui_button_desc_text_anchor",
                       // "clips_children": true, // Why "clips_children" doesn't work here
                       "layer": 200,
                       "color": "$rainbowpie_ui_theme_hovertext_background_color",
