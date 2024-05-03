@@ -17,6 +17,11 @@ rainbowpie.ui.themesystem.description.title=介紹:	#
 rainbowpie.ui.themesystem.version_toolow=當前外觀包版本太低！	#
 rainbowpie.ui.themesystem.version_toohight=當前外觀包版本太高！	#
 
+rainbowpie.ui.start.vanilla_tip=遇到 Bug 了嗎？如果你遇到了 Bug 請通過 Github 反饋給我們！
+rainbowpie.ui.start.startui_tip=回到 Rainbow Pie UI 樣式的 StartUI
+rainbowpie.ui.start.vanilla=原版
+rainbowpie.ui.start.startui=StartUI
+
 rainbowpie.ui.trade2.tradeAll=交易全部
 
 rainbowpie.ui.inventory.actions.destroy_selection=銷毀物品

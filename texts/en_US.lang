@@ -17,6 +17,11 @@ rainbowpie.ui.themesystem.description.title=Description:
 rainbowpie.ui.themesystem.version_toolow=This theme version is too low! please update!
 rainbowpie.ui.themesystem.version_toohight=This theme version is too hight!
 
+rainbowpie.ui.start.vanilla_tip=Have you encountered a BUG? If you encounter a bug, please report it to us via Github
+rainbowpie.ui.start.startui_tip=Back to Rainbow Pie UI style StartUI
+rainbowpie.ui.start.vanilla=Vanilla
+rainbowpie.ui.start.startui=StartUI
+
 rainbowpie.ui.trade2.tradeAll=Trade All
 
 rainbowpie.ui.inventory.actions.destroy_selection=Destroy
