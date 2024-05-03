@@ -182,11 +182,11 @@
               "type": "button",
               "ignored": "(not $rainbowpie_ui_flag_86c54726)",
               "visible": false,
-              "enabled": "(not $touch)",
+              "enabled": "(not ($touch or $game_pad))",
               "size": [ 18, 18 ],
               "always_handle_pointer": true,
               "allow_clipping": false,
-              "follows_cursor": "(not $touch)",
+              "follows_cursor": "(not ($touch or $game_pad))",
               "consume_event": false,
               "consume_hover_events": false,
               "focus_enabled": false,
@@ -196,7 +196,7 @@
               "$locked_control": "",
               "variables": [
                 {
-                  "requires": "$touch",
+                  "requires": "($touch or $game_pad)",
                   "$hover_control": "",
                   "$locked_control": "hover_text"
                 }
@@ -1690,8 +1690,7 @@
             "$rainbowpie_ui_feature_background_blur": false
           },
           {
-            "requires": "$touch",
-            // "$rainbowpie_ui_flag_8dcce82d": false,
+            "requires": "(($is_android or $is_ios) and $rainbowpie_ui_flag_86c54726)",
             "$rainbowpie_ui_flag_86c54726": false
           },
           // Force use Rainbow Pie UI style server_form

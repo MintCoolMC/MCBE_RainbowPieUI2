@@ -333,9 +333,9 @@
       {
         "custom_hover_text": {
           "type": "button",
-          "enabled": "(not $touch)",
+          "enabled": "(not ($touch or $game_pad))",
           "allow_clipping": false,
-          "follows_cursor": "(not $touch)",
+          "follows_cursor": "(not ($touch or $game_pad))",
           "consume_event": false,
           "consume_hover_events": false,
           "focus_enabled": false,
@@ -345,7 +345,7 @@
           "$locked_control": "",
           "variables": [
             {
-              "requires": "$touch",
+              "requires": "($touch or $game_pad)",
               "$hover_control": "",
               "$locked_control": "hover_text"
             }
