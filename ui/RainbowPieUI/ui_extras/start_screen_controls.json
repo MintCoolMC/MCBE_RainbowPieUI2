@@ -733,6 +733,29 @@
                     }
                   },
                   {
+                    "rainbowpie_version": {
+                      "type": "image",
+                      "texture": "textures/ui/Black",
+                      "size": [ "100%c + 4px", "100%c + 2px" ],
+                      "offset": [ 0, -12 ],
+                      "anchor_from": "bottom_left",
+                      "anchor_to": "bottom_left",
+                      "alpha": 0.6,
+                      "layer": 30,
+                      "controls": [
+                        {
+                          "label": {
+                            "type": "label",
+                            "color": "$main_header_text_color",
+                            "layer": 2,
+                            "text": "($mintui_pack_name + ' ' + $rainbowpieui_branch_display_name + ' ' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version)",
+                            "size": [ "default", 10 ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
                     "startui@start.start_screen_content": {}
                   }
                 ]
