@@ -1,0 +1,2 @@
+When the background resolution is 1920x1080,
+the Gaussian blur radius should be 12.0px
