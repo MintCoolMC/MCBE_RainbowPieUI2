@@ -1733,6 +1733,7 @@
             "requires": "($screen_content = 'rainbowpieui_settings_common.settings_content')",
             "$export_template_disabled": false
           },
+          // Zeqa Network
           {
             "requires": "($is_zeqa)",
             "$rainbowpie_ui_flag_56cd0456": true, // PauseUI Back To Vanilla Button
@@ -1741,6 +1742,10 @@
             "$rainbowpie_ui_module_chest_fastpick": false,
             "$rainbowpie_ui_flag_chatui_default_font": true,
             "$rainbowpie_ui_flag_hudtitle_default_font": true
+          },
+          // The Hive (test)
+          {
+            "requires": "(1=0)"
           }
         ]
       }

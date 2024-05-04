@@ -462,14 +462,20 @@
         }
       },
       {
-        "title_01_anim@rainbowpie_ui_common.text_label": {
+        "title_01_str@rainbowpie_ui_common.text_label": {
           "text": "String Test"
         }
       },
       {
-        "title_011_anim@rainbowpie_ui_common.text_label": {
+        "title_011_str@rainbowpie_ui_common.text_label": {
           "$var_1": "TEST STRING",
           "text": "('This is a test string variable: %s, and this is end' * $var_1)"
+        }
+      },
+      {
+        "title_012_str@rainbowpie_ui_common.text_label": {
+          "$var_1": "",
+          "text": "('test \u003d ')"
         }
       },
       {
