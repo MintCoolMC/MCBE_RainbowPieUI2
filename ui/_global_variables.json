@@ -602,6 +602,6 @@
   // Theme End
 
   // Compatibility for servers or other resource packs
-  "$is_zeqa": true // Zeqa Network (Server)
+  "$is_zeqa": false // Zeqa Network (Server)
 }
 
