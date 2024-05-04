@@ -12,6 +12,7 @@
   "$rainbowpieui_full_version_name": "2.5.10121.master",
   "$rainbowpieui_codename": "pancake",
   "$rainbowpieui_watermark": true,
+  "$rainbowpieui_bool": true,
 
   "$rainbowpieui_version_minecraft_target": "v1.20.80",
   "$rainbowpieui_version_minecraft_bigver": "v1.20",
