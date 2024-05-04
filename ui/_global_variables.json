@@ -602,6 +602,7 @@
   // Theme End
 
   // Compatibility for servers or other resource packs
+  // The variables here will be overwritten when the server loads the resource package.
   "$is_zeqa": false // Zeqa Network (Server)
 }
 
