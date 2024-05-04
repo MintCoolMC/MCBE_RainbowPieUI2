@@ -111,6 +111,31 @@
             "$rainbowpie_ui_theme_global_font_backup_name": "default"
           }
         ]
+      },
+      {
+        "array_name": "bindings",
+        "operation": "replace",
+        "where": {
+          "binding_name": "#chat_visible",
+          "binding_name_override": "#visible"
+        },
+        "value": {
+          "binding_name": "#chat_visible"
+        }
+      },
+      {
+        "array_name": "bindings",
+        "operation": "insert_back",
+        "value": [
+          {
+            "binding_name": "#host_main_visible"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#chat_visible and (not #host_main_visible))",
+            "target_property_name": "#visible"
+          }
+        ]
       }
     ]
   },
@@ -181,14 +206,7 @@
                     "size": [ "fill", "100%" ],
                     "controls": [
                       {
-                        "messages_panel@chat.messages_scrolling_panel": {
-                          "bindings": [
-                            {
-                              "binding_name": "(not #host_main_visible)",
-                              "binding_name_override": "#visible"
-                            }
-                          ]
-                        }
+                        "messages_panel@chat.messages_scrolling_panel": {}
                       },
                       { "autocomplete_commands_panel@chat.commands_panel": { "layer": 3 } }
                     ]
