@@ -9,7 +9,8 @@
         "value": [
           {
             "requires": "$rainbowpie_ui_flag_scoreboard_default_font",
-            "$rainbowpie_ui_theme_global_font_name": "default"
+            "$rainbowpie_ui_theme_global_font_name": "default",
+            "$rainbowpie_ui_theme_global_font_backup_name": "default"
           }
         ]
       }

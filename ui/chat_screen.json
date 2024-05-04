@@ -1,6 +1,22 @@
 {
   "namespace": "chat",
 
+  "messages_stack_panel": {
+    "factory": {
+      "name": "messages_factory",
+      "max_children_size": 100,
+      "control_ids": {
+        "chat_screen_messages": "chat_screen_messages@chat.message_tts_wrapper"
+      },
+      "factory_variables": [
+        "$rainbowpie_ui_theme_global_font_name",
+        "$rainbowpie_ui_theme_global_font_backup_name",
+        "$rainbowpie_ui_flag_chat_use_ui_font",
+        "$rainbowpie_ui_flag_chatui_default_font"
+      ]
+    }
+  },
+
   "chat_screen_content/autocomplete_commands_panel": {
     "ignored": true
   },
@@ -83,7 +99,20 @@
 
   "messages_text": {
     "anims": ["@rainbowpieui_chat.chat_message_panel_size_animation"],
-    "clips_children": true
+    "clips_children": true,
+    "modifications": [
+      {
+        "array_name": "variables",
+        "operation": "insert_front",
+        "value": [
+          {
+            "requires": "$rainbowpie_ui_flag_chatui_default_font",
+            "$rainbowpie_ui_theme_global_font_name": "default",
+            "$rainbowpie_ui_theme_global_font_backup_name": "default"
+          }
+        ]
+      }
+    ]
   },
 
   "messages_text/text": {

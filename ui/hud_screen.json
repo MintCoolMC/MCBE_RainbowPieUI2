@@ -1,6 +1,58 @@
 {
   "namespace": "hud",
 
+  "exp_progress_bar_and_hotbar_pocket/item_text/item_text_factory": {
+    "factory_variables": [
+      "$rainbowpie_ui_theme_global_font_name",
+      "$rainbowpie_ui_theme_global_font_backup_name",
+      "$rainbowpie_ui_flag_huditemname_default_font"
+    ]
+  },
+
+  "exp_progress_bar_and_hotbar/item_text_factory": {
+    "factory_variables": [
+      "$rainbowpie_ui_theme_global_font_name",
+      "$rainbowpie_ui_theme_global_font_backup_name",
+      "$rainbowpie_ui_flag_huditemname_default_font"
+    ]
+  },
+
+  "root_panel/hud_title_text_area": {
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_text@hud.hud_title_text"
+      },
+      "factory_variables": [
+        "$rainbowpie_ui_theme_global_font_name",
+        "$rainbowpie_ui_theme_global_font_backup_name",
+        "$rainbowpie_ui_flag_hudtitle_default_font"
+      ]
+    }
+  },
+
+  "root_panel/hud_actionbar_text_area": {
+    "factory": {
+      "name": "hud_actionbar_text_factory",
+      "control_ids": {
+        "hud_actionbar_text": "hud_actionbar_text@hud.hud_actionbar_text"
+      },
+      "factory_variables": [
+        "$rainbowpie_ui_theme_global_font_name",
+        "$rainbowpie_ui_theme_global_font_backup_name",
+        "$rainbowpie_ui_flag_hudtitle_default_font"
+      ]
+    }
+  },
+
+  "root_panel/hud_tip_text_factory": {
+    "factory_variables": [
+      "$rainbowpie_ui_theme_global_font_name",
+      "$rainbowpie_ui_theme_global_font_backup_name",
+      "$rainbowpie_ui_flag_hudtitle_default_font"
+    ]
+  },
+
   "vignette_renderer": {
     "ignored": true
   },
@@ -115,7 +167,20 @@
   },
 
   "hud_actionbar_text": {
-    "texture": "($rainbowpie_ui_path_home + '/r_black')"
+    "texture": "($rainbowpie_ui_path_home + '/r_black')",
+    "modifications": [
+      {
+        "array_name": "variables",
+        "operation": "insert_front",
+        "value": [
+          {
+            "requires": "$rainbowpie_ui_flag_hudtitle_default_font",
+            "$rainbowpie_ui_theme_global_font_name": "default",
+            "$rainbowpie_ui_theme_global_font_backup_name": "default"
+          }
+        ]
+      }
+    ]
   },
 
   "hud_actionbar_text/actionbar_message": {
@@ -124,7 +189,20 @@
   },
 
   "hud_tip_text": {
-    "texture": "($rainbowpie_ui_path_home + '/r_black')"
+    "texture": "($rainbowpie_ui_path_home + '/r_black')",
+    "modifications": [
+      {
+        "array_name": "variables",
+        "operation": "insert_front",
+        "value": [
+          {
+            "requires": "$rainbowpie_ui_flag_hudtitle_default_font",
+            "$rainbowpie_ui_theme_global_font_name": "default",
+            "$rainbowpie_ui_theme_global_font_backup_name": "default"
+          }
+        ]
+      }
+    ]
   },
 
   "hud_tip_text/item_text_label": {
@@ -135,7 +213,20 @@
   "item_name_text_root/item_text_aligner/item_text_control/item_text_background": {
     "texture": "($rainbowpie_ui_path_home + '/r_white')",
     "color": "$rainbowpie_ui_theme_hud_itemname_background_color",
-    "alpha": "$rainbowpie_ui_theme_hud_itemname_background_alpha"
+    "alpha": "$rainbowpie_ui_theme_hud_itemname_background_alpha",
+    "modifications": [
+      {
+        "array_name": "variables",
+        "operation": "insert_front",
+        "value": [
+          {
+            "requires": "$rainbowpie_ui_flag_huditemname_default_font",
+            "$rainbowpie_ui_theme_global_font_name": "default",
+            "$rainbowpie_ui_theme_global_font_backup_name": "default"
+          }
+        ]
+      }
+    ]
   },
 
   "item_name_text_root/item_text_aligner/item_text_control/item_text_label": {

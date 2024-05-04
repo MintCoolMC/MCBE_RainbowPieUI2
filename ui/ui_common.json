@@ -1,6 +1,13 @@
 {
   "namespace": "common",
 
+  "base_screen/variables_button_mappings_and_controls/factory_panel/error_dialog_factory": {
+    "factory_variables": [
+      "$rainbowpie_ui_theme_global_font_name",
+      "$rainbowpie_ui_theme_global_font_backup_name"
+    ]
+  },
+
   "selected_item_details_factory": {
     "ignored": true
   },
@@ -1137,7 +1144,11 @@
   },
 
   "screen_panel/popup_dialog_factory": {
-    "ignored": "$rainbowpie_localui_screenroot_ignore_dialogs"
+    "ignored": "$rainbowpie_localui_screenroot_ignore_dialogs",
+    "factory_variables": [
+      "$rainbowpie_ui_theme_global_font_name",
+      "$rainbowpie_ui_theme_global_font_backup_name"
+    ]
   },
 
   "base_screen/variables_button_mappings_and_controls/bg_no_safezone_screen_panel": {
@@ -1724,10 +1735,12 @@
           },
           {
             "requires": "($is_zeqa)",
-            "$rainbowpie_ui_flag_56cd0456": true,
+            "$rainbowpie_ui_flag_56cd0456": true, // PauseUI Back To Vanilla Button
             "$rainbowpie_ui_flag_scoreboard_default_font": true,
             "$rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled": false,
-            "$rainbowpie_ui_module_chest_fastpick": false
+            "$rainbowpie_ui_module_chest_fastpick": false,
+            "$rainbowpie_ui_flag_chatui_default_font": true,
+            "$rainbowpie_ui_flag_hudtitle_default_font": true
           }
         ]
       }

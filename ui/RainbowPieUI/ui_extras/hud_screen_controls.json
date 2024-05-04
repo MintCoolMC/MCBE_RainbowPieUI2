@@ -1061,7 +1061,13 @@
             "max_children_size": "$max_children_size",
             "control_ids": {
               "chat_item": "chat_item@rainbowpieui_hud.chat_grid_item"
-            }
+            },
+            "factory_variables": [
+              "$rainbowpie_ui_theme_global_font_name",
+              "$rainbowpie_ui_theme_global_font_backup_name",
+              "$rainbowpie_ui_flag_chat_use_ui_font",
+              "$rainbowpie_ui_flag_chatui_default_font"
+            ]
           },
           "$max_children_size": 50,
           "variables": [
@@ -1091,6 +1097,13 @@
       {
         "binding_name": "(not #on_new_death_screen)",
         "binding_name_override": "#visible"
+      }
+    ],
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_chatui_default_font",
+        "$rainbowpie_ui_theme_global_font_name": "default",
+        "$rainbowpie_ui_theme_global_font_backup_name": "default"
       }
     ],
     "controls": [
