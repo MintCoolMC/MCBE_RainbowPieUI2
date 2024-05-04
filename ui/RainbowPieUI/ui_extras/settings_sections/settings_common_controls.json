@@ -120,6 +120,12 @@
                             "size": [ "100%", "23px" ],
                             "layer": 6,
                             "consume_hover_events": false,
+                            "bindings": [
+                              {
+                                "binding_name": "(not #using_touch)",
+                                "binding_name_override": "#visible"
+                              }
+                            ],
                             "button_mappings": [
                               {
                                 "from_button_id": "button.menu_select",
@@ -148,6 +154,10 @@
                               {
                                 "binding_collection_name": "#selected_pack_items_global",
                                 "binding_type": "collection_details"
+                              },
+                              {
+                                "binding_name": "(not #using_touch)",
+                                "binding_name_override": "#visible"
                               }
                             ],
                             "button_mappings": [
@@ -174,6 +184,12 @@
                             "size": [ "50%", "23px" ],
                             "layer": 7,
                             "consume_hover_events": false,
+                            "bindings": [
+                              {
+                                "binding_name": "(not #using_touch)",
+                                "binding_name_override": "#visible"
+                              }
+                            ],
                             "button_mappings": [
                               {
                                 "from_button_id": "button.menu_select",
