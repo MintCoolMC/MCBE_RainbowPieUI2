@@ -1,5 +1,5 @@
 {
-  "$rainbowpieui_ci": true,
+  "$rainbowpieui_ci": false,
   "$rainbowpieui_commit_id": "local",
   "$rainbowpieui_branch_type": "release",
   "$rainbowpieui_branch_name": "master",
