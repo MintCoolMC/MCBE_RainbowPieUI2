@@ -150,6 +150,7 @@
   "$rainbowpie_ui_flag_282dd0a5": true, // StartUI Back To Vanilla Button
   "$rainbowpie_ui_flag_56cd0456": true, // PauseUI Back To Vanilla Button
   "$rainbowpie_ui_flag_3e35fb2e": true,
+  "$rainbowpie_ui_flag_3520da91": true, // EASTER EGGS
 
   // Debug
   "$rainbowpie_ui_debug": false,

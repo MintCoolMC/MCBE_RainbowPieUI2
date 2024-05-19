@@ -1,6 +1,16 @@
 {
   "namespace": "common",
 
+  "static_tooltip_popup_with_image_and_text/image_and_text_stack_panel/tooltip_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
+  "static_tooltip_popup_with_image_and_text/tooltip_chevron": {
+    "ignored": true
+  },
+
   "tooltip_background": {
     "texture": "($rainbowpie_ui_path_home + '/r_white')",
     "color": "$rainbowpie_ui_theme_text_background_color",
