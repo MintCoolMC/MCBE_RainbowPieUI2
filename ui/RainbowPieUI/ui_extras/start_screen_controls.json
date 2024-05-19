@@ -301,6 +301,40 @@
     ]
   },
 
+  "hide_paper_doll_anim": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": 0
+  },
+
+  "hide_paper_doll_anim_exit_push@rainbowpieui_start.hide_paper_doll_anim": {
+    "from": [ 0, 38 ],
+    "to": [ "100%x", 38 ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "hide_paper_doll_anim_exit_pop@rainbowpieui_start.hide_paper_doll_anim": {
+    "from": [ 0, 38 ],
+    "to": [ "100%x", 38 ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "hide_paper_doll_anim_entrance_push@rainbowpieui_start.hide_paper_doll_anim": {
+    "from": [ "100%x", 38 ],
+    "to": [ 0, 38 ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "hide_paper_doll_anim_entrance_pop@rainbowpieui_start.hide_paper_doll_anim": {
+    "from": [ "100%x", 38 ],
+    "to": [ 0, 38 ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
   "startv2_skin_button_panel": {
     "type": "panel",
     "size": [ "100% + 5px", "100% + 5px" ],
@@ -327,7 +361,14 @@
                 "anchor_to": "bottom_middle",
                 "size": [ 92, "100%x" ],
                 "offset": [ 0, 38 ],
-                "enable_scissor_test": true
+                "enable_scissor_test": true,
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@rainbowpieui_start.hide_paper_doll_anim_exit_push",
+                  "@rainbowpieui_start.hide_paper_doll_anim_exit_pop",
+                  "@rainbowpieui_start.hide_paper_doll_anim_entrance_push",
+                  "@rainbowpieui_start.hide_paper_doll_anim_entrance_pop"
+                ]
               }
             }
           ]
@@ -531,11 +572,26 @@
               }
             }
           ],
+          "property_bag": {
+            "#is_background_dialog_opened": false,
+            "#is_background_dialog_opened_on_vanilla": false
+          },
           "bindings": [
             {
               "binding_type": "view",
               "source_control_name": "open_background_dialog",
               "source_property_name": "#toggle_state",
+              "target_property_name": "#is_background_dialog_opened"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "open_background_dialog_vanilla",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#is_background_dialog_opened_on_vanilla"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#is_background_dialog_opened or #is_background_dialog_opened_on_vanilla)",
               "target_property_name": "#visible"
             }
           ]
@@ -624,6 +680,32 @@
           "type": "panel",
           "visible": true,
           "controls": [
+            {
+              "design02_gradient_top": {
+                "type": "custom",
+                "renderer": "gradient_renderer",
+                "ignored": "(((not $rainbowpie_ui_flag_8dcce82d) and (not $rainbowpie_ui_flag_start_design02_gradient)) or $rainbowpie_ui_flag_screenbackground_gradient)",
+                "size": [ "100%", 30 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color1": [ 0.0, 0.0, 0.0, 0.5 ],
+                "color2": [ 0.0, 0.0, 0.0, 0.0 ],
+                "layer": -3
+              }
+            },
+            {
+              "design02_gradient_bottom": {
+                "type": "custom",
+                "renderer": "gradient_renderer",
+                "ignored": "(((not $rainbowpie_ui_flag_8dcce82d) and (not $rainbowpie_ui_flag_start_design02_gradient)) or $rainbowpie_ui_flag_screenbackground_gradient)",
+                "size": [ "100%", 30 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "color1": [ 0.0, 0.0, 0.0, 0.0 ],
+                "color2": [ 0.0, 0.0, 0.0, 0.5 ],
+                "layer": -3
+              }
+            },
             {
               "header@rainbowpie_ui_common.screen_header": {
                 "ignored": "$rainbowpie_ui_flag_8dcce82d",
@@ -1316,7 +1398,7 @@
                         },
                         {
                           "easteregg_button@common_buttons.light_text_button": {
-                            "ignored": "$rainbowpie_ui_flag_1c167cde",
+                            "ignored": "($rainbowpie_ui_flag_1c167cde or (not $rainbowpie_ui_flag_3520da91))",
                             "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
                             "$rainbowpie_localui_button_desc_enabled": true,
                             "$rainbowpie_localui_button_desc_text": "You found an easter egg!!!\nVisit the link below to claim your rewards.\n§ehttps://mintraspberry.cool/reward",
@@ -1393,7 +1475,9 @@
                                         "size": [ "fill", 32 ],
                                         "$icon_texture_name": "play",
                                         "$pressed_button_name": "$play_button_target",
-                                        "$button_text": "menu.play"
+                                        "$button_text": "menu.play",
+                                        "$focus_id": "play_button",
+                                        "$focus_override_up": "profile_button"
                                       }
                                     },
                                     {
@@ -1404,7 +1488,8 @@
                                         "$rainbowpie_localui_button_desc_text": "menu.quickplay",
                                         "$pressed_button_name": "button.menu_get_started",
                                         "$button_content": "rainbowpieui_start.get_started_icon",
-                                        "size": [ "100%y", 32 ]
+                                        "size": [ "100%y", 32 ],
+                                        "$focus_override_up": "profile_button"
                                       }
                                     }
                                   ]
@@ -1433,7 +1518,8 @@
                                 "store_button@rainbowpieui_start.startv2_big_button_template": {
                                   "$icon_texture_name": "marketplace",
                                   "$pressed_button_name": "button.menu_store",
-                                  "$button_text": "menu.store"
+                                  "$button_text": "menu.store",
+                                  "$focus_override_right": "bottom_button"
                                 }
                               },
                               {
@@ -1446,7 +1532,10 @@
                                 "profile_button@rainbowpieui_start.startv2_big_button_template": {
                                   "$button_content": "rainbowpieui_start.startv2_skin_button_panel",
                                   "$pressed_button_name": "button.to_profile_screen",
-                                  "$button_text": "profileScreen.header"
+                                  "$button_text": "profileScreen.header",
+                                  "$focus_id": "profile_button",
+                                  "$focus_override_down": "play_button",
+                                  "$focus_override_right": "bottom_button"
                                 }
                               }
                             ]
@@ -1615,9 +1704,32 @@
                                   "anchor_to": "left_middle",
                                   "controls": [
                                     {
+                                      "vanilla_button@rainbowpieui_start.vanilla_button": {
+                                        "size": [ "100%y", "100%" ],
+                                        "$button_image_size": [ "100%", "100%" ],
+                                        "ignored": "(not $rainbowpie_ui_flag_282dd0a5)",
+                                        "$focus_id": "bottom_button",
+                                        "$focus_override_left": "profile_button"
+                                      }
+                                    },
+                                    {
+                                      "vanilla_button_padding": {
+                                        "type": "panel",
+                                        "size": [ 4, 0 ],
+                                        "ignored": "(not $rainbowpie_ui_flag_282dd0a5)"
+                                      }
+                                    },
+                                    {
                                       "music_button@rainbowpieui_start.music_button": {
                                         "size": [ "100%y", "100%" ],
-                                        "$button_image_size": [ "100%", "100%" ]
+                                        "$button_image_size": [ "100%", "100%" ],
+                                        "variables": [
+                                          {
+                                            "requires": "(not $rainbowpie_ui_flag_282dd0a5)",
+                                            "$focus_id": "bottom_button",
+                                            "$focus_override_left": "profile_button"
+                                          }
+                                        ]
                                       }
                                     },
                                     {
@@ -1929,13 +2041,158 @@
               }
             }
           ],
+          "property_bag": {
+            "#is_music_player_ui_opened": false,
+            "#is_vanilla_start_ui_opened": false
+          },
           "bindings": [
             {
               "binding_type": "view",
               "source_control_name": "open_music_player",
-              "source_property_name": "(not #toggle_state)",
-              "target_property_name": "#visible",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#is_music_player_ui_opened",
               "ignored": "(not $rainbowpie_ui_feature_musicplayer)"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "vanilla_startui",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#is_vanilla_start_ui_opened",
+              "ignored": "(not $rainbowpie_ui_flag_282dd0a5)"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#is_music_player_ui_opened or #is_vanilla_start_ui_opened))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "vanilla_startui_content": {
+          "type": "panel",
+          "ignored": "(not $rainbowpie_ui_flag_282dd0a5)",
+          "visible": false,
+          "controls": [
+            {
+              "screen_content@rainbowpie_ui_common.screen_content": {
+                "$rainbowpie_localui_screen_ingame_anim1": true,
+                "$rainbowpie_localui_screen_ingame_anim2": "($rainbowpie_ui_flag_8dcce82d and $rainbowpie_ui_flag_fbadd01f)",
+                "$rainbowpie_localui_screen_content": [
+                  {
+                    "bottom_button_panel": {
+                      "type": "panel",
+                      "size": [ "100%c", "28px" ],
+                      "offset": [ -8, -17 ],
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right",
+                      "layer": 30,
+                      "controls": [
+                        {
+                          "button_stack_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%c", "100%" ],
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "controls": [
+                              {
+                                "startui_button@rainbowpieui_start.startui_button": {
+                                  "size": [ "100%y", "100%" ],
+                                  "$button_image_size": [ "100%", "100%" ],
+                                  "ignored": "(not $rainbowpie_ui_flag_282dd0a5)"
+                                }
+                              },
+                              {
+                                "vanilla_button_padding": {
+                                  "type": "panel",
+                                  "size": [ 4, 0 ],
+                                  "ignored": "(not $rainbowpie_ui_flag_282dd0a5)"
+                                }
+                              },
+                              {
+                                "music_button@rainbowpieui_start.music_button": {
+                                  "size": [ "100%y", "100%" ],
+                                  "$button_image_size": [ "100%", "100%" ],
+                                  "$toggle_view_binding_name": "open_music_player_vanilla"
+                                }
+                              },
+                              {
+                                "music_button_padding": {
+                                  "type": "panel",
+                                  "size": [ 4, 0 ],
+                                  "ignored": "((not $rainbowpie_ui_flag_82d2c0e7) or ($rainbowpie_ui_theme_background_texture = ''))"
+                                }
+                              },
+                              {
+                                "background_button@rainbowpieui_start.background_dialog_toggle_base": {
+                                  "ignored": "((not $rainbowpie_ui_flag_82d2c0e7) or ($rainbowpie_ui_theme_background_texture = ''))",
+                                  "size": [ "100%y", "100%" ],
+                                  "$button_image_size": [ "100%", "100%" ],
+                                  "$toggle_group_forced_index": 1000,
+                                  "$toggle_view_binding_name": "open_background_dialog_vanilla",
+                                  "layer": 30
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rainbowpie_version": {
+                      "type": "image",
+                      "texture": "textures/ui/Black",
+                      "size": [ "100%c + 4px", "100%c + 2px" ],
+                      "offset": [ 0, -12 ],
+                      "anchor_from": "bottom_left",
+                      "anchor_to": "bottom_left",
+                      "alpha": 0.6,
+                      "layer": 30,
+                      "controls": [
+                        {
+                          "label": {
+                            "type": "label",
+                            "color": "$main_header_text_color",
+                            "layer": 2,
+                            "text": "($mintui_pack_name + ' ' + $rainbowpieui_branch_display_name + ' ' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version)",
+                            "size": [ "default", 10 ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "startui@start.start_screen_content": {}
+                  }
+                ]
+              }
+            }
+          ],
+          "property_bag": {
+            "#is_music_player_ui_opened": false,
+            "#is_vanilla_start_ui_opened": false
+          },
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "open_music_player_vanilla",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#is_music_player_ui_opened",
+              "ignored": "(not $rainbowpie_ui_feature_musicplayer)"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "vanilla_startui",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#is_vanilla_start_ui_opened",
+              "ignored": "(not $rainbowpie_ui_flag_282dd0a5)"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#is_vanilla_start_ui_opened and (not #is_music_player_ui_opened))",
+              "target_property_name": "#visible"
             }
           ]
         }
@@ -1948,11 +2205,27 @@
           "controls": [
             { "music_player_screen@rainbowpie_ui_music_player.music_player_screen": {} }
           ],
+          "property_bag": {
+            "#is_music_player_ui_opened": false,
+            "#is_music_player_ui_opened_on_vanilla": false
+          },
           "bindings": [
             {
               "binding_type": "view",
               "source_control_name": "open_music_player",
               "source_property_name": "#toggle_state",
+              "target_property_name": "#is_music_player_ui_opened"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "open_music_player_vanilla",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#is_music_player_ui_opened_on_vanilla",
+              "ignored": "(not $rainbowpie_ui_flag_282dd0a5)"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#is_music_player_ui_opened or #is_music_player_ui_opened_on_vanilla)",
               "target_property_name": "#visible"
             }
           ]
@@ -1961,12 +2234,12 @@
       {
         "7ca17cf7_flag_control": {
           "type": "panel",
-          "ignored": "(not $rainbowpie_ui_flag_aa8421c9)",
+          "ignored": "((not $rainbowpie_ui_flag_aa8421c9) or (not $rainbowpie_ui_flag_3520da91))",
           "controls": [
             {
               "label": {
                 "type": "label",
-                "text": "Hey! Why your name is empty!?",
+                "text": "...=)",
                 "bindings": [
                   {
                     "binding_name": "(#playername = '')", // Empty Easteregg
@@ -2327,10 +2600,61 @@
     "$button_text": "gui.exit"
   },
 
-  // "music_button@start.main_button": {
-  //   "$pressed_button_name": "rainbowpie.music",
-  //   "$button_text": "rainbowpie.ui.music.button"
-  // },
+  "vanilla_button@common_toggles.light_ui_toggle": {
+    "$rainbowpie_localui_button_desc_enabled": true,
+    "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.start.vanilla_tip",
+    "$rainbowpie_localui_button_desc_text_offset": [ -10, -10 ],
+    "$rainbowpie_localui_button_desc_text_anchor": "top_right",
+    "ignored": "(not $rainbowpie_ui_flag_282dd0a5)",
+    "$unchecked_control": "rainbowpie_ui_toggle.toggle_button_unchecked",
+    "$checked_control": "rainbowpie_ui_toggle.toggle_button_checked",
+    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_button_unchecked_hover",
+    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_button_checked_hover",
+    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_button_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_button_unchecked_locked_hover",
+    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_button_checked_locked",
+    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_button_checked_locked_hover",
+
+    "$button_text_binding_type": "none",
+    "$button_binding_condition": "none",
+    "$button_text_grid_collection_name": "none",
+    "$button_text": "rainbowpie.ui.start.vanilla",
+
+    "$button_offset": [ 0, 0 ],
+
+    "$radio_toggle_group": true,
+    "$toggle_name": "rainbowpie_startui_toggle",
+    "$toggle_group_default_selected": 903,
+
+    "$toggle_group_forced_index": 900,
+
+    "$toggle_view_binding_name": "vanilla_startui",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "vanilla_startui",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#enabled",
+        "ignored": "(not $rainbowpie_ui_flag_282dd0a5)"
+      }
+    ]
+  },
+
+  "startui_button@rainbowpieui_start.vanilla_button": {
+    "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.start.startui_tip",
+    "$button_text": "rainbowpie.ui.start.startui",
+    "$toggle_group_forced_index": 901,
+    "$toggle_view_binding_name": "rainbowpie_startui",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "rainbowpie_startui",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#enabled",
+        "ignored": "(not $rainbowpie_ui_flag_282dd0a5)"
+      }
+    ]
+  },
 
   "music_button@rainbowpie_ui_music_player.music_player_button_toggle_base": {
     "$toggle_group_forced_index": 1000,
@@ -2338,7 +2662,7 @@
     "bindings": [
       {
         "binding_type": "view",
-        "source_control_name": "open_music_player",
+        "source_control_name": "$toggle_view_binding_name",
         "source_property_name": "(not #toggle_state)",
         "target_property_name": "#enabled",
         "ignored": "(not $rainbowpie_ui_feature_musicplayer)"

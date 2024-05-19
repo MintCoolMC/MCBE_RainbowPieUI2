@@ -1,6 +1,25 @@
 {
   "namespace": "toast_screen",
 
+  "toast_screen_content": {
+    "factory": {
+      "name": "toast_factory",
+      "control_ids": {
+        "popup": "popup@toast_screen.popup",
+        "chat_popup": "chat_popup@toast_screen.chat_popup",
+        "recipe_unlocked": "recipe_unlocked@toast_screen.recipe_unlocked_popup",
+        "recipe_unlocked_pocket": "recipe_unlocked_pocket@toast_screen.recipe_unlocked_pocket_popup",
+        "splitscreen_join_popup": "splitscreen_join_popup@toast_screen.splitscreen_join_popup",
+        "formfitting_alpha_toast": "toast_screen.formfitting_alpha_toast",
+        "snackbar": "snackbar@toast_screen.snackbar"
+      },
+      "factory_variables": [
+        "$rainbowpie_ui_theme_global_font_name",
+        "$rainbowpie_ui_theme_global_font_backup_name"
+      ]
+    }
+  },
+
   "text_stack_panel": {
     "offset": [ -3, 3 ],
     "controls": [

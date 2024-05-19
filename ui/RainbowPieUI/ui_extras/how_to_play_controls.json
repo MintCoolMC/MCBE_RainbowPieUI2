@@ -17,6 +17,7 @@
       },
       {
         "blur_layer@mintui_background.background_blur": {
+          "ignored": "$rainbowpie_ui_flag_3e35fb2e",
           "$background_offset": [ "-68%", 20 ],
           "$background_children_offset": [ "68%", -20 ],
           "$background_layer": -3
@@ -24,9 +25,17 @@
       },
       {
         "mask_layer@mintui_background.background_mask": {
+          "ignored": "$rainbowpie_ui_flag_3e35fb2e",
           "$background_offset": [ "-68%", 20 ],
           "$background_children_offset": [ "68%", -20 ],
           "$background_layer": -3
+        }
+      },
+      {
+        "background_blur@mintui_background.background_blur_fullscreen": {
+          "ignored": "((not $is_pregame) or (not $rainbowpie_ui_flag_3e35fb2e))",
+          "$background_mask": false,
+          "layer": -3
         }
       },
       {
@@ -55,7 +64,15 @@
                       "anchor_from": "bottom_right",
                       "anchor_to": "bottom_right",
                       "size": [ "68%", "100%" ],
-                      "layer": 1
+                      "layer": 1,
+                      "alpha": "$rainbowpie_localui_this_alpha",
+                      "$rainbowpie_localui_this_alpha": "$rainbowpie_ui_theme_global_background_alpha",
+                      "variables": [
+                        {
+                          "requires": "$is_pregame",
+                          "$rainbowpie_localui_this_alpha": 0.5
+                        }
+                      ]
                     }
                   },
                   {

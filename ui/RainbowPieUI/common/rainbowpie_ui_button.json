@@ -45,6 +45,9 @@
     "$rainbowpie_localui_button_desc_enabled|default": false,
     "$rainbowpie_localui_button_desc_text|default": "HoverText",
     "$rainbowpie_localui_button_desc_text_bindings|default": [],
+    "$rainbowpie_localui_button_desc_text_size|default": [ "100%c + 8px", "100%c + 5px" ],
+    "$rainbowpie_localui_button_desc_text_offset|default": [ 10, -10 ],
+    "$rainbowpie_localui_button_desc_text_anchor|default": "top_left",
     "$rainbowpie_localui_button_hover_border_layer|default": 50,
 
     "controls": [
@@ -330,9 +333,9 @@
       {
         "custom_hover_text": {
           "type": "button",
-          "enabled": "(not $touch)",
+          "enabled": "(not ($touch or $game_pad))",
           "allow_clipping": false,
-          "follows_cursor": "(not $touch)",
+          "follows_cursor": "(not ($touch or $game_pad))",
           "consume_event": false,
           "consume_hover_events": false,
           "focus_enabled": false,
@@ -342,7 +345,7 @@
           "$locked_control": "",
           "variables": [
             {
-              "requires": "$touch",
+              "requires": "($touch or $game_pad)",
               "$hover_control": "",
               "$locked_control": "hover_text"
             }
@@ -357,19 +360,45 @@
                     "hover_text_background": {
                       "type": "image",
                       "texture": "($rainbowpie_ui_path_home + '/r_white')",
-                      "size": [ "100%c + 8px", "100%c + 5px" ],
-                      "offset": [ 10, -10 ],
-                      "anchor_from": "top_left",
-                      "anchor_to": "top_left",
+                      "size": "$rainbowpie_localui_button_desc_text_size",
+                      "offset": "$rainbowpie_localui_button_desc_text_offset",
+                      "anchor_from": "$rainbowpie_localui_button_desc_text_anchor",
+                      "anchor_to": "$rainbowpie_localui_button_desc_text_anchor",
+                      // "clips_children": true, // Why "clips_children" doesn't work here
                       "layer": 200,
                       "color": "$rainbowpie_ui_theme_hovertext_background_color",
                       "alpha": "$rainbowpie_ui_theme_hovertext_background_alpha",
                       "controls": [
                         {
+                          "background_icon": {
+                            "type": "panel",
+                            "size": [ 0, 0 ],
+                            "anchor_to": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                            "anchor_from": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                            "ignored": "(not $rainbowpie_ui_theme_hovertext_bgicon_enabled)",
+                            "controls": [
+                              {
+                                "icon_image": {
+                                  "type": "image",
+                                  "size": "$rainbowpie_ui_theme_hovertext_bgicon_size",
+                                  "anchor_to": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                                  "anchor_from": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                                  "offset": "$rainbowpie_ui_theme_hovertext_bgicon_offset",
+                                  "texture": "$rainbowpie_ui_theme_hovertext_bgicon_texture",
+                                  "alpha": "$rainbowpie_ui_theme_hovertext_bgicon_alpha",
+                                  "fill": "$rainbowpie_ui_theme_hovertext_bgicon_fill",
+                                  "layer": 3
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
                           "hover_text_controls": {
                             "type": "stack_panel",
                             "orientation": "vertical",
                             "size": [ "100%cm", "100%c" ],
+                            "layer": 8,
                             "controls": [
                               {
                                 "hover_text_label@rainbowpie_ui_common.text_label_notheme": {

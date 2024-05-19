@@ -1,6 +1,29 @@
 {
   "namespace": "common",
 
+  "static_tooltip_popup_with_image_and_text/image_and_text_stack_panel/tooltip_text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
+  "static_tooltip_popup_with_image_and_text/tooltip_chevron": {
+    "ignored": true
+  },
+
+  "tooltip_background": {
+    "texture": "($rainbowpie_ui_path_home + '/r_white')",
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha"
+  },
+
+  "base_screen/variables_button_mappings_and_controls/factory_panel/error_dialog_factory": {
+    "factory_variables": [
+      "$rainbowpie_ui_theme_global_font_name",
+      "$rainbowpie_ui_theme_global_font_backup_name"
+    ]
+  },
+
   "selected_item_details_factory": {
     "ignored": true
   },
@@ -182,11 +205,11 @@
               "type": "button",
               "ignored": "(not $rainbowpie_ui_flag_86c54726)",
               "visible": false,
-              "enabled": "(not $touch)",
+              "enabled": "(not ($touch or $game_pad))",
               "size": [ 18, 18 ],
               "always_handle_pointer": true,
               "allow_clipping": false,
-              "follows_cursor": "(not $touch)",
+              "follows_cursor": "(not ($touch or $game_pad))",
               "consume_event": false,
               "consume_hover_events": false,
               "focus_enabled": false,
@@ -196,7 +219,7 @@
               "$locked_control": "",
               "variables": [
                 {
-                  "requires": "$touch",
+                  "requires": "($touch or $game_pad)",
                   "$hover_control": "",
                   "$locked_control": "hover_text"
                 }
@@ -211,6 +234,7 @@
                     "$offset": [ 20, 0 ],
                     "anchor_from": "top_left",
                     "anchor_to": "top_left",
+                    // "clips_children": true, // Why "clips_children" doesn't work here
                     "layer": 200,
                     "color": "$rainbowpie_ui_theme_hovertext_background_color",
                     "alpha": "$rainbowpie_ui_theme_hovertext_background_alpha",
@@ -221,10 +245,35 @@
                     ],
                     "controls": [
                       {
+                        "background_icon": {
+                          "type": "panel",
+                          "size": [ 0, 0 ],
+                          "anchor_to": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                          "anchor_from": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                          "ignored": "(not $rainbowpie_ui_theme_hovertext_bgicon_enabled)",
+                          "controls": [
+                            {
+                              "icon_image": {
+                                "type": "image",
+                                "size": "$rainbowpie_ui_theme_hovertext_bgicon_size",
+                                "anchor_to": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                                "anchor_from": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                                "offset": "$rainbowpie_ui_theme_hovertext_bgicon_offset",
+                                "texture": "$rainbowpie_ui_theme_hovertext_bgicon_texture",
+                                "alpha": "$rainbowpie_ui_theme_hovertext_bgicon_alpha",
+                                "fill": "$rainbowpie_ui_theme_hovertext_bgicon_fill",
+                                "layer": 3
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
                         "hover_text_controls": {
                           "type": "stack_panel",
                           "orientation": "vertical",
                           "size": [ "100%cm", "100%c" ],
+                          "layer": 8,
                           "controls": [
                             {
                               "item_preview": {
@@ -1111,7 +1160,11 @@
   },
 
   "screen_panel/popup_dialog_factory": {
-    "ignored": "$rainbowpie_localui_screenroot_ignore_dialogs"
+    "ignored": "$rainbowpie_localui_screenroot_ignore_dialogs",
+    "factory_variables": [
+      "$rainbowpie_ui_theme_global_font_name",
+      "$rainbowpie_ui_theme_global_font_backup_name"
+    ]
   },
 
   "base_screen/variables_button_mappings_and_controls/bg_no_safezone_screen_panel": {
@@ -1253,6 +1306,32 @@
                     "layer": -1,
                     "controls": [
                       {
+                        "gradient_top": {
+                          "type": "custom",
+                          "renderer": "gradient_renderer",
+                          "ignored": "(not $rainbowpie_ui_flag_ingamebackground_gradient)",
+                          "size": [ "100%", 30 ],
+                          "anchor_from": "top_middle",
+                          "anchor_to": "top_middle",
+                          "color1": [ 0.0, 0.0, 0.0, 0.5 ],
+                          "color2": [ 0.0, 0.0, 0.0, 0.0 ],
+                          "layer": 2
+                        }
+                      },
+                      {
+                        "design02_gradient_bottom": {
+                          "type": "custom",
+                          "renderer": "gradient_renderer",
+                          "ignored": "(not $rainbowpie_ui_flag_ingamebackground_gradient)",
+                          "size": [ "100%", 30 ],
+                          "anchor_from": "bottom_middle",
+                          "anchor_to": "bottom_middle",
+                          "color1": [ 0.0, 0.0, 0.0, 0.0 ],
+                          "color2": [ 0.0, 0.0, 0.0, 0.5 ],
+                          "layer": 2
+                        }
+                      },
+                      {
                         "background@rainbowpie_ui_common.global_background": {
                           "size": [ "100%", "100%" ]
                         }
@@ -1270,6 +1349,32 @@
                     "disable_anim_fast_forward": true,
                     "layer": -1,
                     "controls": [
+                      {
+                        "gradient_top": {
+                          "type": "custom",
+                          "renderer": "gradient_renderer",
+                          "ignored": "(not $rainbowpie_ui_flag_inventorybackground_gradient)",
+                          "size": [ "100%", 30 ],
+                          "anchor_from": "top_middle",
+                          "anchor_to": "top_middle",
+                          "color1": [ 0.0, 0.0, 0.0, 0.5 ],
+                          "color2": [ 0.0, 0.0, 0.0, 0.0 ],
+                          "layer": 2
+                        }
+                      },
+                      {
+                        "design02_gradient_bottom": {
+                          "type": "custom",
+                          "renderer": "gradient_renderer",
+                          "ignored": "(not $rainbowpie_ui_flag_inventorybackground_gradient)",
+                          "size": [ "100%", 30 ],
+                          "anchor_from": "bottom_middle",
+                          "anchor_to": "bottom_middle",
+                          "color1": [ 0.0, 0.0, 0.0, 0.0 ],
+                          "color2": [ 0.0, 0.0, 0.0, 0.5 ],
+                          "layer": 2
+                        }
+                      },
                       {
                         "inventory_background@rainbowpie_ui_common.inventory_global_background": {
                           "size": [ "100%", "100%" ]
@@ -1612,8 +1717,7 @@
             "$rainbowpie_ui_feature_background_blur": false
           },
           {
-            "requires": "$touch",
-            // "$rainbowpie_ui_flag_8dcce82d": false,
+            "requires": "(($is_android or $is_ios) and $rainbowpie_ui_flag_86c54726)",
             "$rainbowpie_ui_flag_86c54726": false
           },
           // Force use Rainbow Pie UI style server_form
@@ -1644,6 +1748,16 @@
           {
             "requires": "($screen_content = 'rainbowpieui_settings_common.settings_content')",
             "$export_template_disabled": false
+          },
+          // Zeqa Network
+          {
+            "requires": "($is_zeqa)",
+            "$rainbowpie_ui_flag_56cd0456": true, // PauseUI Back To Vanilla Button
+            "$rainbowpie_ui_flag_scoreboard_default_font": true,
+            "$rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled": false,
+            "$rainbowpie_ui_module_chest_fastpick": false,
+            "$rainbowpie_ui_flag_chatui_default_font": true,
+            "$rainbowpie_ui_flag_hudtitle_default_font": true
           }
         ]
       }

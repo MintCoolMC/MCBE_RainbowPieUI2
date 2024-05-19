@@ -25,7 +25,15 @@
                 "anchor_to": "top_left",
                 "size": [ "168px", "100% - 20px" ],
                 "offset": [ 0, 20 ],
-                "layer": 1
+                "layer": 1,
+                "alpha": "$rainbowpie_localui_this_alpha",
+                "$rainbowpie_localui_this_alpha": "$rainbowpie_ui_theme_global_background_alpha",
+                "variables": [
+                  {
+                    "requires": "$is_pregame",
+                    "$rainbowpie_localui_this_alpha": 0.5
+                  }
+                ]
               }
             },
             {

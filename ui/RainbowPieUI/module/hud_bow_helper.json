@@ -320,12 +320,42 @@
                       "size": [ "100%c", 12 ],
                       "controls": [
                         {
+                          "no_arrows_text_panel": {
+                            "type": "panel",
+                            "size": [ "100%c", "100%" ],
+                            "controls": [
+                              {
+                                "count_text@rainbowpie_ui_common.text_label": {
+                                  "text": "No arrows",
+                                  "color": [ 1.0, 0.333, 0.333 ]
+                                }
+                              }
+                            ],
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "arrow_count",
+                                "source_property_name": "(#inventory_target_item_total_count_int = 0)",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
                           "count_title_panel": {
                             "type": "panel",
                             "size": [ "100%c", 12 ],
                             "controls": [
                               {
                                 "arrow_panel@rainbowpie_module_hud_bow_helper.arrow_slot_panel": {}
+                              }
+                            ],
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "arrow_count",
+                                "source_property_name": "(not (#inventory_target_item_total_count_int = 0))",
+                                "target_property_name": "#visible"
                               }
                             ]
                           }
@@ -348,6 +378,14 @@
                                     }
                                   ]
                                 }
+                              }
+                            ],
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "arrow_count",
+                                "source_property_name": "(not (#inventory_target_item_total_count_int = 0))",
+                                "target_property_name": "#visible"
                               }
                             ]
                           }

@@ -1,6 +1,22 @@
 {
   "namespace": "chat",
 
+  "messages_stack_panel": {
+    "factory": {
+      "name": "messages_factory",
+      "max_children_size": 100,
+      "control_ids": {
+        "chat_screen_messages": "chat_screen_messages@chat.message_tts_wrapper"
+      },
+      "factory_variables": [
+        "$rainbowpie_ui_theme_global_font_name",
+        "$rainbowpie_ui_theme_global_font_backup_name",
+        "$rainbowpie_ui_flag_chat_use_ui_font",
+        "$rainbowpie_ui_flag_chatui_default_font"
+      ]
+    }
+  },
+
   "chat_screen_content/autocomplete_commands_panel": {
     "ignored": true
   },
@@ -83,7 +99,45 @@
 
   "messages_text": {
     "anims": ["@rainbowpieui_chat.chat_message_panel_size_animation"],
-    "clips_children": true
+    "clips_children": true,
+    "modifications": [
+      {
+        "array_name": "variables",
+        "operation": "insert_front",
+        "value": [
+          {
+            "requires": "$rainbowpie_ui_flag_chatui_default_font",
+            "$rainbowpie_ui_theme_global_font_name": "default",
+            "$rainbowpie_ui_theme_global_font_backup_name": "default"
+          }
+        ]
+      },
+      {
+        "array_name": "bindings",
+        "operation": "replace",
+        "where": {
+          "binding_name": "#chat_visible",
+          "binding_name_override": "#visible"
+        },
+        "value": {
+          "binding_name": "#chat_visible"
+        }
+      },
+      {
+        "array_name": "bindings",
+        "operation": "insert_back",
+        "value": [
+          {
+            "binding_name": "#host_main_visible"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#chat_visible and (not #host_main_visible))",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    ]
   },
 
   "messages_text/text": {
@@ -152,14 +206,7 @@
                     "size": [ "fill", "100%" ],
                     "controls": [
                       {
-                        "messages_panel@chat.messages_scrolling_panel": {
-                          "bindings": [
-                            {
-                              "binding_name": "(not #host_main_visible)",
-                              "binding_name_override": "#visible"
-                            }
-                          ]
-                        }
+                        "messages_panel@chat.messages_scrolling_panel": {}
                       },
                       { "autocomplete_commands_panel@chat.commands_panel": { "layer": 3 } }
                     ]

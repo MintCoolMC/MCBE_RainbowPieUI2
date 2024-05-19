@@ -240,7 +240,7 @@
                       "size": [ "100%c", "100%" ],
                       "controls": [
                         {
-                          "stack_panel": {
+                          "durability_stack_panel": {
                             "type": "stack_panel",
                             "orientation": "horizontal",
                             "size": [ "100%c", "100%cm" ],
@@ -248,7 +248,6 @@
                               {
                                 "durability_title@rainbowpie_ui_common.text_label": {
                                   "text": "rainbowpie.ui.inventory.durability",
-                                  "shadow": false,
                                   "ignored": "(not $rainbowpie_ui_flag_durabilityview_title)"
                                 }
                               },
@@ -262,7 +261,6 @@
                               {
                                 "durability_text@rainbowpie_ui_common.text_label": {
                                   "text": "#text",
-                                  "shadow": false,
                                   "bindings": [
                                     {
                                       "binding_name": "#item_durability_total_amount",
@@ -1063,7 +1061,13 @@
             "max_children_size": "$max_children_size",
             "control_ids": {
               "chat_item": "chat_item@rainbowpieui_hud.chat_grid_item"
-            }
+            },
+            "factory_variables": [
+              "$rainbowpie_ui_theme_global_font_name",
+              "$rainbowpie_ui_theme_global_font_backup_name",
+              "$rainbowpie_ui_flag_chat_use_ui_font",
+              "$rainbowpie_ui_flag_chatui_default_font"
+            ]
           },
           "$max_children_size": 50,
           "variables": [
@@ -1093,6 +1097,13 @@
       {
         "binding_name": "(not #on_new_death_screen)",
         "binding_name_override": "#visible"
+      }
+    ],
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_chatui_default_font",
+        "$rainbowpie_ui_theme_global_font_name": "default",
+        "$rainbowpie_ui_theme_global_font_backup_name": "default"
       }
     ],
     "controls": [

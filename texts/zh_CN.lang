@@ -17,6 +17,11 @@ rainbowpie.ui.themesystem.description.title=简介:	#
 rainbowpie.ui.themesystem.version_toolow=当前主题版本太低！请更新！	#
 rainbowpie.ui.themesystem.version_toohight=当前主题版本太高！	#
 
+rainbowpie.ui.start.vanilla_tip=遇到 Bug 了吗？如果你遇到了 Bug 请通过 Github 反馈给我们！
+rainbowpie.ui.start.startui_tip=回到 Rainbow Pie UI 样式的 StartUI
+rainbowpie.ui.start.vanilla=原版
+rainbowpie.ui.start.startui=StartUI
+
 rainbowpie.ui.trade2.tradeAll=交易全部
 
 rainbowpie.ui.inventory.actions.destroy_selection=销毁物品
@@ -82,6 +87,11 @@ rainbowpie.ui.pause.permissions.custom=自定义
 rainbowpie.ui.pause.permissions.member=成员
 rainbowpie.ui.pause.permissions.op=操作员
 rainbowpie.ui.pause.permissions.visitor=访客
+
+rainbowpie.ui.pause.vanilla_tip=切换到原版样式的 PauseUI
+rainbowpie.ui.pause.pauseui_tip=回到 Rainbow Pie UI 样式的 PauseUI
+rainbowpie.ui.pause.vanilla=原版
+rainbowpie.ui.pause.pauseui=PauseUI
 
 rainbowpie.ui.warning.text.error=检查到一个致命的错误，这可能影响到你正常使用。如果你没有使用其他资源包并且正在使用受支持的游戏版本，请把此错误报告到issues。
 rainbowpie.ui.warning.text.warning=检查到一个错误。如果你没有使用其他资源包并且正在使用受支持的游戏版本，请把此错误报告到issues。

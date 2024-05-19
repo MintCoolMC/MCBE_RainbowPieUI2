@@ -14,6 +14,32 @@
           "layer": 1,
           "controls": [
             {
+              "gradient_top": {
+                "type": "custom",
+                "renderer": "gradient_renderer",
+                "ignored": "(not $rainbowpie_ui_flag_screenbackground_gradient)",
+                "size": [ "100%", 30 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color1": [ 0.0, 0.0, 0.0, 0.5 ],
+                "color2": [ 0.0, 0.0, 0.0, 0.0 ],
+                "layer": 2
+              }
+            },
+            {
+              "design02_gradient_bottom": {
+                "type": "custom",
+                "renderer": "gradient_renderer",
+                "ignored": "(not $rainbowpie_ui_flag_screenbackground_gradient)",
+                "size": [ "100%", 30 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "color1": [ 0.0, 0.0, 0.0, 0.0 ],
+                "color2": [ 0.0, 0.0, 0.0, 0.5 ],
+                "layer": 2
+              }
+            },
+            {
               "image_background": {
                 "type": "image",
                 "fill": true,
@@ -51,6 +77,32 @@
           "size": [ "100%", "100%" ],
           "layer": 1,
           "controls": [
+            {
+              "gradient_top": {
+                "type": "custom",
+                "renderer": "gradient_renderer",
+                "ignored": "(not $rainbowpie_ui_flag_screenbackground_gradient)",
+                "size": [ "100%", 30 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color1": [ 0.0, 0.0, 0.0, 0.5 ],
+                "color2": [ 0.0, 0.0, 0.0, 0.0 ],
+                "layer": 2
+              }
+            },
+            {
+              "design02_gradient_bottom": {
+                "type": "custom",
+                "renderer": "gradient_renderer",
+                "ignored": "(not $rainbowpie_ui_flag_screenbackground_gradient)",
+                "size": [ "100%", 30 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "color1": [ 0.0, 0.0, 0.0, 0.0 ],
+                "color2": [ 0.0, 0.0, 0.0, 0.5 ],
+                "layer": 2
+              }
+            },
             {
               "image_background": {
                 "type": "image",
@@ -134,6 +186,32 @@
                 "anims": "$background_children_anims",
                 "controls": [
                   {
+                    "gradient_top": {
+                      "type": "custom",
+                      "renderer": "gradient_renderer",
+                      "ignored": "(not $rainbowpie_ui_flag_screenbackground_gradient)",
+                      "size": [ "100%", 30 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "color1": [ 0.0, 0.0, 0.0, 0.5 ],
+                      "color2": [ 0.0, 0.0, 0.0, 0.0 ],
+                      "layer": 2
+                    }
+                  },
+                  {
+                    "design02_gradient_bottom": {
+                      "type": "custom",
+                      "renderer": "gradient_renderer",
+                      "ignored": "(not $rainbowpie_ui_flag_screenbackground_gradient)",
+                      "size": [ "100%", 30 ],
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "color1": [ 0.0, 0.0, 0.0, 0.0 ],
+                      "color2": [ 0.0, 0.0, 0.0, 0.5 ],
+                      "layer": 2
+                    }
+                  },
+                  {
                     "image_background": {
                       "type": "image",
                       "fill": true,
@@ -212,6 +290,32 @@
                 "animation_reset_name": "$background_children_anim_reset",
                 "anims": "$background_children_anims",
                 "controls": [
+                  {
+                    "gradient_top": {
+                      "type": "custom",
+                      "renderer": "gradient_renderer",
+                      "ignored": "(not $rainbowpie_ui_flag_screenbackground_gradient)",
+                      "size": [ "100%", 30 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "color1": [ 0.0, 0.0, 0.0, 0.5 ],
+                      "color2": [ 0.0, 0.0, 0.0, 0.0 ],
+                      "layer": 2
+                    }
+                  },
+                  {
+                    "design02_gradient_bottom": {
+                      "type": "custom",
+                      "renderer": "gradient_renderer",
+                      "ignored": "(not $rainbowpie_ui_flag_screenbackground_gradient)",
+                      "size": [ "100%", 30 ],
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "color1": [ 0.0, 0.0, 0.0, 0.0 ],
+                      "color2": [ 0.0, 0.0, 0.0, 0.5 ],
+                      "layer": 2
+                    }
+                  },
                   {
                     "image_background": {
                       "type": "image",

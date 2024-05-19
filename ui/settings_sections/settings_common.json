@@ -1,6 +1,12 @@
 {
   "namespace": "settings_common",
 
+  "white_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
   "option_text_edit_control_with_text_button/button": {
     "$button_image_size": [ "100%", "100% - 2px" ],
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"

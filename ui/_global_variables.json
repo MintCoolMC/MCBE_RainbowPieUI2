@@ -5,13 +5,14 @@
   "$rainbowpieui_branch_name": "master",
   "$rainbowpieui_branch_display_name": "Release",
 
-  "$rainbowpieui_engine_version": "24",
-  "$rainbowpieui_patch_version": "10116",
+  "$rainbowpieui_engine_version": "25",
+  "$rainbowpieui_patch_version": "10123",
   "$rainbowpieui_hotfix_version": "1",
-  "$rainbowpieui_engine_version_name": "2.4",
-  "$rainbowpieui_full_version_name": "2.4.10116.master",
+  "$rainbowpieui_engine_version_name": "2.5",
+  "$rainbowpieui_full_version_name": "2.5.10123.master",
   "$rainbowpieui_codename": "pancake",
   "$rainbowpieui_watermark": true,
+  "$rainbowpieui_bool": true,
 
   "$rainbowpieui_version_minecraft_target": "v1.20.80",
   "$rainbowpieui_version_minecraft_bigver": "v1.20",
@@ -27,7 +28,7 @@
   "$mintui_pack_name": "Rainbow Pie UI",
   "$mintui_pack_description": "Minecraft UI Pack\n§ehttps://mintraspberry.cool/rainbowpieui",
   "$mintui_pack_uuid": "82d610e8-0968-4c0a-a47e-38e6663ee6ff",
-  "$mintui_pack_version": "2.4.10116",
+  "$mintui_pack_version": "2.5.10123",
 
   "$rainbowpie_ui_verify_enabled": false,
   "$rainbowpie_ui_verify_mode": "default", // blacklist|whitelist|[default]
@@ -98,7 +99,18 @@
   "$rainbowpie_ui_flag_start_dialog_alert_text": "",
   "$rainbowpie_ui_flag_start_dialog_alert_button": "gui.ok",
 
+  "$rainbowpie_ui_flag_start_design02_gradient": false,
+
   "$rainbowpie_ui_flag_durabilityview_title": true,
+
+  "$rainbowpie_ui_flag_screenbackground_gradient": true,
+  "$rainbowpie_ui_flag_ingamebackground_gradient": true,
+  "$rainbowpie_ui_flag_inventorybackground_gradient": true,
+
+  "$rainbowpie_ui_flag_scoreboard_default_font": false,
+  "$rainbowpie_ui_flag_chatui_default_font": false,
+  "$rainbowpie_ui_flag_hudtitle_default_font": false,
+  "$rainbowpie_ui_flag_huditemname_default_font": false,
   
   // Unnamed Flags
   "$rainbowpie_ui_flag_71042f58": false, // Disable background on selector
@@ -135,6 +147,10 @@
   "$rainbowpie_ui_flag_135972c6": true, // UI Error Check
   "$rainbowpie_ui_flag_82d2c0e7": true, // Background Information
   "$rainbowpie_ui_flag_1c167cde": false, // Start V2 Topbar
+  "$rainbowpie_ui_flag_282dd0a5": true, // StartUI Back To Vanilla Button
+  "$rainbowpie_ui_flag_56cd0456": true, // PauseUI Back To Vanilla Button
+  "$rainbowpie_ui_flag_3e35fb2e": true,
+  "$rainbowpie_ui_flag_3520da91": true, // EASTER EGGS
 
   // Debug
   "$rainbowpie_ui_debug": false,
@@ -188,7 +204,7 @@
   "$rainbowpie_ui_moduleflag_inventory_actions_quick_craft_enabled": true,
 
   // Theme System //
-  "$rainbowpie_ui_themesystem_version": "1092",
+  "$rainbowpie_ui_themesystem_version": "1093",
 
   // Theme Info //
   "$rainbowpie_ui_theme_icon": "textures/MintUI/pack_icon",
@@ -198,7 +214,7 @@
   "$rainbowpie_ui_theme_description": "rainbowpie.ui.theme.default_description",
   "$rainbowpie_ui_theme_background_name": "Bridge (Rainy Day)",
   "$rainbowpie_ui_theme_background_description": "Java edition\nComplementaryUnbound_r5.1.1",
-  "$rainbowpie_ui_theme_version": "1092",
+  "$rainbowpie_ui_theme_version": "1093",
 
   // Theme Background //
   "$rainbowpie_ui_theme_background_mask_texture_ingame": "textures/MintUI/background/background_mask",
@@ -221,6 +237,14 @@
   "$rainbowpie_ui_theme_hovertext_background_color": [ 0.011, 0.011, 0.011 ],
   "$rainbowpie_ui_theme_hovertext_background_alpha": 0.8,
   "$rainbowpie_ui_theme_hovertext_text_color": [ 1.0, 1.0, 1.0 ],
+
+  "$rainbowpie_ui_theme_hovertext_bgicon_enabled": false,
+  "$rainbowpie_ui_theme_hovertext_bgicon_texture": "textures/items/apple",
+  "$rainbowpie_ui_theme_hovertext_bgicon_anchor": "bottom_right",
+  "$rainbowpie_ui_theme_hovertext_bgicon_size": [ 14, "100%x" ],
+  "$rainbowpie_ui_theme_hovertext_bgicon_offset": [ -4, 0 ],
+  "$rainbowpie_ui_theme_hovertext_bgicon_alpha": 0.4,
+  "$rainbowpie_ui_theme_hovertext_bgicon_fill": false,
 
   // Theme HUD Item Name Variables //
   "$rainbowpie_ui_theme_hud_itemname_background_color": [ 0.011, 0.011, 0.011 ],
@@ -279,7 +303,7 @@
 
   // Theme Background and Text Variables //
   "$rainbowpie_ui_theme_text_background_color": [ 0.011, 0.011, 0.011 ],
-  "$rainbowpie_ui_theme_text_background_alpha": 0.3,
+  "$rainbowpie_ui_theme_text_background_alpha": 0.4,
   "$rainbowpie_ui_theme_text_text_color": [ 1.0, 1.0, 1.0 ],
 
   // Theme Background and Title Variables //
@@ -576,9 +600,12 @@
   "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_size": [ "42%", "100%x" ],
   "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_offset": [ 0, "-8.503401360544218%y" ],
   "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_alpha": 0.8,
-  "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_fill": false
+  "$rainbowpie_ui_theme_inventory_bgicon_smithingtable2_fill": false,
 
   // Theme End
 
+  // Compatibility for servers or other resource packs
+  // The variables here will be overwritten when the server loads the resource package.
+  "$is_zeqa": false // Zeqa Network (Server)
 }
 

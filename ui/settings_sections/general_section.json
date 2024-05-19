@@ -1,6 +1,50 @@
 {
   "namespace": "general_section",
 
+  "video_section/render_distance_warning_text": {
+    "property_bag": {
+      "#is_96_distance": false,
+      "#is_96plus_distance": false
+    },
+    "bindings": [
+      {
+        "binding_name": "#render_distance_warning_visible"
+      },
+      {
+        "binding_name": "#render_distance_slider_label"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#render_distance_slider_label - '96 ') = #render_distance_slider_label))",
+        "target_property_name": "#is_96_distance",
+        "ignored": "(not $rainbowpie_ui_flag_3520da91)"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#render_distance_slider_label - '96+ ') = #render_distance_slider_label))",
+        "target_property_name": "#is_96plus_distance",
+        "ignored": "(not $rainbowpie_ui_flag_3520da91)"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#render_distance_warning_visible and not (#is_96_distance or #is_96plus_distance))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "video_section/render_distance_slider": {
+  },
+
+  "debugger_toggles_panel/primary_panel/all_options_panel/attach_mode_option": {
+  },
+
+  "debugger_toggles_panel/primary_panel/heading": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
   "general_tab_section/auto_update_mode_dropdown": {
     "$rainbowpie_localui_dropdown_enabled": true,
     "$rainbowpie_localui_dropdown_content": [
@@ -60,6 +104,53 @@
                     "$toggle_state_binding_name": "#vsync_adaptive",
                     "$radio_label_text": "options.vsync.adaptive"
                   }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "control_name": "render_distance_warning_text",
+        "operation": "insert_after",
+        "value": [
+          {
+            "render_distance_easter_egg": {
+              "ignored": "(not $rainbowpie_ui_flag_3520da91)",
+              "type": "panel",
+              "size": [ "100%", "100%cm + 16px" ],
+              "controls": [
+                {
+                  "render_distance_popup@common.static_tooltip_popup_with_image_and_text": {
+                    "size": [ "100% - 4px", "100%cm + 8px" ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "$tooltip_panel_offset": [ 0, 6 ],
+                    "$tooltip_popup_image": "textures/ui/WarningGlyph",
+                    "$tooltip_button_binding_type": "global",
+                    "$tooltip_button_collection_name": "",
+                    "$tooltip_text_binding_name": "Now you can use your CPU to fry eggs! :D"
+                  }
+                }
+              ],
+              "bindings": [
+                {
+                  "binding_name": "#render_distance_slider_label"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(not ((#render_distance_slider_label - '96 ') = #render_distance_slider_label))",
+                  "target_property_name": "#is_96_distance"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(not ((#render_distance_slider_label - '96+ ') = #render_distance_slider_label))",
+                  "target_property_name": "#is_96plus_distance"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(#is_96_distance or #is_96plus_distance)",
+                  "target_property_name": "#visible"
                 }
               ]
             }

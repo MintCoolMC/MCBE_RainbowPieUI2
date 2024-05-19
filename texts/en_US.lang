@@ -17,6 +17,11 @@ rainbowpie.ui.themesystem.description.title=Description:
 rainbowpie.ui.themesystem.version_toolow=This theme version is too low! please update!
 rainbowpie.ui.themesystem.version_toohight=This theme version is too hight!
 
+rainbowpie.ui.start.vanilla_tip=Have you encountered a BUG? If you encounter a bug, please report it to us via Github
+rainbowpie.ui.start.startui_tip=Back to Rainbow Pie UI style StartUI
+rainbowpie.ui.start.vanilla=Vanilla
+rainbowpie.ui.start.startui=StartUI
+
 rainbowpie.ui.trade2.tradeAll=Trade All
 
 rainbowpie.ui.inventory.actions.destroy_selection=Destroy
@@ -82,6 +87,11 @@ rainbowpie.ui.pause.permissions.custom=Custom
 rainbowpie.ui.pause.permissions.member=Member
 rainbowpie.ui.pause.permissions.op=Operator
 rainbowpie.ui.pause.permissions.visitor=Visitor
+
+rainbowpie.ui.pause.vanilla_tip=Switch to Vanilla style PauseUI
+rainbowpie.ui.pause.pauseui_tip=Back to Rainbow Pie UI style PauseUI
+rainbowpie.ui.pause.vanilla=Vanilla
+rainbowpie.ui.pause.pauseui=PauseUI
 
 rainbowpie.ui.warning.text.error=A serious error has been detected, which may affect your normal use. If you are not using any other resource packs and are using a supported game version, please report this error to issues.
 rainbowpie.ui.warning.text.warning=An error has been detected. If you are not using any other resource packs and are using a supported game version, please report this error to issues.

@@ -1,6 +1,12 @@
 {
   "namespace": "content_log_history",
 
+  "content_log_message": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
   "clipboard_icon_wrapper/stack_panel/label_panel/label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
@@ -26,7 +32,15 @@
   "messages_stack_panel": {
     "$scrolling_content_anchor_from": "bottom_right",
     "$scrolling_content_anchor_to": "bottom_right",
-    "size": [ "100% - 4px", "default" ]
+    "size": [ "100% - 4px", "default" ],
+    "factory": {
+      "name": "messages_factory",
+      "control_name": "content_log_message@content_log_history.content_log_message_panel",
+      "factory_variables": [
+        "$rainbowpie_ui_theme_global_font_name",
+        "$rainbowpie_ui_theme_global_font_backup_name"
+      ]
+    }
   },
 
   "content_log_history_screen": {

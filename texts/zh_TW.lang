@@ -17,6 +17,11 @@ rainbowpie.ui.themesystem.description.title=介紹:	#
 rainbowpie.ui.themesystem.version_toolow=當前外觀包版本太低！	#
 rainbowpie.ui.themesystem.version_toohight=當前外觀包版本太高！	#
 
+rainbowpie.ui.start.vanilla_tip=遇到 Bug 了嗎？如果你遇到了 Bug 請通過 Github 反饋給我們！
+rainbowpie.ui.start.startui_tip=回到 Rainbow Pie UI 樣式的 StartUI
+rainbowpie.ui.start.vanilla=原版
+rainbowpie.ui.start.startui=StartUI
+
 rainbowpie.ui.trade2.tradeAll=交易全部
 
 rainbowpie.ui.inventory.actions.destroy_selection=銷毀物品
@@ -82,6 +87,11 @@ rainbowpie.ui.pause.permissions.custom=自訂
 rainbowpie.ui.pause.permissions.member=成員
 rainbowpie.ui.pause.permissions.op=操作者
 rainbowpie.ui.pause.permissions.visitor=訪客
+
+rainbowpie.ui.pause.vanilla_tip=切換到原版樣式的 PauseUI
+rainbowpie.ui.pause.pauseui_tip=回到 Rainbow Pie UI 樣式的 PauseUI
+rainbowpie.ui.pause.vanilla=原版
+rainbowpie.ui.pause.pauseui=PauseUI
 
 rainbowpie.ui.warning.text.error=檢查到一個嚴重的錯誤，這可能會影響到你正常使用。如果你沒有使用其他資源套件并且正在使用受支持的游戲版本，請把此錯誤報告到issues。
 rainbowpie.ui.warning.text.warning=檢查到一個錯誤。如果你沒有使用其他資源套件并且正在使用受支持的游戲版本，請把此錯誤報告到issues。
