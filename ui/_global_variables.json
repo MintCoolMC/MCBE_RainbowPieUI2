@@ -301,7 +301,7 @@
 
   // Theme Background and Text Variables //
   "$rainbowpie_ui_theme_text_background_color": [ 0.011, 0.011, 0.011 ],
-  "$rainbowpie_ui_theme_text_background_alpha": 0.3,
+  "$rainbowpie_ui_theme_text_background_alpha": 0.4,
   "$rainbowpie_ui_theme_text_text_color": [ 1.0, 1.0, 1.0 ],
 
   // Theme Background and Title Variables //
