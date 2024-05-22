@@ -56,6 +56,7 @@
   "$rainbowpie_ui_animation_chat_transition_time": 0.35,
 
   // Flags
+  "$rainbowpie_ui_flag_server_identifier": "",
   "$rainbowpie_ui_flag_bg_mask_ingame": true, // 在游戏内是否显示mask
   "$rainbowpie_ui_flag_bg_mask": true, // 在游戏外是否显示mask
   "$rainbowpie_ui_flag_overlay_screen": "toast_screen.toast_screen_content,debug_screen.content_panel,hud.hud_content,rainbowpie_ui_common.screen_background", // 覆盖界面
@@ -606,6 +607,7 @@
 
   // Compatibility for servers or other resource packs
   // The variables here will be overwritten when the server loads the resource package.
-  "$is_zeqa": false // Zeqa Network (Server)
+  "$is_zeqa": false, // Zeqa Network (Server)
+  "$cubecraft_green": "string" // CubeCraft
 }
 
