@@ -43,6 +43,7 @@
 
   "result_item_preview": {
     "type": "panel",
+    // Base Size: 18x18
     "controls": [
       {
         "turn_front@common_buttons.light_content_button": {
@@ -51,8 +52,8 @@
           "$button_content": "rainbowpieui_smithing_table_2.turn_front_icon",
           "anchor_to": "bottom_middle",
           "anchor_from": "bottom_middle",
-          "size": [ 12, 12 ],
-          "offset": [ -14, 2 ]
+          "size": [ "66.66666666666667%", "100%x" ], // 12x12
+          "offset": [ "-116.6666666666667%x", "16.66666666666667%y" ] //-14x2
         }
       },
       {
@@ -62,8 +63,8 @@
           "$button_content": "rainbowpieui_smithing_table_2.turn_back_icon",
           "anchor_to": "bottom_middle",
           "anchor_from": "bottom_middle",
-          "size": [ 12, 12 ],
-          "offset": [ 18, 2 ]
+          "size": [ "66.66666666666667%", "100%x" ], // 12x12
+          "offset": [ "150%y", "16.66666666666667%y" ]
         }
       },
       {
