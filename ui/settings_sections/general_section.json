@@ -127,7 +127,7 @@
                     "anchor_to": "top_middle",
                     "$tooltip_panel_offset": [ 0, 6 ],
                     "$tooltip_popup_image": "textures/ui/WarningGlyph",
-                    "$tooltip_button_binding_type": "global",
+                    "$tooltip_button_binding_type": "none",
                     "$tooltip_button_collection_name": "",
                     "$tooltip_text_binding_name": "Now you can use your CPU to fry eggs! :D"
                   }
