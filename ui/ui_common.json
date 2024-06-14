@@ -17,13 +17,6 @@
     "alpha": "$rainbowpie_ui_theme_text_background_alpha"
   },
 
-  "base_screen/variables_button_mappings_and_controls/factory_panel/error_dialog_factory": {
-    "factory_variables": [
-      "$rainbowpie_ui_theme_global_font_name",
-      "$rainbowpie_ui_theme_global_font_backup_name"
-    ]
-  },
-
   "selected_item_details_factory": {
     "ignored": true
   },
