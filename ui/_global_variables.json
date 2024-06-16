@@ -6,18 +6,18 @@
   "$rainbowpieui_branch_display_name": "Release",
 
   "$rainbowpieui_engine_version": "25",
-  "$rainbowpieui_patch_version": "10123",
+  "$rainbowpieui_patch_version": "10126",
   "$rainbowpieui_hotfix_version": "1",
   "$rainbowpieui_engine_version_name": "2.5",
-  "$rainbowpieui_full_version_name": "2.5.10123.master",
+  "$rainbowpieui_full_version_name": "2.5.10126.master",
   "$rainbowpieui_codename": "pancake",
   "$rainbowpieui_watermark": true,
   "$rainbowpieui_bool": true,
 
-  "$rainbowpieui_version_minecraft_target": "v1.20.80",
-  "$rainbowpieui_version_minecraft_bigver": "v1.20",
-  "$rainbowpieui_version_minecraft_max": "v1.20.89",
-  "$rainbowpieui_version_minecraft_min": "v1.20.80",
+  "$rainbowpieui_version_minecraft_target": "v1.21.0",
+  "$rainbowpieui_version_minecraft_bigver": "v1.21",
+  "$rainbowpieui_version_minecraft_max": "v1.21.9",
+  "$rainbowpieui_version_minecraft_min": "v1.21.0",
 
   "$mintui_bool": true,
   "$mintui_base_name": "MintUI",
@@ -28,7 +28,7 @@
   "$mintui_pack_name": "Rainbow Pie UI",
   "$mintui_pack_description": "Minecraft UI Pack\n§ehttps://mintraspberry.cool/rainbowpieui",
   "$mintui_pack_uuid": "82d610e8-0968-4c0a-a47e-38e6663ee6ff",
-  "$mintui_pack_version": "2.5.10123",
+  "$mintui_pack_version": "2.5.10126",
 
   "$rainbowpie_ui_verify_enabled": false,
   "$rainbowpie_ui_verify_mode": "default", // blacklist|whitelist|[default]
@@ -56,6 +56,8 @@
   "$rainbowpie_ui_animation_chat_transition_time": 0.35,
 
   // Flags
+  "$rainbowpie_ui_flag_server_identifier": "",
+  "$rainbowpie_ui_flag_server_displayname": "",
   "$rainbowpie_ui_flag_bg_mask_ingame": true, // 在游戏内是否显示mask
   "$rainbowpie_ui_flag_bg_mask": true, // 在游戏外是否显示mask
   "$rainbowpie_ui_flag_overlay_screen": "toast_screen.toast_screen_content,debug_screen.content_panel,hud.hud_content,rainbowpie_ui_common.screen_background", // 覆盖界面
@@ -606,6 +608,7 @@
 
   // Compatibility for servers or other resource packs
   // The variables here will be overwritten when the server loads the resource package.
-  "$is_zeqa": false // Zeqa Network (Server)
+  "$is_zeqa": false, // Zeqa Network (Server)
+  "$cubecraft_green": "string" // CubeCraft
 }
 

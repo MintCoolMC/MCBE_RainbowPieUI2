@@ -249,12 +249,14 @@
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "$back_button_text|default": "",
+    "$back_button_text_binding_type|default": "none",
     "controls": [
       {
         "back_button@rainbowpie_ui_controls.rainbowpie_uioverride_back_button": {
           "offset": [ 0, 0 ],
-          "$button_text_binding_type": "global",
-          "$button_text": "$back_button_text"
+          "$button_text_binding_type": "$back_button_text_binding_type",
+          "$button_text": "$back_button_text",
+          "$rainbowpie_localui_backbutton_title_bindings": "$rainbowpie_localui_screenheader_title_bindings"
         }
       }
     ]
