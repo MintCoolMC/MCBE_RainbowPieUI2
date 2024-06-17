@@ -1747,6 +1747,10 @@
             "requires": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
             "$rainbowpie_ui_flag_hud_hotbar_mode": "1"
           },
+          {
+            "requires": "($rainbowpie_ui_flag_hud_hotbar_mode > '3')",
+            "$rainbowpie_ui_flag_hud_hotbar_mode": "0"
+          },
           // Zeqa Network
           {
             "requires": "($is_zeqa)",
