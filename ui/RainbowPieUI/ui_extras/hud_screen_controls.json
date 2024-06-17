@@ -1118,7 +1118,6 @@
             },
             {
               "number_of_days_played_padding": {
-                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
                 "type": "panel",
                 "size": [ 12, 12 ],
                 "bindings": [
@@ -1126,7 +1125,8 @@
                     "binding_name": "(not #number_of_days_played_visible)",
                     "binding_name_override": "#visible",
                     "binding_condition": "always",
-                    "binding_type": "global"
+                    "binding_type": "global",
+                    "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')"
                   }
                 ]
               }
