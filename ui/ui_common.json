@@ -692,12 +692,11 @@
         "operation": "insert_back",
         "value": [
           {
-            "binding_name": "#using_touch",
-            "binding_name_override": "#flying_item_renderer"
+            "binding_name": "#using_touch"
           },
           {
             "binding_type": "view",
-            "source_property_name": "(#fade_in_icon_time_seconds * #flying_item_renderer)",
+            "source_property_name": "(#fade_in_icon_time_seconds * #using_touch)",
             "target_property_name": "#fade_in_icon_time_seconds"
           }
         ]
@@ -706,7 +705,18 @@
   },
 
   "flying_item_renderer": {
-    "ignored": "(not $touch)"
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_back",
+        "value": [
+          {
+            "binding_name": "#using_touch",
+            "binding_name_override": "#visible"
+          }
+        ]
+      }
+    ]
   },
 
   "inventory_screen_common": {
