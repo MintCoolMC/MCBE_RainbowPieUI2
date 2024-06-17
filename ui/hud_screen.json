@@ -257,6 +257,11 @@
     "ignored": "(($rainbowpie_ui_flag_hud_hotbar_mode = '2') or (not $touch) or $rainbowpie_ui_flag_6d2ac350)"
   },
 
+  "number_of_days_played": {
+    // Ignore number_of_days_played when using HotbarMode 2
+    "ignored": "(($rainbowpie_ui_flag_hud_hotbar_mode = '2') or (not $touch) or $rainbowpie_ui_flag_6d2ac350)"
+  },
+
   "chat_panel": {
     "ignored": "((not $touch) or $rainbowpie_ui_flag_6d2ac350)"
   },

@@ -755,6 +755,46 @@
               }
             },
             {
+              "number_of_days_played": {
+                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
+                "type": "image",
+                "size": [ "100%c + 6px", 12 ],
+                "texture": "textures/ui/Black",
+                "alpha": 0.5,
+                "controls": [
+                  {
+                    "number_of_days_played_text@rainbowpie_ui_common.text_label_notheme": {
+                      "size": [ "default", 10 ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "layer": 1,
+            
+                      "enable_profanity_filter": false,
+                      "color": "$chat_text_color",
+                      "text": "#text",
+            
+                      "bindings": [
+                        {
+                          "binding_name": "#number_of_days_played_text",
+                          "binding_name_override": "#text",
+                          "binding_condition": "always_when_visible",
+                          "binding_type": "global"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#number_of_days_played_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "always",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            {
               "player_position": {
                 "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
                 "type": "image",
@@ -953,7 +993,7 @@
     "type": "panel",
     "$chat_panel_size": [ "50% - 90px", "100% - 24px" ],
     "size": "$chat_panel_size",
-    "offset": [ 0, -24 ],
+    "offset": [ 0, -12 ],
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
     "variables": [
@@ -980,21 +1020,6 @@
           "controls": [
             {
               "chat_panel@rainbowpieui_hud.chat_panel": {}
-            },
-            {
-              "player_position_padding": {
-                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
-                "type": "panel",
-                "size": [ 12, 12 ],
-                "bindings": [
-                  {
-                    "binding_name": "(not #player_position_visible)",
-                    "binding_name_override": "#visible",
-                    "binding_condition": "always",
-                    "binding_type": "global"
-                  }
-                ]
-              }
             },
             {
               "player_position": {
@@ -1029,6 +1054,76 @@
                 "bindings": [
                   {
                     "binding_name": "#player_position_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "always",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            {
+              "number_of_days_played": {
+                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
+                "type": "image",
+                "size": [ "100%c + 6px", 12 ],
+                "texture": "textures/ui/Black",
+                "alpha": 0.5,
+                "controls": [
+                  {
+                    "number_of_days_played_text@rainbowpie_ui_common.text_label_notheme": {
+                      "size": [ "default", 10 ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "layer": 1,
+            
+                      "enable_profanity_filter": false,
+                      "color": "$chat_text_color",
+                      "text": "#text",
+            
+                      "bindings": [
+                        {
+                          "binding_name": "#number_of_days_played_text",
+                          "binding_name_override": "#text",
+                          "binding_condition": "always_when_visible",
+                          "binding_type": "global"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#number_of_days_played_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "always",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            {
+              "player_position_padding": {
+                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
+                "type": "panel",
+                "size": [ 12, 12 ],
+                "bindings": [
+                  {
+                    "binding_name": "(not #player_position_visible)",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "always",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            {
+              "number_of_days_played_padding": {
+                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
+                "type": "panel",
+                "size": [ 12, 12 ],
+                "bindings": [
+                  {
+                    "binding_name": "(not #number_of_days_played_visible)",
                     "binding_name_override": "#visible",
                     "binding_condition": "always",
                     "binding_type": "global"
