@@ -76,7 +76,27 @@
       },
       {
         "binding_type": "view",
+        "source_property_name": "(#item_id_aux / 65536)",
+        "target_property_name": "#item_id"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('id' + #item_id + ',')",
+        "target_property_name": "#item_id_str"
+      },
+      {
+        "binding_type": "view",
         "source_property_name": "(not (($rainbowpie_ui_moduleflag_hud_bow_helper_arrowids - #item_id_aux_str) = $rainbowpie_ui_moduleflag_hud_bow_helper_arrowids))",
+        "target_property_name": "#is_match_aux"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (($rainbowpie_ui_moduleflag_hud_bow_helper_arrowids - #item_id_str) = $rainbowpie_ui_moduleflag_hud_bow_helper_arrowids))",
+        "target_property_name": "#is_match_id"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#is_match_aux or #is_match_id)",
         "target_property_name": "#visible"
       }
     ]
@@ -401,8 +421,23 @@
             {
               "binding_type": "view",
               "source_control_name": "selected_slot_item_id_aux",
+              "source_property_name": "#selected_item_id_aux_int",
+              "target_property_name": "#selected_item_id_aux_int"
+            },
+            {
+              "binding_type": "view",
               "source_property_name": "('aux' + #selected_item_id_aux_int + ',')",
               "target_property_name": "#selected_item_id_aux_str"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#selected_item_id_aux_int / 65536)",
+              "target_property_name": "#selected_item_id_int"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('id' + #selected_item_id_int + ',')",
+              "target_property_name": "#selected_item_id_str"
             },
             {
               "binding_type": "view",
@@ -413,6 +448,16 @@
             {
               "binding_type": "view",
               "source_property_name": "(not (($rainbowpie_ui_moduleflag_hud_bow_helper_bowids - #selected_item_id_aux_str) = $rainbowpie_ui_moduleflag_hud_bow_helper_bowids))",
+              "target_property_name": "#is_match_aux"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (($rainbowpie_ui_moduleflag_hud_bow_helper_bowids - #selected_item_id_str) = $rainbowpie_ui_moduleflag_hud_bow_helper_bowids))",
+              "target_property_name": "#is_match_id"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#is_match_aux or #is_match_id)",
               "target_property_name": "#is_holding_bow"
             },
             {

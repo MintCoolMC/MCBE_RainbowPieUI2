@@ -452,12 +452,32 @@
       },
       {
         "binding_type": "view",
+        "source_property_name": "(#item_id_aux / 65536)",
+        "target_property_name": "#item_id"
+      },
+      {
+        "binding_type": "view",
         "source_property_name": "('aux' + #item_id_aux + ',')",
         "target_property_name": "#item_id_aux_str"
       },
       {
         "binding_type": "view",
+        "source_property_name": "('id' + #item_id + ',')",
+        "target_property_name": "#item_id_str"
+      },
+      {
+        "binding_type": "view",
         "source_property_name": "(not (($rainbowpie_localui_inventory_target_item_ids - #item_id_aux_str) = $rainbowpie_localui_inventory_target_item_ids))",
+        "target_property_name": "#is_match_aux"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (($rainbowpie_localui_inventory_target_item_ids - #item_id_str) = $rainbowpie_localui_inventory_target_item_ids))",
+        "target_property_name": "#is_match_id"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#is_match_aux or #is_match_id)",
         "target_property_name": "#is_target_item"
       },
       {
