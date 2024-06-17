@@ -685,8 +685,39 @@
     "ignored": true
   },
 
+  "item_renderer": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_back",
+        "value": [
+          {
+            "binding_name": "#using_touch",
+            "binding_name_override": "#flying_item_renderer"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#fade_in_icon_time_seconds * #flying_item_renderer)",
+            "target_property_name": "#fade_in_icon_time_seconds"
+          }
+        ]
+      }
+    ]
+  },
+
   "flying_item_renderer": {
-    "ignored": "(not $touch)"
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_back",
+        "value": [
+          {
+            "binding_name": "#using_touch",
+            "binding_name_override": "#flying_item_renderer"
+          }
+        ]
+      }
+    ]
   },
 
   "inventory_screen_common": {
