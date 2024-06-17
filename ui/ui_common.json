@@ -706,18 +706,7 @@
   },
 
   "flying_item_renderer": {
-    "modifications": [
-      {
-        "array_name": "bindings",
-        "operation": "insert_back",
-        "value": [
-          {
-            "binding_name": "#using_touch",
-            "binding_name_override": "#flying_item_renderer"
-          }
-        ]
-      }
-    ]
+    "ignored": "(not $touch)"
   },
 
   "inventory_screen_common": {
