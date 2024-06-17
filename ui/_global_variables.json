@@ -74,7 +74,7 @@
   "$rainbowpie_ui_flag_pause_tab_scoreboard": false,
   "$rainbowpie_ui_flag_pause_quit_doubleclick": true,
 
-  "$rainbowpie_ui_flag_hud_hotbar_mode": "2",
+  "$rainbowpie_ui_flag_hud_hotbar_mode": "1",
   "$rainbowpie_ui_flag_hud_hidehud_clickspace": true,
   "$rainbowpie_ui_flag_hud_chat_halfscreen": true, // Chat Panel Half Screen
   "$rainbowpie_ui_flag_hud_hotbar_rounded": false,

@@ -1742,6 +1742,11 @@
             "requires": "($screen_content = 'rainbowpieui_settings_common.settings_content')",
             "$export_template_disabled": false
           },
+          // Force disable rainbowpie_ui_flag_hud_hotbar_mode 2
+          {
+            "requires": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
+            "$rainbowpie_ui_flag_hud_hotbar_mode": "1"
+          },
           // Zeqa Network
           {
             "requires": "($is_zeqa)",
