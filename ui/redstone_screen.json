@@ -1,6 +1,26 @@
 {
   "namespace": "redstone",
 
+  "panel_crafter": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "crafter_root_panel@rainbowpieui_redstone.crafter_root_panel": {
+              "ignored": "(not $rainbowpie_ui_flag_84df7492)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "panel_crafter/root_panel": {
+    "ignored": "$rainbowpie_ui_flag_84df7492"
+  },
+
   "hopper_screen": {
     "$is_hopper": true
   },
