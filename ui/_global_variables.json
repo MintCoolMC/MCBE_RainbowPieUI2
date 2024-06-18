@@ -113,6 +113,7 @@
   "$rainbowpie_ui_flag_chatui_default_font": false,
   "$rainbowpie_ui_flag_hudtitle_default_font": false,
   "$rainbowpie_ui_flag_huditemname_default_font": false,
+  "$rainbowpie_ui_flag_flying_item_renderer": true, // Use flying_item_renderer on mouse mode
   
   // Unnamed Flags
   "$rainbowpie_ui_flag_71042f58": false, // Disable background on selector

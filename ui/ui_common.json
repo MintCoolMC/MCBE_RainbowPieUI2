@@ -697,7 +697,8 @@
           {
             "binding_type": "view",
             "source_property_name": "(#fade_in_icon_time_seconds * #using_touch)",
-            "target_property_name": "#fade_in_icon_time_seconds"
+            "target_property_name": "#fade_in_icon_time_seconds",
+            "ignored": "$rainbowpie_ui_flag_flying_item_renderer"
           }
         ]
       }
@@ -712,7 +713,8 @@
         "value": [
           {
             "binding_name": "#using_touch",
-            "binding_name_override": "#visible"
+            "binding_name_override": "#visible",
+            "ignored": "$rainbowpie_ui_flag_flying_item_renderer"
           }
         ]
       }
