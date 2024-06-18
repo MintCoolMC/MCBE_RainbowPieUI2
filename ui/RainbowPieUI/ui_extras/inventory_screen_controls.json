@@ -1,6 +1,104 @@
 {
   "namespace": "rainbowpieui_crafting",
 
+  "compass_panel_exit_animation_push": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "to": [ 0, "-65%" ],
+    "from": [ 0, "-45%" ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "compass_panel_exit_animation_pop": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "to": [ 0, "-65%" ],
+    "from": [ 0, "-45%" ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "compass_panel_entrance_animation_push": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "to": [ 0, "-45%" ],
+    "from": [ 0, "-65%" ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "compass_panel_entrance_animation_pop": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "to": [ 0, "-45%" ],
+    "from": [ 0, "-65%" ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "compass_panel": {
+    "type": "image",
+    "ignored": "(not $rainbowpie_ui_flag_9920f05c)",
+    "texture": "($rainbowpie_ui_path_home + '/r_white')",
+    "size": [ "100%c + 5px", "100%c + 5px" ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [ 0, "-45%" ],
+    "layer": 200,
+    "color": "$rainbowpie_ui_theme_inventory_background_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_background_alpha",
+    "anims": [
+      "@rainbowpieui_crafting.compass_panel_exit_animation_push",
+      "@rainbowpieui_crafting.compass_panel_exit_animation_pop",
+      "@rainbowpieui_crafting.compass_panel_entrance_animation_push",
+      "@rainbowpieui_crafting.compass_panel_entrance_animation_pop"
+    ],
+    "animation_reset_name": "screen_animation_reset",
+    "controls": [
+      {
+        "compass_stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", "100%cm" ],
+          "controls": [
+            {
+              "clock@crafting.item_renderer": {
+                "size": [ 16, 16 ],
+                "layer": 10,
+                "property_bag": {
+                  "#item_id_aux": "(401 * 65536)"
+                }
+              }
+            },
+            {
+              "compass@crafting.item_renderer": {
+                "size": [ 16, 16 ],
+                "layer": 10,
+                "property_bag": {
+                  "#item_id_aux": "(399 * 65536)"
+                }
+              }
+            },
+            {
+              "recovery_compass@crafting.item_renderer": {
+                "size": [ 16, 16 ],
+                "layer": 10,
+                "property_bag": {
+                  "#item_id_aux": "(665 * 65536)"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "armor_durability_panel_exit_animation_push": {
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",

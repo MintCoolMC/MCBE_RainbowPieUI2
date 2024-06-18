@@ -83,7 +83,7 @@
   "$rainbowpie_ui_flag_input_enable_profanity_filter": true,
   "$rainbowpie_ui_flag_dropdown_default_show_button": true,
   "$rainbowpie_ui_flag_disconnect_ui_modified": true,
-  "$rainbowpie_ui_flag_inventory_debug": false,
+  "$rainbowpie_ui_flag_inventory_debug": true,
   "$rainbowpie_ui_flag_persona_debug": false,
 
   "$rainbowpie_ui_flag_start_splash_text": true,
@@ -154,6 +154,7 @@
   "$rainbowpie_ui_flag_56cd0456": true, // PauseUI Back To Vanilla Button
   "$rainbowpie_ui_flag_3e35fb2e": true,
   "$rainbowpie_ui_flag_3520da91": true, // EASTER EGGS
+  "$rainbowpie_ui_flag_9920f05c": true, // Inventory UI Compass Panel
 
   // Debug
   "$rainbowpie_ui_debug": false,

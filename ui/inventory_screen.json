@@ -1,6 +1,21 @@
 {
   "namespace": "crafting",
 
+  "recipe_inventory_screen_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "compass_panel@rainbowpieui_crafting.compass_panel": {
+            }
+          }
+        ]
+      }
+    ]
+  },
+
   "player_inventory": {
     "modifications": [
       {
