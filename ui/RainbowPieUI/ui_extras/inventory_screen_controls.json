@@ -5,7 +5,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
-    "to": [ 0, "-65%" ],
+    "to": [ 0, "-55%" ],
     "from": [ 0, "-45%" ],
     "play_event": "screen.exit_push",
     "end_event": "screen.exit_end"
@@ -15,7 +15,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
-    "to": [ 0, "-65%" ],
+    "to": [ 0, "-55%" ],
     "from": [ 0, "-45%" ],
     "play_event": "screen.exit_pop",
     "end_event": "screen.exit_end"
@@ -26,7 +26,7 @@
     "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
     "to": [ 0, "-45%" ],
-    "from": [ 0, "-65%" ],
+    "from": [ 0, "-55%" ],
     "play_event": "screen.entrance_push",
     "end_event": "screen.entrance_end"
   },
@@ -36,7 +36,7 @@
     "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
     "to": [ 0, "-45%" ],
-    "from": [ 0, "-65%" ],
+    "from": [ 0, "-55%" ],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
   },
