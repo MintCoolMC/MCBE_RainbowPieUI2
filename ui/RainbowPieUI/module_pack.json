@@ -21,7 +21,7 @@
         "hud_block_counter@rainbowpie_ui_module_list.module_item": {
           "$module_icon_texture": "($rainbowpie_ui_path_home + '/module/hud_block_counter')",
           "$module_name": "HUD Block Counter",
-          "$module_version": "1.7",
+          "$module_version": "2.0",
           "$module_author": "MintCoolMC",
           "$module_description": "Shows the total count of held blocks in the hotbar",
           "$module_state_check": "$rainbowpie_ui_module_hud_block_counter",
@@ -35,7 +35,7 @@
         "hud_bow_helper@rainbowpie_ui_module_list.module_item": {
           "$module_icon_texture": "($rainbowpie_ui_path_home + '/module/hud_bow_helper')",
           "$module_name": "HUD Bow Helper",
-          "$module_version": "1.5",
+          "$module_version": "2.0",
           "$module_author": "MintCoolMC",
           "$module_description": "Shows the total count of arrows in the inventory",
           "$module_state_check": "$rainbowpie_ui_module_hud_bow_helper",
@@ -77,7 +77,7 @@
         "lib_hud_item@rainbowpie_ui_module_list.module_item": {
           "$module_icon_texture": "($rainbowpie_ui_path_home + '/icon/module')",
           "$module_name": "HUD Item Lib",
-          "$module_version": "1.4",
+          "$module_version": "2.0",
           "$module_author": "MintCoolMC, 衡川(Crosmover)",
           "$module_description": "module lib hud item",
           "$module_state_check": true,

@@ -1,6 +1,215 @@
 {
   "namespace": "rainbowpieui_redstone",
 
+  "output_slot_hover_info": {
+    "type": "button",
+    "layer": 1,
+    "hover_control": "hover",
+    "$stack_count_required": true,
+    "controls": [
+      {
+        "hover": {
+          "type": "panel",
+          "controls": [
+            {
+              "hover_text@common.hover_text": {
+                "ignored": "($rainbowpie_ui_flag_86c54726)",
+                "layer": 29,
+                "bindings": [
+                  {
+                    "binding_name": "#crafting_preview_info",
+                    "binding_name_override": "#hover_text"
+                  }
+                ]
+              }
+            },
+            {
+              "custom_hover_text": {
+                "type": "button",
+                "ignored": "(not $rainbowpie_ui_flag_86c54726)",
+                "enabled": "(not ($touch or $game_pad))",
+                "allow_clipping": false,
+                "follows_cursor": "(not ($touch or $game_pad))",
+                "consume_event": false,
+                "consume_hover_events": false,
+                "focus_enabled": false,
+                "hover_control": "$hover_control",
+                "locked_control": "$locked_control",
+                "$hover_control": "hover_text",
+                "$locked_control": "",
+                "variables": [
+                  {
+                    "requires": "($touch or $game_pad)",
+                    "$hover_control": "",
+                    "$locked_control": "hover_text"
+                  }
+                ],
+                "controls": [
+                  {
+                    "hover_text": {
+                      "type": "panel",
+                      "size": [ "0px", "0px" ],
+                      "controls": [
+                        {
+                          "hover_text_background": {
+                            "type": "image",
+                            "texture": "($rainbowpie_ui_path_home + '/r_white')",
+                            "size": [ "100%c + 8px", "100%c + 5px" ],
+                            "offset": [ 10, -8 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            // "clips_children": true, // Why "clips_children" doesn't work here
+                            "layer": 200,
+                            "color": "$rainbowpie_ui_theme_hovertext_background_color",
+                            "alpha": "$rainbowpie_ui_theme_hovertext_background_alpha",
+                            "controls": [
+                              {
+                                "background_icon": {
+                                  "type": "panel",
+                                  "size": [ 0, 0 ],
+                                  "anchor_to": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                                  "anchor_from": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                                  "ignored": "(not $rainbowpie_ui_theme_hovertext_bgicon_enabled)",
+                                  "controls": [
+                                    {
+                                      "icon_image": {
+                                        "type": "image",
+                                        "size": "$rainbowpie_ui_theme_hovertext_bgicon_size",
+                                        "anchor_to": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                                        "anchor_from": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                                        "offset": "$rainbowpie_ui_theme_hovertext_bgicon_offset",
+                                        "texture": "$rainbowpie_ui_theme_hovertext_bgicon_texture",
+                                        "alpha": "$rainbowpie_ui_theme_hovertext_bgicon_alpha",
+                                        "fill": "$rainbowpie_ui_theme_hovertext_bgicon_fill",
+                                        "layer": 3
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "hover_text_controls": {
+                                  "type": "stack_panel",
+                                  "orientation": "vertical",
+                                  "size": [ "100%cm", "100%c" ],
+                                  "layer": 8,
+                                  "controls": [
+                                    {
+                                      "hover_text_label@rainbowpie_ui_common.text_label_notheme": {
+                                        "size": [ "default", "default" ],
+                                        "color": "$rainbowpie_ui_theme_hovertext_text_color",
+                                        "text": "#hover_text",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#crafting_preview_info",
+                                            "binding_name_override": "#hover_text"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "output_slot@common.item_renderer": {
+          "size": [ "88.88888888888889%", "100%x" ],
+          "bindings": [
+            {
+              "binding_name": "#crafter_output_item",
+              "binding_name_override": "#item_id_aux"
+            },
+            {
+              "binding_name": "#crafter_output_item_color",
+              "binding_name_override": "#item_custom_color"
+            },
+            {
+              "binding_name": "#crafter_output_item_shield_base_color_hovered",
+              "binding_name_override": "#shield_base_color"
+            },
+            {
+              "binding_name": "#crafter_output_item_banner_patterns",
+              "binding_name_override": "#banner_patterns"
+            },
+            {
+              "binding_name": "#crafter_output_item_selected_banner_colors",
+              "binding_name_override": "#banner_colors"
+            },
+            {
+              "binding_name": "#crafter_output_item_selected_banner_type",
+              "binding_name_override": "#banner_type"
+            },
+            {
+              "binding_name": "#crafter_output_item_selected_decorated_pot_sherds",
+              "binding_name_override": "#decorated_pot_sherds"
+            }
+          ]
+        }
+      },
+      {
+        "output_slot_border": {
+          "type": "image",
+          "layer": 1,
+          "size": [ "144.4444444444444%", "100%x" ],
+          "texture": "textures/ui/crafter_item_border"
+        }
+      },
+      {
+        "output_count@common.stack_count_label": {
+          "layer": 20,
+          "size": [ 18, 18 ],
+          "offset": [ "78.33333333333333%", "62.22222222222222%" ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "bindings": [
+            {
+              "binding_name": "#output_stack_count",
+              "binding_name_override": "#inventory_stack_count"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "crafter_disabled_slot@common.button": {
+    "type": "button",
+    "hover_control": "hover",
+    "size": [ "100%y", "100%" ],
+    "layer": 20,
+    "controls": [
+      {
+        "default": {
+          "type": "image",
+          "texture": "textures/ui/slot_disabled"
+        }
+      },
+      {
+        "hover": {
+          "type": "image",
+          "texture": "textures/ui/slot_enabled_hover"
+        }
+      },
+      {
+        "pressed": {
+          "type": "image",
+          "texture": "textures/ui/slot_disabled"
+        }
+      }
+    ]
+  },
+
   "hopper_root_panel@common.root_panel": {
     "size": [ 168, 125 ],
     "controls": [
@@ -231,6 +440,344 @@
                     }
                   }
                 ]
+              }
+            },
+            {
+              "inventory@rainbowpie_ui_inventory_and_container.inventory_panel_bottom_half": {
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [ "96.42857142857143%", "33.54037267080745%" ],
+                "offset": [ 0, "-14.90683229813665%" ]
+              }
+            },
+            {
+              "hotbar@rainbowpie_ui_inventory_and_container.hotbar_grid_template": {
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [ "96.42857142857143%", "11.18012422360248%" ],
+                "offset": [ 0, "-1.863354037267081%" ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "crafter_root_panel@common.root_panel": {
+    "size": [ 168, 161 ],
+    "controls": [
+      { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+      { "gamepad_cursor@common.gamepad_cursor_button": {} },
+      { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
+      {
+        "inventory_ui_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "anims": [
+            "@rainbowpie_ui_animations.container_panel_exit_animation_push",
+            "@rainbowpie_ui_animations.container_panel_exit_animation_pop",
+            "@rainbowpie_ui_animations.container_panel_entrance_animation_push",
+            "@rainbowpie_ui_animations.container_panel_entrance_animation_pop"
+          ],
+          "animation_reset_name": "screen_animation_reset",
+          "controls": [
+            {
+              "background_icon@rainbowpie_ui_inventory.background_icon": {}
+            },
+            {
+              "inventory_header@rainbowpie_ui_inventory.header": {
+                "size": [ "100%", "14.28571428571429%" ],
+                "offset": [ 0, 0 ],
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "$rainbowpie_localui_inventoryheader_title": "$container_title",
+                "$rainbowpie_localui_inventoryheader_title_border1_size": [ "2.380952380952381%", 0 ],
+                "$rainbowpie_localui_inventoryheader_title_border2_size": [ "2.380952380952381%", 0 ]
+              }
+            },
+            {
+              "common_panel@common.common_panel": {
+                "$dialog_background": "rainbowpie_ui_common.inventory_background",
+                "$show_close_button": false,
+                "size": [ "100%", "100% - 14.28571428571429%" ],
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle"
+              }
+            },
+            {
+              "crafter_input": {
+                "type": "stack_panel",
+                "anchor_to": "bottom_left",
+                "anchor_from": "bottom_left",
+                "size": [ "32.14285714285714%", "33.54037267080745%" ],
+                "offset": [ "12.5%", "-50.31055900621118%" ],
+                "controls": [
+                  {
+                    "1": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "collection_name": "container_items",
+                      "size": [ "100%", "33.33333333333333%" ],
+                      "$item_collection_name": "container_items",
+                      "controls": [
+                        {
+                          "disabled_slot_0_button@rainbowpieui_redstone.crafter_disabled_slot": {
+                            "$pressed_button_name": "disabled_button0",
+                            "bindings": [
+                              {
+                                "binding_name": "#button_visible0",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "container_item_0@rainbowpie_ui_inventory_and_container.container_item": {
+                            "collection_index": 0,
+                            "bindings": [
+                              {
+                                "binding_name": "(not #button_visible0)",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "disabled_slot_1_button@rainbowpieui_redstone.crafter_disabled_slot": {
+                            "$pressed_button_name": "disabled_button1",
+                            "bindings": [
+                              {
+                                "binding_name": "#button_visible1",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "container_item_1@rainbowpie_ui_inventory_and_container.container_item": {
+                            "collection_index": 1,
+                            "bindings": [
+                              {
+                                "binding_name": "(not #button_visible1)",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "disabled_slot_2_button@rainbowpieui_redstone.crafter_disabled_slot": {
+                            "$pressed_button_name": "disabled_button2",
+                            "bindings": [
+                              {
+                                "binding_name": "#button_visible2",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "container_item_2@rainbowpie_ui_inventory_and_container.container_item": {
+                            "collection_index": 2,
+                            "bindings": [
+                              {
+                                "binding_name": "(not #button_visible2)",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "2": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "collection_name": "container_items",
+                      "size": [ "100%", "33.33333333333333%" ],
+                      "$item_collection_name": "container_items",
+                      "controls": [
+                        {
+                          "disabled_slot_0_button@rainbowpieui_redstone.crafter_disabled_slot": {
+                            "$pressed_button_name": "disabled_button3",
+                            "bindings": [
+                              {
+                                "binding_name": "#button_visible3",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "container_item_0@rainbowpie_ui_inventory_and_container.container_item": {
+                            "collection_index": 3,
+                            "bindings": [
+                              {
+                                "binding_name": "(not #button_visible3)",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "disabled_slot_1_button@rainbowpieui_redstone.crafter_disabled_slot": {
+                            "$pressed_button_name": "disabled_button4",
+                            "bindings": [
+                              {
+                                "binding_name": "#button_visible4",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "container_item_1@rainbowpie_ui_inventory_and_container.container_item": {
+                            "collection_index": 4,
+                            "bindings": [
+                              {
+                                "binding_name": "(not #button_visible4)",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "disabled_slot_2_button@rainbowpieui_redstone.crafter_disabled_slot": {
+                            "$pressed_button_name": "disabled_button5",
+                            "bindings": [
+                              {
+                                "binding_name": "#button_visible5",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "container_item_2@rainbowpie_ui_inventory_and_container.container_item": {
+                            "collection_index": 5,
+                            "bindings": [
+                              {
+                                "binding_name": "(not #button_visible5)",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "3": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "collection_name": "container_items",
+                      "size": [ "100%", "33.33333333333333%" ],
+                      "$item_collection_name": "container_items",
+                      "controls": [
+                        {
+                          "disabled_slot_0_button@rainbowpieui_redstone.crafter_disabled_slot": {
+                            "$pressed_button_name": "disabled_button6",
+                            "bindings": [
+                              {
+                                "binding_name": "#button_visible6",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "container_item_0@rainbowpie_ui_inventory_and_container.container_item": {
+                            "collection_index": 6,
+                            "bindings": [
+                              {
+                                "binding_name": "(not #button_visible6)",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "disabled_slot_1_button@rainbowpieui_redstone.crafter_disabled_slot": {
+                            "$pressed_button_name": "disabled_button7",
+                            "bindings": [
+                              {
+                                "binding_name": "#button_visible7",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "container_item_1@rainbowpie_ui_inventory_and_container.container_item": {
+                            "collection_index": 7,
+                            "bindings": [
+                              {
+                                "binding_name": "(not #button_visible7)",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "disabled_slot_2_button@rainbowpieui_redstone.crafter_disabled_slot": {
+                            "$pressed_button_name": "disabled_button8",
+                            "bindings": [
+                              {
+                                "binding_name": "#button_visible8",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "container_item_2@rainbowpie_ui_inventory_and_container.container_item": {
+                            "collection_index": 8,
+                            "bindings": [
+                              {
+                                "binding_name": "(not #button_visible8)",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "redstone_wire_line": {
+                "type": "image",
+                "layer": 3,
+                "size": [ "10.71428571428571%", "100%x" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ "54.16666666666667%", "26.70807453416149%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#redstone_arrow_texture"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#redstone_arrow_texture - 'textures/ui/')",
+                    "target_property_name": "#redstone_arrow_texture_filename"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(($rainbowpie_ui_path_overrides + '/ui/') + #redstone_arrow_texture_filename)",
+                    "target_property_name": "#texture"
+                  }
+                ]
+              }
+            },
+            {
+              "crafter_output@rainbowpieui_redstone.output_slot_hover_info": {
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "size": [ "10.71428571428571%", "100%x" ],
+                "offset": [ "32.14285714285714%", "-18.01242236024845%" ]
               }
             },
             {

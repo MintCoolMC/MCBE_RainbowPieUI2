@@ -6,7 +6,10 @@
     "$cell_image_size|default": [ "100%y", "100%" ],
     "$item_renderer_panel_size|default": [ "100%y", "100%" ],
     "$item_renderer_size|default": [ "100%y", "88.89%" ],
-    "$background_images|default": "rainbowpie_ui_common.cell_image"
+    "$background_images|default": "rainbowpie_ui_common.cell_image",
+
+    // Test
+    "consume_hover_events": false
   },
 
   "container_item_stack": {

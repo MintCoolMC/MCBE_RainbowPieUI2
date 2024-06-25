@@ -124,7 +124,8 @@
   },
 
   "trade_toggle": {
-    "$toggle_enabled_binding_name": "",
+    "$toggle_enabled_binding_type": "none",
+    "$toggle_enabled_binding_name": "none",
     "$unchecked_control": "rainbowpieui_trade2.trade_toggle_unchecked",
     "$checked_control": "rainbowpieui_trade2.trade_toggle_checked",
     "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_toggle_unchecked_hover",

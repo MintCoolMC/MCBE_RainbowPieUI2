@@ -21,7 +21,7 @@
   "store_header_with_coins": {
     "type": "panel",
     "$screen_header_title|default": "#screen_header_title",
-    "$screen_header_title_binding_type|default": "none",
+    "$screen_header_title_binding_type|default": "global",
     "controls": [
       {
         "header@rainbowpie_ui_common.screen_header": {
