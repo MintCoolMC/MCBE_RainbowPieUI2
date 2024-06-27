@@ -218,6 +218,11 @@
         "operation": "insert_after",
         "value": [
           {
+            "graphics_button@rainbowpieui_general_section.graphics_button": {
+              "$toggle_group_forced_index": 3504
+            }
+          },
+          {
             "raytracing_button@rainbowpieui_general_section.raytracing_button": {
               "$toggle_group_forced_index": 3503,
               "bindings": [
@@ -274,9 +279,10 @@
         "operation": "insert_after",
         "value": [
           {
-            "raytracing_section@rainbowpieui_general_section.raytracing_section": {
-              "ignored": "(not $rainbowpie_ui_flag_settings_ray_tracing_section)"
-            }
+            "graphics_section@rainbowpieui_general_section.graphics_section": {}
+          },
+          {
+            "raytracing_section@rainbowpieui_general_section.raytracing_section": {}
           }
         ]
       },

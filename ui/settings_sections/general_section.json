@@ -1,6 +1,41 @@
 {
   "namespace": "general_section",
 
+  "advanced_graphics_options_button_content": {
+    "modifications": [
+      {
+        "control_name": "advanced_graphics_options_label",
+        "operation": "insert_before",
+        "value": [
+          {
+            "advanced_graphics_options_label_panel": {
+              "type": "panel",
+              "size": [ "100%c", "100%" ],
+              "max_size": [ "75%", "100%" ],
+              "controls": [
+                {
+                  "advanced_graphics_options_label@rainbowpie_ui_common.text_label": {
+                    "text": "#graphics_mode_toggle_label",
+                    "color": "$text_color",
+                    "bindings": [
+                      {
+                        "binding_name": "#graphics_mode_toggle_label"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "advanced_graphics_options_button_content/advanced_graphics_options_label": {
+    "ignored": true
+  },
+
   "video_section/render_distance_warning_text": {
     "property_bag": {
       "#is_96_distance": false,

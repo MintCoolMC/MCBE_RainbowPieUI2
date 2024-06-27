@@ -68,8 +68,6 @@
   "$rainbowpie_ui_flag_tablist_selfTag": true,
   "$rainbowpie_ui_flag_play_bottom_panel": true,
 
-  "$rainbowpie_ui_flag_settings_ray_tracing_section": true,
-
   "$rainbowpie_ui_flag_pause_myinfo_disabled": true,
   "$rainbowpie_ui_flag_pause_tab_scoreboard": false,
   "$rainbowpie_ui_flag_pause_quit_doubleclick": true,
