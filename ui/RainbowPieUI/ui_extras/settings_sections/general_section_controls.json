@@ -35,7 +35,7 @@
   },
 
   "graphics_section": {
-    "ignored": "$new_video_settings",
+    "ignored": "(not $new_video_settings)",
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
     "anchor_from": "top_left",
