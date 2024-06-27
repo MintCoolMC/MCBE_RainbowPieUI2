@@ -39,7 +39,7 @@ rainbowpie.ui.chest.fastpick.putall=放入物品栏内全部物品
 rainbowpie.ui.screenshot.screenshotPathButton=图片路径
 rainbowpie.ui.screenshot.screenshotPathTitle=截图已经保存到：
 
-rainbowpie.ui.settings.graphics=图形设置
+rainbowpie.ui.settings.graphics=图形
 rainbowpie.ui.settings.graphics.title=图形设置
 
 rainbowpie.ui.settings.raytracing.title=光线追踪设置
