@@ -112,6 +112,11 @@
   "$rainbowpie_ui_flag_hudtitle_default_font": false,
   "$rainbowpie_ui_flag_huditemname_default_font": false,
   "$rainbowpie_ui_flag_flying_item_renderer": false, // Use flying_item_renderer on mouse mode
+
+  // Item ID Flags
+  "$rainbowpie_ui_flag_item_clock_id": 401,
+  "$rainbowpie_ui_flag_item_compass_id": 399,
+  "$rainbowpie_ui_flag_item_recovery_compass_id": 665,
   
   // Unnamed Flags
   "$rainbowpie_ui_flag_71042f58": false, // Disable background on selector

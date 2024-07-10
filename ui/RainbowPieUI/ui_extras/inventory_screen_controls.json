@@ -71,7 +71,7 @@
                 "size": [ 16, 16 ],
                 "layer": 10,
                 "property_bag": {
-                  "#item_id_aux": "(401 * 65536)"
+                  "#item_id_aux": "($rainbowpie_ui_flag_item_clock_id * 65536)"
                 }
               }
             },
@@ -80,7 +80,7 @@
                 "size": [ 16, 16 ],
                 "layer": 10,
                 "property_bag": {
-                  "#item_id_aux": "(399 * 65536)"
+                  "#item_id_aux": "($rainbowpie_ui_flag_item_compass_id * 65536)"
                 }
               }
             },
@@ -89,7 +89,7 @@
                 "size": [ 16, 16 ],
                 "layer": 10,
                 "property_bag": {
-                  "#item_id_aux": "(665 * 65536)"
+                  "#item_id_aux": "($rainbowpie_ui_flag_item_recovery_compass_id * 65536)"
                 }
               }
             }
