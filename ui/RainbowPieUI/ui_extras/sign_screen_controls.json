@@ -90,13 +90,14 @@
     "offset": [ 54, 0 ],
     "layer": 110,
     "variables": [
+      // 我也不知道下面这段代码是如何运作的
       {
         "requires": "($sign_text_multiline = 'sign.regular_sign_text_multiline')",
-        "$rainbowpie_localui_dialogheader_title": "(('item.' + ($sign_texture - 'textures/ui/sign_') + '_sign.name') - 'textures/ui/sign_')"
+        "$rainbowpie_localui_dialogheader_title": "(('item.' + (($sign_texture - 'textures/ui/') - 'sign_' - '_sign') + '_sign.name') - 'sign_')"
       },
       {
         "requires": "($sign_text_multiline = 'sign.hanging_sign_text_multiline')",
-        "$rainbowpie_localui_dialogheader_title": "((('item.' + ($sign_texture - 'textures/ui/hanging_sign_') + '__oak_hanging_sign.name') - 'textures/ui/hanging_sign__') - '_oak_')"
+        "$rainbowpie_localui_dialogheader_title": "((((('item.' + (($sign_texture - 'textures/ui/hanging_sign_') - 'darkoak') + '.___..dark_oak' + '__._oak_hanging_sign.name') - '..___.') - '.___..dark_oak') - 'textures/ui/hanging_sign__._') - '_._oak_')"
       }
     ]
   },
