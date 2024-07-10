@@ -67,6 +67,83 @@
         }
       },
       {
+        "raytracing_render_distance_slider@settings_common.option_slider": {
+          "ignored": "($is_holographic)",
+          "$option_label": "#raytracing_render_distance_slider_label",
+          "$slider_name": "raytracing_render_distance",
+          "$slider_value_binding_name": "#raytracing_render_distance",
+          "$slider_tts_text_value": "#raytracing_render_distance_text_value",
+          "$option_enabled_binding_name": "#raytracing_render_distance_enabled",
+          "$slider_steps_binding_name": "#raytracing_render_distance_steps",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ],
+          "controls": [
+            { "rtx_render_distance_warning@general_section.rtx_render_distance_warning": {} },
+            { "option_generic_core@settings_common.option_generic_core": {} }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#show_raytracing_render_distance",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "deferred_render_distance_slider@settings_common.option_slider": {
+          "ignored": "($is_holographic or not $new_video_settings)",
+          "$option_label": "#deferred_render_distance_slider_label",
+          "$slider_name": "deferred_render_distance",
+          "$slider_value_binding_name": "#deferred_render_distance",
+          "$slider_tts_text_value": "#deferred_render_distance_text_value",
+          "$option_enabled_binding_name": "#deferred_render_distance_enabled",
+          "$slider_steps_binding_name": "#deferred_render_distance_steps",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ],
+          "controls": [
+            { "option_generic_core@settings_common.option_generic_core": {} }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#show_deferred_render_distance",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "render_distance_slider@settings_common.option_slider": {
+          "ignored": "($is_holographic)",
+          "$option_label": "#render_distance_slider_label",
+          "$slider_name": "render_distance",
+          "$slider_value_binding_name": "#render_distance",
+          "$slider_tts_text_value": "#render_distance_text_value",
+          "$option_enabled_binding_name": "#render_distance_enabled",
+          "$slider_steps_binding_name": "#render_distance_steps",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ],
+          "controls": [
+            { "render_distance_warning@general_section.render_distance_warning": {} },
+            { "option_generic_core@settings_common.option_generic_core": {} }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#show_render_distance",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
         "advanced_graphics_options_panel": {
           "ignored": "(not $new_video_settings)",
           "type": "stack_panel",
