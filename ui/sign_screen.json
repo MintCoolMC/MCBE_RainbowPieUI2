@@ -12,14 +12,23 @@
         "operation": "insert_front",
         "value": [
           {
-            "achievements_button@common_buttons.light_text_button": {
-              "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-              "$pressed_button_name": "button.menu_exit",
-              "$button_text": "gui.done",
+            "button_panel": {
+              "type": "stack_panel",
+              "orientation": "horizontal",
               "size": [ 185, 30 ],
               "offset": [ 0, 68 ],
               "anchor_from": "center",
-              "anchor_to": "center"
+              "anchor_to": "center",
+              "controls": [
+                {
+                  "done_button@common_buttons.light_text_button": {
+                    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                    "$pressed_button_name": "button.menu_exit",
+                    "$button_text": "gui.done",
+                    "size": [ "fill", "100%" ]
+                  }
+                }
+              ]
             }
           }
         ]
