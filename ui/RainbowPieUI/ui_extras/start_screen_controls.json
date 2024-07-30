@@ -1674,7 +1674,6 @@
                                   "$pressed_button_name": "button.to_profile_screen",
                                   "$button_text": "profileScreen.header",
                                   "$focus_id": "profile_button",
-                                  "$focus_override_down": "play_button",
                                   "$focus_override_right": "bottom_button"
                                 }
                               }
