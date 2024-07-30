@@ -191,9 +191,17 @@
     ]
   },
 
+  "servers_icon": {
+    "type": "image",
+    "size": [ "100%y", "100% - 4px" ],
+    "texture": "($rainbowpie_ui_path_theme + '/icon/start/servers')",
+    "color": "$text_color",
+    "layer": 8
+  },
+
   "get_started_icon": {
     "type": "image",
-    "size": [ 18, 18 ],
+    "size": [ "100%y", "100% - 4px" ],
     "texture": "($rainbowpie_ui_path_theme + '/icon/start/quickplay')",
     "color": "$text_color",
     "layer": 8
@@ -1511,7 +1519,7 @@
                                   "$toggle_group_forced_index": 1001,
                                   "$toggle_view_binding_name": "hide_more_option",
                                   "$focus_id": "back_button",
-                                  "$focus_override_up": "profile_button",
+                                  "$focus_override_up": "servers_button",
                                   "layer": 30,
                                   "bindings": [
                                     {
@@ -1562,7 +1570,8 @@
                                   "size": [ "100%", 32 ],
                                   "$icon_texture_name": "servers",
                                   "$button_text": "menu.servers",
-                                  "$pressed_button_name": "button.menu_servers"
+                                  "$pressed_button_name": "button.menu_servers",
+                                  "$focus_id": "servers_button"
                                 }
                               }
                             ]
@@ -1599,6 +1608,18 @@
                                         "$pressed_button_name": "$play_button_target",
                                         "$button_text": "menu.play",
                                         "$focus_id": "play_button",
+                                        "$focus_override_up": "profile_button"
+                                      }
+                                    },
+                                    {
+                                      "servers_button@common_buttons.light_content_button": {
+                                        "ignored": "(not $rainbowpie_ui_flag_50d7b9e9)",
+                                        "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+                                        "$rainbowpie_localui_button_desc_enabled": true,
+                                        "$rainbowpie_localui_button_desc_text": "menu.servers",
+                                        "$pressed_button_name": "button.menu_servers",
+                                        "$button_content": "rainbowpieui_start.servers_icon",
+                                        "size": [ "100%y", 32 ],
                                         "$focus_override_up": "profile_button"
                                       }
                                     },
