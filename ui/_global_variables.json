@@ -160,6 +160,7 @@
   "$rainbowpie_ui_flag_3e35fb2e": true,
   "$rainbowpie_ui_flag_3520da91": true, // EASTER EGGS
   "$rainbowpie_ui_flag_9920f05c": true, // Inventory UI Compass Panel
+  "$rainbowpie_ui_flag_2f8a5e27": true, // StartUI Play button more option
 
   // Debug
   "$rainbowpie_ui_debug": false,
