@@ -80,10 +80,10 @@
           "size": "$button_content_size",
           "layer": 12,
           "variables": [
-            {
-              "requires": "$default_state",
-              "$text_color": "$default_text_color"
-            }
+            // {
+            //   "requires": "$default_state",
+            //   "$text_color": "$default_text_color"
+            // }
           ],
           "controls": [
             {
