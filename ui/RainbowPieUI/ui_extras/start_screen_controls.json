@@ -1,6 +1,126 @@
 {
   "namespace": "rainbowpieui_start",
 
+  "treatment_store_button_status_panel@rainbowpie_ui_button.rainbowpie_ui_button_default": {
+    "$rainbowpie_localui_button_border_enabled|default": true,
+    "$rainbowpie_localui_button_controls": [
+      {
+        "button_background": {
+          "type": "image",
+          "ignored": "(not $button_image_visible)",
+          "size": "$button_image_size",
+          "texture": "textures/ui/White",
+          "color": "$rainbowpie_localui_button_color",
+          "alpha": "$rainbowpie_localui_button_alpha",
+          "layer": 1
+        }
+      },
+      {
+        "treatment_button_background": {
+          "type": "image",
+          "size": [ "150px - 2px - 2px", "32px - 2px - 2px" ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "texture": "$button_texture",
+          "layer": 3,
+          "visible": "(not (($button_texture = 'textures/ui/button_borderless_light') or ($button_texture = 'textures/ui/button_borderless_lighthover') or ($button_texture = 'textures/ui/button_borderless_lightpressed') or ($button_texture = 'textures/ui/disabledButtonNoBorder')))",
+          "$button_texture": "",
+          "variables": [
+            {
+              "requires": "$default_state",
+              "$button_texture": "$default_button_texture"
+            },
+            {
+              "requires": "$hover_state",
+              "$button_texture": "$hover_button_texture"
+            },
+            {
+              "requires": "$pressed_state",
+              "$button_texture": "$pressed_button_texture"
+            },
+            {
+              "requires": "$locked_state",
+              "$button_texture": "$locked_button_texture"
+            }
+          ]
+        }
+      },
+      {
+        "button_desc@rainbowpie_ui_button.button_desc": {}
+      },
+      {
+        "treatment_button_content": {
+          "type": "panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [ "150px - 2px - 6px", "32px - 2px - 6px" ],
+          "layer": 4,
+          "controls": [
+            {
+              "button_content": {
+                "type": "panel",
+                "offset": "$rainbowpie_localui_button_offset",
+                "layer": 3,
+                "controls": [
+                  {
+                    "content@$button_content": {
+                      "layer": 4
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "button_content": {
+          "type": "panel",
+          "$button_content_size|default": [ "100% - 6px", "100% - 6px" ],
+          "size": "$button_content_size",
+          "layer": 12,
+          "variables": [
+            {
+              "requires": "$default_state",
+              "$text_color": "$default_text_color"
+            }
+          ],
+          "controls": [
+            {
+              "button_content@rainbowpieui_start.startv2_big_button_panel": {
+                "controls": [
+                  {
+                    "button_icon": {
+                      "type": "image",
+                      "size": [ "100%y", "100% - 4px" ],
+                      "offset": [ 2, 0 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "texture": "($icon_theme_dir + '/' + $icon_texture_name)",
+                      "color": "$text_color",
+                      "layer": 8
+                    }
+                  },
+                  {
+                    "button_text@rainbowpie_ui_common.text_label_notheme": {
+                      "size": [ "100% - 30px", "default" ],
+                      "offset": [ 30, 0 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "text": "menu.store",
+                      "color": "$text_color",
+                      "layer": 8
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "inbox_icon": {
     "type": "panel",
     "controls": [
@@ -1699,7 +1819,9 @@
                                   "ignored": "(($trial and not $use_single_column_for_buttons) or (not $rainbowpie_ui_flag_0ab174e4))",
                                   "controls": [
                                     {
-                                      "store@start.store_button_stack": {}
+                                      "store@start.store_button_stack": {
+                                        "size": [ "100% + 2px", "100% + 2px" ]
+                                      }
                                     }
                                   ]
                                 }
