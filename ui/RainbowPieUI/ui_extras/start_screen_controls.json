@@ -2087,7 +2087,7 @@
                                   "anchor_to": "right_middle",
                                   "size": [ "20% - 2px", 10 ],
                                   "text_alignment": "right",
-                                  "text": "#version",
+                                  "text": "#text",
                                   "color": [ 0.85, 0.85, 0.85 ],
                                   "alpha": 0.85,
                                   "layer": 1,
@@ -2095,6 +2095,14 @@
                                   "bindings": [
                                     {
                                       "binding_name": "#version"
+                                    },
+                                    {
+                                      "binding_name": "#development_version"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "(#version + ' (' + #development_version + ')')",
+                                      "target_property_name": "#text"
                                     }
                                   ]
                                 }
