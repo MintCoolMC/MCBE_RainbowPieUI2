@@ -1,6 +1,14 @@
 {
   "namespace": "rainbowpieui_start",
 
+  "inbox_icon": {
+    "type": "panel",
+    "controls": [
+      { "inbox_bell_animated_icon@start.inbox_bell_animated_icon": {} },
+      { "inbox_button_unread_panel@start.inbox_button_unread_panel": {} }
+    ]
+  },
+
   "more_option_icon": {
     "type": "image",
     "size": [ 15, 15 ],
@@ -1793,6 +1801,7 @@
                                           },
                                           {
                                             "inbox_button@start.inbox_button": {
+                                              "$button_content": "rainbowpieui_start.inbox_icon",
                                               "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
                                               "$button_image_size": [ "100%", "100%" ],
                                               "size": [ "100%y", "100%" ]
