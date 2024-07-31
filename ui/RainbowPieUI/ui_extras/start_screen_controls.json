@@ -1685,6 +1685,7 @@
                               },
                               {
                                 "store_button@rainbowpieui_start.startv2_big_button_template": {
+                                  "ignored": "(($trial and not $use_single_column_for_buttons) or $rainbowpie_ui_flag_0ab174e4)",
                                   "$icon_texture_name": "marketplace",
                                   "$pressed_button_name": "button.menu_store",
                                   "$button_text": "menu.store",
@@ -1692,9 +1693,22 @@
                                 }
                               },
                               {
+                                "store_button_with_treatments": {
+                                  "type": "panel",
+                                  "size": [ "100%", 32 ],
+                                  "ignored": "(($trial and not $use_single_column_for_buttons) or (not $rainbowpie_ui_flag_0ab174e4))",
+                                  "controls": [
+                                    {
+                                      "store@start.store_button_stack": {}
+                                    }
+                                  ]
+                                }
+                              },
+                              {
                                 "store_button_padding": {
                                   "type": "panel",
-                                  "size": [ 0, 4 ]
+                                  "size": [ 0, 4 ],
+                                  "ignored": "($trial and not $use_single_column_for_buttons)"
                                 }
                               },
                               {

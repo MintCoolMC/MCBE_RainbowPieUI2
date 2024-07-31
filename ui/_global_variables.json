@@ -162,6 +162,7 @@
   "$rainbowpie_ui_flag_9920f05c": true, // Inventory UI Compass Panel
   "$rainbowpie_ui_flag_2f8a5e27": true, // StartUI Play button more option
   "$rainbowpie_ui_flag_50d7b9e9": true, // StartUI Servers Button
+  "$rainbowpie_ui_flag_0ab174e4": true, // StartUI Store Button Treatments
 
   // Debug
   "$rainbowpie_ui_debug": false,
