@@ -1103,6 +1103,25 @@
                 "size": [ "100%", 0 ],
                 "layer": 50,
                 "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled))",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "inventory_bindings_panel",
+                    "source_property_name": "#is_inventory_slot_selected",
+                    "target_property_name": "#is_inventory_slot_selected"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "hotbar_bindings_panel",
+                    "source_property_name": "#is_hotbar_slot_selected",
+                    "target_property_name": "#is_hotbar_slot_selected"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not (#is_inventory_slot_selected or #is_hotbar_slot_selected))",
+                    "target_property_name": "#visible"
+                  }
+                ],
                 "controls": [
                   {
                     "armor_input_panel@rainbowpie_module_inventory_actions.armor_input_panel": {
@@ -1149,7 +1168,26 @@
                 "$count_text": "All",
                 "consume_hover_events": false,
                 "size": [ "100%", "100%x" ],
-                "layer": 1
+                "layer": 1,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "inventory_bindings_panel",
+                    "source_property_name": "#is_inventory_slot_selected",
+                    "target_property_name": "#is_inventory_slot_selected"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "hotbar_bindings_panel",
+                    "source_property_name": "#is_hotbar_slot_selected",
+                    "target_property_name": "#is_hotbar_slot_selected"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not (#is_inventory_slot_selected or #is_hotbar_slot_selected))",
+                    "target_property_name": "#enabled"
+                  }
+                ]
               }
             },
             {
