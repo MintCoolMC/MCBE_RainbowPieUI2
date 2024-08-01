@@ -254,6 +254,7 @@
         "value": [
           {
             "inventory_header@rainbowpie_ui_inventory.header": {
+              "$rainbowpie_localui_inventoryheader_search_ignored": true,
               "$rainbowpie_localui_inventoryheader_title": "#name_label",
               "$rainbowpie_localui_inventoryheader_title_bindings": [
                 {

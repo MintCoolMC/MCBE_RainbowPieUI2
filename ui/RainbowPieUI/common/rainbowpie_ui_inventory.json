@@ -132,6 +132,7 @@
     "$rainbowpie_localui_inventoryheader_title_border1_size|default": [ 4, 0 ],
     "$rainbowpie_localui_inventoryheader_title_border2_size|default": [ 4, 0 ],
 
+    "$rainbowpie_localui_inventoryheader_search_ignored|default": false,
     "controls": [
       {
         "debug01@rainbowpie_ui_common.debug_draw": {
@@ -218,7 +219,7 @@
                                             "source_control_name": "show_search_box",
                                             "source_property_name": "(not #toggle_state)",
                                             "target_property_name": "#visible",
-                                            "ignored": "((not $rainbowpie_ui_flag_d6bb54d8) or (not $rainbowpie_ui_flag_84df7492))"
+                                           "ignored": "((not $rainbowpie_ui_flag_d6bb54d8) or (not $rainbowpie_ui_flag_84df7492) or $rainbowpie_localui_inventoryheader_search_ignored)"
                                           }
                                         ],
                                         "controls": [
@@ -235,7 +236,7 @@
                                       "search_panel": {
                                         "type": "panel",
                                         "size": [ "100%c", "100%" ],
-                                        "ignored": "((not $rainbowpie_ui_flag_d6bb54d8) or (not $rainbowpie_ui_flag_84df7492))",
+                                        "ignored": "((not $rainbowpie_ui_flag_d6bb54d8) or (not $rainbowpie_ui_flag_84df7492) or $rainbowpie_localui_inventoryheader_search_ignored)",
                                         "controls": [
                                           {
                                             "search_inputbox": {
