@@ -1322,37 +1322,6 @@
         "hotbar_bindings_panel@rainbowpie_module_chest_fastpick.hotbar_bindings_panel": {}
       },
       {
-        "test": {
-          "type": "label",
-          "text": "#text",
-          "layer": 100,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "inventory_bindings_panel",
-              "source_property_name": "#inventory_selected_item_id_aux",
-              "target_property_name": "#inventory_selected_item_id_aux"
-            },
-            {
-              "binding_type": "view",
-              "source_control_name": "hotbar_bindings_panel",
-              "source_property_name": "#hotbar_selected_item_id_aux",
-              "target_property_name": "#hotbar_selected_item_id_aux"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#inventory_selected_item_id_aux + #hotbar_selected_item_id_aux)",
-              "target_property_name": "#selected_item_id_aux"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "('ID: ' + #selected_item_id_aux)",
-              "target_property_name": "#text"
-            }
-          ]
-        }
-      },
-      {
         "drop_input_panel@rainbowpie_module_chest_fastpick.pickup_input_panel": {
           "$button_take_all_place_all": "button.drop_all",
           "size": "$drop_button_size",
