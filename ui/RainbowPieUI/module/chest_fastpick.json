@@ -622,7 +622,7 @@
       },
       {
         "binding_type": "view",
-        "source_property_name": "(#selected_item_id_aux_0 or #selected_item_id_aux_1 or #selected_item_id_aux_2 or #selected_item_id_aux_3 or #selected_item_id_aux_4 or #selected_item_id_aux_5 or #selected_item_id_aux_6 or #selected_item_id_aux_7 or #selected_item_id_aux_8 or #selected_item_id_aux_9 or #selected_item_id_aux_10 or #selected_item_id_aux_11 or #selected_item_id_aux_12 or #selected_item_id_aux_13 or #selected_item_id_aux_14 or #selected_item_id_aux_15 or #selected_item_id_aux_16 or #selected_item_id_aux_17 or #selected_item_id_aux_18 or #selected_item_id_aux_19 or #selected_item_id_aux_20 or #selected_item_id_aux_21 or #selected_item_id_aux_22 or #selected_item_id_aux_23 or #selected_item_id_aux_24 or #selected_item_id_aux_25 or #selected_item_id_aux_26)",
+        "source_property_name": "(#selected_item_id_aux_0 + #selected_item_id_aux_1 + #selected_item_id_aux_2 + #selected_item_id_aux_3 + #selected_item_id_aux_4 + #selected_item_id_aux_5 + #selected_item_id_aux_6 + #selected_item_id_aux_7 + #selected_item_id_aux_8 + #selected_item_id_aux_9 + #selected_item_id_aux_10 + #selected_item_id_aux_11 + #selected_item_id_aux_12 + #selected_item_id_aux_13 + #selected_item_id_aux_14 + #selected_item_id_aux_15 + #selected_item_id_aux_16 + #selected_item_id_aux_17 + #selected_item_id_aux_18 + #selected_item_id_aux_19 + #selected_item_id_aux_20 + #selected_item_id_aux_21 + #selected_item_id_aux_22 + #selected_item_id_aux_23 + #selected_item_id_aux_24 + #selected_item_id_aux_25 + #selected_item_id_aux_26)",
         "target_property_name": "#inventory_selected_item_id_aux"
       }
     ]
@@ -796,7 +796,7 @@
       },
       {
         "binding_type": "view",
-        "source_property_name": "(#selected_item_id_aux_0 or #selected_item_id_aux_1 or #selected_item_id_aux_2 or #selected_item_id_aux_3 or #selected_item_id_aux_4 or #selected_item_id_aux_5 or #selected_item_id_aux_6 or #selected_item_id_aux_7 or #selected_item_id_aux_8)",
+        "source_property_name": "(#selected_item_id_aux_0 + #selected_item_id_aux_1 + #selected_item_id_aux_2 + #selected_item_id_aux_3 + #selected_item_id_aux_4 + #selected_item_id_aux_5 + #selected_item_id_aux_6 + #selected_item_id_aux_7 + #selected_item_id_aux_8)",
         "target_property_name": "#hotbar_selected_item_id_aux"
       }
     ]
@@ -1320,6 +1320,37 @@
       },
       {
         "hotbar_bindings_panel@rainbowpie_module_chest_fastpick.hotbar_bindings_panel": {}
+      },
+      {
+        "test": {
+          "type": "label",
+          "text": "#text",
+          "layer": 100,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "inventory_bindings_panel",
+              "source_property_name": "#inventory_selected_item_id_aux",
+              "target_property_name": "#inventory_selected_item_id_aux"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "hotbar_bindings_panel",
+              "source_property_name": "#hotbar_selected_item_id_aux",
+              "target_property_name": "#hotbar_selected_item_id_aux"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#inventory_selected_item_id_aux + #hotbar_selected_item_id_aux)",
+              "target_property_name": "#selected_item_id_aux"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('ID: ' + #selected_item_id_aux)",
+              "target_property_name": "#text"
+            }
+          ]
+        }
       },
       {
         "drop_input_panel@rainbowpie_module_chest_fastpick.pickup_input_panel": {
