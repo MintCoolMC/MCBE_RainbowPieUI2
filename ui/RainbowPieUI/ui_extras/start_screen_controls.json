@@ -52,6 +52,7 @@
           "anchor_to": "center",
           "texture": "$button_texture",
           "layer": 3,
+          "ignored": "(not $is_treatment_button)",
           "visible": "(not (($button_texture = 'textures/ui/button_borderless_light') or ($button_texture = 'textures/ui/button_borderless_lighthover') or ($button_texture = 'textures/ui/button_borderless_lightpressed') or ($button_texture = 'textures/ui/disabledButtonNoBorder')))",
           "$button_texture": "",
           "variables": [
@@ -84,6 +85,7 @@
           "anchor_to": "center",
           "size": [ "150px - 2px - 6px", "32px - 2px - 6px" ],
           "layer": 4,
+          "ignored": "(not $is_treatment_button)",
           "controls": [
             {
               "button_content": {
