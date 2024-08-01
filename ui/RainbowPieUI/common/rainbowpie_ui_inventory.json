@@ -74,7 +74,7 @@
     "texture": "$rainbowpie_ui_theme_inventory_bgicon_texture_container",
     "alpha": "$rainbowpie_ui_theme_inventory_bgicon_alpha",
     "fill": "$rainbowpie_ui_theme_inventory_bgicon_fill",
-    "layer": 3
+    "layer": 4
   },
 
   "header_background": {
@@ -218,7 +218,7 @@
                                             "source_control_name": "show_search_box",
                                             "source_property_name": "(not #toggle_state)",
                                             "target_property_name": "#visible",
-                                            "ignored": "(not $rainbowpie_ui_flag_d6bb54d8)"
+                                            "ignored": "((not $rainbowpie_ui_flag_d6bb54d8) or (not $rainbowpie_ui_flag_84df7492))"
                                           }
                                         ],
                                         "controls": [
@@ -235,7 +235,7 @@
                                       "search_panel": {
                                         "type": "panel",
                                         "size": [ "100%c", "100%" ],
-                                        "ignored": "(not $rainbowpie_ui_flag_d6bb54d8)",
+                                        "ignored": "((not $rainbowpie_ui_flag_d6bb54d8) or (not $rainbowpie_ui_flag_84df7492))",
                                         "controls": [
                                           {
                                             "search_inputbox": {
