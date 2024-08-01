@@ -75,7 +75,24 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "((not (#item_id_aux = -1)) and ((#inventory_selected_item = -1) or (#inventory_selected_item = #item_id_aux)))",
+              "source_control_name": "inventory_bindings_panel",
+              "source_property_name": "#inventory_selected_item_id_aux",
+              "target_property_name": "#inventory_selected_item_id_aux"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "hotbar_bindings_panel",
+              "source_property_name": "#hotbar_selected_item_id_aux",
+              "target_property_name": "#hotbar_selected_item_id_aux"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#inventory_selected_item_id_aux + #hotbar_selected_item_id_aux)",
+              "target_property_name": "#selected_item_id_aux"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not (#item_id_aux = -1)) and ((#selected_item_id_aux = 0) or (#selected_item_id_aux = #item_id_aux)) and ((#inventory_selected_item = -1) or (#inventory_selected_item = #item_id_aux)))",
               "target_property_name": "#visible"
             }
           ],
@@ -106,6 +123,681 @@
             }
           ]
         }
+      }
+    ]
+  },
+
+  "binding_slot_item": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_name": "#is_selected_slot",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      },
+      {
+        "binding_name": "#item_id_aux",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#item_id_aux * #is_selected_slot)",
+        "target_property_name": "#selected_item_id_aux"
+      }
+    ]
+  },
+
+  "inventory_bindings_panel": {
+    "type": "stack_panel",
+    "collection_name": "inventory_items",
+    "size": [ 0, 0 ],
+    "$item_collection_name": "inventory_items",
+    "controls": [
+      {
+        "inventory_bindings_slot_26@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 26
+        }
+      },
+      {
+        "inventory_bindings_slot_25@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 25
+        }
+      },
+      {
+        "inventory_bindings_slot_24@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 24
+        }
+      },
+      {
+        "inventory_bindings_slot_23@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 23
+        }
+      },
+      {
+        "inventory_bindings_slot_22@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 22
+        }
+      },
+      {
+        "inventory_bindings_slot_21@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 21
+        }
+      },
+      {
+        "inventory_bindings_slot_20@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 20
+        }
+      },
+      {
+        "inventory_bindings_slot_19@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 19
+        }
+      },
+      {
+        "inventory_bindings_slot_18@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 18
+        }
+      },
+      {
+        "inventory_bindings_slot_17@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 17
+        }
+      },
+      {
+        "inventory_bindings_slot_16@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 16
+        }
+      },
+      {
+        "inventory_bindings_slot_15@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 15
+        }
+      },
+      {
+        "inventory_bindings_slot_14@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 14
+        }
+      },
+      {
+        "inventory_bindings_slot_13@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 13
+        }
+      },
+      {
+        "inventory_bindings_slot_12@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 12
+        }
+      },
+      {
+        "inventory_bindings_slot_11@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 11
+        }
+      },
+      {
+        "inventory_bindings_slot_10@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 10
+        }
+      },
+      {
+        "inventory_bindings_slot_9@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 9
+        }
+      },
+      {
+        "inventory_bindings_slot_8@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 8
+        }
+      },
+      {
+        "inventory_bindings_slot_7@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 7
+        }
+      },
+      {
+        "inventory_bindings_slot_6@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 6
+        }
+      },
+      {
+        "inventory_bindings_slot_5@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 5
+        }
+      },
+      {
+        "inventory_bindings_slot_4@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 4
+        }
+      },
+      {
+        "inventory_bindings_slot_3@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 3
+        }
+      },
+      {
+        "inventory_bindings_slot_2@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 2
+        }
+      },
+      {
+        "inventory_bindings_slot_1@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 1
+        }
+      },
+      {
+        "inventory_bindings_slot_0@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 0
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_26",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_26"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_25",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_25"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_24",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_24"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_23",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_23"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_22",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_22"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_21",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_21"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_20",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_20"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_19",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_19"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_18",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_18"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_17",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_17"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_16",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_16"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_15",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_15"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_14",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_14"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_13",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_13"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_12",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_12"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_11",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_11"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_10",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_10"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_9",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_9"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_8",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_8"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_7",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_7"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_6",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_6"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_5",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_5"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_4",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_4"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_3",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_3"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_2",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_2"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_1",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_1"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_0",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_0"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#is_selected_slot_0 or #is_selected_slot_1 or #is_selected_slot_2 or #is_selected_slot_3 or #is_selected_slot_4 or #is_selected_slot_5 or #is_selected_slot_6 or #is_selected_slot_7 or #is_selected_slot_8 or #is_selected_slot_9 or #is_selected_slot_10 or #is_selected_slot_11 or #is_selected_slot_12 or #is_selected_slot_13 or #is_selected_slot_14 or #is_selected_slot_15 or #is_selected_slot_16 or #is_selected_slot_17 or #is_selected_slot_18 or #is_selected_slot_19 or #is_selected_slot_20 or #is_selected_slot_21 or #is_selected_slot_22 or #is_selected_slot_23 or #is_selected_slot_24 or #is_selected_slot_25 or #is_selected_slot_26)",
+        "target_property_name": "#is_inventory_slot_selected"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_26",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_26"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_25",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_25"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_24",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_24"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_23",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_23"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_22",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_22"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_21",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_21"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_20",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_20"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_19",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_19"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_18",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_18"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_17",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_17"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_16",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_16"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_15",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_15"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_14",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_14"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_13",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_13"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_12",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_12"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_11",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_11"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_10",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_10"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_9",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_9"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_8",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_8"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_7",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_7"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_6",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_6"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_5",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_5"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_4",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_4"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_3",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_3"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_2",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_2"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_1",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_1"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_bindings_slot_0",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_0"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#selected_item_id_aux_0 or #selected_item_id_aux_1 or #selected_item_id_aux_2 or #selected_item_id_aux_3 or #selected_item_id_aux_4 or #selected_item_id_aux_5 or #selected_item_id_aux_6 or #selected_item_id_aux_7 or #selected_item_id_aux_8 or #selected_item_id_aux_9 or #selected_item_id_aux_10 or #selected_item_id_aux_11 or #selected_item_id_aux_12 or #selected_item_id_aux_13 or #selected_item_id_aux_14 or #selected_item_id_aux_15 or #selected_item_id_aux_16 or #selected_item_id_aux_17 or #selected_item_id_aux_18 or #selected_item_id_aux_19 or #selected_item_id_aux_20 or #selected_item_id_aux_21 or #selected_item_id_aux_22 or #selected_item_id_aux_23 or #selected_item_id_aux_24 or #selected_item_id_aux_25 or #selected_item_id_aux_26)",
+        "target_property_name": "#inventory_selected_item_id_aux"
+      }
+    ]
+  },
+
+  "hotbar_bindings_panel": {
+    "type": "stack_panel",
+    "collection_name": "hotbar_items",
+    "size": [ 0, 0 ],
+    "$item_collection_name": "hotbar_items",
+    "controls": [
+      {
+        "hotbar_bindings_slot_8@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 8
+        }
+      },
+      {
+        "hotbar_bindings_slot_7@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 7
+        }
+      },
+      {
+        "hotbar_bindings_slot_6@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 6
+        }
+      },
+      {
+        "hotbar_bindings_slot_5@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 5
+        }
+      },
+      {
+        "hotbar_bindings_slot_4@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 4
+        }
+      },
+      {
+        "hotbar_bindings_slot_3@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 3
+        }
+      },
+      {
+        "hotbar_bindings_slot_2@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 2
+        }
+      },
+      {
+        "hotbar_bindings_slot_1@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 1
+        }
+      },
+      {
+        "hotbar_bindings_slot_0@rainbowpie_module_chest_fastpick.binding_slot_item": {
+          "collection_index": 0
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_8",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_8"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_7",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_7"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_6",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_6"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_5",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_5"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_4",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_4"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_3",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_3"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_2",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_2"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_1",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_1"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_0",
+        "source_property_name": "#is_selected_slot",
+        "target_property_name": "#is_selected_slot_0"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#is_selected_slot_0 or #is_selected_slot_1 or #is_selected_slot_2 or #is_selected_slot_3 or #is_selected_slot_4 or #is_selected_slot_5 or #is_selected_slot_6 or #is_selected_slot_7 or #is_selected_slot_8)",
+        "target_property_name": "#is_hotbar_slot_selected"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_8",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_8"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_7",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_7"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_6",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_6"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_5",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_5"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_4",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_4"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_3",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_3"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_2",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_2"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_1",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_1"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hotbar_bindings_slot_0",
+        "source_property_name": "#selected_item_id_aux",
+        "target_property_name": "#selected_item_id_aux_0"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#selected_item_id_aux_0 or #selected_item_id_aux_1 or #selected_item_id_aux_2 or #selected_item_id_aux_3 or #selected_item_id_aux_4 or #selected_item_id_aux_5 or #selected_item_id_aux_6 or #selected_item_id_aux_7 or #selected_item_id_aux_8)",
+        "target_property_name": "#hotbar_selected_item_id_aux"
       }
     ]
   },
@@ -623,6 +1315,12 @@
     "$pickup_button_size|default": [ 22, 22 ],
     "$pickup_button_offset|default": [ 20, -2 ],
     "controls": [
+      {
+        "inventory_bindings_panel@rainbowpie_module_chest_fastpick.inventory_bindings_panel": {}
+      },
+      {
+        "hotbar_bindings_panel@rainbowpie_module_chest_fastpick.hotbar_bindings_panel": {}
+      },
       {
         "drop_input_panel@rainbowpie_module_chest_fastpick.pickup_input_panel": {
           "$button_take_all_place_all": "button.drop_all",
