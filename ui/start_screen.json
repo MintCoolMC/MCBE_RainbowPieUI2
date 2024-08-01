@@ -1,6 +1,10 @@
 {
   "namespace": "start",
 
+  "store_button": {
+    "$is_treatment_button": false
+  },
+
   "store_button_stack/store_button": {
     "variables": [
       {

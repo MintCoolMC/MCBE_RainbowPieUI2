@@ -2,6 +2,7 @@
   "namespace": "rainbowpieui_start",
 
   "treatment_store_button_status_panel@rainbowpie_ui_button.rainbowpie_ui_button_default": {
+    "$is_treatment_button|default": true,
     "$rainbowpie_localui_button_border_enabled|default": true,
     "$rainbowpie_localui_button_controls": [
       {
@@ -13,6 +14,34 @@
           "color": "$rainbowpie_localui_button_color",
           "alpha": "$rainbowpie_localui_button_alpha",
           "layer": 1
+        }
+      },
+      {
+        "treatment_button_color_background": {
+          "type": "image",
+          "ignored": "(not $is_treatment_button)",
+          "size": "$button_image_size",
+          "texture": "textures/ui/White",
+          "color": "$bg_color",
+          "layer": 2,
+          "variables": [
+            {
+              "requires": "$default_state",
+              "$bg_color": "$light_border_default_color"
+            },
+            {
+              "requires": "$hover_state",
+              "$bg_color": "$light_border_hover_color"
+            },
+            {
+              "requires": "$pressed_state",
+              "$bg_color": "$light_border_pressed_color"
+            },
+            {
+              "requires": "$locked_state",
+              "$bg_color": "$light_border_locked_color"
+            }
+          ]
         }
       },
       {
@@ -80,10 +109,10 @@
           "size": "$button_content_size",
           "layer": 12,
           "variables": [
-            // {
-            //   "requires": "$default_state",
-            //   "$text_color": "$default_text_color"
-            // }
+            {
+              "requires": "($is_treatment_button and $default_state)",
+              "$text_color": "$default_text_color"
+            }
           ],
           "controls": [
             {
