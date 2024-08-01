@@ -1,6 +1,37 @@
 {
   "namespace": "rainbowpie_ui_inventory",
 
+  "hide_search_icon": {
+    "type": "image",
+    "texture": "textures/ui/chevron_right",
+    "size": [ "70%", "70%" ],
+    "color": "$text_color"
+  },
+
+  "search_box_place_holder_control": {
+    "type": "panel",
+    "size": [ "100%c", "100%cm" ],
+    "controls": [
+      {
+        "search_icon": {
+          "type": "image",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [ 10, 10 ],
+          "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/search')",
+          "alpha": 0.5
+        }
+      },
+      {
+        "place_holder_text@common.text_edit_box_place_holder_label": {
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [ 12, 0 ]
+        }
+      }
+    ]
+  },
+
   "search_icon": {
     "type": "image",
     "size": [ "50%", "50%" ],
@@ -8,7 +39,6 @@
   },
 
   "search_button_toggle_base@common_toggles.light_ui_toggle": {
-    "$rainbowpie_localui_button_default_alpha": 0.0,
     "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
     "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
     "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
@@ -140,7 +170,7 @@
                         {
                           "title_panel": {
                             "type": "panel",
-                            "size": [ "100%c", "100%" ],
+                            "size": [ "fill", "100%" ],
                             "max_size": [ "100% - 100%y - 8px", "100%" ],
                             "clips_children": true,
                             "controls": [
@@ -167,8 +197,7 @@
                         {
                           "header_button_panel": {
                             "type": "panel",
-                            "size": [ "fill", "100%" ],
-                            "min_size": [ "100%c", "100%" ],
+                            "size": [ "100%c", "100%" ],
                             "controls": [
                               {
                                 "header_stack_panel": {
@@ -209,19 +238,79 @@
                                         "ignored": "(not $rainbowpie_ui_flag_d6bb54d8)",
                                         "controls": [
                                           {
+                                            "search_inputbox": {
+                                              "type": "panel",
+                                              "size": [ "100%c", "100%" ],
+                                              "bindings": [
+                                                {
+                                                  "binding_type": "view",
+                                                  "source_control_name": "show_search_box",
+                                                  "source_property_name": "#toggle_state",
+                                                  "target_property_name": "#visible"
+                                                }
+                                              ],
+                                              "controls": [
+                                                {
+                                                  "back_button@rainbowpie_ui_inventory.search_button_toggle_base": {
+                                                    "$button_content": "rainbowpie_ui_inventory.hide_search_icon",
+                                                    "$button_image_size": [ "100%", "100%" ],
+                                                    "anchor_from": "left_middle",
+                                                    "anchor_to": "left_middle",
+                                                    "size": [ "100%y", "76%" ],
+                                                    "$toggle_group_forced_index": 1001,
+                                                    "$toggle_view_binding_name": "hide_search_box",
+                                                    "layer": 10,
+                                                    "bindings": [
+                                                      {
+                                                        "binding_type": "view",
+                                                        "source_control_name": "show_search_box",
+                                                        "source_property_name": "#toggle_state",
+                                                        "target_property_name": "#enabled"
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                {
+                                                  "search_text_box@common.text_edit_box": {
+                                                    "$rainbowpie_localui_editbox_enabled": true,
+                                                    "$edit_box_indent_size": [ "100%", "100%" ],
+                                                    "anchor_from": "right_middle",
+                                                    "anchor_to": "right_middle",
+                                                    "size": [ "440%y", "76%" ],
+                                                    "$text_box_name": "inventoryui_search_text_box",
+                                                    "$text_edit_text_control": "inventoryui_search_text_box_display_text",
+                                                    "$place_holder_control": "rainbowpie_ui_inventory.search_box_place_holder_control",
+                                                    "$place_holder_text": "itemGroup.search",
+                                                    "focus_wrap_enabled": false,
+                                                    "max_length": 32767,
+                                                    "layer": 12
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          {
                                             "search_button@rainbowpie_ui_inventory.search_button_toggle_base": {
+                                              "$rainbowpie_localui_button_default_alpha": 0.0,
                                               "$button_image_size": [ "100%", "100%" ],
-                                              "anchor_from": "top_right",
-                                              "anchor_to": "top_right",
+                                              "anchor_from": "center",
+                                              "anchor_to": "center",
                                               "size": [ "100%y", "100%" ],
                                               "$toggle_group_forced_index": 1000,
                                               "$toggle_view_binding_name": "show_search_box",
+                                              "layer": 10,
                                               "bindings": [
                                                 {
                                                   "binding_type": "view",
                                                   "source_control_name": "show_search_box",
                                                   "source_property_name": "(not #toggle_state)",
                                                   "target_property_name": "#enabled"
+                                                },
+                                                {
+                                                  "binding_type": "view",
+                                                  "source_control_name": "show_search_box",
+                                                  "source_property_name": "(not #toggle_state)",
+                                                  "target_property_name": "#visible"
                                                 }
                                               ]
                                             }
