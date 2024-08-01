@@ -1359,7 +1359,29 @@
           "offset": "$drop_button_offset",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "layer": 50
+          "layer": 50,
+          "bindings": [
+            {
+              "binding_name": "#inventory_selected_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inventory_bindings_panel",
+              "source_property_name": "#is_inventory_slot_selected",
+              "target_property_name": "#is_inventory_slot_selected"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "hotbar_bindings_panel",
+              "source_property_name": "#is_hotbar_slot_selected",
+              "target_property_name": "#is_hotbar_slot_selected"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not (#is_inventory_slot_selected or #is_hotbar_slot_selected)) and (#inventory_selected_item = -1))",
+              "target_property_name": "#visible"
+            }
+          ]
         }
       },
       {
@@ -1431,7 +1453,29 @@
           "offset": "$drop_button_offset",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "layer": 1
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#inventory_selected_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inventory_bindings_panel",
+              "source_property_name": "#is_inventory_slot_selected",
+              "target_property_name": "#is_inventory_slot_selected"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "hotbar_bindings_panel",
+              "source_property_name": "#is_hotbar_slot_selected",
+              "target_property_name": "#is_hotbar_slot_selected"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not (#is_inventory_slot_selected or #is_hotbar_slot_selected)) and (#inventory_selected_item = -1))",
+              "target_property_name": "#enabled"
+            }
+          ]
         }
       },
       {
