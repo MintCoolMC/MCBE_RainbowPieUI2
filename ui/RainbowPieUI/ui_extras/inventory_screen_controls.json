@@ -51,7 +51,7 @@
     "offset": "$compass_panel_entrance_offset",
     "$compass_panel_entrance_offset": [ 0, "-45%" ],
     "$compass_panel_exit_offset": [ 0, "-55%" ],
-    "layer": 200,
+    "layer": 8,
     "color": "$rainbowpie_ui_theme_inventory_background_color",
     "alpha": "$rainbowpie_ui_theme_inventory_background_alpha",
     "anims": [
