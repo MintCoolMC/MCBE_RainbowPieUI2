@@ -554,7 +554,7 @@
     "controls": [
       {
         "hotbar_hidehud_button@rainbowpieui_hud.borderless_button": {
-          "ignored": "(($rainbowpie_ui_flag_hud_hotbar_mode = '0') or $rainbowpie_ui_flag_hud_hidehud_clickspace)",
+          "ignored": "(($rainbowpie_ui_flag_hud_hotbar_mode = 0) or $rainbowpie_ui_flag_hud_hidehud_clickspace)",
           "$pressed_button_name": "button.hide_gui_all",
           "enabled": true,
           "anchor_from": "bottom_middle",
@@ -589,7 +589,7 @@
       },
       {
         "clickspace_hidehud": {
-          "ignored": "(($rainbowpie_ui_flag_hud_hotbar_mode = '0') or not $rainbowpie_ui_flag_hud_hidehud_clickspace)",
+          "ignored": "(($rainbowpie_ui_flag_hud_hotbar_mode = 0) or not $rainbowpie_ui_flag_hud_hidehud_clickspace)",
           "type": "input_panel",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
@@ -772,7 +772,7 @@
       },
       {
         "rainbowpie_hotbar@rainbowpieui_hud.rainbowpie_hotbar": {
-          "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = '0')",
+          "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = 0)",
           "layer": 22,
           "bindings": [
             {
@@ -909,7 +909,7 @@
             },
             {
               "number_of_days_played": {
-                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
+                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = 2)",
                 "type": "image",
                 "size": [ "100%c + 6px", 12 ],
                 "texture": "textures/ui/Black",
@@ -949,7 +949,7 @@
             },
             {
               "player_position": {
-                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
+                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = 2)",
                 "type": "image",
                 "size": [ "100%c + 6px", 12 ],
                 "texture": "textures/ui/Black",
@@ -1176,7 +1176,7 @@
             },
             {
               "player_position": {
-                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
+                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = 2)",
                 "type": "image",
                 "size": [ "100%c + 6px", 12 ],
                 "texture": "textures/ui/Black",
@@ -1216,7 +1216,7 @@
             },
             {
               "number_of_days_played": {
-                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
+                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = 2)",
                 "type": "image",
                 "size": [ "100%c + 6px", 12 ],
                 "texture": "textures/ui/Black",
@@ -1256,7 +1256,7 @@
             },
             {
               "player_position_padding": {
-                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
+                "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = 2)",
                 "type": "panel",
                 "size": [ 12, 12 ],
                 "bindings": [
@@ -1279,7 +1279,7 @@
                     "binding_name_override": "#visible",
                     "binding_condition": "always",
                     "binding_type": "global",
-                    "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')"
+                    "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = 2)"
                   }
                 ]
               }
@@ -1640,7 +1640,7 @@
           "layer": 2,
           "variables": [
             {
-              "requires": "($rainbowpie_ui_flag_hud_hotbar_mode = '1')",
+              "requires": "($rainbowpie_ui_flag_hud_hotbar_mode = 1)",
               "$offset": [ 0, -1.5 ]
             }
           ]
@@ -1697,7 +1697,7 @@
       },
       {
         "background_v1": {
-          "visible": "($rainbowpie_ui_flag_hud_hotbar_mode = '1')",
+          "visible": "($rainbowpie_ui_flag_hud_hotbar_mode = 1)",
           "type": "image",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
@@ -1717,7 +1717,7 @@
       },
       {
         "background_v2": {
-          "visible": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
+          "visible": "($rainbowpie_ui_flag_hud_hotbar_mode = 2)",
           "type": "image",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
@@ -1729,7 +1729,7 @@
           "controls": [
             {
               "player_position_text@rainbowpie_ui_common.text_label_notheme": {
-                "ignored": "(not ($rainbowpie_ui_flag_hud_hotbar_mode = '2'))",
+                "ignored": "(not ($rainbowpie_ui_flag_hud_hotbar_mode = 2))",
                 "offset": [ 2, 1.5 ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
@@ -1833,7 +1833,7 @@
     "controls": [
       {
         "hotbar_slot_selected_image_rounded": {
-          "ignored": "((not $rainbowpie_ui_flag_hud_hotbar_rounded) or ($rainbowpie_ui_flag_hud_hotbar_mode = '2'))",
+          "ignored": "((not $rainbowpie_ui_flag_hud_hotbar_rounded) or ($rainbowpie_ui_flag_hud_hotbar_mode = 2))",
           "type": "panel",
           "size": [ 20, 24 ],
           "controls": [
@@ -1907,7 +1907,7 @@
       },
       {
         "hotbar_slot_selected_image@rainbowpieui_hud.hotbar_slot_selected_image": {
-          "ignored": "(not ((not $rainbowpie_ui_flag_hud_hotbar_rounded) or ($rainbowpie_ui_flag_hud_hotbar_mode = '2')))"
+          "ignored": "(not ((not $rainbowpie_ui_flag_hud_hotbar_rounded) or ($rainbowpie_ui_flag_hud_hotbar_mode = 2)))"
         }
       },
       {
