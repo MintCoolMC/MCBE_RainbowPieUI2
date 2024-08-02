@@ -114,6 +114,7 @@
   "$rainbowpie_ui_flag_flying_item_renderer": false, // Use flying_item_renderer on mouse mode
   "$rainbowpie_ui_flag_sign_edit_preview_enabled": true,
   "$rainbowpie_ui_flag_hud_durability_warning": true,
+  "$rainbowpie_ui_flag_inventory_compass_postion": 1, // 0:TOP 1:BOTTOM
 
   // Item ID Flags
   "$rainbowpie_ui_flag_item_clock_id": 401,

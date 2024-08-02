@@ -5,8 +5,8 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
-    "to": [ 0, "-55%" ],
-    "from": [ 0, "-45%" ],
+    "to": "$compass_panel_exit_offset",
+    "from": "$compass_panel_entrance_offset",
     "play_event": "screen.exit_push",
     "end_event": "screen.exit_end"
   },
@@ -15,8 +15,8 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
-    "to": [ 0, "-55%" ],
-    "from": [ 0, "-45%" ],
+    "to": "$compass_panel_exit_offset",
+    "from": "$compass_panel_entrance_offset",
     "play_event": "screen.exit_pop",
     "end_event": "screen.exit_end"
   },
@@ -25,8 +25,8 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
-    "to": [ 0, "-45%" ],
-    "from": [ 0, "-55%" ],
+    "to": "$compass_panel_entrance_offset",
+    "from": "$compass_panel_exit_offset",
     "play_event": "screen.entrance_push",
     "end_event": "screen.entrance_end"
   },
@@ -35,8 +35,8 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
-    "to": [ 0, "-45%" ],
-    "from": [ 0, "-55%" ],
+    "to": "$compass_panel_entrance_offset",
+    "from": "$compass_panel_exit_offset",
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
   },
@@ -48,7 +48,9 @@
     "size": [ "100%c + 5px", "100%c + 5px" ],
     "anchor_from": "center",
     "anchor_to": "center",
-    "offset": [ 0, "-45%" ],
+    "offset": "$compass_panel_entrance_offset",
+    "$compass_panel_entrance_offset": [ 0, "-45%" ],
+    "$compass_panel_exit_offset": [ 0, "-55%" ],
     "layer": 200,
     "color": "$rainbowpie_ui_theme_inventory_background_color",
     "alpha": "$rainbowpie_ui_theme_inventory_background_alpha",
@@ -59,6 +61,13 @@
       "@rainbowpieui_crafting.compass_panel_entrance_animation_pop"
     ],
     "animation_reset_name": "screen_animation_reset",
+    "variables": [
+      {
+        "requires": "($rainbowpie_ui_flag_inventory_compass_postion = 1)",
+        "$compass_panel_entrance_offset": [ 0, "35%" ],
+        "$compass_panel_exit_offset": [ 0, "55%" ]
+      }
+    ],
     "controls": [
       {
         "compass_stack_panel": {
