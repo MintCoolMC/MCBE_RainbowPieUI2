@@ -24,13 +24,18 @@
             },
             {
               "binding_type": "view",
+              "source_property_name": "(#hover_text - '\n' - '§r' - '§o' - '§n' - '§m' - '§l' - '§k' - '§f' - '§e' - '§d' - '§c' - '§b' - '§a' - '§9' - '§8' - '§7' - '§6' - '§5' - '§4' - '§3' - '§2' - '§1' - '§0')",
+              "target_property_name": "#formatted_name"
+            },
+            {
+              "binding_type": "view",
               "source_control_name": "inventoryui_search_text_box_display_text",
               "source_property_name": "#item_name",
               "target_property_name": "#query_text"
             },
             {
               "binding_type": "view",
-              "source_property_name": "(not ((#hover_text - #query_text) = #hover_text))",
+              "source_property_name": "(not ((#formatted_name - #query_text) = #formatted_name))",
               "target_property_name": "#visible"
             }
           ]
