@@ -15,7 +15,7 @@
           "color": [ 0.0, 1.0, 0.0 ],
           "layer": 2,
           "visible": false,
-          "ignored": "(not $rainbowpie_ui_flag_d6bb54d8)",
+          "ignored": "((not $rainbowpie_ui_flag_d6bb54d8) or (not $rainbowpie_ui_flag_84df7492))",
           "bindings": [
             {
               "binding_name": "#hover_text",

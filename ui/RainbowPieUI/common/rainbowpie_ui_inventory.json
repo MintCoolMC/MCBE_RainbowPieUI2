@@ -219,7 +219,7 @@
                                             "source_control_name": "show_search_box",
                                             "source_property_name": "(not #toggle_state)",
                                             "target_property_name": "#visible",
-                                           "ignored": "((not $rainbowpie_ui_flag_d6bb54d8) or (not $rainbowpie_ui_flag_84df7492) or $rainbowpie_localui_inventoryheader_search_ignored)"
+                                            "ignored": "((not $rainbowpie_ui_flag_d6bb54d8) or (not $rainbowpie_ui_flag_84df7492) or $rainbowpie_localui_inventoryheader_search_ignored)"
                                           }
                                         ],
                                         "controls": [
