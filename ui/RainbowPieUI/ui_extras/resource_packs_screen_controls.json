@@ -811,6 +811,7 @@
                 "layer": 5,
                 "size": [ "100%", 22 ],
                 "$text_box_name": "rp_search_text_box",
+                "$text_edit_box_content_binding_name": "#rp_search_text_box_item_name",
                 "$text_edit_text_control": "$rainbowpie_localui_resource_packs_search_box_control",
                 "$place_holder_control": "rainbowpieui_resource_packs.search_text_box_place_holder_control",
                 "$place_holder_text": "$rainbowpie_localui_resource_packs_search_box_placeholder",

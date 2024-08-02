@@ -279,6 +279,7 @@
                                                     "anchor_to": "right_middle",
                                                     "size": [ "440%y", "76%" ],
                                                     "$text_box_name": "inventoryui_search_text_box",
+                                                    "$text_edit_box_content_binding_name": "#inventoryui_search_text_box_item_name",
                                                     "$text_edit_text_control": "inventoryui_search_text_box_display_text",
                                                     "$place_holder_control": "rainbowpie_ui_inventory.search_box_place_holder_control",
                                                     "$place_holder_text": "itemGroup.search",
