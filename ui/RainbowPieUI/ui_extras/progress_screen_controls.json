@@ -254,6 +254,39 @@
   "world_loading_progress_screen": {
     "type": "panel",
     "controls": [
+      {
+        "background_blur_fullscreen": {
+          "type": "image",
+          "ignored": "(not $rainbowpie_ui_flag_c448d476)",
+          "fill": true,
+          "size": [ "100%", "100%" ],
+          "offset": [ 0, 0 ],
+          "texture": "$rainbowpie_ui_theme_background_blur_texture",
+          "layer": 1
+        }
+      },
+      {
+        "background_fullscreen": {
+          "type": "image",
+          "ignored": "(not $rainbowpie_ui_flag_c448d476)",
+          "fill": true,
+          "size": [ "100%", "100%" ],
+          "offset": [ 0, 0 ],
+          "texture": "$rainbowpie_ui_theme_background_texture",
+          "alpha": 0.0,
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#loading_bar_percentage"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#loading_bar_percentage * 1.4)",
+              "target_property_name": "#alpha"
+            }
+          ]
+        }
+      },
       { "mobile_data_icon@rainbowpieui_progress.mobile_data_icon": {} },
       {
         "title_text@rainbowpie_ui_common.title_text": {
