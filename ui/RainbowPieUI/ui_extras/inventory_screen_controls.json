@@ -1,6 +1,46 @@
 {
   "namespace": "rainbowpieui_crafting",
 
+  "recipe_book_exit_animation_push": {
+    "anim_type": "size",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "to": [ "71px", "100%" ],
+    "from": [ "150px", "100%" ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "recipe_book_exit_animation_pop": {
+    "anim_type": "size",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "to": [ "71px", "100%" ],
+    "from": [ "150px", "100%" ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "recipe_book_entrance_animation_push": {
+    "anim_type": "size",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "to": [ "150px", "100%" ],
+    "from": [ "71px", "100%" ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "recipe_book_entrance_animation_pop": {
+    "anim_type": "size",
+    "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "to": [ "150px", "100%" ],
+    "from": [ "71px", "100%" ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
   "compass_panel_exit_animation_push": {
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_container_v2_transition_effect_exit",
