@@ -210,10 +210,13 @@
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
 
+  "anim_item_name_background_alpha_in": {
+    "to": "$rainbowpie_ui_theme_hud_itemname_background_alpha"
+  },
+
   "item_name_text_root/item_text_aligner/item_text_control/item_text_background": {
     "texture": "($rainbowpie_ui_path_home + '/r_white')",
     "color": "$rainbowpie_ui_theme_hud_itemname_background_color",
-    "alpha": "$rainbowpie_ui_theme_hud_itemname_background_alpha",
     "modifications": [
       {
         "array_name": "variables",
