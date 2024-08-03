@@ -210,6 +210,10 @@
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
 
+  "anim_item_name_background_alpha_out": {
+    "from": "$rainbowpie_ui_theme_hud_itemname_background_alpha"
+  },
+
   "anim_item_name_background_alpha_in": {
     "to": "$rainbowpie_ui_theme_hud_itemname_background_alpha"
   },
