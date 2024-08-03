@@ -277,12 +277,8 @@
           "layer": 2,
           "bindings": [
             {
-              "binding_name": "#loading_bar_percentage"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#loading_bar_percentage * 1.4)",
-              "target_property_name": "#alpha"
+              "binding_name": "#loading_bar_percentage",
+              "binding_name_override": "#alpha"
             }
           ]
         }
