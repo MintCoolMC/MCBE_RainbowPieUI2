@@ -165,7 +165,7 @@
   "$rainbowpie_ui_flag_50d7b9e9": true, // StartUI Servers Button
   "$rainbowpie_ui_flag_0ab174e4": true, // StartUI Store Button Treatments
   "$rainbowpie_ui_flag_d6bb54d8": true, // InventoryUI Global Item Search
-  "$rainbowpie_ui_flag_c448d476": true, // ProgressUI World loading background blur
+  "$rainbowpie_ui_flag_c448d476": false, // ProgressUI World loading background blur
   "$rainbowpie_ui_flag_72873fec": true, // InventoryUI new recipe book ui animaion
 
   // Debug
