@@ -449,7 +449,7 @@
     "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, "-100% + 20px" ],
-    "to": [ 0, "-100% + 4px" ],
+    "to": [ 0, "-100% - 4px" ],
     "play_event": "screen.exit_push",
     "end_event": "screen.exit_end"
   },
@@ -460,7 +460,7 @@
     "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, "100% - 20px" ],
-    "to": [ 0, "100% - 4px" ],
+    "to": [ 0, "100% + 4px" ],
     "play_event": "screen.exit_push",
     "end_event": "screen.exit_end"
   },
@@ -471,7 +471,7 @@
     "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, "-100% + 20px" ],
-    "to": [ 0, "-100% + 4px" ],
+    "to": [ 0, "-100% - 4px" ],
     "play_event": "screen.exit_pop",
     "end_event": "screen.exit_end"
   },
@@ -482,7 +482,7 @@
     "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, "100% - 20px" ],
-    "to": [ 0, "100% - 4px" ],
+    "to": [ 0, "100% + 4px" ],
     "play_event": "screen.exit_pop",
     "end_event": "screen.exit_end"
   },
@@ -492,7 +492,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ 0, "-100% + 4px" ],
+    "from": [ 0, "-100% - 4px" ],
     "to": [ 0, "-100% + 20px" ],
     "play_event": "screen.entrance_push",
     "end_event": "screen.entrance_end"
@@ -503,7 +503,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ 0, "100% - 4px" ],
+    "from": [ 0, "100% + 4px" ],
     "to": [ 0, "100% - 20px" ],
     "play_event": "screen.entrance_push",
     "end_event": "screen.entrance_end"
@@ -514,7 +514,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ 0, "-100% + 4px" ],
+    "from": [ 0, "-100% - 4px" ],
     "to": [ 0, "-100% + 20px" ],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
@@ -525,7 +525,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ 0, "100% - 4px" ],
+    "from": [ 0, "100% + 4px" ],
     "to": [ 0, "100% - 20px" ],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
