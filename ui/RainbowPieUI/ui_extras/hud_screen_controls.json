@@ -535,7 +535,7 @@
 
   "rainbowpie_hud_durability": {
     "type": "panel",
-    "ignored": "((not $rainbowpie_ui_feature_inventory_durability) or (not $rainbowpie_ui_flag_fc1ae899))",
+    "ignored": "((not $rainbowpie_ui_feature_inventory_durability) or (not $rainbowpie_ui_feature_hud_durability))",
     "controls": [
       {
         "hotbar_items_durability@rainbowpieui_hud.hotbar_items_durability": {}

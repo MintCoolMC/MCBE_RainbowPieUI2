@@ -317,7 +317,7 @@
           "$offset": [ "50% + 120px", -6 ],
           "variables": [
             {
-              "requires": "$rainbowpie_ui_flag_fc1ae899", // HUD Durability
+              "requires": "$rainbowpie_ui_feature_hud_durability", // HUD Durability
               "$anchor": "bottom_right",
               "$offset": [ -7, -26 ]
             }
