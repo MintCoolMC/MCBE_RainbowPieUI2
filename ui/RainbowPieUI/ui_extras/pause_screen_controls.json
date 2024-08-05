@@ -1252,7 +1252,7 @@
                               {
                                 "store_button@common_buttons.light_content_button": {
                                   "$rainbowpie_localui_button_desc_enabled": true,
-                                  "$rainbowpie_localui_button_desc_text": "menu.store",
+                                  "$rainbowpie_localui_button_desc_text": "$store_button_text",
                                   "$rainbowpie_localui_button_hover_border_layer": 30,
                                   "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
                                   "$pressed_button_name": "button.menu_store",
