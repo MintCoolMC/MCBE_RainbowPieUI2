@@ -105,11 +105,6 @@
     ]
   },
 
-  "RainbowPieHeaderBlurInGame@rainbowpie_ui_controls.RainbowPieHeaderBlur": {
-    "ignored": false,
-    "$background_ingame": true
-  },
-
   "rainbowpie_uioverride_back_button@common.back_button": {
     "$button_state_panel": "rainbowpie_ui_controls.rainbowpie_uioverride_borderless_form_fitting_button_panel",
     "$button_content": "rainbowpie_ui_controls.back_button_content",
