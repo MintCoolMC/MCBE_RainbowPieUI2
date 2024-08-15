@@ -3,7 +3,7 @@
 
   "treatment_store_button_status_panel@rainbowpie_ui_button.rainbowpie_ui_button_default": {
     "$is_treatment_button|default": true,
-    "$rainbowpie_localui_button_border_enabled|default": true,
+    "$rainbowpie_localui_button_border_enabled|default": "(not $is_treatment_button)",
     "$rainbowpie_localui_button_controls": [
       {
         "button_background": {
