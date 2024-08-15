@@ -129,7 +129,8 @@
                       "anchor_to": "left_middle",
                       "texture": "($icon_theme_dir + '/' + $icon_texture_name)",
                       "color": "$text_color",
-                      "layer": 8
+                      "layer": 8,
+                      "ignored": "$is_treatment_button"
                     }
                   },
                   {
