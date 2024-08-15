@@ -140,7 +140,7 @@
                       "anchor_to": "left_middle",
                       "text": "menu.store",
                       "color": "$text_color",
-                      "layer": 8
+                      "layer": 12
                     }
                   }
                 ]
