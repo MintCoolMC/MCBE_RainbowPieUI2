@@ -84,6 +84,7 @@
   "compass_panel": {
     "type": "image",
     "ignored": "(not $rainbowpie_ui_flag_9920f05c)",
+    "visible": true,
     "texture": "($rainbowpie_ui_path_home + '/r_white')",
     "size": [ "100%c + 5px", "100%c + 5px" ],
     "anchor_from": "center",
@@ -104,8 +105,16 @@
     "variables": [
       {
         "requires": "($rainbowpie_ui_flag_inventory_compass_postion = 1)",
-        "$compass_panel_entrance_offset": [ 0, "35%" ],
+        "$compass_panel_entrance_offset": [ 0, 90 ],
         "$compass_panel_exit_offset": [ 0, "55%" ]
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_name": "(not #is_creative_layout)",
+        "binding_name_override": "#visible",
+        "ignored": "(not ($rainbowpie_ui_flag_inventory_compass_postion = 1))"
       }
     ],
     "controls": [
