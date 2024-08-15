@@ -42,14 +42,12 @@
         "value": [
           {
             "redstone_root_panel@rainbowpieui_redstone.redstone_root_panel": {
-              "ignored": "(not $rainbowpie_ui_flag_84df7492)",
-              "visible": "(not $is_hopper)"
+              "ignored": "((not $rainbowpie_ui_flag_84df7492) or $is_hopper)"
             }
           },
           {
             "hopper_root_panel@rainbowpieui_redstone.hopper_root_panel": {
-              "ignored": "(not $rainbowpie_ui_flag_84df7492)",
-              "visible": "($is_hopper)"
+              "ignored": "((not $rainbowpie_ui_flag_84df7492) or (not $is_hopper))"
             }
           }
         ]
