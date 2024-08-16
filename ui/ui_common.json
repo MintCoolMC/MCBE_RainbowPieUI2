@@ -1748,7 +1748,7 @@
           },
           // Force use Rainbow Pie UI style server_form
           {
-            "requires": "($rainbowpie_ui_flag_server_form_force and ((('%.12s' * $screen_content) = 'server_form.') or ($rainbowpie_localui_screen_alias = 'server_form')))",
+            "requires": "($rainbowpie_ui_flag_server_form_force and ($rainbowpie_localui_screen_alias = 'server_form'))",
             "$screen_content": "rainbowpieui_server_form.main_screen_content",
             "$screen_animations": [
               "@common.screen_exit_animation_push_offset",
