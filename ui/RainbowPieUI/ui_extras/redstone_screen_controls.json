@@ -232,6 +232,19 @@
               "background_icon@rainbowpie_ui_inventory.background_icon": {}
             },
             {
+              "chest_fastpick@rainbowpie_module_chest_fastpick.chest_fastpick_redstone": {
+                "$redstone_container": true,
+                "$redstone_container_hopper": true,
+                "$container_item_id": "$rainbowpie_ui_flag_item_hopper",
+                "$drop_button_size": [ "13.0952380952381%", "100%x" ],
+                "$drop_button_offset": [ "100%x + 1.19047619047619%", "-62.4%" ],
+                "$putin_button_size": [ "13.0952380952381%", "100%x" ],
+                "$putin_button_offset": [ "100%x + 1.19047619047619%", "-19.2%" ],
+                "$pickup_button_size": [ "13.0952380952381%", "100%x" ],
+                "$pickup_button_offset": [ "100%x + 1.19047619047619%", 0 ]
+              }
+            },
+            {
               "inventory_header@rainbowpie_ui_inventory.header": {
                 "size": [ "100%", "18.4%" ],
                 "offset": [ 0, 0 ],
@@ -314,6 +327,16 @@
 
   "redstone_root_panel@common.root_panel": {
     "size": [ 168, 161 ],
+    "variables": [
+      {
+        "requires": "($container_type = 'dropper')",
+        "$container_item_id": "$rainbowpie_ui_flag_item_dropper"
+      },
+      {
+        "requires": "($container_type = 'dispenser')",
+        "$container_item_id": "$rainbowpie_ui_flag_item_dispenser"
+      }
+    ],
     "controls": [
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
       { "gamepad_cursor@common.gamepad_cursor_button": {} },
@@ -332,6 +355,17 @@
           "controls": [
             {
               "background_icon@rainbowpie_ui_inventory.background_icon": {}
+            },
+            {
+              "chest_fastpick@rainbowpie_module_chest_fastpick.chest_fastpick_redstone": {
+                "$redstone_container": true,
+                "$drop_button_size": [ "13.0952380952381%", "100%x" ],
+                "$drop_button_offset": [ "100%x + 1.19047619047619%", "-48.4472049689441%" ],
+                "$putin_button_size": [ "13.0952380952381%", "100%x" ],
+                "$putin_button_offset": [ "100%x + 1.19047619047619%", "-14.90683229813665%" ],
+                "$pickup_button_size": [ "13.0952380952381%", "100%x" ],
+                "$pickup_button_offset": [ "100%x + 1.19047619047619%", 0 ]
+              }
             },
             {
               "inventory_header@rainbowpie_ui_inventory.header": {
@@ -484,6 +518,18 @@
           "controls": [
             {
               "background_icon@rainbowpie_ui_inventory.background_icon": {}
+            },
+            {
+              "chest_fastpick@rainbowpie_module_chest_fastpick.chest_fastpick_redstone": {
+                "$redstone_container": true,
+                "$container_item_id": "$rainbowpie_ui_flag_item_crafter",
+                "$drop_button_size": [ "13.0952380952381%", "100%x" ],
+                "$drop_button_offset": [ "100%x + 1.19047619047619%", "-48.4472049689441%" ],
+                "$putin_button_size": [ "13.0952380952381%", "100%x" ],
+                "$putin_button_offset": [ "100%x + 1.19047619047619%", "-14.90683229813665%" ],
+                "$pickup_button_size": [ "13.0952380952381%", "100%x" ],
+                "$pickup_button_offset": [ "100%x + 1.19047619047619%", 0 ]
+              }
             },
             {
               "inventory_header@rainbowpie_ui_inventory.header": {

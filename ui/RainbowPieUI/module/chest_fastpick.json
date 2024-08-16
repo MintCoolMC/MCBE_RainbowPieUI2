@@ -19,14 +19,15 @@
     "type": "panel",
     "size": [ "100%", "100%" ],
     "$count_text|default": "x1",
+    "$container_item_id|default": "$rainbowpie_ui_flag_item_chest",
     "controls": [
       {
-        "chest@crafting.item_renderer": {
+        "container@crafting.item_renderer": {
           "size": [ "100%", "100%" ],
           "offset": [ 0, 0 ],
           "layer": 1,
           "property_bag": {
-            "#item_id_aux": 3538946
+            "#item_id_aux": "($container_item_id * 65536)"
           }
         }
       },
@@ -1784,276 +1785,300 @@
     "collection_name": "container_items",
     "$item_collection_name": "container_items",
     "$large_chest|default": false,
+    "$redstone_container|default": false,
+    "$redstone_container_hopper|default": false,
     "controls": [
       {
         "container_slot_53@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 53
         }
       },
       {
         "container_slot_52@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 52
         }
       },
       {
         "container_slot_51@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 51
         }
       },
       {
         "container_slot_50@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 50
         }
       },
       {
         "container_slot_49@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 49
         }
       },
       {
         "container_slot_48@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 48
         }
       },
       {
         "container_slot_47@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 47
         }
       },
       {
         "container_slot_46@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 46
         }
       },
       {
         "container_slot_45@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 45
         }
       },
       {
         "container_slot_44@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 44
         }
       },
       {
         "container_slot_43@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 43
         }
       },
       {
         "container_slot_42@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 42
         }
       },
       {
         "container_slot_41@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 41
         }
       },
       {
         "container_slot_40@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 40
         }
       },
       {
         "container_slot_39@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 39
         }
       },
       {
         "container_slot_38@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 38
         }
       },
       {
         "container_slot_37@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 37
         }
       },
       {
         "container_slot_36@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 36
         }
       },
       {
         "container_slot_35@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 35
         }
       },
       {
         "container_slot_34@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 34
         }
       },
       {
         "container_slot_33@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 33
         }
       },
       {
         "container_slot_32@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 32
         }
       },
       {
         "container_slot_31@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 31
         }
       },
       {
         "container_slot_30@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 30
         }
       },
       {
         "container_slot_29@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 29
         }
       },
       {
         "container_slot_28@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 28
         }
       },
       {
         "container_slot_27@rainbowpie_module_chest_fastpick.slot_item": {
-          "ignored": "(not $large_chest)",
+          "ignored": "(not $large_chest or $redstone_container)",
           "collection_index": 27
         }
       },
       {
         "container_slot_26@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 26
         }
       },
       {
         "container_slot_25@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 25
         }
       },
       {
         "container_slot_24@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 24
         }
       },
       {
         "container_slot_23@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 23
         }
       },
       {
         "container_slot_22@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 22
         }
       },
       {
         "container_slot_21@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 21
         }
       },
       {
         "container_slot_20@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 20
         }
       },
       {
         "container_slot_19@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 19
         }
       },
       {
         "container_slot_18@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 18
         }
       },
       {
         "container_slot_17@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 17
         }
       },
       {
         "container_slot_16@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 16
         }
       },
       {
         "container_slot_15@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 15
         }
       },
       {
         "container_slot_14@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 14
         }
       },
       {
         "container_slot_13@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 13
         }
       },
       {
         "container_slot_12@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 12
         }
       },
       {
         "container_slot_11@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 11
         }
       },
       {
         "container_slot_10@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 10
         }
       },
       {
         "container_slot_9@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container)",
           "collection_index": 9
         }
       },
       {
         "container_slot_8@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container_hopper)",
           "collection_index": 8
         }
       },
       {
         "container_slot_7@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container_hopper)",
           "collection_index": 7
         }
       },
       {
         "container_slot_6@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container_hopper)",
           "collection_index": 6
         }
       },
       {
         "container_slot_5@rainbowpie_module_chest_fastpick.slot_item": {
+          "ignored": "($redstone_container_hopper)",
           "collection_index": 5
         }
       },
@@ -2276,6 +2301,19 @@
       {
         "inventory_slot_0@rainbowpie_module_chest_fastpick.slot_item": {
           "collection_index": 0
+        }
+      }
+    ]
+  },
+
+  "chest_fastpick_redstone": {
+    "type": "panel",
+    "$redstone_container|default": false,
+    "ignored": "(not $rainbowpie_ui_module_chest_fastpick)",
+    "controls": [
+      {
+        "chest_fastpick@rainbowpie_module_chest_fastpick.chest_fastpick": {
+          "ignored": "((not $rainbowpie_ui_module_chest_fastpick) or (not ($redstone_container and $rainbowpie_ui_moduleflag_chest_fastpick_redstone_blocks)))"
         }
       }
     ]
