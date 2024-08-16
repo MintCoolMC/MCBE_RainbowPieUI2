@@ -1772,7 +1772,7 @@
             "$new_video_settings": true
           },
           {
-            "requires": "($screen_content = 'rainbowpieui_settings_common.settings_content')",
+            "requires": "($rainbowpie_localui_screen_alias = 'settings')",
             "$export_template_disabled": false
           },
           // Force disable rainbowpie_ui_flag_hud_hotbar_mode 2
