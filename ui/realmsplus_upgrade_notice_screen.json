@@ -12,6 +12,7 @@
 
   "screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "realmsplus_upgrade_notice_screen",
     "$screen_content": "rainbowpieui_realmsplus_upgrade_notice_screen.main_content"
   }
 }

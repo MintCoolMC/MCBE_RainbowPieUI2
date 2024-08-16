@@ -87,6 +87,7 @@
 
   "sign_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "sign",
     "$screen_content": "rainbowpieui_sign.sign_screen_content",
     "force_render_below": true,
     "close_on_player_hurt": false

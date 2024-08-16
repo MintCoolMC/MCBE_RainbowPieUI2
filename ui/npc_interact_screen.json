@@ -3,6 +3,7 @@
 
   "npc_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "npc_interact",
     "force_render_below": true,
     "$screen_content": "rainbowpieui_npc_interact.npc_screen_contents",
     "button_mappings": [

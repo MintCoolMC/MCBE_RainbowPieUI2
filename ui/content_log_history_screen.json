@@ -45,6 +45,7 @@
 
   "content_log_history_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "content_log_history",
     "$screen_content": "rainbowpieui_content_log_history.content_log_history_panel"
   }
 }

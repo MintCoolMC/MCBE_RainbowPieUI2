@@ -28,6 +28,7 @@
   "xbl_friend_finder": {
     "$rainbowpie_localui_modified": true,
     "$rainbowpie_localui_screenbackground_blur": true,
+    "$rainbowpie_localui_screen_alias": "xbl_friend_finder",
     "$screen_content": "rainbowpieui_xbl_friend_finder.xbl_friend_finder_screen_content"
   }
 }

@@ -3,6 +3,7 @@
 
   "in_bed_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "bed",
     "$screen_content": "rainbowpieui_bed.in_bed_screen_content"
   },
 

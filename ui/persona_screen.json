@@ -446,6 +446,7 @@
 
   "persona_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "persona",
     "$rainbowpie_localui_screenbackground_blur": "(not $rainbowpie_ui_flag_d28dfac0)",
     "$screen_bg_content": "common.empty_panel",
     "variables": [

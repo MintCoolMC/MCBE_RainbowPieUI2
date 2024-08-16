@@ -21,6 +21,7 @@
     "$rainbowpie_localui_screenbackground_ingame": true,
     "$rainbowpie_localui_screen_watermark": true,
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "start",
     "$screen_content": "rainbowpieui_start.start_screen_content"
   }
 }

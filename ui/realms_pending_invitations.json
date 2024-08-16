@@ -17,6 +17,7 @@
 
   "realms_pending_invitations_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "realms_pending_invitations",
     "$rainbowpie_localui_screenbackground_blur": true,
     "$screen_content": "rainbowpieui_realms_pending_invitations.realms_invitation_screen_content"
   }

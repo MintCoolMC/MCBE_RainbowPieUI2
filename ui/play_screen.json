@@ -5,6 +5,7 @@
     "$is_pregame": true,
     "$rainbowpie_localui_screenbackground_ingame": true,
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "play",
     "$screen_content": "rainbowpieui_play.play_screen_content"
   },
 
