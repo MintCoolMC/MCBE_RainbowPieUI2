@@ -315,6 +315,7 @@
   "hud_screen": {
     "$use_loading_bars": false,
     "$rainbowpie_localui_screen_watermark": false,
-    "$rainbowpie_localui_modified": true
+    "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "hud"
   }
 }

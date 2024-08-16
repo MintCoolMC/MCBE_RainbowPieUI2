@@ -2,6 +2,7 @@
   "namespace": "screenshot",
 
   "screenshot_screen": {
-    "$rainbowpie_localui_modified": true
+    "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "screenshot"
   }
 }
