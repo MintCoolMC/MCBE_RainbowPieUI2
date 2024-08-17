@@ -1073,8 +1073,7 @@
       "@common.screen_entrance_animation_push_fade",
       "@common.screen_entrance_animation_pop_fade"
     ],
-    "$rainbowpie_localui_screen_alias|default": "",
-    // "$rainbowpie_localui_screen_alias_formatted": "null,",
+    "$rainbowpie_localui_screen_alias": "null",
     "$rainbowpie_localui_screen_alias_formatted": "($rainbowpie_localui_screen_alias + ',')",
     "modifications": [
       {
