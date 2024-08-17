@@ -1,6 +1,10 @@
 {
   "namespace": "crafting",
 
+  "tab_content/tab_content_search_bar_panel": {
+    "size": [ "100% - 6px", "100% - 6px" ]
+  },
+
   "recipe_inventory_screen_content": {
     "modifications": [
       {
