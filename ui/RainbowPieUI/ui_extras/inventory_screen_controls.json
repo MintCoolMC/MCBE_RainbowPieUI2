@@ -18,7 +18,7 @@
         "button_text@rainbowpie_ui_common.text_label": {
           "anchor_to": "left_middle",
           "anchor_from": "left_middle",
-          "size": [ "100% - 8px", "default" ],
+          "size": [ "100% - 10px", "default" ],
           "offset": [ 10, 0 ],
           "text": "rainbowpie.ui.inventory.search_button",
           "color": "$text_color",
@@ -38,7 +38,7 @@
         "button_text_search@rainbowpie_ui_common.text_label": {
           "anchor_to": "left_middle",
           "anchor_from": "left_middle",
-          "size": [ "100% - 8px", "default" ],
+          "size": [ "100% - 10px", "default" ],
           "offset": [ 10, 0 ],
           "text": "#text_box_item_name",
           "color": "$text_color",
