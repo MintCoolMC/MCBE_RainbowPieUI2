@@ -32,6 +32,8 @@ rainbowpie.ui.inventory.actions.drop_inventory=從物品欄丟出全部
 
 rainbowpie.ui.inventory.durability=耐久度:
 
+rainbowpie.ui.inventory.search_button=點擊進行搜尋
+
 rainbowpie.ui.chest.fastpick.dropall=從容器内丟出全部
 rainbowpie.ui.chest.fastpick.pickall=從容器内拿取全部
 rainbowpie.ui.chest.fastpick.putall=從物品欄放入全部
