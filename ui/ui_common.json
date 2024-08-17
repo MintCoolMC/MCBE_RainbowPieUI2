@@ -1073,6 +1073,7 @@
       "@common.screen_entrance_animation_push_fade",
       "@common.screen_entrance_animation_pop_fade"
     ],
+    "$close_on_player_hurt": false,
     "$rainbowpie_localui_screen_alias": "null",
     "$rainbowpie_localui_screen_alias_formatted": "($rainbowpie_localui_screen_alias + ',')",
     "modifications": [
