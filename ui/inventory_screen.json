@@ -1,6 +1,14 @@
 {
   "namespace": "crafting",
 
+  "tab_content/tab_content_search_bar_panel/vertical_padding_2": {
+    "size": [ 0, 2 ]
+  },
+
+  "tab_content/tab_content_search_bar_panel/vertical_padding_3": {
+    "size": [ 0, 1 ]
+  },
+
   "tab_content/tab_content_search_bar_panel/search_and_filter_panel": {
     "property_bag": {
       "#toggle_state": true
