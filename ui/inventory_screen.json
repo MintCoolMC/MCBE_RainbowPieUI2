@@ -74,6 +74,33 @@
                     "type": "panel",
                     "size": [ 1, 0 ]
                   }
+                },
+                {
+                  "filter_toggle_holder": {
+                    "type": "panel",
+                    "size": [ "100%c", "100%" ],
+
+                    "bindings": [
+                      {
+                        "binding_name": "(not #is_creative_mode)",
+                        "binding_name_override": "#visible"
+                      }
+                    ],
+                    "controls": [
+                      {
+                        "filter_toggle@crafting.filter_toggle": {
+                          "offset": [ 1, 0 ],
+                          "anchor_from": "right_middle",
+                          "anchor_to": "right_middle",
+
+                          "$focus_id": "craftable_toggle",
+                          "$focus_override_left": "recipe_search_bar",
+                          "$default_border_visible": false,
+                          "$hover_border_visible": false
+                        }
+                      }
+                    ]
+                  }
                 }
               ]
             }
