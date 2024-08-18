@@ -976,22 +976,11 @@
                       "anchor_to": "top_middle",
                       "consume_hover_events": false,
                       "visible": false,
-                      "property_bag": {
-                        "#is_touch_visible": true
-                      },
+                      "ignored": "(not $rainbowpie_ui_flag_bce3269f)",
                       "bindings": [
                         {
                           "binding_name": "#inventory_selected_item",
                           "binding_condition": "always"
-                        },
-                        {
-                          "binding_name": "#using_touch"
-                        },
-                        {
-                          "binding_type": "view",
-                          "source_property_name": "(not #using_touch)",
-                          "target_property_name": "#is_touch_visible",
-                          "ignored": "(not $rainbowpie_ui_flag_bce3269f)"
                         },
                         {
                           "binding_type": "view",
@@ -1007,7 +996,7 @@
                         },
                         {
                           "binding_type": "view",
-                          "source_property_name": "(((not (#inventory_selected_item = -1)) or #is_inventory_slot_selected or #is_hotbar_slot_selected) and #is_touch_visible)",
+                          "source_property_name": "((not (#inventory_selected_item = -1)) or #is_inventory_slot_selected or #is_hotbar_slot_selected)",
                           "target_property_name": "#visible"
                         }
                       ],
@@ -1031,8 +1020,15 @@
               }
             },
             {
+              "drop_item_button_padding": {
+                "type": "panel",
+                "size": [ "100%", "100%x" ],
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_flag_bce3269f))"
+              }
+            },
+            {
               "drop_item_button@common_buttons.light_content_button": {
-                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled))",
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled) or $rainbowpie_ui_flag_bce3269f)",
                 "$button_focus_precedence": -1,
                 "$rainbowpie_localui_button_desc_enabled": true,
                 "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.inventory.actions.drop_selection",
