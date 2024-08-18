@@ -47,8 +47,8 @@
           "ignored": "(not $chest_visible)",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "size": [ 10, 10 ],
-          "offset": [ 2, 0 ],
+          "size": [ "62.5%", "100%x" ],
+          "offset": [ "20%x", 0 ],
           "layer": 2,
           "property_bag": {
             "#item_id_aux": 3538946
@@ -83,8 +83,8 @@
           "type": "image",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "size": [ 10, 10 ],
-          "offset": [ 2, 0 ],
+          "size": [ "62.5%", "100%x" ],
+          "offset": [ "20%x", 0 ],
           "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/arrow_down')",
           "color": "$text_color",
           "layer": 2
@@ -113,8 +113,8 @@
           "type": "image",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "size": [ 10, 10 ],
-          "offset": [ 2, 0 ],
+          "size": [ "62.5%", "100%x" ],
+          "offset": [ "20%x", 0 ],
           "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/arrow_down')",
           "color": "$text_color",
           "layer": 2
