@@ -976,8 +976,11 @@
                       "anchor_to": "top_middle",
                       "consume_hover_events": false,
                       "visible": false,
-                      "ignored": "(not $rainbowpie_ui_flag_bce3269f)",
+                      "ignored": "$rainbowpie_ui_flag_bce3269f",
                       "bindings": [
+                        {
+                          "binding_name": "#using_touch"
+                        },
                         {
                           "binding_name": "#inventory_selected_item",
                           "binding_condition": "always"
@@ -996,7 +999,7 @@
                         },
                         {
                           "binding_type": "view",
-                          "source_property_name": "((not (#inventory_selected_item = -1)) or #is_inventory_slot_selected or #is_hotbar_slot_selected)",
+                          "source_property_name": "(((not (#inventory_selected_item = -1)) or #is_inventory_slot_selected or #is_hotbar_slot_selected) and #using_touch)",
                           "target_property_name": "#visible"
                         }
                       ],
@@ -1023,12 +1026,25 @@
               "drop_item_button_padding": {
                 "type": "panel",
                 "size": [ "100%", "100%x" ],
-                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_flag_bce3269f))"
+                "ignored": "(not ($top_half_variant = 'crafting.survival_panel_top_half'))",
+                "property_bag": {
+                  "#rainbowpie_ui_flag_bce3269f": "$rainbowpie_ui_flag_bce3269f"
+                },
+                "bindings": [
+                  {
+                    "binding_name": "#using_touch"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#using_touch and #rainbowpie_ui_flag_bce3269f)",
+                    "target_property_name": "#visible"
+                  }
+                ]
               }
             },
             {
               "drop_item_button@common_buttons.light_content_button": {
-                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled) or $rainbowpie_ui_flag_bce3269f)",
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled))",
                 "$button_focus_precedence": -1,
                 "$rainbowpie_localui_button_desc_enabled": true,
                 "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.inventory.actions.drop_selection",
@@ -1039,7 +1055,41 @@
                 "$button_content": "rainbowpie_module_inventory_actions.drop_icon",
                 "consume_hover_events": false,
                 "size": [ "100%", "100%x" ],
-                "layer": 1
+                "layer": 1,
+                "property_bag": {
+                  "#rainbowpie_ui_flag_bce3269f": "$rainbowpie_ui_flag_bce3269f"
+                },
+                "bindings": [
+                  {
+                    "binding_name": "#using_touch"
+                  },
+                  {
+                    "binding_name": "#inventory_selected_item",
+                    "binding_condition": "always"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "inventory_bindings_panel",
+                    "source_property_name": "#is_inventory_slot_selected",
+                    "target_property_name": "#is_inventory_slot_selected"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "hotbar_bindings_panel",
+                    "source_property_name": "#is_hotbar_slot_selected",
+                    "target_property_name": "#is_hotbar_slot_selected"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((not (#is_inventory_slot_selected or #is_hotbar_slot_selected)) and (#inventory_selected_item = -1))",
+                    "target_property_name": "#enabled"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not (#using_touch and #rainbowpie_ui_flag_bce3269f))",
+                    "target_property_name": "#visible"
+                  }
+                ]
               }
             },
             {
@@ -1193,11 +1243,18 @@
               "drop_item_button_padding": {
                 "type": "panel",
                 "size": [ "100%", "100%x" ],
-                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_flag_bce3269f))",
+                "ignored": "(not ($top_half_variant = 'crafting.survival_panel_top_half'))",
+                "property_bag": {
+                  "#rainbowpie_ui_flag_bce3269f": "$rainbowpie_ui_flag_bce3269f"
+                },
                 "bindings": [
                   {
-                    "binding_name": "#using_touch",
-                    "binding_name_override": "#visible"
+                    "binding_name": "#using_touch"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#using_touch and #rainbowpie_ui_flag_bce3269f)",
+                    "target_property_name": "#visible"
                   }
                 ]
               }
@@ -1217,6 +1274,9 @@
                 "consume_hover_events": false,
                 "size": [ "100%", "100%x" ],
                 "layer": 1,
+                "property_bag": {
+                  "#rainbowpie_ui_flag_bce3269f": "$rainbowpie_ui_flag_bce3269f"
+                },
                 "bindings": [
                   {
                     "binding_name": "#using_touch"
@@ -1240,7 +1300,7 @@
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "(#using_touch and (not $rainbowpie_ui_flag_bce3269f))",
+                    "source_property_name": "(not (#using_touch and #rainbowpie_ui_flag_bce3269f))",
                     "target_property_name": "#visible"
                   }
                 ]
