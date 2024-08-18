@@ -1,6 +1,33 @@
 {
   "namespace": "rainbowpie_module_inventory_actions",
 
+  "action_button_toggle_base@common_toggles.light_ui_toggle": {
+    "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
+    "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
+    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
+    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
+    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
+    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
+    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
+    "$button_content": "rainbowpie_module_inventory_actions.drop_icon",
+
+    "$button_type_panel": "common_buttons.new_ui_binding_button_label",
+    "$button_text_binding_type": "none",
+    "$button_binding_condition": "none",
+    "$button_text_grid_collection_name": "none",
+    "$button_text": "",
+    "$button_offset": [ 0, 0 ],
+
+    "$radio_toggle_group": false,
+    "$toggle_name": "rainbowpie_inventoryui_actions",
+    "$toggle_group_default_selected": 0,
+
+    "$toggle_group_forced_index": 0,
+
+    "$toggle_view_binding_name": ""
+  },
+
   "delete_icon": {
     "type": "panel",
     "size": [ "100%", "100%" ],
@@ -890,6 +917,108 @@
     "ignored": "(not $rainbowpie_ui_module_inventory_actions)"
   },
 
+  "inventory_actions_cell_panel@rainbowpie_module_inventory_actions.inventory_actions": {
+    "controls": [
+      {
+        "action_panel": {
+          "type": "panel",
+          "ignored": "(not $rainbowpie_ui_flag_bce3269f)",
+          "layer": 22,
+          "controls": [
+            {
+              "drop_one_input_panel": {
+                "type": "input_panel",
+                "size": [ "100%", "100%" ],
+                "visible": false,
+                "bindings": [
+                  {
+                    "binding_name": "#using_touch"
+                  },
+                  {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "$item_collection_name"
+                  },
+                  {
+                    "binding_name": "#item_id_aux",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "inventory_action_dropone",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#inventory_action_dropone_enabled"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((not (#item_id_aux = -1)) and #using_touch and #inventory_action_dropone_enabled)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.drop_one",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.drop_one",
+                    "mapping_type": "pressed"
+                  }
+                ]
+              }
+            },
+            {
+              "drop_all_input_panel": {
+                "type": "input_panel",
+                "size": [ "100%", "100%" ],
+                "visible": false,
+                "bindings": [
+                  {
+                    "binding_name": "#using_touch"
+                  },
+                  {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "$item_collection_name"
+                  },
+                  {
+                    "binding_name": "#item_id_aux",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "inventory_action_dropall",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#inventory_action_dropall_enabled"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((not (#item_id_aux = -1)) and #using_touch and #inventory_action_dropall_enabled)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.drop_all",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.drop_all",
+                    "mapping_type": "pressed"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "inventory_actions_inventory@rainbowpie_module_inventory_actions.inventory_actions": {
     "$action_button_stack_panel_size|default": [ 22, "100%c" ],
     "$action_button_stack_panel_max_size|default": [ 22, 156 ],
@@ -1038,6 +1167,29 @@
                     "binding_type": "view",
                     "source_property_name": "(#using_touch and #rainbowpie_ui_flag_bce3269f)",
                     "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "drop_one@rainbowpieui_crafting.action_button_toggle_base": {
+                      "$rainbowpie_localui_button_desc_enabled": true,
+                      "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.inventory.actions.drop_selection",
+                      "$rainbowpie_localui_button_hover_border_layer": 30,
+                      "$button_image_size": [ "100%", "100%" ],
+                      "size": [ "100%", "100%x" ],
+                      "$toggle_group_forced_index": 1000,
+                      "$toggle_view_binding_name": "inventory_action_dropone",
+                      "layer": 10,
+                      "ignored": "(not $rainbowpie_ui_flag_bce3269f)",
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "inventory_action_dropall",
+                          "source_property_name": "(not #toggle_state)",
+                          "target_property_name": "#enabled"
+                        }
+                      ]
+                    }
                   }
                 ]
               }
@@ -1255,6 +1407,30 @@
                     "binding_type": "view",
                     "source_property_name": "(#using_touch and #rainbowpie_ui_flag_bce3269f)",
                     "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "drop_all@rainbowpie_module_inventory_actions.action_button_toggle_base": {
+                      "$rainbowpie_localui_button_desc_enabled": true,
+                      "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.inventory.actions.drop_selection",
+                      "$rainbowpie_localui_button_hover_border_layer": 30,
+                      "$button_image_size": [ "100%", "100%" ],
+                      "size": [ "100%", "100%x" ],
+                      "$count_text": "All",
+                      "$toggle_group_forced_index": 1001,
+                      "$toggle_view_binding_name": "inventory_action_dropall",
+                      "layer": 10,
+                      "ignored": "(not $rainbowpie_ui_flag_bce3269f)",
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "inventory_action_dropone",
+                          "source_property_name": "(not #toggle_state)",
+                          "target_property_name": "#enabled"
+                        }
+                      ]
+                    }
                   }
                 ]
               }

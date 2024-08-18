@@ -173,7 +173,6 @@
   "$rainbowpie_ui_flag_c448d476": false, // ProgressUI World loading background blur
   "$rainbowpie_ui_flag_72873fec": true, // InventoryUI new recipe book ui animaion
   "$rainbowpie_ui_flag_ef158e0f": true, // InventoryUI vanilla search bar button
-  "$rainbowpie_ui_flag_bce3269f": true, // InventoryUI new touch mode drop
 
   // Debug
   "$rainbowpie_ui_debug": false,
@@ -227,6 +226,7 @@
   "$rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled": true,
   "$rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled": true,
   "$rainbowpie_ui_moduleflag_inventory_actions_quick_craft_enabled": true,
+  "$rainbowpie_ui_flag_bce3269f": true, // InventoryUI new touch mode drop
 
   // Theme System //
   "$rainbowpie_ui_themesystem_version": "1093",
