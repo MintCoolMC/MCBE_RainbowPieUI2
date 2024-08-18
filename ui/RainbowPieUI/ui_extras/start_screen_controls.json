@@ -194,8 +194,6 @@
     "size": [ 15, 15 ],
     "texture": "($rainbowpie_ui_path_theme + '/icon/start/background')",
     "color": "$text_color",
-    // "color": [ 0.85, 0.85, 0.85 ],
-    // "alpha": 0.85,
     "layer": 8
   },
 
@@ -2058,6 +2056,15 @@
                                     },
                                     {
                                       "music_button@rainbowpieui_start.music_button": {
+                                        "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
+                                        "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
+                                        "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
+                                        "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
+                                        "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
+                                        "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
+                                        "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
+                                        "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
+                                        "$button_content": "rainbowpieui_start.music_icon",
                                         "size": [ "100%y", "100%" ],
                                         "$button_image_size": [ "100%", "100%" ],
                                         "variables": [
@@ -2457,6 +2464,15 @@
                               },
                               {
                                 "music_button@rainbowpieui_start.music_button": {
+                                  "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
+                                  "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
+                                  "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
+                                  "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
+                                  "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
+                                  "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
+                                  "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
+                                  "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
+                                  "$button_content": "rainbowpieui_start.music_icon",
                                   "size": [ "100%y", "100%" ],
                                   "$button_image_size": [ "100%", "100%" ],
                                   "$toggle_view_binding_name": "open_music_player_vanilla"
@@ -2999,6 +3015,14 @@
         "ignored": "(not $rainbowpie_ui_flag_282dd0a5)"
       }
     ]
+  },
+
+  "music_icon": {
+    "type": "image",
+    "size": [ 15, 15 ],
+    "texture": "($rainbowpie_ui_path_theme + '/icon/start/music')",
+    "color": "$text_color",
+    "layer": 8
   },
 
   "music_button@rainbowpie_ui_music_player.music_player_button_toggle_base": {
