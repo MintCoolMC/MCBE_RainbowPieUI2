@@ -1,20 +1,29 @@
 {
   "namespace": "rainbowpieui_pause",
 
+  "ui_mode_icon": {
+    "type": "image",
+    "size": [ 15, 15 ],
+    "texture": "($rainbowpie_ui_path_theme + '/icon/pause/ui_mode')",
+    "color": "$text_color",
+    "layer": 8
+  },
+
   "vanilla_button@common_toggles.light_ui_toggle": {
     "$rainbowpie_localui_button_desc_enabled": true,
     "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.pause.vanilla_tip",
     "$rainbowpie_localui_button_desc_text_offset": [ -10, -10 ],
     "$rainbowpie_localui_button_desc_text_anchor": "top_right",
     "ignored": "(not $rainbowpie_ui_flag_56cd0456)",
-    "$unchecked_control": "rainbowpie_ui_toggle.toggle_button_unchecked",
-    "$checked_control": "rainbowpie_ui_toggle.toggle_button_checked",
-    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_button_unchecked_hover",
-    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_button_checked_hover",
-    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_button_unchecked_locked",
-    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_button_unchecked_locked_hover",
-    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_button_checked_locked",
-    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_button_checked_locked_hover",
+    "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
+    "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
+    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
+    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
+    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
+    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
+    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
+    "$button_content": "rainbowpieui_pause.ui_mode_icon",
 
     "$button_text_binding_type": "none",
     "$button_binding_condition": "none",
