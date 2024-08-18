@@ -1909,7 +1909,7 @@
                                         "$button_content_size_override": [ "100%c", "100%c" ],
                                         "$button_image_size_override": [ "100%c", "100%c" ],
                                         "$button_type_panel": "rainbowpieui_start.startv2_profile_button_panel",
-                                        "$pressed_button_name": "button.to_profile_screen",
+                                        "$pressed_button_name": "button.menu_profile",
                                         "size": [ "100%c", "100%" ]
                                       }
                                     },
