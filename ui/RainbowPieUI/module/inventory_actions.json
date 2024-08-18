@@ -1193,12 +1193,18 @@
               "drop_item_button_padding": {
                 "type": "panel",
                 "size": [ "100%", "100%x" ],
-                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_flag_bce3269f))"
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_flag_bce3269f))",
+                "bindings": [
+                  {
+                    "binding_name": "#using_touch",
+                    "binding_name_override": "#visible"
+                  }
+                ]
               }
             },
             {
               "drop_item_button@common_buttons.light_content_button": {
-                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled) or $rainbowpie_ui_flag_bce3269f)",
+                "ignored": "((not ($top_half_variant = 'crafting.survival_panel_top_half')) or (not $rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled))",
                 "$button_focus_precedence": -1,
                 "$rainbowpie_localui_button_desc_enabled": true,
                 "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.inventory.actions.drop_inventory",
@@ -1212,6 +1218,9 @@
                 "size": [ "100%", "100%x" ],
                 "layer": 1,
                 "bindings": [
+                  {
+                    "binding_name": "#using_touch"
+                  },
                   {
                     "binding_type": "view",
                     "source_control_name": "inventory_bindings_panel",
@@ -1228,6 +1237,11 @@
                     "binding_type": "view",
                     "source_property_name": "(not (#is_inventory_slot_selected or #is_hotbar_slot_selected))",
                     "target_property_name": "#enabled"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#using_touch and (not $rainbowpie_ui_flag_bce3269f))",
+                    "target_property_name": "#visible"
                   }
                 ]
               }
