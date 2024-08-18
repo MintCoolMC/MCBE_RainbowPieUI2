@@ -32,28 +32,32 @@
     // Rainbow Pie UI Variables
     // Button State
     "$default_state": true,
-    "$check_state": true
+    "$check_state": true,
+    "$rainbowpie_localui_button_hover_border_always_visible": true
   },
 
   "toggle_content_button_checked_hover@rainbowpie_ui_toggle.toggle_content_button_panel": {
     // Rainbow Pie UI Variables
     // Button State
     "$hover_state": true,
-    "$check_state": true
+    "$check_state": true,
+    "$rainbowpie_localui_button_hover_border_always_visible": true
   },
 
   "toggle_content_button_checked_locked@rainbowpie_ui_toggle.toggle_content_button_panel": {
     // Rainbow Pie UI Variables
     // Button State
     "$locked_state": true,
-    "$check_state": true
+    "$check_state": true,
+    "$rainbowpie_localui_button_hover_border_always_visible": true
   },
 
   "toggle_content_button_checked_locked_hover@rainbowpie_ui_toggle.toggle_content_button_panel": {
     // Rainbow Pie UI Variables
     // Button State
     "$locked_state": true,
-    "$check_state": true
+    "$check_state": true,
+    "$rainbowpie_localui_button_hover_border_always_visible": true
   },
 
   "toggle_button_panel@rainbowpie_ui_button.rainbowpie_ui_text_button": {

@@ -49,12 +49,13 @@
     "$rainbowpie_localui_button_desc_text_offset|default": [ 10, -10 ],
     "$rainbowpie_localui_button_desc_text_anchor|default": "top_left",
     "$rainbowpie_localui_button_hover_border_layer|default": 50,
+    "$rainbowpie_localui_button_hover_border_always_visible|default": false,
 
     "controls": [
       {
         "hover@common.focus_border_white": {
           "size": "$button_image_size",
-          "ignored": "((not $rainbowpie_localui_button_border_enabled) or (not $hover_state))",
+          "ignored": "(((not $rainbowpie_localui_button_border_enabled) or (not $hover_state)) and (not $rainbowpie_localui_button_hover_border_always_visible))",
           "alpha": 0.5,
           "layer": "$rainbowpie_localui_button_hover_border_layer"
         }
