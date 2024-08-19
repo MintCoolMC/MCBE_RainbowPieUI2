@@ -2477,6 +2477,7 @@
           "type": "stack_panel",
           "orientation": "horizontal",
           "size": [ "100%c", 10 ],
+          "clips_children": true,
           "controls": [
             {
               "player_count": {
@@ -2493,6 +2494,9 @@
                       "layer": 1,
                       "bindings": [
                         {
+                          "binding_name": "#player_list_title"
+                        },
+                        {
                           "binding_name": "#collection_index",
                           "binding_type": "collection",
                           "binding_collection_name": "players_collection"
@@ -2504,7 +2508,7 @@
                         },
                         {
                           "binding_type": "view",
-                          "source_property_name": "('§§' + #player_count + '/48 PLAYERS')",
+                          "source_property_name": "('§§' + #player_count + ' | ' + #player_list_title)",
                           "target_property_name": "#player_count_str"
                         }
                       ]
