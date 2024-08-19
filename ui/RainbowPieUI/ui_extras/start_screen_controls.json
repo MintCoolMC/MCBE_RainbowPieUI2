@@ -1714,13 +1714,25 @@
                                   "size": [ "100%", 32 ],
                                   "$icon_texture_name": "realms",
                                   "$button_text": "menu.realmsServer",
-                                  "$pressed_button_name": "button.menu_realms"
+                                  "$pressed_button_name": "button.menu_realms",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#realms_promo_visible",
+                                      "binding_name_override": "#visible"
+                                    }
+                                  ]
                                 }
                               },
                               {
                                 "realms_button_padding": {
                                   "type": "panel",
-                                  "size": [ 0, 4 ]
+                                  "size": [ 0, 4 ],
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#realms_promo_visible",
+                                      "binding_name_override": "#visible"
+                                    }
+                                  ]
                                 }
                               },
                               {
