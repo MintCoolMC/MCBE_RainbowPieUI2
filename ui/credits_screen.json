@@ -34,6 +34,18 @@
     ],
     "controls": [
       {
+        "exit_credits_input_panel": {
+          "type": "input_panel",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "button.menu_exit",
+              "mapping_type": "global"
+            }
+          ]
+        }
+      },
+      {
         "bottom_panel@rainbowpie_ui_common.text_background": {
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
@@ -46,14 +58,6 @@
                 "orientation": "horizontal",
                 "size": [ "100% - 6px", "100% - 2px" ],
                 "controls": [
-                  // {
-                  //   "scroll_end_button@common_buttons.light_text_button": {
-                  //     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-                  //     "$pressed_button_name": "scroll_end",
-                  //     "$button_text": "scroll_end",
-                  //     "size": [ "fill", "100%" ]
-                  //   }
-                  // }
                   {
                     "middle_padding": {
                       "type": "panel",
@@ -79,9 +83,6 @@
 
   "fade_in_image": {
     "texture": ""
-  },
-
-  "credits_renderer": {
   },
 
   "credits_screen": {
