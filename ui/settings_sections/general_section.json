@@ -1,6 +1,12 @@
 {
   "namespace": "general_section",
 
+  "watchdog_toggles_panel/primary_panel/heading": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
   "advanced_graphics_options_button_content": {
     "modifications": [
       {
