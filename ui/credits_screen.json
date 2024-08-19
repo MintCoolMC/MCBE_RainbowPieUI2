@@ -1,0 +1,91 @@
+{
+  "namespace": "credits",
+
+  "skip_panel_anim_offset": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "100%y" ],
+    "to": [ 0, 0 ],
+    "next": "@credits.skip_panel_anim_wait"
+  },
+
+  "skip_panel_anim_wait": {
+    "anim_type": "wait",
+    "duration": 5.0,
+    "next": "@credits.skip_panel_anim_offset_end"
+  },
+
+  "skip_panel_anim_offset_end": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ 0, "100%y" ],
+    "destroy_at_end": "skip_panel"
+  },
+
+  "skip_panel": {
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [ "100%", 24 ],
+    "anims": [
+      "@credits.skip_panel_anim_offset"
+    ],
+    "controls": [
+      {
+        "bottom_panel@rainbowpie_ui_common.text_background": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [ "100%", "100%" ],
+          "layer": 12,
+          "controls": [
+            {
+              "button_stack_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100% - 6px", "100% - 2px" ],
+                "controls": [
+                  // {
+                  //   "scroll_end_button@common_buttons.light_text_button": {
+                  //     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                  //     "$pressed_button_name": "scroll_end",
+                  //     "$button_text": "scroll_end",
+                  //     "size": [ "fill", "100%" ]
+                  //   }
+                  // }
+                  {
+                    "middle_padding": {
+                      "type": "panel",
+                      "size": [ "fill", "100%" ]
+                    }
+                  },
+                  {
+                    "skip_button@common_buttons.light_text_form_fitting_button": {
+                      "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button",
+                      "$pressed_button_name": "button.menu_exit",
+                      "$button_text": "credits.skip",
+                      "size": [ "100%c", "100%" ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "fade_in_image": {
+    "texture": ""
+  },
+
+  "credits_renderer": {
+  },
+
+  "credits_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "credits"
+  }
+}
