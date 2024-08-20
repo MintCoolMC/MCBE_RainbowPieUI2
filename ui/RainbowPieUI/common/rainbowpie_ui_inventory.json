@@ -1,6 +1,39 @@
 {
   "namespace": "rainbowpie_ui_inventory",
 
+  "fastplace_icon": {
+    "type": "image",
+    "size": [ "64.28571428571429%", "50%" ],
+    "texture": "($rainbowpie_ui_path_theme + '/icon/inventory/fastplace')"
+  },
+
+  "fastplace_button_toggle_base@common_toggles.light_ui_toggle": {
+    "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
+    "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
+    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
+    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
+    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
+    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
+    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
+    "$button_content": "rainbowpie_ui_inventory.fastplace_icon",
+
+    "$button_type_panel": "common_buttons.new_ui_binding_button_label",
+    "$button_text_binding_type": "none",
+    "$button_binding_condition": "none",
+    "$button_text_grid_collection_name": "none",
+    "$button_text": "",
+    "$button_offset": [ 0, 0 ],
+
+    "$radio_toggle_group": false,
+    "$toggle_name": "rainbowpie_inventoryui_item_fastplace",
+    "$toggle_group_default_selected": 1011,
+
+    "$toggle_group_forced_index": 0,
+
+    "$toggle_view_binding_name": ""
+  },
+
   "hide_search_icon": {
     "type": "image",
     "texture": "textures/ui/chevron_right",
@@ -232,6 +265,36 @@
                                       }
                                     },
                                     // add tab in ft
+                                    {
+                                      "fastplace_panel": {
+                                        "type": "panel",
+                                        "size": [ "100%c", "100%" ],
+                                        "ignored": "((not $rainbowpie_ui_flag_29bdcf8a) or (not $rainbowpie_ui_flag_84df7492) or $rainbowpie_localui_inventoryheader_search_ignored)",
+                                        "bindings": [
+                                          {
+                                            "binding_type": "view",
+                                            "source_control_name": "show_search_box",
+                                            "source_property_name": "(not #toggle_state)",
+                                            "target_property_name": "#visible",
+                                            "ignored": "((not $rainbowpie_ui_flag_d6bb54d8) or (not $rainbowpie_ui_flag_84df7492) or $rainbowpie_localui_inventoryheader_search_ignored)"
+                                          }
+                                        ],
+                                        "controls": [
+                                          {
+                                            "fastplace_button@rainbowpie_ui_inventory.fastplace_button_toggle_base": {
+                                              "$rainbowpie_localui_button_default_alpha": 0.0,
+                                              "$button_image_size": [ "100%", "100%" ],
+                                              "anchor_from": "center",
+                                              "anchor_to": "center",
+                                              "size": [ "100%y", "100%" ],
+                                              "$toggle_group_forced_index": 1010,
+                                              "$toggle_view_binding_name": "inventoryui_fastplace",
+                                              "layer": 10
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
                                     {
                                       "search_panel": {
                                         "type": "panel",
