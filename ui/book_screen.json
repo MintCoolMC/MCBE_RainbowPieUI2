@@ -114,6 +114,7 @@
 
   "book_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "book",
     "$screen_content": "rainbowpieui_book.book_screen_content",
     "force_render_below": true,
     "close_on_player_hurt": false

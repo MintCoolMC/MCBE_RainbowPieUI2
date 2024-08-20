@@ -210,10 +210,17 @@
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
 
+  "anim_item_name_background_alpha_out": {
+    "from": "$rainbowpie_ui_theme_hud_itemname_background_alpha"
+  },
+
+  "anim_item_name_background_alpha_in": {
+    "to": "$rainbowpie_ui_theme_hud_itemname_background_alpha"
+  },
+
   "item_name_text_root/item_text_aligner/item_text_control/item_text_background": {
     "texture": "($rainbowpie_ui_path_home + '/r_white')",
     "color": "$rainbowpie_ui_theme_hud_itemname_background_color",
-    "alpha": "$rainbowpie_ui_theme_hud_itemname_background_alpha",
     "modifications": [
       {
         "array_name": "variables",
@@ -254,12 +261,12 @@
 
   "player_position": {
     // Ignore player_position when using HotbarMode 2
-    "ignored": "(($rainbowpie_ui_flag_hud_hotbar_mode = '2') or (not $touch) or $rainbowpie_ui_flag_6d2ac350)"
+    "ignored": "(($rainbowpie_ui_flag_hud_hotbar_mode = 2) or (not $touch) or $rainbowpie_ui_flag_6d2ac350)"
   },
 
   "number_of_days_played": {
     // Ignore number_of_days_played when using HotbarMode 2
-    "ignored": "(($rainbowpie_ui_flag_hud_hotbar_mode = '2') or (not $touch) or $rainbowpie_ui_flag_6d2ac350)"
+    "ignored": "(($rainbowpie_ui_flag_hud_hotbar_mode = 2) or (not $touch) or $rainbowpie_ui_flag_6d2ac350)"
   },
 
   "chat_panel": {
@@ -267,11 +274,11 @@
   },
 
   "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar": {
-    "ignored": "(not ($rainbowpie_ui_flag_hud_hotbar_mode = '0'))"
+    "ignored": "(not ($rainbowpie_ui_flag_hud_hotbar_mode = 0))"
   },
 
   "hotbar_chooser": {
-    "ignored": "(not ($rainbowpie_ui_flag_hud_hotbar_mode = '0'))"
+    "ignored": "(not ($rainbowpie_ui_flag_hud_hotbar_mode = 0))"
   },
 
   "root_panel": {
@@ -308,6 +315,7 @@
   "hud_screen": {
     "$use_loading_bars": false,
     "$rainbowpie_localui_screen_watermark": false,
-    "$rainbowpie_localui_modified": true
+    "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "hud"
   }
 }

@@ -1,11 +1,27 @@
 {
   "namespace": "start",
 
+  "store_button": {
+    "$is_treatment_button": false
+  },
+
+  "store_button_stack/store_button": {
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_0ab174e4",
+        "$button_state_panel": "rainbowpieui_start.treatment_store_button_status_panel",
+        "$button_text": "",
+        "$icon_texture_name": "marketplace"
+      }
+    ]
+  },
+
   "start_screen": {
     "$is_pregame": true,
     "$rainbowpie_localui_screenbackground_ingame": true,
     "$rainbowpie_localui_screen_watermark": true,
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "start",
     "$screen_content": "rainbowpieui_start.start_screen_content"
   }
 }

@@ -1,0 +1,74 @@
+{
+  "namespace": "rainbowpieui_credits",
+
+  "skip_panel_anim_offset": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, "100%y" ],
+    "to": [ 0, 0 ],
+    "next": "@rainbowpieui_credits.skip_panel_anim_wait"
+  },
+
+  "skip_panel_anim_wait": {
+    "anim_type": "wait",
+    "duration": 5.0,
+    "next": "@rainbowpieui_credits.skip_panel_anim_offset_end"
+  },
+
+  "skip_panel_anim_offset_end": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 0 ],
+    "to": [ 0, "100%y" ],
+    "destroy_at_end": "rainbowpieui_skip_panel"
+  },
+
+  "rainbowpieui_skip_panel": {
+    "type": "panel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [ "100%", 24 ],
+    "anims": [
+      "@rainbowpieui_credits.skip_panel_anim_offset"
+    ],
+    "controls": [
+      {
+        "exit_credits_input_panel": {
+          "type": "input_panel",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "button.menu_exit",
+              "mapping_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "button_stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100% - 6px", "100% - 2px" ],
+          "controls": [
+            {
+              "middle_padding": {
+                "type": "panel",
+                "size": [ "fill", "100%" ]
+              }
+            },
+            {
+              "skip_button@common_buttons.light_text_form_fitting_button": {
+                "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button",
+                "$pressed_button_name": "button.menu_exit",
+                "$button_text": "credits.skip",
+                "size": [ "100%c", "100%" ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

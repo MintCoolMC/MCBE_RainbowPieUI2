@@ -8,6 +8,7 @@
 
   "subscription_ended_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "realms_plus_ended",
     "$screen_content": "rainbowpieui_realms_plus_ended.subscription_ended_screen_content"
   }
 }

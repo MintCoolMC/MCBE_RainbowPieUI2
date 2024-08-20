@@ -3,6 +3,7 @@
 
   "ip_safety_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "ip_safety",
     "$rainbowpie_localui_background_animations": [
       "@rainbowpieui_online_safety.exit_animation_push",
       "@rainbowpieui_online_safety.exit_animation_pop"
@@ -43,6 +44,7 @@
   "online_safety_screen": {
     "$rainbowpie_localui_screenbackground_ingame": true,
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "online_safety",
     "$rainbowpie_localui_background_animations": [
       "@rainbowpieui_online_safety.exit_animation_push",
       "@rainbowpieui_online_safety.exit_animation_pop"

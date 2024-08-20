@@ -49,7 +49,7 @@
                 "anchor_to": "bottom_middle",
                 "$background_offset": [ "-100% + 32px", 0 ],
                 "$background_children_offset": [ "100% - 32px", 0 ],
-                "$background_layer": 3
+                "$background_layer": 1
               }
             },
             {
@@ -59,7 +59,7 @@
                 "anchor_to": "bottom_middle",
                 "$background_offset": [ "-100% + 32px", 0 ],
                 "$background_children_offset": [ "100% - 32px", 0 ],
-                "$background_layer": 3
+                "$background_layer": 1
               }
             }
           ],

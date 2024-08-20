@@ -24,6 +24,7 @@
 
   "add_external_server_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "add_external_server",
     "$screen_content": "rainbowpieui_add_external_server.add_external_server_screen_content"
   }
 }

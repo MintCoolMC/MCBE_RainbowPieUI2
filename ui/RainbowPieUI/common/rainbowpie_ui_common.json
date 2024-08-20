@@ -778,8 +778,9 @@
         "RainbowPieHeaderBlur@rainbowpie_ui_controls.RainbowPieHeaderBlur": {}
       },
       {
-        "RainbowPieHeaderBlur@rainbowpie_ui_controls.RainbowPieHeaderBlurInGame": {
-          "ignored": "(not $rainbowpie_localui_screenheader_ingameblur)"
+        "RainbowPieHeaderBlurInGame@rainbowpie_ui_controls.RainbowPieHeaderBlur": {
+          "ignored": "(not $rainbowpie_localui_screenheader_ingameblur)",
+          "$background_ingame": true
         }
       },
       {

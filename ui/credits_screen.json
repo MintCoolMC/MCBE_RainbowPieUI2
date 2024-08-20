@@ -1,0 +1,20 @@
+{
+  "namespace": "credits",
+
+  "skip_panel": {
+    "controls": [
+      {
+        "rainbowpieui_skip_panel@rainbowpieui_credits.rainbowpieui_skip_panel": {}
+      }
+    ]
+  },
+
+  "fade_in_image": {
+    "texture": ""
+  },
+
+  "credits_screen": {
+    "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "credits"
+  }
+}

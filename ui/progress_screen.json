@@ -61,6 +61,7 @@
 
   "progress_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "progress",
     "$rainbowpie_localui_screenbackground_ingamebg_ignored": true,
     "$rainbowpie_localui_screenbackground_ignored": "$force_render_below",
     "$rainbowpie_localui_screenbackground_override_ignored": false,

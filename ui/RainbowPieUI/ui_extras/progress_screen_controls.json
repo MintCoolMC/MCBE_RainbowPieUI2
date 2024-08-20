@@ -1,6 +1,48 @@
 {
   "namespace": "rainbowpieui_progress",
 
+  "background_animation": {
+    "ignored": "(not $animation_in or not $is_pregame)",
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": 1.0,
+    "from": "$animated_alpha_from",
+    "to": "$animated_alpha_to",
+    "play_event": "$animated_alpha_play_event"
+  },
+
+  "background_blur_animation": {
+    "type": "panel",
+    "ignored": "(not $rainbowpie_ui_flag_c448d476)",
+    "$animation_in|default": true,
+    "$animated_alpha_from|default": 0.0,
+    "$animated_alpha_to|default": 1.0,
+    "$animated_alpha_play_event|default": "screen.entrance_push",
+    "variables": [
+      {
+        "requires": "(not $animation_in)",
+        "$animated_alpha_from": 1.0,
+        "$animated_alpha_to": 0.0
+      }
+    ],
+    "controls": [
+      {
+        "background_blur_fullscreen": {
+          "type": "image",
+          "fill": true,
+          "size": [ "100%", "100%" ],
+          "offset": [ 0, 0 ],
+          "texture": "$rainbowpie_ui_theme_background_blur_texture",
+          "alpha": 1.0,
+          "layer": 1,
+          "anims": [
+            "@rainbowpieui_progress.background_animation"
+          ]
+        }
+      }
+    ]
+  },
+
   "mobile_data_icon": {
     "type": "image",
     "size": [ "100%c + 6px", "100%c + 4px" ],
@@ -254,6 +296,9 @@
   "world_loading_progress_screen": {
     "type": "panel",
     "controls": [
+      {
+        "background_blur_animation@rainbowpieui_progress.background_blur_animation": {}
+      },
       { "mobile_data_icon@rainbowpieui_progress.mobile_data_icon": {} },
       {
         "title_text@rainbowpie_ui_common.title_text": {
@@ -277,6 +322,11 @@
   "world_saving_progress_screen": {
     "type": "panel",
     "controls": [
+      {
+        "background_blur_animation@rainbowpieui_progress.background_blur_animation": {
+          "$animation_in": false
+        }
+      },
       {
         "title_text@rainbowpie_ui_common.title_text": {
           "offset": [ 0, "5%" ],

@@ -201,6 +201,7 @@
 
   "command_block_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "command_block",
     "force_render_below": true,
     "$screen_content": "rainbowpieui_command_block.command_block_screen_content"
   }

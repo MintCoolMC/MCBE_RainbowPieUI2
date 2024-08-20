@@ -21,10 +21,6 @@
     "ignored": "$rainbowpie_ui_flag_84df7492"
   },
 
-  "hopper_screen": {
-    "$is_hopper": true
-  },
-
   "item_dropper_label": {
     "ignored": true
   },
@@ -34,7 +30,7 @@
   },
 
   "panel": {
-    "$is_hopper|default": false,
+    "$container_type|default": "null",
     "modifications": [
       {
         "array_name": "controls",
@@ -42,14 +38,12 @@
         "value": [
           {
             "redstone_root_panel@rainbowpieui_redstone.redstone_root_panel": {
-              "ignored": "(not $rainbowpie_ui_flag_84df7492)",
-              "visible": "(not $is_hopper)"
+              "ignored": "((not $rainbowpie_ui_flag_84df7492) or ($container_type = 'hopper'))"
             }
           },
           {
             "hopper_root_panel@rainbowpieui_redstone.hopper_root_panel": {
-              "ignored": "(not $rainbowpie_ui_flag_84df7492)",
-              "visible": "($is_hopper)"
+              "ignored": "((not $rainbowpie_ui_flag_84df7492) or (not ($container_type = 'hopper')))"
             }
           }
         ]
@@ -87,7 +81,19 @@
     ]
   },
 
-  "dropper_screen": {
+  "hopper_screen": {
+    "$container_type": "hopper"
+  },
 
+  "dropper_screen": {
+    "$container_type": "dropper"
+  },
+
+  "dispenser_screen": {
+    "$container_type": "dispenser"
+  },
+
+  "crafter_screen": {
+    "$container_type": "crafter"
   }
 }

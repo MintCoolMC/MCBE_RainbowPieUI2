@@ -89,6 +89,7 @@
 
   "profile_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "profile",
     // "$rainbowpie_localui_screenbackground_blur": true,
     "$screen_bg_content": "common.empty_panel"
   }

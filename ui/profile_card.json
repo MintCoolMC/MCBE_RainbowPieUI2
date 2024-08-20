@@ -124,6 +124,7 @@
   "profile_card_screen": {
     "$rainbowpie_localui_modified": true,
     "$rainbowpie_localui_screenbackground_blur": true,
+    "$rainbowpie_localui_screen_alias": "profile_card",
     "$screen_content": "rainbowpieui_profile_card.profile_card_screen_content"
   }
 }

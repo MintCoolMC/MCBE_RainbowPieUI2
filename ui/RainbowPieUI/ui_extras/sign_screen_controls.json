@@ -9,8 +9,113 @@
         "screen_content@rainbowpie_ui_common.screen_content": {
           "$rainbowpie_localui_screen_ingame_anim1": true,
           "$rainbowpie_localui_screen_content": [
-            { "sign_screen_content@sign.sign_screen_content": {} }
+            {
+              "sign_screen_content@sign.sign_screen_content": {
+                "ignored": "($rainbowpie_ui_flag_sign_edit_preview_enabled)"
+              }
+            },
+            {
+              "sign_edit_preview_screen_content": {
+                "type": "panel",
+                "ignored": "(not $rainbowpie_ui_flag_sign_edit_preview_enabled)",
+                "controls": [
+                  { "maximized_input_dialog@rainbowpieui_sign.maximized_input_dialog": {} },
+                  { "sign_preview_panel@rainbowpieui_sign.sign_preview_panel": {} },
+                  {
+                    "exit_menu_input_panel@common.input_panel": {
+                      "button_mappings": [
+                        {
+                          "from_button_id": "button.menu_cancel",
+                          "to_button_id": "button.menu_exit",
+                          "mapping_type": "global"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
           ]
+        }
+      }
+    ]
+  },
+
+  "sign_background": {
+    "type": "image",
+    "texture": "$sign_texture",
+    "size": [ 94.08, 45.57 ],
+    "offset": [ -0.49, -1.15 ]
+  },
+
+  "hanging_sign_background": {
+    "type": "image",
+    "texture": "$sign_texture",
+    "size": [ 146.37, 72.93 ],
+    "offset": [ 0, -15.16 ]
+  },
+
+  "regular_sign_text_multiline@sign.base_sign_text_multiline": {
+    "size": [ 90.65, 44.1 ], // * 0.49
+    "$text_background_default": "rainbowpieui_sign.sign_background",
+    "$text_background_hover": "rainbowpieui_sign.sign_background"
+  },
+
+  "hanging_sign_text_multiline@sign.base_sign_text_multiline": {
+    "size": [ 64.26, 45.9 ], // * 0.51
+    "$text_background_default": "rainbowpieui_sign.hanging_sign_background",
+    "$text_background_hover": "rainbowpieui_sign.hanging_sign_background"
+  },
+
+  "sign_preview_panel": {
+    "type": "panel",
+    "size": [ 96, 48 ],
+    "offset": [ -78, 0 ],
+    "$sign_preview_panel_control": "('rainbowpieui_' + $sign_text_multiline)",
+    "controls": [
+      {
+        "text_edit@$sign_preview_panel_control": {
+          "$font_size": "normal",
+          "selected": false,
+          "focus_enabled": false,
+          "consume_event": false
+        }
+      }
+    ]
+  },
+
+  "maximized_input_dialog@rainbowpie_ui_dialog.dialog_panel": {
+    "$rainbowpie_localui_dialog_content": "rainbowpieui_sign.maximized_input_dialog_content",
+    "size": [ 160, 130 ],
+    "offset": [ 54, 0 ],
+    "layer": 110,
+    "variables": [
+      // 我也不知道下面这段代码是如何运作的
+      {
+        "requires": "($sign_text_multiline = 'sign.regular_sign_text_multiline')",
+        "$rainbowpie_localui_dialogheader_title": "(('item.' + (($sign_texture - 'textures/ui/') - 'sign_' - '_sign') + '_sign.name') - 'sign_')"
+      },
+      {
+        "requires": "($sign_text_multiline = 'sign.hanging_sign_text_multiline')",
+        "$rainbowpie_localui_dialogheader_title": "((((('item.' + (($sign_texture - 'textures/ui/hanging_sign_') - 'darkoak') + '.___..dark_oak' + '__._oak_hanging_sign.name') - '..___.') - '.___..dark_oak') - 'textures/ui/hanging_sign__._') - '_._oak_')"
+      }
+    ]
+  },
+
+  "maximized_input_dialog_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "sign_text_multiline@common.multiline_text_edit_box": {
+          "$rainbowpie_localui_editbox_enabled": true,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "selected": true,
+          "can_be_deselected": false,
+          "$text_box_name": "#sign_text_multi",
+          "max_length": 32500,
+          "$text_edit_box_content_binding_name": "#sign_text"
         }
       }
     ]

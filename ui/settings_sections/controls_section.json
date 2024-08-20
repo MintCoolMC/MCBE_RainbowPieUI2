@@ -1,6 +1,11 @@
 {
   "namespace": "controls_section",
 
+  // Remove this when mojang fix delayed_block_breaking on using Joystick & aim crosshair control mode
+  "touch_section/common_touch_settings/option_creative_delayed_block_breaking": {
+    "bindings": []
+  },
+
   "touch_section/common_touch_settings/joystick_visibility_dropdown": {
     "$rainbowpie_localui_dropdown_enabled": true,
     "$rainbowpie_localui_dropdown_content": [

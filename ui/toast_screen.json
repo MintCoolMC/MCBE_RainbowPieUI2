@@ -219,6 +219,7 @@
   },
 
   "toast_screen": {
-    "$rainbowpie_localui_screenbackground_ignored": true
+    "$rainbowpie_localui_screenbackground_ignored": true,
+    "$rainbowpie_localui_screen_alias": "toast_screen"
   }
 }

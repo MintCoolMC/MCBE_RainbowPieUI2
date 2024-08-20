@@ -382,6 +382,7 @@
     "close_on_player_hurt": false,
     "$rainbowpie_localui_screen_watermark": false,
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "chat",
     "$rainbowpie_ui_theme_global_background_alpha": 0.5,
     "$screen_bg_content": "common.empty_panel"
   }

@@ -132,7 +132,7 @@
     "controls": [
       {
         "safezone_background@rainbowpie_ui_common.global_background": {
-          "ignored": "(not $rainbowpie_localui_screenbackground_ingameSafezoneOnly or $rainbowpie_localui_screenbackground_ingamebg_ignored or $rainbowpie_localui_inventory_screen or not (($rainbowpie_ui_flag_overlay_screen - $screen_content) = $rainbowpie_ui_flag_overlay_screen))",
+          "ignored": "(not $rainbowpie_localui_screenbackground_ingameSafezoneOnly or $rainbowpie_localui_screenbackground_ingamebg_ignored or $rainbowpie_localui_inventory_screen or not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias))",
           "size": [ "100%", "100%" ],
           "layer": 1
         }
@@ -144,7 +144,7 @@
     "controls": [
       {
         "safezone_background@rainbowpie_ui_common.global_background": {
-          "ignored": "(not $rainbowpie_localui_screenbackground_ingameSafezoneOnly or $rainbowpie_localui_screenbackground_ingamebg_ignored or $rainbowpie_localui_inventory_screen or not (($rainbowpie_ui_flag_overlay_screen - $screen_content) = $rainbowpie_ui_flag_overlay_screen))",
+          "ignored": "(not $rainbowpie_localui_screenbackground_ingameSafezoneOnly or $rainbowpie_localui_screenbackground_ingamebg_ignored or $rainbowpie_localui_inventory_screen or not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias))",
           "size": [ "100%", "100%" ],
           "layer": 1
         }
@@ -156,7 +156,7 @@
     "controls": [
       {
         "safezone_background@rainbowpie_ui_common.global_background": {
-          "ignored": "(not $rainbowpie_localui_screenbackground_ingameSafezoneOnly or $rainbowpie_localui_screenbackground_ingamebg_ignored or $rainbowpie_localui_inventory_screen or not (($rainbowpie_ui_flag_overlay_screen - $screen_content) = $rainbowpie_ui_flag_overlay_screen))",
+          "ignored": "(not $rainbowpie_localui_screenbackground_ingameSafezoneOnly or $rainbowpie_localui_screenbackground_ingamebg_ignored or $rainbowpie_localui_inventory_screen or not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias))",
           "size": [ "100%", "100%" ],
           "layer": 1
         }
@@ -168,7 +168,7 @@
     "controls": [
       {
         "safezone_background@rainbowpie_ui_common.global_background": {
-          "ignored": "(not $rainbowpie_localui_screenbackground_ingameSafezoneOnly or $rainbowpie_localui_screenbackground_ingamebg_ignored or $rainbowpie_localui_inventory_screen or not (($rainbowpie_ui_flag_overlay_screen - $screen_content) = $rainbowpie_ui_flag_overlay_screen))",
+          "ignored": "(not $rainbowpie_localui_screenbackground_ingameSafezoneOnly or $rainbowpie_localui_screenbackground_ingamebg_ignored or $rainbowpie_localui_inventory_screen or not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias))",
           "size": [ "100%", "100%" ],
           "layer": 1
         }
@@ -723,6 +723,7 @@
 
   "inventory_screen_common": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "inventory_screen",
     "$rainbowpie_localui_inventory_screen": true,
     "cache_screen": true,
     "force_render_below": "$desktop_screen",
@@ -1072,7 +1073,9 @@
       "@common.screen_entrance_animation_push_fade",
       "@common.screen_entrance_animation_pop_fade"
     ],
-    "$rainbowpie_localui_screen_alias|default": "",
+    "$close_on_player_hurt": false,
+    "$rainbowpie_localui_screen_alias": "null",
+    "$rainbowpie_localui_screen_alias_formatted": "($rainbowpie_localui_screen_alias + ',')",
     "modifications": [
       {
         "array_name": "controls",
@@ -1126,7 +1129,7 @@
               "controls": [
                 {
                   "debug_screen_content@rainbowpie_ui_common.text_label": {
-                    "ignored": "((not $rainbowpie_ui_debug_screen_content) or (not (($rainbowpie_ui_flag_overlay_screen - $screen_content) = $rainbowpie_ui_flag_overlay_screen)))",
+                    "ignored": "((not $rainbowpie_ui_debug_screen_content) or (not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias)) or ($screen_content = 'rainbowpie_ui_common.screen_background'))",
                     "anchor_from": "top_right",
                     "anchor_to": "top_right",
                     "text": "$screen_content"
@@ -1137,7 +1140,7 @@
           },
           {
             "rainbowpie_gamepad_connect_tip": {
-              "ignored": "((not $rainbowpie_ui_feature_gamepad_connect_tip) or (not (($rainbowpie_ui_flag_overlay_screen - $screen_content) = $rainbowpie_ui_flag_overlay_screen)) or ($screen_content = 'rainbowpie_ui_common.screen_background') or $game_pad)",
+              "ignored": "((not $rainbowpie_ui_feature_gamepad_connect_tip) or (not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias)) or ($screen_content = 'rainbowpie_ui_common.screen_background') or $game_pad)",
               "type": "image",
               "texture": "textures/ui/White",
               "color": "$rainbowpie_ui_theme_toast_background_color",
@@ -1234,7 +1237,7 @@
           {
             "rainbowpieui_screen_background_panel": {
               "type": "panel",
-              "ignored": "(not (($rainbowpie_ui_flag_overlay_screen - $screen_content) = $rainbowpie_ui_flag_overlay_screen))",
+              "ignored": "((not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias)) or ($screen_content = 'rainbowpie_ui_common.screen_background'))",
               "$rainbowpie_localui_dialog_ignored": true,
               "controls": [
                 {
@@ -1246,7 +1249,7 @@
                       {
                         "debug_screen_animation": {
                           "type": "panel",
-                          "ignored": "((not $rainbowpie_ui_debug_screen_animation) or (not (($rainbowpie_ui_flag_overlay_screen - $screen_content) = $rainbowpie_ui_flag_overlay_screen)))",
+                          "ignored": "((not $rainbowpie_ui_debug_screen_animation) or (not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias)))",
                           "controls": [
                             {
                               "screen_animation_reset@common_buttons.light_text_button": {
@@ -1323,7 +1326,7 @@
                 {
                   "ingame_background_panel": {
                     "type": "panel",
-                    "ignored": "($rainbowpie_localui_screenbackground_ingameSafezoneOnly or $rainbowpie_localui_screenbackground_ingamebg_ignored or $rainbowpie_localui_inventory_screen or $is_pregame or not (($rainbowpie_ui_flag_overlay_screen - $screen_content) = $rainbowpie_ui_flag_overlay_screen))",
+                    "ignored": "($rainbowpie_localui_screenbackground_ingameSafezoneOnly or $rainbowpie_localui_screenbackground_ingamebg_ignored or $rainbowpie_localui_inventory_screen or $is_pregame or not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias))",
                     "anims": "$rainbowpie_localui_background_animations",
                     "animation_reset_name": "screen_animation_reset",
                     "propagate_alpha": true,
@@ -1747,7 +1750,7 @@
           },
           // Force use Rainbow Pie UI style server_form
           {
-            "requires": "($rainbowpie_ui_flag_server_form_force and ((('%.12s' * $screen_content) = 'server_form.') or ($rainbowpie_localui_screen_alias = 'server_form')))",
+            "requires": "($rainbowpie_ui_flag_server_form_force and ($rainbowpie_localui_screen_alias = 'server_form'))",
             "$screen_content": "rainbowpieui_server_form.main_screen_content",
             "$screen_animations": [
               "@common.screen_exit_animation_push_offset",
@@ -1771,17 +1774,23 @@
             "$new_video_settings": true
           },
           {
-            "requires": "($screen_content = 'rainbowpieui_settings_common.settings_content')",
+            "requires": "($rainbowpie_localui_screen_alias = 'settings')",
             "$export_template_disabled": false
           },
           // Force disable rainbowpie_ui_flag_hud_hotbar_mode 2
           {
-            "requires": "($rainbowpie_ui_flag_hud_hotbar_mode = '2')",
-            "$rainbowpie_ui_flag_hud_hotbar_mode": "1"
+            "requires": "($rainbowpie_ui_flag_hud_hotbar_mode = 2)",
+            "$rainbowpie_ui_flag_hud_hotbar_mode": 1
           },
           {
-            "requires": "($rainbowpie_ui_flag_hud_hotbar_mode > '3')",
-            "$rainbowpie_ui_flag_hud_hotbar_mode": "0"
+            "requires": "($rainbowpie_ui_flag_hud_hotbar_mode > 3)",
+            "$rainbowpie_ui_flag_hud_hotbar_mode": 0
+          },
+          {
+            "requires": "(($rainbowpie_localui_screen_alias = 'hud') and (not ($screen_content = 'hud.hud_content')))",
+            "$rainbowpie_ui_flag_hud_hotbar_mode": 0,
+            "$rainbowpie_ui_flag_6d2ac350": false,
+            "$rainbowpie_ui_flag_0ffd0593": false
           },
           // Zeqa Network
           {

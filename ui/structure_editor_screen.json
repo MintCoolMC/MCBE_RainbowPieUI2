@@ -172,6 +172,7 @@
 
   "structure_editor_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "structure_editor",
     "force_render_below": true,
     "$screen_content": "rainbowpieui_structure_editor.structure_editor_content"
   }

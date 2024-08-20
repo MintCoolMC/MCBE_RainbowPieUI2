@@ -9,6 +9,7 @@
 
   "dynamic_dialog_screen": {
     "$rainbowpie_localui_modified": true,
+    "$rainbowpie_localui_screen_alias": "how_to_play",
     "$screen_content": "rainbowpieui_how_to_play.how_to_play_content"
   },
 
@@ -24,7 +25,7 @@
     "color": "$rainbowpie_ui_theme_title_text_color"
   },
 
-  "paragraph": {
+  "paragraph_label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
     "color": "$rainbowpie_ui_theme_global_text_color"

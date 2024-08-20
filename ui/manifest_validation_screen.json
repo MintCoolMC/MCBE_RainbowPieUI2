@@ -4,6 +4,7 @@
   "manifest_validation_screen": {
     "$rainbowpie_localui_modified": true,
     "$rainbowpie_localui_screenbackground_blur": true,
+    "$rainbowpie_localui_screen_alias": "manifest_validation",
     "force_render_below": false,
     "$screen_content": "rainbowpieui_manifest_validation.manifest_validation_screen_content"
   }

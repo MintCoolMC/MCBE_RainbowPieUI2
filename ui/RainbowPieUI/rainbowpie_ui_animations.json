@@ -95,7 +95,7 @@
     "easing": "$rainbowpie_ui_animation_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, 0 ],
-    "to": [ "-3%", 0 ],
+    "to": [ "-15%", 0 ],
     "play_event": "screen.exit_push",
     "end_event": "screen.exit_end"
   },
@@ -106,7 +106,7 @@
     "easing": "$rainbowpie_ui_animation_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, 0 ],
-    "to": [ "3%", 0 ],
+    "to": [ "15%", 0 ],
     "play_event": "screen.exit_pop",
     "end_event": "screen.exit_end"
   },
@@ -116,7 +116,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ "3%", 0 ],
+    "from": [ "15%", 0 ],
     "to": [ 0, 0 ],
     "play_event": "screen.entrance_push",
     "end_event": "screen.entrance_end"
@@ -127,7 +127,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ "-3%", 0 ],
+    "from": [ "-15%", 0 ],
     "to": [ 0, 0 ],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
@@ -139,7 +139,7 @@
     "easing": "$rainbowpie_ui_animation_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, 0 ],
-    "to": [ 0, "6%"],
+    "to": [ 0, "15%"],
     "play_event": "screen.exit_push",
     "end_event": "screen.exit_end"
   },
@@ -150,7 +150,7 @@
     "easing": "$rainbowpie_ui_animation_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, 0 ],
-    "to": [ 0, "6%" ],
+    "to": [ 0, "15%" ],
     "play_event": "screen.exit_pop",
     "end_event": "screen.exit_end"
   },
@@ -160,7 +160,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ 0, "6%" ],
+    "from": [ 0, "15%" ],
     "to": [ 0, 0 ],
     "play_event": "screen.entrance_push",
     "end_event": "screen.entrance_end"
@@ -171,7 +171,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ 0, "6%" ],
+    "from": [ 0, "15%" ],
     "to": [ 0, 0 ],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
@@ -183,7 +183,7 @@
     "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, 0 ],
-    "to": [ "-6%", 0 ],
+    "to": [ "-20%", 0 ],
     "play_event": "screen.exit_push",
     "end_event": "screen.exit_end"
   },
@@ -194,7 +194,7 @@
     "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, 0 ],
-    "to": [ "6%", 0 ],
+    "to": [ "20%", 0 ],
     "play_event": "screen.exit_pop",
     "end_event": "screen.exit_end"
   },
@@ -204,7 +204,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ "6%", 0 ],
+    "from": [ "20%", 0 ],
     "to": [ 0, 0 ],
     "play_event": "screen.entrance_push",
     "end_event": "screen.entrance_end"
@@ -215,7 +215,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ "-6%", 0 ],
+    "from": [ "-20%", 0 ],
     "to": [ 0, 0 ],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
@@ -315,7 +315,7 @@
     "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, 0 ],
-    "to": [ 0, -16 ],
+    "to": [ 0, -24 ],
     "play_event": "screen.exit_push",
     "end_event": "screen.exit_end"
   },
@@ -326,7 +326,7 @@
     "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, 0 ],
-    "to": [ 0, -16 ],
+    "to": [ 0, -24 ],
     "play_event": "screen.exit_pop",
     "end_event": "screen.exit_end"
   },
@@ -336,7 +336,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ 0, -16 ],
+    "from": [ 0, -24 ],
     "to": [ 0, 0 ],
     "play_event": "screen.entrance_push",
     "end_event": "screen.entrance_end"
@@ -347,7 +347,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ 0, -16 ],
+    "from": [ 0, -24 ],
     "to": [ 0, 0 ],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
@@ -449,7 +449,7 @@
     "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, "-100% + 20px" ],
-    "to": [ 0, "-100% + 4px" ],
+    "to": [ 0, "-100% - 4px" ],
     "play_event": "screen.exit_push",
     "end_event": "screen.exit_end"
   },
@@ -460,7 +460,7 @@
     "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, "100% - 20px" ],
-    "to": [ 0, "100% - 4px" ],
+    "to": [ 0, "100% + 4px" ],
     "play_event": "screen.exit_push",
     "end_event": "screen.exit_end"
   },
@@ -471,7 +471,7 @@
     "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, "-100% + 20px" ],
-    "to": [ 0, "-100% + 4px" ],
+    "to": [ 0, "-100% - 4px" ],
     "play_event": "screen.exit_pop",
     "end_event": "screen.exit_end"
   },
@@ -482,7 +482,7 @@
     "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, "100% - 20px" ],
-    "to": [ 0, "100% - 4px" ],
+    "to": [ 0, "100% + 4px" ],
     "play_event": "screen.exit_pop",
     "end_event": "screen.exit_end"
   },
@@ -492,7 +492,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ 0, "-100% + 4px" ],
+    "from": [ 0, "-100% - 4px" ],
     "to": [ 0, "-100% + 20px" ],
     "play_event": "screen.entrance_push",
     "end_event": "screen.entrance_end"
@@ -503,7 +503,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ 0, "100% - 4px" ],
+    "from": [ 0, "100% + 4px" ],
     "to": [ 0, "100% - 20px" ],
     "play_event": "screen.entrance_push",
     "end_event": "screen.entrance_end"
@@ -514,7 +514,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ 0, "-100% + 4px" ],
+    "from": [ 0, "-100% - 4px" ],
     "to": [ 0, "-100% + 20px" ],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
@@ -525,7 +525,7 @@
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_header_transition_effect_entrance",
     "duration": "$rainbowpie_ui_animation_transition_time",
-    "from": [ 0, "100% - 4px" ],
+    "from": [ 0, "100% + 4px" ],
     "to": [ 0, "100% - 20px" ],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
