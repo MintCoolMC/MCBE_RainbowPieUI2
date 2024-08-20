@@ -173,7 +173,7 @@
   "$rainbowpie_ui_flag_c448d476": false, // ProgressUI World loading background blur
   "$rainbowpie_ui_flag_72873fec": true, // InventoryUI new recipe book ui animaion
   "$rainbowpie_ui_flag_ef158e0f": true, // InventoryUI vanilla search bar button
-  "$rainbowpie_ui_flag_29bdcf8a": true, // InventoryUI Global Item Fastplace
+  "$rainbowpie_ui_flag_29bdcf8a": false, // InventoryUI Global Item Fastplace
 
   // Debug
   "$rainbowpie_ui_debug": false,
