@@ -47,33 +47,23 @@
         }
       },
       {
-        "bottom_panel@rainbowpie_ui_common.text_background": {
-          "anchor_from": "bottom_middle",
-          "anchor_to": "bottom_middle",
-          "size": [ "100%", "100%" ],
-          "layer": 12,
+        "button_stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100% - 6px", "100% - 2px" ],
           "controls": [
             {
-              "button_stack_panel": {
-                "type": "stack_panel",
-                "orientation": "horizontal",
-                "size": [ "100% - 6px", "100% - 2px" ],
-                "controls": [
-                  {
-                    "middle_padding": {
-                      "type": "panel",
-                      "size": [ "fill", "100%" ]
-                    }
-                  },
-                  {
-                    "skip_button@common_buttons.light_text_form_fitting_button": {
-                      "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button",
-                      "$pressed_button_name": "button.menu_exit",
-                      "$button_text": "credits.skip",
-                      "size": [ "100%c", "100%" ]
-                    }
-                  }
-                ]
+              "middle_padding": {
+                "type": "panel",
+                "size": [ "fill", "100%" ]
+              }
+            },
+            {
+              "skip_button@common_buttons.light_text_form_fitting_button": {
+                "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button",
+                "$pressed_button_name": "button.menu_exit",
+                "$button_text": "credits.skip",
+                "size": [ "100%c", "100%" ]
               }
             }
           ]
