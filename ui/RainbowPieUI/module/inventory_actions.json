@@ -929,7 +929,7 @@
               "drop_one_input_panel": {
                 "type": "input_panel",
                 "size": [ "100%", "100%" ],
-                "consume_hover_events": false,
+                "consume_hover_events": "$touch",
                 "visible": false,
                 "bindings": [
                   {
@@ -974,7 +974,7 @@
               "drop_all_input_panel": {
                 "type": "input_panel",
                 "size": [ "100%", "100%" ],
-                "consume_hover_events": false,
+                "consume_hover_events": "$touch",
                 "visible": false,
                 "bindings": [
                   {
