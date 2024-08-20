@@ -11,7 +11,7 @@
         "fastplace_slot_panel": {
           "type": "input_panel",
           "size": [ "100%", "100%" ],
-          "consume_hover_events": false,
+          "consume_hover_events": "$touch",
           "layer": 22,
           "visible": false,
           "ignored": "((not $rainbowpie_ui_flag_29bdcf8a) or (not $rainbowpie_ui_flag_84df7492))",
