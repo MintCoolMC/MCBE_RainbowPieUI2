@@ -34,6 +34,7 @@
     "ui/RainbowPieUI/ui_extras/command_block_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/content_log_controls.json",
     "ui/RainbowPieUI/ui_extras/content_log_history_screen_controls.json",
+    "ui/RainbowPieUI/ui_extras/credits_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/disconnect_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/enchanting_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/furnace_screen_controls.json",
