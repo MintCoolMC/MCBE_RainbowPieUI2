@@ -1,86 +1,11 @@
 {
   "namespace": "rainbowpieui_settings_common",
 
-  "error_check_dialog_button": {
-    "type": "panel",
-    "size": [ "100%c", "100%" ],
-    "controls": [
-      {
-        "stack_panel": {
-          "type": "stack_panel",
-          "orientation": "horizontal",
-          "size": [ "100%c", "100%" ],
-          "controls": [
-            {
-              "close_dialog_button@rainbowpieui_settings_common.error_check_button_toggle_base": {
-                "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
-                "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
-                "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
-                "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
-                "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
-                "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
-                "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
-                "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
-                "$toggle_focus_enabled": false,
-                "$rainbowpie_localui_button_default_alpha": 0.0,
-                "$rainbowpie_localui_button_hover_color": "$rainbowpie_ui_theme_closebutton_hover_background_color",
-                "$rainbowpie_localui_button_hover_alpha": "$rainbowpie_ui_theme_closebutton_hover_background_alpha",
-                "$rainbowpie_localui_button_pressed_color": "$rainbowpie_ui_theme_closebutton_pressed_background_color",
-                "$rainbowpie_localui_button_pressed_alpha": "$rainbowpie_ui_theme_closebutton_pressed_background_alpha",
-                "$rainbowpie_localui_button_border_enabled": false,
-                "$button_image_size": [ "100%", "100%" ],
-                "$button_content": "rainbowpieui_settings_common.close_button_icon",
-                "size": [ "100%y", "100%" ],
-                "$toggle_group_forced_index": 10,
-                "$toggle_view_binding_name": "close_error_dialog",
-                "$button_mappings": [
-                  {
-                    "from_button_id": "button.menu_select",
-                    "to_button_id": "button.menu_select",
-                    "mapping_type": "pressed"
-                  },
-                  {
-                    "from_button_id": "button.menu_ok",
-                    "to_button_id": "button.menu_select",
-                    "mapping_type": "pressed"
-                  },
-                  {
-                    "from_button_id": "button.menu_cancel",
-                    "to_button_id": "button.menu_select",
-                    "mapping_type": "global"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-
-  "close_button_icon": {
-    "type": "image",
-    "size": [ 15, 15 ],
-    "layer": 2,
-    "texture": "($rainbowpie_ui_path_theme + '/icon/global/close_button/close')",
-    "color": "$rainbowpie_localui_button_text_color"
-  },
-
-  "error_check_button_toggle_base@common_toggles.light_ui_toggle": {
-    "$button_text_binding_type": "none",
-    "$button_binding_condition": "none",
-    "$button_text_grid_collection_name": "none",
-    "$button_text": "",
-
-    "$button_offset": [ 0, 0 ],
-
-    "$radio_toggle_group": true,
-    "$toggle_name": "rainbowpie_error_check",
-    "$toggle_group_default_selected": 1,
-
-    "$toggle_group_forced_index": 0,
-
-    "$toggle_view_binding_name": ""
+  "pack_warning_panel_destroy": {
+    "anim_type": "wait",
+    "duration": 0,
+    "destroy_at_end": "pack_warning",
+    "play_event": "rainbowpie.close_pack_warning"
   },
 
   "pack_warning_dialog_alert_content": {
@@ -310,22 +235,14 @@
                 "size": [ 204, 132 ],
                 "layer": 100,
                 "$rainbowpie_localui_dialogheader_title": "$mintui_pack_name",
-                "$rainbowpie_localui_dialogheader_extra_controls": "rainbowpieui_settings_common.error_check_dialog_button",
                 "$rainbowpie_localui_dialog_content": "rainbowpieui_settings_common.pack_warning_dialog_alert_content",
                 "$rainbowpie_localui_dialog_show_background": false,
-                "$rainbowpie_localui_dialogheader_show_close": false
+                "$rainbowpie_localui_dialogheader_show_close": true,
+                "$close_button_to_button_id": "rainbowpie.close_pack_warning"
               }
             },
             {
               "background2@rainbowpie_popup_dialog.background_panel_design2": {}
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "close_error_dialog",
-              "source_property_name": "(not #toggle_state)",
-              "target_property_name": "#visible"
             }
           ],
           "button_mappings": [
@@ -433,6 +350,9 @@
           "type": "stack_panel",
           "orientation": "vertical",
           "size": [ "100%", "100%" ],
+          "anims": [
+            "@rainbowpieui_settings_common.pack_warning_panel_destroy"
+          ],
           "collection_name": "#selected_pack_items_global",
           "factory": {
             "name": "selected_pack_factory",
