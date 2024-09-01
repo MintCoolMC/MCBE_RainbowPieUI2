@@ -193,11 +193,11 @@
                       "anchor_to": "left_middle",
                       "size": [ "80% - 2px", 10 ],
                       "text_alignment": "left",
-                      "text": "($mintui_pack_name + ' ' + $rainbowpieui_branch_display_name + ' ' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version + $rainbowpie_localui_this_split + $rainbowpie_ui_flag_server_displayname)",
+                      "text": "($mintui_pack_name + ' ' + $rainbowpieui_branch_display_name + ' ' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version + $rainbowpie_localui_this_split + $rainbowpie_ui_flag_resourcepack_displayname)",
                       "layer": 1,
                       "variables": [
                         {
-                          "requires": "(not ($rainbowpie_ui_flag_server_displayname = ''))",
+                          "requires": "(not ($rainbowpie_ui_flag_resourcepack_displayname = ''))",
                           "$rainbowpie_localui_this_split": " | "
                         },
                         {
@@ -279,11 +279,11 @@
                       "anchor_to": "left_middle",
                       "size": [ "80% - 2px", 10 ],
                       "text_alignment": "left",
-                      "text": "($mintui_pack_name + ' ' + $rainbowpieui_branch_display_name + ' ' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version + ' ' + $rainbowpieui_branch_name + '/' + $rainbowpieui_commit_id + $rainbowpie_localui_this_split + $rainbowpie_ui_flag_server_displayname)",
+                      "text": "($mintui_pack_name + ' ' + $rainbowpieui_branch_display_name + ' ' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version + ' ' + $rainbowpieui_branch_name + '/' + $rainbowpieui_commit_id + $rainbowpie_localui_this_split + $rainbowpie_ui_flag_resourcepack_displayname)",
                       "layer": 1,
                       "variables": [
                         {
-                          "requires": "(not ($rainbowpie_ui_flag_server_displayname = ''))",
+                          "requires": "(not ($rainbowpie_ui_flag_resourcepack_displayname = ''))",
                           "$rainbowpie_localui_this_split": " | "
                         },
                         {
