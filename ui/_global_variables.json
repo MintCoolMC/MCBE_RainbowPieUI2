@@ -633,6 +633,6 @@
   // Compatibility for servers or other resource packs
   // The variables here will be overwritten when the server loads the resource package.
   "$is_zeqa": false, // Zeqa Network (Server)
-  "$cubecraft_green": "string" // CubeCraft
+  "$cubecraft_green": "string" // CubeCraft (Server)
 }
 
