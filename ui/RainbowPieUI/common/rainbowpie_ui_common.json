@@ -627,11 +627,74 @@
 
   // Shared UI Common
 
+  "progress_bar_inner1_anim_size_start": {
+    "anim_type": "size",
+    "easing": "in_sine",
+    "duration": 1.5,
+    "from": [ "10%", "100%" ],
+    "to": [ "120%", "100%" ],
+    "next": "@rainbowpie_ui_common.progress_bar_inner1_anim_size_wait"
+  },
+
+  "progress_bar_inner1_anim_size_wait": {
+    "anim_type": "wait",
+    "duration": 1.0,
+    "next": "@rainbowpie_ui_common.progress_bar_inner1_anim_size_start"
+  },
+
+  "progress_bar_inner1_anim_offset_start": {
+    "anim_type": "offset",
+    "easing": "in_sine",
+    "duration": 1.5,
+    "from": [ "-10%", 0 ],
+    "to": [ "100%", 0 ],
+    "next": "@rainbowpie_ui_common.progress_bar_inner1_anim_offset_wait"
+  },
+
+  "progress_bar_inner1_anim_offset_wait": {
+    "anim_type": "wait",
+    "duration": 1.0,
+    "next": "@rainbowpie_ui_common.progress_bar_inner1_anim_offset_start"
+  },
+
+  
+
+  "progress_bar_inner2_anim_size_start": {
+    "anim_type": "size",
+    "easing": "linear",
+    "duration": 1.0,
+    "from": [ "75%", "100%" ],
+    "to": [ "5%", "100%" ],
+    "next": "@rainbowpie_ui_common.progress_bar_inner2_anim_size_wait"
+  },
+
+  "progress_bar_inner2_anim_size_wait": {
+    "anim_type": "wait",
+    "duration": 1.5,
+    "next": "@rainbowpie_ui_common.progress_bar_inner2_anim_size_start"
+  },
+
+  "progress_bar_inner2_anim_offset_start": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 1.0,
+    "from": [ "-75%", 0 ],
+    "to": [ "100%", 0 ],
+    "next": "@rainbowpie_ui_common.progress_bar_inner2_anim_offset_wait"
+  },
+
+  "progress_bar_inner2_anim_offset_wait": {
+    "anim_type": "wait",
+    "duration": 1.5,
+    "next": "@rainbowpie_ui_common.progress_bar_inner2_anim_offset_start"
+  },
+
   "progress_loading_bars": {
     "type": "image",
     "texture": "textures/ui/White",
     "color": "$rainbowpie_ui_theme_progress_empty_color",
     "alpha": "$rainbowpie_ui_theme_progress_empty_alpha",
+    "clips_children": true,
     "controls": [
       {
         "progress_loading_bars_full": {
@@ -643,7 +706,46 @@
           "offset": "@rainbowpie_ui_common.anim_progress_loading_bars_1",
           "color": "$rainbowpie_ui_theme_progress_full_color",
           "alpha": "$rainbowpie_ui_theme_progress_full_alpha",
-          "layer": 1
+          "layer": 1,
+          "ignored": "$rainbowpie_ui_flag_522748cc"
+        }
+      },
+      {
+        "android_style_progress_loading_bars_full_ch1": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "fill": true,
+          "anchor_to": "left_middle",
+          "anchor_from": "left_middle",
+          "size": [ 0, "100%" ],
+          "offset": [ 0, 0 ],
+          "anims": [
+            "@rainbowpie_ui_common.progress_bar_inner1_anim_size_start",
+            "@rainbowpie_ui_common.progress_bar_inner1_anim_offset_start"
+          ],
+          "color": "$rainbowpie_ui_theme_progress_full_color",
+          "alpha": "$rainbowpie_ui_theme_progress_full_alpha",
+          "layer": 1,
+          "ignored": "(not $rainbowpie_ui_flag_522748cc)"
+        }
+      },
+      {
+        "android_style_progress_loading_bars_full_ch2": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "fill": true,
+          "anchor_to": "left_middle",
+          "anchor_from": "left_middle",
+          "size": [ 0, "100%" ],
+          "offset": [ 0, 0 ],
+          "anims": [
+            "@rainbowpie_ui_common.progress_bar_inner2_anim_size_wait",
+            "@rainbowpie_ui_common.progress_bar_inner2_anim_offset_wait"
+          ],
+          "color": "$rainbowpie_ui_theme_progress_full_color",
+          "alpha": "$rainbowpie_ui_theme_progress_full_alpha",
+          "layer": 1,
+          "ignored": "(not $rainbowpie_ui_flag_522748cc)"
         }
       }
     ]

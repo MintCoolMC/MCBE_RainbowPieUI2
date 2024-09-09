@@ -177,6 +177,7 @@
   "$rainbowpie_ui_flag_a012c161": true, // Chat Message Edit and Copy (Experimental)
   "$rainbowpie_ui_flag_ae054b5d": false, // New player joined world (Experimental)
   "$rainbowpie_ui_flag_99d9851a": true, // Button border glint
+  "$rainbowpie_ui_flag_522748cc": true, // Android style Progress Bar (from ElytraUI)
 
   // Debug
   "$rainbowpie_ui_debug": false,
