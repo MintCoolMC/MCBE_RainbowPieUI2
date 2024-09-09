@@ -1,6 +1,111 @@
 {
   "namespace": "rainbowpieui_chat",
 
+  "editable_message_text": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "anims": ["@rainbowpieui_chat.chat_message_panel_size_animation"],
+    "clips_children": true,
+    "controls": [
+      {
+        "text_edit_box": {
+          "type": "edit_box",
+          "size": [ "100%", "100%c" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "focus_enabled": true,
+          "enabled_newline": true,
+          "max_length": 32500,
+          "text_box_name": "message_text",
+          "text_control": "message_display_text",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.text_edit_box_selected",
+              "handle_select": true,
+              "handle_deselect": false,
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.text_edit_box_selected",
+              "handle_select": false,
+              "handle_deselect": true,
+              "mapping_type": "global",
+              "consume_event": false
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.text_edit_box_selected",
+              "handle_select": true,
+              "handle_deselect": false,
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "button.text_edit_box_deselected",
+              "handle_select": false,
+              "handle_deselect": true,
+              "mapping_type": "global"
+            },
+            {
+              "to_button_id": "button.text_edit_box_hovered",
+              "mapping_type": "pressed"
+            }
+          ],
+          "controls": [
+            {
+              "message_display_text": {
+                "type": "label",
+                "color": "$chat_text_color",
+                "localize": false,
+                "size": [ "100%", "default" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text": "#item_name",
+                "text_tts": "#text_tts",
+                "font_type": "$chat_font_type",
+                "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+                "font_scale_factor": "$chat_font_scale_factor",
+                "line_padding": "$chat_line_spacing",
+                "anims": ["@rainbowpieui_chat.chat_message_panel_animation"],
+                "property_bag": {
+                  "#property_field": "#item_name"
+                },
+                "variables": [
+                  {
+                    "requires": "($rainbowpie_ui_flag_chat_use_ui_font and ($chat_font_type = 'default'))",
+                    "$chat_font_type": "$rainbowpie_ui_theme_global_font_name"
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "#text",
+                    "target_property_name": "#item_name"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#chat_visible"
+      },
+      {
+        "binding_name": "#host_main_visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#chat_visible and (not #host_main_visible))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
   "chat_color_dropdown_content@rainbowpie_ui_common.rainbowpie_dropdown_content_panel": {
     "collection_name": "font_colors"
   },

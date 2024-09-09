@@ -95,6 +95,18 @@
   },
 
   "message_tts_wrapper": {
+    "modifications": [
+      {
+        "array_name": "variables",
+        "operation": "insert_front",
+        "value": [
+          {
+            "requires": "$rainbowpie_ui_flag_a012c161",
+            "$tts_label_panel": "rainbowpieui_chat.editable_message_text"
+          }
+        ]
+      }
+    ]
   },
 
   "messages_text": {
