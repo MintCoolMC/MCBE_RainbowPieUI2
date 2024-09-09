@@ -465,6 +465,7 @@
                     "loading_bar_panel": {
                       "type": "panel",
                       "size": [ "100%", "100%c" ],
+                      "$float_min_percentage": 0.9,
                       "controls": [
                         {
                           "fancy_progress_loading_bars@rainbowpie_ui_common.fancy_progress_loading_bars": {
@@ -478,8 +479,34 @@
                             ],
                             "bindings": [
                               {
-                                "binding_name": "#loading_bar_visible",
-                                "binding_name_override": "#visible"
+                                "binding_name": "#loading_bar_visible"
+                              },
+                              {
+                                "binding_name": "#loading_bar_percentage"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(#loading_bar_visible and (not (#loading_bar_percentage > $float_min_percentage)))",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "fancy_progress_loading_bars_wait@rainbowpie_ui_common.progress_loading_bars": {
+                            "size": [ "90%", 3 ],
+                            "layer": 15,
+                            "bindings": [
+                              {
+                                "binding_name": "#loading_bar_visible"
+                              },
+                              {
+                                "binding_name": "#loading_bar_percentage"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(#loading_bar_visible and (#loading_bar_percentage > $float_min_percentage))",
+                                "target_property_name": "#visible"
                               }
                             ]
                           }
