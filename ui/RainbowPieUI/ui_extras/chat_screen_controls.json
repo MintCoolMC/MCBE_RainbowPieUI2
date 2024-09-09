@@ -69,15 +69,15 @@
                 "font_scale_factor": "$chat_font_scale_factor",
                 "line_padding": "$chat_line_spacing",
                 "anims": ["@rainbowpieui_chat.chat_message_panel_animation"],
-                "property_bag": {
-                  "#property_field": "#item_name"
-                },
                 "variables": [
                   {
                     "requires": "($rainbowpie_ui_flag_chat_use_ui_font and ($chat_font_type = 'default'))",
                     "$chat_font_type": "$rainbowpie_ui_theme_global_font_name"
                   }
                 ],
+                "property_bag": {
+                  "#property_field": "#item_name"
+                },
                 "bindings": [
                   {
                     "binding_type": "view",
