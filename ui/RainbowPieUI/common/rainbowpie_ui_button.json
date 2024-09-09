@@ -1,6 +1,34 @@
 {
   "namespace": "rainbowpie_ui_button",
 
+  "glint_border_base": {
+    "type": "panel",
+    "clips_children": true,
+    "$rainbowpie_localui_glint_size|default": [ 48, 48 ],
+    "$rainbowpie_localui_glint_alpha|default": 0.5,
+    "controls": [
+      {
+        "glint_dot": {
+          "type": "input_panel",
+          "size": "$rainbowpie_localui_glint_size",
+          "offset": [ -1024, -1024 ],
+          "consume_hover_events": false,
+					"follows_cursor": true,
+          "controls": [
+            {
+              "glint_texture": {
+                "type": "image",
+                "size": [ "100%", "100%" ],
+                "texture": "($rainbowpie_ui_path_home + '/glint')",
+                "alpha": "$rainbowpie_localui_glint_alpha"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "rainbowpie_ui_button_default": {
     "type": "panel",
 
@@ -56,8 +84,57 @@
         "hover@common.focus_border_white": {
           "size": "$button_image_size",
           "ignored": "(((not $rainbowpie_localui_button_border_enabled) or (not $hover_state)) and (not $rainbowpie_localui_button_hover_border_always_visible))",
-          "alpha": 0.5,
+          "alpha": 0.3,
           "layer": "$rainbowpie_localui_button_hover_border_layer"
+        }
+      },
+      {
+        "buttom_border_glint": {
+          "type": "panel",
+          "size": "$button_image_size",
+          "ignored": "(((not $rainbowpie_localui_button_border_enabled) and (not $rainbowpie_localui_button_hover_border_always_visible)) or (not $rainbowpie_ui_flag_99d9851a))",
+          "layer": "$rainbowpie_localui_button_hover_border_layer",
+          "controls": [
+            {
+              "hover@rainbowpie_ui_button.glint_border_base": {
+                "$rainbowpie_localui_glint_size": [ 72, 72 ],
+                "$rainbowpie_localui_glint_alpha": 0.25,
+                "ignored": "(not $hover_state)",
+                "size": [ "100% - 2px", "100% - 2px" ],
+                "anchor_from": "center",
+								"anchor_to": "center",
+                "layer": "($rainbowpie_localui_button_hover_border_layer - ($rainbowpie_localui_button_hover_border_layer * 2))"
+              }
+            },
+            {
+              "top@rainbowpie_ui_button.glint_border_base": {
+                "size": [ "100% - 2px", 1 ],
+                "anchor_from": "top_middle",
+								"anchor_to": "top_middle"
+              }
+            },
+            {
+              "bottom@rainbowpie_ui_button.glint_border_base": {
+                "size": [ "100% - 2px", 1 ],
+                "anchor_from": "bottom_middle",
+								"anchor_to": "bottom_middle"
+              }
+            },
+            {
+              "left@rainbowpie_ui_button.glint_border_base": {
+                "size": [ 1, "100%" ],
+                "anchor_from": "left_middle",
+								"anchor_to": "left_middle"
+              }
+            },
+            {
+              "right@rainbowpie_ui_button.glint_border_base": {
+                "size": [ 1, "100%" ],
+                "anchor_from": "right_middle",
+								"anchor_to": "right_middle"
+              }
+            }
+          ]
         }
       },
       {
