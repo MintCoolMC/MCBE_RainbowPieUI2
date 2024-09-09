@@ -175,6 +175,7 @@
   "$rainbowpie_ui_flag_ef158e0f": true, // InventoryUI vanilla search bar button
   "$rainbowpie_ui_flag_29bdcf8a": true, // InventoryUI Global Item Fastplace
   "$rainbowpie_ui_flag_a012c161": true, // Chat Message Edit and Copy (Experimental)
+  "$rainbowpie_ui_flag_ae054b5d": false, // New player joined world (Experimental)
 
   // Debug
   "$rainbowpie_ui_debug": false,

@@ -736,6 +736,177 @@
     ]
   },
 
+  "player_joined_toast_item_anim_start": {
+    "anim_type": "wait",
+		"duration": 0.0,
+    "next": "@rainbowpieui_hud.player_joined_toast_item_anim_wait"
+  },
+
+  "player_joined_toast_item_anim_wait": {
+    "anim_type": "offset",
+		"duration": 8.0,
+    "from": [ 0, 0 ],
+		"to": [ 0, 0 ],
+    "next": "@rainbowpieui_hud.player_joined_toast_item_anim_end"
+  },
+
+  "player_joined_toast_item_anim_end": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+		"duration": "$rainbowpie_ui_animation_chat_transition_time",
+    "from": [ 0, 0 ],
+		"to": [ 20, 0 ],
+    "next": "@rainbowpieui_hud.player_joined_toast_item_anim_end"
+  },
+
+  "player_joined_toast_item": {
+    "type": "panel",
+    "size": [ 0, 20 ],
+    "controls": [
+      {
+        "player_joined_toast_panel": {
+          "type": "panel",
+          "size": [ "100%c", "100%c" ],
+          "offset": [ 0, 0 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "propagate_alpha": true,
+          "alpha": 1.0,
+          "anims": ["@rainbowpieui_hud.player_joined_toast_item_anim_start"],
+          "controls": [
+            {
+              "tip_text_background": {
+                "type": "image",
+                "size": [ "100%c + 4px", "100%c + 4px" ],
+                "texture": "($rainbowpie_ui_path_home + '/r_white')",
+                "color": "$rainbowpie_ui_theme_text_background_color",
+                "alpha": "$rainbowpie_ui_theme_text_background_alpha",
+                "layer": 30,
+                "controls": [
+                  {
+                    "stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%c", 12 ],
+                      "controls": [
+                        {
+                          "player_image": {
+                            "type": "image",
+                            "texture": "#texture",
+                            "size": [ 12, 12 ],
+                            "texture_file_system": "#texture_source",
+                            "layer": 2,
+                            "bindings": [
+                              {
+                                "binding_name": "#texture",
+                                "binding_type": "collection",
+                                "binding_collection_name": "players_collection"
+                              },
+                              {
+                                "binding_name": "#texture_source",
+                                "binding_type": "collection",
+                                "binding_collection_name": "players_collection"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "#texture_source",
+                                "target_property_name": "#texture_file_system"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(not (#texture_source = 'RawPath'))",
+                                "target_property_name": "#is_local_picture"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(not (#is_local_picture)",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "player_image_local": {
+                            "type": "image",
+                            "texture": "textures/ui/icon_steve",
+                            "size": [ 12, 12 ],
+                            "layer": 2,
+                            "bindings": [
+                              {
+                                "binding_name": "#texture_source",
+                                "binding_type": "collection",
+                                "binding_collection_name": "players_collection"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(not (#texture_source = 'RawPath'))",
+                                "target_property_name": "#is_local_picture"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "#is_local_picture",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "padding_0": {
+                            "type": "panel",
+                            "size": [ 2, 0 ]
+                          }
+                        },
+                        {
+                          "player_name_text_panel": {
+                            "type": "panel",
+                            "size": [ "100%c + 1px", "100%" ],
+                            "controls": [
+                              {
+                                "player_name@rainbowpie_ui_common.title_label": {
+                                  "text_alignment": "left",
+                                  "text": "#gamertag",
+                                  "size": [ "default", 10 ],
+                                  "layer": 3, 
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#gamertag",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "players_collection"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "joined_text_panel": {
+                            "type": "panel",
+                            "size": [ "100%c + 1px", "100%" ],
+                            "controls": [
+                              {
+                                "joined_text@rainbowpie_ui_common.title_label": {
+                                  "text_alignment": "left",
+                                  "text": "joined.",
+                                  "size": [ "default", 10 ],
+                                  "layer": 3
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "rainbowpie_root_panel": {
     "type": "panel",
     "size": [ "100%", "100%" ],
@@ -762,6 +933,24 @@
           "ignored": "(not $rainbowpie_ui_flag_0ffd0593)",
           "size": [ 0, 0 ],
           "offset": [ 0, "200%" ]
+        }
+      },
+      // New Player Joined Toast
+      {
+        "player_joined_toast": {
+          "type": "panel",
+          "size": [ "100%", 0 ],
+          "ignored": "(not $rainbowpie_ui_flag_ae054b5d)",
+          "controls": [
+            {
+              "player_grid@rainbowpieui_hud.player_grid": {
+                "size": [ 0, "default" ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "grid_item_template": "rainbowpieui_hud.player_joined_toast_item"
+              }
+            }
+          ]
         }
       },
       {
