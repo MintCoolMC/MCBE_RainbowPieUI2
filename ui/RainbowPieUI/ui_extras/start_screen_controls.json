@@ -1862,6 +1862,7 @@
                                   "controls": [
                                     {
                                       "store@start.store_button_stack": {
+                                        "$rainbowpie_localui_is_custom_ui": true,
                                         "size": [ "100% + 2px", "100% + 2px" ]
                                       }
                                     }

@@ -6,9 +6,10 @@
   },
 
   "store_button_stack/store_button": {
+    "$rainbowpie_localui_is_custom_ui|default": false,
     "variables": [
       {
-        "requires": "$rainbowpie_ui_flag_0ab174e4",
+        "requires": "($rainbowpie_ui_flag_0ab174e4 and $rainbowpie_localui_is_custom_ui)",
         "$button_state_panel": "rainbowpieui_start.treatment_store_button_status_panel",
         "$button_text": "",
         "$icon_texture_name": "marketplace"
