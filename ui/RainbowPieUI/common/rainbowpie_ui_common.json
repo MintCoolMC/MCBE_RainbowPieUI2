@@ -19,8 +19,8 @@
     "type": "image",
     "layer": 2,
     "texture": "textures/ui/White",
-    "color": "$rainbowpie_ui_theme_inventory_content_background_color",
-    "alpha": "$rainbowpie_ui_theme_inventory_content_background_alpha"
+    "color": "$rainbowpie_ui_theme_inventory_cell_default_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_default_alpha"
   },
 
   "dialog_background_common": {
