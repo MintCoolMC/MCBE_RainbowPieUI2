@@ -518,6 +518,8 @@
     "ignored": "(not (($rainbowpie_ui_flag_watermark_ignore - $rainbowpieui_branch_type) = $rainbowpie_ui_flag_watermark_ignore))",
     "visible": "$rainbowpieui_watermark",
     "layer": 1,
+    "offset": "$rainbowpie_ui_localui_watermark_offset",
+    "$rainbowpie_ui_localui_watermark_offset|default": [ 0, -10 ],
     "controls": [
       {
         "label_0": {
@@ -530,7 +532,7 @@
           "size": [ "default", 10 ],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "offset": [ -1, -12 ]
+          "offset": [ -2, -2 ]
         }
       },
       {
@@ -545,7 +547,7 @@
           "size": [ "default", 10 ],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "offset": [ -1, -22 ]
+          "offset": [ -2, -12 ]
         }
       },
       {
@@ -560,7 +562,7 @@
           "size": [ "default", 10 ],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "offset": [ -1, -22 ]
+          "offset": [ -2, -12 ]
         }
       },
       {
@@ -575,7 +577,7 @@
           "size": [ "default", 10 ],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "offset": [ -1, -32 ]
+          "offset": [ -2, -22 ]
         }
       }
     ]
