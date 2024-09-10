@@ -1077,58 +1077,107 @@
                           "ignored": "((not $rainbowpie_ui_debug_screen_animation) or (not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias)))",
                           "controls": [
                             {
-                              "screen_animation_reset@common_buttons.light_text_button": {
-                                "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-                                "$pressed_button_name": "screen_animation_reset",
-                                "$button_text": "screen_animation_reset",
-                                "size": [ 120, 18 ],
-                                "offset": [ 0, 0 ],
-                                "anchor_from": "top_left",
-                                "anchor_to": "top_left"
-                              }
-                            },
-                            {
-                              "screen.exit_push@common_buttons.light_text_button": {
-                                "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-                                "$pressed_button_name": "screen.exit_push",
-                                "$button_text": "screen.exit_push",
-                                "size": [ 120, 18 ],
-                                "offset": [ 0, 18 ],
-                                "anchor_from": "top_left",
-                                "anchor_to": "top_left"
-                              }
-                            },
-                            {
-                              "screen.exit_pop@common_buttons.light_text_button": {
-                                "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-                                "$pressed_button_name": "screen.exit_pop",
-                                "$button_text": "screen.exit_pop",
-                                "size": [ 120, 18 ],
-                                "offset": [ 0, 36 ],
-                                "anchor_from": "top_left",
-                                "anchor_to": "top_left"
-                              }
-                            },
-                            {
-                              "screen.entrance_push@common_buttons.light_text_button": {
-                                "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-                                "$pressed_button_name": "screen.entrance_push",
-                                "$button_text": "screen.entrance_push",
-                                "size": [ 120, 18 ],
-                                "offset": [ 0, 54 ],
-                                "anchor_from": "top_left",
-                                "anchor_to": "top_left"
-                              }
-                            },
-                            {
-                              "screen.entrance_pop@common_buttons.light_text_button": {
-                                "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-                                "$pressed_button_name": "screen.entrance_pop",
-                                "$button_text": "screen.entrance_pop",
-                                "size": [ 120, 18 ],
-                                "offset": [ 0, 72 ],
-                                "anchor_from": "top_left",
-                                "anchor_to": "top_left"
+                              "debug_screen_animation_dialog": {
+                                "type": "input_panel",
+                                "size": [ 120, "100%c" ],
+                                "offset": [ 0, 14 ],
+                                "anchor_to": "top_right",
+                                "anchor_from": "top_right",
+                                "draggable": "both",
+                                "button_mappings": [
+                                  {
+                                    "from_button_id": "button.menu_select",
+                                    "to_button_id": "button.menu_select",
+                                    "mapping_type": "pressed"
+                                  }
+                                ],
+                                "controls": [
+                                  {
+                                    "title_background@rainbowpie_ui_dialog.header_background": {
+                                      "size": [ "100%", 23 ],
+                                      "anchor_to": "top_middle",
+                                      "anchor_from": "top_middle",
+                                      "color": "$rainbowpie_ui_theme_dialog_background_color",
+                                      "alpha": "$rainbowpie_ui_theme_dialog_background_alpha",
+                                      "controls": [
+                                        {
+                                          "title_label@rainbowpie_ui_common.title_label": {
+                                            "size": [ "default", "default" ],
+                                            "anchor_to": "center",
+                                            "anchor_from": "center",
+                                            "text": "SCREEN ANIMATION DEBUG",
+                                            "layer": 10
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "content_panel": {
+                                      "type": "input_panel",
+                                      "size": [ "100%", "100%c" ],
+                                      "anchor_to": "bottom_middle",
+                                      "anchor_from": "bottom_middle",
+                                      "controls": [
+                                        {
+                                          "title_background@rainbowpie_ui_dialog.header_background": {
+                                            "size": [ "100%", "100%c" ],
+                                            "controls": [
+                                              {
+                                                "button_panel": {
+                                                  "type": "stack_panel",
+                                                  "size": [ "100%", "100%c + 1px" ],
+                                                  "controls": [
+                                                    {
+                                                      "screen_animation_reset@common_buttons.light_text_button": {
+                                                        "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                                                        "$pressed_button_name": "screen_animation_reset",
+                                                        "$button_text": "screen_animation_reset",
+                                                        "size": [ 120, 18 ]
+                                                      }
+                                                    },
+                                                    {
+                                                      "screen.exit_push@common_buttons.light_text_button": {
+                                                        "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                                                        "$pressed_button_name": "screen.exit_push",
+                                                        "$button_text": "screen.exit_push",
+                                                        "size": [ 120, 18 ]
+                                                      }
+                                                    },
+                                                    {
+                                                      "screen.exit_pop@common_buttons.light_text_button": {
+                                                        "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                                                        "$pressed_button_name": "screen.exit_pop",
+                                                        "$button_text": "screen.exit_pop",
+                                                        "size": [ 120, 18 ]
+                                                      }
+                                                    },
+                                                    {
+                                                      "screen.entrance_push@common_buttons.light_text_button": {
+                                                        "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                                                        "$pressed_button_name": "screen.entrance_push",
+                                                        "$button_text": "screen.entrance_push",
+                                                        "size": [ 120, 18 ]
+                                                      }
+                                                    },
+                                                    {
+                                                      "screen.entrance_pop@common_buttons.light_text_button": {
+                                                        "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                                                        "$pressed_button_name": "screen.entrance_pop",
+                                                        "$button_text": "screen.entrance_pop",
+                                                        "size": [ 120, 18 ]
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              }     
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
                               }
                             }
                           ]
