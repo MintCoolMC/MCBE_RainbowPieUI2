@@ -112,6 +112,7 @@
             {
               "top@rainbowpie_ui_button.glint_border_base": {
                 "size": [ "100% - 2px", 1 ],
+                "offset": [ 0, 0 ],
                 "anchor_from": "top_middle",
 								"anchor_to": "top_middle"
               }
@@ -119,6 +120,7 @@
             {
               "bottom@rainbowpie_ui_button.glint_border_base": {
                 "size": [ "100% - 2px", 1 ],
+                "offset": [ 0, 0 ],
                 "anchor_from": "bottom_middle",
 								"anchor_to": "bottom_middle"
               }
@@ -126,6 +128,7 @@
             {
               "left@rainbowpie_ui_button.glint_border_base": {
                 "size": [ 1, "100%" ],
+                "offset": [ 0, 0 ],
                 "anchor_from": "left_middle",
 								"anchor_to": "left_middle"
               }
@@ -133,6 +136,7 @@
             {
               "right@rainbowpie_ui_button.glint_border_base": {
                 "size": [ 1, "100%" ],
+                "offset": [ 0, 0 ],
                 "anchor_from": "right_middle",
 								"anchor_to": "right_middle"
               }
