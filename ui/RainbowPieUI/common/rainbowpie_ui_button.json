@@ -89,7 +89,7 @@
         }
       },
       {
-        "buttom_border_glint": {
+        "button_border_glint": {
           "type": "panel",
           "size": "$button_image_size",
           "ignored": "(((not $rainbowpie_localui_button_border_enabled) and (not $rainbowpie_localui_button_hover_border_always_visible)) or (not $rainbowpie_ui_flag_99d9851a))",
