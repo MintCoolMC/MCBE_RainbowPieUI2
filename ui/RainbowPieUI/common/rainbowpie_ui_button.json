@@ -6,6 +6,7 @@
     "clips_children": true,
     "$rainbowpie_localui_glint_size|default": [ 48, 48 ],
     "$rainbowpie_localui_glint_alpha|default": 0.5,
+    "$rainbowpie_localui_glint_layer|default": 1,
     "controls": [
       {
         "glint_dot": {
@@ -14,13 +15,15 @@
           "offset": [ -1024, -1024 ],
           "consume_hover_events": false,
 					"follows_cursor": true,
+          "ignored": "(not $rainbowpie_ui_flag_99d9851a)",
           "controls": [
             {
               "glint_texture": {
                 "type": "image",
                 "size": [ "100%", "100%" ],
                 "texture": "($rainbowpie_ui_path_home + '/glint')",
-                "alpha": "$rainbowpie_localui_glint_alpha"
+                "alpha": "$rainbowpie_localui_glint_alpha",
+                "layer": "$rainbowpie_localui_glint_layer"
               }
             }
           ]
