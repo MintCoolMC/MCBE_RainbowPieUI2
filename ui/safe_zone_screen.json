@@ -1,7 +1,7 @@
 {
   "namespace": "safe_zone",
 
-  "instructions_text": {
+  "instructions_text/inner_label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
