@@ -627,66 +627,40 @@
 
   // Shared UI Common
 
-  "progress_bar_inner1_anim_size_start": {
+  "progress_bar_inner1_anim_size": {
     "anim_type": "size",
     "easing": "in_sine",
     "duration": 1.5,
     "from": [ "10%", "100%" ],
     "to": [ "120%", "100%" ],
-    "next": "@rainbowpie_ui_common.progress_bar_inner1_anim_size_wait"
+    "next": "@rainbowpie_ui_common.progress_bar_inner2_anim_size"
   },
 
-  "progress_bar_inner1_anim_size_wait": {
-    "anim_type": "wait",
-    "duration": 1.0,
-    "next": "@rainbowpie_ui_common.progress_bar_inner1_anim_size_start"
-  },
-
-  "progress_bar_inner1_anim_offset_start": {
+  "progress_bar_inner1_anim_offset": {
     "anim_type": "offset",
     "easing": "in_sine",
     "duration": 1.5,
     "from": [ "-10%", 0 ],
     "to": [ "100%", 0 ],
-    "next": "@rainbowpie_ui_common.progress_bar_inner1_anim_offset_wait"
+    "next": "@rainbowpie_ui_common.progress_bar_inner2_anim_offset"
   },
 
-  "progress_bar_inner1_anim_offset_wait": {
-    "anim_type": "wait",
-    "duration": 1.0,
-    "next": "@rainbowpie_ui_common.progress_bar_inner1_anim_offset_start"
-  },
-
-  
-
-  "progress_bar_inner2_anim_size_start": {
+  "progress_bar_inner2_anim_size": {
     "anim_type": "size",
     "easing": "linear",
     "duration": 1.0,
     "from": [ "75%", "100%" ],
     "to": [ "5%", "100%" ],
-    "next": "@rainbowpie_ui_common.progress_bar_inner2_anim_size_wait"
+    "next": "@rainbowpie_ui_common.progress_bar_inner1_anim_size"
   },
 
-  "progress_bar_inner2_anim_size_wait": {
-    "anim_type": "wait",
-    "duration": 1.5,
-    "next": "@rainbowpie_ui_common.progress_bar_inner2_anim_size_start"
-  },
-
-  "progress_bar_inner2_anim_offset_start": {
+  "progress_bar_inner2_anim_offset": {
     "anim_type": "offset",
     "easing": "out_cubic",
     "duration": 1.0,
     "from": [ "-75%", 0 ],
     "to": [ "100%", 0 ],
-    "next": "@rainbowpie_ui_common.progress_bar_inner2_anim_offset_wait"
-  },
-
-  "progress_bar_inner2_anim_offset_wait": {
-    "anim_type": "wait",
-    "duration": 1.5,
-    "next": "@rainbowpie_ui_common.progress_bar_inner2_anim_offset_start"
+    "next": "@rainbowpie_ui_common.progress_bar_inner1_anim_offset"
   },
 
   "progress_loading_bars": {
@@ -711,7 +685,7 @@
         }
       },
       {
-        "android_style_progress_loading_bars_full_ch1": {
+        "android_style_progress_loading_bars_full": {
           "type": "image",
           "texture": "textures/ui/White",
           "fill": true,
@@ -720,27 +694,8 @@
           "size": [ 0, "100%" ],
           "offset": [ 0, 0 ],
           "anims": [
-            "@rainbowpie_ui_common.progress_bar_inner1_anim_size_start",
-            "@rainbowpie_ui_common.progress_bar_inner1_anim_offset_start"
-          ],
-          "color": "$rainbowpie_ui_theme_progress_full_color",
-          "alpha": "$rainbowpie_ui_theme_progress_full_alpha",
-          "layer": 1,
-          "ignored": "(not $rainbowpie_ui_flag_522748cc)"
-        }
-      },
-      {
-        "android_style_progress_loading_bars_full_ch2": {
-          "type": "image",
-          "texture": "textures/ui/White",
-          "fill": true,
-          "anchor_to": "left_middle",
-          "anchor_from": "left_middle",
-          "size": [ 0, "100%" ],
-          "offset": [ 0, 0 ],
-          "anims": [
-            "@rainbowpie_ui_common.progress_bar_inner2_anim_size_wait",
-            "@rainbowpie_ui_common.progress_bar_inner2_anim_offset_wait"
+            "@rainbowpie_ui_common.progress_bar_inner1_anim_size",
+            "@rainbowpie_ui_common.progress_bar_inner1_anim_offset"
           ],
           "color": "$rainbowpie_ui_theme_progress_full_color",
           "alpha": "$rainbowpie_ui_theme_progress_full_alpha",
