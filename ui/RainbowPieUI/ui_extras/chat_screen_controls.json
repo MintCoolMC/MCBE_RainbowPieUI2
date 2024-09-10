@@ -58,6 +58,7 @@
               "message_display_text": {
                 "type": "label",
                 "color": "$chat_text_color",
+                "enable_profanity_filter": "$rainbowpie_ui_flag_chat_message_profanity_filter",
                 "localize": false,
                 "size": [ "100%", "default" ],
                 "anchor_from": "top_left",
@@ -75,9 +76,6 @@
                     "$chat_font_type": "$rainbowpie_ui_theme_global_font_name"
                   }
                 ],
-                "property_bag": {
-                  "#property_field": "#item_name"
-                },
                 "bindings": [
                   {
                     "binding_type": "view",

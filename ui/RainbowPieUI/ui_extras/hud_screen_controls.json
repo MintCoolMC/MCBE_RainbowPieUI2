@@ -1642,6 +1642,7 @@
     "size": [ "default", "default" ],
 
     "shadow": false,
+    "enable_profanity_filter": "$rainbowpie_ui_flag_chat_message_profanity_filter",
     "localize": false,
     "color": "$chat_text_color",
     "font_type": "$chat_font_type",

@@ -153,6 +153,7 @@
   },
 
   "messages_text/text": {
+    "enable_profanity_filter": "$rainbowpie_ui_flag_chat_message_profanity_filter",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "anims": ["@rainbowpieui_chat.chat_message_panel_animation"],
