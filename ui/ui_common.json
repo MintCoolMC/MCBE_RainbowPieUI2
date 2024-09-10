@@ -70,7 +70,7 @@
   },
 
   "highlight_slot_panel/highlight/hover_text": {
-    "ignored": "($rainbowpie_ui_flag_inventory_debug or $rainbowpie_ui_flag_86c54726)",
+    "ignored": "($rainbowpie_ui_flag_86c54726)",
     "modifications": [
       {
         "array_name": "bindings",
@@ -176,6 +176,241 @@
     ]
   },
 
+  "container_slot_button_prototype": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "custom_hover_text_control": {
+              "type": "button",
+              "consume_hover_events": false,
+              "ignored": "(not $rainbowpie_ui_flag_86c54726)",
+              "hover_control": "hover_text",
+              "controls": [
+                {
+                  "custom_hover_text": {
+                    "type": "input_panel",
+                    "visible": false,
+                    "size": [ "100%", "100%" ],
+                    "follows_cursor": true,
+                    "consume_hover_events": false,
+                    "controls": [
+                      {
+                        "hover_text": {
+                          "type": "image",
+                          "texture": "($rainbowpie_ui_path_home + '/r_white')",
+                          "size": [ "100%c + 8px", "100%c + 5px" ],
+                          "offset": "$offset",
+                          "$offset": [ 20, 0 ],
+                          "anchor_from": "top_left",
+                          "anchor_to": "top_left",
+                          "layer": 200,
+                          "color": "$rainbowpie_ui_theme_hovertext_background_color",
+                          "alpha": "$rainbowpie_ui_theme_hovertext_background_alpha",
+                          "variables": [
+                            {
+                              "requires": "$touch"
+                            }
+                          ],
+                          "controls": [
+                            {
+                              "background_icon": {
+                                "type": "panel",
+                                "size": [ 0, 0 ],
+                                "anchor_to": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                                "anchor_from": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                                "ignored": "(not $rainbowpie_ui_theme_hovertext_bgicon_enabled)",
+                                "controls": [
+                                  {
+                                    "icon_image": {
+                                      "type": "image",
+                                      "size": "$rainbowpie_ui_theme_hovertext_bgicon_size",
+                                      "anchor_to": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                                      "anchor_from": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
+                                      "offset": "$rainbowpie_ui_theme_hovertext_bgicon_offset",
+                                      "texture": "$rainbowpie_ui_theme_hovertext_bgicon_texture",
+                                      "alpha": "$rainbowpie_ui_theme_hovertext_bgicon_alpha",
+                                      "fill": "$rainbowpie_ui_theme_hovertext_bgicon_fill",
+                                      "layer": 3
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "hover_text_controls": {
+                                "type": "stack_panel",
+                                "orientation": "vertical",
+                                "size": [ "100%cm", "100%c" ],
+                                "layer": 8,
+                                "controls": [
+                                  {
+                                    "hover_text_label@rainbowpie_ui_common.text_label_notheme": {
+                                      "size": [ "default", "default" ],
+                                      "color": "$rainbowpie_ui_theme_hovertext_text_color",
+                                      "text": "#text",
+                                      "bindings": [
+                                        {
+                                          "binding_name": "#hover_text",
+                                          "binding_name_override": "#text",
+                                          "binding_type": "collection",
+                                          "binding_collection_name": "$item_collection_name"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "durability_panel": {
+                                      "type": "stack_panel",
+                                      "orientation": "horizontal",
+                                      "size": [ "100%c", "100%cm" ],
+                                      "ignored": "((not $rainbowpie_ui_feature_inventory_durability) or (not $durability_bar_required))",
+                                      "visible": false,
+                                      "controls": [
+                                        {
+                                          "hover_text_durability_title@rainbowpie_ui_common.text_label_notheme": {
+                                            "size": [ "default", "default" ],
+                                            "color": [ 0.0, 0.667, 0 ],
+                                            "text": "rainbowpie.ui.inventory.durability"
+                                          }
+                                        },
+                                        {
+                                          "padding": {
+                                            "type": "panel",
+                                            "size": [ 1, 0 ]
+                                          }
+                                        },
+                                        {
+                                          "hover_text_durability_value@rainbowpie_ui_common.text_label_notheme": {
+                                            "size": [ "default", "default" ],
+                                            "color": [ 0.0, 0.667, 0 ],
+                                            "text": "#text",
+                                            "property_bag": {
+                                              "#amount_current": 0,
+                                              "#amount_total": 0
+                                            },
+                                            "bindings": [
+                                              {
+                                                "binding_name": "#item_durability_total_amount",
+                                                "binding_type": "collection",
+                                                "binding_collection_name": "$item_collection_name"
+                                              },
+                                              {
+                                                "binding_name": "#item_durability_current_amount",
+                                                "binding_type": "collection",
+                                                "binding_collection_name": "$item_collection_name"
+                                              },
+                                              {
+                                                "binding_type": "view",
+                                                "source_property_name": "(((#amount_current > #item_durability_current_amount) * - 1 + 1) * ((#amount_current < #item_durability_current_amount) * 1 + #amount_current))",
+                                                "target_property_name": "#amount_current",
+                                                "binding_condition": "always_when_visible"
+                                              },
+                                              {
+                                                "binding_type": "view",
+                                                "source_property_name": "(((#amount_total > #item_durability_total_amount) * - 1 + 1) * ((#amount_total < #item_durability_total_amount) * 1 + #amount_total))",
+                                                "target_property_name": "#amount_total",
+                                                "binding_condition": "always_when_visible"
+                                              },
+                                              {
+                                                "binding_type": "view",
+                                                "source_property_name": "('§§' + #amount_current + '/' + #amount_total)",
+                                                "target_property_name": "#text"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ],
+                                      "bindings": [
+                                        {
+                                          "binding_name": "#item_durability_total_amount",
+                                          "binding_type": "collection",
+                                          "binding_collection_name": "$item_collection_name"
+                                        },
+                                        {
+                                          "binding_name": "#item_durability_current_amount",
+                                          "binding_type": "collection",
+                                          "binding_collection_name": "$item_collection_name"
+                                        },
+                                        {
+                                          "binding_type": "view",
+                                          "source_property_name": "(not ((#item_durability_current_amount = 0) and (#item_durability_total_amount = 0)))",
+                                          "target_property_name": "#visible"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "hover_text_debug@rainbowpie_ui_common.text_label_notheme": {
+                                      "ignored": "(not $rainbowpie_ui_flag_inventory_debug)",
+                                      "size": [ "default", "default" ],
+                                      "color": [ 0.0, 0.667, 0.667 ],
+                                      "text": "#text",
+                                      "bindings": [
+                                        {
+                                          "binding_name": "#item_id_aux",
+                                          "binding_type": "collection",
+                                          "binding_collection_name": "$item_collection_name"
+                                        },
+                                        {
+                                          "binding_type": "view",
+                                          "source_property_name": "(#item_id_aux / 65536)",
+                                          "target_property_name": "#item_id"
+                                        },
+                                        {
+                                          "binding_type": "view",
+                                          "source_property_name": "('item_id_aux: ' + #item_id_aux)",
+                                          "target_property_name": "#item_id_aux_string"
+                                        },
+                                        {
+                                          "binding_type": "view",
+                                          "source_property_name": "('item_id: ' + #item_id)",
+                                          "target_property_name": "#item_id_string"
+                                        },
+                                        {
+                                          "binding_type": "view",
+                                          "source_property_name": "('item_id_aux(cb): ' + (#item_id * 65536))",
+                                          "target_property_name": "#item_id_aux_cb_string"
+                                        },
+                                        {
+                                          "binding_type": "view",
+                                          "source_property_name": "(#item_id_aux_string + '\n' + #item_id_string + '\n' + #item_id_aux_cb_string)",
+                                          "target_property_name": "#text"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "bindings": [
+                      {
+                        "binding_name": "#hover_text",
+                        "binding_type": "collection",
+                        "binding_collection_name": "$item_collection_name"
+                      },
+                      {
+                        "binding_type": "view",
+                        "source_property_name": "(not (#hover_text = ''))",
+                        "target_property_name": "#visible"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
   "highlight_slot_panel/highlight": {
     "size": [ "100%", "100%" ],
     "texture": "textures/ui/White",
@@ -194,333 +429,8 @@
         "operation": "insert_front",
         "value": [
           {
-            "custom_hover_text": {
-              "type": "button",
-              "ignored": "(not $rainbowpie_ui_flag_86c54726)",
-              "visible": false,
-              "enabled": "(not ($touch or $game_pad))",
-              "size": [ 18, 18 ],
-              "always_handle_pointer": true,
-              "allow_clipping": false,
-              "follows_cursor": "(not ($touch or $game_pad))",
-              "consume_event": false,
-              "consume_hover_events": false,
-              "focus_enabled": false,
-              "hover_control": "$hover_control",
-              "locked_control": "$locked_control",
-              "$hover_control": "hover_text",
-              "$locked_control": "",
-              "variables": [
-                {
-                  "requires": "($touch or $game_pad)",
-                  "$hover_control": "",
-                  "$locked_control": "hover_text"
-                }
-              ],
-              "controls": [
-                {
-                  "hover_text": {
-                    "type": "image",
-                    "texture": "($rainbowpie_ui_path_home + '/r_white')",
-                    "size": [ "100%c + 8px", "100%c + 5px" ],
-                    "offset": "$offset",
-                    "$offset": [ 20, 0 ],
-                    "anchor_from": "top_left",
-                    "anchor_to": "top_left",
-                    // "clips_children": true, // Why "clips_children" doesn't work here
-                    "layer": 200,
-                    "color": "$rainbowpie_ui_theme_hovertext_background_color",
-                    "alpha": "$rainbowpie_ui_theme_hovertext_background_alpha",
-                    "variables": [
-                      {
-                        "requires": "$touch"
-                      }
-                    ],
-                    "controls": [
-                      {
-                        "background_icon": {
-                          "type": "panel",
-                          "size": [ 0, 0 ],
-                          "anchor_to": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
-                          "anchor_from": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
-                          "ignored": "(not $rainbowpie_ui_theme_hovertext_bgicon_enabled)",
-                          "controls": [
-                            {
-                              "icon_image": {
-                                "type": "image",
-                                "size": "$rainbowpie_ui_theme_hovertext_bgicon_size",
-                                "anchor_to": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
-                                "anchor_from": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
-                                "offset": "$rainbowpie_ui_theme_hovertext_bgicon_offset",
-                                "texture": "$rainbowpie_ui_theme_hovertext_bgicon_texture",
-                                "alpha": "$rainbowpie_ui_theme_hovertext_bgicon_alpha",
-                                "fill": "$rainbowpie_ui_theme_hovertext_bgicon_fill",
-                                "layer": 3
-                              }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "hover_text_controls": {
-                          "type": "stack_panel",
-                          "orientation": "vertical",
-                          "size": [ "100%cm", "100%c" ],
-                          "layer": 8,
-                          "controls": [
-                            {
-                              "item_preview": {
-                                "type": "panel",
-                                "size": [ 0, 0 ],
-                                "ignored": "((not $rainbowpie_ui_flag_9c39ae19) or (not $durability_bar_required))",
-                                "controls": [
-                                  {
-                                    "override_tab_hotkey": {
-                                      "type": "button",
-                                      "anchor_from": "top_middle",
-                                      "anchor_to": "top_middle",
-                                      "size": [ 0, 0 ],
-                                      "pressed_control": "item_preview_background",
-                                      "button_mappings": [
-                                        {
-                                          "from_button_id": "button.menu_autocomplete",
-                                          "to_button_id": "rainbowpie.override_autocomplete",
-                                          "mapping_type": "global"
-                                        }
-                                      ],
-                                      "controls": [
-                                        {
-                                          "item_preview_background": {
-                                            "type": "image",
-                                            "texture": "($rainbowpie_ui_path_home + '/r_white')",
-                                            "size": [ "100%c + 8px", "100%c + 5px" ],
-                                            "offset": [ -4, -4 ],
-                                            "anchor_from": "bottom_left",
-                                            "anchor_to": "bottom_left",
-                                            "layer": 200,
-                                            "color": "$rainbowpie_ui_theme_hovertext_background_color",
-                                            "alpha": "$rainbowpie_ui_theme_hovertext_background_alpha",
-                                            "controls": [
-                                              {
-                                                "item_preview_inner": {
-                                                  "type": "panel",
-                                                  "size": [ "25px", "55px" ],
-                                                  "controls": [
-                                                    {
-                                                      "debug01@rainbowpie_ui_common.debug_draw": {
-                                                        "$rainbowpie_localui_debug_name": "item_preview_inner"
-                                                      }
-                                                    },
-                                                    {
-                                                      "smithing_preview_renderer": {
-                                                        "type": "custom",
-                                                        "renderer": "equipment_preview_renderer",
-                                                        "animation_reset_name": "screen_animation_reset",
-                                                        "anims": [
-                                                          "@common.screen_exit_size_animation_push",
-                                                          "@common.screen_exit_size_animation_pop",
-                                                          "@common.screen_entrance_size_animation_push",
-                                                          "@common.screen_entrance_size_animation_pop"
-                                                        ],
-                                                        "layer": 8,
-                                                        "rotation_x": 30,
-                                                        "rotation_y": -30,
-                                                        "bindings": [
-                                                          {
-                                                            "binding_name": "#item_id_aux",
-                                                            "binding_type": "collection",
-                                                            "binding_collection_name": "$item_collection_name"
-                                                          },
-                                                          {
-                                                            "binding_name": "#item_custom_color",
-                                                            "binding_type": "collection",
-                                                            "binding_collection_name": "$item_collection_name"
-                                                          },
-                                                          {
-                                                            "binding_name": "#armor_trim_pattern",
-                                                            "binding_type": "collection",
-                                                            "binding_collection_name": "$item_collection_name"
-                                                          },
-                                                          {
-                                                            "binding_name": "#armor_trim_material",
-                                                            "binding_type": "collection",
-                                                            "binding_collection_name": "$item_collection_name"
-                                                          }
-                                                        ]
-                                                      }
-                                                    }
-                                                  ]
-                                                }
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  }
-                                ]
-                              }
-                            },
-                            {
-                              "hover_text_label@rainbowpie_ui_common.text_label_notheme": {
-                                "size": [ "default", "default" ],
-                                "color": "$rainbowpie_ui_theme_hovertext_text_color",
-                                "text": "#text",
-                                "bindings": [
-                                  {
-                                    "binding_name": "#hover_text",
-                                    "binding_name_override": "#text",
-                                    "binding_type": "collection",
-                                    "binding_collection_name": "$item_collection_name"
-                                  }
-                                ]
-                              }
-                            },
-                            {
-                              "durability_panel": {
-                                "type": "stack_panel",
-                                "orientation": "horizontal",
-                                "size": [ "100%c", "100%cm" ],
-                                "ignored": "((not $rainbowpie_ui_feature_inventory_durability) or (not $durability_bar_required))",
-                                "visible": false,
-                                "controls": [
-                                  {
-                                    "hover_text_durability_title@rainbowpie_ui_common.text_label_notheme": {
-                                      "size": [ "default", "default" ],
-                                      "color": [ 0.0, 0.667, 0 ],
-                                      "text": "rainbowpie.ui.inventory.durability"
-                                    }
-                                  },
-                                  {
-                                    "padding": {
-                                      "type": "panel",
-                                      "size": [ 1, 0 ]
-                                    }
-                                  },
-                                  {
-                                    "hover_text_durability_value@rainbowpie_ui_common.text_label_notheme": {
-                                      "size": [ "default", "default" ],
-                                      "color": [ 0.0, 0.667, 0 ],
-                                      "text": "#text",
-                                      "property_bag": {
-                                        "#amount_current": 0,
-                                        "#amount_total": 0
-                                      },
-                                      "bindings": [
-                                        {
-                                          "binding_name": "#item_durability_total_amount",
-                                          "binding_type": "collection",
-                                          "binding_collection_name": "$item_collection_name"
-                                        },
-                                        {
-                                          "binding_name": "#item_durability_current_amount",
-                                          "binding_type": "collection",
-                                          "binding_collection_name": "$item_collection_name"
-                                        },
-                                        {
-                                          "binding_type": "view",
-                                          "source_property_name": "(((#amount_current > #item_durability_current_amount) * - 1 + 1) * ((#amount_current < #item_durability_current_amount) * 1 + #amount_current))",
-                                          "target_property_name": "#amount_current",
-                                          "binding_condition": "always_when_visible"
-                                        },
-                                        {
-                                          "binding_type": "view",
-                                          "source_property_name": "(((#amount_total > #item_durability_total_amount) * - 1 + 1) * ((#amount_total < #item_durability_total_amount) * 1 + #amount_total))",
-                                          "target_property_name": "#amount_total",
-                                          "binding_condition": "always_when_visible"
-                                        },
-                                        {
-                                          "binding_type": "view",
-                                          "source_property_name": "('§§' + #amount_current + '/' + #amount_total)",
-                                          "target_property_name": "#text"
-                                        }
-                                      ]
-                                    }
-                                  }
-                                ],
-                                "bindings": [
-                                  {
-                                    "binding_name": "#item_durability_total_amount",
-                                    "binding_type": "collection",
-                                    "binding_collection_name": "$item_collection_name"
-                                  },
-                                  {
-                                    "binding_name": "#item_durability_current_amount",
-                                    "binding_type": "collection",
-                                    "binding_collection_name": "$item_collection_name"
-                                  },
-                                  {
-                                    "binding_type": "view",
-                                    "source_property_name": "(not ((#item_durability_current_amount = 0) and (#item_durability_total_amount = 0)))",
-                                    "target_property_name": "#visible"
-                                  }
-                                ]
-                              }
-                            },
-                            {
-                              "hover_text_debug@rainbowpie_ui_common.text_label_notheme": {
-                                "ignored": "(not $rainbowpie_ui_flag_inventory_debug)",
-                                "size": [ "default", "default" ],
-                                "color": [ 0.0, 0.667, 0.667 ],
-                                "text": "#text",
-                                "bindings": [
-                                  {
-                                    "binding_name": "#item_id_aux",
-                                    "binding_type": "collection",
-                                    "binding_collection_name": "$item_collection_name"
-                                  },
-                                  {
-                                    "binding_type": "view",
-                                    "source_property_name": "(#item_id_aux / 65536)",
-                                    "target_property_name": "#item_id"
-                                  },
-                                  {
-                                    "binding_type": "view",
-                                    "source_property_name": "('item_id_aux: ' + #item_id_aux)",
-                                    "target_property_name": "#item_id_aux_string"
-                                  },
-                                  {
-                                    "binding_type": "view",
-                                    "source_property_name": "('item_id: ' + #item_id)",
-                                    "target_property_name": "#item_id_string"
-                                  },
-                                  {
-                                    "binding_type": "view",
-                                    "source_property_name": "('item_id_aux(cb): ' + (#item_id * 65536))",
-                                    "target_property_name": "#item_id_aux_cb_string"
-                                  },
-                                  {
-                                    "binding_type": "view",
-                                    "source_property_name": "(#item_id_aux_string + '\n' + #item_id_string + '\n' + #item_id_aux_cb_string)",
-                                    "target_property_name": "#text"
-                                  }
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                }
-              ],
-              "bindings": [
-                {
-                  "binding_name": "#hover_text",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_type": "view",
-                  "source_property_name": "(not (#hover_text = ''))",
-                  "target_property_name": "#visible"
-                }
-              ]
-            }
-          },
-          {
             "hover_text_with_durability@common.hover_text": {
-              "ignored": "(($rainbowpie_ui_flag_inventory_debug) or $rainbowpie_ui_flag_86c54726 or (not $rainbowpie_ui_feature_inventory_durability) or (not $durability_bar_required))",
+              "ignored": "($rainbowpie_ui_flag_86c54726 or (not $rainbowpie_ui_feature_inventory_durability) or (not $durability_bar_required))",
               "layer": 29,
               "$hover_text_binding_name|default": "#hover_text",
               "bindings": [
@@ -560,117 +470,6 @@
                 {
                   "binding_type": "view",
                   "source_property_name": "(not ((#item_durability_current_amount = 0) and (#item_durability_total_amount = 0)))",
-                  "target_property_name": "#visible"
-                }
-              ]
-            }
-          },
-          {
-            "hover_text_debug@common.hover_text": {
-              "ignored": "((not $rainbowpie_ui_flag_inventory_debug) or $rainbowpie_ui_flag_86c54726)",
-              "layer": 29,
-              "$hover_text_binding_name|default": "#hover_text",
-              "bindings": [
-                {
-                  "binding_name": "$hover_text_binding_name",
-                  "binding_name_override": "#hover_text_str",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_name": "#item_id_aux",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_type": "view",
-                  "source_property_name": "(#item_id_aux / 65536)",
-                  "target_property_name": "#item_id"
-                },
-                {
-                  "binding_name": "#charged_item",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_name": "#item_custom_color",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_name": "#item_pickup_time",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_name": "#show_item_pickup",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_name": "#armor_trim_material",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_name": "#banner_patterns",
-                  "binding_condition": "visible",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_name": "#banner_colors",
-                  "binding_condition": "visible",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_name": "#banner_type",
-                  "binding_condition": "visible",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_name": "#decorated_pot_sherds",
-                  "binding_condition": "visible",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_name": "#inactive_item",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name",
-                  "binding_name_override": "#disabled_filter_visible"
-                },
-                {
-                  "binding_name": "#shield_is_active",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_name": "#shield_base_color",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_name": "#shield_base_color_hovered",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_name": "#item_lodestone_tracking_handle",
-                  "binding_condition": "visible",
-                  "binding_type": "collection",
-                  "binding_collection_name": "$item_collection_name"
-                },
-                {
-                  "binding_type": "view",
-                  "source_property_name": "(#hover_text_str + '\n§7item_id: ' + #item_id + '\n§8--------§7\n§7item_id_aux: ' + #item_id_aux + '\n§7charged_item: ' + #charged_item + '\n§7item_custom_color: ' + #item_custom_color + '\n§7item_pickup_time: ' + #item_pickup_time + '\n§7show_item_pickup: ' + #show_item_pickup + '\n§7armor_trim_material: ' + #armor_trim_material + '\n§7banner_patterns: ' + #banner_patterns + '\n§7banner_colors: ' + #banner_colors + '\n§7banner_type: ' + #banner_type + '\n§7decorated_pot_sherds: ' + #decorated_pot_sherds + '\n§7inactive_item: ' + #inactive_item + '\n§7shield_is_active: ' + #shield_is_active + '\n§7shield_base_color: ' + #shield_base_color + '\n§7shield_base_color_hovered: ' + #shield_base_color_hovered + '\n§7item_lodestone_tracking_handle: ' + #item_lodestone_tracking_handle)",
-                  "target_property_name": "#hover_text"
-                },
-                {
-                  "binding_type": "view",
-                  "source_property_name": "(not (#item_id_aux = -1))",
                   "target_property_name": "#visible"
                 }
               ]
