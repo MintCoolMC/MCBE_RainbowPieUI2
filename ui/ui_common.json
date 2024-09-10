@@ -194,6 +194,7 @@
                     "type": "input_panel",
                     "visible": false,
                     "size": [ "100%", "100%" ],
+                    "allow_clipping": false,
                     "follows_cursor": true,
                     "consume_hover_events": false,
                     "controls": [
@@ -209,11 +210,6 @@
                           "layer": 200,
                           "color": "$rainbowpie_ui_theme_hovertext_background_color",
                           "alpha": "$rainbowpie_ui_theme_hovertext_background_alpha",
-                          "variables": [
-                            {
-                              "requires": "$touch"
-                            }
-                          ],
                           "controls": [
                             {
                               "background_icon": {
