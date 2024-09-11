@@ -195,7 +195,7 @@
     "anchor_from": "center",
     "anchor_to": "center",
     "size": [ "100% - 6px", "100% - 6px" ],
-    "texture": "textures/ui/White",
+    "texture": "($rainbowpie_ui_path_home + '/r_white')",
     "color": "$rainbowpie_ui_theme_toast_background_color",
     "alpha": "$rainbowpie_ui_theme_toast_background_alpha",
     "bindings": [
