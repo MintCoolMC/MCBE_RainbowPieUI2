@@ -892,7 +892,7 @@
     "$toggle_view_binding_name": ""
   },
 
-  "second_message_panel@chat.messages_text": {
+  "second_message_panel@rainbowpieui_chat.editable_message_text": {
     "bindings": []
   },
 
