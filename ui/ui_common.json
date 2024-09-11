@@ -1687,6 +1687,13 @@
             "$rainbowpie_ui_flag_resourcepack_identifier": "d29f22ac_cubecraft",
             "$rainbowpie_ui_flag_resourcepack_displayname": "CubeCraft Games",
             "$rainbowpie_ui_flag_scoreboard_default_font": true
+          },
+          // China Version
+          {
+            "requires": "($is_netease)",
+            "$rainbowpie_ui_flag_resourcepack_identifier": "5c1c3f14_netease",
+            "$rainbowpie_ui_flag_resourcepack_displayname": "Netease",
+            "$rainbowpie_ui_theme_global_font_name": "unicode"
           }
         ]
       }
