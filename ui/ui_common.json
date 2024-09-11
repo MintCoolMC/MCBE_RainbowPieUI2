@@ -1121,12 +1121,14 @@
                                       "controls": [
                                         {
                                           "title_background@rainbowpie_ui_dialog.header_background": {
-                                            "size": [ "100%", "100%c" ],
+                                            "size": [ "100%", "100%c + 0.5px" ],
                                             "controls": [
                                               {
                                                 "button_panel": {
                                                   "type": "stack_panel",
-                                                  "size": [ "100%", "100%c + 1px" ],
+                                                  "size": [ "100%", "100%c" ],
+                                                  "anchor_to": "bottom_middle",
+                                                  "anchor_from": "bottom_middle",
                                                   "controls": [
                                                     {
                                                       "screen_animation_reset@common_buttons.light_text_button": {
