@@ -743,20 +743,20 @@
   },
 
   "player_joined_toast_item_anim_wait": {
-    "anim_type": "offset",
+    "anim_type": "alpha",
 		"duration": 8.0,
-    "from": [ 0, 0 ],
-		"to": [ 0, 0 ],
-    "next": "@rainbowpieui_hud.player_joined_toast_item_anim_end"
+    "from": 1.0,
+		"to": 1.0,
+    "next": "@rainbowpieui_hud.player_joined_toast_item_anim_end",
+    "resettable": false
   },
 
   "player_joined_toast_item_anim_end": {
-    "anim_type": "offset",
+    "anim_type": "alpha",
     "easing": "out_cubic",
 		"duration": "$rainbowpie_ui_animation_chat_transition_time",
-    "from": [ 0, 0 ],
-		"to": [ 20, 0 ],
-    "next": "@rainbowpieui_hud.player_joined_toast_item_anim_end"
+    "from": 1.0,
+		"to": 0
   },
 
   "player_joined_toast_item": {
@@ -939,7 +939,10 @@
       {
         "player_joined_toast": {
           "type": "panel",
-          "size": [ "100%", 0 ],
+          "size": [ 0, 0 ],
+          "offset": [ 4, 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
           "ignored": "(not $rainbowpie_ui_flag_ae054b5d)",
           "controls": [
             {
