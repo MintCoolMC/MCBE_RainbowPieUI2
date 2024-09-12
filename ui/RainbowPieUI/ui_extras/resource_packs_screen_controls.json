@@ -729,7 +729,19 @@
                         },
                         {
                           "dev_tag_padding@common.empty_panel": {
-                            "size": [ 2, 0 ]
+                            "size": [ 2, 0 ],
+                            "bindings": [
+                              {
+                                "binding_collection_name": "$button_collection_name",
+                                "binding_name": "#icon_path",
+                                "binding_type": "collection"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(not ((#icon_path - '/development_') = #icon_path)",
+                                "target_property_name": "#visible"
+                              }
+                            ]
                           }
                         },
                         {
