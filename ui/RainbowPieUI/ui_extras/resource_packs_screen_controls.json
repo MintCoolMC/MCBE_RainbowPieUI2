@@ -708,11 +708,9 @@
                           }
                         },
                         {
-                          "dev_tag@rainbowpie_ui_common.text_label": {
-                            "layer": 1,
-                            "size": [ "default", "default" ],
-                            "text": "[DEV]",
-                            "color": [ 1.0, 1.0, 0.333 ],
+                          "dev_tag": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
                             "bindings": [
                               {
                                 "binding_collection_name": "$button_collection_name",
@@ -724,22 +722,20 @@
                                 "source_property_name": "(not ((#icon_path - '/development_') = #icon_path)",
                                 "target_property_name": "#visible"
                               }
-                            ]
-                          }
-                        },
-                        {
-                          "dev_tag_padding@common.empty_panel": {
-                            "size": [ 2, 0 ],
-                            "bindings": [
+                            ],
+                            "controls": [
                               {
-                                "binding_collection_name": "$button_collection_name",
-                                "binding_name": "#icon_path",
-                                "binding_type": "collection"
+                                "dev_tag_label@rainbowpie_ui_common.text_label": {
+                                  "layer": 1,
+                                  "size": [ "default", "default" ],
+                                  "text": "[DEV]",
+                                  "color": [ 1.0, 1.0, 0.333 ]
+                                }
                               },
                               {
-                                "binding_type": "view",
-                                "source_property_name": "(not ((#icon_path - '/development_') = #icon_path)",
-                                "target_property_name": "#visible"
+                                "dev_tag_padding@common.empty_panel": {
+                                  "size": [ 2, 0 ]
+                                }
                               }
                             ]
                           }
