@@ -9,6 +9,8 @@
     "$screen_content": "rainbowpieui_play.play_screen_content"
   },
 
+  // REF
+
   "third_party_server_info_panel/server_info_stack_panel/join_server_button": {
     "ignored": "($rainbowpie_ui_flag_play_bottom_panel and (not $game_pad))",
     "$button_image_size": [ "100%", "100%" ],
@@ -710,18 +712,12 @@
               "$button_image_size": [ "100%", "100% - 1px" ],
               "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
               "$pressed_button_name": "button.menu_realms_world_item_edit",
-              "$button_content": "play.edit_icon",
+              "$button_content": "play.realms_slots_edit_icon",
               "$button_tts_header": "accessibility.play.editRealm",
               "size": [ "100%y - 1px", "100%" ],
               "anchor_from": "top_right",
               "anchor_to": "top_right",
               "layer": 2,
-              "variables": [
-                {
-                  "requires": "$is_realms_stories_enabled",
-                  "$button_content": "play.realms_slots_edit_icon"
-                }
-              ],
               "bindings": [
                 {
                   "binding_type": "collection_details",
