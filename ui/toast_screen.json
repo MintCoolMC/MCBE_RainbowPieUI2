@@ -15,7 +15,8 @@
       },
       "factory_variables": [
         "$rainbowpie_ui_theme_global_font_name",
-        "$rainbowpie_ui_theme_global_font_backup_name"
+        "$rainbowpie_ui_theme_global_font_backup_name",
+        "$is_pregame"
       ]
     }
   },
