@@ -1,9 +1,6 @@
+// VERSION: 2.7.10232.1 (v1.21.44)
 {
   "namespace": "rainbowpie_modulelib_hud_item",
-
-  // 未经授权禁止使用
-  // Thanks @衡川（Crosmover）
-  // authorized use
 
   "selected_slot_item": {
     "type": "panel",
