@@ -1,4 +1,4 @@
-// VERSION: 2.7.10232.1 (v1.21.44)
+// VERSION: 2.7.10241.1 (v1.21.44)
 {
   "$rainbowpieui_ci": true,
   "$rainbowpieui_commit_id": "local~hash",
@@ -7,10 +7,10 @@
   "$rainbowpieui_branch_display_name": "DEV",
 
   "$rainbowpieui_engine_version": "27",
-  "$rainbowpieui_patch_version": "10232",
+  "$rainbowpieui_patch_version": "10241",
   "$rainbowpieui_hotfix_version": "1",
   "$rainbowpieui_engine_version_name": "2.7",
-  "$rainbowpieui_full_version_name": "2.7.10232.master",
+  "$rainbowpieui_full_version_name": "2.7.10241.master",
   "$rainbowpieui_codename": "cookiecat",
   "$rainbowpieui_watermark": true,
   "$rainbowpieui_bool": true,
@@ -29,7 +29,7 @@
   "$mintui_pack_name": "Rainbow Pie UI",
   "$mintui_pack_description": "Minecraft UI Pack\n§ehttps://mintraspberry.cool/rainbowpieui",
   "$mintui_pack_uuid": "82d610e8-0968-4c0a-a47e-38e6663ee6ff",
-  "$mintui_pack_version": "2.7.10232",
+  "$mintui_pack_version": "2.7.10241",
 
   "$rainbowpie_ui_verify_enabled": false,
   "$rainbowpie_ui_verify_mode": "default", // blacklist|whitelist|[default]
