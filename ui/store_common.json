@@ -2,9 +2,6 @@
   "namespace": "common_store",
 
   "purchase_coins_panel/plus_button": {
-    "$button_image_size": [ "100%", "100%" ],
-    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
-    "$button_content": "rainbowpie_ui_store_common.wallet_button_content"
   },
 
   "inventory_panel/inventory_button": {

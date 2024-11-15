@@ -1,47 +1,6 @@
+// VERSION: 2.7.10232.1 (v1.21.44)
 {
   "namespace": "rainbowpie_ui_store_common",
-
-  "wallet_button_content": {
-    "type": "panel",
-    "controls": [
-      {
-        "purchase_coin_panel_alignment_hack": {
-          "type": "panel",
-          "size": [ "100% - 100%y", "100%" ],
-          "anchor_from": "left_middle",
-          "anchor_to": "left_middle",
-          "controls": [
-            {
-              "purchase_coin_panel@common_store.coin_balance_panel": {
-                "texture": "",
-                "size": [ "100%", "100%" ],
-                "offset": [ 0, 0 ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "plus_image": {
-          "type": "panel",
-          "size": [ "100%y", "100%" ],
-          "anchor_from": "right_middle",
-          "anchor_to": "right_middle",
-          "controls": [
-            {
-              "plus_image@common_store.plus_icon": {
-                "anchor_from": "center",
-                "anchor_to": "center"
-              }
-            }
-          ]
-        }
-      }
-      
-    ]
-  },
 
   "header_content_panel": {
     "type": "panel",
