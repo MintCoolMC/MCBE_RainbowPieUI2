@@ -82,7 +82,7 @@
   "$rainbowpie_ui_flag_input_enable_profanity_filter": true,
   "$rainbowpie_ui_flag_dropdown_default_show_button": true,
   "$rainbowpie_ui_flag_disconnect_ui_modified": true,
-  "$rainbowpie_ui_flag_inventory_debug": false,
+  "$rainbowpie_ui_flag_inventory_debug": true,
   "$rainbowpie_ui_flag_persona_debug": false,
 
   "$rainbowpie_ui_flag_start_splash_text": true,
@@ -119,11 +119,11 @@
   "$rainbowpie_ui_flag_inventory_compass_postion": 1, // 0:TOP 1:BOTTOM
 
   // Item ID Flags
-  "$rainbowpie_ui_flag_item_clock_id": 402,
-  "$rainbowpie_ui_flag_item_compass_id": 400,
-  "$rainbowpie_ui_flag_item_recovery_compass_id": 666,
+  "$rainbowpie_ui_flag_item_clock_id": 419,
+  "$rainbowpie_ui_flag_item_compass_id": 417,
+  "$rainbowpie_ui_flag_item_recovery_compass_id": 682,
   "$rainbowpie_ui_flag_item_chest": 54,
-  "$rainbowpie_ui_flag_item_hopper": 544,
+  "$rainbowpie_ui_flag_item_hopper": 560,
   "$rainbowpie_ui_flag_item_dropper": 125,
   "$rainbowpie_ui_flag_item_dispenser": 23,
   "$rainbowpie_ui_flag_item_crafter": -313,
