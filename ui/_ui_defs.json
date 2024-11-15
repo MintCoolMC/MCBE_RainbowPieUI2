@@ -2,7 +2,6 @@
   "ui_defs": [
     // MintUI
     "ui/MintUI/mintui_background.json",
-    "ui/MintUI/mintui_dialog.json",
     // RainbowPieUI
     "ui/RainbowPieUI/common/rainbowpie_ui_button.json",
     "ui/RainbowPieUI/common/rainbowpie_ui_common.json",
