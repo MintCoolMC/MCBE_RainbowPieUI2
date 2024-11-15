@@ -1,15 +1,15 @@
 {
   "namespace": "loom_pocket",
 
-  "right_navigation_tabs/pocket_tab_close_button": {
+  "right_navigation_tabs/pocket_tab_close_and_help_button": {
     "ignored": true
   },
 
-  "right_navigation_tabs/padding": {
+  "right_navigation_tabs/fill": {
     "ignored": true
   },
 
-  "right_navigation_tabs/pocket_tab_help_button": {
+  "right_navigation_tabs/right_tab_loom": {
     "ignored": true
   },
 
