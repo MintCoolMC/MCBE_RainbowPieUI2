@@ -2,6 +2,31 @@
 {
   "namespace": "invite",
 
+  // Fix layout on v1.21.44
+  "online_xbox_live_friend_list_grid": {
+    "grid_item_template": "invite.online_xbox_live_friend_grid_item"
+  },
+
+  "offline_xbox_live_friend_list_grid": {
+    "grid_item_template": "invite.offline_xbox_live_friend_grid_item"
+  },
+
+  "online_platform_friend_list_grid": {
+    "grid_item_template": "invite.online_platform_friend_grid_item"
+  },
+
+  "offline_platform_friend_list_grid": {
+    "grid_item_template": "invite.offline_platform_friend_grid_item"
+  },
+
+  "online_linked_account_friend_list_grid": {
+    "grid_item_template": "invite.online_linked_account_friend_grid_item"
+  },
+
+  "offline_linked_account_friend_list_grid": {
+    "grid_item_template": "invite.offline_linked_account_friend_grid_item"
+  },
+
   "msa_friend_button_layout/friend_grid_label_layout/spacer_01": {
     "size": [ "100%", 1.5 ]
   },
