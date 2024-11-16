@@ -2,6 +2,14 @@
 {
   "namespace": "common",
 
+  "loading_bar_wait_animation": {
+    "duration": 1.0
+  },
+
+  "loading_bar_fade_animation": {
+    "duration": "$rainbowpie_ui_animation_transition_time"
+  },
+
   "static_tooltip_popup_with_image_and_text/image_and_text_stack_panel/tooltip_text": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
