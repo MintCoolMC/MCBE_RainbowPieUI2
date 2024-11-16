@@ -1989,12 +1989,14 @@
                                           },
                                           {
                                             "inbox_button_padding": {
+                                              "ignored": true,
                                               "type": "panel",
                                               "size": [ 4, 0 ]
                                             }
                                           },
                                           {
                                             "realms_invite_button@common_buttons.light_content_button": {
+                                              "ignored": true,
                                               "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
                                               "$button_image_size": [ "100%", "100%" ],
                                               "$pressed_button_name": "button.menu_invite_notification",
