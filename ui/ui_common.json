@@ -216,7 +216,6 @@
                           "$offset": [ 20, 0 ],
                           "anchor_from": "top_left",
                           "anchor_to": "top_left",
-                          "allow_clipping": true,
                           "clips_children": true,
                           "layer": 200,
                           "color": "$rainbowpie_ui_theme_hovertext_background_color",
@@ -229,6 +228,7 @@
                                 "anchor_to": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
                                 "anchor_from": "$rainbowpie_ui_theme_hovertext_bgicon_anchor",
                                 "ignored": "(not $rainbowpie_ui_theme_hovertext_bgicon_enabled)",
+                                "allow_clipping": true,
                                 "controls": [
                                   {
                                     "icon_image": {
