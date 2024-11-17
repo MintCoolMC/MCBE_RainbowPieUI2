@@ -926,7 +926,7 @@
                 {
                   "background_backup@common.safezone_outer_matrix": {
                     "$rainbowpie_localui_screenroot_ignore_dialogs": true,
-                    "ignored": "(not $rainbowpie_localui_background_bsf_need)",
+                    "ignored": "((not $rainbowpie_localui_background_bsf_need) or $rainbowpie_localui_inventory_screen)",
                     "alpha": 0.0,
                     "layer": -5000,
                     "propagate_alpha": true,
