@@ -973,6 +973,10 @@
               "binding_type": "global"
             },
             {
+              "binding_name": "#hud_visible_centered_touch",
+              "binding_type": "global"
+            },
+            {
               "binding_name": "#hotbar_visible_not_centered",
               "binding_type": "global"
             },
@@ -989,7 +993,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#hud_visible_centered or (#hotbar_visible_not_centered)) and #is_hotbar_needed)",
+              "source_property_name": "((#hud_visible_centered or #hud_visible_centered_touch or #hotbar_visible_not_centered) and #is_hotbar_needed)",
               "target_property_name": "#visible"
             }
           ]
