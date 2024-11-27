@@ -2446,30 +2446,6 @@
             }
           ]
         }
-      },
-      {
-        "7ca17cf7_flag_control": {
-          "type": "panel",
-          "ignored": "((not $rainbowpie_ui_flag_aa8421c9) or (not $rainbowpie_ui_flag_3520da91))",
-          "controls": [
-            {
-              "label": {
-                "type": "label",
-                "text": "...=)",
-                "bindings": [
-                  {
-                    "binding_name": "(#playername = '')", // Empty Easteregg
-                    "binding_name_override": "#visible"
-                  },
-                  {
-                    "binding_name": "(#playername = 'Mariozocker11')", // Tester
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            }
-          ]
-        }
       }
     ]
   },
