@@ -31,13 +31,6 @@
   "$mintui_pack_uuid": "82d610e8-0968-4c0a-a47e-38e6663ee6ff",
   "$mintui_pack_version": "2.7.10249",
 
-  "$rainbowpie_ui_verify_enabled": false,
-  "$rainbowpie_ui_verify_mode": "default", // blacklist|whitelist|[default]
-  "$rainbowpie_ui_verify_whitelist": "MinyFurry",
-  "$rainbowpie_ui_verify_blacklist": "",
-  "$rainbowpie_ui_verify_password": "000",
-  "$rainbowpie_ui_verify_passcode": "abcdef",
-
   // Alert
   "$rainbowpie_ui_alert_enabled": false,
   "$rainbowpie_ui_alert_title": "",
