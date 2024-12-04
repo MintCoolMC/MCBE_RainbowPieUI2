@@ -1680,6 +1680,10 @@
             "$rainbowpie_ui_flag_6d2ac350": false,
             "$rainbowpie_ui_flag_0ffd0593": false
           },
+          {
+            "requires": "($rainbowpie_ui_flag_111d8c96 and not $mouse)",
+            "$rainbowpie_ui_flag_111d8c96": false
+          },
           // Zeqa Network
           {
             "requires": "($is_zeqa)",
