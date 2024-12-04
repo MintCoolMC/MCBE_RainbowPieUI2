@@ -171,6 +171,7 @@
   "$rainbowpie_ui_flag_ae054b5d": false, // New player joined world (Experimental)
   "$rainbowpie_ui_flag_99d9851a": true, // Button border glint
   "$rainbowpie_ui_flag_522748cc": true, // Android style Progress Bar (from ElytraUI)
+  "$rainbowpie_ui_flag_111d8c96": true, // Pause UI Profile Button (Mouse only)
 
   // Debug
   "$rainbowpie_ui_debug": false,
