@@ -31,12 +31,23 @@
                           "offset": [ 1, 0 ],
                           "anchor_from": "left_middle",
                           "anchor_to": "left_middle",
-                          "layer": 1,
+                          "layer": 2,
                           "bindings": [
                             {
                               "binding_name": "#profile_image_options"
                             }
                           ]
+                        }
+                      },
+                      {
+                        "alex_icon": {
+                          "type": "image",
+                          "texture": "textures/ui/icon_alex",
+                          "size": [ 48, 48 ],
+                          "offset": [ 1, 0 ],
+                          "anchor_from": "left_middle",
+                          "anchor_to": "left_middle",
+                          "layer": 1
                         }
                       },
                       {
