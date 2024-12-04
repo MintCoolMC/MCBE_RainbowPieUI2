@@ -5,7 +5,7 @@
         "name": "Rainbow Pie UI",
         "uuid": "82d610e8-0968-4c0a-a47e-38e6663ee6ff",
         "version": [ 2, 7, 10249 ],
-        "min_engine_version": [ 1, 21, 40 ]
+        "min_engine_version": [ 1, 21, 50 ]
     },
     "modules": [
         {

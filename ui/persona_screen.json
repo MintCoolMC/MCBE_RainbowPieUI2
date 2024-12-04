@@ -1,4 +1,4 @@
-// VERSION: 2.7.10249.1 (v1.21.44)
+// VERSION: 2.7.10251.1 (v1.21.50)
 {
   "namespace": "persona",
 
@@ -403,7 +403,7 @@
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
   },
 
-  "emotes_right_side_bottom_buttons/play_again": {
+  "purchase_buttons/emote_play_again_button": {
     "$button_image_size": [ "100%", "100%" ],
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button"
   },
