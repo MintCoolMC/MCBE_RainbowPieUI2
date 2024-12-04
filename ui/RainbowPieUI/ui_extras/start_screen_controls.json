@@ -387,21 +387,17 @@
           "anchor_to": "left_middle",
           "controls": [
             {
-              "gamerpic": {
-                "type": "image",
+              "gamerpic@start.gamerpic": {
                 "size": [ "100%y", "100%" ],
-                "layer": 1,
+                "$gamerpic_visible": "#show_gamerpic"
+              }
+            },
+            {
+              "alex_icon@start.alex_icon": {
+                "size": [ "100%y", "100%" ],
                 "bindings": [
                   {
-                    "binding_name": "#gamerpic_texture_path",
-                    "binding_name_override": "#texture"
-                  },
-                  {
-                    "binding_name": "#gamerpic_texture_location_type",
-                    "binding_name_override": "#texture_file_system"
-                  },
-                  {
-                    "binding_name": "(not #sign_in_visible)",
+                    "binding_name": "(not #show_gamerpic)",
                     "binding_name_override": "#visible"
                   }
                 ]
@@ -2620,21 +2616,24 @@
           "layer": 1,
           "controls": [
             {
-              "gamerpic": {
-                "type": "image",
+              "gamerpic@start.gamerpic": {
                 "size": [ 37, 37 ],
                 "offset": [ 1, 0 ],
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
-                "layer": 1,
+                "$gamerpic_visible": "#show_gamerpic"
+              }
+            },
+            {
+              "alex_icon@start.alex_icon": {
+                "size": [ 37, 37 ],
+                "offset": [ 1, 0 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
                 "bindings": [
                   {
-                    "binding_name": "#gamerpic_texture_path",
-                    "binding_name_override": "#texture"
-                  },
-                  {
-                    "binding_name": "#gamerpic_texture_location_type",
-                    "binding_name_override": "#texture_file_system"
+                    "binding_name": "(not #show_gamerpic)",
+                    "binding_name_override": "#visible"
                   }
                 ]
               }
