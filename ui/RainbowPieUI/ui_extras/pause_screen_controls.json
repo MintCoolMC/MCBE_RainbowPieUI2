@@ -1388,6 +1388,9 @@
                       ]
                     }
                   },
+                  // 也许有一天我会完善这个东西，但是目前这个东西根本没有任何用。
+                  // 我的本意是让服务器修改这个界面并且通过scoreboard在这个页面显示一些东西。
+                  // 但是我根本没有开服务器。
                   {
                     "pause_persona_panel": {
                       "type": "panel",
@@ -1406,22 +1409,15 @@
                             "offset": [ 0, 0.5 ],
                             "anchor_from": "top_middle",
                             "anchor_to": "top_middle",
-                            "clips_children": true,
+                            "layer": 24,
                             "controls": [
                               {
-                                "my_info_grid": {
-                                  "type": "grid",
-                                  "size": [ "100% - 1px", "100%c" ],
-                                  "anchor_from": "top_middle",
-                                  "anchor_to": "top_middle",
-                                  "grid_item_template": "rainbowpieui_pause.my_info_grid",
-                                  "grid_dimension_binding": "#players_grid_dimension",
-                                  "collection_name": "players_collection",
-                                  "bindings": [
-                                    {
-                                      "binding_name": "#players_grid_dimension"
-                                    }
-                                  ]
+                                "profile_button@common_buttons.light_content_button": {
+                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+                                  "$button_image_size": [ "100% - 1px", "100%" ],
+                                  "$button_content_size": [ "100% - 1px", "100%" ],
+                                  "$button_content": "rainbowpieui_pause.my_profile_horizontal_button_content",
+                                  "$pressed_button_name": "button.menu_profile"
                                 }
                               }
                             ]
@@ -1476,7 +1472,7 @@
                             ]
                           }
                         },
-                        { "profile_button@pause.change_profile_button": {} }
+                        { "profile_button@pause.dressing_room_button": {} }
                       ],
                       "bindings": [
                         {
@@ -1566,90 +1562,66 @@
     ]
   },
 
-  "my_info_grid": {
-    "type": "image",
+  "my_profile_horizontal_button_content": {
+    "type": "panel",
     "size": [ "100%", 24 ],
-    "texture": "textures/ui/White",
-    "color": "$rainbowpie_ui_theme_title_background_color",
-    "alpha": "$rainbowpie_ui_theme_title_background_alpha",
     "controls": [
       {
-        "player_gamer_pic": {
-          "type": "image",
-          "texture": "#texture",
+        "gamerpic": {
+          "type": "custom",
+          "renderer": "profile_image_renderer",
           "size": [ 22, 22 ],
           "offset": [ 1, 0 ],
-          "layer": 2,
-          "texture_file_system": "#texture_source",
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
+          "layer": 2,
           "bindings": [
             {
-              "binding_name": "#texture",
-              "binding_type": "collection",
-              "binding_collection_name": "players_collection"
-            },
-            {
-              "binding_name": "#texture_source",
-              "binding_name_override": "#texture_file_system",
-              "binding_type": "collection",
-              "binding_collection_name": "players_collection"
-            },
-            {
-              "binding_name": "#gamerpic_visible",
-              "binding_type": "collection",
-              "binding_collection_name": "players_collection",
-              "binding_name_override": "#visible"
+              "binding_name": "#profile_image_options"
             }
           ]
         }
       },
       {
-        "player_local_pic": {
+        "alex_icon": {
           "type": "image",
-          "texture": "textures/ui/icon_steve",
+          "texture": "textures/ui/icon_alex",
           "size": [ 22, 22 ],
           "offset": [ 1, 0 ],
-          "layer": 2,
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
-          "bindings": [
-            {
-              "binding_name": "(not #gamerpic_visible)",
-              "binding_type": "collection",
-              "binding_collection_name": "players_collection",
-              "binding_name_override": "#visible"
-            }
-          ]
+          "layer": 1
         }
       },
       {
         "player_gamertag@rainbowpie_ui_common.text_label_notheme": {
-          "color": "$rainbowpie_ui_theme_title_text_color",
-          "text": "#gamertag",
+          "color": "$text_color",
+          "text": "#playername",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [ 25, 2 ],
           "size": [ "100% - 25px", 10 ],
-          "layer": 2,
+          "layer": 3,
           "bindings": [
             {
-              "binding_name": "#gamertag",
-              "binding_type": "collection",
-              "binding_collection_name": "players_collection"
+              "binding_name": "#playername"
             }
           ]
         }
       },
       {
-        "player_permission_custom@rainbowpie_ui_common.text_label_notheme": {
-          "color": "$rainbowpie_ui_theme_title_text_color",
-          "text": "permissions.level.custom",
+        "permission_label@rainbowpie_ui_common.text_label": {
+          "color": "$text_color",
+          "text": "#player_permission_text",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "offset": [ 25, -2 ],
           "size": [ "100%  -25px", 10 ],
           "layer": 2,
+          "property_bag": {
+            "#collection_name": "players_collection",
+            "#collection_index": 0
+          },
           "bindings": [
             {
               "binding_name": "#player_permission_level_icon_texture",
@@ -1658,77 +1630,8 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_custom_dots')",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "player_permission_member@rainbowpie_ui_common.text_label_notheme": {
-          "color": "$rainbowpie_ui_theme_title_text_color",
-          "text": "permissions.level.member",
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
-          "offset": [ 25, -2 ],
-          "size": [ "100%  -25px", 10 ],
-          "layer": 2,
-          "bindings": [
-            {
-              "binding_name": "#player_permission_level_icon_texture",
-              "binding_type": "collection",
-              "binding_collection_name": "players_collection"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_member_star')",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "player_permission_operator@rainbowpie_ui_common.text_label_notheme": {
-          "color": "$rainbowpie_ui_theme_title_text_color",
-          "text": "permissions.level.operator",
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
-          "offset": [ 25, -2 ],
-          "size": [ "100%  -25px", 10 ],
-          "layer": 2,
-          "bindings": [
-            {
-              "binding_name": "#player_permission_level_icon_texture",
-              "binding_type": "collection",
-              "binding_collection_name": "players_collection"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_op_crown')",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "player_permission_visitor@rainbowpie_ui_common.text_label_notheme": {
-          "color": "$rainbowpie_ui_theme_title_text_color",
-          "text": "permissions.level.visitor",
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
-          "offset": [ 25, -2 ],
-          "size": [ "100%  -25px", 10 ],
-          "layer": 2,
-          "bindings": [
-            {
-              "binding_name": "#player_permission_level_icon_texture",
-              "binding_type": "collection",
-              "binding_collection_name": "players_collection"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_visitor_hand')",
-              "target_property_name": "#visible"
+              "source_property_name": "('rainbowpie.ui.pause.permissions.' + ((#player_permission_level_icon_texture - 'textures/ui/permissions_') - '_hand' - '_star'- '_crown'- '_dots'))",
+              "target_property_name": "#player_permission_text"
             }
           ]
         }
