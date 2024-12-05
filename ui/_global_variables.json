@@ -173,6 +173,7 @@
   "$rainbowpie_ui_flag_99d9851a": true, // Button border glint
   "$rainbowpie_ui_flag_522748cc": true, // Android style Progress Bar (from ElytraUI)
   "$rainbowpie_ui_flag_111d8c96": true, // Pause UI Profile Button (Mouse only)
+  "$rainbowpie_ui_flag_31e1a20e": false, // ProgressUI Dimension background disabled; set false by default, Because the game flickers when switching dimensions
 
   // Debug
   "$rainbowpie_ui_debug": false,
