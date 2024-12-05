@@ -133,7 +133,7 @@
   },
 
   "stack_count_label": {
-    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "font_type": "$rainbowpie_ui_flag_inventory_stack_count_font",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
 
