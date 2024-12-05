@@ -2,6 +2,48 @@
 {
   "namespace": "general_section",
 
+  "device_info_toggles_panel/device_info_memory_tier_dropdown": {
+    "$rainbowpie_localui_dropdown_enabled": true,
+    "$rainbowpie_localui_dropdown_content": [
+      {
+        "memory_tier_superLow@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#memory_tier_superLow",
+          "$radio_label_text": "options.creator.deviceInfoMemoryTier.superLow"
+        }
+      },
+      {
+        "memory_tier_low@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#memory_tier_low",
+          "$radio_label_text": "options.creator.deviceInfoMemoryTier.low"
+        }
+      },
+      {
+        "memory_tier_mid@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#memory_tier_mid",
+          "$radio_label_text": "options.creator.deviceInfoMemoryTier.mid"
+        }
+      },
+      {
+        "memory_tier_high@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#memory_tier_high",
+          "$radio_label_text": "options.creator.deviceInfoMemoryTier.high"
+        }
+      },
+      {
+        "memory_tier_superHigh@rainbowpieui_settings_common.rainbowpie_ui_radio_with_label": {
+          "$toggle_state_binding_name": "#memory_tier_superHigh",
+          "$radio_label_text": "options.creator.deviceInfoMemoryTier.superHigh"
+        }
+      }
+    ]
+  },
+
+  "device_info_toggles_panel/primary_panel/heading": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
   "content_log_panel/option_content_log_gui_level": {
     "$rainbowpie_localui_dropdown_enabled": true,
     "$rainbowpie_localui_dropdown_content": [
