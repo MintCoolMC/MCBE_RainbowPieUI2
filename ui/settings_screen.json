@@ -27,6 +27,7 @@
                         "gamerpic": {
                           "type": "custom",
                           "renderer": "profile_image_renderer",
+                          "alpha": 2.0,
                           "size": [ 48, 48 ],
                           "offset": [ 1, 0 ],
                           "anchor_from": "left_middle",
