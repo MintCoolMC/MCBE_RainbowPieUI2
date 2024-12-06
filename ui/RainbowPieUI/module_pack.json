@@ -78,7 +78,7 @@
         "lib_hud_item@rainbowpie_ui_module_list.module_item": {
           "$module_icon_texture": "($rainbowpie_ui_path_home + '/icon/module')",
           "$module_name": "HUD Item Lib",
-          "$module_version": "2.0",
+          "$module_version": "2.1",
           "$module_author": "MintCoolMC, 衡川(Crosmover)",
           "$module_description": "module lib hud item",
           "$module_state_check": true,
