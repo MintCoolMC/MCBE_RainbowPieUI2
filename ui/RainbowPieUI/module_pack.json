@@ -15,7 +15,17 @@
           "$module_max_engine_version": "999999",
           "$module_max_engine_patch_version": "999999",
           "$module_min_engine_version": "0",
-          "$module_min_engine_patch_version": "0"
+          "$module_min_engine_patch_version": "0",
+          "$module_variable_display": true,
+          "$module_variables": [
+            {
+              "redstone_blocks@rainbowpie_ui_module_list.module_variable_item": {
+                "$variable_name": "$rainbowpie_ui_moduleflag_chest_fastpick_redstone_blocks",
+                "$variable_name_display": "rainbowpie_ui_moduleflag_chest_fastpick_redstone_blocks",
+                "$variable_description": "Allow use fastpick in redstone blocks (hopper, dropper, dispenser, crafter)"
+              }
+            }
+          ]
         }
       },
       {
@@ -71,7 +81,59 @@
           "$module_max_engine_version": "999999",
           "$module_max_engine_patch_version": "999999",
           "$module_min_engine_version": "0",
-          "$module_min_engine_patch_version": "0"
+          "$module_min_engine_patch_version": "0",
+          "$module_variable_display": true,
+          "$module_variables": [
+            {
+              "delete_item_enabled@rainbowpie_ui_module_list.module_variable_item": {
+                "$variable_name": "$rainbowpie_ui_moduleflag_inventory_actions_delete_item_enabled",
+                "$variable_name_display": "rainbowpie_ui_moduleflag_inventory_actions_delete_item_enabled",
+                "$variable_description": "Enable delete item button in creative mode"
+              }
+            },
+            {
+              "delete_all_item_enabled@rainbowpie_ui_module_list.module_variable_item": {
+                "$variable_name": "$rainbowpie_ui_moduleflag_inventory_actions_delete_all_item_enabled",
+                "$variable_name_display": "rainbowpie_ui_moduleflag_inventory_actions_delete_all_item_enabled",
+                "$variable_description": "Enable delete all items button in creative mode"
+              }
+            },
+            {
+              "drop_item_enabled@rainbowpie_ui_module_list.module_variable_item": {
+                "$variable_name": "$rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled",
+                "$variable_name_display": "rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled",
+                "$variable_description": "Enable drop item button"
+              }
+            },
+            {
+              "drop_all_item_enabled@rainbowpie_ui_module_list.module_variable_item": {
+                "$variable_name": "$rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled",
+                "$variable_name_display": "rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled",
+                "$variable_description": "Enable drop all items button"
+              }
+            },
+            {
+              "quick_craft_enabled@rainbowpie_ui_module_list.module_variable_item": {
+                "$variable_name": "$rainbowpie_ui_moduleflag_inventory_actions_quick_craft_enabled",
+                "$variable_name_display": "rainbowpie_ui_moduleflag_inventory_actions_quick_craft_enabled",
+                "$variable_description": "Enable quick craft button"
+              }
+            },
+            {
+              "armor_switch_enabled@rainbowpie_ui_module_list.module_variable_item": {
+                "$variable_name": "$rainbowpie_ui_moduleflag_inventory_actions_armor_switch_enabled",
+                "$variable_name_display": "rainbowpie_ui_moduleflag_inventory_actions_armor_switch_enabled",
+                "$variable_description": "Enable armor switching"
+              }
+            },
+            {
+              "bce3269f@rainbowpie_ui_module_list.module_variable_item": {
+                "$variable_name": "$rainbowpie_ui_flag_bce3269f",
+                "$variable_name_display": "rainbowpie_ui_flag_bce3269f",
+                "$variable_description": "InventoryUI new touch mode drop"
+              }
+            }
+          ]
         }
       },
       {
