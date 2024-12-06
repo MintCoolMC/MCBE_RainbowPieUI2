@@ -973,23 +973,10 @@
                       "size": [ "100%", "100%" ],
                       "consume_hover_events": false,
                       "layer": 10,
-                      "visible": false,
                       "property_bag": {
                         "#collection_name": "armor_items",
                         "#collection_index": 0
                       },
-                      "bindings": [
-                        {
-                          "binding_name": "#item_id_aux",
-                          "binding_type": "collection",
-                          "binding_collection_name": "armor_items"
-                        },
-                        {
-                          "binding_type": "view",
-                          "source_property_name": "(not (#item_id_aux = -1))",
-                          "target_property_name": "#visible"
-                        }
-                      ],
                       "button_mappings": [
                         {
                           "from_button_id": "button.menu_auto_place",
@@ -1066,23 +1053,10 @@
                       "size": [ "100%", "100%" ],
                       "consume_hover_events": false,
                       "layer": 10,
-                      "visible": false,
                       "property_bag": {
                         "#collection_name": "armor_items",
                         "#collection_index": 1
                       },
-                      "bindings": [
-                        {
-                          "binding_name": "#item_id_aux",
-                          "binding_type": "collection",
-                          "binding_collection_name": "armor_items"
-                        },
-                        {
-                          "binding_type": "view",
-                          "source_property_name": "(not (#item_id_aux = -1))",
-                          "target_property_name": "#visible"
-                        }
-                      ],
                       "button_mappings": [
                         {
                           "from_button_id": "button.menu_auto_place",
@@ -1159,23 +1133,10 @@
                       "size": [ "100%", "100%" ],
                       "consume_hover_events": false,
                       "layer": 10,
-                      "visible": false,
                       "property_bag": {
                         "#collection_name": "armor_items",
                         "#collection_index": 2
                       },
-                      "bindings": [
-                        {
-                          "binding_name": "#item_id_aux",
-                          "binding_type": "collection",
-                          "binding_collection_name": "armor_items"
-                        },
-                        {
-                          "binding_type": "view",
-                          "source_property_name": "(not (#item_id_aux = -1))",
-                          "target_property_name": "#visible"
-                        }
-                      ],
                       "button_mappings": [
                         {
                           "from_button_id": "button.menu_auto_place",
@@ -1252,23 +1213,10 @@
                       "size": [ "100%", "100%" ],
                       "consume_hover_events": false,
                       "layer": 10,
-                      "visible": false,
                       "property_bag": {
                         "#collection_name": "armor_items",
                         "#collection_index": 3
                       },
-                      "bindings": [
-                        {
-                          "binding_name": "#item_id_aux",
-                          "binding_type": "collection",
-                          "binding_collection_name": "armor_items"
-                        },
-                        {
-                          "binding_type": "view",
-                          "source_property_name": "(not (#item_id_aux = -1))",
-                          "target_property_name": "#visible"
-                        }
-                      ],
                       "button_mappings": [
                         {
                           "from_button_id": "button.menu_auto_place",
