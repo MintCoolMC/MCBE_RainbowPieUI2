@@ -227,7 +227,7 @@
   "$rainbowpie_ui_moduleflag_inventory_actions_drop_item_enabled": true,
   "$rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled": true,
   "$rainbowpie_ui_moduleflag_inventory_actions_quick_craft_enabled": true,
-  "$rainbowpie_ui_moduleflag_inventory_actions_armor_switch_enabled": true,
+  "$rainbowpie_ui_moduleflag_inventory_actions_armor_switch_enabled": false,
   "$rainbowpie_ui_moduleflag_inventory_actions_armor_ids_helmet": "id360,id364,id368,id376,id372,id646,",
   "$rainbowpie_ui_moduleflag_inventory_actions_armor_ids_chestplate": "id361,id365,id369,id377,id373,id647,",
   "$rainbowpie_ui_moduleflag_inventory_actions_armor_ids_leggings": "id362,id366,id370,id378,id374,id648,",
