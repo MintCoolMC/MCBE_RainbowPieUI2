@@ -13,7 +13,9 @@
         "selected_slot_item_count@rainbowpie_modulelib_hud_item.selected_slot_item_count": {}
       },
       {
-        "selected_item_count@rainbowpie_modulelib_hud_item.selected_item_count": {}
+        "block_count@rainbowpie_modulelib_hud_item.hotbar_item_count": {
+          "$rainbowpie_localui_inventory_target_item_ids": "$rainbowpie_ui_moduleflag_hud_block_counter_blockids"
+        }
       },
       {
         "counter_panel": {
@@ -112,9 +114,9 @@
                             "bindings": [
                               {
                                 "binding_type": "view",
-                                "source_control_name": "selected_item_count",
-                                "source_property_name": "#selected_item_total_count_int",
-                                "target_property_name": "#selected_item_total_count_int"
+                                "source_control_name": "block_count",
+                                "source_property_name": "#hotbar_target_item_total_count_int",
+                                "target_property_name": "#hotbar_target_item_total_count_int"
                               },
                               {
                                 "binding_type": "view",
@@ -124,21 +126,21 @@
                               },
                               {
                                 "binding_type": "view",
-                                "source_property_name": "(not (#selected_item_total_count_int = #selected_item_stack_count_int))",
+                                "source_property_name": "(not (#hotbar_target_item_total_count_int = #selected_item_stack_count_int))",
                                 "target_property_name": "#visible"
                               }
                             ],
                             "controls": [
                               {
                                 "count_text@rainbowpie_ui_common.text_label": {
-                                  "text": "#selected_item_total_count_str",
+                                  "text": "#hotbar_target_item_total_count_int",
                                   "color": [ 0.7, 0.7, 0.7 ],
                                   "bindings": [
                                     {
                                       "binding_type": "view",
-                                      "source_control_name": "selected_item_count",
-                                      "source_property_name": "('|x' + #selected_item_total_count_int)",
-                                      "target_property_name": "#selected_item_total_count_str"
+                                      "source_control_name": "block_count",
+                                      "source_property_name": "('|x' + #hotbar_target_item_total_count_int)",
+                                      "target_property_name": "#hotbar_target_item_total_count_int"
                                     }
                                   ]
                                 }

@@ -22,7 +22,7 @@
         "hud_block_counter@rainbowpie_ui_module_list.module_item": {
           "$module_icon_texture": "($rainbowpie_ui_path_home + '/module/hud_block_counter')",
           "$module_name": "HUD Block Counter",
-          "$module_version": "2.0",
+          "$module_version": "2.1",
           "$module_author": "MintCoolMC",
           "$module_description": "Shows the total count of held blocks in the hotbar",
           "$module_state_check": "$rainbowpie_ui_module_hud_block_counter",
