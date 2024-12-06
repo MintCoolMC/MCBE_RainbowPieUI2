@@ -2,9 +2,184 @@
 {
   "namespace": "rainbowpie_ui_module_list",
 
+  "module_variable_display_button_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "control_stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100% - 4px", "100%cm" ],
+          "controls": [
+            {
+              "button_text@rainbowpie_ui_common.text_label": {
+                "size": [ "default", 10 ],
+                "max_size": [ "100% - 10px", 10 ],
+                "text": "rainbowpie.ui.module.moduleVariables",
+                "color": "$text_color",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "layer": 1
+              }
+            },
+            {
+              "middle_padding": {
+                "type": "panel",
+                "size": [ "fill", 0 ]
+              }
+            },
+            {
+              "chevron_panel": {
+                "type": "panel",
+                "size": [ 10, 10 ],
+                "controls": [
+                  {
+                    "chevron_down": {
+                      "type": "image",
+                      "layer": 1,
+                      "texture": "textures/ui/chevron_white_down",
+                      "color": "$text_color",
+                      "size": [ 8, 8 ],
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "visible": false,
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "$toggle_view_binding_name",
+                          "source_property_name": "(not #toggle_state)",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "chevron_up": {
+                      "type": "image",
+                      "layer": 1,
+                      "texture": "textures/ui/chevron_white_up",
+                      "color": "$text_color",
+                      "size": [ 8, 8 ],
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "visible": false,
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "$toggle_view_binding_name",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "module_variable_display_toggle@common_toggles.light_ui_toggle": {
+    "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
+    "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
+    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
+    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
+    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
+    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
+    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
+    "$button_content": "rainbowpie_ui_module_list.module_variable_display_button_content",
+
+    "$button_type_panel": "common_buttons.new_ui_binding_button_label",
+    "$button_text_binding_type": "none",
+    "$button_binding_condition": "none",
+    "$button_text_grid_collection_name": "none",
+    "$button_text": "VARIABLES",
+    "$button_offset": [ 0, 0 ],
+
+    "$radio_toggle_group": false,
+    "$toggle_name": "rainbowpie_settings_module_variable_display_toggle",
+    "$toggle_group_default_selected": 0,
+
+    "$toggle_group_forced_index": 0,
+
+    "$toggle_view_binding_name": ""
+  },
+
+  "module_variable_item": {
+    "type": "panel",
+    "size": [ "100%", "100%c + 4px" ],
+    "$variable_name|default": false,
+    "$variable_name_display|default": "variable_displayname",
+    "$variable_description|default": "",
+    "controls": [
+      {
+        "control_stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "top_driven": {
+                "type": "image",
+                "size": [ "100%", 1 ],
+                "texture": "textures/ui/White",
+                "color": [ 1.0, 1.0, 1.0 ],
+                "alpha": 0.25,
+                "layer": 1
+              }
+            },
+            {
+              "padding_0": {
+                "type": "panel",
+                "size": [ 0, 2 ]
+              }
+            },
+            {
+              "label_1@rainbowpie_ui_common.text_label": {
+                "layer": 1,
+                "size": [ "100%", "default" ],
+                "$value_color_format_symbol": "f",
+                "$value_string_formatted": "('§§' + $variable_name)",
+                "text": "('§§§e$§f' + $variable_name_display + ' = ' + '§' + $value_color_format_symbol + $value_string_formatted)",
+                "variables": [
+                  {
+                    "requires": "($value_string_formatted = '§§true')",
+                    "$value_color_format_symbol": "a"
+                  },
+                  {
+                    "requires": "($value_string_formatted = '§§false')",
+                    "$value_color_format_symbol": "c"
+                  },
+                  {
+                    "requires": "(('1' + $variable_name + 1) > 10)",
+                    "$value_color_format_symbol": "e"
+                  }
+                ]
+              }
+            },
+            {
+              "label_2@rainbowpie_ui_common.text_label": {
+                "ignored": "($variable_description = '')",
+                "layer": 1,
+                "size": [ "100%", "default" ],
+                "text": "$variable_description",
+                "color": [ 0.776, 0.776, 0.776 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "module_item": {
     "type": "panel",
-    "size": [ "100%", 52 ],
+    "size": [ "100%", "100%c + 2px" ],
     "$module_icon_texture|default": "($rainbowpie_ui_path_home + '/icon/module')",
     "$module_name|default": "module_name",
     "$module_version|default": "module_version",
@@ -15,67 +190,143 @@
     "$module_max_engine_patch_version|default": "999999",
     "$module_min_engine_version|default": "0",
     "$module_min_engine_patch_version|default": "0",
+    "$module_variable_display|default": false,
+    "$module_variables|default": [],
     "controls": [
       {
         "background@rainbowpie_ui_common.text_background": {
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
-          "size": [ "100%", 50 ],
+          "size": [ "100%", "100%cm" ],
+          "min_size": [ "100%", 50 ],
           "controls": [
             {
               "icon_image": {
                 "type": "image",
-                "size": [ "100%y", "100%" ],
-                "anchor_from": "left_middle",
-                "anchor_to": "left_middle",
+                "size": [ 50, 50 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
                 "texture": "$module_icon_texture"
               }
             },
             {
-              "label_1@rainbowpie_ui_common.text_label": {
-                "layer": 1,
-                "size": [ "100% - 54px", 15 ],
-                "offset": [ 52, 1 ],
+              "variable_display_button@rainbowpie_ui_module_list.module_variable_display_toggle": {
+                "ignored": "(not $module_variable_display)",
+                "size": [ 60, 20 ],
+                "offset": [ -2, 28 ],
+                "layer": 20,
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$toggle_group_forced_index": 1000,
+                "$toggle_view_binding_name": "('module_variable_display_' + $module_name)"
+              }
+            },
+            {
+              "control_stack_panel": {
+                "type": "stack_panel",
+                "size": [ "100% - 114px", "100%c" ],
+                "offset": [ 52, 0 ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
-                "text": "('§§' + $module_name + ' [' + $module_state + ']' + $module_update_state)",
-                "font_scale_factor": 1.5,
-                "$module_state|default": "§cINACTIVE§r",
-                "$module_update_state|default": "",
-                "variables": [
+                "controls": [
                   {
-                    "requires": "$module_state_check",
-                    "$module_state": "§aACTIVE§r"
+                    "padding_0": {
+                      "type": "panel",
+                      "size": [ 0, 1 ]
+                    }
                   },
                   {
-                    "requires": "(($module_max_engine_version < $rainbowpieui_engine_version) or ($module_max_engine_patch_version < $rainbowpieui_patch_version))",
-                    "$module_update_state": " [§eNEEDUPDATE§r]"
+                    "label_1@rainbowpie_ui_common.text_label": {
+                      "layer": 1,
+                      "size": [ "100%", 15 ],
+                      "text": "('§§' + $module_name + ' [' + $module_state + ']' + $module_update_state)",
+                      "font_scale_factor": 1.5,
+                      "$module_state|default": "§cINACTIVE§r",
+                      "$module_update_state|default": "",
+                      "variables": [
+                        {
+                          "requires": "$module_state_check",
+                          "$module_state": "§aACTIVE§r"
+                        },
+                        {
+                          "requires": "(($module_max_engine_version < $rainbowpieui_engine_version) or ($module_max_engine_patch_version < $rainbowpieui_patch_version))",
+                          "$module_update_state": " [§eNEEDUPDATE§r]"
+                        },
+                        {
+                          "requires": "(($module_min_engine_version > $rainbowpieui_engine_version) or ($module_min_engine_patch_version > $rainbowpieui_patch_version))",
+                          "$module_update_state": " [§cUNSUPPORTED§r]"
+                        }
+                      ]
+                    }
                   },
                   {
-                    "requires": "(($module_min_engine_version > $rainbowpieui_engine_version) or ($module_min_engine_patch_version > $rainbowpieui_patch_version))",
-                    "$module_update_state": " [§cUNSUPPORTED§r]"
+                    "padding_1": {
+                      "type": "panel",
+                      "size": [ 0, 1 ]
+                    }
+                  },
+                  {
+                    "label_2@rainbowpie_ui_common.text_label": {
+                      "layer": 1,
+                      "size": [ "100%", 10 ],
+                      "text": "('§§' + $module_version + ', §o§l' + $module_author)"
+                    }
+                  },
+                  {
+                    "padding_2": {
+                      "type": "panel",
+                      "size": [ 0, 1 ]
+                    }
+                  },
+                  {
+                    "label_3@rainbowpie_ui_common.text_label": {
+                      "layer": 1,
+                      "size": [ "100% - 44px", "default" ],
+                      "text": "('§§' + $module_description)"
+                    }
+                  },
+                  {
+                    "padding_3": {
+                      "type": "panel",
+                      "size": [ 0, 1 ]
+                    }
+                  },
+                  {
+                    "padding_4": {
+                      "type": "panel",
+                      "size": [ 0, 4 ],
+                      "ignored": "(not $module_variable_display)",
+                      "visible": false,
+                      "$toggle_view_binding_name": "('module_variable_display_' + $module_name)",
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "$toggle_view_binding_name",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "variable_panel": {
+                      "type": "stack_panel",
+                      "size": [ "100%", "100%c" ],
+                      "controls": "$module_variables",
+                      "ignored": "(not $module_variable_display)",
+                      "visible": false,
+                      "$toggle_view_binding_name": "('module_variable_display_' + $module_name)",
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "$toggle_view_binding_name",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
                   }
                 ]
-              }
-            },
-            {
-              "label_2@rainbowpie_ui_common.text_label": {
-                "layer": 1,
-                "size": [ "100% - 44px", 10 ],
-                "offset": [ 52, 16 ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "text": "('§§' + $module_version + ', §o§l' + $module_author)"
-              }
-            },
-            {
-              "label_3@rainbowpie_ui_common.text_label": {
-                "layer": 1,
-                "size": [ "100% - 44px", 20 ],
-                "offset": [ 52, 27 ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "text": "('§§' + $module_description)"
               }
             }
           ]
