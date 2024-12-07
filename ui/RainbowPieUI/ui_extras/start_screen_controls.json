@@ -501,29 +501,25 @@
   "hide_paper_doll_anim_exit_push@rainbowpieui_start.hide_paper_doll_anim": {
     "from": [ 0, 38 ],
     "to": [ "100%x", 38 ],
-    "play_event": "screen.exit_push",
-    "end_event": "screen.exit_end"
+    "play_event": "screen.exit_push"
   },
 
   "hide_paper_doll_anim_exit_pop@rainbowpieui_start.hide_paper_doll_anim": {
     "from": [ 0, 38 ],
     "to": [ "100%x", 38 ],
-    "play_event": "screen.exit_pop",
-    "end_event": "screen.exit_end"
+    "play_event": "screen.exit_pop"
   },
 
   "hide_paper_doll_anim_entrance_push@rainbowpieui_start.hide_paper_doll_anim": {
     "from": [ "100%x", 38 ],
     "to": [ 0, 38 ],
-    "play_event": "screen.entrance_push",
-    "end_event": "screen.entrance_end"
+    "play_event": "screen.entrance_push"
   },
 
   "hide_paper_doll_anim_entrance_pop@rainbowpieui_start.hide_paper_doll_anim": {
     "from": [ "100%x", 38 ],
     "to": [ 0, 38 ],
-    "play_event": "screen.entrance_pop",
-    "end_event": "screen.entrance_end"
+    "play_event": "screen.entrance_pop"
   },
 
   "startv2_skin_button_panel": {
