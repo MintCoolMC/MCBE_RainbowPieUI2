@@ -158,6 +158,11 @@
                   {
                     "requires": "(('1' + $variable_name + 1) > 10)",
                     "$value_color_format_symbol": "e"
+                  },
+                  {
+                    "requires": "($variable_name < 10)",
+                    // "requires": "($variable_name + '1' - 1 < -10)",
+                    "$value_color_format_symbol": "e"
                   }
                 ]
               }
