@@ -2,10 +2,28 @@
 {
   "namespace": "disconnect",
 
+  "disconnect_screen_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "rainbowpie_title_panel@rainbowpieui_disconnect.title_panel": {} }
+        ]
+      }
+    ]
+  },
+
+  "disconnect_screen_content/title_panel": {
+    "ignored": "$rainbowpie_ui_flag_c48fd864"
+  },
+
   "disconnect_text": {
+    // "text": "disconnect_text"
   },
 
   "disconnect_title_text": {
+    // "text": "disconnect_title_text"
   },
 
   "disconnect_screen_text": {
