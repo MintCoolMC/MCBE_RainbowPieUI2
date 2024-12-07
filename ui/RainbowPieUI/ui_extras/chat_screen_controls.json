@@ -7,53 +7,27 @@
     "size": [ "100%", "100%c" ],
     "anims": ["@rainbowpieui_chat.chat_message_panel_size_animation"],
     "clips_children": true,
+    "bindings": [
+      {
+        "binding_name": "#chat_visible"
+      },
+      {
+        "binding_name": "#host_main_visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#chat_visible and (not #host_main_visible))",
+        "target_property_name": "#visible"
+      }
+    ],
     "controls": [
       {
-        "text_edit_box": {
-          "type": "edit_box",
+        "message_text@rainbowpie_ui_common.editable_label": {
           "size": [ "100%", "100%c" ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "focus_enabled": true,
-          "enabled_newline": true,
-          "max_length": 32500,
           "text_box_name": "message_text",
           "text_control": "message_display_text",
-          "button_mappings": [
-            {
-              "from_button_id": "button.menu_select",
-              "to_button_id": "button.text_edit_box_selected",
-              "handle_select": true,
-              "handle_deselect": false,
-              "mapping_type": "pressed"
-            },
-            {
-              "from_button_id": "button.menu_select",
-              "to_button_id": "button.text_edit_box_selected",
-              "handle_select": false,
-              "handle_deselect": true,
-              "mapping_type": "global",
-              "consume_event": false
-            },
-            {
-              "from_button_id": "button.menu_ok",
-              "to_button_id": "button.text_edit_box_selected",
-              "handle_select": true,
-              "handle_deselect": false,
-              "mapping_type": "pressed"
-            },
-            {
-              "from_button_id": "button.menu_cancel",
-              "to_button_id": "button.text_edit_box_deselected",
-              "handle_select": false,
-              "handle_deselect": true,
-              "mapping_type": "global"
-            },
-            {
-              "to_button_id": "button.text_edit_box_hovered",
-              "mapping_type": "pressed"
-            }
-          ],
           "controls": [
             {
               "message_display_text": {
@@ -88,19 +62,6 @@
             }
           ]
         }
-      }
-    ],
-    "bindings": [
-      {
-        "binding_name": "#chat_visible"
-      },
-      {
-        "binding_name": "#host_main_visible"
-      },
-      {
-        "binding_type": "view",
-        "source_property_name": "(#chat_visible and (not #host_main_visible))",
-        "target_property_name": "#visible"
       }
     ]
   },
