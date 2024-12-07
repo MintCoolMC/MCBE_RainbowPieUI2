@@ -1087,37 +1087,6 @@
                           }
                         },
                         {
-                          "gathering_panel": {
-                            "type": "panel",
-                            "size": [ "100%cm", 25 ],
-                            "offset": [ 8.5, -20 ],
-                            "anchor_from": "bottom_left",
-                            "anchor_to": "bottom_left",
-                            "layer": 32,
-                            "bindings": [
-                              {
-                                "binding_name": "#gathering_enabled",
-                                "binding_name_override": "#visible"
-                              }
-                            ],
-                            "controls": [
-                              {
-                                "badge_and_caption@start.badge_and_caption": {
-                                  "offset": [ 0, -18 ],
-                                  "anchor_from": "bottom_right",
-                                  "anchor_to": "bottom_right"
-                                }
-                              },
-                              {
-                                "gathering_button@start.gathering_button": {
-                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button",
-                                  "$button_image_size_override": [ "100%c + 8px", "25px" ]
-                                }
-                              }
-                            ]
-                          }
-                        },
-                        {
                           "more_play_option": {
                             "type": "stack_panel",
                             "size": [ "150px", "100%c" ],
@@ -1521,6 +1490,49 @@
                                   "anchor_from": "left_middle",
                                   "anchor_to": "left_middle",
                                   "controls": [
+                                    {
+                                      "gathering_panel": {
+                                        "type": "panel",
+                                        "size": [ 80, "100%" ],
+                                        "layer": 32,
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#gathering_enabled",
+                                            "binding_name_override": "#visible"
+                                          }
+                                        ],
+                                        "controls": [
+                                          {
+                                            "badge_and_caption@start.badge_and_caption": {
+                                              "offset": [ "100% - 35%x", -28 ],
+                                              "anchor_from": "bottom_right",
+                                              "anchor_to": "bottom_right"
+                                            }
+                                          },
+                                          {
+                                            "gathering_button@start.gathering_button": {
+                                              "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button",
+                                              "$button_image_size_override": [ "100%c + 8px", 28 ],
+                                              "anchor_from": "right_middle",
+                                              "anchor_to": "right_middle"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "gathering_panel_padding": {
+                                        "type": "panel",
+                                        "size": [ 4, 0 ],
+                                        "ignored": "(not $rainbowpie_ui_flag_282dd0a5)",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#gathering_enabled",
+                                            "binding_name_override": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
                                     {
                                       "vanilla_button@rainbowpieui_start.vanilla_button": {
                                         "size": [ "100%y", "100%" ],
