@@ -929,7 +929,7 @@
             {
               "armor_switch_panel": {
                 "type": "panel",
-                "ignored": "(not (($item_collection_name = 'inventory_items') or ($item_collection_name = 'hotbar_items') or ($top_half_variant = 'crafting.survival_panel_top_half')))",
+                "ignored": "((not (($item_collection_name = 'inventory_items') or ($top_half_variant = 'crafting.survival_panel_top_half'))) or ($item_collection_name = 'hotbar_items'))",
                 "controls": [
                   {
                     "helmet_switch": {
