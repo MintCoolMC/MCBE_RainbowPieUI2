@@ -50,6 +50,7 @@ rainbowpie.ui.settings.raytracing.title=Ray Tracing Settings
 
 rainbowpie.ui.settings.theme.title=Theme
 rainbowpie.ui.settings.module.title=Module
+rainbowpie.ui.settings.about.title=About
 
 rainbowpie.ui.storage_management.tab.management=Management
 rainbowpie.ui.storage_management.tab.settings=Settings

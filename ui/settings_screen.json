@@ -275,6 +275,11 @@
             "module_button@rainbowpieui_general_section.module_button": {
               "$toggle_group_forced_index": 3502
             }
+          },
+          {
+            "about_button@rainbowpieui_general_section.about_button": {
+              "$toggle_group_forced_index": 3503
+            }
           }
         ]
       }
@@ -301,7 +306,8 @@
         "value": [
           { "uitest_tab_section@rainbowpieui_general_section.uitest_tab_section": { "visible": false } },
           { "theme_section@rainbowpieui_general_section.theme_section": { "visible": false } },
-          { "module_section@rainbowpieui_general_section.module_section": { "visible": false } }
+          { "module_section@rainbowpieui_general_section.module_section": { "visible": false } },
+          { "about_section@rainbowpieui_general_section.about_section": { "visible": false } }
         ]
       }
     ]

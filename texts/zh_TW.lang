@@ -50,6 +50,7 @@ rainbowpie.ui.settings.raytracing.title=光纖追蹤設定
 
 rainbowpie.ui.settings.theme.title=外觀
 rainbowpie.ui.settings.module.title=模組
+rainbowpie.ui.settings.about.title=關於
 
 rainbowpie.ui.storage_management.tab.management=存儲空間
 rainbowpie.ui.storage_management.tab.settings=存儲設定

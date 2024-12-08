@@ -2,6 +2,110 @@
 {
   "namespace": "rainbowpieui_general_section",
 
+  "about_button@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "about_button_toggle",
+    "$glyph_texture": "",
+    "$glyph_color_texture": "",
+    "$glyph_size": [ 0, 0 ],
+    "$icon_group_name": "RainbowPie",
+    "$icon_texture_name": "about",
+    "$button_text": "rainbowpie.ui.settings.about.title",
+    "$toggle_property_bag": {
+      "#panel_title": "rainbowpie.ui.settings.about.title"
+    }
+  },
+
+  "about_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "about_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "header_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%c + 32px" ],
+          "controls": [
+            {
+              "background": {
+                "type": "image",
+                "size": [ "100% - 32px", "100%cm + 4px" ],
+                "texture": "($rainbowpie_ui_path_home + '/r_white')",
+                "color": "$rainbowpie_ui_theme_text_background_color",
+                "alpha": "$rainbowpie_ui_theme_text_background_alpha",
+                "controls": [
+                  {
+                    "content_stack_panel": {
+                      "type": "stack_panel",
+                      "size": [ "100% - 84px", "100%c" ],
+                      "offset": [ 3, 0 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "controls": [
+                        {
+                          "label_1@rainbowpie_ui_common.text_label": {
+                            "layer": 1,
+                            "size": [ "100% - 44px", "default" ],
+                            "offset": [ 42, 1 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "text": "$mintui_pack_name",
+                            "font_scale_factor": 1.5
+                          }
+                        },
+                        {
+                          "label_2@rainbowpie_ui_common.text_label": {
+                            "layer": 1,
+                            "size": [ "100% - 44px", "default" ],
+                            "offset": [ 42, 16 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "text": "$rainbowpie_ui_string_about_description"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "twilight_gif": {
+                      "type": "image",
+                      "texture": "($rainbowpie_ui_path_home + '/assets/twilight')",
+                      "uv_size": [ 49, 48 ],
+                      "uv": "@rainbowpieui_general_section.twilight_gif_animation",
+                      "disable_anim_fast_forward": true,
+                      "size": [ 50, 50 ],
+                      "offset": [ -3, 3 ],
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "twilight_gif_animation": {
+    "anim_type": "flip_book",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": 15,
+    "frame_step": 15,
+    "fps": 5,
+    "reversible": false,
+    "easing": "linear"
+  },
+
   "global_texture_pack_header@rainbowpieui_resource_packs.resource_packs_header": {
     "$rainbowpie_localui_resource_packs_type": "global",
     "$rainbowpie_localui_resource_packs_search_box_control": "global_rp_search_text_box_display_text",
