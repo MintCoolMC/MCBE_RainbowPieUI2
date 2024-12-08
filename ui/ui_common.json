@@ -221,6 +221,7 @@
                           "color": "$rainbowpie_ui_theme_hovertext_background_color",
                           "alpha": "$rainbowpie_ui_theme_hovertext_background_alpha",
                           "controls": [
+                            { "inventory_actions_hover_text@rainbowpie_module_inventory_actions.inventory_actions_hover_text": {} },
                             {
                               "background_icon": {
                                 "type": "panel",
