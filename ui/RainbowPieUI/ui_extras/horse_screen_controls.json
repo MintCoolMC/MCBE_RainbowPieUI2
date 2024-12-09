@@ -169,7 +169,7 @@
                             "type": "grid",
                             "anchor_to": "top_left",
                             "anchor_from": "top_left",
-                            "size": [ "100% - 44.44444444444444%", "100%" ],
+                            "size": [ "100%c", "100%" ],
                             "layer": 3,
                             "collection_name": "container_items",
                             "grid_item_template": "rainbowpieui_horse.container_item",
