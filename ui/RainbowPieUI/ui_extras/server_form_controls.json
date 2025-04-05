@@ -1,4 +1,4 @@
-// VERSION: 2.8.10287.1 (v1.21.71)
+// VERSION: 2.8.10286.1 (v1.21.50)
 {
   "namespace": "rainbowpieui_server_form",
 
@@ -7,7 +7,7 @@
     "size": [ "fill", "100%" ],
     "controls": [
       {
-        "player_count_text@rainbowpie_ui_common.title_label": {
+        "custom_dropdown_length@rainbowpie_ui_common.title_label": {
           "ignored": "(not $rainbowpie_ui_debug)",
           "shadow": true,
           "text_alignment": "left",
@@ -269,16 +269,25 @@
     "size": [ "100%", "100%c + 4px" ],
     "controls": [
       {
-        "main_label@rainbowpie_ui_common.text_label_notheme": {
-          "color": "$main_header_text_color",
-          "offset": [ 2, 2 ],
-          "size": [ "100% - 4px", "default" ],
-          "text": "#custom_text",
-          "bindings":[
+        "custom_text@rainbowpie_ui_common.editable_label": {
+          "size": [ "100%", "100%c" ],
+          "text_box_name": "custom_text",
+          "text_control": "custom_display_text",
+          "controls": [
             {
-              "binding_name": "#custom_text",
-              "binding_type": "collection",
-              "binding_collection_name": "custom_form"
+              "custom_display_text@rainbowpie_ui_common.text_label_notheme": {
+                "color": "$main_header_text_color",
+                "offset": [ 2, 2 ],
+                "size": [ "100% - 4px", "default" ],
+                "text": "#custom_text",
+                "bindings":[
+                  {
+                    "binding_name": "#custom_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "custom_form"
+                  }
+                ]
+              }
             }
           ]
         }
@@ -320,11 +329,20 @@
           "size": [ "100%", "100%c + 4px" ],
           "controls": [
             {
-              "main_label@rainbowpie_ui_common.text_label_notheme": {
-                "color": "$main_header_text_color",
-                "offset": [ 2, 2 ],
-                "size": [ "100% - 4px", "default" ],
-                "text": "#form_text"
+              "label_offset_text@rainbowpie_ui_common.editable_label": {
+                "size": [ "100%", "100%c" ],
+                "text_box_name": "label_offset_text",
+                "text_control": "label_offset_display_text",
+                "controls": [
+                  {
+                    "label_offset_display_text@rainbowpie_ui_common.text_label_notheme": {
+                      "color": "$main_header_text_color",
+                      "offset": [ 2, 2 ],
+                      "size": [ "100% - 4px", "default" ],
+                      "text": "#form_text"
+                    }
+                  }
+                ]
               }
             }
           ]
