@@ -1716,7 +1716,8 @@
             "requires": "(not ($cubecraft_green = 'string'))",
             "$rainbowpie_ui_flag_resourcepack_identifier": "d29f22ac_cubecraft",
             "$rainbowpie_ui_flag_resourcepack_displayname": "CubeCraft Games",
-            "$rainbowpie_ui_flag_scoreboard_default_font": true
+            "$rainbowpie_ui_flag_scoreboard_default_font": true,
+            "$rainbowpie_ui_module_chest_fastpick": false
           },
           // China Version
           {
