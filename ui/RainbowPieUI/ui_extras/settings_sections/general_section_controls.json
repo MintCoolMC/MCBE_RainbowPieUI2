@@ -1254,6 +1254,9 @@
     "$no_label|default": false,
     "$selected|default": false,
     "$hovered|default": false,
+
+    // Must be start with | and end with |
+    "$worldtown_supported_languages": "|English (United States)|English (United Kingdom)|Deutsch (Deutschland)|Español (España)|Español (México)|Français (France)|Français (Canada)|Italiano (Italia)|日本語 (日本)|한국어 (대한민국)|Português (Brasil)|Português (Portugal)|Русский (Россия)|中文(简体)|中文(繁體)|Nederlands (Nederland)|Български (България)|Čeština (Česko)|Dansk (Danmark)|Ελληνικά (Ελλάδα)|Suomi (Suomi)|Magyar (Magyarország)|Indonesia (Indonesia)|Norsk bokmål (Norge)|Polski (Polska)|Slovenčina (Slovensko)|Svenska (Sverige)|Türkçe (Türkiye)|Українська (Україна)|",
     "controls": [
       {
         "radio_btbar": {
@@ -1314,7 +1317,7 @@
         }
       },
       {
-        "radio_image": {
+        "worldtown_flag": {
           "type": "image",
           "alpha": "$alpha",
           "anchor_from": "left_middle",
@@ -1322,6 +1325,7 @@
           "offset": [ 4, 0 ],
           "size": [ 20, 20 ],
           "layer": 2,
+          "visible": false,
           "bindings": [
             {
               "binding_name": "#language_description",
@@ -1333,6 +1337,47 @@
               "binding_type": "view",
               "source_property_name": "($rainbowpie_ui_path_home + '/flags/worldtown/' + #language_description)",
               "target_property_name": "#texture"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('|' + #language_description + '|')",
+              "target_property_name": "#language_description_formatted"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (($worldtown_supported_languages - #language_description_formatted) = $worldtown_supported_languages))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "worldtown_flag_unknown": {
+          "type": "image",
+          "texture": "($rainbowpie_ui_path_home + '/flags/worldtown/unknown')",
+          "alpha": "$alpha",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [ 4, 0 ],
+          "size": [ 20, 20 ],
+          "layer": 2,
+          "visible": false,
+          "bindings": [
+            {
+              "binding_name": "#language_description",
+              "binding_type": "collection",
+              "binding_condition": "once",
+              "binding_collection_name": "languages"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('|' + #language_description + '|')",
+              "target_property_name": "#language_description_formatted"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(($worldtown_supported_languages - #language_description_formatted) = $worldtown_supported_languages)",
+              "target_property_name": "#visible"
             }
           ]
         }
