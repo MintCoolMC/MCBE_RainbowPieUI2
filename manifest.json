@@ -5,7 +5,7 @@
         "name": "Rainbow Pie UI",
         "uuid": "82d610e8-0968-4c0a-a47e-38e6663ee6ff",
         "version": [ 2, 8, 10286 ],
-        "min_engine_version": [ 1, 21, 50 ]
+        "min_engine_version": [ 1, 21, 71 ]
     },
     "modules": [
         {
@@ -18,6 +18,13 @@
         {
             "type": "label",
             "text": "Design by Mintraspberry Cool (Aka. Sunny Pokie)\n\nWebsite: https://mintraspberry.cool/rainbowpieui\nGitHub: https://github.com/MintCoolMC/MCBE_RainbowPieUI2"
+        }
+    ],
+    "subpacks": [
+        {
+            "folder_name": "default",
+            "name": "Compatibility: Default",
+            "memory_tier": 0
         }
     ]
 }

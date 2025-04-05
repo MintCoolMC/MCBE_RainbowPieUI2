@@ -1,8 +1,8 @@
 {
   "namespace": "rainbowpieui_compatibility_config",
 
+  // Only override compatibility panels 
   "compatibility_variables": {
-    // Range: 0-9999990
     "$compatibility_target_version": "1217100"
   }
 }
