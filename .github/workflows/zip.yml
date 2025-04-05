@@ -21,7 +21,7 @@ jobs:
           pip install "setuptools<58.0.0"
       - name: Install demjson
         run: |
-          pip install demjson
+          pip install git+https://github.com/dmeranda/demjson.git
       - name: Run zipmcproject.py
         run: |
           python zipmcproject.py
