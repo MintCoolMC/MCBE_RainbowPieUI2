@@ -1,6 +1,10 @@
-// VERSION: 2.8.10286.1 (v1.21.50)
+// VERSION: 2.8.10287.1 (v1.21.71)
 {
   "namespace": "book",
+
+  "book_buttons_panel/sign_export_buttons/export_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button"
+  },
 
   "cover_buttons_stack_panel_holder/cover_buttons_stack_panel": {
     "modifications": [
@@ -40,7 +44,7 @@
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button"
   },
 
-  "book_buttons_panel/sign_button": {
+  "book_buttons_panel/sign_export_buttons/sign_button": {
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button"
   },
 

@@ -1,4 +1,4 @@
-// VERSION: 2.8.10286.1 (v1.21.50)
+// VERSION: 2.8.10287.1 (v1.21.71)
 {
   "namespace": "play",
 
@@ -380,11 +380,6 @@
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
     
-  "crossplatform_disabled_panel/disable_text": {
-    "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  },
-    
   "friends_scroll_panel/stack_panel/joinable_realms_panel/placeholder_loading_friends_panel/loading_friends_realms_label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
@@ -740,7 +735,7 @@
     "ignored": true
   },
 
-  "realms_world_item/realms_world_item_button": {
+  "realms_world_item/realms_button_panel/realms_world_item_button": {
     "$button_image_size": [ "100%", "100% - 1px" ]
   },
 
