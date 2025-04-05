@@ -179,6 +179,7 @@
   "$rainbowpie_ui_flag_31e1a20e": false, // ProgressUI Dimension background disabled; set false by default, Because the game flickers when switching dimensions
   "$rainbowpie_ui_flag_c48fd864": true, // Disconnect Text Edit
   "$rainbowpie_ui_flag_b00b6372": false, // PauseUI Skin Button Next Profile Button
+  "$rainbowpie_ui_flag_79f6bcad": true, // Language Selector Flags (WorldTown)
 
   // Debug
   "$rainbowpie_ui_debug": false,

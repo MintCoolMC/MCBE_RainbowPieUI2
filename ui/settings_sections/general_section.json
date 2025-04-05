@@ -494,6 +494,17 @@
     "$rainbowpie_localui_radio_enabled": true
   },
 
+  "language_section/language_list_grid": {
+    "$language_grid_item_template": "general_section.language_grid_item",
+    "grid_item_template": "$language_grid_item_template",
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_79f6bcad",
+        "$language_grid_item_template": "rainbowpieui_general_section.worldtown_language_grid_item"
+      }
+    ]
+  },
+
   "video_section/ui_profile_dropdown": {
     "$rainbowpie_localui_dropdown_enabled": true,
     "$rainbowpie_localui_dropdown_content": [

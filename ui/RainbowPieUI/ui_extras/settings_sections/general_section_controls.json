@@ -1218,5 +1218,175 @@
     "from": [ 0, 0 ],
     "to": [ "100% - 16px", 0 ],
     "play_event": "('rainbowpieui.settings_uitest_anim_play_' + $rainbowpie_localui_animtest_easing)"
+  },
+
+  "worldtown_radio_visuals_unchecked@worldtown_radio_visuals": {
+  },
+
+  "worldtown_radio_visuals_checked@worldtown_radio_visuals": {
+    "$selected": true
+  },
+
+  "worldtown_radio_visuals_unchecked_locked@worldtown_radio_visuals": {
+    "$alpha": 0.5
+  },
+
+  "worldtown_radio_visuals_checked_locked@worldtown_radio_visuals": {
+    "$alpha": 0.5,
+    "$selected": true
+  },
+
+  "worldtown_radio_visuals_unchecked_hover@worldtown_radio_visuals": {
+    "$hovered": true
+  },
+
+  "worldtown_radio_visuals_checked_hover@worldtown_radio_visuals": {
+    "$hovered": true
+  },
+
+  "worldtown_radio_visuals": {
+    "type": "panel",
+    "size": [ "100%", 16 ],
+    "$alpha|default": 1.0,
+    "$radio_label_bindings|default": [],
+    "$radio_label_color|default": "$main_header_text_color",
+    "$radio_label_font_type|default": "default",
+    "$no_label|default": false,
+    "$selected|default": false,
+    "$hovered|default": false,
+    "controls": [
+      {
+        "radio_btbar": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "ignored": "(not $selected and not $hovered)",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [ 2, "100% + 1px" ],
+          "color": "$rainbowpie_localui_this_btbar_color",
+          "alpha": "$rainbowpie_localui_this_btbar_alpha",
+          "layer": 8,
+          "variables": [
+            {
+              "requires": "((not $selected) and $hovered)",
+              "$rainbowpie_localui_this_btbar_color": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_btbar_color",
+              "$rainbowpie_localui_this_btbar_alpha": "$rainbowpie_ui_theme_toggle_background_unchecked_hover_btbar_alpha"
+            },
+            {
+              "requires": "($selected and $hovered)",
+              "$rainbowpie_localui_this_btbar_color": "$rainbowpie_ui_theme_toggle_background_checked_hover_btbar_color",
+              "$rainbowpie_localui_this_btbar_alpha": "$rainbowpie_ui_theme_toggle_background_checked_hover_btbar_alpha"
+            },
+            {
+              "requires": "($selected)",
+              "$rainbowpie_localui_this_btbar_color": "$rainbowpie_ui_theme_toggle_background_checked_default_btbar_color",
+              "$rainbowpie_localui_this_btbar_alpha": "$rainbowpie_ui_theme_toggle_background_checked_default_btbar_alpha"
+            }
+          ]
+        }
+      },
+      {
+        "radio_background": {
+          "type": "image",
+          "size": [ "100%", "100% + 1px" ],
+          "ignored": "(not $selected and not $hovered)",
+          "texture": "textures/ui/White",
+          "color": "$rainbowpie_localui_this_background_color",
+          "alpha": "$rainbowpie_localui_this_background_alpha",
+          "layer": 1,
+          "variables": [
+            {
+              "requires": "((not $selected) and $hovered)",
+              "$rainbowpie_localui_this_background_color": [ 0.011, 0.011, 0.011 ],
+              "$rainbowpie_localui_this_background_alpha": 0.5
+            },
+            {
+              "requires": "($selected and $hovered)",
+              "$rainbowpie_localui_this_background_color": [ 0.011, 0.011, 0.011 ],
+              "$rainbowpie_localui_this_background_alpha": 0.4
+            },
+            {
+              "requires": "($selected)",
+              "$rainbowpie_localui_this_background_color": [ 0.011, 0.011, 0.011 ],
+              "$rainbowpie_localui_this_background_alpha": 0.4
+            }
+          ]
+        }
+      },
+      {
+        "radio_image": {
+          "type": "image",
+          "alpha": "$alpha",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [ 4, 0 ],
+          "size": [ 20, 20 ],
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#language_description",
+              "binding_type": "collection",
+              "binding_condition": "once",
+              "binding_collection_name": "languages"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "($rainbowpie_ui_path_home + '/flags/worldtown/' + #language_description)",
+              "target_property_name": "#texture"
+            }
+          ]
+        }
+      },
+      {
+        "radio_label": {
+          "ignored": "($no_label)",
+          "type": "label",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "#language_description",
+          "font_type": "$rainbowpie_ui_theme_global_font_name",
+          "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+          "color": "$radio_label_color",
+          "offset": [ 26, 0 ],
+          "size": [ "100% - 16px", "default" ],
+          "alpha": "$alpha",
+          "bindings": [
+            {
+              "binding_name": "#language_description",
+              "binding_type": "collection",
+              "binding_condition": "once",
+              "binding_collection_name": "languages"
+            }
+          ],
+          "layer": 2
+        }
+      }
+    ]
+  },
+
+  "worldtown_language_grid_item@settings_common.radio_with_label": {
+    "$unchecked_control": "rainbowpieui_general_section.worldtown_radio_visuals_unchecked",
+    "$checked_control": "rainbowpieui_general_section.worldtown_radio_visuals_checked",
+    "$unchecked_hover_control": "rainbowpieui_general_section.worldtown_radio_visuals_unchecked_hover",
+    "$checked_hover_control": "rainbowpieui_general_section.worldtown_radio_visuals_checked_hover",
+    "$unchecked_locked_control": "rainbowpieui_general_section.worldtown_radio_visuals_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_general_section.worldtown_radio_visuals_unchecked_locked",
+    "$checked_locked_control": "rainbowpieui_general_section.worldtown_radio_visuals_checked_locked",
+    "$checked_locked_hover_control": "rainbowpieui_general_section.worldtown_radio_visuals_checked_locked",
+
+    "$toggle_state_binding_name": "#language_initial_selected",
+    "$radio_toggle_group": true,
+    "$toggle_binding_type": "collection",
+    "$toggle_name": "languages",
+    "$toggle_grid_collection_name": "languages",
+    "$option_enabled_binding_name": "",
+    "bindings": [
+      {
+        "binding_name": "#default_focus_precedence",
+        "binding_type": "collection",
+        "binding_condition": "visible",
+        "binding_collection_name": "languages"
+      }
+    ]
   }
 }
