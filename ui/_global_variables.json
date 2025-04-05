@@ -94,7 +94,7 @@
   "$rainbowpie_ui_flag_chat_message_profanity_filter": true,
 
   "$rainbowpie_ui_flag_start_dialog_alert": true,
-  "$rainbowpie_ui_flag_start_dialog_alert_title": "Rainbow Pie UI Insider Preview",
+  "$rainbowpie_ui_flag_start_dialog_alert_title": "Rainbow Pie UI Preview",
   "$rainbowpie_ui_flag_start_dialog_alert_text": "You are using an CI version of Rainbow Pie UI,\nIf you find any bugs please write an issue:\n§ehttps://github.com/MintCoolMC/MCBE_RainbowPieUI2/issues",
   "$rainbowpie_ui_flag_start_dialog_alert_button": "gui.ok",
 
