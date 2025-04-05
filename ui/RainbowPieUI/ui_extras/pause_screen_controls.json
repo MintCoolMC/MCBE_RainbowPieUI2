@@ -103,12 +103,7 @@
             {
               "header@rainbowpie_ui_common.screen_header": {
                 "$rainbowpie_localui_screenheader_ingame_anim1": true,
-                "$rainbowpie_localui_screenheader_title": "#worldname",
-                "$rainbowpie_localui_screenheader_title_bindings": [
-                  {
-                    "binding_name": "#worldname"
-                  }
-                ],
+                "$rainbowpie_localui_screenheader_title": "menu.returnToGame",
                 "$rainbowpie_localui_screenheader_content_panel": "rainbowpieui_pause.player_name_panel"
               }
             },
@@ -1589,10 +1584,10 @@
     "controls": [
       {
         "worldname@rainbowpieui_pause.list_title": {
-          "$rainbowpie_localui_list_title_text": "#worldname",
+          "$rainbowpie_localui_list_title_text": "#players_list_title",
           "$rainbowpie_localui_list_title_bindings": [
             {
-              "binding_name": "#worldname"
+              "binding_name": "#players_list_title"
             }
           ]
         }
