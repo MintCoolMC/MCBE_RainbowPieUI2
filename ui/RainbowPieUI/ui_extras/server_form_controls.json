@@ -2,6 +2,68 @@
 {
   "namespace": "rainbowpieui_server_form",
 
+  "ui_mode_icon": {
+    "type": "image",
+    "size": [ 15, 15 ],
+    "texture": "($rainbowpie_ui_path_theme + '/icon/serverform/ui_mode')",
+    "color": "$text_color",
+    "layer": 8
+  },
+
+  "vanilla_button@common_toggles.light_ui_toggle": {
+    "$rainbowpie_localui_button_desc_enabled": true,
+    "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.serverform.vanilla_tip",
+    "$rainbowpie_localui_button_desc_text_offset": [ -10, -10 ],
+    "$rainbowpie_localui_button_desc_text_anchor": "top_right",
+    "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
+    "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
+    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
+    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
+    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
+    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
+    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
+    "$button_content": "rainbowpieui_server_form.ui_mode_icon",
+
+    "$button_text_binding_type": "none",
+    "$button_binding_condition": "none",
+    "$button_text_grid_collection_name": "none",
+    "$button_text": "rainbowpie.ui.serverform.vanilla",
+
+    "$button_offset": [ 0, 0 ],
+
+    "$radio_toggle_group": true,
+    "$toggle_name": "rainbowpie_serverformui_toggle",
+    "$toggle_group_default_selected": 900,
+
+    "$toggle_group_forced_index": 900,
+
+    "$toggle_view_binding_name": "vanilla_serverform",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "vanilla_serverform",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#enabled"
+      }
+    ]
+  },
+
+  "serverformui_button@rainbowpieui_server_form.vanilla_button": {
+    "$rainbowpie_localui_button_desc_text": "rainbowpie.ui.serverform.serverformui_tip",
+    "$button_text": "rainbowpie.ui.serverform.serverformui",
+    "$toggle_group_forced_index": 901,
+    "$toggle_view_binding_name": "rainbowpie_serverformui",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "rainbowpie_serverformui",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#enabled"
+      }
+    ]
+  },
+
   "custom_dropdown_content_panel": {
     "type": "panel",
     "size": [ "fill", "100%" ],
@@ -125,20 +187,80 @@
   },
 
   "main_screen_content": {
-    "type": "panel",
+    "type": "stack_panel",
     "size": [ "100%", "100%" ],
+    "clips_children": true,
     "controls": [
       {
-        "screen_content@rainbowpie_ui_common.screen_content": {
-          "$rainbowpie_localui_screen_ingame_anim1": true,
-          "$rainbowpie_localui_screen_content": [
+        "vanilla_serverform_ui": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "ignored": "($screen_content = $backup_screen_content)",
+          "visible": true,
+          "controls": [
             {
-              "server_form_factory": {
-                "type": "factory",
-                "control_ids": {
-                  "long_form": "@rainbowpieui_server_form.long_form",
-                  "custom_form": "@rainbowpieui_server_form.custom_form"
-                }
+              "serverformui_button@rainbowpieui_server_form.serverformui_button": {
+                "size": [ "28px", "28px" ],
+                "offset": [ -8, -17 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "layer": 125,
+                "$button_image_size": [ "100%", "100%" ],
+                "ignored": "($screen_content = $backup_screen_content)"
+              }
+            },
+            {
+              "server_form@$screen_content": {}
+            }
+          ],
+          "property_bag": {
+            "#is_vanilla_serverform_ui_opened": true
+          },
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "vanilla_serverform",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#is_vanilla_serverform_ui_opened"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#is_vanilla_serverform_ui_opened)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "rainbowpie_serverform_ui": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "screen_content@rainbowpie_ui_common.screen_content": {
+                "$rainbowpie_localui_screen_ingame_anim1": true,
+                "$rainbowpie_localui_screen_content": [
+                  {
+                    "vanilla_button@rainbowpieui_server_form.vanilla_button": {
+                      "size": [ "28px", "28px" ],
+                      "offset": [ -8, -17 ],
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right",
+                      "layer": 30,
+                      "$button_image_size": [ "100%", "100%" ],
+                      "ignored": "($screen_content = $backup_screen_content)"
+                    }
+                  },
+                  {
+                    "server_form_factory": {
+                      "type": "factory",
+                      "control_ids": {
+                        "long_form": "@rainbowpieui_server_form.long_form",
+                        "custom_form": "@rainbowpieui_server_form.custom_form"
+                      }
+                    }
+                  }
+                ]
               }
             }
           ]

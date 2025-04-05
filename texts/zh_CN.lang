@@ -17,6 +17,9 @@ rainbowpie.ui.themesystem.description.title=简介:	#
 rainbowpie.ui.themesystem.version_toolow=当前主题版本太低！请更新！	#
 rainbowpie.ui.themesystem.version_toohight=当前主题版本太高！	#
 
+rainbowpie.ui.serverform.vanilla_tip=回到原版样式的 ServerFormUI
+rainbowpie.ui.serverform.serverformui_tip=切换到 Rainbow Pie UI 样式的 ServerFormUI
+
 rainbowpie.ui.module.moduleVariables=模块变量
 
 rainbowpie.ui.start.vanilla_tip=遇到 Bug 了吗？如果你遇到了 Bug 请通过 Github 反馈给我们！
