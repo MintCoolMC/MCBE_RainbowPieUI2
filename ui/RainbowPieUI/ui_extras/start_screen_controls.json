@@ -913,7 +913,7 @@
                       "ignored": "(not $rainbowpie_ui_flag_8dcce82d)",
                       "controls": [
                         {
-                          "version_warn": {
+                          "version_warn@rainbowpieui_compatibility_config.compatibility_variables": {
                             "type": "panel",
                             "size": [ 130, "100%c" ],
                             "offset": [ -8, 40 ],
