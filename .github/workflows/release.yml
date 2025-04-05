@@ -17,12 +17,9 @@ jobs:
       - name: Python version
         run: |
           python --version
-      - name: Downgrade setuptools
+      - name: Install json5
         run: |
-          pip install "setuptools<58.0.0"
-      - name: Install demjson
-        run: |
-          pip install demjson
+          pip install json5
       - name: Run zipmcproject.py
         run: |
           python zipmcproject.py

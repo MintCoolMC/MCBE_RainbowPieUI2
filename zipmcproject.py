@@ -1,4 +1,4 @@
-import demjson
+import json5
 import os
 import zipfile
 import re
@@ -19,7 +19,8 @@ writeGlobalVarStr("rainbowpieui_commit_id",commit_id)
 writeGlobalVarStr("rainbowpieui_branch_name",branch)
 
 # Read the json file
-data = demjson.decode_file("ui/_global_variables.json")
+with open("ui/_global_variables.json", "r") as f:
+  data = json5.load(f)
 
 # Get the values
 name = data.get("$mintui_pack_name").replace(" ","")
