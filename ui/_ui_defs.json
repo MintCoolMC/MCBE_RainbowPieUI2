@@ -79,6 +79,7 @@
     "ui/RainbowPieUI/ui_extras/trade_2_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/world_templates_screen_controls.json",
     "ui/RainbowPieUI/ui_extras/xbl_friend_finder_controls.json",
+    "ui/RainbowPieUI/compatibility.json",
     "ui/RainbowPieUI/module_pack.json",
     "ui/RainbowPieUI/rainbowpie_ui_animations.json",
     "ui/RainbowPieUI/rainbowpie_ui_controls.json",
