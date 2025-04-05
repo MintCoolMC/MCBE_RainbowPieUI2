@@ -126,7 +126,6 @@
   },
 
   "graphics_button@settings_common.section_toggle_base": {
-    "ignored": "(not $new_video_settings)",
     "$toggle_view_binding_name": "graphics_button_toggle",
     "$glyph_texture": "textures/ui/video_glyph",
     "$glyph_color_texture": "textures/ui/video_glyph_color",
@@ -140,7 +139,6 @@
   },
 
   "graphics_section": {
-    "ignored": "(not $new_video_settings)",
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
     "anchor_from": "top_left",
@@ -199,7 +197,7 @@
       },
       {
         "deferred_render_distance_slider@settings_common.option_slider": {
-          "ignored": "($is_holographic or not $new_video_settings)",
+          "ignored": "($is_holographic)",
           "$option_label": "#deferred_render_distance_slider_label",
           "$slider_name": "deferred_render_distance",
           "$slider_value_binding_name": "#deferred_render_distance",
@@ -250,7 +248,7 @@
       },
       {
         "advanced_graphics_options_panel": {
-          "ignored": "(not $new_video_settings)",
+          "ignored": "($is_holographic)",
           "type": "stack_panel",
           "orientation": "vertical",
           "size": [ "100%", "100%c + 4px" ],
@@ -297,24 +295,7 @@
               }
             },
             {
-              "advanced_graphics_options_button@common_buttons.light_content_button": {
-                "$button_image_size": [ "100%", "100% - 2px" ],
-                "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
-
-                "size": [ "100%", 20 ],
-                "$button_content": "general_section.advanced_graphics_options_button_content",
-                "$pressed_button_name": "button.expand_advanced_graphics"
-              }
-            },
-            {
-              "advanced_graphics_options_section@general_section.advanced_graphics_options_section": {
-                "bindings": [
-                  {
-                    "binding_name": "#advanced_graphics_options_grid_visible",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
+              "advanced_graphics_options_section@general_section.advanced_graphics_options_section": {}
             }
           ]
         }
@@ -323,7 +304,7 @@
   },
 
   "raytracing_button@settings_common.section_toggle_base": {
-    "ignored": "$new_video_settings",
+    "ignored": true,
     "$toggle_view_binding_name": "raytracing_button_toggle",
     "$glyph_texture": "textures/ui/video_glyph",
     "$glyph_color_texture": "textures/ui/video_glyph_color",
@@ -337,7 +318,7 @@
   },
 
   "raytracing_section": {
-    "ignored": "$new_video_settings",
+    "ignored": true,
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
     "anchor_from": "top_left",
@@ -351,19 +332,6 @@
       }
     ],
     "controls": [
-      {
-        "raytracing_toggle@settings_common.option_toggle": {
-          "ignored": "($is_holographic)",
-          "$option_label": "options.raytracing",
-          "$option_binding_name": "#raytracing",
-          "$option_enabled_binding_name": "#raytracing_enabled",
-          "$toggle_name": "raytracing",
-          "controls": [
-            { "rtx_disabled_option_upsell@general_section.rtx_disabled_option_upsell": {} },
-            { "option_generic_core@settings_common.option_generic_core": {} }
-          ]
-        }
-      },
       {
         "upscaling_toggle@general_section.upscaling_toggle": {}
       },

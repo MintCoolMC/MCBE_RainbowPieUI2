@@ -233,13 +233,7 @@
           },
           {
             "raytracing_button@rainbowpieui_general_section.raytracing_button": {
-              "$toggle_group_forced_index": 3503,
-              "bindings": [
-                {
-                  "binding_name": "#raytracing_enabled",
-                  "binding_name_override": "#visible"
-                }
-              ]
+              "$toggle_group_forced_index": 3503
             }
           }
         ]
