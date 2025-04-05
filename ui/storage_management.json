@@ -11,6 +11,30 @@
     "$button_image_size": [ "100%", "100%" ]
   },
 
+  "storage_header_panel/header_panel/clear_screenshots_cache_button_panel/clear_screenshots_cache_button": {
+    "offset": [ 0, 0 ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+    "$button_image_size": [ "100%", "100%" ],
+    "bindings": [
+      {
+        "binding_name": "#screenshots_showcase_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
+  "storage_header_panel/header_panel/delete_local_screenshots_button_panel/delete_local_screenshots_button": {
+    "offset": [ 0, 0 ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+    "$button_image_size": [ "100%", "100%" ],
+    "bindings": [
+      {
+        "binding_name": "#screenshots_gallery_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
   "storage_main_panel/scroll_content": {
     "modifications": [
       {
@@ -96,6 +120,30 @@
             "ignored": "(not $rainbowpie_ui_flag_e9c6dfdb)"
           }
         ]
+      }
+    ]
+  },
+
+  "storage_header_panel/header_panel/clear_screenshots_cache_button_panel": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "storage_settings_navigation_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible",
+        "ignored": "(not $rainbowpie_ui_flag_e9c6dfdb)"
+      }
+    ]
+  },
+
+  "storage_header_panel/header_panel/delete_local_screenshots_button_panel": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "storage_settings_navigation_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible",
+        "ignored": "(not $rainbowpie_ui_flag_e9c6dfdb)"
       }
     ]
   },
