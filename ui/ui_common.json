@@ -866,6 +866,11 @@
     "ignored": "$rainbowpie_localui_modified"
   },
 
+  "base_screen/variables_button_mappings_and_controls/safezone_screen_matrix": {
+    "ignored": "$rainbowpie_localui_backup_screen",
+    "$rainbowpie_localui_screen_content": "$screen_content"
+  },
+
   "base_screen/loading_bars_background": {
     "texture": "",
     "modifications": [
@@ -901,6 +906,7 @@
 
   "base_screen": {
     "$rainbowpie_localui_modified|default": false,
+    "$rainbowpie_localui_backup_screen|default": false,
     "$rainbowpie_localui_inventory_screen|default": false,
     "$rainbowpie_localui_screenbackground_ingameSafezoneOnly|default": false,
     "$rainbowpie_localui_screenbackground_ingamebg_ignored|default": false,
@@ -913,6 +919,7 @@
     "$close_on_player_hurt": false,
     "$rainbowpie_localui_screen_alias": "null",
     "$rainbowpie_localui_screen_alias_formatted": "($rainbowpie_localui_screen_alias + ',')",
+    "$backup_screen_content|default": "common.base_screen_empty_panel",
     "modifications": [
       {
         "array_name": "controls",
@@ -951,8 +958,13 @@
     ]
   },
 
+  "screen_panel/root_screen_panel": {
+    "ignored": true
+  },
+
   "screen_panel": {
     "$rainbowpie_localui_screenroot_ignore_dialogs|default": false,
+    "$rainbowpie_localui_screen_content|default": "$screen_content",
     "modifications": [
       {
         "array_name": "controls",
@@ -969,7 +981,7 @@
                     "ignored": "((not $rainbowpie_ui_debug_screen_content) or (not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias)) or ($screen_content = 'rainbowpie_ui_common.screen_background'))",
                     "anchor_from": "top_right",
                     "anchor_to": "top_right",
-                    "text": "$screen_content"
+                    "text": "($screen_content + '\n' + $backup_screen_content)"
                   }
                 }
               ]
@@ -1018,7 +1030,8 @@
                 }
               ]
             }
-          }
+          },
+          { "rainbowpieui_root_screen_panel@$rainbowpie_localui_screen_content": {} }
         ]
       }
     ]
@@ -1074,6 +1087,23 @@
             "$transition_time_push_size": "$rainbowpie_ui_animation_container_transition_time",
             "$transition_time_pop_size": "$rainbowpie_ui_animation_container_transition_time",
             "$container_transition_time_push": "$rainbowpie_ui_animation_container_transition_time"
+          }
+        ]
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "safezone_screen_backup_matrix@common.safezone_outer_matrix": {
+              "$rainbowpie_localui_screen_content": "$backup_screen_content",
+              "ignored": "(not $rainbowpie_localui_backup_screen)",
+              "anims": "$screen_animations",
+              "animation_reset_name": "screen_animation_reset",
+              "propagate_alpha": true,
+              "disable_anim_fast_forward": true,
+              "layer": "$safezone_screen_matrix_layer"
+            }
           }
         ]
       },
