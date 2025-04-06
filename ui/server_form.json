@@ -7,7 +7,7 @@
     "$rainbowpie_localui_screen_alias": "server_form",
     "$rainbowpie_localui_backup_screen": true,
     "force_render_below": true,
-    "$screen_content": "server_form.main_screen_content",
+    "$screen_content": "rainbowpieui_server_form.main_screen_content",
     "$rainbowpie_localui_backup_screen_content": "rainbowpieui_server_form.main_screen_content"
   }
 }
