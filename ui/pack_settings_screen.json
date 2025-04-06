@@ -2,6 +2,10 @@
 {
   "namespace": "pack_settings",
 
+  "pack_scroll_panel": {
+    "$scrolling_content": "rainbowpieui_pack_settings.scrolling_content"
+  },
+
   "content_tiering_panel/slider_panel/content_tier_slider": {
     "$rainbowpie_localui_sliderbar_enabled": true,
     "size": [ "100% - 10px", 10 ]

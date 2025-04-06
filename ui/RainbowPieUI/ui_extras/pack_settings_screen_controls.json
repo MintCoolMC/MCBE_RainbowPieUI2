@@ -2,6 +2,20 @@
 {
   "namespace": "rainbowpieui_pack_settings",
 
+  "scrolling_content": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "orientation": "vertical",
+    "controls": [
+      {
+        "content_tiering_panel@pack_settings.content_tiering_panel": {}
+      },
+      {
+        "generated_form@rainbowpieui_server_form.generated_contents": {}
+      }
+    ]
+  },
+
   "dialog_content": {
     "type": "panel",
     "size": [ "100%", "100%" ],

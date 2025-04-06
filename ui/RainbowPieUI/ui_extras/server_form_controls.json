@@ -68,6 +68,7 @@
     "type": "panel",
     "size": ["100%", "100%c"],
     "layer": 2,
+    "$is_server_form|default": false,
     "controls": [
       {
         "dropdown@settings_common.option_dropdown": {
@@ -93,20 +94,20 @@
               "binding_collection_name": "custom_form"
             }
           ],
-          "visible": "($screen_content = $backup_screen_content)",
+          "visible": "(($screen_content = $backup_screen_content) or not $is_server_form)",
           "bindings": [
             {
               "binding_type": "view",
               "source_control_name": "vanilla_serverform",
               "source_property_name": "#toggle_state",
               "target_property_name": "#is_vanilla_serverform_ui_opened",
-              "ignored": "($screen_content = $backup_screen_content)"
+              "ignored": "(($screen_content = $backup_screen_content) or not $is_server_form)"
             },
             {
               "binding_type": "view",
               "source_property_name": "(not #is_vanilla_serverform_ui_opened)",
               "target_property_name": "#visible",
-              "ignored": "($screen_content = $backup_screen_content)"
+              "ignored": "(($screen_content = $backup_screen_content) or not $is_server_form)"
             }
           ]
         }
@@ -404,7 +405,9 @@
 
     "controls": [
       {
-        "generated_form@rainbowpieui_server_form.generated_contents": {}
+        "generated_form@rainbowpieui_server_form.generated_contents": {
+          "$is_server_form": true
+        }
       },
       {
         "submit_button@common_buttons.light_text_button": {
