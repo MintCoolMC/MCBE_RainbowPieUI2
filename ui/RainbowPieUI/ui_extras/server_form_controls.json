@@ -64,6 +64,56 @@
     ]
   },
 
+  "custom_dropdown": {
+    "type": "panel",
+    "size": ["100%", "100%c"],
+    "layer": 2,
+    "controls": [
+      {
+        "dropdown@settings_common.option_dropdown": {
+          "$rainbowpie_localui_dropdown_rainbowpiebutton_enabled": true,
+          "$rainbowpie_localui_dropdown_show_button": true,
+          "$rainbowpie_localui_dropdown_enabled": true,
+          "$rainbowpie_localui_dropdown_content_panel": "rainbowpieui_server_form.custom_dropdown_content_panel",
+
+          "$option_label": "#custom_text",
+          "$dropdown_content": "server_form.custom_dropdown_content",
+          "$dropdown_area": "inside_header_panel",
+          "$dropdown_name": "custom_dropdown",
+          "$toggle_binding_type": "collection",
+          "$toggle_grid_collection_name": "custom_form",
+          "$options_dropdown_toggle_label_binding": "#dropdown_option_text",
+          "$options_dropdown_toggle_label_binding_type": "collection",
+          "$options_dropdown_toggle_label_binding_collection_name": "custom_form",
+          "$dropdown_scroll_content_size": [ "100%", "200%" ],
+          "$label_bindings": [
+            {
+              "binding_name": "#custom_text",
+              "binding_type": "collection",
+              "binding_collection_name": "custom_form"
+            }
+          ],
+          "visible": "($screen_content = $backup_screen_content)",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "vanilla_serverform",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#is_vanilla_serverform_ui_opened",
+              "ignored": "($screen_content = $backup_screen_content)"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not #is_vanilla_serverform_ui_opened)",
+              "target_property_name": "#visible",
+              "ignored": "($screen_content = $backup_screen_content)"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "custom_dropdown_content_panel": {
     "type": "panel",
     "size": [ "fill", "100%" ],
@@ -187,77 +237,94 @@
   },
 
   "main_screen_content": {
-    "type": "stack_panel",
+    "type": "panel",
     "size": [ "100%", "100%" ],
     "clips_children": true,
     "controls": [
       {
-        "vanilla_serverform_ui": {
-          "type": "panel",
-          "size": [ "100%", "100%" ],
-          "ignored": "($screen_content = $backup_screen_content)",
-          "visible": true,
+        "screen_stack": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "200%", "100%" ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
           "controls": [
             {
-              "serverformui_button@rainbowpieui_server_form.serverformui_button": {
-                "size": [ "28px", "28px" ],
-                "offset": [ -8, -17 ],
-                "anchor_from": "bottom_right",
-                "anchor_to": "bottom_right",
-                "layer": 125,
-                "$button_image_size": [ "100%", "100%" ],
-                "ignored": "($screen_content = $backup_screen_content)"
+              "screen_padding": {
+                "type": "panel",
+                "size": [ "50%", "100%" ],
+                "visible": true,
+                "property_bag": {
+                  "#is_vanilla_serverform_ui_opened": true
+                },
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "vanilla_serverform",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#is_vanilla_serverform_ui_opened"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#is_vanilla_serverform_ui_opened)",
+                    "target_property_name": "#visible"
+                  }
+                ]
               }
             },
             {
-              "server_form@$screen_content": {}
-            }
-          ],
-          "property_bag": {
-            "#is_vanilla_serverform_ui_opened": true
-          },
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "vanilla_serverform",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#is_vanilla_serverform_ui_opened"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#is_vanilla_serverform_ui_opened)",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "rainbowpie_serverform_ui": {
-          "type": "panel",
-          "size": [ "100%", "100%" ],
-          "controls": [
-            {
-              "screen_content@rainbowpie_ui_common.screen_content": {
-                "$rainbowpie_localui_screen_ingame_anim1": true,
-                "$rainbowpie_localui_screen_content": [
+              "vanilla_serverform_ui": {
+                "type": "panel",
+                "size": [ "50%", "100%" ],
+                "ignored": "($screen_content = $backup_screen_content)",
+                "controls": [
                   {
-                    "vanilla_button@rainbowpieui_server_form.vanilla_button": {
+                    "serverformui_button@rainbowpieui_server_form.serverformui_button": {
                       "size": [ "28px", "28px" ],
                       "offset": [ -8, -17 ],
                       "anchor_from": "bottom_right",
                       "anchor_to": "bottom_right",
-                      "layer": 30,
+                      "layer": 125,
                       "$button_image_size": [ "100%", "100%" ],
                       "ignored": "($screen_content = $backup_screen_content)"
                     }
                   },
                   {
-                    "server_form_factory": {
-                      "type": "factory",
-                      "control_ids": {
-                        "long_form": "@rainbowpieui_server_form.long_form",
-                        "custom_form": "@rainbowpieui_server_form.custom_form"
-                      }
+                    "server_form@$screen_content": {}
+                  }
+                ]
+              }
+            },
+            {
+              "rainbowpie_serverform_ui": {
+                "type": "panel",
+                "size": [ "50%", "100%" ],
+                "controls": [
+                  {
+                    "screen_content@rainbowpie_ui_common.screen_content": {
+                      "$rainbowpie_localui_screen_ingame_anim1": true,
+                      "$rainbowpie_localui_screen_content": [
+                        {
+                          "vanilla_button@rainbowpieui_server_form.vanilla_button": {
+                            "size": [ "28px", "28px" ],
+                            "offset": [ -8, -17 ],
+                            "anchor_from": "bottom_right",
+                            "anchor_to": "bottom_right",
+                            "layer": 30,
+                            "$button_image_size": [ "100%", "100%" ],
+                            "ignored": "($screen_content = $backup_screen_content)"
+                          }
+                        },
+                        {
+                          "server_form_factory": {
+                            "type": "factory",
+                            "control_ids": {
+                              "long_form": "@rainbowpieui_server_form.long_form",
+                              "custom_form": "@rainbowpieui_server_form.custom_form"
+                            }
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -367,12 +434,16 @@
 
     "factory":{
       "name": "buttons",
+      "factory_variables": [
+        "$screen_content",
+        "$backup_screen_content"
+      ],
       "control_ids": {
         "label": "@rainbowpieui_server_form.custom_label",
         "toggle": "@server_form.custom_toggle",
         "slider": "@server_form.custom_slider",
         "step_slider": "@server_form.custom_step_slider",
-        "dropdown": "@server_form.custom_dropdown",
+        "dropdown": "@rainbowpieui_server_form.custom_dropdown",
         "input": "@server_form.custom_input"
       }
     },
