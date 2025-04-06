@@ -794,6 +794,13 @@
     "controls": "$rainbowpie_localui_screen_content"
   },
 
+  "dialog_background": {
+    "type": "image",
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_dialog_background_color",
+    "alpha": "$rainbowpie_ui_theme_dialog_background_alpha"
+  },
+
   "inventory_global_background": {
     "type": "image",
     "texture": "textures/ui/White",

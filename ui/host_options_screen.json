@@ -14,6 +14,9 @@
               "offset": "$offset_sub_tabs",
               "$main_scrolling_content": "rainbowpieui_host_options.host_time_panel"
             }
+          },
+          {
+            "advanced_host_time_tweaker@rainbowpieui_host_options.advanced_host_time_tweaker": {}
           }
         ]
       }

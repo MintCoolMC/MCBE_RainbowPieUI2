@@ -181,6 +181,7 @@
   "$rainbowpie_ui_flag_b00b6372": true, // PauseUI Skin Button Next Profile Button
   "$rainbowpie_ui_flag_79f6bcad": true, // Language Selector Flags (WorldTown)
   "$rainbowpie_ui_flag_317055aa": true, // PauseUI Total Players (Player Count)
+  "$rainbowpie_ui_flag_1597ee9b": true, // Advanced Host Time Tweaker
 
   // Debug
   "$rainbowpie_ui_debug": false,
