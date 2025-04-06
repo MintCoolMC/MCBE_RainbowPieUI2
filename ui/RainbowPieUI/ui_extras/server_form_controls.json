@@ -94,20 +94,20 @@
               "binding_collection_name": "custom_form"
             }
           ],
-          "visible": "(($screen_content = $rainbowpie_localui_backup_screen_content) or not $is_server_form)",
+          "visible": "(($screen_content = $rainbowpie_localui_backup_screen_content) or (not $is_server_form))",
           "bindings": [
             {
               "binding_type": "view",
               "source_control_name": "vanilla_serverform",
               "source_property_name": "#toggle_state",
               "target_property_name": "#is_vanilla_serverform_ui_opened",
-              "ignored": "(($screen_content = $rainbowpie_localui_backup_screen_content) or not $is_server_form)"
+              "ignored": "(($screen_content = $rainbowpie_localui_backup_screen_content) or (not $is_server_form))"
             },
             {
               "binding_type": "view",
               "source_property_name": "(not #is_vanilla_serverform_ui_opened)",
               "target_property_name": "#visible",
-              "ignored": "(($screen_content = $rainbowpie_localui_backup_screen_content) or not $is_server_form)"
+              "ignored": "(($screen_content = $rainbowpie_localui_backup_screen_content) or (not $is_server_form))"
             }
           ]
         }
@@ -439,7 +439,8 @@
       "name": "buttons",
       "factory_variables": [
         "$screen_content",
-        "$rainbowpie_localui_backup_screen_content"
+        "$rainbowpie_localui_backup_screen_content",
+        "$is_server_form"
       ],
       "control_ids": {
         "label": "@rainbowpieui_server_form.custom_label",
