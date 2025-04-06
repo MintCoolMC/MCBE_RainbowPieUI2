@@ -4,6 +4,12 @@
 
   "screenshot_screen": {
     "$rainbowpie_localui_modified": true,
-    "$rainbowpie_localui_screen_alias": "screenshot"
+    "$rainbowpie_localui_screen_alias": "screenshot",
+    "$screen_content": "rainbowpieui_screenshot.screenshot_screen_content",
+    "$use_loading_bars": false,
+    "force_render_below": true,
+    "is_showing_menu": false,
+    "should_steal_mouse": true,
+    "absorbs_input": true
   }
 }
