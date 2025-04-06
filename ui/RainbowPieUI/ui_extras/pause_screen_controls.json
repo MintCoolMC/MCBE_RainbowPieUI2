@@ -410,6 +410,7 @@
                   },
                   {
                     "permission_label@rainbowpie_ui_common.text_label": {
+                      "ignored": true,
                       "visible": "(not $rainbowpie_ui_flag_111d8c96)",
                       "offset": [ -2, 0 ],
                       "anchor_from": "right_middle",
@@ -432,6 +433,23 @@
                           "binding_type": "view",
                           "source_property_name": "('rainbowpie.ui.pause.permissions.' + ((#player_permission_level_icon_texture - 'textures/ui/permissions_') - '_hand' - '_star'- '_crown'- '_dots'))",
                           "target_property_name": "#player_permission_text"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "pause_annoucement_label@rainbowpie_ui_common.text_label": {
+                      "offset": [ -2, 0 ],
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "size": [ "20% - 2px", 10 ],
+                      "text_alignment": "right",
+                      "text": "pauseScreen.gameIsPaused",
+                      "layer": 1,
+                      "bindings": [
+                        {
+                          "binding_name": "#pause_annoucement_visible",
+                          "binding_name_override": "#visible"
                         }
                       ]
                     }
@@ -1672,6 +1690,43 @@
     ]
   },
 
+  "player_count": {
+    "type": "panel",
+    "size": [ "16px", "10px" ],
+    "controls": [
+      {
+        "player_count_text@rainbowpie_ui_common.title_label": {
+          "text": "#player_count_str",
+          "size": [ "default", 10 ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "players_collection"
+            },
+            {
+              "binding_name": "#collection_index",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#collection_index + 1)",
+              "target_property_name": "#player_count"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('§§' + #player_count)",
+              "target_property_name": "#player_count_str"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "player_list": {
     "type": "stack_panel",
     "anchor_from": "top_left",
@@ -1682,13 +1737,68 @@
     "focus_navigation_mode_right": "contained",
     "controls": [
       {
-        "worldname@rainbowpieui_pause.list_title": {
-          "$rainbowpie_localui_list_title_text": "#players_list_title",
-          "$rainbowpie_localui_list_title_bindings": [
+        "padding_0": {
+          "type": "panel",
+          "size": [ 0, 0.5 ]
+        }
+      },
+      {
+        "list_title@rainbowpie_ui_common.title_background": {
+          "size": [ "100%", 14 ],
+          "controls": [
             {
-              "binding_name": "#players_list_title"
+              "text_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100% - 4px", 10 ],
+                "controls": [
+                  {
+                    "players_list_title@rainbowpie_ui_common.title_label": {
+                      "size": [ "fill", "100%" ],
+                      "text": "#players_list_title",
+                      "layer": 1,
+                      "bindings": [
+                        {
+                          "binding_name": "#players_list_title"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "player_count_panel": {
+                      "type": "panel",
+                      "size": [ "100%c", "100%" ],
+                      "ignored": "(not $rainbowpie_ui_flag_317055aa)",
+                      "controls": [
+                        {
+                          "player_grid": {
+                            "type": "grid",
+                            "size": [ "100%c", "100%c" ],
+                            "anchor_from": "right_middle",
+                            "anchor_to": "right_middle",
+                            "grid_item_template": "rainbowpieui_pause.player_count",
+                            "grid_dimension_binding": "#players_grid_dimension",
+                            "collection_name": "players_collection",
+                            "bindings": [
+                              {
+                                "binding_name": "#players_grid_dimension"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
             }
           ]
+        }
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ 0, 0.5 ]
         }
       },
       { "players_grid_panel@pause.players_grid": {} },
