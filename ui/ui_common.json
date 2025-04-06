@@ -1676,6 +1676,10 @@
             "requires": "(($is_android or $is_ios) and $rainbowpie_ui_flag_86c54726)",
             "$rainbowpie_ui_flag_86c54726": false
           },
+          {
+            "requires": "(($rainbowpie_localui_screen_alias = 'server_form') and $game_pad)",
+            "$rainbowpie_localui_backup_screen": false
+          },
           // Force use Rainbow Pie UI style server_form
           {
             "requires": "($rainbowpie_ui_flag_server_form_force and ($rainbowpie_localui_screen_alias = 'server_form'))",
