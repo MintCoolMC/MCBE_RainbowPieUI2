@@ -2,6 +2,10 @@
 {
   "namespace": "world_section",
 
+  "game_section/level_seed_selector": {
+    "$option_enabled_binding_name": "none"
+  },
+
   "game_section": {
     "modifications": [
       {
