@@ -357,7 +357,7 @@
 
   "$rainbowpie_ui_theme_input_hover_background_color": [ 0.1725490196078431, 0.1725490196078431, 0.1725490196078431 ],
   "$rainbowpie_ui_theme_input_hover_background_alpha": 0.4,
-  "$rainbowpie_ui_theme_input_hover_btbar_color": [ 0.13725490196078432, 0.50588235294117645, 0.5137254901960784 ],
+  "$rainbowpie_ui_theme_input_hover_btbar_color": [ 0.4862745098039216, 0.5686274509803922, 0.7607843137254902 ],
   "$rainbowpie_ui_theme_input_hover_btbar_alpha": 1,
 
   "$rainbowpie_ui_theme_input_locked_background_color": [ 0.1725490196078431, 0.1725490196078431, 0.1725490196078431 ],
@@ -378,7 +378,7 @@
   "$rainbowpie_ui_theme_slider_default_background_color": [ 0.011, 0.011, 0.011 ],
   "$rainbowpie_ui_theme_slider_default_background_alpha": 0.4,
 
-  "$rainbowpie_ui_theme_slider_hover_background_color": [ 0.13725490196078432, 0.50588235294117645, 0.5137254901960784 ],
+  "$rainbowpie_ui_theme_slider_hover_background_color": [ 0.4862745098039216, 0.5686274509803922, 0.7607843137254902 ],
   "$rainbowpie_ui_theme_slider_hover_background_alpha": 0.2,
 
   "$rainbowpie_ui_theme_slider_locked_background_color": [ 0.8, 0.8, 0.8 ],
@@ -408,9 +408,9 @@
   "$rainbowpie_ui_theme_slider_text_locked_color": [ 0.7, 0.7, 0.7 ],
 
   "$rainbowpie_ui_theme_slider_step_default_default_color": [ 0.5176470588235294, 0.6666666666666667, 0.6392156862745098 ],
-  "$rainbowpie_ui_theme_slider_step_progress_default_color": [ 0.13725490196078432, 0.50588235294117645, 0.5137254901960784 ],
+  "$rainbowpie_ui_theme_slider_step_progress_default_color": [ 0.4862745098039216, 0.5686274509803922, 0.7607843137254902 ],
   "$rainbowpie_ui_theme_slider_step_default_hover_color": [ 0.3, 0.3, 0.3 ],
-  "$rainbowpie_ui_theme_slider_step_progress_hover_color": [ 0.13725490196078432, 0.50588235294117645, 0.5137254901960784 ],
+  "$rainbowpie_ui_theme_slider_step_progress_hover_color": [ 0.4862745098039216, 0.5686274509803922, 0.7607843137254902 ],
 
   // Theme Progress Loading Bar Variables //
   "$rainbowpie_ui_theme_progress_empty_color": [ 0.141176, 0.396078, 0.129411 ],
@@ -428,8 +428,8 @@
 
   // Theme Button Variables //
   "$rainbowpie_ui_theme_button_background_default_color": [ 0.011, 0.011, 0.011 ],
-  "$rainbowpie_ui_theme_button_background_hover_color": [ 0.13725490196078432, 0.50588235294117645, 0.5137254901960784 ],
-  "$rainbowpie_ui_theme_button_background_pressed_color": [ 0.13725490196078432, 0.50588235294117645, 0.5137254901960784 ],
+  "$rainbowpie_ui_theme_button_background_hover_color": [ 0.4862745098039216, 0.5686274509803922, 0.7607843137254902 ],
+  "$rainbowpie_ui_theme_button_background_pressed_color": [ 0.4862745098039216, 0.5686274509803922, 0.7607843137254902 ],
   "$rainbowpie_ui_theme_button_background_locked_color": [ 0.4588235294117647, 0.4588235294117647, 0.4588235294117647 ],
 
   "$rainbowpie_ui_theme_button_background_default_alpha": 0.5,
@@ -456,9 +456,9 @@
   "$rainbowpie_ui_theme_toggle_background_locked_checked_color": [ 0.4588235294117647, 0.4588235294117647, 0.4588235294117647 ],
   "$rainbowpie_ui_theme_toggle_background_locked_checked_btbar_color": [ 1.0, 1.0, 1.0 ],
   "$rainbowpie_ui_theme_toggle_background_checked_default_color": [ 0.011, 0.011, 0.011 ],
-  "$rainbowpie_ui_theme_toggle_background_checked_default_btbar_color": [ 0.13725490196078432, 0.50588235294117645, 0.5137254901960784 ],
+  "$rainbowpie_ui_theme_toggle_background_checked_default_btbar_color": [ 0.4862745098039216, 0.5686274509803922, 0.7607843137254902 ],
   "$rainbowpie_ui_theme_toggle_background_checked_hover_color": [ 0.1725490196078431, 0.1725490196078431, 0.1725490196078431 ],
-  "$rainbowpie_ui_theme_toggle_background_checked_hover_btbar_color": [ 0.13725490196078432, 0.50588235294117645, 0.5137254901960784 ],
+  "$rainbowpie_ui_theme_toggle_background_checked_hover_btbar_color": [ 0.4862745098039216, 0.5686274509803922, 0.7607843137254902 ],
   "$rainbowpie_ui_theme_toggle_background_unchecked_default_color": [ 0.011, 0.011, 0.011 ],
   "$rainbowpie_ui_theme_toggle_background_unchecked_hover_color": [ 0.1725490196078431, 0.1725490196078431, 0.1725490196078431 ],
   "$rainbowpie_ui_theme_toggle_background_unchecked_hover_btbar_color": [ 1.0, 1.0, 1.0 ],
