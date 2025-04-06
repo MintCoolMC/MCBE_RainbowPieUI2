@@ -94,20 +94,20 @@
               "binding_collection_name": "custom_form"
             }
           ],
-          "visible": "(($screen_content = $backup_screen_content) or not $is_server_form)",
+          "visible": "(($screen_content = $rainbowpie_localui_backup_screen_content) or not $is_server_form)",
           "bindings": [
             {
               "binding_type": "view",
               "source_control_name": "vanilla_serverform",
               "source_property_name": "#toggle_state",
               "target_property_name": "#is_vanilla_serverform_ui_opened",
-              "ignored": "(($screen_content = $backup_screen_content) or not $is_server_form)"
+              "ignored": "(($screen_content = $rainbowpie_localui_backup_screen_content) or not $is_server_form)"
             },
             {
               "binding_type": "view",
               "source_property_name": "(not #is_vanilla_serverform_ui_opened)",
               "target_property_name": "#visible",
-              "ignored": "(($screen_content = $backup_screen_content) or not $is_server_form)"
+              "ignored": "(($screen_content = $rainbowpie_localui_backup_screen_content) or not $is_server_form)"
             }
           ]
         }
@@ -277,7 +277,7 @@
               "vanilla_serverform_ui": {
                 "type": "panel",
                 "size": [ "50%", "100%" ],
-                "ignored": "($screen_content = $backup_screen_content)",
+                "ignored": "($screen_content = $rainbowpie_localui_backup_screen_content)",
                 "controls": [
                   {
                     "serverformui_button@rainbowpieui_server_form.serverformui_button": {
@@ -287,7 +287,7 @@
                       "anchor_to": "bottom_right",
                       "layer": 125,
                       "$button_image_size": [ "100%", "100%" ],
-                      "ignored": "($screen_content = $backup_screen_content)"
+                      "ignored": "($screen_content = $rainbowpie_localui_backup_screen_content)"
                     }
                   },
                   {
@@ -313,7 +313,7 @@
                             "anchor_to": "bottom_right",
                             "layer": 30,
                             "$button_image_size": [ "100%", "100%" ],
-                            "ignored": "($screen_content = $backup_screen_content)"
+                            "ignored": "($screen_content = $rainbowpie_localui_backup_screen_content)"
                           }
                         },
                         {
@@ -439,7 +439,7 @@
       "name": "buttons",
       "factory_variables": [
         "$screen_content",
-        "$backup_screen_content"
+        "$rainbowpie_localui_backup_screen_content"
       ],
       "control_ids": {
         "label": "@rainbowpieui_server_form.custom_label",
