@@ -92,6 +92,7 @@ rainbowpie.ui.pause.tab.playerlist=玩家列表
 rainbowpie.ui.pause.tab.scoreboard=記分牌
 rainbowpie.ui.pause.tab.persona=個人檔案
 rainbowpie.ui.pause.title.unscored_players=未得分的玩家
+rainbowpie.ui.pause.title.player_total=人數:
 rainbowpie.ui.pause.quit.tiptext=雙擊退出按鈕即可儲存並退出
 
 rainbowpie.ui.pause.permissions.custom=自訂

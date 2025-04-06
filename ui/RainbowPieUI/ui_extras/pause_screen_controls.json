@@ -1692,34 +1692,56 @@
 
   "player_count": {
     "type": "panel",
-    "size": [ "16px", "10px" ],
+    "size": [ "40px", "10px" ],
     "controls": [
       {
-        "player_count_text@rainbowpie_ui_common.title_label": {
-          "text": "#player_count_str",
-          "size": [ "default", 10 ],
+        "player_count_text_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", "100%" ],
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
-          "layer": 1,
-          "bindings": [
+          "controls": [
             {
-              "binding_type": "collection_details",
-              "binding_collection_name": "players_collection"
+              "player_count_title@rainbowpie_ui_common.title_label": {
+                "text": "rainbowpie.ui.pause.title.player_total",
+                "size": [ "default", 10 ],
+                "layer": 1
+              }
             },
             {
-              "binding_name": "#collection_index",
-              "binding_type": "collection",
-              "binding_collection_name": "players_collection"
+              "padding_middle": {
+                "type": "panel",
+                "size": [ 1, 0 ]
+              }
             },
             {
-              "binding_type": "view",
-              "source_property_name": "(#collection_index + 1)",
-              "target_property_name": "#player_count"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "('§§' + #player_count)",
-              "target_property_name": "#player_count_str"
+              "player_count_text@rainbowpie_ui_common.title_label": {
+                "text": "#player_count_str",
+                "size": [ "default", 10 ],
+                "layer": 1,
+                "bindings": [
+                  {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "players_collection"
+                  },
+                  {
+                    "binding_name": "#collection_index",
+                    "binding_type": "collection",
+                    "binding_collection_name": "players_collection"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#collection_index + 1)",
+                    "target_property_name": "#player_count"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('§§' + #player_count)",
+                    "target_property_name": "#player_count_str"
+                  }
+                ]
+              }
             }
           ]
         }
@@ -1751,6 +1773,7 @@
                 "type": "stack_panel",
                 "orientation": "horizontal",
                 "size": [ "100% - 4px", 10 ],
+                "clips_children": true,
                 "controls": [
                   {
                     "players_list_title@rainbowpie_ui_common.title_label": {
@@ -1774,8 +1797,8 @@
                           "player_grid": {
                             "type": "grid",
                             "size": [ "100%c", "100%c" ],
-                            "anchor_from": "right_middle",
-                            "anchor_to": "right_middle",
+                            "anchor_from": "bottom_right",
+                            "anchor_to": "bottom_right",
                             "grid_item_template": "rainbowpieui_pause.player_count",
                             "grid_dimension_binding": "#players_grid_dimension",
                             "collection_name": "players_collection",

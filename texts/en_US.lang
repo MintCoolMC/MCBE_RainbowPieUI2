@@ -92,6 +92,7 @@ rainbowpie.ui.pause.tab.playerlist=Players
 rainbowpie.ui.pause.tab.scoreboard=Score
 rainbowpie.ui.pause.tab.persona=My Profile
 rainbowpie.ui.pause.title.unscored_players=Unscored players
+rainbowpie.ui.pause.title.player_total=Total:
 rainbowpie.ui.pause.quit.tiptext=Double click to Save & Quit
 
 rainbowpie.ui.pause.permissions.custom=Custom
