@@ -1256,7 +1256,7 @@
     "$hovered|default": false,
 
     // Must be start with | and end with |
-    "$worldtown_supported_languages": "|English (United States)|English (United Kingdom)|Deutsch (Deutschland)|Español (España)|Español (México)|Français (France)|Français (Canada)|Italiano (Italia)|日本語 (日本)|한국어 (대한민국)|Português (Brasil)|Português (Portugal)|Русский (Россия)|中文(简体)|中文(繁體)|Nederlands (Nederland)|Български (България)|Čeština (Česko)|Dansk (Danmark)|Ελληνικά (Ελλάδα)|Suomi (Suomi)|Magyar (Magyarország)|Indonesia (Indonesia)|Norsk bokmål (Norge)|Polski (Polska)|Slovenčina (Slovensko)|Svenska (Sverige)|Türkçe (Türkiye)|Українська (Україна)|",
+    "$worldtown_supported_languages": "|English (United States)|English (United Kingdom)|Deutsch (Deutschland)|Español (España)|Español (México)|Français (France)|Français (Canada)|Italiano (Italia)|日本語 (日本)|한국어 (대한민국)|Português (Brasil)|Português (Portugal)|Русский (Россия)|中文(简体)|中文(繁體)|Nederlands (Nederland)|Български (България)|Čeština (Česko)|Dansk (Danmark)|Ελληνικά (Ελλάδα)|Suomi (Suomi)|Magyar (Magyarország)|Indonesia (Indonesia)|Norsk bokmål (Norge)|Polski (Polska)|Slovenčina (Slovensko)|Svenska (Sverige)|Türkçe (Türkiye)|Українська (Україна)|Tiếng Việt (Việt Nam)|",
     "controls": [
       {
         "radio_btbar": {
