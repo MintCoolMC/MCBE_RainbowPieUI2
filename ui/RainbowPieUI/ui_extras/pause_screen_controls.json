@@ -100,9 +100,16 @@
                       "max_size": [ 160, 24 ],
                       "text_alignment": "center",
                       "layer": 31,
-                      "text": "rainbowpie.ui.pause.quit.tiptext",
+                      "text": "$tip_text",
+                      "$tip_text": "rainbowpie.ui.pause.quit.tiptext",
                       "alpha": 0,
-                      "anims": ["@rainbowpieui_pause.quittip_text_out_in"]
+                      "anims": ["@rainbowpieui_pause.quittip_text_out_in"],
+                      "variables": [
+                        {
+                          "requires": "$is_on_3p_server",
+                          "$tip_text": "rainbowpie.ui.pause.quit.tiptext.disconnect"
+                        }
+                      ]
                     }
                   }
                 ]
