@@ -162,6 +162,22 @@
     "alpha": "$rainbowpie_ui_theme_text_background_alpha"
   },
 
+  "boss_name_panel": {
+    "modifications": [
+      {
+        "array_name": "variables",
+        "operation": "insert_front",
+        "value": [
+          {
+            "requires": "$rainbowpie_ui_flag_hudbossname_default_font",
+            "$rainbowpie_ui_theme_global_font_name": "default",
+            "$rainbowpie_ui_theme_global_font_backup_name": "default"
+          }
+        ]
+      }
+    ]
+  },
+
   "boss_name_panel/boss_name": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"

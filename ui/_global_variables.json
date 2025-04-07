@@ -112,6 +112,7 @@
   "$rainbowpie_ui_flag_chatui_default_font": false,
   "$rainbowpie_ui_flag_hudtitle_default_font": false,
   "$rainbowpie_ui_flag_huditemname_default_font": false,
+  "$rainbowpie_ui_flag_hudbossname_default_font": false,
   "$rainbowpie_ui_flag_flying_item_renderer": false, // Use flying_item_renderer on mouse mode
   "$rainbowpie_ui_flag_sign_edit_preview_enabled": true,
   "$rainbowpie_ui_flag_hud_durability_warning": true,

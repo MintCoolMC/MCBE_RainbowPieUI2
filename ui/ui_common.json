@@ -1741,6 +1741,7 @@
             "$rainbowpie_ui_flag_notification_features_disabled_reason": "server",
             "$rainbowpie_ui_flag_56cd0456": true, // PauseUI Back To Vanilla Button
             "$rainbowpie_ui_flag_scoreboard_default_font": true,
+            "$rainbowpie_ui_flag_hudbossname_default_font": true,
             "$rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled": false,
             "$rainbowpie_ui_module_chest_fastpick": false,
             "$rainbowpie_ui_flag_chatui_default_font": true,
