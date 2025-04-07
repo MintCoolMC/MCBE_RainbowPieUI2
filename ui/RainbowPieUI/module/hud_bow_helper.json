@@ -292,7 +292,7 @@
     ]
   },
 
-  "hud_bow_helper": {
+  "hud_bow_helper@rainbowpieui_compatibility_config.compatibility_variables": {
     "type": "panel",
     "ignored": "(not $rainbowpie_ui_module_hud_bow_helper)",
     "controls": [

@@ -2,7 +2,7 @@
 {
   "namespace": "rainbowpie_module_hud_compass",
 
-  "hud_compass": {
+  "hud_compass@rainbowpieui_compatibility_config.compatibility_variables": {
     "type": "panel",
     "ignored": "(not $rainbowpie_ui_module_hud_compass)",
     "controls": [

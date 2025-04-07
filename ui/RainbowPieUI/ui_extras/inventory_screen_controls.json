@@ -302,7 +302,7 @@
     ],
     "controls": [
       {
-        "compass_stack_panel": {
+        "compass_stack_panel@rainbowpieui_compatibility_config.compatibility_variables": {
           "type": "stack_panel",
           "orientation": "horizontal",
           "size": [ "100%c", "100%cm" ],

@@ -1032,7 +1032,7 @@
     "allow_clipping": false,
     "controls": [
       {
-        "armor_compare": {
+        "armor_compare@rainbowpieui_compatibility_config.compatibility_variables": {
           "type": "panel",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
@@ -1291,7 +1291,7 @@
   "inventory_actions_cell_panel@rainbowpie_module_inventory_actions.inventory_actions": {
     "controls": [
       {
-        "armor_switch": {
+        "armor_switch@rainbowpieui_compatibility_config.compatibility_variables": {
           "type": "panel",
           "ignored": "(not $rainbowpie_ui_moduleflag_inventory_actions_armor_switch_enabled)",
           "layer": 22,

@@ -2,7 +2,7 @@
 {
   "namespace": "rainbowpie_module_hud_block_counter",
 
-  "hud_block_counter": {
+  "hud_block_counter@rainbowpieui_compatibility_config.compatibility_variables": {
     "type": "panel",
     "ignored": "(not $rainbowpie_ui_module_hud_block_counter)",
     "controls": [
