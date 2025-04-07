@@ -1,0 +1,111 @@
+// VERSION: 2.9.10325.1 (v1.21.71)
+{
+  "namespace": "rainbowpie_module_hud_compass",
+
+  "hud_compass": {
+    "type": "panel",
+    "ignored": "(not $rainbowpie_ui_module_hud_compass)",
+    "controls": [
+      {
+        "hud_compass_item_total_count@rainbowpie_modulelib_hud_item.inventory_item_count": {
+          "$rainbowpie_localui_inventory_target_item_ids": "('id' + $rainbowpie_ui_flag_item_clock_id + ',id' + $rainbowpie_ui_flag_item_compass_id + ',id' + $rainbowpie_ui_flag_item_recovery_compass_id +',')"
+        }
+      },
+      {
+        "clock_total_count@rainbowpie_modulelib_hud_item.inventory_item_count": {
+          "$rainbowpie_localui_inventory_target_item_ids": "('id' + $rainbowpie_ui_flag_item_clock_id + ',')"
+        }
+      },
+      {
+        "compass_total_count@rainbowpie_modulelib_hud_item.inventory_item_count": {
+          "$rainbowpie_localui_inventory_target_item_ids": "('id' + $rainbowpie_ui_flag_item_compass_id + ',')"
+        }
+      },
+      {
+        "recovery_compass_total_count@rainbowpie_modulelib_hud_item.inventory_item_count": {
+          "$rainbowpie_localui_inventory_target_item_ids": "('id' + $rainbowpie_ui_flag_item_recovery_compass_id +',')"
+        }
+      },
+      {
+        "compass_panel@rainbowpie_ui_common.text_background": {
+          "texture": "($rainbowpie_ui_path_home + '/r_white')",
+          "size": [ "100%c + 5px", "100%c + 5px" ],
+          "offset": [ -7, 7 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "hud_compass_item_total_count",
+              "source_property_name": "(not (#inventory_target_item_total_count_int = 0))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "compass_stack_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100%c", "100%cm" ],
+                "controls": [
+                  {
+                    "clock@crafting.item_renderer": {
+                      "size": [ 16, 16 ],
+                      "layer": 10,
+                      "property_bag": {
+                        "#item_id_aux": "($rainbowpie_ui_flag_item_clock_id * 65536)"
+                      },
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "clock_total_count",
+                          "source_property_name": "(not (#inventory_target_item_total_count_int = 0))",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "compass@crafting.item_renderer": {
+                      "size": [ 16, 16 ],
+                      "layer": 10,
+                      "property_bag": {
+                        "#item_id_aux": "($rainbowpie_ui_flag_item_compass_id * 65536)"
+                      },
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "compass_total_count",
+                          "source_property_name": "(not (#inventory_target_item_total_count_int = 0))",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "recovery_compass@crafting.item_renderer": {
+                      "size": [ 16, 16 ],
+                      "layer": 10,
+                      "property_bag": {
+                        "#item_id_aux": "($rainbowpie_ui_flag_item_recovery_compass_id * 65536)"
+                      },
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "recovery_compass_total_count",
+                          "source_property_name": "(not (#inventory_target_item_total_count_int = 0))",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -932,6 +932,9 @@
         "hud_bow_helper@rainbowpie_module_hud_bow_helper.hud_bow_helper": {}
       },
       {
+        "hud_compass@rainbowpie_module_hud_compass.hud_compass": {}
+      },
+      {
         "hud_selected_item_id@rainbowpie_module_hud_selected_item_id.hud_selected_item_id": {}
       },
       // Item Durability

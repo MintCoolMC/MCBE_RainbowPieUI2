@@ -17,6 +17,7 @@
     "ui/RainbowPieUI/module/chest_fastpick.json",
     "ui/RainbowPieUI/module/hud_block_counter.json",
     "ui/RainbowPieUI/module/hud_bow_helper.json",
+    "ui/RainbowPieUI/module/hud_compass.json",
     "ui/RainbowPieUI/module/hud_selected_item_id.json",
     "ui/RainbowPieUI/module/inventory_actions.json",
 
