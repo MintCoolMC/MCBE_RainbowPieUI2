@@ -2482,6 +2482,7 @@
                       "size": [ 221, 10 ],
                       "offset": [ 0, -12 ],
                       "clips_children": true,
+                      "ignored": "($rainbowpie_ui_flag_1fa7dfd7)",
                       "controls": [
                         {
                           "player_grid@rainbowpieui_hud.player_grid": {
@@ -2496,13 +2497,42 @@
                     }
                   },
                   {
+                    "player_count_v2": {
+                      "type": "panel",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "size": [ 221, 12 ],
+                      "offset": [ 0, -10 ],
+                      "clips_children": true,
+                      "ignored": "(not $rainbowpie_ui_flag_1fa7dfd7)",
+                      "controls": [
+                        {
+                          "player_grid@rainbowpieui_hud.player_grid": {
+                            "anchor_from": "bottom_left",
+                            "anchor_to": "bottom_left",
+                            "size": [ 221, "100%c" ],
+                            "grid_item_template": "rainbowpieui_hud.player_count_v2",
+                            "$rainbowpie_localui_playerlist_full": true
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
                     "playerlist_in_player_grid_panel": {
                       "type": "panel",
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",
                       "size": [ "100%", "100%" ],
-                      "offset": [ 0, 0 ],
+                      "offset": "$playerlist_offset",
+                      "$playerlist_offset": [ 0, 0 ],
                       "clips_children": true,
+                      "variables": [
+                        {
+                          "requires": "$rainbowpie_ui_flag_1fa7dfd7",
+                          "$playerlist_offset": [ 0, 3 ]
+                        }
+                      ],
                       "controls": [
                         {
                           "debug01@rainbowpie_ui_common.debug_draw": {
@@ -2808,6 +2838,139 @@
                   {
                     "binding_type": "view",
                     "source_property_name": "(#collection_index > 35)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "player_count_v2_item": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "world_icon_panel": {
+          "type": "panel",
+          "size": [ 12, 10 ],
+          "controls": [
+            {
+              "world_icon": {
+                "type": "image",
+                "texture": "($rainbowpie_ui_path_theme + '/icon/hud/tablist/world')",
+                "size": [ 12, 12 ],
+                "offset": [ -1.5, 0.5 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "world_name_text@rainbowpie_ui_common.title_label": {
+          "text": "#player_list_title",
+          "size": [ "default", 10 ],
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#player_list_title"
+            }
+          ]
+        }
+      },
+      {
+        "spacer_0": {
+          "type": "panel",
+          "size": [ "fill", 1 ]
+        }
+      },
+      {
+        "player_icon_panel": {
+          "type": "panel",
+          "size": [ 12, 10 ],
+          "controls": [
+            {
+              "player_icon": {
+                "type": "image",
+                "texture": "($rainbowpie_ui_path_theme + '/icon/hud/tablist/player')",
+                "size": [ 12, 12 ],
+                "offset": [ 0, 0.5 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "player_count_text@rainbowpie_ui_common.title_label": {
+          "text": "#player_count_str",
+          "size": [ "default", 10 ],
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#collection_index",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#collection_index + 1)",
+              "target_property_name": "#player_count"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('§§' + #player_count)",
+              "target_property_name": "#player_count_str"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "player_count_v2": {
+    "type": "panel",
+    "size": [ 221, 12 ],
+    "controls": [
+      {
+        "background@rainbowpie_ui_common.title_background": {
+          "size": [ "100%c + 6px", "100%" ],
+          "controls": [
+            {
+              "player_count@rainbowpieui_hud.player_count_v2_item": {
+                "size": [ 104, 10 ],
+                "bindings": [
+                  {
+                    "binding_name": "#collection_index",
+                    "binding_type": "collection",
+                    "binding_collection_name": "players_collection"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#collection_index < 13)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "player_count_wide@rainbowpieui_hud.player_count_v2_item": {
+                "size": [ 215, 10 ],
+                "bindings": [
+                  {
+                    "binding_name": "#collection_index",
+                    "binding_type": "collection",
+                    "binding_collection_name": "players_collection"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#collection_index > 11)",
                     "target_property_name": "#visible"
                   }
                 ]
