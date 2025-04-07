@@ -171,17 +171,12 @@
             {
               "binding_type": "view",
               "source_control_name": "rainbowpie_time_slider",
-              "source_property_name": "#slider_value_int",
-              "target_property_name": "#time_hour_int"
+              "source_property_name": "#time_int",
+              "target_property_name": "#time_int"
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#time_hour_int < 6) * (18000 + 1000 * #time_hour_int) + (#time_hour_int > 6) * (#time_hour_int - 6) * 1000)",
-              "target_property_name": "#time_ingame_int"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "('§§' + #time_ingame_int)",
+              "source_property_name": "('§§' + #time_int)",
               "target_property_name": "#time_text"
             }
           ]
@@ -426,6 +421,11 @@
                     "binding_type": "view",
                     "source_property_name": "(((#slider_value_int > #slider_value) * - 1 + 1) * ((#slider_value_int < #slider_value) * 1 + #slider_value_int))",
                     "target_property_name": "#slider_value_int"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((#slider_value_int < 6) * (18000 + 1000 * #slider_value_int) + (#slider_value_int > 6) * (#slider_value_int - 6) * 1000)",
+                    "target_property_name": "#time_int"
                   }
                 ]
               }
@@ -451,17 +451,12 @@
                   {
                     "binding_type": "view",
                     "source_control_name": "rainbowpie_time_slider",
-                    "source_property_name": "#slider_value_int",
-                    "target_property_name": "#time_hour_int"
+                    "source_property_name": "#time_int",
+                    "target_property_name": "#time_int"
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "((#time_hour_int < 6) * (18000 + 1000 * #time_hour_int) + (#time_hour_int > 6) * (#time_hour_int - 6) * 1000)",
-                    "target_property_name": "#time_ingame_int"
-                  },
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "('\"' + #time_ingame_int + '\"')",
+                    "source_property_name": "('\"' + #time_int + '\"')",
                     "target_property_name": "#sub_command"
                   }
                 ]
