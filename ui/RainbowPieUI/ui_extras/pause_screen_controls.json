@@ -2,6 +2,28 @@
 {
   "namespace": "rainbowpieui_pause",
 
+  "quit_button@pause.pause_button_template": {
+    "$pressed_button_name": "button.menu_quit",
+    "$button_text": "pauseScreen.quit",
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "$focus_override_down": "icon_panel_main_focus",
+    "variables": [
+      {
+        "requires": "($is_secondary_client and not $is_editor_playtest_roundtrip)",
+        "$button_text": "pauseScreen.secondaryClientLeave"
+      },
+      {
+        "requires": "$is_editor_playtest_roundtrip",
+        "$button_text": "pauseScreen.editor.quit"
+      },
+      {
+        "requires": "$is_on_3p_server",
+        "$button_text": "menu.disconnect"
+      }
+    ]
+  },
+
   "music_icon": {
     "type": "image",
     "size": [ 15, 15 ],
@@ -1020,7 +1042,7 @@
                     }
                   },
                   {
-                    "quit_button@pause.quit_button": {
+                    "quit_button@rainbowpieui_pause.quit_button": {
                       "$rainbowpie_localui_button_default_color": [ 0.85098, 0.301961, 0.301961 ],
                       "$rainbowpie_localui_button_hover_color": [ 0.85098, 0.301961, 0.301961 ],
                       "$rainbowpie_localui_button_pressed_color": [ 0.85098, 0.301961, 0.301961 ],
@@ -1287,7 +1309,7 @@
                           }
                         },
                         {
-                          "quit_button@pause.quit_button": {
+                          "quit_button@rainbowpieui_pause.quit_button": {
                             "$rainbowpie_localui_button_default_color": [ 0.85098, 0.301961, 0.301961 ],
                             "$rainbowpie_localui_button_hover_color": [ 0.85098, 0.301961, 0.301961 ],
                             "$rainbowpie_localui_button_pressed_color": [ 0.85098, 0.301961, 0.301961 ],
@@ -2308,7 +2330,7 @@
                                       }
                                     },
                                     {
-                                      "quit_button@pause.quit_button": {
+                                      "quit_button@rainbowpieui_pause.quit_button": {
                                         "$rainbowpie_localui_button_default_color": [ 0.85098, 0.301961, 0.301961 ],
                                         "$rainbowpie_localui_button_hover_color": [ 0.85098, 0.301961, 0.301961 ],
                                         "$rainbowpie_localui_button_pressed_color": [ 0.85098, 0.301961, 0.301961 ],
