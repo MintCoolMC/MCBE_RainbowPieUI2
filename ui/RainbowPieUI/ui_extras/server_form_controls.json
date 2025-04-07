@@ -2,6 +2,70 @@
 {
   "namespace": "rainbowpieui_server_form",
 
+  "search_icon": {
+    "type": "image",
+    "size": [ "50%", "50%" ],
+    "texture": "($rainbowpie_ui_path_theme + '/icon/serverform/search')"
+  },
+
+  "search_button_toggle_base@common_toggles.light_ui_toggle": {
+    "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
+    "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
+    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
+    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
+    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
+    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
+    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
+    "$button_content": "rainbowpieui_server_form.search_icon",
+
+    "$button_type_panel": "common_buttons.new_ui_binding_button_label",
+    "$button_text_binding_type": "none",
+    "$button_binding_condition": "none",
+    "$button_text_grid_collection_name": "none",
+    "$button_text": "",
+    "$button_offset": [ 0, 0 ],
+
+    "$radio_toggle_group": true,
+    "$toggle_name": "rainbowpie_serverform_item_search",
+    "$toggle_group_default_selected": 1001,
+
+    "$toggle_group_forced_index": 0,
+
+    "$toggle_view_binding_name": ""
+  },
+
+  "hide_search_icon": {
+    "type": "image",
+    "texture": "textures/ui/chevron_right",
+    "size": [ "70%", "70%" ],
+    "color": "$text_color"
+  },
+
+  "search_box_place_holder_control": {
+    "type": "panel",
+    "size": [ "100%c", "100%cm" ],
+    "controls": [
+      {
+        "search_icon": {
+          "type": "image",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [ 10, 10 ],
+          "texture": "($rainbowpie_ui_path_theme + '/icon/serverform/search')",
+          "alpha": 0.5
+        }
+      },
+      {
+        "place_holder_text@common.text_edit_box_place_holder_label": {
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [ 12, 0 ]
+        }
+      }
+    ]
+  },
+
   "ui_mode_icon": {
     "type": "image",
     "size": [ 15, 15 ],
@@ -606,8 +670,126 @@
         "binding_name": "#title_text"
       }
     ],
+    "$rainbowpie_localui_dialogheader_extra_controls": "rainbowpieui_server_form.long_form_dialog_button",
     "$rainbowpie_localui_dialog_content": "rainbowpieui_server_form.long_form_scrolling_panel",
     "size": [ 225, 200 ]
+  },
+
+  "long_form_dialog_button": {
+    "type": "stack_panel",
+    "size": [ "100%c", "100%" ],
+    "controls": [
+      {
+        "search_panel": {
+          "type": "panel",
+          "size": [ "100%c", "100%" ],
+          "controls": [
+            {
+              "search_inputbox": {
+                "type": "panel",
+                "size": [ "100%c", "100%" ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "show_search_box",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "back_button@rainbowpieui_server_form.search_button_toggle_base": {
+                      "$button_content": "rainbowpieui_server_form.hide_search_icon",
+                      "$button_image_size": [ "100%", "100%" ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "size": [ "100%y", "76%" ],
+                      "$toggle_group_forced_index": 1001,
+                      "$toggle_view_binding_name": "hide_search_box",
+                      "layer": 10,
+                      "$button_mappings": [
+                        {
+                          "from_button_id": "button.menu_select",
+                          "to_button_id": "button.menu_select",
+                          "mapping_type": "pressed"
+                        },
+                        {
+                          "from_button_id": "button.menu_ok",
+                          "to_button_id": "button.menu_select",
+                          "mapping_type": "pressed"
+                        },
+                        {
+                          "from_button_id": "button.menu_cancel",
+                          "to_button_id": "button.menu_select",
+                          "mapping_type": "global"
+                        }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "show_search_box",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#enabled"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "search_text_box@common.text_edit_box": {
+                      "$rainbowpie_localui_editbox_enabled": true,
+                      "$edit_box_indent_size": [ "100%", "100%" ],
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "size": [ "440%y", "76%" ],
+                      "$text_box_name": "serverform_search_text_box",
+                      "$text_edit_box_content_binding_name": "#serverform_search_text_box_item_name",
+                      "$text_edit_text_control": "serverform_search_text_box_display_text",
+                      "$place_holder_control": "rainbowpieui_server_form.search_box_place_holder_control",
+                      "$place_holder_text": "controller.buttonTip.enterSearch",
+                      "focus_wrap_enabled": false,
+                      "max_length": 32767,
+                      "layer": 12,
+                      "variables": [
+                        {
+                          "requires": "$rainbowpie_localui_backup_screen",
+                          "$text_edit_text_control": "serverform_search_text_box_display_text2"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "search_button@rainbowpieui_server_form.search_button_toggle_base": {
+                "$rainbowpie_localui_button_default_alpha": 0.0,
+                "$button_image_size": [ "100%", "100%" ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "size": [ "100%y", "100%" ],
+                "$toggle_group_forced_index": 1000,
+                "$toggle_view_binding_name": "show_search_box",
+                "layer": 10,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "show_search_box",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#enabled"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "show_search_box",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
   },
 
   "long_form_scrolling_panel@common.scrolling_panel": {
@@ -709,18 +891,56 @@
     ]
   },
 
-  "form_button@common_buttons.light_content_button": {
-    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
-    "$button_image_size": [ "100%", "100% - 1px" ],
-    "$pressed_button_name": "button.form_button_click",
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "size": [ "100%", 32 ],
-    "$button_content": "rainbowpieui_server_form.form_button_content",
-    "bindings": [
+  "form_button": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "layer": 2,
+    "controls": [
       {
-        "binding_type": "collection_details",
-        "binding_collection_name": "form_buttons"
+        "button@common_buttons.light_content_button": {
+          "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+          "$button_image_size": [ "100%", "100% - 1px" ],
+          "$pressed_button_name": "button.form_button_click",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ "100%", 32 ],
+          "$button_content": "rainbowpieui_server_form.form_button_content",
+          "$text_edit_text_control": "serverform_search_text_box_display_text",
+          "variables": [
+            {
+              "requires": "$rainbowpie_localui_backup_screen",
+              "$text_edit_text_control": "serverform_search_text_box_display_text2"
+            }
+          ],
+          "visible": true,
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "form_buttons"
+            },
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons",
+              "binding_name": "#form_button_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#form_button_text - '\n' - '§r' - '§o' - '§n' - '§m' - '§l' - '§k' - '§f' - '§e' - '§d' - '§c' - '§b' - '§a' - '§9' - '§8' - '§7' - '§6' - '§5' - '§4' - '§3' - '§2' - '§1' - '§0')",
+              "target_property_name": "#formatted_text"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "$text_edit_text_control",
+              "source_property_name": "#item_name",
+              "target_property_name": "#query_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#query_text = '') or (not ((#formatted_text - #query_text) = #formatted_text)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
       }
     ]
   },
