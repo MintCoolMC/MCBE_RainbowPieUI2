@@ -55,6 +55,8 @@
   // Flags
   "$rainbowpie_ui_flag_resourcepack_identifier": "", // 兼容其他资源包时的标记
   "$rainbowpie_ui_flag_resourcepack_displayname": "", // 兼容其他资源包时的显示名称
+  "$rainbowpie_ui_flag_notification_features_disabled": false,
+  "$rainbowpie_ui_flag_notification_features_disabled_reason": "", // resourcepack; server
   "$rainbowpie_ui_flag_bg_mask_ingame": true, // 在游戏内是否显示mask
   "$rainbowpie_ui_flag_bg_mask": true, // 在游戏外是否显示mask
   "$rainbowpie_ui_flag_overlay_screen": "toast_screen.toast_screen_content,debug_screen.content_panel,hud.hud_content,", // 覆盖界面
@@ -182,6 +184,7 @@
   "$rainbowpie_ui_flag_79f6bcad": true, // Language Selector Flags (WorldTown)
   "$rainbowpie_ui_flag_317055aa": true, // PauseUI Total Players (Player Count)
   "$rainbowpie_ui_flag_1597ee9b": true, // Advanced Host Time Tweaker
+  "$rainbowpie_ui_flag_6a8911d5": true, // Features Disabled Notification
 
   // Debug
   "$rainbowpie_ui_debug": false,

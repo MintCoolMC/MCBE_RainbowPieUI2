@@ -17,6 +17,10 @@ rainbowpie.ui.themesystem.description.title=介紹:	#
 rainbowpie.ui.themesystem.version_toolow=當前外觀包版本太低！	#
 rainbowpie.ui.themesystem.version_toohight=當前外觀包版本太高！	#
 
+rainbowpie.ui.notification.features_disabled.server=您正在游玩
+rainbowpie.ui.notification.features_disabled.resourcepack=您正在使用
+rainbowpie.ui.notification.features_disabled.text=某些功能將被禁用
+
 rainbowpie.ui.host_options.time_title=時間:
 rainbowpie.ui.host_options.time_note=如果你使用這項調整，遊玩天數將會被重置。
 

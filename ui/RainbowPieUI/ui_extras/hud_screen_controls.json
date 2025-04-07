@@ -920,6 +920,54 @@
     ]
   },
 
+  "notification_alpha_anim_start": {
+    "anim_type": "alpha",
+    "easing": "out_cubic",
+		"duration": "$rainbowpie_ui_animation_chat_transition_time",
+    "from": 0.0,
+		"to": 1.0,
+    "next": "@rainbowpieui_hud.notification_alpha_anim_wait"
+  },
+
+  "notification_alpha_anim_wait": {
+    "anim_type": "wait",
+		"duration": 8.0,
+    "next": "@rainbowpieui_hud.notification_alpha_anim_end"
+  },
+
+  "notification_alpha_anim_end": {
+    "anim_type": "alpha",
+    "easing": "out_cubic",
+    "destroy_at_end": "notification_features_disabled",
+		"duration": "$rainbowpie_ui_animation_chat_transition_time",
+    "from": 1.0,
+		"to": 0
+  },
+
+  "notification_offset_anim_start": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+		"duration": "$rainbowpie_ui_animation_chat_transition_time",
+    "from": [ 0, -20 ],
+		"to": [ 0, 0 ],
+    "next": "@rainbowpieui_hud.notification_offset_anim_wait"
+  },
+
+  "notification_offset_anim_wait": {
+    "anim_type": "wait",
+		"duration": 8.0,
+    "next": "@rainbowpieui_hud.notification_offset_anim_end"
+  },
+
+  "notification_offset_anim_end": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "destroy_at_end": "notification_features_disabled",
+		"duration": "$rainbowpie_ui_animation_chat_transition_time",
+    "from": [ 0, 0 ],
+		"to": [ 0, 20 ]
+  },
+
   "rainbowpie_root_panel": {
     "type": "panel",
     "size": [ "100%", "100%" ],
@@ -949,6 +997,70 @@
           "ignored": "(not $rainbowpie_ui_flag_0ffd0593)",
           "size": [ 0, 0 ],
           "offset": [ 0, "200%" ]
+        }
+      },
+      // Features Disabled Notification
+      {
+        "notification_features_disabled": {
+          "type": "panel",
+          "ignored": "((not $rainbowpie_ui_flag_6a8911d5) or (not $rainbowpie_ui_flag_notification_features_disabled))",
+          "propagate_alpha": true,
+          "anims": [
+            "@rainbowpieui_hud.notification_alpha_anim_start",
+            "@rainbowpieui_hud.notification_offset_anim_start"
+          ],
+          "controls": [
+            {
+              "notification_background@rainbowpie_ui_common.text_background": {
+                "texture": "($rainbowpie_ui_path_home + '/r_white')",
+                "size": [ "100%cm + 6px", "100%c + 4px" ],
+                "offset": [ 0, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "controls": [
+                  {
+                    "content_stack": {
+                      "type": "stack_panel",
+                      "size": [ "100%cm", "100%c" ],
+                      "controls": [
+                        {
+                          "title_text_stack": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%c", 10 ],
+                            "controls": [
+                              {
+                                "title_text@rainbowpie_ui_common.text_label": {
+                                  "text": "('rainbowpie.ui.notification.features_disabled.' + $rainbowpie_ui_flag_notification_features_disabled_reason)"
+                                }
+                              },
+                              {
+                                "padding_0": {
+                                  "type": "panel",
+                                  "size": [ 1, 0 ]
+                                }
+                              },
+                              {
+                                "resourcepack_name_text@rainbowpie_ui_common.text_label": {
+                                  "text": "$rainbowpie_ui_flag_resourcepack_displayname",
+                                  "color": [ 1.0, 1.0, 0.333 ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "features_disabled_text@rainbowpie_ui_common.text_label": {
+                            "text": "rainbowpie.ui.notification.features_disabled.text"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
         }
       },
       // New Player Joined Toast
