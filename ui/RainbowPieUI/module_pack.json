@@ -57,6 +57,20 @@
         }
       },
       {
+        "hud_compass@rainbowpie_ui_module_list.module_item": {
+          "$module_icon_texture": "($rainbowpie_ui_path_home + '/module/hud_compass')",
+          "$module_name": "HUD Compass",
+          "$module_version": "1.0",
+          "$module_author": "MintCoolMC",
+          "$module_description": "Show clock & compass on the HUD when you have them in your inventory",
+          "$module_state_check": "$rainbowpie_ui_module_hud_compass",
+          "$module_max_engine_version": "999999",
+          "$module_max_engine_patch_version": "999999",
+          "$module_min_engine_version": "0",
+          "$module_min_engine_patch_version": "0"
+        }
+      },
+      {
         "hud_selected_item_id@rainbowpie_ui_module_list.module_item": {
           "$module_icon_texture": "($rainbowpie_ui_path_home + '/module/hud_selected_item_id')",
           "$module_name": "HUD Selected Item ID",
