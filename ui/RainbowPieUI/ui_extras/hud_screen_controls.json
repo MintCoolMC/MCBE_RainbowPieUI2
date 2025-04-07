@@ -484,7 +484,7 @@
       },
       {
         "binding_type": "view",
-        "source_property_name": "((not ((#item_durability_total_amount = 0) and (#item_durability_current_amount = 0))) and (#item_durability_current_amount < 11) and #slot_selected)",
+        "source_property_name": "((not ((#item_durability_total_amount = 0) and (#item_durability_current_amount = 0))) and (#item_durability_current_amount < 16) and #slot_selected)",
         "target_property_name": "#visible"
       }
     ]
