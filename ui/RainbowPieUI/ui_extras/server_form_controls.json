@@ -345,68 +345,68 @@
     "clips_children": true,
     "controls": [
       {
-        "screen_stack": {
-          "type": "stack_panel",
-          "orientation": "horizontal",
-          "size": [ "200%", "100%" ],
-          "anchor_from": "right_middle",
-          "anchor_to": "right_middle",
-          "controls": [
+        "screen_content@rainbowpie_ui_common.screen_content": {
+          "$rainbowpie_localui_screen_ingame_anim1": true,
+          "$rainbowpie_localui_screen_content": [
             {
-              "screen_padding": {
-                "type": "panel",
-                "size": [ "50%", "100%" ],
-                "visible": true,
-                "property_bag": {
-                  "#is_vanilla_serverform_ui_opened": true
-                },
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "vanilla_serverform",
-                    "source_property_name": "#toggle_state",
-                    "target_property_name": "#is_vanilla_serverform_ui_opened"
-                  },
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "(#is_vanilla_serverform_ui_opened)",
-                    "target_property_name": "#visible",
-                    "ignored": "(not $rainbowpie_localui_backup_screen)"
-                  }
-                ]
-              }
-            },
-            {
-              "vanilla_serverform_ui": {
-                "type": "panel",
-                "size": [ "50%", "100%" ],
-                "ignored": "($screen_content = $rainbowpie_localui_backup_screen_content)",
+              "screen_stack": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "200%", "100%" ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
                 "controls": [
                   {
-                    "serverformui_button@rainbowpieui_server_form.serverformui_button": {
-                      "size": [ "28px", "28px" ],
-                      "offset": [ -8, -17 ],
-                      "anchor_from": "bottom_right",
-                      "anchor_to": "bottom_right",
-                      "layer": 125,
-                      "$button_image_size": [ "100%", "100%" ]
+                    "screen_padding": {
+                      "type": "panel",
+                      "size": [ "50%", "100%" ],
+                      "visible": true,
+                      "property_bag": {
+                        "#is_vanilla_serverform_ui_opened": true
+                      },
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "vanilla_serverform",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#is_vanilla_serverform_ui_opened"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(#is_vanilla_serverform_ui_opened)",
+                          "target_property_name": "#visible",
+                          "ignored": "(not $rainbowpie_localui_backup_screen)"
+                        }
+                      ]
                     }
                   },
                   {
-                    "server_form@$screen_content": {}
-                  }
-                ]
-              }
-            },
-            {
-              "rainbowpie_serverform_ui": {
-                "type": "panel",
-                "size": [ "50%", "100%" ],
-                "controls": [
+                    "vanilla_serverform_ui": {
+                      "type": "panel",
+                      "size": [ "50%", "100%" ],
+                      "ignored": "($screen_content = $rainbowpie_localui_backup_screen_content)",
+                      "controls": [
+                        {
+                          "serverformui_button@rainbowpieui_server_form.serverformui_button": {
+                            "size": [ "28px", "28px" ],
+                            "offset": [ -8, -17 ],
+                            "anchor_from": "bottom_right",
+                            "anchor_to": "bottom_right",
+                            "layer": 125,
+                            "$button_image_size": [ "100%", "100%" ]
+                          }
+                        },
+                        {
+                          "server_form@$screen_content": {}
+                        }
+                      ]
+                    }
+                  },
                   {
-                    "screen_content@rainbowpie_ui_common.screen_content": {
-                      "$rainbowpie_localui_screen_ingame_anim1": true,
-                      "$rainbowpie_localui_screen_content": [
+                    "rainbowpie_serverform_ui": {
+                      "type": "panel",
+                      "size": [ "50%", "100%" ],
+                      "controls": [
                         {
                           "vanilla_button@rainbowpieui_server_form.vanilla_button": {
                             "size": [ "28px", "28px" ],
