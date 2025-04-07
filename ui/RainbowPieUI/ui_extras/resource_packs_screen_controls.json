@@ -720,7 +720,7 @@
                               },
                               {
                                 "binding_type": "view",
-                                "source_property_name": "(not ((#icon_path - '/development_') = #icon_path)",
+                                "source_property_name": "(not ((#icon_path - 'development_') = #icon_path)",
                                 "target_property_name": "#visible"
                               }
                             ],
