@@ -125,8 +125,4 @@ rainbowpie.ui.hud.tablist.playertag.self=[ME]
 rainbowpie.ui.hud.tablist.playertag.offline=[OFFLINE]
 rainbowpie.ui.hud.clickspace.tiptext=Click this space to show HUD
 
-rainbowpie.ui.verify.title=You need to authenticate to use this version of RainbowPieUI
-rainbowpie.ui.verify.text=If you don't know the password, Please don't use this version.
-rainbowpie.ui.verify.password_placeholder=Enter password here
-
 rainbowpie.ui.dialog.title_default=Alert

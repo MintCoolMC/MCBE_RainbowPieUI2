@@ -125,8 +125,4 @@ rainbowpie.ui.hud.tablist.playertag.self=[我]
 rainbowpie.ui.hud.tablist.playertag.offline=[离线账户]
 rainbowpie.ui.hud.clickspace.tiptext=点击这个区域来显示HUD
 
-rainbowpie.ui.verify.title=你需要验证来使用此版本的RainbowPieUI
-rainbowpie.ui.verify.text=如果你不知道密码是什么，请前往内测群询问。
-rainbowpie.ui.verify.password_placeholder=在此键入密码
-
 rainbowpie.ui.dialog.title_default=注意
