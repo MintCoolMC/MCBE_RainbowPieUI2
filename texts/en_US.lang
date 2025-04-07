@@ -39,6 +39,7 @@ rainbowpie.ui.inventory.actions.drop_selection=Drop
 rainbowpie.ui.inventory.actions.drop_inventory=Drop all items from inventory
 
 rainbowpie.ui.inventory.durability=Durability:
+rainbowpie.ui.inventory.durability_remaining=Remaining durability:
 
 rainbowpie.ui.inventory.search_button=Click to search
 

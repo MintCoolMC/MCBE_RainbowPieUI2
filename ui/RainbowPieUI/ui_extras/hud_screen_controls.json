@@ -418,6 +418,18 @@
                             "size": [ "100%c", "100%cm" ],
                             "controls": [
                               {
+                                "durability_title@rainbowpie_ui_common.text_label": {
+                                  "text": "rainbowpie.ui.inventory.durability_remaining",
+                                  "color": [ 1.0, 0.333, 0.333 ]
+                                }
+                              },
+                              {
+                                "padding_1": {
+                                  "type": "panel",
+                                  "size": [ 1, 0 ]
+                                }
+                              },
+                              {
                                 "durability_text@rainbowpie_ui_common.text_label": {
                                   "text": "#text",
                                   "color": [ 1.0, 0.333, 0.333 ],
