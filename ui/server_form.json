@@ -2,6 +2,14 @@
 {
   "namespace": "server_form",
 
+  "long_form@rainbowpieui_server_form.long_form": {
+    "$rainbowpie_localui_backup_screen": false
+  },
+
+  "custom_form@rainbowpieui_server_form.custom_form": {
+    "$rainbowpie_localui_backup_screen": false
+  },
+
   "third_party_server_screen": {
     "$rainbowpie_localui_modified": true,
     "$rainbowpie_localui_screen_alias": "server_form",
