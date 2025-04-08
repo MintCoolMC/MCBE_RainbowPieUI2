@@ -1239,7 +1239,7 @@
       {
         "override_tab_hotkey@rainbowpieui_hud.override_tab_hotkey": {
           "ignored": "(not $rainbowpie_ui_feature_hud_tablist)",
-          "layer": 100
+          "layer": 125
         }
       },
       {
