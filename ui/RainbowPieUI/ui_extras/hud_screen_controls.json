@@ -16,6 +16,30 @@
           "size": [ "100%", "100%cm" ],
           "controls": [
             {
+              "padding_fill_0": {
+                "type": "panel",
+                "size": [ "fill", 0 ],
+                "bindings": [
+                  {
+                    "binding_name": "#progress_percentage",
+                    "binding_type": "collection",
+                    "binding_collection_name": "boss_bars"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(1000-#progress_percentage*1000)",
+                    "target_property_name": "#health_percentage_ratio"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#health_percentage_ratio = 1000)",
+                    "target_property_name": "#visible",
+                    "ignored": "(not $rainbowpie_ui_flag_dc165cd2)"
+                  }
+                ]
+              }
+            },
+            {
               "boss_name@rainbowpie_ui_common.text_label_notheme": {
                 "size": [ "default", "default" ],
                 "color": "$boss_name_text_color",
@@ -41,6 +65,24 @@
                 "type": "stack_panel",
                 "orientation": "horizontal",
                 "size": [ "100%c", "100%cm" ],
+                "bindings": [
+                  {
+                    "binding_name": "#progress_percentage",
+                    "binding_type": "collection",
+                    "binding_collection_name": "boss_bars"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(1000-#progress_percentage*1000)",
+                    "target_property_name": "#health_percentage_ratio"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not (#health_percentage_ratio = 1000))",
+                    "target_property_name": "#visible",
+                    "ignored": "(not $rainbowpie_ui_flag_dc165cd2)"
+                  }
+                ],
                 "controls": [
                   {
                     "health_percentage@rainbowpie_ui_common.text_label_notheme": {

@@ -187,7 +187,8 @@
   "$rainbowpie_ui_flag_1597ee9b": true, // Advanced Host Time Tweaker
   "$rainbowpie_ui_flag_6a8911d5": true, // Features Disabled Notification
   "$rainbowpie_ui_flag_1fa7dfd7": true, // NEW HUD TabList Header
-  "$rainbowpie_ui_flag_75ad0b10": true,
+  "$rainbowpie_ui_flag_75ad0b10": true, // HUD Boss Health Percentage
+  "$rainbowpie_ui_flag_dc165cd2": true, // Hidden Boss Health Percentage When Percentage is 100.0%
 
   // Debug
   "$rainbowpie_ui_debug": false,
