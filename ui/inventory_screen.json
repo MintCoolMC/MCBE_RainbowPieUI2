@@ -126,8 +126,10 @@
         "operation": "insert_front",
         "value": [
           {
-            "compass_panel@rainbowpieui_crafting.compass_panel": {
-            }
+            "crafting_helper_controller@rainbowpieui_crafting.crafting_helper_controller": {}
+          },
+          {
+            "compass_panel@rainbowpieui_crafting.compass_panel": {}
           }
         ]
       }

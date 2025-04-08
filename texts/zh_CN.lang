@@ -41,6 +41,7 @@ rainbowpie.ui.inventory.actions.destroy_inventory=销毁物品栏内全部物品
 rainbowpie.ui.inventory.actions.quick_craft=快速合成
 rainbowpie.ui.inventory.actions.drop_selection=丟出
 rainbowpie.ui.inventory.actions.drop_inventory=丟出物品栏内全部物品
+rainbowpie.ui.inventory.crafting_helper.title=全部合成后将会获得:
 
 rainbowpie.ui.inventory.durability=耐久度:
 rainbowpie.ui.inventory.durability_remaining=剩余耐久度:

@@ -41,6 +41,7 @@ rainbowpie.ui.inventory.actions.destroy_inventory=Destroy all items from invento
 rainbowpie.ui.inventory.actions.quick_craft=Quick Craft
 rainbowpie.ui.inventory.actions.drop_selection=Drop
 rainbowpie.ui.inventory.actions.drop_inventory=Drop all items from inventory
+rainbowpie.ui.inventory.crafting_helper.title=After all crafting, you will get:
 
 rainbowpie.ui.inventory.durability=Durability:
 rainbowpie.ui.inventory.durability_remaining=Remaining durability:

@@ -189,6 +189,7 @@
   "$rainbowpie_ui_flag_1fa7dfd7": true, // NEW HUD TabList Header
   "$rainbowpie_ui_flag_75ad0b10": true, // HUD Boss Health Percentage
   "$rainbowpie_ui_flag_dc165cd2": true, // Hidden Boss Health Percentage When Percentage is 100.0%
+  "$rainbowpie_ui_flag_73085b33": true, // Crafting Helper
 
   // Debug
   "$rainbowpie_ui_debug": false,
