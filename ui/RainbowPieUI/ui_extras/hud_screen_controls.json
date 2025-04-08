@@ -3008,14 +3008,14 @@
       {
         "world_icon_panel": {
           "type": "panel",
-          "size": [ 12, 10 ],
+          "size": [ 10, 10 ],
           "controls": [
             {
               "world_icon": {
                 "type": "image",
                 "texture": "($rainbowpie_ui_path_theme + '/icon/hud/tablist/world')",
-                "size": [ 12, 12 ],
-                "offset": [ -1.5, 0.5 ],
+                "size": [ 10, 10 ],
+                "offset": [ -2, 0 ],
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle"
               }
@@ -3050,10 +3050,9 @@
               "player_icon": {
                 "type": "image",
                 "texture": "($rainbowpie_ui_path_theme + '/icon/hud/tablist/player')",
-                "size": [ 12, 12 ],
-                "offset": [ 0, 0.5 ],
-                "anchor_from": "right_middle",
-                "anchor_to": "right_middle"
+                "size": [ 10, 10 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
               }
             }
           ]
