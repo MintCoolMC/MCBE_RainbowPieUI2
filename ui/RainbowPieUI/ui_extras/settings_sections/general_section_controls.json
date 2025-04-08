@@ -756,6 +756,116 @@
           "text": "('%.12s' * $var_1)"
         }
       },
+      // 比较最小数值 2x2 (4) (By DeepSeek AI)
+      {
+        "title_014_str@rainbowpie_ui_common.text_label": {
+          "text": "#result_text",
+          "property_bag": {
+            "#a": 52,
+            "#b": 64,
+            "#c": 81,
+            "#d": 32,
+            "#result": 0
+          },
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "((#a < #b) * #a + (#b < #a) * #b)",
+              "target_property_name": "#temp_1"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#temp_1 < #c) * #temp_1 + (#c < #temp_1) * #c)",
+              "target_property_name": "#temp_2"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#temp_2 < #d) * #temp_2 + (#d < #temp_2) * #d)",
+              "target_property_name": "#result"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('zz' + #result)",
+              "target_property_name": "#result_text"
+            }
+          ]
+        }
+      },
+      // 比较最小数值 3x3 (9) (By DeepSeek AI)
+      {
+        "title_015_str@rainbowpie_ui_common.text_label": {
+          "text": "#result_text",
+          "property_bag": {
+            "#a": 52,
+            "#b": 64,
+            "#c": 81,
+            "#d": 32,
+            "#e": 92,
+            "#f": 81,
+            "#g": 23,
+            "#h": 33,
+            "#i": 41,
+            "#result": 0
+          },
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "((#a < #b) * #a + (#b < #a) * #b)",
+              "target_property_name": "#temp_1"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#temp_1 < #c) * #temp_1 + (#c < #temp_1) * #c)",
+              "target_property_name": "#temp_2"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#temp_2 < #d) * #temp_2 + (#d < #temp_2) * #d)",
+              "target_property_name": "#temp_3"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#temp_3 < #e) * #temp_3 + (#e < #temp_3) * #e)",
+              "target_property_name": "#temp_4"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#temp_4 < #f) * #temp_4 + (#f < #temp_4) * #f)",
+              "target_property_name": "#temp_5"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#temp_5 < #g) * #temp_5 + (#g < #temp_5) * #g)",
+              "target_property_name": "#temp_6"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#temp_5 < #g) * #temp_5 + (#g < #temp_5) * #g)",
+              "target_property_name": "#temp_6"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#temp_5 < #g) * #temp_5 + (#g < #temp_5) * #g)",
+              "target_property_name": "#temp_6"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#temp_6 < #h) * #temp_6 + (#h < #temp_6) * #h)",
+              "target_property_name": "#temp_7"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#temp_7 < #i) * #temp_7 + (#i < #temp_7) * #i)",
+              "target_property_name": "#result"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('zz' + #result)",
+              "target_property_name": "#result_text"
+            }
+          ]
+        }
+      },
       {
         "spacer_2": {
           "type": "panel",
