@@ -132,3 +132,5 @@ rainbowpie.ui.hud.tablist.playertag.offline=[离线账户]
 rainbowpie.ui.hud.clickspace.tiptext=点击这个区域来显示HUD
 
 rainbowpie.ui.dialog.title_default=注意
+
+rainbowpie.ui.symbols.percentage=%

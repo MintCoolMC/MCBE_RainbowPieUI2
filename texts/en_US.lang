@@ -132,3 +132,5 @@ rainbowpie.ui.hud.tablist.playertag.offline=[OFFLINE]
 rainbowpie.ui.hud.clickspace.tiptext=Click this space to show HUD
 
 rainbowpie.ui.dialog.title_default=Alert
+
+rainbowpie.ui.symbols.percentage=%

@@ -2,6 +2,22 @@
 {
   "namespace": "hud",
 
+  "boss_health_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "boss_name_panel@rainbowpieui_hud.boss_name_panel": {} }
+        ]
+      }
+    ]
+  },
+
+  "boss_health_panel/boss_name": {
+    "ignored": "$rainbowpie_ui_flag_75ad0b10"
+  },
+
   "exp_progress_bar_and_hotbar_pocket/item_text/item_text_factory": {
     "factory_variables": [
       "$rainbowpie_ui_theme_global_font_name",
