@@ -57,6 +57,8 @@
   "$rainbowpie_ui_flag_resourcepack_displayname": "", // 兼容其他资源包时的显示名称
   "$rainbowpie_ui_flag_notification_features_disabled": false,
   "$rainbowpie_ui_flag_notification_features_disabled_reason": "", // resourcepack; server
+  "$rainbowpie_ui_flag_custom_server_icon": false,
+  "$rainbowpie_ui_flag_custom_server_icon_name": "",
   "$rainbowpie_ui_flag_bg_mask_ingame": true, // 在游戏内是否显示mask
   "$rainbowpie_ui_flag_bg_mask": true, // 在游戏外是否显示mask
   "$rainbowpie_ui_flag_overlay_screen": "toast_screen.toast_screen_content,debug_screen.content_panel,hud.hud_content,", // 覆盖界面

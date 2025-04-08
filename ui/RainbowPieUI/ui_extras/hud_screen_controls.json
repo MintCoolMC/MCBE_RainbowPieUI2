@@ -3017,7 +3017,19 @@
                 "size": [ 10, 10 ],
                 "offset": [ -2, 0 ],
                 "anchor_from": "left_middle",
-                "anchor_to": "left_middle"
+                "anchor_to": "left_middle",
+                "ignored": "$rainbowpie_ui_flag_custom_server_icon"
+              }
+            },
+            {
+              "server_icon": {
+                "type": "image",
+                "texture": "($rainbowpie_ui_path_home + '/server/' + $rainbowpie_ui_flag_custom_server_icon_name)",
+                "size": [ 10, 10 ],
+                "offset": [ -2, 0 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "ignored": "(not $rainbowpie_ui_flag_custom_server_icon)"
               }
             }
           ]
