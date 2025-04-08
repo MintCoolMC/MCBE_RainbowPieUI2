@@ -3105,7 +3105,7 @@
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "(#collection_index < 13)",
+                    "source_property_name": "(#collection_index < 12)",
                     "target_property_name": "#visible"
                   }
                 ]
