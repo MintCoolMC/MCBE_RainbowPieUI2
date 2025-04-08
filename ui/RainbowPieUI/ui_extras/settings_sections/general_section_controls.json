@@ -751,6 +751,12 @@
         }
       },
       {
+        "title_013_str@rainbowpie_ui_common.text_label": {
+          "$var_1": "ABCDEF0123456789",
+          "text": "('%.12s' * $var_1)"
+        }
+      },
+      {
         "spacer_2": {
           "type": "panel",
           "size": [ 1, 1 ]
