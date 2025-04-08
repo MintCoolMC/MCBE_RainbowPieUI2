@@ -763,24 +763,44 @@
           "property_bag": {
             "#a": 52,
             "#b": 64,
-            "#c": 81,
+            "#c": 0,
             "#d": 32,
             "#result": 0
           },
           "bindings": [
             {
               "binding_type": "view",
-              "source_property_name": "((#a < #b) * #a + (#b < #a) * #b)",
+              "source_property_name": "((#a > 0) * #a + (#a < 1) * 9990)",
+              "target_property_name": "#adjusted_a"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#b > 0) * #b + (#b < 1) * 9990)",
+              "target_property_name": "#adjusted_b"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#c > 0) * #c + (#c < 1) * 9990)",
+              "target_property_name": "#adjusted_c"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#d > 0) * #d + (#d < 1) * 9990)",
+              "target_property_name": "#adjusted_d"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#adjusted_a < #adjusted_b) * #adjusted_a + (#adjusted_b < #adjusted_a) * #adjusted_b)",
               "target_property_name": "#temp_1"
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#temp_1 < #c) * #temp_1 + (#c < #temp_1) * #c)",
+              "source_property_name": "((#temp_1 < #adjusted_c) * #temp_1 + (#adjusted_c < #temp_1) * #adjusted_c)",
               "target_property_name": "#temp_2"
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#temp_2 < #d) * #temp_2 + (#d < #temp_2) * #d)",
+              "source_property_name": "((#temp_2 < #adjusted_d) * #temp_2 + (#adjusted_d < #temp_2) * #adjusted_d)",
               "target_property_name": "#result"
             },
             {
@@ -800,7 +820,7 @@
             "#b": 64,
             "#c": 81,
             "#d": 32,
-            "#e": 92,
+            "#e": 0,
             "#f": 81,
             "#g": 23,
             "#h": 33,
@@ -810,52 +830,87 @@
           "bindings": [
             {
               "binding_type": "view",
-              "source_property_name": "((#a < #b) * #a + (#b < #a) * #b)",
+              "source_property_name": "((#a > 0) * #a + (#a < 1) * 9990)",
+              "target_property_name": "#adjusted_a"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#b > 0) * #b + (#b < 1) * 9990)",
+              "target_property_name": "#adjusted_b"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#c > 0) * #c + (#c < 1) * 9990)",
+              "target_property_name": "#adjusted_c"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#d > 0) * #d + (#d < 1) * 9990)",
+              "target_property_name": "#adjusted_d"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#e > 0) * #e + (#e < 1) * 9990)",
+              "target_property_name": "#adjusted_e"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#f > 0) * #f + (#f < 1) * 9990)",
+              "target_property_name": "#adjusted_f"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#g > 0) * #g + (#g < 1) * 9990)",
+              "target_property_name": "#adjusted_g"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#h > 0) * #h + (#h < 1) * 9990)",
+              "target_property_name": "#adjusted_h"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#i > 0) * #i + (#i < 1) * 9990)",
+              "target_property_name": "#adjusted_i"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#adjusted_a < #adjusted_b) * #adjusted_a + (#adjusted_b < #adjusted_a) * #adjusted_b)",
               "target_property_name": "#temp_1"
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#temp_1 < #c) * #temp_1 + (#c < #temp_1) * #c)",
+              "source_property_name": "((#temp_1 < #adjusted_c) * #temp_1 + (#adjusted_c < #temp_1) * #adjusted_c)",
               "target_property_name": "#temp_2"
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#temp_2 < #d) * #temp_2 + (#d < #temp_2) * #d)",
+              "source_property_name": "((#temp_2 < #adjusted_d) * #temp_2 + (#adjusted_d < #temp_2) * #adjusted_d)",
               "target_property_name": "#temp_3"
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#temp_3 < #e) * #temp_3 + (#e < #temp_3) * #e)",
+              "source_property_name": "((#temp_3 < #adjusted_e) * #temp_3 + (#adjusted_e < #temp_3) * #adjusted_e)",
               "target_property_name": "#temp_4"
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#temp_4 < #f) * #temp_4 + (#f < #temp_4) * #f)",
+              "source_property_name": "((#temp_4 < #adjusted_f) * #temp_4 + (#adjusted_f < #temp_4) * #adjusted_f)",
               "target_property_name": "#temp_5"
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#temp_5 < #g) * #temp_5 + (#g < #temp_5) * #g)",
+              "source_property_name": "((#temp_5 < #adjusted_g) * #temp_5 + (#adjusted_g < #temp_5) * #adjusted_g)",
               "target_property_name": "#temp_6"
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#temp_5 < #g) * #temp_5 + (#g < #temp_5) * #g)",
-              "target_property_name": "#temp_6"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "((#temp_5 < #g) * #temp_5 + (#g < #temp_5) * #g)",
-              "target_property_name": "#temp_6"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "((#temp_6 < #h) * #temp_6 + (#h < #temp_6) * #h)",
+              "source_property_name": "((#temp_6 < #adjusted_h) * #temp_6 + (#adjusted_h < #temp_6) * #adjusted_h)",
               "target_property_name": "#temp_7"
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#temp_7 < #i) * #temp_7 + (#i < #temp_7) * #i)",
+              "source_property_name": "((#temp_7 < #adjusted_i) * #temp_7 + (#adjusted_i < #temp_7) * #adjusted_i)",
               "target_property_name": "#result"
             },
             {
