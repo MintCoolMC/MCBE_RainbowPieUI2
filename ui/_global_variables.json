@@ -656,6 +656,7 @@
   // The variables here will be overwritten when the server loads the resource package.
   "$is_zeqa": false, // Zeqa Network (Server)
   "$cubecraft_green": "string", // CubeCraft (Server)
+  "$is_hivebedrock": false,
   "$is_netease": false // China Version
 }
 
