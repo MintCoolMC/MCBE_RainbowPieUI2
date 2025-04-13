@@ -325,7 +325,7 @@
           "inline_modal": true,
           "focus_enabled": false,
           "visible": false,
-          "layer": 1,
+          "layer": 16,
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "size": [ "100%", 50 ],
@@ -435,7 +435,7 @@
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "size": [ "100%", 50 ],
-          "layer": 10,
+          "layer": 15,
           "controls": [
             {
               "hover@common.focus_border_white": {
@@ -466,7 +466,7 @@
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "size": [ "100%", 50 ],
-          "layer": 1,
+          "layer": 12,
           "controls": [
             {
               "pack_icon": {
