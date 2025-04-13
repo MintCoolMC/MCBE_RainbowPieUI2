@@ -2,6 +2,13 @@
 {
   "namespace": "rainbowpieui_start",
 
+  "friends_icon": {
+    "type": "image",
+    "texture": "textures/ui/friendsbutton/navbar-friends-icon",
+    "layer": 3,
+    "size": [ 16, 16 ]
+  },
+
   "treatment_store_button_status_panel@rainbowpie_ui_button.rainbowpie_ui_button_default": {
     "$is_treatment_button|default": true,
     "$rainbowpie_localui_button_border_enabled|default": "(not $is_treatment_button)",
@@ -1421,7 +1428,6 @@
                                           },
                                           {
                                             "inbox_button_padding": {
-                                              "ignored": true,
                                               "type": "panel",
                                               "size": [ 4, 0 ]
                                             }
@@ -1433,6 +1439,22 @@
                                               "$button_image_size": [ "100%", "100%" ],
                                               "$pressed_button_name": "button.menu_invite_notification",
                                               "$button_content": "rainbowpieui_start.invite_notification_icon",
+                                              "size": [ "100%y", "100%" ]
+                                            }
+                                          },
+                                          {
+                                            "realms_invite_button_padding": {
+                                              "ignored": true,
+                                              "type": "panel",
+                                              "size": [ 4, 0 ]
+                                            }
+                                          },
+                                          {
+                                            "friends_button@common_buttons.light_content_button": {
+                                              "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+                                              "$button_image_size": [ "100%", "100%" ],
+                                              "$pressed_button_name": "button.friends_drawer",
+                                              "$button_content": "rainbowpieui_start.friends_icon",
                                               "size": [ "100%y", "100%" ]
                                             }
                                           }
