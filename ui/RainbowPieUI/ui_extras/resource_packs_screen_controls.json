@@ -325,7 +325,7 @@
           "inline_modal": true,
           "focus_enabled": false,
           "visible": false,
-          "layer": 16,
+          "layer": 19,
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "size": [ "100%", 50 ],
@@ -435,7 +435,7 @@
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "size": [ "100%", 50 ],
-          "layer": 15,
+          "layer": 18,
           "controls": [
             {
               "hover@common.focus_border_white": {
@@ -457,6 +457,44 @@
               "binding_collection_name": "$button_collection_name",
               "binding_name": "#direction_button_visible",
               "binding_type": "collection"
+            }
+          ]
+        }
+      },
+      {
+        "banner": {
+          "type": "image",
+          "texture": "($rainbowpie_ui_path_home + '/banner')",
+          "fill": true,
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [ "100%", 50 ],
+          "layer": 11,
+          "bindings": [
+            {
+              "binding_collection_name": "$button_collection_name",
+              "binding_name": "#name",
+              "binding_type": "collection"
+            },
+            {
+              "binding_collection_name": "$button_collection_name",
+              "binding_name": "#description",
+              "binding_type": "collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#name = $mintui_pack_name) and (#description = $mintui_pack_description))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "banner_overlay": {
+                "type": "image",
+                "texture": "textures/ui/White",
+                "color": [ 0.0, 0.0, 0.0 ],
+                "alpha": 0.35
+              }
             }
           ]
         }
