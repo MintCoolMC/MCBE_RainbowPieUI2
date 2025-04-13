@@ -2038,7 +2038,7 @@
                     }
                   },
                   {
-                    "startui@start.start_screen_content": {}
+                    "startui@$screen_content": {}
                   }
                 ]
               }

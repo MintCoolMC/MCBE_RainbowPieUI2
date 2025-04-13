@@ -609,7 +609,7 @@
                     }
                   },
                   {
-                    "pauseui@pause.pause_screen_content": {}
+                    "pauseui@$screen_content": {}
                   }
                 ]
               }
