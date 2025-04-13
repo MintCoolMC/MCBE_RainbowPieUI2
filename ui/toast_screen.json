@@ -2,6 +2,10 @@
 {
   "namespace": "toast_screen",
 
+  "popup_anim": {
+    "easing": "out_cubic"
+  },
+
   "toast_screen_content": {
     "factory": {
       "name": "toast_factory",
@@ -122,6 +126,9 @@
 
   "popup": {
     "$popup_size": [ "60%", 26 ],
+    "$offset_anims": [
+      "@rainbowpieui_toast_screen.popup_anim"
+    ],
     "modifications": [
       {
         "array_name": "controls",
