@@ -17,6 +17,17 @@ rainbowpie.ui.themesystem.description.title=Description:
 rainbowpie.ui.themesystem.version_toolow=This theme version is too low! please update!
 rainbowpie.ui.themesystem.version_toohight=This theme version is too hight!
 
+rainbowpie.ui.about.version.branch=Branch
+rainbowpie.ui.about.version.commit=Commit
+rainbowpie.ui.about.version.version=Version
+rainbowpie.ui.about.version.codename=Codename
+rainbowpie.ui.about.compatibility=Compatibility
+rainbowpie.ui.about.compatibility.target=Target
+rainbowpie.ui.about.compatibility.compatible=Compatible
+rainbowpie.ui.about.compatibility.target_code=Target Code
+rainbowpie.ui.about.compatibility.max_code=MAX Code
+rainbowpie.ui.about.compatibility.min_code=MIN Code
+
 rainbowpie.ui.notification.features_disabled.server=You are playing
 rainbowpie.ui.notification.features_disabled.resourcepack=You are using
 rainbowpie.ui.notification.features_disabled.text=Some features are disabled

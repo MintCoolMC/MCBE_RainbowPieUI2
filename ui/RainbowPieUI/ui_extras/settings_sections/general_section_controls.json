@@ -32,12 +32,15 @@
       {
         "header_panel": {
           "type": "panel",
-          "size": [ "100%", "100%c + 32px" ],
+          "size": [ "100%", "100%c + 20px" ],
           "controls": [
             {
               "background": {
                 "type": "image",
                 "size": [ "100% - 32px", "100%cm + 4px" ],
+                "offset": [ 0, 16 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
                 "texture": "($rainbowpie_ui_path_home + '/r_white')",
                 "color": "$rainbowpie_ui_theme_text_background_color",
                 "alpha": "$rainbowpie_ui_theme_text_background_alpha",
@@ -52,6 +55,7 @@
                       "controls": [
                         {
                           "label_1@rainbowpie_ui_common.text_label": {
+                            "ignored": "$rainbowpie_ui_flag_about_verison_infomation",
                             "layer": 1,
                             "size": [ "100% - 44px", "default" ],
                             "offset": [ 42, 1 ],
@@ -88,6 +92,148 @@
                     }
                   }
                 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "version_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%c" ],
+          "ignored": "(not $rainbowpie_ui_flag_about_verison_infomation)",
+          "controls": [
+            {
+              "version_stack_panel": {
+                "type": "stack_panel",
+                "size": [ "100% - 32px", "100%c" ],
+                "controls": [
+                  {
+                    "title_label@rainbowpie_ui_common.text_label": {
+                      "layer": 1,
+                      "size": [ "100%", "default" ],
+                      "text": "$mintui_pack_name",
+                      "font_scale_factor": 1.5
+                    }
+                  },
+                  {
+                    "title_driven@rainbowpieui_settings_common.driven": {}
+                  },
+                  {
+                    "branch@rainbowpieui_general_section.info_label": {
+                      "$rainbowpie_localui_info_title": "rainbowpie.ui.about.version.branch",
+                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_branch_type + '/' + $rainbowpieui_branch_name)"
+                    }
+                  },
+                  {
+                    "commit@rainbowpieui_general_section.info_label": {
+                      "$rainbowpie_localui_info_title": "rainbowpie.ui.about.version.commit",
+                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_commit_id)"
+                    }
+                  },
+                  {
+                    "version@rainbowpieui_general_section.info_label": {
+                      "$rainbowpie_localui_info_title": "rainbowpie.ui.about.version.version",
+                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version)"
+                    }
+                  },
+                  {
+                    "codename@rainbowpieui_general_section.info_label": {
+                      "$rainbowpie_localui_info_title": "rainbowpie.ui.about.version.codename",
+                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_codename)"
+                    }
+                  },
+                  {
+                    "compatibility_padding": {
+                      "type": "panel",
+                      "size": [ 0, 6 ]
+                    }
+                  },
+                  {
+                    "compatibility_title_label@rainbowpie_ui_common.text_label": {
+                      "layer": 1,
+                      "size": [ "100%", "default" ],
+                      "text": "rainbowpie.ui.about.compatibility",
+                      "font_scale_factor": 1.5
+                    }
+                  },
+                  {
+                    "compatibility_title_driven@rainbowpieui_settings_common.driven": {}
+                  },
+                  {
+                    "target@rainbowpieui_general_section.info_label": {
+                      "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.target",
+                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_version_minecraft_target)"
+                    }
+                  },
+                  {
+                    "compatible@rainbowpieui_general_section.info_label": {
+                      "$minor_max": "(('§§' + $rainbowpieui_version_minecraft_max) - ($rainbowpieui_version_minecraft_bigver + '.'))",
+                      "$minor_min": "(('§§' + $rainbowpieui_version_minecraft_min) - ($rainbowpieui_version_minecraft_bigver + '.'))",
+                      "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.compatible",
+                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_version_minecraft_bigver + '.' + $minor_min + '-' + $minor_max)"
+                    }
+                  },
+                  {
+                    "compatibility_variable_panel@rainbowpieui_compatibility_config.compatibility_variables": {
+                      "type": "stack_panel",
+                      "size": [ "100%", "100%c" ],
+                      "controls": [
+                        {
+                          "target_code@rainbowpieui_general_section.info_label": {
+                            "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.target_code",
+                            "$rainbowpie_localui_info_value": "('§§' + $compatibility_target_version)"
+                          }
+                        },
+                        {
+                          "max_code@rainbowpieui_general_section.info_label": {
+                            "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.max_code",
+                            "$rainbowpie_localui_info_value": "('§§' + $compatibility_max_version)"
+                          }
+                        },
+                        {
+                          "min_code@rainbowpieui_general_section.info_label": {
+                            "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.min_code",
+                            "$rainbowpie_localui_info_value": "('§§' + $compatibility_min_version)"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "info_label": {
+    "type": "panel",
+    "size": [ "100%", "100%c + 4px" ],
+
+    "$rainbowpie_localui_info_title|default": "INFOMATION TITLE",
+    "$rainbowpie_localui_info_value|default": "default value",
+    "controls": [
+      {
+        "info_label": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", "100%cm" ],
+          "controls": [
+            {
+              "info_title_label@rainbowpie_ui_common.text_label": {
+                "layer": 1,
+                "size": [ "fill", "default" ],
+                "text": "$rainbowpie_localui_info_title"
+              }
+            },
+            {
+              "info_title_label@rainbowpie_ui_common.text_label": {
+                "layer": 1,
+                "size": [ "fill", "default" ],
+                "text": "$rainbowpie_localui_info_value"
               }
             }
           ]
