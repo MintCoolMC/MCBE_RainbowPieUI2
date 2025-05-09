@@ -17,6 +17,17 @@ rainbowpie.ui.themesystem.description.title=介紹:	#
 rainbowpie.ui.themesystem.version_toolow=當前外觀包版本太低！	#
 rainbowpie.ui.themesystem.version_toohight=當前外觀包版本太高！	#
 
+rainbowpie.ui.about.version.branch=分支
+rainbowpie.ui.about.version.commit=Commit
+rainbowpie.ui.about.version.version=版本
+rainbowpie.ui.about.version.codename=代號
+rainbowpie.ui.about.compatibility=相容性
+rainbowpie.ui.about.compatibility.target=目標版本
+rainbowpie.ui.about.compatibility.compatible=兼容
+rainbowpie.ui.about.compatibility.target_code=目標版本代碼
+rainbowpie.ui.about.compatibility.max_code=最大版本代碼
+rainbowpie.ui.about.compatibility.min_code=最低版本代碼
+
 rainbowpie.ui.notification.features_disabled.server=您正在游玩
 rainbowpie.ui.notification.features_disabled.resourcepack=您正在使用
 rainbowpie.ui.notification.features_disabled.text=某些功能將被禁用
