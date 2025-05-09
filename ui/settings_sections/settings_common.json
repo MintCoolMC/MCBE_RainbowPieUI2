@@ -219,7 +219,12 @@
     "size": [ "100%", 28 ]
   },
 
-  "option_generic_core/two_line_layout/option_label_panel/option_label": {
+  "option_generic_core/two_line_layout/option_label_panel/option_label_subpanel_01/option_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+    "option_generic_core/two_line_layout/option_label_panel/option_label_subpanel_02/option_label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
@@ -229,7 +234,12 @@
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
 
-  "option_generic_core/one_line_layout/option_label": {
+  "option_generic_core/one_line_layout/option_label_subpanel_01/option_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+    "option_generic_core/one_line_layout/option_label_subpanel_02/option_label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
