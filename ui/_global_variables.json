@@ -15,6 +15,7 @@
   "$rainbowpieui_watermark": true,
   "$rainbowpieui_bool": true,
 
+  "$rainbowpieui_version_minecraft_subpacks": "v1.21.8x|v1.21.7x",
   "$rainbowpieui_version_minecraft_target": "v1.21.80",
   "$rainbowpieui_version_minecraft_bigver": "v1.21",
   "$rainbowpieui_version_minecraft_max": "v1.21.89",

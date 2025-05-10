@@ -161,6 +161,12 @@
                     "compatibility_title_driven@rainbowpieui_settings_common.driven": {}
                   },
                   {
+                    "subpacks@rainbowpieui_general_section.info_label": {
+                      "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.subpacks",
+                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_version_minecraft_subpacks)"
+                    }
+                  },
+                  {
                     "compatibility_variable_panel@rainbowpieui_compatibility_config.compatibility_variables": {
                       "type": "stack_panel",
                       "size": [ "100%", "100%c" ],

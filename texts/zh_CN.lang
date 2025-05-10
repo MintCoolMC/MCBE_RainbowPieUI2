@@ -22,6 +22,7 @@ rainbowpie.ui.about.version.commit=提交
 rainbowpie.ui.about.version.version=版本
 rainbowpie.ui.about.version.codename=代号
 rainbowpie.ui.about.compatibility=兼容性
+rainbowpie.ui.about.compatibility.subpacks=子包兼容性
 rainbowpie.ui.about.compatibility.target=目标版本
 rainbowpie.ui.about.compatibility.compatible=兼容
 rainbowpie.ui.about.compatibility.target_code=目标代码

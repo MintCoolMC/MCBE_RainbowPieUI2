@@ -22,6 +22,7 @@ rainbowpie.ui.about.version.commit=Commit
 rainbowpie.ui.about.version.version=Version
 rainbowpie.ui.about.version.codename=Codename
 rainbowpie.ui.about.compatibility=Compatibility
+rainbowpie.ui.about.compatibility.subpacks=Subpacks
 rainbowpie.ui.about.compatibility.target=Target
 rainbowpie.ui.about.compatibility.compatible=Compatible
 rainbowpie.ui.about.compatibility.target_code=Target Code
