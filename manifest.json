@@ -5,7 +5,7 @@
         "name": "Rainbow Pie UI",
         "uuid": "82d610e8-0968-4c0a-a47e-38e6663ee6ff",
         "version": [ 2, 8, 10371 ],
-        "min_engine_version": [ 1, 21, 80 ]
+        "min_engine_version": [ 1, 21, 70 ]
     },
     "modules": [
         {
@@ -24,6 +24,11 @@
         {
             "folder_name": "default",
             "name": "Compatibility: Default",
+            "memory_tier": 0
+        },
+        {
+            "folder_name": "v1.21.7x",
+            "name": "Compatibility: v1.21.7x",
             "memory_tier": 0
         }
     ]
