@@ -22,13 +22,13 @@
     ],
     "subpacks": [
         {
-            "folder_name": "default",
-            "name": "Compatibility: Default",
+            "folder_name": "v1.21.7x",
+            "name": "Compatibility: v1.21.7x",
             "memory_tier": 0
         },
         {
-            "folder_name": "v1.21.7x",
-            "name": "Compatibility: v1.21.7x",
+            "folder_name": "default",
+            "name": "Compatibility: Default",
             "memory_tier": 0
         }
     ]
