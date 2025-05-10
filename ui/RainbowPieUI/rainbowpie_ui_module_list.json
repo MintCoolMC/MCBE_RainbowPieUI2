@@ -124,14 +124,7 @@
           "anchor_to": "top_middle",
           "controls": [
             {
-              "top_driven": {
-                "type": "image",
-                "size": [ "100%", 1 ],
-                "texture": "textures/ui/White",
-                "color": [ 1.0, 1.0, 1.0 ],
-                "alpha": 0.25,
-                "layer": 1
-              }
+              "top_driven@rainbowpieui_settings_common.driven": {}
             },
             {
               "padding_0": {

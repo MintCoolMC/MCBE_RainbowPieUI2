@@ -255,7 +255,7 @@
   "$rainbowpie_ui_flag_bce3269f": true, // InventoryUI new touch mode drop
 
   // Theme System //
-  "$rainbowpie_ui_themesystem_version": "1093",
+  "$rainbowpie_ui_themesystem_version": "1094",
 
   // Theme Info //
   "$rainbowpie_ui_theme_icon": "textures/MintUI/pack_icon",
@@ -265,7 +265,7 @@
   "$rainbowpie_ui_theme_description": "rainbowpie.ui.theme.default_description",
   "$rainbowpie_ui_theme_background_name": "Mushisland",
   "$rainbowpie_ui_theme_background_description": "Minecraft Java v1.21.4\nBliss Shader with Distant Horizons\nWorld: Terra Bukkit Plugin\n§eShot by Mintraspberry Cool",
-  "$rainbowpie_ui_theme_version": "1093",
+  "$rainbowpie_ui_theme_version": "1094",
 
   // Theme Background //
   "$rainbowpie_ui_theme_background_mask_texture_ingame": "textures/MintUI/background/background_mask",
@@ -283,6 +283,10 @@
   "$rainbowpie_ui_theme_global_background_alpha": 0.3,
   "$rainbowpie_ui_theme_global_font_name": "SmoothFontLatin",
   "$rainbowpie_ui_theme_global_font_backup_name": "default",
+
+  // Theme Driven Variables //
+  "$rainbowpie_ui_theme_driven_color": [ 1.0, 1.0, 1.0 ],
+  "$rainbowpie_ui_theme_driven_alpha": 0.25,
 
   // Theme HoverText Variables //
   "$rainbowpie_ui_theme_hovertext_background_color": [ 0.011, 0.011, 0.011 ],

@@ -6,8 +6,8 @@
     "type": "image",
     "size": [ "100%", 1 ],
     "texture": "textures/ui/White",
-    "color": [ 1.0, 1.0, 1.0 ],
-    "alpha": 0.25,
+    "color": "$rainbowpie_ui_theme_driven_color",
+    "alpha": "$rainbowpie_ui_theme_driven_alpha",
     "layer": 1
   },
 
