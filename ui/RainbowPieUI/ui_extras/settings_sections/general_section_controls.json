@@ -161,24 +161,24 @@
                     "compatibility_title_driven@rainbowpieui_settings_common.driven": {}
                   },
                   {
-                    "target@rainbowpieui_general_section.info_label": {
-                      "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.target",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_version_minecraft_target)"
-                    }
-                  },
-                  {
-                    "compatible@rainbowpieui_general_section.info_label": {
-                      "$minor_max": "(('§§' + $rainbowpieui_version_minecraft_max) - ($rainbowpieui_version_minecraft_bigver + '.'))",
-                      "$minor_min": "(('§§' + $rainbowpieui_version_minecraft_min) - ($rainbowpieui_version_minecraft_bigver + '.'))",
-                      "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.compatible",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_version_minecraft_bigver + '.' + $minor_min + '-' + $minor_max)"
-                    }
-                  },
-                  {
                     "compatibility_variable_panel@rainbowpieui_compatibility_config.compatibility_variables": {
                       "type": "stack_panel",
                       "size": [ "100%", "100%c" ],
                       "controls": [
+                        {
+                          "target@rainbowpieui_general_section.info_label": {
+                            "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.target",
+                            "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_version_minecraft_target)"
+                          }
+                        },
+                        {
+                          "compatible@rainbowpieui_general_section.info_label": {
+                            "$minor_max": "(('§§' + $rainbowpieui_version_minecraft_max) - ($rainbowpieui_version_minecraft_bigver + '.'))",
+                            "$minor_min": "(('§§' + $rainbowpieui_version_minecraft_min) - ($rainbowpieui_version_minecraft_bigver + '.'))",
+                            "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.compatible",
+                            "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_version_minecraft_bigver + '.' + $minor_min + '-' + $minor_max)"
+                          }
+                        },
                         {
                           "target_code@rainbowpieui_general_section.info_label": {
                             "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.target_code",
