@@ -1794,6 +1794,88 @@
         }
       },
       {
+        "server_infomation@rainbowpie_ui_common.title_background": {
+          "ignored": "(not $rainbowpie_ui_flag_server_infomation_enabled)",
+          "size": [ "100%", 36 ],
+          "controls": [
+            {
+              "horizontal_stack_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100%", "100%" ],
+                "controls": [
+                  {
+                    "server_logo": {
+                      "type": "image",
+                      "size": [ "100%y", "100%" ],
+                      "texture": "($rainbowpie_ui_path_home + '/server_logo/' + $rainbowpie_ui_flag_server_infomation_logo_name)",
+                      "layer": 1
+                    }
+                  },
+                  {
+                    "infomation_panel": {
+                      "type": "panel",
+                      "size": [ "fill", "100%" ],
+                      "controls": [
+                        {
+                          "infomation_stack_panel": {
+                            "type": "stack_panel",
+                            "size": [ "100% - 4px", "100% - 4px" ],
+                            "controls": [
+                              {
+                                "header_stack_panel": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
+                                  "size": [ "100%", "100%cm" ],
+                                  "controls": [
+                                    {
+                                      "server_name@rainbowpie_ui_common.title_label": {
+                                        "size": [ "default", "default" ],
+                                        "text": "$rainbowpie_ui_flag_server_infomation_server_name",
+                                        "font_scale_factor": 1.2,
+                                        "layer": 1
+                                      }
+                                    },
+                                    {
+                                      "server_desc@rainbowpie_ui_common.title_label": {
+                                        "size": [ "fill", "default" ],
+                                        "text": "$rainbowpie_ui_flag_server_infomation_description",
+                                        "text_alignment": "right",
+                                        "layer": 1
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "server_website@rainbowpie_ui_common.title_label": {
+                                  "size": [ "default", "default" ],
+                                  "text": "$rainbowpie_ui_flag_server_infomation_link_website",
+                                  "color":  [ 1.0, 1.0, 0.333 ],
+                                  "layer": 1
+                                }
+                              },
+                              {
+                                "server_support@rainbowpie_ui_common.title_label": {
+                                  "size": [ "default", "default" ],
+                                  "text": "$rainbowpie_ui_flag_server_infomation_link_support",
+                                  "color":  [ 1.0, 1.0, 0.333 ],
+                                  "layer": 1
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
         "list_title@rainbowpie_ui_common.title_background": {
           "size": [ "100%", 14 ],
           "controls": [

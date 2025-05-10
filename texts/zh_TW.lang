@@ -17,6 +17,9 @@ rainbowpie.ui.themesystem.description.title=介紹:	#
 rainbowpie.ui.themesystem.version_toolow=當前外觀包版本太低！	#
 rainbowpie.ui.themesystem.version_toohight=當前外觀包版本太高！	#
 
+rainbowpie.ui.server_infomation.website=網站:
+rainbowpie.ui.server_infomation.support=支援:
+
 rainbowpie.ui.about.version.branch=分支
 rainbowpie.ui.about.version.commit=Commit
 rainbowpie.ui.about.version.version=版本

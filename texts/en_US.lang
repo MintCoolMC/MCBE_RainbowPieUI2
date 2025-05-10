@@ -17,6 +17,9 @@ rainbowpie.ui.themesystem.description.title=Description:
 rainbowpie.ui.themesystem.version_toolow=This theme version is too low! please update!
 rainbowpie.ui.themesystem.version_toohight=This theme version is too hight!
 
+rainbowpie.ui.server_infomation.website=Website:
+rainbowpie.ui.server_infomation.support=Support:
+
 rainbowpie.ui.about.version.branch=Branch
 rainbowpie.ui.about.version.commit=Commit
 rainbowpie.ui.about.version.version=Version

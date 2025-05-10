@@ -58,6 +58,12 @@
   "$rainbowpie_ui_flag_resourcepack_displayname": "", // 兼容其他资源包时的显示名称
   "$rainbowpie_ui_flag_notification_features_disabled": false,
   "$rainbowpie_ui_flag_notification_features_disabled_reason": "", // resourcepack; server
+  "$rainbowpie_ui_flag_server_infomation_enabled": false,
+  "$rainbowpie_ui_flag_server_infomation_logo_name": "",
+  "$rainbowpie_ui_flag_server_infomation_server_name": "",
+  "$rainbowpie_ui_flag_server_infomation_link_website": "",
+  "$rainbowpie_ui_flag_server_infomation_link_support": "",
+  "$rainbowpie_ui_flag_server_infomation_description": "",
   "$rainbowpie_ui_flag_custom_server_icon": false,
   "$rainbowpie_ui_flag_custom_server_icon_name": "",
   "$rainbowpie_ui_flag_bg_mask_ingame": true, // 在游戏内是否显示mask
