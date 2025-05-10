@@ -920,85 +920,92 @@
                       "ignored": "(not $rainbowpie_ui_flag_8dcce82d)",
                       "controls": [
                         {
-                          "version_warn@rainbowpieui_compatibility_config.compatibility_variables": {
+                          "compatibility_version_warn@rainbowpieui_compatibility_config.compatibility_variables": {
                             "type": "panel",
-                            "size": [ 130, "100%c" ],
-                            "offset": [ -8, 40 ],
-                            "anchor_to": "top_right",
-                            "anchor_from": "top_right",
-                            "layer": 18,
                             "controls": [
                               {
-                                "background": {
-                                  "type": "image",
-                                  "size": [ "100%", "100%c + 6px" ],
-                                  "texture": "textures/ui/White",
-                                  "color": "$rainbowpie_ui_theme_text_background_color",
-                                  "alpha": 0.5,
-                                  "layer": 1,
+                                "version_warn": {
+                                  "type": "panel",
+                                  "size": [ 130, "100%c" ],
+                                  "offset": [ -8, 40 ],
+                                  "anchor_to": "top_right",
+                                  "anchor_from": "top_right",
+                                  "layer": 18,
                                   "controls": [
                                     {
-                                      "load_tip_stack_panel": {
-                                        "type": "stack_panel",
-                                        "size": [ "100% - 6px", "100%c" ],
+                                      "background": {
+                                        "type": "image",
+                                        "size": [ "100%", "100%c + 6px" ],
+                                        "texture": "textures/ui/White",
+                                        "color": "$rainbowpie_ui_theme_text_background_color",
+                                        "alpha": 0.5,
+                                        "layer": 1,
                                         "controls": [
                                           {
-                                            "label_1@rainbowpie_ui_common.text_label_notheme": {
-                                              "size": [ "100%", "default" ],
-                                              "color": [ 1.0, 1.0, 0.333 ],
-                                              "text": "rainbowpie.ui.version.warn",
-                                              "font_scale_factor": 1.3,
-                                              "layer": 1
-                                            }
-                                          },
-                                          {
-                                            "label_2@rainbowpie_ui_common.text_label_notheme": {
-                                              "size": [ "100%", "default" ],
-                                              "color": "$rainbowpie_ui_theme_text_text_color",
-                                              "text": "rainbowpie.ui.version.supported",
-                                              "layer": 1
-                                            }
-                                          },
-                                          {
-                                            "label_3@rainbowpie_ui_common.text_label_notheme": {
-                                              "ignored": "($rainbowpieui_version_minecraft_min = $rainbowpieui_version_minecraft_max)",
-                                              "size": [ "100%", "default" ],
-                                              "color": [ 0.333, 1.0, 0.333 ],
-                                              "text": "($rainbowpieui_version_minecraft_min + '-' + $rainbowpieui_version_minecraft_max)",
-                                              "layer": 1
-                                            }
-                                          },
-                                          {
-                                            "label_4@rainbowpie_ui_common.text_label_notheme": {
-                                              "ignored": "(not ($rainbowpieui_version_minecraft_min = $rainbowpieui_version_minecraft_max))",
-                                              "size": [ "100%", "default" ],
-                                              "color": [ 0.333, 1.0, 0.333 ],
-                                              "text": "($rainbowpieui_version_minecraft_target)",
-                                              "layer": 1
-                                            }
-                                          },
-                                          {
-                                            "label_5@rainbowpie_ui_common.text_label_notheme": {
-                                              "size": [ "100%", "default" ],
-                                              "color": [ 1.0, 0.333, 0.333 ],
-                                              "text": "rainbowpie.ui.version.warn_unsupport",
-                                              "layer": 1
-                                            }
-                                          },
-                                          {
-                                            "label_6@rainbowpie_ui_common.text_label_notheme": {
-                                              "size": [ "100%", "default" ],
-                                              "color": [ 1.0, 1.0, 0.333 ],
-                                              "text": "rainbowpie.ui.version.dev.err_variable",
-                                              "layer": 1,
-                                              "bindings": [
+                                            "load_tip_stack_panel": {
+                                              "type": "stack_panel",
+                                              "size": [ "100% - 6px", "100%c" ],
+                                              "controls": [
                                                 {
-                                                  "binding_name": "#version"
+                                                  "label_1@rainbowpie_ui_common.text_label_notheme": {
+                                                    "size": [ "100%", "default" ],
+                                                    "color": [ 1.0, 1.0, 0.333 ],
+                                                    "text": "rainbowpie.ui.version.warn",
+                                                    "font_scale_factor": 1.3,
+                                                    "layer": 1
+                                                  }
                                                 },
                                                 {
-                                                  "binding_type": "view",
-                                                  "source_property_name": "((#version - $rainbowpieui_version_minecraft_bigver) = #version)",
-                                                  "target_property_name": "#visible"
+                                                  "label_2@rainbowpie_ui_common.text_label_notheme": {
+                                                    "size": [ "100%", "default" ],
+                                                    "color": "$rainbowpie_ui_theme_text_text_color",
+                                                    "text": "rainbowpie.ui.version.supported",
+                                                    "layer": 1
+                                                  }
+                                                },
+                                                {
+                                                  "label_3@rainbowpie_ui_common.text_label_notheme": {
+                                                    "ignored": "($rainbowpieui_version_minecraft_min = $rainbowpieui_version_minecraft_max)",
+                                                    "size": [ "100%", "default" ],
+                                                    "color": [ 0.333, 1.0, 0.333 ],
+                                                    "text": "($rainbowpieui_version_minecraft_min + '-' + $rainbowpieui_version_minecraft_max)",
+                                                    "layer": 1
+                                                  }
+                                                },
+                                                {
+                                                  "label_4@rainbowpie_ui_common.text_label_notheme": {
+                                                    "ignored": "(not ($rainbowpieui_version_minecraft_min = $rainbowpieui_version_minecraft_max))",
+                                                    "size": [ "100%", "default" ],
+                                                    "color": [ 0.333, 1.0, 0.333 ],
+                                                    "text": "($rainbowpieui_version_minecraft_target)",
+                                                    "layer": 1
+                                                  }
+                                                },
+                                                {
+                                                  "label_5@rainbowpie_ui_common.text_label_notheme": {
+                                                    "size": [ "100%", "default" ],
+                                                    "color": [ 1.0, 0.333, 0.333 ],
+                                                    "text": "rainbowpie.ui.version.warn_unsupport",
+                                                    "layer": 1
+                                                  }
+                                                },
+                                                {
+                                                  "label_6@rainbowpie_ui_common.text_label_notheme": {
+                                                    "size": [ "100%", "default" ],
+                                                    "color": [ 1.0, 1.0, 0.333 ],
+                                                    "text": "rainbowpie.ui.version.dev.err_variable",
+                                                    "layer": 1,
+                                                    "bindings": [
+                                                      {
+                                                        "binding_name": "#version"
+                                                      },
+                                                      {
+                                                        "binding_type": "view",
+                                                        "source_property_name": "((#version - $rainbowpieui_version_minecraft_bigver) = #version)",
+                                                        "target_property_name": "#visible"
+                                                      }
+                                                    ]
+                                                  }
                                                 }
                                               ]
                                             }
@@ -1006,41 +1013,41 @@
                                         ]
                                       }
                                     }
+                                  ],
+                                  "$rainbowpie_localui_this_bigver": "($rainbowpieui_version_minecraft_bigver + '.')",
+                                  "$rainbowpie_localui_this_max_version_code": "($rainbowpieui_version_minecraft_max - $rainbowpie_localui_this_bigver)",
+                                  "$rainbowpie_localui_this_min_version_code": "($rainbowpieui_version_minecraft_min - $rainbowpie_localui_this_bigver)",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#version"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "(#version - $rainbowpie_localui_this_bigver)",
+                                      "target_property_name": "#current_version_code"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "((#version - $rainbowpieui_version_minecraft_bigver) = #version)",
+                                      "target_property_name": "#invalid_big_version"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "(#current_version_code > $rainbowpie_localui_this_max_version_code)",
+                                      "target_property_name": "#version_too_high"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "(#current_version_code < $rainbowpie_localui_this_min_version_code)",
+                                      "target_property_name": "#version_too_low"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "(#invalid_big_version or #version_too_high or #version_too_low)",
+                                      "target_property_name": "#visible"
+                                    }
                                   ]
                                 }
-                              }
-                            ],
-                            "$rainbowpie_localui_this_bigver": "($rainbowpieui_version_minecraft_bigver + '.')",
-                            "$rainbowpie_localui_this_max_version_code": "($rainbowpieui_version_minecraft_max - $rainbowpie_localui_this_bigver)",
-                            "$rainbowpie_localui_this_min_version_code": "($rainbowpieui_version_minecraft_min - $rainbowpie_localui_this_bigver)",
-                            "bindings": [
-                              {
-                                "binding_name": "#version"
-                              },
-                              {
-                                "binding_type": "view",
-                                "source_property_name": "(#version - $rainbowpie_localui_this_bigver)",
-                                "target_property_name": "#current_version_code"
-                              },
-                              {
-                                "binding_type": "view",
-                                "source_property_name": "((#version - $rainbowpieui_version_minecraft_bigver) = #version)",
-                                "target_property_name": "#invalid_big_version"
-                              },
-                              {
-                                "binding_type": "view",
-                                "source_property_name": "(#current_version_code > $rainbowpie_localui_this_max_version_code)",
-                                "target_property_name": "#version_too_high"
-                              },
-                              {
-                                "binding_type": "view",
-                                "source_property_name": "(#current_version_code < $rainbowpie_localui_this_min_version_code)",
-                                "target_property_name": "#version_too_low"
-                              },
-                              {
-                                "binding_type": "view",
-                                "source_property_name": "(#invalid_big_version or #version_too_high or #version_too_low)",
-                                "target_property_name": "#visible"
                               }
                             ]
                           }
