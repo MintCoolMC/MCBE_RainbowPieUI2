@@ -956,6 +956,15 @@
                                                   }
                                                 },
                                                 {
+                                                  "title_driven@rainbowpieui_settings_common.driven": {}
+                                                },
+                                                {
+                                                  "title_padding": {
+                                                    "type": "panel",
+                                                    "size": [ 0, 2 ]
+                                                  }
+                                                },
+                                                {
                                                   "label_2@rainbowpie_ui_common.text_label_notheme": {
                                                     "size": [ "100%", "default" ],
                                                     "color": "$rainbowpie_ui_theme_text_text_color",
@@ -968,7 +977,7 @@
                                                     "ignored": "($rainbowpieui_version_minecraft_min = $rainbowpieui_version_minecraft_max)",
                                                     "size": [ "100%", "default" ],
                                                     "color": [ 0.333, 1.0, 0.333 ],
-                                                    "text": "($rainbowpieui_version_minecraft_min + '-' + $rainbowpieui_version_minecraft_max)",
+                                                    "text": "('§§' + $rainbowpieui_version_minecraft_min + '-' + $rainbowpieui_version_minecraft_max)",
                                                     "layer": 1
                                                   }
                                                 },
@@ -977,7 +986,7 @@
                                                     "ignored": "(not ($rainbowpieui_version_minecraft_min = $rainbowpieui_version_minecraft_max))",
                                                     "size": [ "100%", "default" ],
                                                     "color": [ 0.333, 1.0, 0.333 ],
-                                                    "text": "($rainbowpieui_version_minecraft_target)",
+                                                    "text": "('§§' + $rainbowpieui_version_minecraft_target)",
                                                     "layer": 1
                                                   }
                                                 },
@@ -1005,6 +1014,45 @@
                                                         "target_property_name": "#visible"
                                                       }
                                                     ]
+                                                  }
+                                                },
+                                                {
+                                                  "bottom_padding": {
+                                                    "type": "panel",
+                                                    "size": [ 0, 2 ]
+                                                  }
+                                                },
+                                                {
+                                                  "driven@rainbowpieui_settings_common.driven": {}
+                                                },
+                                                {
+                                                  "padding_1": {
+                                                    "type": "panel",
+                                                    "size": [ 0, 2 ]
+                                                  }
+                                                },
+                                                {
+                                                  "label_7@rainbowpie_ui_common.text_label_notheme": {
+                                                    "size": [ "100%", "default" ],
+                                                    "color": [ 1.0, 1.0, 0.333 ],
+                                                    "text": "rainbowpie.ui.version.subpacks",
+                                                    "layer": 1
+                                                  }
+                                                },
+                                                {
+                                                  "label_8@rainbowpie_ui_common.text_label_notheme": {
+                                                    "size": [ "100%", "default" ],
+                                                    "color": "$rainbowpie_ui_theme_text_text_color",
+                                                    "text": "rainbowpie.ui.version.subpacks_supported",
+                                                    "layer": 1
+                                                  }
+                                                },
+                                                {
+                                                  "label_9@rainbowpie_ui_common.text_label_notheme": {
+                                                    "size": [ "100%", "default" ],
+                                                    "color": [ 0.333, 1.0, 0.333 ],
+                                                    "text": "('§§' + $rainbowpieui_version_minecraft_subpacks)",
+                                                    "layer": 1
                                                   }
                                                 }
                                               ]

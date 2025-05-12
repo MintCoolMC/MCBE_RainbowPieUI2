@@ -139,6 +139,8 @@ rainbowpie.ui.version.warn=Warning!
 rainbowpie.ui.version.supported=Supported Versions:
 rainbowpie.ui.version.warn_unsupport=This version may have bugs or problems
 rainbowpie.ui.version.dev.err_variable=[ForDEV]Please check variables about version!
+rainbowpie.ui.version.subpacks=If the version you are using is in the subpack compatible version, you can go to the pack settings and select the current version
+rainbowpie.ui.version.subpacks_supported=Subpack Compatible Versions:
 
 rainbowpie.ui.hud.tablist.maxplayers=Only 22 players can be shown here!
 rainbowpie.ui.hud.tablist.player_count=PLAYERS
