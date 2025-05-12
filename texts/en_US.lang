@@ -136,7 +136,7 @@ rainbowpie.ui.warning.button.check=Check error
 rainbowpie.ui.warning.button.deactivate=Deactivate Pack
 
 rainbowpie.ui.version.warn=Warning!
-rainbowpie.ui.version.supported=Supported Versions:
+rainbowpie.ui.version.supported=Compatible Versions:
 rainbowpie.ui.version.warn_unsupport=This version may have bugs or problems
 rainbowpie.ui.version.dev.err_variable=[ForDEV]Please check variables about version!
 rainbowpie.ui.version.subpacks=If the version you are using is in the subpack compatible version, you can go to the pack settings and select the current version
