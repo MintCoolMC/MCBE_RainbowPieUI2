@@ -2106,9 +2106,50 @@
                 ],
                 "bindings": [
                   {
-                    "binding_name": "#hotbar_with_xp_bar",
-                    "binding_name_override": "#visible",
+                    "binding_name": "#hotbar_with_locator_bar",
+                    "ignored": "(not (($compatibility_min_version < 1218000) or ($compatibility_min_version = 1218000)))"
+                  },
+                  {
+                    "binding_name": "#hotbar_with_xp_bar"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#hotbar_with_xp_bar)",
+                    "target_property_name": "#visible",
                     "ignored": "(($compatibility_min_version < 1218000) or ($compatibility_min_version = 1218000))"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#hotbar_with_xp_bar or #hotbar_with_locator_bar)",
+                    "target_property_name": "#visible",
+                    "ignored": "(not (($compatibility_min_version < 1218000) or ($compatibility_min_version = 1218000)))"
+                  }
+                ]
+              }
+            },
+            {
+              "locator_bar_panel": {
+                "type": "panel",
+                "size": [ 180, 16 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "layer": 12,
+                "ignored": "(not (($compatibility_min_version < 1218000) or ($compatibility_min_version = 1218000)))",
+                "controls": [
+                  {
+                    "locator_bar@hud.locator_bar": {
+                      "size": [ "100%", 5 ],
+                      "offset": [ 0, 0.5 ],
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "layer": 10
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hotbar_with_locator_bar",
+                    "binding_name_override": "#visible"
                   }
                 ]
               }
