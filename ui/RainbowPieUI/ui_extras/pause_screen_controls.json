@@ -1848,19 +1848,37 @@
                                 }
                               },
                               {
-                                "server_website@rainbowpie_ui_common.title_label": {
-                                  "size": [ "default", "default" ],
-                                  "text": "$rainbowpie_ui_flag_server_infomation_link_website",
-                                  "color":  [ 1.0, 1.0, 0.333 ],
-                                  "layer": 1
+                                "server_website@rainbowpie_ui_common.editable_label": {
+                                  "size": [ "100%c", "100%c" ],
+                                  "text_box_name": "server_website_text",
+                                  "text_control": "server_website_display_text",
+                                  "controls": [
+                                    {
+                                      "server_website_display_text@rainbowpie_ui_common.title_label": {
+                                        "size": [ "default", "default" ],
+                                        "text": "$rainbowpie_ui_flag_server_infomation_link_website",
+                                        "color":  [ 1.0, 1.0, 0.333 ],
+                                        "layer": 1
+                                      }
+                                    }
+                                  ]
                                 }
                               },
                               {
-                                "server_support@rainbowpie_ui_common.title_label": {
-                                  "size": [ "default", "default" ],
-                                  "text": "$rainbowpie_ui_flag_server_infomation_link_support",
-                                  "color":  [ 1.0, 1.0, 0.333 ],
-                                  "layer": 1
+                                "server_support@rainbowpie_ui_common.editable_label": {
+                                  "size": [ "100%c", "100%c" ],
+                                  "text_box_name": "server_support_text",
+                                  "text_control": "server_support_display_text",
+                                  "controls": [
+                                    {
+                                      "server_support_display_text@rainbowpie_ui_common.title_label": {
+                                        "size": [ "default", "default" ],
+                                        "text": "$rainbowpie_ui_flag_server_infomation_link_support",
+                                        "color":  [ 1.0, 1.0, 0.333 ],
+                                        "layer": 1
+                                      }
+                                    }
+                                  ]
                                 }
                               }
                             ]
