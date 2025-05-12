@@ -201,6 +201,7 @@
   "$rainbowpie_ui_flag_dc165cd2": true, // Hidden Boss Health Percentage When Percentage is 100.0%
   "$rainbowpie_ui_flag_73085b33": true, // Crafting Helper
   "$rainbowpie_ui_flag_5354b722": true, // Only display locator_bar when holding [TAB] key (Keyboard Only)
+  "$rainbowpie_ui_flag_19efcc11": true,
 
   // Debug
   "$rainbowpie_ui_debug": false,

@@ -2706,7 +2706,8 @@
                             "bindings": [
                               {
                                 "binding_name": "#hotbar_with_locator_bar",
-                                "binding_name_override": "#visible"
+                                "binding_name_override": "#visible",
+                                "ignored": "$rainbowpie_ui_flag_19efcc11"
                               }
                             ]
                           }
