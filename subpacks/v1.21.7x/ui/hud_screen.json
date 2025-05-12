@@ -314,10 +314,6 @@
     "ignored": "(not ($rainbowpie_ui_flag_hud_hotbar_mode = 0))"
   },
 
-  "exp_progress_bar_and_hotbar/resizing_hotbar_locator_bar": {
-    "ignored": "(not ($rainbowpie_ui_flag_hud_hotbar_mode = 0))"
-  },
-
   "root_panel": {
     "animation_reset_name": "screen_animation_reset",
     "anims": [

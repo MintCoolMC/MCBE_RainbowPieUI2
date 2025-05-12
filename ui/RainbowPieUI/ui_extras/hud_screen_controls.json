@@ -2005,105 +2005,113 @@
         }
       },
       {
-        "exp_progress_panel": {
+        "compatibility_panel@rainbowpieui_compatibility_config.compatibility_variables": {
           "type": "panel",
-          "size": [ 180, 16 ],
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "layer": 12,
           "controls": [
             {
-              "debug01@rainbowpie_ui_common.debug_draw": {
-                "$rainbowpie_localui_debug_name": "exp_progress_panel"
-              }
-            },
-            {
-              "progress_text_label@rainbowpie_ui_common.text_label_notheme": {
-                "shadow": true,
-                "offset": [ 0, 0 ],
-                "layer": 7,
-                "text": "#level_number",
-                "color": "$experience_text_color",
+              "exp_progress_panel": {
+                "type": "panel",
+                "size": [ 180, 16 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
-                "bindings": [
+                "layer": 12,
+                "controls": [
                   {
-                    "binding_name": "#level_number",
-                    "binding_type": "global"
+                    "debug01@rainbowpie_ui_common.debug_draw": {
+                      "$rainbowpie_localui_debug_name": "exp_progress_panel"
+                    }
                   },
                   {
-                    "binding_name": "#level_number_visible",
-                    "binding_type": "global",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
-            {
-              "expbar_empty_text@rainbowpie_ui_common.text_label_notheme": {
-                "shadow": true,
-                "offset": [ 0, 0 ],
-                "layer": 7,
-                "text": "$rainbowpie_ui_flag_hud_expbar_empty_text",
-                "color": "$experience_text_color",
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-                "bindings": [
+                    "progress_text_label@rainbowpie_ui_common.text_label_notheme": {
+                      "shadow": true,
+                      "offset": [ 0, 0 ],
+                      "layer": 7,
+                      "text": "#level_number",
+                      "color": "$experience_text_color",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "bindings": [
+                        {
+                          "binding_name": "#level_number",
+                          "binding_type": "global"
+                        },
+                        {
+                          "binding_name": "#level_number_visible",
+                          "binding_type": "global",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
                   {
-                    "binding_name": "(not #level_number_visible)",
-                    "binding_type": "global",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
-            {
-              "empty_progress_bar": {
-                "type": "image",
-                "$rainbowpie_localui_this_expbar_texture": "textures/ui/White",
-                "$rainbowpie_localui_this_expbar_size": [ "100%", 4 ],
-                "texture": "$rainbowpie_localui_this_expbar_texture",
-                "size": "$rainbowpie_localui_this_expbar_size",
-                "anchor_from": "bottom_middle",
-                "anchor_to": "bottom_middle",
-                "color": "$rainbowpie_ui_theme_experience_empty_color",
-                "alpha": "$rainbowpie_ui_theme_experience_empty_alpha",
-                "layer": 1,
-                "controls": [
+                    "expbar_empty_text@rainbowpie_ui_common.text_label_notheme": {
+                      "shadow": true,
+                      "offset": [ 0, 0 ],
+                      "layer": 7,
+                      "text": "$rainbowpie_ui_flag_hud_expbar_empty_text",
+                      "color": "$experience_text_color",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "bindings": [
+                        {
+                          "binding_name": "(not #level_number_visible)",
+                          "binding_type": "global",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
                   {
                     "empty_progress_bar": {
                       "type": "image",
+                      "$rainbowpie_localui_this_expbar_texture": "textures/ui/White",
+                      "$rainbowpie_localui_this_expbar_size": [ "100%", 4 ],
                       "texture": "$rainbowpie_localui_this_expbar_texture",
                       "size": "$rainbowpie_localui_this_expbar_size",
-                      "color": "$rainbowpie_ui_theme_experience_full_color",
-                      "alpha": "$rainbowpie_ui_theme_experience_full_alpha",
-                      "layer": 2,
-                      "clip_direction": "left",
-                      "clip_pixelperfect": false,
-                      "bindings": [
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "color": "$rainbowpie_ui_theme_experience_empty_color",
+                      "alpha": "$rainbowpie_ui_theme_experience_empty_alpha",
+                      "layer": 1,
+                      "controls": [
                         {
-                          "binding_name": "#exp_progress",
-                          "binding_name_override": "#clip_ratio",
-                          "binding_type": "global"
+                          "empty_progress_bar": {
+                            "type": "image",
+                            "texture": "$rainbowpie_localui_this_expbar_texture",
+                            "size": "$rainbowpie_localui_this_expbar_size",
+                            "color": "$rainbowpie_ui_theme_experience_full_color",
+                            "alpha": "$rainbowpie_ui_theme_experience_full_alpha",
+                            "layer": 2,
+                            "clip_direction": "left",
+                            "clip_pixelperfect": false,
+                            "bindings": [
+                              {
+                                "binding_name": "#exp_progress",
+                                "binding_name_override": "#clip_ratio",
+                                "binding_type": "global"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "requires": "$rainbowpie_ui_flag_hud_hotbar_rounded",
+                          "$rainbowpie_localui_this_expbar_texture": "($rainbowpie_ui_path_home + '/r_white_pill')",
+                          "$rainbowpie_localui_this_expbar_size": [ "100%", 5 ]
                         }
                       ]
                     }
                   }
                 ],
-                "variables": [
+                "bindings": [
                   {
-                    "requires": "$rainbowpie_ui_flag_hud_hotbar_rounded",
-                    "$rainbowpie_localui_this_expbar_texture": "($rainbowpie_ui_path_home + '/r_white_pill')",
-                    "$rainbowpie_localui_this_expbar_size": [ "100%", 5 ]
+                    "binding_name": "#hotbar_with_xp_bar",
+                    "binding_name_override": "#visible",
+                    "ignored": "(($compatibility_min_version < 1218000) or ($compatibility_min_version = 1218000))"
                   }
                 ]
               }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_name": "#hotbar_with_xp_bar",
-              "binding_name_override": "#visible"
             }
           ]
         }
