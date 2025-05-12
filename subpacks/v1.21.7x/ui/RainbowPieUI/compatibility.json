@@ -4,9 +4,9 @@
 
   // Only override compatibility panels 
   "compatibility_variables": {
-    "$compatibility_target_version": "1217100",
-    "$compatibility_max_version": "1217900",
-    "$compatibility_min_version": "1217000",
+    "$compatibility_target_version": 1217100,
+    "$compatibility_max_version": 1217900,
+    "$compatibility_min_version": 1217000,
     "$rainbowpieui_version_minecraft_target": "v1.21.71",
     "$rainbowpieui_version_minecraft_bigver": "v1.21",
     "$rainbowpieui_version_minecraft_max": "v1.21.79",
