@@ -1758,6 +1758,10 @@
             "requires": "(not $rainbowpie_ui_flag_8dcce82d)",
             "$rainbowpie_ui_flag_8dcce82d": true
           },
+          {
+            "requires": "($rainbowpie_ui_flag_ec4bdfd4)",
+            "$rainbowpie_ui_flag_scoreboard_text_replace_replacement": "($rainbowpie_ui_theme_global_title_text + ' §eUI')"
+          },
           // Zeqa Network
           {
             "requires": "($rainbowpie_ui_flag_resourcepack_identifier = '78239b75_zeqa')",
@@ -1802,6 +1806,10 @@
             "$rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled": false,
             "$rainbowpie_ui_flag_19efcc11": false,
             "$rainbowpie_ui_flag_9ce040c1": false
+          },
+          {
+            "requires": "($rainbowpie_ui_flag_ec4bdfd4 and ($rainbowpie_ui_flag_resourcepack_identifier = 'd29f22ac_cubecraft'))",
+            "$rainbowpie_ui_flag_scoreboard_text_replace_pattern": "*cubecraft.net*"
           },
           // The Hive
           {

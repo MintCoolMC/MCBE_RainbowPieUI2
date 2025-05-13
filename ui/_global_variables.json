@@ -204,6 +204,7 @@
   "$rainbowpie_ui_flag_73085b33": true, // Crafting Helper
   "$rainbowpie_ui_flag_5354b722": true, // Only display locator_bar when holding [TAB] key (Keyboard Only)
   "$rainbowpie_ui_flag_19efcc11": true,
+  "$rainbowpie_ui_flag_ec4bdfd4": false, // Server Scoreboards Replacement (e.g. cubecraft.net => Rainbow Pie UI)
 
   // Debug
   "$rainbowpie_ui_debug": false,
