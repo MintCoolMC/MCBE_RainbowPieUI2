@@ -61,6 +61,7 @@
 
   "progress_bar_for_collections/empty_progress_bar": {
     "color": [ 0.2, 0.2, 0.2 ],
+    "alpha": 0.75,
     "controls": [
       {
         "empty_progress_bar@common.empty_progress_bar": {
