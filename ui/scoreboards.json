@@ -3,8 +3,6 @@
   "namespace": "scoreboard",
 
   "scoreboard_sidebar": {
-    "$rainbowpie_localui_text_replace_pattern": "$rainbowpie_ui_flag_scoreboard_text_replace_pattern",
-    "$rainbowpie_localui_text_replace_replacement": "$rainbowpie_ui_flag_scoreboard_text_replace_replacement",
     "modifications": [
       {
         "array_name": "variables",
