@@ -205,6 +205,20 @@
                         }
                       ]
                     }
+                  },
+                  {
+                    "resource_pack_id@rainbowpieui_general_section.info_label": {
+                      "visible": "(not ($rainbowpie_ui_flag_resourcepack_identifier = ''))",
+                      "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.resource_pack_id",
+                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpie_ui_flag_resourcepack_identifier)"
+                    }
+                  },
+                  {
+                    "resource_pack_displayname@rainbowpieui_general_section.info_label": {
+                      "visible": "(not ($rainbowpie_ui_flag_resourcepack_displayname = ''))",
+                      "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.resource_pack_displayname",
+                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpie_ui_flag_resourcepack_displayname)"
+                    }
                   }
                 ]
               }

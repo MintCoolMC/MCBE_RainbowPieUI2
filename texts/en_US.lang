@@ -31,6 +31,8 @@ rainbowpie.ui.about.compatibility.compatible=Compatible
 rainbowpie.ui.about.compatibility.target_code=Target Code
 rainbowpie.ui.about.compatibility.max_code=MAX Code
 rainbowpie.ui.about.compatibility.min_code=MIN Code
+rainbowpie.ui.about.compatibility.resource_pack_id=Resource Pack ID
+rainbowpie.ui.about.compatibility.resource_pack_displayname=Resource Pack Name
 
 rainbowpie.ui.notification.features_disabled.server=You are playing
 rainbowpie.ui.notification.features_disabled.resourcepack=You are using

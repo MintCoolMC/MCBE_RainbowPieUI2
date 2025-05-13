@@ -31,6 +31,8 @@ rainbowpie.ui.about.compatibility.compatible=兼容
 rainbowpie.ui.about.compatibility.target_code=目標版本代碼
 rainbowpie.ui.about.compatibility.max_code=最大版本代碼
 rainbowpie.ui.about.compatibility.min_code=最低版本代碼
+rainbowpie.ui.about.compatibility.resource_pack_id=資源包ID
+rainbowpie.ui.about.compatibility.resource_pack_displayname=資源包名稱
 
 rainbowpie.ui.notification.features_disabled.server=您正在游玩
 rainbowpie.ui.notification.features_disabled.resourcepack=您正在使用
