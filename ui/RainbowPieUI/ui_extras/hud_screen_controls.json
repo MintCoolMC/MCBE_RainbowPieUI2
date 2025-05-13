@@ -2106,6 +2106,9 @@
                 ],
                 "bindings": [
                   {
+                    "binding_name": "#show_survival_ui"
+                  },
+                  {
                     "binding_name": "#hotbar_with_locator_bar",
                     "ignored": "(not (($compatibility_min_version < 1218000) or ($compatibility_min_version = 1218000)))"
                   },
@@ -2120,7 +2123,7 @@
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "(#hotbar_with_xp_bar or #hotbar_with_locator_bar)",
+                    "source_property_name": "(#show_survival_ui and (#hotbar_with_xp_bar or #hotbar_with_locator_bar))",
                     "target_property_name": "#visible",
                     "ignored": "(not (($compatibility_min_version < 1218000) or ($compatibility_min_version = 1218000)))"
                   }
