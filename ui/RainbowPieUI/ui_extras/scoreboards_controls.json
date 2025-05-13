@@ -1,0 +1,68 @@
+{
+  "namespace": "rainbowpieui_scoreboard",
+
+  "scoreboard_sidebar_player_inner_panel": {
+    "type": "panel",
+    "size": [ "100%cm", "100%cm" ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "controls": [
+      {
+        "player_name_text@rainbowpie_ui_common.text_label": {
+          "size": [ "default", "default" ],
+          "max_size": [ 100, "default" ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "#player_name_sidebar",
+          "color": "$player_name_color",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#player_name_sidebar",
+              "binding_type": "collection",
+              "binding_collection_name": "scoreboard_players"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#player_name_sidebar - ((' ' + $rainbowpie_localui_text_replace_pattern + ' ') - ' *' - '* ' - '  ') = #player_name_sidebar))",
+              "target_property_name": "#matches_player_name"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not #matches_player_name)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "replacement_text@rainbowpie_ui_common.text_label": {
+          "size": [ "default", "default" ],
+          "max_size": [ 100, "default" ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "$rainbowpie_localui_text_replace_replacement",
+          "color": "$player_name_color",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#player_name_sidebar",
+              "binding_type": "collection",
+              "binding_collection_name": "scoreboard_players"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#player_name_sidebar - ((' ' + $rainbowpie_localui_text_replace_pattern + ' ') - ' *' - '* ' - '  ') = #player_name_sidebar))",
+              "target_property_name": "#matches_player_name"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#matches_player_name)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

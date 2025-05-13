@@ -3,6 +3,8 @@
   "namespace": "scoreboard",
 
   "scoreboard_sidebar": {
+    "$rainbowpie_localui_text_replace_pattern": "$rainbowpie_ui_flag_scoreboard_text_replace_pattern",
+    "$rainbowpie_localui_text_replace_replacement": "$rainbowpie_ui_flag_scoreboard_text_replace_replacement",
     "modifications": [
       {
         "array_name": "variables",
@@ -49,8 +51,17 @@
   },
 
   "scoreboard_sidebar_player": {
-    "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+    "min_size": [ "100%cm", "100%cm" ],
+    "font_scale_factor": 0, // Make vanilla text invisible
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "scoreboard_sidebar_player_inner_panel@rainbowpieui_scoreboard.scoreboard_sidebar_player_inner_panel": {} }
+        ]
+      }
+    ]
   },
 
   "scoreboard_sidebar_score": {
