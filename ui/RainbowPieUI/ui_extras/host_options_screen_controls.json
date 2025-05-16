@@ -171,12 +171,12 @@
             {
               "binding_type": "view",
               "source_control_name": "rainbowpie_time_slider",
-              "source_property_name": "#time_int",
-              "target_property_name": "#time_int"
+              "source_property_name": "#fin_time_int",
+              "target_property_name": "#fin_time_int"
             },
             {
               "binding_type": "view",
-              "source_property_name": "('§§' + #time_int)",
+              "source_property_name": "('§§' + #fin_time_int)",
               "target_property_name": "#time_text"
             }
           ]
@@ -404,7 +404,9 @@
                 "property_bag": {
                   "#slider_steps": 24,
                   "#slider_value_init": 6,
-                  "#slider_value_int": 0
+                  "#slider_value_int": 0,
+                  "#days_int": 0,
+                  "#fin_time_int": 0
                 },
                 "bindings": [
                   {
@@ -426,12 +428,51 @@
                     "binding_type": "view",
                     "source_property_name": "((#slider_value_int < 6) * (18000 + 1000 * #slider_value_int) + (#slider_value_int > 6) * (#slider_value_int - 6) * 1000)",
                     "target_property_name": "#time_int"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "time_tweaker_days_text",
+                    "source_property_name": "#item_name",
+                    "target_property_name": "#days_str"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#days_str * 1)",
+                    "target_property_name": "#days_int"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((#days_int * 24000) + #time_int)",
+                    "target_property_name": "#fin_time_int"
+                  }
+                ]
+              }
+            },
+            {
+              "days_played@common.text_edit_box": {
+                "$rainbowpie_localui_editbox_enabled": true,
+                "layer": 5,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, 32 ],
+                "size": [ "100% - 6px", 20 ],
+                "$text_type": "NumberChars",
+                "$text_box_name": "time_tweaker_days_text_box",
+                "$text_edit_text_control": "time_tweaker_days_text",
+                "$place_holder_text": "rainbowpie.ui.host_options.days_played",
+                "max_length": 32767,
+                "variables": [
+                  {
+                    "requires": true,
+                    "$text_edit_box_selected_to_button_id": "",
+                    "$text_edit_box_deselected_to_button_id": ""
                   }
                 ]
               }
             },
             {
               "note_text@rainbowpie_ui_common.text_label": {
+                "ignored": true,
                 "size": [ "100% - 4px", "default" ],
                 "max_size": [ "100% - 4px", "20px" ],
                 "text": "rainbowpie.ui.host_options.time_note",
@@ -451,12 +492,12 @@
                   {
                     "binding_type": "view",
                     "source_control_name": "rainbowpie_time_slider",
-                    "source_property_name": "#time_int",
-                    "target_property_name": "#time_int"
+                    "source_property_name": "#fin_time_int",
+                    "target_property_name": "#fin_time_int"
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "('\"' + #time_int + '\"')",
+                    "source_property_name": "('\"' + #fin_time_int + '\"')",
                     "target_property_name": "#sub_command"
                   }
                 ]

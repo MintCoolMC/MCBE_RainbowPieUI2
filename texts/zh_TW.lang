@@ -39,6 +39,7 @@ rainbowpie.ui.notification.features_disabled.resourcepack=您正在使用
 rainbowpie.ui.notification.features_disabled.text=某些功能將被禁用
 
 rainbowpie.ui.host_options.time_title=時間:
+rainbowpie.ui.host_options.days_played=已玩天數
 rainbowpie.ui.host_options.time_note=如果你使用這項調整，遊玩天數將會被重置。
 
 rainbowpie.ui.serverform.vanilla_tip=回到原版樣式的 ServerFormUI

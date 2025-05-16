@@ -39,6 +39,7 @@ rainbowpie.ui.notification.features_disabled.resourcepack=You are using
 rainbowpie.ui.notification.features_disabled.text=Some features are disabled
 
 rainbowpie.ui.host_options.time_title=Time:
+rainbowpie.ui.host_options.days_played=Days Played
 rainbowpie.ui.host_options.time_note=If you use this tweak, the number of days played will be reset
 
 rainbowpie.ui.serverform.vanilla_tip=Back to Vanilla style ServerFormUI
