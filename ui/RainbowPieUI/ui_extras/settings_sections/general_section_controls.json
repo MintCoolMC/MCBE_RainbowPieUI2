@@ -1025,6 +1025,12 @@
           "text": "('%.12s' * $var_1)"
         }
       },
+      {
+        "title_014_str@rainbowpie_ui_common.text_label": {
+          "$var_1": "str/time set 24000",
+          "text": "('%.8s' * $var_1)"
+        }
+      },
       // 比较最小数值 2x2 (4) (By DeepSeek AI)
       {
         "title_014_str@rainbowpie_ui_common.text_label": {

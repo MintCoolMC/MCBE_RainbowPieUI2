@@ -332,6 +332,41 @@
     ]
   },
 
+  "host_options_advanced_host_time_tweaker": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "ignored": "$rainbowpie_ui_flag_988450b0",
+    "controls": [
+      {
+        "advanced_host_time_tweaker@rainbowpieui_host_options.advanced_host_time_tweaker": {}
+      }
+    ]
+  },
+
+  "independent_advanced_host_time_tweaker": {
+    "type": "panel",
+    "size": [ "100%", 90 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "ignored": "(not $rainbowpie_ui_flag_988450b0)",
+    "visible": false,
+    "bindings": [
+      {
+        "binding_name": "#message_text_box_content"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.8s' * ('str' + #message_text_box_content)) = 'str/time')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "advanced_host_time_tweaker@rainbowpieui_host_options.advanced_host_time_tweaker": {}
+      }
+    ]
+  },
+
   "advanced_host_time_tweaker": {
     "type": "panel",
     "size": [ "100%", "100%" ],
@@ -463,7 +498,7 @@
                 "max_length": 32767,
                 "variables": [
                   {
-                    "requires": true,
+                    "requires": "(not $rainbowpie_ui_flag_988450b0)",
                     "$text_edit_box_selected_to_button_id": "",
                     "$text_edit_box_deselected_to_button_id": ""
                   }
@@ -481,13 +516,40 @@
               }
             },
             {
-              "host_option_banner@host_options.main_dark_button": {
+              "weather_button@host_options.main_dark_button": {
                 "size": [ "100% - 4px", 30 ],
                 "offset": [ 0, -2 ],
                 "anchor_from": "bottom_middle",
                 "anchor_to": "bottom_middle",
                 "$button_content": "rainbowpieui_host_options.time_tweaker_result_button_content",
-                "$pressed_button_name": "button.sub_command",
+                "$pressed_button_name": "rainbowpie.sub_command",
+                "layer": 2
+              }
+            },
+            {
+              "weather_command": {
+                "type": "input_panel",
+                "size": [ "100% - 4px", 30 ],
+                "offset": [ 0, -2 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "layer": 3,
+                "visible": false,
+                "consume_hover_events": false,
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.sub_command",
+                    "mapping_type": "pressed",
+                    "consume_event": false
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.sub_command",
+                    "mapping_type": "pressed",
+                    "consume_event": false
+                  }
+                ],
                 "bindings": [
                   {
                     "binding_type": "view",
@@ -499,6 +561,46 @@
                     "binding_type": "view",
                     "source_property_name": "('\"' + #fin_time_int + '\"')",
                     "target_property_name": "#sub_command"
+                  },
+                  {
+                    "binding_name": "#host_time_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "menu_navigation": {
+                "type": "input_panel",
+                "size": [ "100% - 4px", 30 ],
+                "offset": [ 0, -2 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "layer": 4,
+                "ignored": "(not $rainbowpie_ui_flag_988450b0)",
+                "visible": false,
+                "consume_hover_events": false,
+                "property_bag": {
+                  "#button_navigation": 6
+                },
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.menu_navigation",
+                    "mapping_type": "pressed",
+                    "consume_event": false
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.menu_navigation",
+                    "mapping_type": "pressed",
+                    "consume_event": false
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "(not #host_time_visible)",
+                    "binding_name_override": "#visible"
                   }
                 ]
               }

@@ -2,6 +2,20 @@
 {
   "namespace": "host_options",
 
+  "host_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "advanced_host_time_tweaker@rainbowpieui_host_options.independent_advanced_host_time_tweaker": {}
+          }
+        ]
+      }
+    ]
+  },
+
   "host_time_buttons/sub_tab": {
     "modifications": [
       {
@@ -16,7 +30,7 @@
             }
           },
           {
-            "advanced_host_time_tweaker@rainbowpieui_host_options.advanced_host_time_tweaker": {}
+            "advanced_host_time_tweaker@rainbowpieui_host_options.host_options_advanced_host_time_tweaker": {}
           }
         ]
       }
