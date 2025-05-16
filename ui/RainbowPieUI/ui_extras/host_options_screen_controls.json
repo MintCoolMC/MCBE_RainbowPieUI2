@@ -438,7 +438,7 @@
                 "anchor_from": "top_middle",
                 "property_bag": {
                   "#slider_steps": 24,
-                  "#slider_value_init": 6,
+                  "#slider_value_init": 0,
                   "#slider_value_int": 0,
                   "#days_int": 0,
                   "#fin_time_int": 0
