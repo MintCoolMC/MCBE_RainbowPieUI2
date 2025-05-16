@@ -483,6 +483,7 @@
                 ]
               }
             },
+            // max number = 89478
             {
               "days_played@common.text_edit_box": {
                 "$rainbowpie_localui_editbox_enabled": true,
