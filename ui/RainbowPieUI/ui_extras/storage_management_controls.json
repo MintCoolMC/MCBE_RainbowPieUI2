@@ -137,6 +137,22 @@
                   {
                     "binding_type": "view",
                     "source_property_name": "(not ((#texture - 'development_') = #texture)",
+                    "target_property_name": "#is_development_icon_path"
+                  },
+                  {
+                    "binding_name_override": "#zip_folder",
+                    "binding_type": "$texture_binding_type",
+                    "binding_collection_name": "$texture_binding_collection",
+                    "binding_name": "$button_texture_zip"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#zip_folder - 'development_') = #zip_folder)",
+                    "target_property_name": "#is_development_icon_zip"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#is_development_icon_path or #is_development_icon_zip)",
                     "target_property_name": "#visible"
                   }
                 ],
