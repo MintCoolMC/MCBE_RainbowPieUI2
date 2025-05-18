@@ -308,32 +308,53 @@
             {
               "stack_panel": {
                 "type": "stack_panel",
-                "orientation": "vertical",
-                "size": [ "100% - 6px", "100%c" ],
+                "orientation": "horizontal",
+                "size": [ "100% - 6px", "100%cm" ],
                 "anchor_from": "center",
                 "anchor_to": "center",
                 "controls": [
                   {
                     "title_panel": {
                       "type": "stack_panel",
-                      "orientation": "horizontal",
-                      "size": [ "100%", "100%cm" ],
+                      "orientation": "vertical",
+                      "size": [ "100%cm", "100%c" ],
                       "controls": [
                         {
-                          "title_text@rainbowpie_ui_common.text_label": {
+                          "pack_id@rainbowpie_ui_common.text_label": {
                             "size": [ "default", "default" ],
                             "text": "manifestvalidation.packid"
                           }
                         },
                         {
-                          "space": {
-                            "type": "panel",
-                            "size": [ 2, 2 ]
+                          "pack_version@rainbowpie_ui_common.text_label": {
+                            "size": [ "default", "default" ],
+                            "text": "manifestvalidation.packversion"
                           }
                         },
                         {
+                          "pack_path@rainbowpie_ui_common.text_label": {
+                            "size": [ "default", "default" ],
+                            "text": "manifestvalidation.filelocation"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "middle_padding": {
+                      "type": "panel",
+                      "size": [ 2, 0 ]
+                    }
+                  },
+                  {
+                    "value_panel": {
+                      "type": "stack_panel",
+                      "orientation": "vertical",
+                      "size": [ "fill", "100%c" ],
+                      "controls": [
+                        {
                           "pack_id@rainbowpie_ui_common.editable_label": {
-                            "size": [ "fill", "100%c" ],
+                            "size": [ "100%", "100%c" ],
                             "text_box_name": "pack_id_text",
                             "text_control": "pack_id_display_text",
                             "controls": [
@@ -351,31 +372,10 @@
                               }
                             ]
                           }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "version_panel": {
-                      "type": "stack_panel",
-                      "orientation": "horizontal",
-                      "size": [ "100%", "100%cm" ],
-                      "controls": [
-                        {
-                          "title_text@rainbowpie_ui_common.text_label": {
-                            "size": [ "default", "default" ],
-                            "text": "manifestvalidation.packversion"
-                          }
-                        },
-                        {
-                          "space": {
-                            "type": "panel",
-                            "size": [ 2, 2 ]
-                          }
                         },
                         {
                           "pack_version@rainbowpie_ui_common.editable_label": {
-                            "size": [ "fill", "100%c" ],
+                            "size": [ "100%", "100%c" ],
                             "text_box_name": "pack_version_text",
                             "text_control": "pack_version_display_text",
                             "controls": [
@@ -393,31 +393,10 @@
                               }
                             ]
                           }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "path_panel": {
-                      "type": "stack_panel",
-                      "orientation": "horizontal",
-                      "size": [ "100%", "100%cm" ],
-                      "controls": [
-                        {
-                          "title_text@rainbowpie_ui_common.text_label": {
-                            "size": [ "default", "default" ],
-                            "text": "manifestvalidation.filelocation"
-                          }
-                        },
-                        {
-                          "space": {
-                            "type": "panel",
-                            "size": [ 2, 2 ]
-                          }
                         },
                         {
                           "pack_path@rainbowpie_ui_common.editable_label": {
-                            "size": [ "fill", "100%c" ],
+                            "size": [ "100%", "100%c" ],
                             "text_box_name": "pack_path_text",
                             "text_control": "pack_path_display_text",
                             "controls": [
