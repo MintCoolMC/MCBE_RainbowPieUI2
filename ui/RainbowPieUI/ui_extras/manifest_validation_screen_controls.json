@@ -14,9 +14,18 @@
     "$rainbowpie_localui_packverifiy_packdesc|default": "",
     "controls": [
       {
-        "text@rainbowpie_ui_common.text_label": {
-          "size": [ "100%", "default" ],
-          "text": "$rainbowpie_localui_packverifiy_packdesc"
+        "pack_desc@rainbowpie_ui_common.editable_label": {
+          "size": [ "100%", "100%c" ],
+          "text_box_name": "pack_desc_text",
+          "text_control": "pack_desc_display_text",
+          "controls": [
+            {
+              "pack_desc_display_text@rainbowpie_ui_common.text_label": {
+                "size": [ "100%", "default" ],
+                "text": "$rainbowpie_localui_packverifiy_packdesc"
+              }
+            }
+          ]
         }
       }
     ],
