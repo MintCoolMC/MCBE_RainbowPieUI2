@@ -494,16 +494,11 @@
               "binding_name_override": "#texture_file_system",
               "binding_type": "collection"
             }
-          ],
-          "controls": [
-            {
-              "banner_overlay@rainbowpie_ui_common.text_background": {}
-            }
           ]
         }
       },
       {
-        "infomation_panel": {
+        "infomation_panel@rainbowpie_ui_common.text_background": {
           "type": "panel",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
