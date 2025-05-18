@@ -2,6 +2,56 @@
 {
   "namespace": "storage_management",
 
+  "common_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "generic_button/text": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "storage_scroll_pane/category_stack_panel/stack_panel": {
+    "size": [ "100%", "100%c" ]
+  },
+
+  "storage_scroll_pane/category_stack_panel/legacy_world_stack_panel": {
+    "size": [ "100%", "100%c" ]
+  },
+
+  "storage_scroll_pane/category_stack_panel/retailtopreview_world_stack_panel": {
+    "size": [ "100%", "100%c" ]
+  },
+
+  "storage_main_item_toggle/main_item_toggle": {
+    "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
+    "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
+    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
+    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
+    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
+    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
+    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
+    "$button_image_size": [ "100%", "100%" ],
+    "$button_content": "storage_management.main_item_text",
+    "$button_content_size": [ "100% - 6px", "100%" ]
+  },
+
+  "storage_footer_panel/visibleContent": {
+    "size": [ "100% - 4px", 32 ]
+  },
+
+  "storage_footer_panel/visibleContent/delete_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+    "$button_image_size": [ "100%", "100%" ]
+  },
+
+  "storage_footer_panel/visibleContent/share_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+    "$button_image_size": [ "100%", "100%" ]
+  },
+
   "storage_header_panel/header_panel/clear_download_cache_button_panel/clear_download_button": {
     "offset": [ 0, 0 ],
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
@@ -27,6 +77,16 @@
   },
 
   "storage_header_panel/header_panel/panel/multiselect_button": {
+    "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
+    "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
+    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
+    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
+    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
+    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
+    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
+    "$button_image_size": [ "100%", "100%" ],
+    "offset": [ 0, 0 ]
   },
 
   "storage_header_panel/header_panel/clear_cache_button_panel/clear_cache_button": {
