@@ -2,6 +2,30 @@
 {
   "namespace": "storage_management",
 
+  "storage_header_panel/header_panel/clear_download_cache_button_panel/clear_download_button": {
+    "offset": [ 0, 0 ],
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+    "$button_image_size": [ "100%", "100%" ]
+  },
+
+  "storage_header_panel/header_panel/clear_download_cache_button_panel": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "binding_type": "view",
+            "source_control_name": "storage_settings_navigation_tab_toggle",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible",
+            "ignored": "(not $rainbowpie_ui_flag_e9c6dfdb)"
+          }
+        ]
+      }
+    ]
+  },
+
   "storage_header_panel/header_panel/panel/multiselect_button": {
   },
 
