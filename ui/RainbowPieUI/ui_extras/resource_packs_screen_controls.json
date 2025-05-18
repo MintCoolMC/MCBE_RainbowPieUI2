@@ -499,7 +499,6 @@
       },
       {
         "infomation_panel@rainbowpie_ui_common.text_background": {
-          "type": "panel",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "size": [ "100%", 50 ],
