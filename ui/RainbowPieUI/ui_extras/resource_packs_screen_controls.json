@@ -466,6 +466,7 @@
           "type": "image",
           "fill": true,
           "allow_debug_missing_texture": false,
+          "force_texture_reload": true,
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "size": [ "100%", 50 ],
@@ -544,6 +545,7 @@
               "pack_icon": {
                 "type": "image",
                 "allow_debug_missing_texture": false,
+                "force_texture_reload": true,
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
                 "size": [ 50, 50 ],
