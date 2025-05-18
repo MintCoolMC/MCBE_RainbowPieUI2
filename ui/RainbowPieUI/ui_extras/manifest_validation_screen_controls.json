@@ -182,52 +182,118 @@
     "size": [ "100%", "100%c" ],
     "controls": [
       {
-        "content_panel@rainbowpie_ui_dialog.content_background": {
+        "pack_banner": {
+          "type": "image",
+          "fill": true,
+          "allow_debug_missing_texture": false,
+          "force_texture_reload": true,
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
           "size": [ "100%", "100%c" ],
+          "layer": 11,
+          "bindings": [
+            {
+              "binding_name": "#icon_path",
+              "binding_condition": "visible"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#icon_path - 'pack_icon.png') + 'pack_banner.png')",
+              "target_property_name": "#texture"
+            },
+            {
+              "binding_name": "#icon_zip",
+              "binding_name_override": "#zip_folder",
+              "binding_condition": "visible"
+            },
+            {
+              "binding_name": "#icon_file_system",
+              "binding_name_override": "#texture_file_system",
+              "binding_condition": "visible"
+            }
+          ],
           "controls": [
             {
-              "pack_info_panel": {
-                "type": "stack_panel",
-                "orientation": "horizontal",
-                "size": [ "100%", "100%cm" ],
+              "content_panel@rainbowpie_ui_dialog.content_background": {
+                "size": [ "100%", "100%c" ],
                 "controls": [
                   {
-                    "icon@manifest_validation.icon_image": {
-                      "layer": 1,
-                      "size": [ "100%y", 50 ]
-                    }
-                  },
-                  {
-                    "title_and_description": {
+                    "pack_info_panel": {
                       "type": "stack_panel",
-                      "size": [ "fill", "100%c" ],
+                      "orientation": "horizontal",
+                      "size": [ "100%", "100%cm" ],
                       "controls": [
                         {
-                          "title_panel": {
-                            "type": "panel",
-                            "size": [ "100%", "100%c" ],
+                          "icon@manifest_validation.icon_image": {
+                            "layer": 1,
+                            "size": [ "100%y", 50 ]
+                          }
+                        },
+                        {
+                          "title_and_description": {
+                            "type": "stack_panel",
+                            "size": [ "fill", "100%c" ],
                             "controls": [
                               {
-                                "title_text_stack_panel": {
-                                  "type": "stack_panel",
-                                  "orientation": "horizontal",
-                                  "size": [ "100% - 4px", "100%c" ],
-                                  "anchor_to": "center",
-                                  "anchor_from": "center",
+                                "title_panel": {
+                                  "type": "panel",
+                                  "size": [ "100%", "100%c" ],
                                   "controls": [
                                     {
-                                      "title@rainbowpie_ui_common.editable_label": {
-                                        "size": [ "100%", "100%c" ],
-                                        "text_box_name": "title_text",
-                                        "text_control": "title_display_text",
+                                      "title_text_stack_panel": {
+                                        "type": "stack_panel",
+                                        "orientation": "horizontal",
+                                        "size": [ "100% - 4px", "100%c" ],
+                                        "anchor_to": "center",
+                                        "anchor_from": "center",
                                         "controls": [
                                           {
-                                            "title_display_text@rainbowpieui_manifest_validation.title_label": {
+                                            "title@rainbowpie_ui_common.editable_label": {
+                                              "size": [ "100%", "100%c" ],
+                                              "text_box_name": "title_text",
+                                              "text_control": "title_display_text",
+                                              "controls": [
+                                                {
+                                                  "title_display_text@rainbowpieui_manifest_validation.title_label": {
+                                                    "size": [ "100%", "default" ],
+                                                    "text": "#pack_header_title",
+                                                    "bindings": [
+                                                      {
+                                                        "binding_name": "#pack_header_title",
+                                                        "binding_condition": "visible"
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "description_panel": {
+                                  "type": "panel",
+                                  "size": [ "100%", "100%c" ],
+                                  "controls": [
+                                    {
+                                      "description@rainbowpie_ui_common.editable_label": {
+                                        "size": [ "100% - 4px", "100%c" ],
+                                        "anchor_to": "center",
+                                        "anchor_from": "center",
+                                        "text_box_name": "description_text",
+                                        "text_control": "description_display_text",
+                                        "controls": [
+                                          {
+                                            "description_display_text@rainbowpie_ui_common.text_label": {
                                               "size": [ "100%", "default" ],
-                                              "text": "#pack_header_title",
+                                              "text": "#pack_header_description",
                                               "bindings": [
                                                 {
-                                                  "binding_name": "#pack_header_title",
+                                                  "binding_name": "#pack_header_description",
                                                   "binding_condition": "visible"
                                                 }
                                               ]
@@ -243,76 +309,45 @@
                           }
                         },
                         {
-                          "description_panel": {
+                          "button_panel": {
                             "type": "panel",
-                            "size": [ "100%", "100%c" ],
+                            "size": [ 87, 50 ],
                             "controls": [
                               {
-                                "description@rainbowpie_ui_common.editable_label": {
-                                  "size": [ "100% - 4px", "100%c" ],
-                                  "anchor_to": "center",
-                                  "anchor_from": "center",
-                                  "text_box_name": "description_text",
-                                  "text_control": "description_display_text",
-                                  "controls": [
-                                    {
-                                      "description_display_text@rainbowpie_ui_common.text_label": {
-                                        "size": [ "100%", "default" ],
-                                        "text": "#pack_header_description",
-                                        "bindings": [
-                                          {
-                                            "binding_name": "#pack_header_description",
-                                            "binding_condition": "visible"
-                                          }
-                                        ]
-                                      }
-                                    }
-                                  ]
+                                "refresh@manifest_validation.refresh_text_button": {
+                                  "$button_image_size": [ "100%", "100%" ],
+                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                                  "size": [ "100% - 7px", 20 ],
+                                  "offset": [ 0, 3.5 ],
+                                  "anchor_to": "top_middle",
+                                  "anchor_from": "top_middle",
+                                  "layer": 1
                                 }
+                              },
+                              {
+                                "delete@manifest_validation.delete_text_button": {
+                                  "$button_image_size": [ "100%", "100%" ],
+                                  "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                                  "size": [ "100% - 7px", 20 ],
+                                  "offset": [ 0, -3.5 ],
+                                  "anchor_to": "bottom_middle",
+                                  "anchor_from": "bottom_middle",
+                                  "layer": 1
+                                }
+                              }
+                            ],
+                            "bindings": [
+                              {
+                                "binding_name": "#pack_id",
+                                "binding_condition": "visible"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(not (#pack_id = $mintui_pack_uuid))",
+                                "target_property_name": "#visible"
                               }
                             ]
                           }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "button_panel": {
-                      "type": "panel",
-                      "size": [ 87, 50 ],
-                      "controls": [
-                        {
-                          "refresh@manifest_validation.refresh_text_button": {
-                            "$button_image_size": [ "100%", "100%" ],
-                            "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-                            "size": [ "100% - 7px", 20 ],
-                            "offset": [ 0, 3.5 ],
-                            "anchor_to": "top_middle",
-                            "anchor_from": "top_middle",
-                            "layer": 1
-                          }
-                        },
-                        {
-                          "delete@manifest_validation.delete_text_button": {
-                            "$button_image_size": [ "100%", "100%" ],
-                            "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-                            "size": [ "100% - 7px", 20 ],
-                            "offset": [ 0, -3.5 ],
-                            "anchor_to": "bottom_middle",
-                            "anchor_from": "bottom_middle",
-                            "layer": 1
-                          }
-                        }
-                      ],
-                      "bindings": [
-                        {
-                          "binding_name": "#pack_id",
-                          "binding_condition": "visible"
-                        },
-                        {
-                          "binding_type": "view",
-                          "source_property_name": "(not (#pack_id = $mintui_pack_uuid))",
-                          "target_property_name": "#visible"
                         }
                       ]
                     }
