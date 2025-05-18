@@ -464,8 +464,8 @@
       {
         "banner": {
           "type": "image",
-          "texture": "($rainbowpie_ui_path_home + '/banner')",
           "fill": true,
+          "allow_debug_missing_texture": false,
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "size": [ "100%", 50 ],
@@ -473,34 +473,37 @@
           "bindings": [
             {
               "binding_collection_name": "$button_collection_name",
-              "binding_name": "#name",
-              "binding_type": "collection"
-            },
-            {
-              "binding_collection_name": "$button_collection_name",
-              "binding_name": "#description",
+              "binding_name": "#icon_path",
               "binding_type": "collection"
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#name = $mintui_pack_name) and (#description = $mintui_pack_description))",
-              "target_property_name": "#visible"
+              "source_property_name": "((#icon_path - 'pack_icon.png') + '/pack_banner')",
+              "target_property_name": "#texture"
+            },
+            {
+              "binding_collection_name": "$button_collection_name",
+              "binding_name": "#icon_zip",
+              "binding_name_override": "#zip_folder",
+              "binding_type": "collection"
+            },
+            {
+              "binding_collection_name": "$button_collection_name",
+              "binding_name": "#icon_file_system",
+              "binding_name_override": "#texture_file_system",
+              "binding_type": "collection"
             }
           ],
           "controls": [
             {
-              "banner_overlay": {
-                "type": "image",
-                "texture": "textures/ui/White",
-                "color": [ 0.0, 0.0, 0.0 ],
-                "alpha": 0.35
-              }
+              "banner_overlay@rainbowpie_ui_common.text_background": {}
             }
           ]
         }
       },
       {
-        "background@rainbowpie_ui_common.text_background": {
+        "infomation_panel": {
+          "type": "panel",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "size": [ "100%", 50 ],
@@ -540,6 +543,7 @@
             {
               "pack_icon": {
                 "type": "image",
+                "allow_debug_missing_texture": false,
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
                 "size": [ 50, 50 ],
@@ -689,21 +693,21 @@
                               {
                                 "binding_type": "view",
                                 "source_property_name": "(not ((('|'+#name) - '[PML]') = ('|'+#name)))",
-                                "target_property_name": "#is_module"
+                                "target_property_name": "#is_module_pack"
                               },
                               {
                                 "binding_type": "view",
                                 "source_property_name": "(not ((('|'+#name) - '[HOTFIX]') = ('|'+#name)))",
-                                "target_property_name": "#is_hotfix"
+                                "target_property_name": "#is_hotfix_pack"
                               },
                               {
                                 "binding_type": "view",
                                 "source_property_name": "(not ((('|'+#name) - '[UITheme]') = ('|'+#name)))",
-                                "target_property_name": "#is_theme"
+                                "target_property_name": "#is_theme_pack"
                               },
                               {
                                 "binding_type": "view",
-                                "source_property_name": "(#is_module or #is_hotfix or #is_theme)",
+                                "source_property_name": "(#is_module_pack or #is_hotfix_pack or #is_theme_pack)",
                                 "target_property_name": "#visible"
                               }
                             ]
@@ -790,6 +794,21 @@
                               {
                                 "binding_type": "view",
                                 "source_property_name": "(not ((#icon_path - 'development_') = #icon_path)",
+                                "target_property_name": "#is_development_icon_path"
+                              },
+                              {
+                                "binding_collection_name": "$button_collection_name",
+                                "binding_name": "#icon_zip",
+                                "binding_type": "collection"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(not ((#icon_zip - 'development_') = #icon_zip)",
+                                "target_property_name": "#is_development_icon_zip"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(#is_development_icon_path or #is_development_icon_zip)",
                                 "target_property_name": "#visible"
                               }
                             ],
