@@ -97,7 +97,7 @@
                   {
                     "text@rainbowpie_ui_common.text_label": {
                       "size": [ "fill", "default" ],
-                      "text": "($rainbowpie_localui_packverifiy_packname + ' | ' + $rainbowpie_localui_packverifiy_packauther)"
+                      "text": "($rainbowpie_localui_packverifiy_packname + '  -  ' + $rainbowpie_localui_packverifiy_packauther)"
                     }
                   }
                 ]
