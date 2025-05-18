@@ -184,9 +184,9 @@
             }
           },
           {
-            "padding_t0": {
+            "padding_navigation_tab": {
               "type": "panel",
-              "size": [ 2, 2 ],
+              "size": [ 0, 1 ],
               "ignored": "(not $rainbowpie_ui_flag_e9c6dfdb)"
             }
           }
