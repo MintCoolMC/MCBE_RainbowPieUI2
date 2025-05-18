@@ -2,6 +2,177 @@
 {
   "namespace": "rainbowpieui_storage_management",
 
+  "pack_description_sub_item@storage_management.texture_icon_text": {
+    "$check_visible": true,
+    "$text_controls": [
+      {
+        "panel": {
+          "type": "stack_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "main_label@storage_management.common_label": {
+                "size": [ "65%", 10 ],
+
+                "text": "$name_text",
+                "color": "$body_text_color",
+                "bindings": "$name_bindings"
+              }
+            },
+            {
+              "desc_label@storage_management.common_label": {
+                "size": [ "100% - 4px", 20 ],
+
+                "$description_name": "('#sub_' + $panel_prefix + _description)",
+                "$description_binding_collection": "($panel_prefix + _panel)",
+
+                "text": "$description_name",
+                "color": "$light_button_secondary_default_text_color",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "$description_binding_collection",
+                    "binding_name": "$description_name"
+                  },
+                  {
+                    "binding_type": "collection_details"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "glyphs_and_version": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", 10 ],
+          "layer": 4,
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -5, 0 ],
+          "controls": [
+            {
+              "glyph_warning@storage_management.base_glyph": {
+                "$binding_name": "warning",
+                "$glyph_texture": "textures/ui/WarningGlyph"
+              }
+            },
+            {
+              "glyph_error@storage_management.base_glyph": {
+                "$binding_name": "error",
+                "$glyph_texture": "textures/ui/ErrorGlyph"
+              }
+            },
+            {
+              "glyph_update@storage_management.base_glyph": {
+                "$binding_name": "update",
+                "$glyph_texture": "textures/ui/UpdateGlyph"
+              }
+            },
+            {
+              "version_label@storage_management.common_label": {
+                "size": [ "default", "default" ],
+
+                "$version_name": "('#sub_' + $panel_prefix + _version)",
+                "$version_binding_visible": "('#sub_' + $panel_prefix + _valid)",
+                "$version_binding_collection": "($panel_prefix + _panel)",
+
+                "text": "$version_name",
+                "color": "$light_button_secondary_default_text_color",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "$version_binding_collection",
+                    "binding_name": "$version_name"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "$version_binding_collection",
+                    "binding_name": "$version_binding_visible",
+                    "binding_name_override": "#visible"
+                  },
+                  {
+                    "binding_type": "collection_details"
+                  }
+                ]
+              }
+            },
+            {
+              "padding_version_label": {
+                "type": "panel",
+                "size": [ 4, "100%" ],
+                "controls": [
+                  {
+                    "driven@rainbowpieui_settings_common.driven": {
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "size": [ 1, 8 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "size_label@storage_management.common_label": {
+                "size": [ "default", "default" ],
+                "text": "$size_text",
+                "color": "$light_button_secondary_default_text_color",
+                "bindings": "$size_bindings"
+              }
+            },
+            {
+              "dev_tag": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "bindings": [
+                  {
+                    "binding_name_override": "#texture",
+                    "binding_type": "$texture_binding_type",
+                    "binding_collection_name": "$texture_binding_collection",
+                    "binding_name": "$button_texture"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#texture - 'development_') = #texture)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "padding_version_label": {
+                      "type": "panel",
+                      "size": [ 4, "100%" ],
+                      "controls": [
+                        {
+                          "driven@rainbowpieui_settings_common.driven": {
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "size": [ 1, 8 ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "dev_tag_label@rainbowpie_ui_common.text_label": {
+                      "layer": 1,
+                      "size": [ "default", "default" ],
+                      "text": "DEV",
+                      "color": [ 1.0, 1.0, 0.333 ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "resource_toggle": {
     "type": "panel",
     "size": [ "100%", "100%cm" ],

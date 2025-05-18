@@ -2,6 +2,67 @@
 {
   "namespace": "storage_management",
 
+  "resource_controls": {
+    "$item_template": "rainbowpieui_storage_management.pack_description_sub_item"
+  },
+
+  "behavior_controls": {
+    "$item_template": "rainbowpieui_storage_management.pack_description_sub_item"
+  },
+
+  "cached_controls": {
+    "$item_template": "rainbowpieui_storage_management.pack_description_sub_item"
+  },
+
+  "main_content_panel/panel": {
+    "modifications": [
+      {
+        "control_name": "image_panel",
+        "operation": "insert_after",
+        "value": [
+          {
+            "padding_main_item_toggle": {
+              "type": "panel",
+              "size": [ 4, 0 ],
+              "visible": "$image_visible"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "main_content_panel/panel/spacing": {
+    "ignored": true
+  },
+
+  "main_content_panel/panel/image_panel/image_border": {
+    "offset": [ 0, 0 ],
+    "size": [ "100%", "100%" ],
+    "texture": ""
+  },
+
+  "main_content_panel/panel/image_panel/image_border/image": {
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "size": [ "100%", "100%" ],
+    "fill": true
+  },
+
+  "common_main_button/background": {
+    "texture": "textures/ui/White",
+    "color": "$rainbowpie_ui_theme_text_background_color",
+    "alpha": "$rainbowpie_ui_theme_text_background_alpha",
+    "size": [ "100%", "100%" ],
+    "layer": 1
+  },
+
+  "common_main_button/border": {
+    "visible": "($button_state = hover)",
+    "size": [ "100%", "100%" ],
+    "layer": 22
+  },
+
   "sub_item_tray_button": {
     "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button"
   },
@@ -24,6 +85,7 @@
   },
 
   "resource_sub_item/main_panel": {
+    "size": [ "100%", "100%c + 1px" ],
     "$control_template|default": "rainbowpieui_storage_management.resource_toggle"
   },
 
