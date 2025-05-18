@@ -183,24 +183,24 @@
     "controls": [
       {
         "content_panel@rainbowpie_ui_dialog.content_background": {
-          "size": [ "100%", 50 ],
+          "size": [ "100%", "100%c" ],
           "controls": [
             {
               "pack_info_panel": {
                 "type": "stack_panel",
                 "orientation": "horizontal",
-                "size": [ "100%", "100%" ],
+                "size": [ "100%", "100%cm" ],
                 "controls": [
                   {
                     "icon@manifest_validation.icon_image": {
                       "layer": 1,
-                      "size": [ "100%y", "100%" ]
+                      "size": [ "100%y", 50 ]
                     }
                   },
                   {
                     "title_and_description": {
                       "type": "stack_panel",
-                      "size": [ "fill", "100%" ],
+                      "size": [ "fill", "100%c" ],
                       "controls": [
                         {
                           "title_panel": {
@@ -235,11 +235,11 @@
                         {
                           "description_panel": {
                             "type": "panel",
-                            "size": [ "100%", "fill" ],
+                            "size": [ "100%", "100%c" ],
                             "controls": [
                               {
                                 "description@rainbowpie_ui_common.text_label": {
-                                  "size": [ "100% - 4px", "100%" ],
+                                  "size": [ "100% - 4px", "default" ],
                                   "anchor_to": "center",
                                   "anchor_from": "center",
                                   "text": "#pack_header_description",
@@ -260,7 +260,7 @@
                   {
                     "button_panel": {
                       "type": "panel",
-                      "size": [ 87, "100%" ],
+                      "size": [ 87, 50 ],
                       "controls": [
                         {
                           "refresh@manifest_validation.refresh_text_button": {
