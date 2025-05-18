@@ -332,13 +332,22 @@
                           }
                         },
                         {
-                          "text@rainbowpie_ui_common.text_label": {
-                            "size": [ "fill", "default" ],
-                            "text": "#pack_id",
-                            "bindings": [
+                          "pack_id@rainbowpie_ui_common.editable_label": {
+                            "size": [ "fill", "100%c" ],
+                            "text_box_name": "pack_id_text",
+                            "text_control": "pack_id_display_text",
+                            "controls": [
                               {
-                                "binding_name": "#pack_id",
-                                "binding_condition": "visible"
+                                "pack_id_display_text@rainbowpie_ui_common.text_label": {
+                                  "size": [ "100%", "default" ],
+                                  "text": "#pack_id",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#pack_id",
+                                      "binding_condition": "visible"
+                                    }
+                                  ]
+                                }
                               }
                             ]
                           }
@@ -365,13 +374,22 @@
                           }
                         },
                         {
-                          "text@rainbowpie_ui_common.text_label": {
-                            "size": [ "fill", "default" ],
-                            "text": "#pack_version",
-                            "bindings": [
+                          "pack_version@rainbowpie_ui_common.editable_label": {
+                            "size": [ "fill", "100%c" ],
+                            "text_box_name": "pack_version_text",
+                            "text_control": "pack_version_display_text",
+                            "controls": [
                               {
-                                "binding_name": "#pack_version",
-                                "binding_condition": "visible"
+                                "pack_version_display_text@rainbowpie_ui_common.text_label": {
+                                  "size": [ "100%", "default" ],
+                                  "text": "#pack_version",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#pack_version",
+                                      "binding_condition": "visible"
+                                    }
+                                  ]
+                                }
                               }
                             ]
                           }
@@ -398,13 +416,22 @@
                           }
                         },
                         {
-                          "text@rainbowpie_ui_common.text_label": {
-                            "size": [ "fill", "default" ],
-                            "text": "#pack_path",
-                            "bindings": [
+                          "pack_path@rainbowpie_ui_common.editable_label": {
+                            "size": [ "fill", "100%c" ],
+                            "text_box_name": "pack_path_text",
+                            "text_control": "pack_path_display_text",
+                            "controls": [
                               {
-                                "binding_name": "#pack_path",
-                                "binding_condition": "visible"
+                                "pack_path_display_text@rainbowpie_ui_common.text_label": {
+                                  "size": [ "100%", "default" ],
+                                  "text": "#pack_path",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#pack_path",
+                                      "binding_condition": "visible"
+                                    }
+                                  ]
+                                }
                               }
                             ]
                           }
