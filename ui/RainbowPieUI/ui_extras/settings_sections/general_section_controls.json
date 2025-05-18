@@ -1031,6 +1031,12 @@
           "text": "('%.8s' * $var_1)"
         }
       },
+      {
+        "title_015_str@rainbowpie_ui_common.text_label": {
+          "$var_1": 114514,
+          "text": "('\"' + $var_1 + '\"')"
+        }
+      },
       // 比较最小数值 2x2 (4) (By DeepSeek AI)
       {
         "title_014_str@rainbowpie_ui_common.text_label": {
