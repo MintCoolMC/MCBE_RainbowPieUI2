@@ -1766,7 +1766,7 @@
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "('§§' + #player_count)",
+                    "source_property_name": "('\"' + #player_count + '\"')",
                     "target_property_name": "#player_count_str"
                   }
                 ]

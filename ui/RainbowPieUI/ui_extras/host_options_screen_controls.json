@@ -176,7 +176,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "('§§' + #fin_time_int)",
+              "source_property_name": "('\"' + #fin_time_int + '\"')",
               "target_property_name": "#time_text"
             }
           ]
@@ -419,7 +419,7 @@
                         },
                         {
                           "binding_type": "view",
-                          "source_property_name": "('§§' + #time_hour_int + ':00')",
+                          "source_property_name": "('\"' + #time_hour_int + ':00' + '\"')",
                           "target_property_name": "#time_text"
                         }
                       ]

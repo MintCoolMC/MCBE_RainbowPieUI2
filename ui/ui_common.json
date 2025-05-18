@@ -325,7 +325,7 @@
                                               },
                                               {
                                                 "binding_type": "view",
-                                                "source_property_name": "('§§' + #amount_current + '/' + #amount_total)",
+                                                "source_property_name": "('\"' + #amount_current + '/' + #amount_total + '\"')",
                                                 "target_property_name": "#text"
                                               }
                                             ]

@@ -122,25 +122,25 @@
                   {
                     "branch@rainbowpieui_general_section.info_label": {
                       "$rainbowpie_localui_info_title": "rainbowpie.ui.about.version.branch",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_branch_type + '/' + $rainbowpieui_branch_name)"
+                      "$rainbowpie_localui_info_value": "('\"' + $rainbowpieui_branch_type + '/' + $rainbowpieui_branch_name + '\"')"
                     }
                   },
                   {
                     "commit@rainbowpieui_general_section.info_label": {
                       "$rainbowpie_localui_info_title": "rainbowpie.ui.about.version.commit",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_commit_id)"
+                      "$rainbowpie_localui_info_value": "('\"' + $rainbowpieui_commit_id + '\"')"
                     }
                   },
                   {
                     "version@rainbowpieui_general_section.info_label": {
                       "$rainbowpie_localui_info_title": "rainbowpie.ui.about.version.version",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version)"
+                      "$rainbowpie_localui_info_value": "('\"' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version + '\"')"
                     }
                   },
                   {
                     "codename@rainbowpieui_general_section.info_label": {
                       "$rainbowpie_localui_info_title": "rainbowpie.ui.about.version.codename",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_codename)"
+                      "$rainbowpie_localui_info_value": "('\"' + $rainbowpieui_codename + '\"')"
                     }
                   },
                   {
@@ -163,7 +163,7 @@
                   {
                     "subpacks@rainbowpieui_general_section.info_label": {
                       "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.subpacks",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_version_minecraft_subpacks)"
+                      "$rainbowpie_localui_info_value": "('\"' + $rainbowpieui_version_minecraft_subpacks + '\"')"
                     }
                   },
                   {
@@ -174,33 +174,33 @@
                         {
                           "target@rainbowpieui_general_section.info_label": {
                             "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.target",
-                            "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_version_minecraft_target)"
+                            "$rainbowpie_localui_info_value": "('\"' + $rainbowpieui_version_minecraft_target + '\"')"
                           }
                         },
                         {
                           "compatible@rainbowpieui_general_section.info_label": {
-                            "$minor_max": "(('§§' + $rainbowpieui_version_minecraft_max) - ($rainbowpieui_version_minecraft_bigver + '.'))",
-                            "$minor_min": "(('§§' + $rainbowpieui_version_minecraft_min) - ($rainbowpieui_version_minecraft_bigver + '.'))",
+                            "$minor_max": "($rainbowpieui_version_minecraft_max - ($rainbowpieui_version_minecraft_bigver + '.'))",
+                            "$minor_min": "($rainbowpieui_version_minecraft_min - ($rainbowpieui_version_minecraft_bigver + '.'))",
                             "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.compatible",
-                            "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_version_minecraft_bigver + '.' + $minor_min + '-' + $minor_max)"
+                            "$rainbowpie_localui_info_value": "('\"' + $rainbowpieui_version_minecraft_bigver + '.' + $minor_min + '-' + $minor_max + '\"')"
                           }
                         },
                         {
                           "target_code@rainbowpieui_general_section.info_label": {
                             "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.target_code",
-                            "$rainbowpie_localui_info_value": "('§§' + $compatibility_target_version)"
+                            "$rainbowpie_localui_info_value": "('\"' + $compatibility_target_version + '\"')"
                           }
                         },
                         {
                           "max_code@rainbowpieui_general_section.info_label": {
                             "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.max_code",
-                            "$rainbowpie_localui_info_value": "('§§' + $compatibility_max_version)"
+                            "$rainbowpie_localui_info_value": "('\"' + $compatibility_max_version + '\"')"
                           }
                         },
                         {
                           "min_code@rainbowpieui_general_section.info_label": {
                             "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.min_code",
-                            "$rainbowpie_localui_info_value": "('§§' + $compatibility_min_version)"
+                            "$rainbowpie_localui_info_value": "('\"' + $compatibility_min_version + '\"')"
                           }
                         }
                       ]
@@ -210,14 +210,14 @@
                     "resource_pack_id@rainbowpieui_general_section.info_label": {
                       "visible": "(not ($rainbowpie_ui_flag_resourcepack_identifier = ''))",
                       "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.resource_pack_id",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpie_ui_flag_resourcepack_identifier)"
+                      "$rainbowpie_localui_info_value": "('\"' + $rainbowpie_ui_flag_resourcepack_identifier + '\"')"
                     }
                   },
                   {
                     "resource_pack_displayname@rainbowpieui_general_section.info_label": {
                       "visible": "(not ($rainbowpie_ui_flag_resourcepack_displayname = ''))",
                       "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.resource_pack_displayname",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpie_ui_flag_resourcepack_displayname)"
+                      "$rainbowpie_localui_info_value": "('\"' + $rainbowpie_ui_flag_resourcepack_displayname + '\"')"
                     }
                   }
                 ]

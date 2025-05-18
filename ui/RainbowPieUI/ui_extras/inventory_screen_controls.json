@@ -45,7 +45,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "('§§' + #item_stack_count)",
+              "source_property_name": "('\"' + #item_stack_count + '\"')",
               "target_property_name": "#item_stack_count_text"
             },
             {
@@ -2134,7 +2134,7 @@
                               },
                               {
                                 "binding_type": "view",
-                                "source_property_name": "('§§' + #amount_current + '/' + #amount_total)",
+                                "source_property_name": "('\"' + #amount_current + '/' + #amount_total + '\"')",
                                 "target_property_name": "#text"
                               }
                             ]

@@ -977,8 +977,8 @@
                                                     "ignored": "($rainbowpieui_version_minecraft_min = $rainbowpieui_version_minecraft_max)",
                                                     "size": [ "100%", "default" ],
                                                     "color": [ 0.333, 1.0, 0.333 ],
-                                                    "text": "('§§' + $rainbowpieui_version_minecraft_min + '-' + $rainbowpieui_version_minecraft_max)",
-                                                    "layer": 1
+                                                    "text": "('\"' + $rainbowpieui_version_minecraft_min + '-' + $rainbowpieui_version_minecraft_max + '\"')",
+                                                    "layer": 1 
                                                   }
                                                 },
                                                 {
@@ -986,7 +986,7 @@
                                                     "ignored": "(not ($rainbowpieui_version_minecraft_min = $rainbowpieui_version_minecraft_max))",
                                                     "size": [ "100%", "default" ],
                                                     "color": [ 0.333, 1.0, 0.333 ],
-                                                    "text": "('§§' + $rainbowpieui_version_minecraft_target)",
+                                                    "text": "('\"' + $rainbowpieui_version_minecraft_target + '\"')",
                                                     "layer": 1
                                                   }
                                                 },
@@ -1051,7 +1051,7 @@
                                                   "label_9@rainbowpie_ui_common.text_label_notheme": {
                                                     "size": [ "100%", "default" ],
                                                     "color": [ 0.333, 1.0, 0.333 ],
-                                                    "text": "('§§' + $rainbowpieui_version_minecraft_subpacks)",
+                                                    "text": "('\"' + $rainbowpieui_version_minecraft_subpacks + '\"')",
                                                     "layer": 1
                                                   }
                                                 }
@@ -1717,7 +1717,7 @@
                                         "visible": "(not ($rainbowpie_ui_flag_resourcepack_identifier = ''))",
                                         "size": [ "default", 10 ],
                                         "text_alignment": "left",
-                                        "text": "('§§(' + $rainbowpie_ui_flag_resourcepack_identifier + ')')",
+                                        "text": "('\"' + '(' + $rainbowpie_ui_flag_resourcepack_identifier + ')' + '\"')",
                                         "color": [ 0.85, 0.85, 0.85 ],
                                         "alpha": 0.85,
                                         "layer": 1

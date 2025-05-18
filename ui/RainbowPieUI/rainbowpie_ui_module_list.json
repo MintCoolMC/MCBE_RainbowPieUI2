@@ -137,15 +137,15 @@
                 "layer": 1,
                 "size": [ "100%", "default" ],
                 "$value_color_format_symbol": "f",
-                "$value_string_formatted": "('§§' + $variable_name)",
-                "text": "('§§§e$§f' + $variable_name_display + ' = ' + '§' + $value_color_format_symbol + $value_string_formatted)",
+                "$value_string_formatted": "('\"' + $variable_name + '\"')",
+                "text": "('§e$§f' + $variable_name_display + ' = ' + '§' + $value_color_format_symbol + $value_string_formatted)",
                 "variables": [
                   {
-                    "requires": "($value_string_formatted = '§§true')",
+                    "requires": "($value_string_formatted = 'true')",
                     "$value_color_format_symbol": "a"
                   },
                   {
-                    "requires": "($value_string_formatted = '§§false')",
+                    "requires": "($value_string_formatted = 'false')",
                     "$value_color_format_symbol": "c"
                   },
                   {
@@ -236,7 +236,7 @@
                     "label_1@rainbowpie_ui_common.text_label": {
                       "layer": 1,
                       "size": [ "100%", 15 ],
-                      "text": "('§§' + $module_name + ' [' + $module_state + ']' + $module_update_state)",
+                      "text": "('\"' + $module_name + ' [' + $module_state + ']' + $module_update_state + '\"')",
                       "font_scale_factor": 1.5,
                       "$module_state|default": "§cINACTIVE§r",
                       "$module_update_state|default": "",
@@ -266,7 +266,7 @@
                     "label_2@rainbowpie_ui_common.text_label": {
                       "layer": 1,
                       "size": [ "100%", 10 ],
-                      "text": "('§§' + $module_version + ', §o§l' + $module_author)"
+                      "text": "('\"' + $module_version + ', §o§l' + $module_author + '\"')"
                     }
                   },
                   {
@@ -279,7 +279,7 @@
                     "label_3@rainbowpie_ui_common.text_label": {
                       "layer": 1,
                       "size": [ "100% - 44px", "default" ],
-                      "text": "('§§' + $module_description)"
+                      "text": "('\"' + $module_description + '\"')"
                     }
                   },
                   {

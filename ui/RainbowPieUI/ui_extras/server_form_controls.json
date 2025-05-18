@@ -237,7 +237,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "('§§' + #custom_dropdown_length)",
+              "source_property_name": "('\"' + #custom_dropdown_length + '\"')",
               "target_property_name": "#custom_dropdown_length_str"
             }
           ]

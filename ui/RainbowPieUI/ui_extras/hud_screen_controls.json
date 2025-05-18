@@ -131,7 +131,7 @@
                         },
                         {
                           "binding_type": "view",
-                          "source_property_name": "('§§' + #health_percentage_integer + '.' + #health_percentage_fraction)",
+                          "source_property_name": "('\"' + #health_percentage_integer + '.' + #health_percentage_fraction + '\"')",
                           "target_property_name": "#health_percentage_text"
                         }
                       ]
@@ -439,7 +439,7 @@
                                     },
                                     {
                                       "binding_type": "view",
-                                      "source_property_name": "('§§' + #amount_current + '/' + #amount_total)",
+                                      "source_property_name": "('\"' + #amount_current + '/' + #amount_total + '\"')",
                                       "target_property_name": "#text"
                                     }
                                   ]
@@ -599,7 +599,7 @@
                                     },
                                     {
                                       "binding_type": "view",
-                                      "source_property_name": "('§§' + #amount_current)",
+                                      "source_property_name": "('\"' + #amount_current + '\"')",
                                       "target_property_name": "#text"
                                     }
                                   ]
@@ -3192,7 +3192,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "('§§' + #player_count)",
+              "source_property_name": "('\"' + #player_count + '\"')",
               "target_property_name": "#player_count_str"
             }
           ]
@@ -3289,7 +3289,7 @@
                         },
                         {
                           "binding_type": "view",
-                          "source_property_name": "('§§' + #player_count + ' | ' + #player_list_title)",
+                          "source_property_name": "('\"' + #player_count + ' | ' + #player_list_title + '\"')",
                           "target_property_name": "#player_count_str"
                         }
                       ]
@@ -3354,7 +3354,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "('§§' + #player_count)",
+              "source_property_name": "('\"' + #player_count + '\"')",
               "target_property_name": "#player_count_str"
             }
           ]
@@ -3644,7 +3644,7 @@
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "('§§' + #player_count)",
+                    "source_property_name": "('\"' + #player_count + '\"')",
                     "target_property_name": "#player_count_str"
                   }
                 ]
