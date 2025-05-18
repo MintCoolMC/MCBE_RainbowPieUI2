@@ -198,7 +198,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#icon_path - 'pack_icon.png') + 'pack_banner.png')",
+              "source_property_name": "('\"' + (#icon_path - 'pack_icon.png') + 'pack_banner.png' + '\"')",
               "target_property_name": "#texture"
             },
             {

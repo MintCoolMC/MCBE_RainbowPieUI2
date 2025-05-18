@@ -479,7 +479,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#icon_path - 'pack_icon.png') + 'pack_banner.png')",
+              "source_property_name": "('\"' + (#icon_path - 'pack_icon.png') + 'pack_banner.png' + '\"')",
               "target_property_name": "#texture"
             },
             {
@@ -795,7 +795,7 @@
                               },
                               {
                                 "binding_type": "view",
-                                "source_property_name": "(not ((#icon_path - 'development_') = #icon_path)",
+                                "source_property_name": "(not (('\"' + #icon_path + '\"' - '/development_') = #icon_path)",
                                 "target_property_name": "#is_development_icon_path"
                               },
                               {
@@ -805,7 +805,7 @@
                               },
                               {
                                 "binding_type": "view",
-                                "source_property_name": "(not ((#icon_zip - 'development_') = #icon_zip)",
+                                "source_property_name": "(not (('\"' + #icon_zip + '\"' - '/development_') = #icon_zip)",
                                 "target_property_name": "#is_development_icon_zip"
                               },
                               {

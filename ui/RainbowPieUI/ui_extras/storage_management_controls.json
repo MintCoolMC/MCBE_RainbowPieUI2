@@ -136,7 +136,7 @@
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "(not ((#texture - 'development_') = #texture)",
+                    "source_property_name": "(not (('\"' + #texture + '\"' - 'development_') = #texture)",
                     "target_property_name": "#is_development_icon_path"
                   },
                   {
@@ -147,7 +147,7 @@
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "(not ((#zip_folder - 'development_') = #zip_folder)",
+                    "source_property_name": "(not (('\"' + #zip_folder + '\"' - 'development_') = #zip_folder)",
                     "target_property_name": "#is_development_icon_zip"
                   },
                   {
