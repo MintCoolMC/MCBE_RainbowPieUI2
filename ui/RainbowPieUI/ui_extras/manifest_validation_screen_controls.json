@@ -216,12 +216,22 @@
                                   "anchor_from": "center",
                                   "controls": [
                                     {
-                                      "title@rainbowpieui_manifest_validation.title_label": {
-                                        "text": "#pack_header_title",
-                                        "bindings": [
+                                      "title@rainbowpie_ui_common.editable_label": {
+                                        "size": [ "100%", "100%c" ],
+                                        "text_box_name": "title_text",
+                                        "text_control": "title_display_text",
+                                        "controls": [
                                           {
-                                            "binding_name": "#pack_header_title",
-                                            "binding_condition": "visible"
+                                            "title_display_text@rainbowpieui_manifest_validation.title_label": {
+                                              "size": [ "100%", "default" ],
+                                              "text": "#pack_header_title",
+                                              "bindings": [
+                                                {
+                                                  "binding_name": "#pack_header_title",
+                                                  "binding_condition": "visible"
+                                                }
+                                              ]
+                                            }
                                           }
                                         ]
                                       }
@@ -238,15 +248,24 @@
                             "size": [ "100%", "100%c" ],
                             "controls": [
                               {
-                                "description@rainbowpie_ui_common.text_label": {
-                                  "size": [ "100% - 4px", "default" ],
+                                "description@rainbowpie_ui_common.editable_label": {
+                                  "size": [ "100% - 4px", "100%c" ],
                                   "anchor_to": "center",
                                   "anchor_from": "center",
-                                  "text": "#pack_header_description",
-                                  "bindings": [
+                                  "text_box_name": "description_text",
+                                  "text_control": "description_display_text",
+                                  "controls": [
                                     {
-                                      "binding_name": "#pack_header_description",
-                                      "binding_condition": "visible"
+                                      "description_display_text@rainbowpie_ui_common.text_label": {
+                                        "size": [ "100%", "default" ],
+                                        "text": "#pack_header_description",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#pack_header_description",
+                                            "binding_condition": "visible"
+                                          }
+                                        ]
+                                      }
                                     }
                                   ]
                                 }
