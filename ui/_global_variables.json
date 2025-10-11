@@ -91,7 +91,7 @@
   "$rainbowpie_ui_flag_input_enable_profanity_filter": true,
   "$rainbowpie_ui_flag_dropdown_default_show_button": true,
   "$rainbowpie_ui_flag_disconnect_ui_modified": true,
-  "$rainbowpie_ui_flag_inventory_debug": 1,
+  "$rainbowpie_ui_flag_inventory_debug": false,
   "$rainbowpie_ui_flag_persona_debug": false,
   "$rainbowpie_ui_flag_disable_spatial_pattern_fix": true,
 

@@ -273,7 +273,8 @@
     "max_size": [ 200, 100 ],
     "color": "$rainbowpie_ui_theme_hud_itemname_text_color",
     "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "shadow": false
   },
 
   "hud_player_renderer/hud_player": {
