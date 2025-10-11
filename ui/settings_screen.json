@@ -344,15 +344,19 @@
     "ignored": "($rainbowpie_ui_feature_markbest)"
   },
 
-  // "selector_stack_panel/controls_and_settings_selector_pane/spacer_2": {
-  //   "size": [ 1, 1 ]
-  // },
+  "selector_stack_panel/controls_and_settings_selector_pane/spacer_04_no_spatial": {
+    "size": [ 1, 1 ]
+  },
+
+  "selector_stack_panel/controls_and_settings_selector_pane/spacer_05_no_spatial": {
+    "size": [ 1, 1 ]
+  },
 
   "selector_stack_panel/controls_and_settings_selector_pane/selector_group_label_1": {
     "ignored": "($rainbowpie_ui_feature_markbest)"
   },
 
-  "selector_stack_panel/controls_and_settings_selector_pane/spacer_1": {
+  "selector_stack_panel/controls_and_settings_selector_pane/spacer_1_no_spatial": {
     "size": [ 1, 1 ]
   },
 
@@ -363,10 +367,9 @@
   "selector_stack_panel/controls_and_settings_selector_pane/selector_group_label_3": {
     "size": [ 1, 1 ],
     "ignored": "($is_publish or $rainbowpie_ui_feature_markbest)"
-  }//,
+  },
 
-  // "selector_stack_panel/controls_and_settings_selector_pane/spacer_3": {
-  //   "size": [ 1, 1 ],
-  //   "ignored": "$is_publish"
-  // }
+  "selector_stack_panel/controls_and_settings_selector_pane/spacer_4_no_spatial": {
+    "size": [ 1, 1 ]
+  }
 }

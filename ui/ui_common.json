@@ -1692,6 +1692,10 @@
             "$is_publish": "$rainbowpie_ui_debug_ui_var_override_is_publish",
             "$education_edition": "$rainbowpie_ui_debug_ui_var_override_education_edition"
           },
+          {
+            "requires": "$rainbowpie_ui_flag_disable_spatial_pattern_fix",
+            "$settings_spatial_pattern_fix_enabled": false
+          },
           // 对部分不同的场景优化
           {
             "requires": "$is_low_memory_device",

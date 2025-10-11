@@ -78,6 +78,8 @@
   "$rainbowpie_ui_flag_play_bottom_panel": true,
   "$rainbowpie_ui_flag_about_verison_infomation": true,
 
+  "$rainbowpie_ui_flag_disable_spatial_pattern_fix": true,
+
   "$rainbowpie_ui_flag_pause_myinfo_disabled": true,
   "$rainbowpie_ui_flag_pause_tab_scoreboard": false,
   "$rainbowpie_ui_flag_pause_quit_doubleclick": true,
