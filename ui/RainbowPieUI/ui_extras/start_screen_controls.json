@@ -514,7 +514,7 @@
           "anchor_to": "left_middle",
           "texture": "($icon_theme_dir + '/' + $icon_texture_name)",
           "color": "$text_color",
-          "layer": 19,
+          "layer": 64,
           "bindings": [
             {
               "binding_name": "#store_button_art_visible"
@@ -535,7 +535,7 @@
           "anchor_to": "left_middle",
           "text": "$button_text",
           "color": "$text_color",
-          "layer": 15,
+          "layer": 66,
           "bindings": [
             {
               "binding_name": "#store_button_art_label_color",
@@ -550,7 +550,7 @@
           "ignored": "$store_disabled",
           "type": "panel",
           "size": [ "100% + 8px", "100% + 8px" ],
-          "layer": 12,
+          "layer": 50,
           "bindings": [
             {
               "binding_name": "#store_button_art_visible",
@@ -593,7 +593,7 @@
         "store_button_banner@start.main_button_banner": {
           "ignored": "$store_disabled",
           "offset": [ 13, -4 ],
-          "layer": 52,
+          "layer": 62,
           "$banner_visible_binding_name": "#store_button_banner_visible",
           "$banner_texture_binding_name": "#store_button_banner_texture",
           "$banner_texture_source_binding_name": "#store_button_banner_texture_source",
@@ -606,7 +606,7 @@
           "ignored": "$store_disabled",
           "size": [ "52.38%y", 15 ],
           "offset": [ -12, -10 ],
-          "layer": 50,
+          "layer": 60,
           "bindings": [
             {
               "binding_name": "#update_icon_visible",
@@ -622,7 +622,7 @@
           "offset": [ 12, -10 ],
           "anchor_from": "top_right",
           "anchor_to": "top_right",
-          "layer": 50,
+          "layer": 60,
           "bindings": [
             {
               "binding_name": "#new_offers",
