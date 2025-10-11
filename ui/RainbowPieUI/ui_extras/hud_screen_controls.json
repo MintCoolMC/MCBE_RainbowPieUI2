@@ -2693,7 +2693,7 @@
                             "anchor_from": "top_middle",
                             "anchor_to": "top_middle",
                             "layer": 12,
-                            "ignored": "(not (($compatibility_min_version < 1218000) or ($compatibility_min_version = 1218000)))",
+                            "ignored": "(not (($compatibility_min_version > 1218000) or ($compatibility_min_version = 1218000)))",
                             "controls": [
                               {
                                 "locator_bar@hud.locator_bar": {
