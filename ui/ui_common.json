@@ -1683,6 +1683,11 @@
             "$game_pad": true
           },
           {
+            "requires": "$rainbowpie_ui_debug_ui_debug",
+            "$debug_settings": true,
+            "$is_publish": false
+          },
+          {
             "requires": "$rainbowpie_ui_debug_ui_var_override",
             "$file_picking_supported": "$rainbowpie_ui_debug_ui_var_override_file_picking_supported",
             "$world_archive_support": "$rainbowpie_ui_debug_ui_var_override_world_archive_support",
