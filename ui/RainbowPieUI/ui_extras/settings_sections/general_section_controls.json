@@ -1030,8 +1030,8 @@
       },
       {
         "title_014_str@rainbowpie_ui_common.text_label": {
-          "$var_1": "str/time set 24000",
-          "text": "('%.8s' * $var_1)"
+          "$var_1": "message:/time set 24000",
+          "text": "('%.17s' * $var_1)"
         }
       },
       {

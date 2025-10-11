@@ -356,7 +356,12 @@
       },
       {
         "binding_type": "view",
-        "source_property_name": "(('%.8s' * ('str' + #message_text_box_content)) = 'str/time')",
+        "source_property_name": "('message:' + #message_text_box_content)",
+        "target_property_name": "#formatted_message_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.17s' * #formatted_message_text) = 'message:/time set')",
         "target_property_name": "#visible"
       }
     ],
