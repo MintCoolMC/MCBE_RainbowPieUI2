@@ -410,9 +410,9 @@
     "size": [ 1, 1 ]
   },
 
-  "addons_selector_panel/spacer": {
-    "size": [ 1, 1 ]
-  },
+  // "addons_selector_panel/spacer": {
+  //   "size": [ 1, 1 ]
+  // },
 
   "addons_selector_panel/selector_group_label_2": {
     "ignored": "($rainbowpie_ui_feature_markbest)"

@@ -375,12 +375,16 @@
       },
       {
         "raytracing_render_distance_slider@settings_common.option_slider": {
-          "ignored": "($is_holographic)",
           "$option_label": "#raytracing_render_distance_slider_label",
           "$slider_name": "raytracing_render_distance",
           "$slider_value_binding_name": "#raytracing_render_distance",
           "$slider_tts_text_value": "#raytracing_render_distance_text_value",
           "$option_enabled_binding_name": "#raytracing_render_distance_enabled",
+          "$option_tooltip_binding_type": "global",
+          "$option_tooltip_area": "general_and_controls_sections",
+          "$option_tooltip_text_binding_name": "#rtx_renderdist_performance_tooltip_text",
+          "$option_tooltip_visible_binding_name": "#rtx_render_distance_warning_visible",
+          "$option_tooltip_icon": "textures/ui/WarningGlyph",
           "$slider_steps_binding_name": "#raytracing_render_distance_steps",
           "$label_bindings": [
             {
@@ -388,8 +392,7 @@
             }
           ],
           "controls": [
-            { "rtx_render_distance_warning@general_section.rtx_render_distance_warning": {} },
-            { "option_generic_core@settings_common.option_generic_core": {} }
+            { "option_generic_core@settings_common.option_generic_core": { } }
           ],
           "bindings": [
             {
