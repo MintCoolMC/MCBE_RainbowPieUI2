@@ -204,6 +204,7 @@
   "$rainbowpie_ui_flag_5354b722": true, // Only display locator_bar when holding [TAB] key (Keyboard Only)
   "$rainbowpie_ui_flag_19efcc11": true,
   "$rainbowpie_ui_flag_988450b0": true, // Independent Time Tweaker
+  "$rainbowpie_ui_flag_fb3b5106": false, // Independent Cmd Helper Test
 
   // Debug
   "$rainbowpie_ui_debug": false,

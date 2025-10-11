@@ -10,6 +10,9 @@
         "value": [
           {
             "advanced_host_time_tweaker@rainbowpieui_host_options.independent_advanced_host_time_tweaker": {}
+          },
+          {
+            "command_helper@rainbowpieui_host_options.independent_command_helper": { }
           }
         ]
       }
