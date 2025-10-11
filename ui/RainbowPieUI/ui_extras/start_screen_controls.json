@@ -499,6 +499,141 @@
     ]
   },
 
+  "startv2_store_button_panel": {
+    "type": "panel",
+    "$button_text|default": "Default Button Text",
+    "$icon_theme_dir|default": "($rainbowpie_ui_path_theme + '/icon/start')",
+    "$icon_texture_name|default": "null",
+    "controls": [
+      {
+        "button_icon": {
+          "type": "image",
+          "size": [ "100%y", "100% - 4px" ],
+          "offset": [ 2, 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "texture": "($icon_theme_dir + '/' + $icon_texture_name)",
+          "color": "$text_color",
+          "layer": 19,
+          "bindings": [
+            {
+              "binding_name": "#store_button_art_visible"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not #store_button_art_visible)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "button_text@rainbowpie_ui_common.text_label_notheme": {
+          "size": [ "100% - 30px", "default" ],
+          "offset": [ 30, 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "$button_text",
+          "color": "$text_color",
+          "layer": 15,
+          "bindings": [
+            {
+              "binding_name": "#store_button_art_label_color",
+              "binding_name_override": "#color",
+              "binding_condition": "visible"
+            }
+          ]
+        }
+      },
+      {
+        "store_button_art": {
+          "ignored": "$store_disabled",
+          "type": "panel",
+          "size": [ "100% + 8px", "100% + 8px" ],
+          "layer": 12,
+          "bindings": [
+            {
+              "binding_name": "#store_button_art_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "default_background@start.main_button_gif": {
+                "layer": 1,
+                "$gif_path_binding_name": "#store_button_art_default_bg_path",
+                "$gif_alpha_binding_name": "#store_button_art_default_alpha"
+              }
+            },
+            {
+              "hover_background@start.main_button_gif": {
+                "layer": 2,
+                "$gif_path_binding_name": "#store_button_art_hover_bg_path",
+                "$gif_alpha_binding_name": "#store_button_art_hover_alpha"
+              }
+            },
+            {
+              "default_foreground@start.main_button_gif": {
+                "layer": 4,
+                "$gif_path_binding_name": "#store_button_art_default_fg_path",
+                "$gif_alpha_binding_name": "#store_button_art_default_alpha"
+              }
+            },
+            {
+              "hover_foreground@start.main_button_gif": {
+                "layer": 5,
+                "$gif_path_binding_name": "#store_button_art_hover_fg_path",
+                "$gif_alpha_binding_name": "#store_button_art_hover_alpha"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "store_button_banner@start.main_button_banner": {
+          "ignored": "$store_disabled",
+          "offset": [ 13, -4 ],
+          "layer": 52,
+          "$banner_visible_binding_name": "#store_button_banner_visible",
+          "$banner_texture_binding_name": "#store_button_banner_texture",
+          "$banner_texture_source_binding_name": "#store_button_banner_texture_source",
+          "$banner_text_binding_name": "#store_button_banner_text",
+          "$banner_text_color_binding_name": "#store_button_banner_text_color"
+        }
+      },
+      {
+        "update_icon@start.update_prompt_icon": {
+          "ignored": "$store_disabled",
+          "size": [ "52.38%y", 15 ],
+          "offset": [ -12, -10 ],
+          "layer": 50,
+          "bindings": [
+            {
+              "binding_name": "#update_icon_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      },
+      {
+        "new_offers_icon@start.new_offers_icon": {
+          "ignored": "$store_disabled",
+          "offset": [ 12, -10 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "layer": 50,
+          "bindings": [
+            {
+              "binding_name": "#new_offers",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "hide_paper_doll_anim": {
     "anim_type": "offset",
     "easing": "linear",
@@ -1342,7 +1477,7 @@
                               },
                               {
                                 "store_button@rainbowpieui_start.startv2_big_button_template": {
-                                  "ignored": "(($trial and not $use_single_column_for_buttons) or $rainbowpie_ui_flag_0ab174e4)",
+                                  "ignored": "(($trial and not $use_single_column_for_buttons) or $rainbowpie_ui_flag_1d6d26cc)",
                                   "$icon_texture_name": "marketplace",
                                   "$pressed_button_name": "button.menu_store",
                                   "$button_text": "menu.store",
@@ -1350,16 +1485,27 @@
                                 }
                               },
                               {
-                                "store_button_with_treatments": {
-                                  "type": "panel",
-                                  "size": [ "100%", 32 ],
-                                  "ignored": "(($trial and not $use_single_column_for_buttons) or (not $rainbowpie_ui_flag_0ab174e4))",
-                                  "controls": [
+                                "store_button_with_custom_controls@rainbowpieui_start.startv2_big_button_template": {
+                                  "$button_content": "rainbowpieui_start.startv2_store_button_panel",
+                                  "ignored": "(($trial and not $use_single_column_for_buttons) or (not $rainbowpie_ui_flag_1d6d26cc))",
+                                  "$icon_texture_name": "marketplace",
+                                  "$pressed_button_name": "button.menu_store",
+                                  "$button_text": "menu.store",
+                                  "$focus_override_right": "bottom_button",
+                                  "button_mappings": [
                                     {
-                                      "store@start.store_button_stack": {
-                                        "$rainbowpie_localui_is_custom_ui": true,
-                                        "size": [ "100% + 2px", "100% + 2px" ]
-                                      }
+                                      "from_button_id": "button.menu_select",
+                                      "to_button_id": "$pressed_button_name",
+                                      "mapping_type": "pressed"
+                                    },
+                                    {
+                                      "from_button_id": "button.menu_ok",
+                                      "to_button_id": "$pressed_button_name",
+                                      "mapping_type": "pressed"
+                                    },
+                                    {
+                                      "to_button_id": "store_button.is_hovered",
+                                      "mapping_type": "pressed"
                                     }
                                   ]
                                 }
