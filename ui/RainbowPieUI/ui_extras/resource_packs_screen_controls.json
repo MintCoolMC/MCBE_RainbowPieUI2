@@ -778,6 +778,124 @@
                           }
                         },
                         {
+                          "error_text": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%c", 10 ],
+                            "controls": [
+                              {
+                                "glyph_image_panel": {
+                                  "type": "panel",
+                                  "size": [ "50%y", "100%" ],
+                                  "controls": [
+                                    {
+                                      "glyph_image": {
+                                        "type": "image",
+                                        "size": [ "100%", "100%" ],
+                                        "offset": [ 0, 1 ],
+                                        "texture": "textures/ui/ErrorGlyph"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "padding_0@common.empty_panel": {
+                                  "size": [ 1, 0 ]
+                                }
+                              },
+                              {
+                                "error_number@rainbowpie_ui_common.text_label": {
+                                  "size": [ "default", "100%" ],
+                                  // "font_type": "MinecraftTen",
+                                  // "font_scale_factor": 0.8,
+                                  "text": "#num_errors",
+                                  "color": "$error_text_color",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#num_errors",
+                                      "binding_collection_name": "$button_collection_name",
+                                      "binding_type": "collection"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "padding_1@common.empty_panel": {
+                                  "size": [ 2, 0 ]
+                                }
+                              }
+                            ],
+                            "bindings": [
+                              {
+                                "binding_collection_name": "$button_collection_name",
+                                "binding_name": "#has_errors",
+                                "binding_name_override": "#visible",
+                                "binding_type": "collection"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "warning_text": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%c", 10 ],
+                            "controls": [
+                              {
+                                "glyph_image_panel": {
+                                  "type": "panel",
+                                  "size": [ "50%y", "100%" ],
+                                  "controls": [
+                                    {
+                                      "glyph_image": {
+                                        "type": "image",
+                                        "size": [ "100%", "100%" ],
+                                        "offset": [ 0, 1 ],
+                                        "texture": "textures/ui/WarningGlyph"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "padding_0@common.empty_panel": {
+                                  "size": [ 1, 0 ]
+                                }
+                              },
+                              {
+                                "warning_number@rainbowpie_ui_common.text_label": {
+                                  "size": [ "default", "100%" ],
+                                  // "font_type": "MinecraftTen",
+                                  // "font_scale_factor": 0.8,
+                                  "text": "#num_warnings",
+                                  "color": "$warning_text_color",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#num_warnings",
+                                      "binding_collection_name": "$button_collection_name",
+                                      "binding_type": "collection"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "padding_1@common.empty_panel": {
+                                  "size": [ 2, 0 ]
+                                }
+                              }
+                            ],
+                            "bindings": [
+                              {
+                                "binding_collection_name": "$button_collection_name",
+                                "binding_name": "#has_warnings",
+                                "binding_name_override": "#visible",
+                                "binding_type": "collection"
+                              }
+                            ]
+                          }
+                        },
+                        {
                           "dev_tag": {
                             "type": "stack_panel",
                             "orientation": "horizontal",
