@@ -1205,6 +1205,16 @@
           ]
         }
       },
+      // 判断奇数偶数
+      // 0 = 奇数
+      // 1 = 偶数
+      {
+        "title_015_str@rainbowpie_ui_common.text_label": {
+          "$var_1": 5,
+          "$var_2": "($var_1 - 2 * ($var_1 / 2))",
+          "text": "('\"' + $var_2 + '\"')"
+        }
+      },
       {
         "spacer_2": {
           "type": "panel",
