@@ -18,7 +18,7 @@
     "play_event": "rainbowpie.close_pack_warning"
   },
 
-  "pack_warning_dialog_alert_content": {
+  "rainbowpie_pack_warning_dialog_alert_content": {
     "type": "panel",
     "size": [ "100%", "100%" ],
     "controls": [
@@ -230,6 +230,216 @@
     ]
   },
 
+  "pack_warning_dialog_alert_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "content_panel@rainbowpie_ui_dialog.content_background": {
+                "size": [ "100%", "fill" ],
+                "controls": [
+                  {
+                    "pack_info_panel": {
+                      "type": "panel",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "size": [ "100%", 30 ],
+                      "controls": [
+                        {
+                          "pack_icon": {
+                            "type": "image",
+                            "allow_debug_missing_texture": false,
+                            "force_texture_reload": true,
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "size": [ "100%y", "100%" ],
+                            "layer": 4,
+                            "bindings": [
+                              {
+                                "binding_collection_name": "#selected_pack_items_global",
+                                "binding_name": "#icon_path",
+                                "binding_name_override": "#texture",
+                                "binding_type": "collection"
+                              },
+                              {
+                                "binding_collection_name": "#selected_pack_items_global",
+                                "binding_name": "#icon_zip",
+                                "binding_name_override": "#zip_folder",
+                                "binding_type": "collection"
+                              },
+                              {
+                                "binding_collection_name": "#selected_pack_items_global",
+                                "binding_name": "#icon_file_system",
+                                "binding_name_override": "#texture_file_system",
+                                "binding_type": "collection"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "pack_name@rainbowpie_ui_common.text_label": {
+                            "type": "label",
+                            "layer": 1,
+                            "size": [ "default", 15 ],
+                            "max_size": [ "100% - 46px", 15 ],
+                            "offset": [ 38, 0 ],
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "text": "#pack_name",
+                            "font_scale_factor": 1.5,
+                            "bindings": [
+                              {
+                                "binding_collection_name": "#selected_pack_items_global",
+                                "binding_name": "#name",
+                                "binding_type": "collection"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(((#name - '[PML]') - '[HOTFIX]') - '[UITheme]')",
+                                "target_property_name": "#pack_name"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "content_text@rainbowpie_ui_common.text_label_notheme": {
+                      "size": [ "100% - 8px", "100% - 34px" ],
+                      "offset": [ 0, 32 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "color": "$rainbowpie_ui_theme_dialog_content_color",
+                      "text": "rainbowpie.ui.warning.3rdparty.text"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "button_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%c + 1px" ],
+                "controls": [
+                  {
+                    "button_panel": {
+                      "type": "panel",
+                      "anchor_to": "bottom_middle",
+                      "anchor_from": "bottom_middle",
+                      "size": [ "100% + 1px", "100%cm" ],
+                      "controls": [
+                        {
+                          "deactivate_input_panel": {
+                            "type": "input_panel",
+                            "anchor_to": "left_middle",
+                            "anchor_from": "left_middle",
+                            "size": [ "50%", "23px" ],
+                            "layer": 8,
+                            "consume_hover_events": false,
+                            "bindings": [
+                              {
+                                "binding_collection_name": "#selected_pack_items_global",
+                                "binding_type": "collection_details"
+                              }
+                            ],
+                            "button_mappings": [
+                              {
+                                "from_button_id": "button.menu_select",
+                                "to_button_id": "button.move_left_global",
+                                "mapping_type": "pressed",
+                                "consume_event": false
+                              },
+                              {
+                                "from_button_id": "button.menu_ok",
+                                "to_button_id": "button.move_left_global",
+                                "mapping_type": "pressed",
+                                "consume_event": false
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "exit_settings_input_panel": {
+                            "type": "input_panel",
+                            "anchor_to": "left_middle",
+                            "anchor_from": "left_middle",
+                            "size": [ "50%", "23px" ],
+                            "layer": 7,
+                            "consume_hover_events": false,
+                            "button_mappings": [
+                              {
+                                "from_button_id": "button.menu_select",
+                                "to_button_id": "button.menu_exit",
+                                "mapping_type": "pressed",
+                                "consume_event": false
+                              },
+                              {
+                                "from_button_id": "button.menu_ok",
+                                "to_button_id": "button.menu_exit",
+                                "mapping_type": "pressed",
+                                "consume_event": false
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "check_button@common_buttons.light_text_button": {
+                            "$focus_id": "check_button",
+                            "$focus_override_down": "deactivate_button",
+                            "$focus_override_up": "deactivate_button",
+                            "$focus_override_left": "deactivate_button",
+                            "$focus_override_right": "deactivate_button",
+                            "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                            "$button_image_size": [ "100% - 1px", "100%" ],
+                            "$pressed_button_name": "button.report_errors_global",
+                            "$button_text": "rainbowpie.ui.warning.button.check",
+                            "anchor_to": "right_middle",
+                            "anchor_from": "right_middle",
+                            "size": [ "50%", 23 ],
+                            "layer": 5,
+                            "bindings": [
+                              {
+                                "binding_collection_name": "#selected_pack_items_global",
+                                "binding_type": "collection_details"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "deactivate_button@common_buttons.light_text_button": {
+                            "$focus_id": "deactivate_button",
+                            "$focus_override_down": "check_button",
+                            "$focus_override_up": "check_button",
+                            "$focus_override_left": "check_button",
+                            "$focus_override_right": "check_button",
+                            "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+                            "$button_image_size": [ "100% - 1px", "100%" ],
+                            "$pressed_button_name": "ranbowpie.move_left_global",
+                            "$button_text": "rainbowpie.ui.warning.button.deactivate",
+                            "anchor_to": "left_middle",
+                            "anchor_from": "left_middle",
+                            "size": [ "50%", 23 ],
+                            "layer": 5
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "pack_warning_status_check": {
     "type": "panel",
     "size": [ "100%", "100%" ],
@@ -241,14 +451,59 @@
           "visible": true,
           "controls": [
             {
-              "dialog_panel@rainbowpie_ui_dialog.dialog_panel": {
+              "rainbowpie_pack_warning_dialog_panel@rainbowpie_ui_dialog.dialog_panel": {
                 "size": [ 204, 132 ],
                 "layer": 100,
                 "$rainbowpie_localui_dialogheader_title": "$mintui_pack_name",
+                "$rainbowpie_localui_dialog_content": "rainbowpieui_settings_common.rainbowpie_pack_warning_dialog_alert_content",
+                "$rainbowpie_localui_dialog_show_background": false,
+                "$rainbowpie_localui_dialogheader_show_close": true,
+                "$close_button_to_button_id": "rainbowpie.close_pack_warning",
+                "bindings": [
+                  {
+                    "binding_name": "#name",
+                    "binding_type": "collection",
+                    "binding_collection_name": "#selected_pack_items_global"
+                  },
+                  {
+                    "binding_name": "#description",
+                    "binding_type": "collection",
+                    "binding_collection_name": "#selected_pack_items_global"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((#name = $mintui_pack_name) and (#description = $mintui_pack_description))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "pack_warning_dialog_panel@rainbowpie_ui_dialog.dialog_panel": {
+                "size": [ 204, 132 ],
+                "layer": 100,
+                "$rainbowpie_localui_dialogheader_title": "rainbowpie.ui.warning.3rdparty.title",
                 "$rainbowpie_localui_dialog_content": "rainbowpieui_settings_common.pack_warning_dialog_alert_content",
                 "$rainbowpie_localui_dialog_show_background": false,
                 "$rainbowpie_localui_dialogheader_show_close": true,
-                "$close_button_to_button_id": "rainbowpie.close_pack_warning"
+                "$close_button_to_button_id": "rainbowpie.close_pack_warning",
+                "bindings": [
+                  {
+                    "binding_name": "#name",
+                    "binding_type": "collection",
+                    "binding_collection_name": "#selected_pack_items_global"
+                  },
+                  {
+                    "binding_name": "#description",
+                    "binding_type": "collection",
+                    "binding_collection_name": "#selected_pack_items_global"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#name = $mintui_pack_name) and (#description = $mintui_pack_description)))",
+                    "target_property_name": "#visible"
+                  }
+                ]
               }
             },
             {
@@ -336,7 +591,12 @@
       },
       {
         "binding_type": "view",
-        "source_property_name": "(((#name = $mintui_pack_name) and (#description = $mintui_pack_description)) and #pack_warning_visible)",
+        "source_property_name": "((#name = $mintui_pack_name) and (#description = $mintui_pack_description))",
+        "target_property_name": "#is_rainbowpie_pack"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#is_rainbowpie_pack and #pack_warning_visible) or (not #is_rainbowpie_pack and #has_errors))",
         "target_property_name": "#visible"
       }
     ]

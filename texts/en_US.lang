@@ -138,6 +138,9 @@ rainbowpie.ui.warning.text.warning=An error has been detected. If you are not us
 rainbowpie.ui.warning.button.check=Check error
 rainbowpie.ui.warning.button.deactivate=Deactivate Pack
 
+rainbowpie.ui.warning.3rdparty.title=Error from third-party pack
+rainbowpie.ui.warning.3rdparty.text=There is an error in this resource pack, If this pack doesn't work, please deactivate it.
+
 rainbowpie.ui.version.warn=Warning!
 rainbowpie.ui.version.supported=Compatible Versions:
 rainbowpie.ui.version.warn_unsupport=This version may have bugs or problems

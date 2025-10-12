@@ -138,6 +138,9 @@ rainbowpie.ui.warning.text.warning=检查到一个错误。如果你没有使用
 rainbowpie.ui.warning.button.check=查看报错
 rainbowpie.ui.warning.button.deactivate=禁用资源包
 
+rainbowpie.ui.warning.3rdparty.title=来自第三方包的错误
+rainbowpie.ui.warning.3rdparty.text=此资源包导致了错误，如果这个错误让你无法操作请禁用这个包。
+
 rainbowpie.ui.version.warn=版本警告！
 rainbowpie.ui.version.supported=兼容的版本：
 rainbowpie.ui.version.warn_unsupport=使用不支持的版本可能出现崩溃或界面错误等问题
