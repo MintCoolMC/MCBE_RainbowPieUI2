@@ -35,7 +35,8 @@
   "base_tab/$tab_view_binding_name/unchecked_hover": {
     "$rainbowpie_toggle_color": "$rainbowpie_toggle_unchecked_hover_color",
     "$rainbowpie_toggle_alpha": "$rainbowpie_toggle_unchecked_hover_alpha",
-    "$rainbowpie_localui_button_text_color": "$rainbowpie_toggle_text_unchecked_hover_color"
+    "$rainbowpie_localui_button_text_color": "$rainbowpie_toggle_text_unchecked_hover_color",
+    "$hover_state": true
   },
 
   "base_tab/$tab_view_binding_name/unchecked_locked": {
@@ -47,7 +48,8 @@
   "base_tab/$tab_view_binding_name/unchecked_locked_hover": {
     "$rainbowpie_toggle_color": "$rainbowpie_toggle_unchecked_locked_color",
     "$rainbowpie_toggle_alpha": "$rainbowpie_toggle_unchecked_locked_alpha",
-    "$rainbowpie_localui_button_text_color": "$rainbowpie_toggle_text_unchecked_locked_color"
+    "$rainbowpie_localui_button_text_color": "$rainbowpie_toggle_text_unchecked_locked_color",
+    "$hover_state": true
   },
 
   "base_tab/$tab_view_binding_name/checked": {
@@ -59,7 +61,8 @@
   "base_tab/$tab_view_binding_name/checked_hover": {
     "$rainbowpie_toggle_color": "$rainbowpie_toggle_checked_hover_color",
     "$rainbowpie_toggle_alpha": "$rainbowpie_toggle_checked_hover_alpha",
-    "$rainbowpie_localui_button_text_color": "$rainbowpie_toggle_text_checked_hover_color"
+    "$rainbowpie_localui_button_text_color": "$rainbowpie_toggle_text_checked_hover_color",
+    "$hover_state": true
   },
 
   "base_tab/$tab_view_binding_name/checked_locked": {
@@ -71,6 +74,7 @@
   "base_tab/$tab_view_binding_name/checked_locked_hover": {
     "$rainbowpie_toggle_color": "$rainbowpie_toggle_checked_locked_color",
     "$rainbowpie_toggle_alpha": "$rainbowpie_toggle_checked_locked_alpha",
-    "$rainbowpie_localui_button_text_color": "$rainbowpie_toggle_text_checked_locked_color"
+    "$rainbowpie_localui_button_text_color": "$rainbowpie_toggle_text_checked_locked_color",
+    "$hover_state": true
   }
 }

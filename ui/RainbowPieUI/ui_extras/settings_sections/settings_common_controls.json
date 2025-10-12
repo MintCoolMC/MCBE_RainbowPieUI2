@@ -1100,6 +1100,28 @@
     "$button_image_size|default": [ "100%", "100%" ],
     "$rainbowpie_localui_button_controls": [
       {
+        "button_glint": {
+          "type": "panel",
+          "size": "$button_image_size",
+          "ignored": "(not $rainbowpie_ui_flag_99d9851a)",
+          "visible": "$button_image_visible",
+          "layer": "$rainbowpie_localui_button_hover_border_layer",
+          "controls": [
+            {
+              "hover@rainbowpie_ui_button.glint_border_base": {
+                "$rainbowpie_localui_glint_size": [ 72, 72 ],
+                "$rainbowpie_localui_glint_alpha": 0.25,
+                "ignored": "(not $hover_state)",
+                "size": [ "100%", "100%" ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "layer": "($rainbowpie_localui_button_hover_border_layer - ($rainbowpie_localui_button_hover_border_layer * 2))"
+              }
+            }
+          ]
+        }
+      },
+      {
         "button_background": {
           "type": "image",
           "ignored": "(not $button_image_visible)",
@@ -1257,6 +1279,28 @@
     "$rainbowpie_localui_dropdown_radio_image_texture|default": "",
     "$radio_label_bindings|default": [],
     "$rainbowpie_localui_button_controls": [
+      {
+        "button_glint": {
+          "type": "panel",
+          "size": "$button_image_size",
+          "ignored": "(not $rainbowpie_ui_flag_99d9851a)",
+          "visible": "$button_image_visible",
+          "layer": "$rainbowpie_localui_button_hover_border_layer",
+          "controls": [
+            {
+              "hover@rainbowpie_ui_button.glint_border_base": {
+                "$rainbowpie_localui_glint_size": [ 72, 72 ],
+                "$rainbowpie_localui_glint_alpha": 0.25,
+                "ignored": "(not $hover_state)",
+                "size": [ "100%", "100%" ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "layer": "($rainbowpie_localui_button_hover_border_layer - ($rainbowpie_localui_button_hover_border_layer * 2))"
+              }
+            }
+          ]
+        }
+      },
       {
         "button_background": {
           "type": "image",
