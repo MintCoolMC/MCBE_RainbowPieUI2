@@ -73,7 +73,7 @@
   "$rainbowpie_ui_flag_watermark_ignore": "release,prerelease",
   "$rainbowpie_ui_flag_watermark_awalys": "dev",
   "$rainbowpie_ui_flag_settings_account_panel": true,
-  "$rainbowpie_ui_flag_settings_quick_perspective": true,
+  "$rainbowpie_ui_flag_settings_quick_perspective": false,
   "$rainbowpie_ui_flag_tablist_selfTag": true,
   "$rainbowpie_ui_flag_play_bottom_panel": true,
   "$rainbowpie_ui_flag_about_verison_infomation": true,
