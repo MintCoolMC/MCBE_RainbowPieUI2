@@ -726,11 +726,13 @@
           "anchor_to": "bottom_middle",
           "size": [ 20, 24 ],
           "offset": [ -100, -0.5 ],
-          "controls": [
+          "$button_controls": [
             {
-              "icon_text@rainbowpie_ui_common.text_label_notheme": {
+              "icon_text": {
+                "type": "label",
+                "font_type": "default",
                 "text": "H",
-                "alpha": 0.5,
+                "alpha": 0.65,
                 "layer": 10
               }
             }
@@ -1916,17 +1918,16 @@
     ]
   },
 
-  "borderless_button@common.button": {
+  "borderless_button@common_buttons.light_content_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+    "$button_content": "rainbowpieui_hud.borderless_button_panel",
+    "$rainbowpie_localui_button_default_color": [ 0.0, 0.0, 0.0 ],
+    "$rainbowpie_localui_button_default_alpha": 0.2,
+    "$rainbowpie_localui_button_border_enabled": false,
+    "$button_image_size": [ "100%", "100%" ],
     "layer": 3,
     "focus_enabled": false,
     "default_focus_precedence": 10,
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "$pressed_button_name",
-        "mapping_type": "pressed"
-      }
-    ],
     "bindings": [
       {
         "binding_name": "#inventory_touch_button",
@@ -1934,6 +1935,12 @@
         "binding_type": "global"
       }
     ]
+  },
+
+  "borderless_button_panel": {
+    "type": "panel",
+    "$button_controls|default": [],
+    "controls": "$button_controls"
   },
 
   "rainbowpie_hotbar": {
@@ -2158,10 +2165,13 @@
           "anchor_to": "bottom_middle",
           "size": [ 20, 24 ],
           "offset": [ -100, -0.5 ],
-          "controls": [
+          "$button_controls": [
             {
-              "icon_text@rainbowpie_ui_common.text_label_notheme": {
+              "icon_text": {
+                "type": "label",
+                "font_type": "default",
                 "text": "H",
+                "alpha": 0.65,
                 "layer": 10
               }
             }
@@ -2190,10 +2200,17 @@
           "anchor_to": "bottom_middle",
           "size": [ 20, 24 ],
           "offset": [ 100, -0.5 ],
-          "controls": [
+          "$button_controls": [
             {
-              "elipses@hud.elipses_image": {
-                "layer": 10
+              "elipses": {
+                "type": "image",
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "size": [ 10, 10 ],
+                "offset": [ 0.0, 0.5 ],
+                "layer": 30,
+                "texture": "($rainbowpie_ui_path_theme + '/icon/hud/inventory')",
+                "alpha": 0.65
               }
             }
           ]

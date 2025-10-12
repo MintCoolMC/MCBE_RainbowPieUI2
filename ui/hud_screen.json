@@ -2,6 +2,10 @@
 {
   "namespace": "hud",
 
+  "centered_gui_elements_at_bottom_middle_touch": {
+    "size": [ 180, 50 ]
+  },
+
   "boss_health_panel": {
     "modifications": [
       {
