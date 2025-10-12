@@ -762,6 +762,7 @@
           "anchor_to": "bottom_middle",
           "size": [ 220, 24 ],
           "offset": [ 0, -0.5 ],
+          "prevent_touch_input": true,
           "controls": [
             {
               "tip_panel": {
@@ -1928,6 +1929,7 @@
     "layer": 3,
     "focus_enabled": false,
     "default_focus_precedence": 10,
+    "prevent_touch_input": true,
     "bindings": [
       {
         "binding_name": "#inventory_touch_button",
