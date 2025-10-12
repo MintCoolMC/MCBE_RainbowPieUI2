@@ -2,6 +2,30 @@
 {
   "namespace": "general_section",
 
+  "general_tab_section/treatment_ids_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
+  "general_tab_section/ecomode_label_header": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
+  "general_tab_section/pause_label_header": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
+  "diagnostics_toggles_panel/primary_panel/heading": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
   "advanced_graphics_options_section/upscaling_mode": {
     "$rainbowpie_localui_dropdown_enabled": true,
     "$rainbowpie_localui_dropdown_content": [
@@ -337,33 +361,9 @@
 
   "general_tab_section/build_info_label_panel/build_info_label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "offset": [ 0, 0 ]
   },
-
-  // "general_tab_section/build_info_label_panel/build_date_label": {
-  //   "font_type": "$rainbowpie_ui_theme_global_font_name",
-  //   "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  // },
-
-  // "general_tab_section/build_info_label_panel/treatment_ids_label": {
-  //   "font_type": "$rainbowpie_ui_theme_global_font_name",
-  //   "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  // },
-
-  // "general_tab_section/build_info_label_panel/protocol_version_label": {
-  //   "font_type": "$rainbowpie_ui_theme_global_font_name",
-  //   "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  // },
-
-  // "general_tab_section/build_info_label_panel/build_id_label": {
-  //   "font_type": "$rainbowpie_ui_theme_global_font_name",
-  //   "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  // },
-
-  // "general_tab_section/build_info_label_panel/version_label": {
-  //   "font_type": "$rainbowpie_ui_theme_global_font_name",
-  //   "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  // },
 
   "general_tab_section/third_party_copyright_info_label_panel/copyright_label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
