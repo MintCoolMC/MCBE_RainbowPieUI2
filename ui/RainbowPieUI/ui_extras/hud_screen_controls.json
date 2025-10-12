@@ -1297,9 +1297,8 @@
     "type": "panel",
     "$chat_panel_size": [ "50% - 90px", "100% - 24px" ],
     "size": "$chat_panel_size",
-    "offset": [ 0, -24 ],
-    "anchor_from": "bottom_left",
-    "anchor_to": "bottom_left",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
     "variables": [
       {
         "requires": "$rainbowpie_ui_flag_hud_chat_halfscreen",
@@ -1327,44 +1326,6 @@
                 "bindings": [
                   {
                     "binding_name": "#paper_doll_visible",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
-            {
-              "paper_doll_padding_living_room": {
-                "type": "panel",
-                "size": [ "100%", 30 ],
-                "bindings": [
-                  {
-                    "binding_name": "#paper_doll_visible_living_room",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
-            {
-              "vr_riding_chat_padding": {
-                "type": "panel",
-                "size": [ "100%", 132 ],
-                "visible": "#vr_riding", //Make this visible to move the chat panel down
-                "bindings": [
-                  {
-                    "binding_name": "#vr_riding",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
-            {
-              "vr_chat_padding": {
-                "type": "panel",
-                "size": [ "100%", 30 ],
-                "visible": "#vr_non_riding", //Make this visible to move the chat panel down
-                "bindings": [
-                  {
-                    "binding_name": "#vr_non_riding",
                     "binding_name_override": "#visible"
                   }
                 ]
