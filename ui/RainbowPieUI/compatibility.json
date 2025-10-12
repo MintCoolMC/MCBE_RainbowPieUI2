@@ -4,7 +4,7 @@
 
   // Only override compatibility panels 
   "compatibility_variables": {
-    "$compatibility_target_version": 12111000,
+    "$compatibility_target_version": 12111300,
     "$compatibility_max_version": 12111900,
     "$compatibility_min_version": 12111000
   }
