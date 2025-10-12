@@ -558,7 +558,7 @@
             {
               "button_text@rainbowpie_ui_common.text_label_notheme": {
                 "size": [ "100% - 30px", "default" ],
-                "offset": [ 30, 0 ],
+                "offset": [ 34, 0 ],
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
                 "text": "$button_text",
