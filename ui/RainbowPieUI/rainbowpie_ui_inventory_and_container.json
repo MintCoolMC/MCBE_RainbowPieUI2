@@ -95,8 +95,7 @@
     "$cell_image_size|default": [ "100%y", "100%" ],
     "$item_renderer_panel_size|default": [ "100%y", "100%" ],
     "$item_renderer_size|default": [ "100%y", "88.89%" ],
-    "$background_images|default": "rainbowpie_ui_inventory_and_container.cell_panel",
-    "collection_index": "$collection_index"
+    "$background_images|default": "rainbowpie_ui_inventory_and_container.cell_panel"
   },
 
   "container_item_stack": {
@@ -110,47 +109,56 @@
     "controls": [
       {
         "container_item_0@rainbowpie_ui_inventory_and_container.container_item": {
-          "$collection_index": "($collection_index_start + 0)"
+          "$collection_index": "($collection_index_start + 0)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_1@rainbowpie_ui_inventory_and_container.container_item": {
-          "$collection_index": "($collection_index_start + 1)"
+          "$collection_index": "($collection_index_start + 1)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_2@rainbowpie_ui_inventory_and_container.container_item": {
-          "$collection_index": "($collection_index_start + 2)"
+          "$collection_index": "($collection_index_start + 2)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_3@rainbowpie_ui_inventory_and_container.container_item": {
-          "$collection_index": "($collection_index_start + 3)"
+          "$collection_index": "($collection_index_start + 3)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_4@rainbowpie_ui_inventory_and_container.container_item": {
-          "$collection_index": "($collection_index_start + 4)"
+          "$collection_index": "($collection_index_start + 4)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_5@rainbowpie_ui_inventory_and_container.container_item": {
-          "$collection_index": "($collection_index_start + 5)"
+          "$collection_index": "($collection_index_start + 5)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_6@rainbowpie_ui_inventory_and_container.container_item": {
-          "$collection_index": "($collection_index_start + 6)"
+          "$collection_index": "($collection_index_start + 6)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_7@rainbowpie_ui_inventory_and_container.container_item": {
-          "$collection_index": "($collection_index_start + 7)"
+          "$collection_index": "($collection_index_start + 7)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_8@rainbowpie_ui_inventory_and_container.container_item": {
-          "$collection_index": "($collection_index_start + 8)"
+          "$collection_index": "($collection_index_start + 8)",
+          "collection_index": "$collection_index"
         }
       }
     ]
