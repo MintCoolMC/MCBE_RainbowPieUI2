@@ -329,6 +329,8 @@
   },
 
   "storage_header_panel/header_panel": {
+    "size": [ "100%", "100%c + 4px" ],
+    "offset": [ 0, 2 ],
     "modifications": [
       {
         "array_name": "controls",

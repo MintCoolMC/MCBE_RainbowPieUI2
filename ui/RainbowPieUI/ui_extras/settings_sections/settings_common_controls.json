@@ -286,7 +286,7 @@
                             "type": "label",
                             "layer": 1,
                             "size": [ "default", 15 ],
-                            "max_size": [ "100% - 46px", 15 ],
+                            "max_size": [ "100% - 54px", 15 ],
                             "offset": [ 38, 0 ],
                             "anchor_from": "left_middle",
                             "anchor_to": "left_middle",
@@ -302,6 +302,123 @@
                                 "binding_type": "view",
                                 "source_property_name": "(((#name - '[PML]') - '[HOTFIX]') - '[UITheme]')",
                                 "target_property_name": "#pack_name"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "error_text_panel": {
+                            "type": "stack_panel",
+                            "size": [ "100%cm", "100%c" ],
+                            "offset": [ -8, 0 ],
+                            "anchor_from": "right_middle",
+                            "anchor_to": "right_middle",
+                            "controls": [
+                              {
+                                "error_text": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
+                                  "size": [ "100%c", 10 ],
+                                  "controls": [
+                                    {
+                                      "glyph_image_panel": {
+                                        "type": "panel",
+                                        "size": [ "50%y", "100%" ],
+                                        "controls": [
+                                          {
+                                            "glyph_image": {
+                                              "type": "image",
+                                              "size": [ "100%", "100%" ],
+                                              "offset": [ 0, 1 ],
+                                              "texture": "textures/ui/ErrorGlyph"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "padding_0@common.empty_panel": {
+                                        "size": [ 1, 0 ]
+                                      }
+                                    },
+                                    {
+                                      "error_number@rainbowpie_ui_common.text_label": {
+                                        "size": [ "default", "100%" ],
+                                        // "font_type": "MinecraftTen",
+                                        // "font_scale_factor": 0.8,
+                                        "text": "#num_errors",
+                                        "color": "$error_text_color",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#num_errors",
+                                            "binding_collection_name": "#selected_pack_items_global",
+                                            "binding_type": "collection"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "bindings": [
+                                    {
+                                      "binding_collection_name": "#selected_pack_items_global",
+                                      "binding_name": "#has_errors",
+                                      "binding_name_override": "#visible",
+                                      "binding_type": "collection"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "warning_text": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
+                                  "size": [ "100%c", 10 ],
+                                  "controls": [
+                                    {
+                                      "glyph_image_panel": {
+                                        "type": "panel",
+                                        "size": [ "50%y", "100%" ],
+                                        "controls": [
+                                          {
+                                            "glyph_image": {
+                                              "type": "image",
+                                              "size": [ "100%", "100%" ],
+                                              "offset": [ 0, 1 ],
+                                              "texture": "textures/ui/WarningGlyph"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "padding_0@common.empty_panel": {
+                                        "size": [ 1, 0 ]
+                                      }
+                                    },
+                                    {
+                                      "warning_number@rainbowpie_ui_common.text_label": {
+                                        "size": [ "default", "100%" ],
+                                        "text": "#num_warnings",
+                                        "color": "$warning_text_color",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#num_warnings",
+                                            "binding_collection_name": "#selected_pack_items_global",
+                                            "binding_type": "collection"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "bindings": [
+                                    {
+                                      "binding_collection_name": "#selected_pack_items_global",
+                                      "binding_name": "#has_warnings",
+                                      "binding_name_override": "#visible",
+                                      "binding_type": "collection"
+                                    }
+                                  ]
+                                }
                               }
                             ]
                           }
