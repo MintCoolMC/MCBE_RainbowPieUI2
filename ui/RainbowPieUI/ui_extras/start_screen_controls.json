@@ -514,17 +514,7 @@
           "anchor_to": "left_middle",
           "texture": "($icon_theme_dir + '/' + $icon_texture_name)",
           "color": "$text_color",
-          "layer": 64,
-          "bindings": [
-            {
-              "binding_name": "#store_button_art_visible"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not #store_button_art_visible)",
-              "target_property_name": "#visible"
-            }
-          ]
+          "layer": 8
         }
       },
       {
@@ -535,14 +525,7 @@
           "anchor_to": "left_middle",
           "text": "$button_text",
           "color": "$text_color",
-          "layer": 66,
-          "bindings": [
-            {
-              "binding_name": "#store_button_art_label_color",
-              "binding_name_override": "#color",
-              "binding_condition": "visible"
-            }
-          ]
+          "layer": 10
         }
       },
       {
@@ -570,6 +553,24 @@
                 "layer": 2,
                 "$gif_path_binding_name": "#store_button_art_hover_bg_path",
                 "$gif_alpha_binding_name": "#store_button_art_hover_alpha"
+              }
+            },
+            {
+              "button_text@rainbowpie_ui_common.text_label_notheme": {
+                "size": [ "100% - 30px", "default" ],
+                "offset": [ 30, 0 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "text": "$button_text",
+                "color": "$text_color",
+                "layer": 3,
+                "bindings": [
+                  {
+                    "binding_name": "#store_button_art_label_color",
+                    "binding_name_override": "#color",
+                    "binding_condition": "visible"
+                  }
+                ]
               }
             },
             {
