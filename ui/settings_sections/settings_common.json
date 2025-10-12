@@ -358,6 +358,8 @@
     "cache_screen": false,
     "$rainbowpie_localui_modified": true,
     "$rainbowpie_localui_screen_alias": "settings",
+    "$rainbowpie_localui_overlay_screen": true,
+    "$rainbowpie_localui_overlay_screen_content": "rainbowpieui_settings_common.settings_overlay_content",
     "$screen_content": "rainbowpieui_settings_common.settings_content",
     "$is_full_screen_layout": false
   }

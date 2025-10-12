@@ -342,16 +342,8 @@
     ]
   },
 
-  "settings_content": {
+  "settings_overlay_content": {
     "type": "panel",
-    "variables": [
-      {
-        "requires": "$rainbowpie_ui_feature_markbest",
-        "$rainbowpie_localui_toggle_enabled": true,
-        "$rainbowpie_localui_sliderbar_enabled": true,
-        "$rainbowpie_localui_editbox_enabled": true
-      }
-    ],
     "controls": [
       {
         "pack_warning": {
@@ -378,7 +370,21 @@
             }
           ]
         }
-      },
+      }
+    ]
+  },
+
+  "settings_content": {
+    "type": "panel",
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_feature_markbest",
+        "$rainbowpie_localui_toggle_enabled": true,
+        "$rainbowpie_localui_sliderbar_enabled": true,
+        "$rainbowpie_localui_editbox_enabled": true
+      }
+    ],
+    "controls": [
       {
         "header@rainbowpie_ui_common.screen_header": {
           "$rainbowpie_localui_screenheader_ingame_anim1": "($rainbowpie_ui_flag_8dcce82d and $rainbowpie_ui_flag_fbadd01f and $is_pregame)",

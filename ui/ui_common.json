@@ -908,6 +908,7 @@
   "base_screen": {
     "$rainbowpie_localui_modified|default": false,
     "$rainbowpie_localui_backup_screen|default": false,
+    "$rainbowpie_localui_overlay_screen|default": false,
     "$rainbowpie_localui_inventory_screen|default": false,
     "$rainbowpie_localui_screenbackground_ingameSafezoneOnly|default": false,
     "$rainbowpie_localui_screenbackground_ingamebg_ignored|default": false,
@@ -921,6 +922,7 @@
     "$rainbowpie_localui_screen_alias": "null",
     "$rainbowpie_localui_screen_alias_formatted": "($rainbowpie_localui_screen_alias + ',')",
     "$rainbowpie_localui_backup_screen_content|default": "common.base_screen_empty_panel",
+    "$rainbowpie_localui_overlay_screen_content|default": "common.base_screen_empty_panel",
     "modifications": [
       {
         "array_name": "controls",
@@ -982,7 +984,7 @@
                     "ignored": "((not $rainbowpie_ui_debug_screen_content) or (not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias)) or ($screen_content = 'rainbowpie_ui_common.screen_background'))",
                     "anchor_from": "top_right",
                     "anchor_to": "top_right",
-                    "text": "($screen_content + '\n' + $rainbowpie_localui_backup_screen_content)"
+                    "text": "($screen_content + '\n' + $rainbowpie_localui_backup_screen_content + '\n' + $rainbowpie_localui_overlay_screen_content)"
                   }
                 }
               ]
@@ -1129,6 +1131,17 @@
               "propagate_alpha": true,
               "disable_anim_fast_forward": true,
               "layer": "$safezone_screen_matrix_layer"
+            }
+          },
+          {
+            "safezone_screen_overlay_matrix@common.safezone_outer_matrix": {
+              "$rainbowpie_localui_screen_content": "$rainbowpie_localui_overlay_screen_content",
+              "ignored": "(not $rainbowpie_localui_overlay_screen)",
+              "anims": "$screen_animations",
+              "animation_reset_name": "screen_animation_reset",
+              "propagate_alpha": true,
+              "disable_anim_fast_forward": true,
+              "layer": "($safezone_screen_matrix_layer + 150)"
             }
           }
         ]
@@ -1740,6 +1753,7 @@
             "requires": "$rainbowpie_ui_debug_ui_new_video_settings",
             "$new_video_settings": true
           },
+          // settings ui
           {
             "requires": "($rainbowpie_localui_screen_alias = 'settings')",
             "$export_template_disabled": false
