@@ -204,7 +204,7 @@
   "$rainbowpie_ui_flag_5354b722": true, // Only display locator_bar when holding [TAB] key (Keyboard Only)
   "$rainbowpie_ui_flag_19efcc11": true,
   "$rainbowpie_ui_flag_988450b0": true, // Independent Time Tweaker
-  "$rainbowpie_ui_flag_fb3b5106": false, // Independent Cmd Helper Test
+  "$rainbowpie_ui_flag_fb3b5106": true, // Independent Cmd Helper
   "$rainbowpie_ui_flag_64fd7c05": true,
   "$rainbowpie_ui_flag_f733129c": true,
   "$rainbowpie_ui_flag_a3e3c9d0": true, // Force disable title text background
