@@ -59,6 +59,7 @@
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "visible":  false,
+          "layer": 12,
           "bindings": [
             {
               "binding_name": "#message_text_box_content"
