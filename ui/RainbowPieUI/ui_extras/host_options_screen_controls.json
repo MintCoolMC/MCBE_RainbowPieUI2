@@ -196,6 +196,118 @@
           "$color_picker_code": "§f",
           "$color_picker_text": "color.white"
         }
+      },
+      {
+        "minecoin_gold@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$coin_color",
+          "$color_picker_code": "§g",
+          "$color_picker_text": "accessibility.minecoin"
+        }
+      },
+      {
+        "material_quartz@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$material_quartz_color",
+          "$color_picker_code": "§h",
+          "$color_picker_text": "trim_material.quartz.name"
+        }
+      },
+      {
+        "material_iron@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$material_iron_color",
+          "$color_picker_code": "§i",
+          "$color_picker_text": "trim_material.iron.name"
+        }
+      },
+      {
+        "material_netherite@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$material_netherite_color",
+          "$color_picker_code": "§j",
+          "$color_picker_text": "trim_material.netherite.name"
+        }
+      },
+      {
+        "material_redstone@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$material_redstone_color",
+          "$color_picker_code": "§m",
+          "$color_picker_text": "trim_material.redstone.name"
+        }
+      },
+      {
+        "material_copper@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$material_copper_color",
+          "$color_picker_code": "§n",
+          "$color_picker_text": "trim_material.copper.name"
+        }
+      },
+      {
+        "material_gold@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$material_gold_color",
+          "$color_picker_code": "§p",
+          "$color_picker_text": "trim_material.gold.name"
+        }
+      },
+      {
+        "material_emerald@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$material_emerald_color",
+          "$color_picker_code": "§q",
+          "$color_picker_text": "trim_material.emerald.name"
+        }
+      },
+      {
+        "material_diamond@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$material_diamond_color",
+          "$color_picker_code": "§s",
+          "$color_picker_text": "trim_material.diamond.name"
+        }
+      },
+      {
+        "material_lapis@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$material_lapis_color",
+          "$color_picker_code": "§t",
+          "$color_picker_text": "trim_material.lapis.name"
+        }
+      },
+      {
+        "material_amethyst@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$material_amethyst_color",
+          "$color_picker_code": "§u",
+          "$color_picker_text": "trim_material.amethyst.name"
+        }
+      },
+      {
+        "material_resin@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$material_resin_color",
+          "$color_picker_code": "§v",
+          "$color_picker_text": "trim_material.resin.name"
+        }
+      },
+      {
+        "obfuscated@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$f_color_format",
+          "$color_picker_code": "§k",
+          "$color_picker_text": "§kobfuscated"
+        }
+      },
+      {
+        "bold@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$f_color_format",
+          "$color_picker_code": "§l",
+          "$color_picker_text": "§lbold"
+        }
+      },
+      {
+        "italic@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$f_color_format",
+          "$color_picker_code": "§o",
+          "$color_picker_text": "§oitalic"
+        }
+      },
+      {
+        "reset@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$f_color_format",
+          "$color_picker_code": "§r",
+          "$color_picker_text": "reset"
+        }
       }
     ]
   },
