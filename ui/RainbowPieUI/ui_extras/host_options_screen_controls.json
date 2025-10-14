@@ -50,6 +50,63 @@
             }
           ]
         }
+      },
+      {
+        "a_song_about_life": {
+          "type": "panel",
+          "size": [ 120, 90 ],
+          "offset": [ "78px + 120px + 2px", 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "visible":  false,
+          "bindings": [
+            {
+              "binding_name": "#message_text_box_content"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('message:' + #message_text_box_content)",
+              "target_property_name": "#formatted_message_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#formatted_message_text = 'message:.color sing a song about life')",
+              "target_property_name": "#subcmd_0"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#formatted_message_text = 'message:.color vylet pony')",
+              "target_property_name": "#subcmd_1"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#formatted_message_text = 'message:.color a song about life')",
+              "target_property_name": "#subcmd_2"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#formatted_message_text = 'message:.color antonymph')",
+              "target_property_name": "#subcmd_3"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#formatted_message_text = 'message:.color antonymph of the internet')",
+              "target_property_name": "#subcmd_4"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#subcmd_0 or #subcmd_1 or #subcmd_2 or #subcmd_3 or #subcmd_4)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "text@rainbowpie_ui_common.text_label": {
+                "text": "§csing a song about life§r\n§6sing a song about life§r\n§esing a song about life§r\n§asing a song about life§r\n§bsing a song about life§r\n§5sing a song about life§r"
+              }
+            }
+          ]
+        }
       }
     ]
   },
