@@ -932,6 +932,21 @@
       {
         "binding_type": "view",
         "source_property_name": "(('%.17s' * #formatted_message_text) = 'message:/time set')",
+        "target_property_name": "#cmd_0"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.13s' * #formatted_message_text) = 'message:.time')",
+        "target_property_name": "#cmd_1"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.11s' * #formatted_message_text) = 'message:.tt')",
+        "target_property_name": "#cmd_2"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#cmd_0 or #cmd_1 or #cmd_2)",
         "target_property_name": "#visible"
       }
     ],
