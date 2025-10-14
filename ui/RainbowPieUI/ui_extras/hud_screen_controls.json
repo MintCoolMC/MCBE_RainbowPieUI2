@@ -2397,8 +2397,15 @@
                 "size": [ 10, 10 ],
                 "offset": [ 0.0, 0.5 ],
                 "layer": 30,
-                "texture": "($rainbowpie_ui_path_theme + '/icon/hud/inventory')",
-                "alpha": 0.65
+                "texture": "$icon_texture",
+                "$icon_texture": "($rainbowpie_ui_path_theme + '/icon/hud/inventory')",
+                "alpha": 0.65,
+                "variables": [
+                  {
+                    "requires": "(not ($rainbowpieui_branch_type = 'release'))",
+                    "$icon_texture": "($rainbowpie_ui_path_theme + '/icon/hud/inventory_ci')"
+                  }
+                ]
               }
             }
           ]
