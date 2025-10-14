@@ -1089,6 +1089,11 @@
             "requires": "(not ($bb_version = 0))",
             "$rainbowpie_ui_flag_resourcepack_identifier": "d5e1b7c2_betterbedrock"
           },
+          // Dabu UI
+          {
+            "requires": "(not ($dabuui_bool = 0))",
+            "$rainbowpie_ui_flag_resourcepack_identifier": "c740985b_dabuui"
+          },
           // China Version
           {
             "requires": "($is_netease)",
@@ -1870,6 +1875,12 @@
             "$rainbowpie_ui_flag_hud_hotbar_mode": 0,
             "$rainbowpie_ui_flag_disable_custom_chat_ui": true,
             "$rainbowpieui_watermark": false
+          },
+          // Dabu UI
+          {
+            "requires": "($rainbowpie_ui_flag_resourcepack_identifier = 'c740985b_dabuui')",
+            "$rainbowpie_ui_flag_resourcepack_identifier": "c740985b_dabuui",
+            "$rainbowpie_ui_flag_resourcepack_displayname": "护眼大补丸"
           },
           // China Version
           {

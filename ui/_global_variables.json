@@ -682,6 +682,7 @@
   "$is_zeqa": false, // Zeqa Network (Server)
   "$cubecraft_green": "string", // CubeCraft (Server)
   "$bb_version": 0, // Better Bedrock UI (RP)
+  "$dabuui_bool": 0, // Dabu UI
 
   "$is_netease": false // China Version
 }
