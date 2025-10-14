@@ -1361,17 +1361,57 @@
                       "anchor_from": "center",
                       "anchor_to": "center",
                       "layer": 1,
-            
+
                       "enable_profanity_filter": false,
                       "color": "$chat_text_color",
                       "text": "#text",
-            
+
                       "bindings": [
                         {
                           "binding_name": "#number_of_days_played_text",
                           "binding_name_override": "#text",
                           "binding_condition": "always_when_visible",
                           "binding_type": "global"
+                        },
+                        {
+                          "binding_name": "#hud_text_background_alpha"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "((#hud_text_background_alpha > (1 - #hud_text_background_alpha)) / 3)",
+                          "target_property_name": "#visible",
+                          "ignored": "(not $rainbowpie_ui_flag_f733129c)"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "number_of_days_played_text_shadow@rainbowpie_ui_common.text_label_notheme": {
+                      "ignored": "(not $rainbowpie_ui_flag_f733129c)",
+                      "size": [ "default", 10 ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "layer": 1,
+
+                      "enable_profanity_filter": false,
+                      "color": "$chat_text_color",
+                      "text": "#text",
+                      "shadow": true,
+
+                      "bindings": [
+                        {
+                          "binding_name": "#number_of_days_played_text",
+                          "binding_name_override": "#text",
+                          "binding_condition": "always_when_visible",
+                          "binding_type": "global"
+                        },
+                        {
+                          "binding_name": "#hud_text_background_alpha"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "((#hud_text_background_alpha < (1 - #hud_text_background_alpha)) / 3)",
+                          "target_property_name": "#visible"
                         }
                       ]
                     }
@@ -1383,6 +1423,11 @@
                     "binding_name_override": "#visible",
                     "binding_condition": "always",
                     "binding_type": "global"
+                  },
+                  {
+                    "binding_name": "#hud_text_background_alpha",
+                    "binding_name_override": "#alpha",
+                    "ignored": "(not $rainbowpie_ui_flag_f733129c)"
                   }
                 ]
               }
@@ -1401,17 +1446,57 @@
                       "anchor_from": "center",
                       "anchor_to": "center",
                       "layer": 1,
-            
+
                       "enable_profanity_filter": false,
                       "color": "$chat_text_color",
                       "text": "#text",
-            
+
                       "bindings": [
                         {
                           "binding_name": "#player_position_text",
                           "binding_name_override": "#text",
                           "binding_condition": "always_when_visible",
                           "binding_type": "global"
+                        },
+                        {
+                          "binding_name": "#hud_text_background_alpha"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "((#hud_text_background_alpha > (1 - #hud_text_background_alpha)) / 3)",
+                          "target_property_name": "#visible",
+                          "ignored": "(not $rainbowpie_ui_flag_f733129c)"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "player_position_text_shadow@rainbowpie_ui_common.text_label_notheme": {
+                      "ignored": "(not $rainbowpie_ui_flag_f733129c)",
+                      "size": [ "default", 10 ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "layer": 1,
+
+                      "enable_profanity_filter": false,
+                      "color": "$chat_text_color",
+                      "text": "#text",
+                      "shadow": true,
+
+                      "bindings": [
+                        {
+                          "binding_name": "#player_position_text",
+                          "binding_name_override": "#text",
+                          "binding_condition": "always_when_visible",
+                          "binding_type": "global"
+                        },
+                        {
+                          "binding_name": "#hud_text_background_alpha"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "((#hud_text_background_alpha < (1 - #hud_text_background_alpha)) / 3)",
+                          "target_property_name": "#visible"
                         }
                       ]
                     }
@@ -1423,6 +1508,11 @@
                     "binding_name_override": "#visible",
                     "binding_condition": "always",
                     "binding_type": "global"
+                  },
+                  {
+                    "binding_name": "#hud_text_background_alpha",
+                    "binding_name_override": "#alpha",
+                    "ignored": "(not $rainbowpie_ui_flag_f733129c)"
                   }
                 ]
               }
@@ -1618,7 +1708,7 @@
               "player_position": {
                 "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = 2)",
                 "type": "image",
-                "size": [ "100%c + 6px", 12 ],
+                "size": [ "100%cm + 6px", 12 ],
                 "texture": "textures/ui/Black",
                 "alpha": 0.5,
                 "controls": [
@@ -1639,6 +1729,46 @@
                           "binding_name_override": "#text",
                           "binding_condition": "always_when_visible",
                           "binding_type": "global"
+                        },
+                        {
+                          "binding_name": "#hud_text_background_alpha"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "((#hud_text_background_alpha > (1 - #hud_text_background_alpha)) / 3)",
+                          "target_property_name": "#visible",
+                          "ignored": "(not $rainbowpie_ui_flag_f733129c)"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "player_position_text_shadow@rainbowpie_ui_common.text_label_notheme": {
+                      "ignored": "(not $rainbowpie_ui_flag_f733129c)",
+                      "size": [ "default", 10 ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "layer": 1,
+
+                      "enable_profanity_filter": false,
+                      "color": "$chat_text_color",
+                      "text": "#text",
+                      "shadow": true,
+
+                      "bindings": [
+                        {
+                          "binding_name": "#player_position_text",
+                          "binding_name_override": "#text",
+                          "binding_condition": "always_when_visible",
+                          "binding_type": "global"
+                        },
+                        {
+                          "binding_name": "#hud_text_background_alpha"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "((#hud_text_background_alpha < (1 - #hud_text_background_alpha)) / 3)",
+                          "target_property_name": "#visible"
                         }
                       ]
                     }
@@ -1650,6 +1780,11 @@
                     "binding_name_override": "#visible",
                     "binding_condition": "always",
                     "binding_type": "global"
+                  },
+                  {
+                    "binding_name": "#hud_text_background_alpha",
+                    "binding_name_override": "#alpha",
+                    "ignored": "(not $rainbowpie_ui_flag_f733129c)"
                   }
                 ]
               }
@@ -1658,7 +1793,7 @@
               "number_of_days_played": {
                 "ignored": "($rainbowpie_ui_flag_hud_hotbar_mode = 2)",
                 "type": "image",
-                "size": [ "100%c + 6px", 12 ],
+                "size": [ "100%cm + 6px", 12 ],
                 "texture": "textures/ui/Black",
                 "alpha": 0.5,
                 "controls": [
@@ -1679,6 +1814,46 @@
                           "binding_name_override": "#text",
                           "binding_condition": "always_when_visible",
                           "binding_type": "global"
+                        },
+                        {
+                          "binding_name": "#hud_text_background_alpha"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "((#hud_text_background_alpha > (1 - #hud_text_background_alpha)) / 3)",
+                          "target_property_name": "#visible",
+                          "ignored": "(not $rainbowpie_ui_flag_f733129c)"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "number_of_days_played_text_shadow@rainbowpie_ui_common.text_label_notheme": {
+                      "ignored": "(not $rainbowpie_ui_flag_f733129c)",
+                      "size": [ "default", 10 ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "layer": 1,
+
+                      "enable_profanity_filter": false,
+                      "color": "$chat_text_color",
+                      "text": "#text",
+                      "shadow": true,
+
+                      "bindings": [
+                        {
+                          "binding_name": "#number_of_days_played_text",
+                          "binding_name_override": "#text",
+                          "binding_condition": "always_when_visible",
+                          "binding_type": "global"
+                        },
+                        {
+                          "binding_name": "#hud_text_background_alpha"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "((#hud_text_background_alpha < (1 - #hud_text_background_alpha)) / 3)",
+                          "target_property_name": "#visible"
                         }
                       ]
                     }
@@ -1690,6 +1865,11 @@
                     "binding_name_override": "#visible",
                     "binding_condition": "always",
                     "binding_type": "global"
+                  },
+                  {
+                    "binding_name": "#hud_text_background_alpha",
+                    "binding_name_override": "#alpha",
+                    "ignored": "(not $rainbowpie_ui_flag_f733129c)"
                   }
                 ]
               }
@@ -1787,11 +1967,16 @@
         "binding_name_override": "#visible"
       }
     ],
+    "$chat_bg_opacity": 0.4,
     "variables": [
       {
         "requires": "$rainbowpie_ui_flag_chatui_default_font",
         "$rainbowpie_ui_theme_global_font_name": "default",
         "$rainbowpie_ui_theme_global_font_backup_name": "default"
+      },
+      {
+        "requires": "$rainbowpie_ui_flag_64fd7c05",
+        "$chat_bg_opacity": "$chat_background_opacity"
       }
     ],
     "controls": [
@@ -1801,6 +1986,7 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "layer": 33,
+          "shadow": "(($chat_bg_opacity * 100) < 40)",
           "anims": [
             "@rainbowpieui_hud.anim_chat_intro_offset",
             "@rainbowpieui_hud.anim_chat_text_wait"
@@ -1810,7 +1996,7 @@
               "chat_background": {
                 "type": "image",
                 "texture": "textures/ui/Black",
-                "alpha": 0.4,
+                "alpha": "$chat_bg_opacity",
                 "size": [ "100% + 5px", "default" ],
                 "offset": [ -1, 0 ],
                 "layer": -1,
@@ -1876,8 +2062,8 @@
     "anim_type": "alpha",
     "easing": "in_quart",
     "duration": "$rainbowpie_ui_animation_chat_transition_time",
-    "from": 0.4,
-    "to": 0.1
+    "from": "$chat_bg_opacity",
+    "to": "((not ($chat_bg_opacity = 0)) * 0.1)"
   },
 
   "anim_chat_bg_wait": {

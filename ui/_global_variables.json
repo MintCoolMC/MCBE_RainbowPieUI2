@@ -205,6 +205,8 @@
   "$rainbowpie_ui_flag_19efcc11": true,
   "$rainbowpie_ui_flag_988450b0": true, // Independent Time Tweaker
   "$rainbowpie_ui_flag_fb3b5106": false, // Independent Cmd Helper Test
+  "$rainbowpie_ui_flag_64fd7c05": true,
+  "$rainbowpie_ui_flag_f733129c": true,
 
   // Debug
   "$rainbowpie_ui_debug": false,
