@@ -26,84 +26,127 @@
     ],
     "controls": [
       {
-        "background@rainbowpie_ui_common.dialog_background": {
-          "size": [ 120, 90 ],
-          "offset": [ 78, 0 ],
-          "anchor_from": "left_middle",
-          "anchor_to": "left_middle",
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", "100%cm" ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
           "controls": [
             {
-              "scrolling_panel@common.scrolling_panel": {
-                "$rainbowpie_localui_scrollbar_enabled": true,
+              "padding_btn1n3": {
                 "type": "panel",
-                "size": [ "100% - 2px", "100%" ],
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "offset": [ 0, 0 ],
-                "$scrolling_content": "rainbowpieui_host_options.color_picker_stack",
-                "$scroll_size": [ 5, "100%-4px" ],
-                "$scroll_bar_right_padding_size": [ 0, 0 ],
-                "$scroll_bar_left_padding_size": [ 0, 0 ],
-                "$show_background": false,
-                "$always_handle_scrolling": false
+                "size": [ 52, 0 ]
               }
-            }
-          ]
-        }
-      },
-      {
-        "a_song_about_life": {
-          "type": "panel",
-          "size": [ 120, 90 ],
-          "offset": [ 78, 5 ],
-          "anchor_from": "left_middle",
-          "anchor_to": "left_middle",
-          "visible":  false,
-          "layer": 12,
-          "bindings": [
-            {
-              "binding_name": "#message_text_box_content"
             },
             {
-              "binding_type": "view",
-              "source_property_name": "('message:' + #message_text_box_content)",
-              "target_property_name": "#formatted_message_text"
+              "padding_btn2": {
+                "type": "panel",
+                "size": [ 26, 0 ],
+                "bindings": [
+                  {
+                    "binding_name": "#cheats_on",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
             },
             {
-              "binding_type": "view",
-              "source_property_name": "(#formatted_message_text = 'message:.color sing a song about life')",
-              "target_property_name": "#subcmd_0"
+              "padding_btnTabPrev": {
+                "type": "panel",
+                "size": [ 104, 0 ],
+                "ignored": "(not $touch)"
+              }
             },
             {
-              "binding_type": "view",
-              "source_property_name": "(#formatted_message_text = 'message:.color vylet pony')",
-              "target_property_name": "#subcmd_1"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#formatted_message_text = 'message:.color a song about life')",
-              "target_property_name": "#subcmd_2"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#formatted_message_text = 'message:.color antonymph')",
-              "target_property_name": "#subcmd_3"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#formatted_message_text = 'message:.color antonymph of the internet')",
-              "target_property_name": "#subcmd_4"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#subcmd_0 or #subcmd_1 or #subcmd_2 or #subcmd_3 or #subcmd_4)",
-              "target_property_name": "#visible"
-            }
-          ],
-          "controls": [
-            {
-              "text@rainbowpie_ui_common.text_label": {
-                "text": "§csing a song about life§r\n§6sing a song about life§r\n§esing a song about life§r\n§asing a song about life§r\n§bsing a song about life§r\n§5sing a song about life§r"
+              "panel": {
+                "type": "panel",
+                "size": [ "100%cm", "100%cm" ],
+                "controls": [
+                  {
+                    "background@rainbowpie_ui_common.dialog_background": {
+                      "size": [ 120, 90 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "controls": [
+                        {
+                          "scrolling_panel@common.scrolling_panel": {
+                            "$rainbowpie_localui_scrollbar_enabled": true,
+                            "type": "panel",
+                            "size": [ "100% - 2px", "100%" ],
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "offset": [ 0, 0 ],
+                            "$scrolling_content": "rainbowpieui_host_options.color_picker_stack",
+                            "$scroll_size": [ 5, "100%-4px" ],
+                            "$scroll_bar_right_padding_size": [ 0, 0 ],
+                            "$scroll_bar_left_padding_size": [ 0, 0 ],
+                            "$show_background": false,
+                            "$always_handle_scrolling": false
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "a_song_about_life": {
+                      "type": "panel",
+                      "size": [ 120, 90 ],
+                      "offset": [ 0, 5 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "visible": false,
+                      "layer": 12,
+                      "bindings": [
+                        {
+                          "binding_name": "#message_text_box_content"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('message:' + #message_text_box_content)",
+                          "target_property_name": "#formatted_message_text"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(#formatted_message_text = 'message:.color sing a song about life')",
+                          "target_property_name": "#subcmd_0"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(#formatted_message_text = 'message:.color vylet pony')",
+                          "target_property_name": "#subcmd_1"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(#formatted_message_text = 'message:.color a song about life')",
+                          "target_property_name": "#subcmd_2"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(#formatted_message_text = 'message:.color antonymph')",
+                          "target_property_name": "#subcmd_3"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(#formatted_message_text = 'message:.color antonymph of the internet')",
+                          "target_property_name": "#subcmd_4"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(#subcmd_0 or #subcmd_1 or #subcmd_2 or #subcmd_3 or #subcmd_4)",
+                          "target_property_name": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "text@rainbowpie_ui_common.text_label": {
+                            "text": "§csing a song about life§r\n§6sing a song about life§r\n§esing a song about life§r\n§asing a song about life§r\n§bsing a song about life§r\n§5sing a song about life§r"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -513,12 +556,45 @@
     ],
     "controls": [
       {
-        "command_helper@rainbowpieui_host_options.command_helper": {
-          "offset": [ 78, 0 ],
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", "100%cm" ],
           "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left"
+          "anchor_to": "bottom_left",
+          "controls": [
+            {
+              "padding_btn1n3": {
+                "type": "panel",
+                "size": [ 52, 0 ]
+              }
+            },
+            {
+              "padding_btn2": {
+                "type": "panel",
+                "size": [ 26, 0 ],
+                "bindings": [
+                  {
+                    "binding_name": "#cheats_on",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "padding_btnTabPrev": {
+                "type": "panel",
+                "size": [ 104, 0 ],
+                "ignored": "(not $touch)"
+              }
+            },
+            {
+              "command_helper@rainbowpieui_host_options.command_helper": {}
+            }
+          ]
         }
       }
+      
     ]
   },
 
@@ -537,7 +613,8 @@
                 "controls": [
                   {
                     "color@rainbowpieui_host_options.command_helper_item": {
-                      "$command": "color"
+                      "$command": "color",
+                      "$usage": "<colorCode>"
                     }
                   },
                   {
@@ -557,7 +634,8 @@
   "command_helper_item@rainbowpie_ui_common.text_label_notheme": {
     "size": [ "default", "default" ],
     "$command|default": "cmd",
-    "text": "('.' + $command)",
+    "$usage|default": "",
+    "text": "('.' + $command + ' ' + $usage)",
     "visible": true,
     "layer": 2,
     "bindings": [
