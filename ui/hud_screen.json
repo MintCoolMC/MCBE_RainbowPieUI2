@@ -2,6 +2,22 @@
 {
   "namespace": "hud",
 
+  "hud_title_text": {
+    "modifications": [
+      {
+        "array_name": "variables",
+        "operation": "insert_front",
+        "value": [
+          {
+            "requires": "$rainbowpie_ui_flag_a3e3c9d0",
+            "$title_alpha": 0.0,
+            "$title_shadow": true
+          }
+        ]
+      }
+    ]
+  },
+
   "root_panel/centered_gui_elements_at_bottom_middle_touch": {
     "ignored": true
   },

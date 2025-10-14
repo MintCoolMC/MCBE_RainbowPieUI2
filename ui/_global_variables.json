@@ -207,6 +207,7 @@
   "$rainbowpie_ui_flag_fb3b5106": false, // Independent Cmd Helper Test
   "$rainbowpie_ui_flag_64fd7c05": true,
   "$rainbowpie_ui_flag_f733129c": true,
+  "$rainbowpie_ui_flag_a3e3c9d0": true, // Force disable title text background
 
   // Debug
   "$rainbowpie_ui_debug": false,
