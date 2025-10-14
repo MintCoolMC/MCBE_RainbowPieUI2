@@ -1084,6 +1084,11 @@
             "requires": "((($transition_time_push_size * 1000) = 150) and (($transition_time_pop_size * 1000) = 150) and (($transition_time_push * 1000) = 150) and (($transition_time_pop * 1000) = 150) and (($container_transition_time_push * 1000) = 150) and (($container_transition_time_pop * 1000) = 150))",
             "$rainbowpie_ui_flag_resourcepack_identifier": "290b8fe4_hivebedrock"
           },
+          // Better Bedrock UI
+          {
+            "requires": "(not ($bb_version = 0))",
+            "$rainbowpie_ui_flag_resourcepack_identifier": "d5e1b7c2_betterbedrock"
+          },
           // China Version
           {
             "requires": "($is_netease)",
@@ -1758,6 +1763,15 @@
             "requires": "($rainbowpie_localui_screen_alias = 'settings')",
             "$export_template_disabled": false
           },
+          // Better Bedrock UI
+          {
+            "requires": "(($rainbowpie_ui_flag_resourcepack_identifier = 'd5e1b7c2_betterbedrock') and ($screen_content = 'hud.hud_content'))",
+            "$use_loading_bars": false,
+            "$rainbowpie_localui_screen_watermark": false,
+            "$rainbowpie_localui_modified": true,
+            "$rainbowpie_localui_screen_alias": "hud",
+            "$rainbowpie_localui_screen_alias_formatted": "hud,"
+          },
           // Force disable rainbowpie_ui_flag_hud_hotbar_mode 2
           {
             "requires": "($rainbowpie_ui_flag_hud_hotbar_mode = 2)",
@@ -1844,6 +1858,18 @@
             "$rainbowpie_ui_module_chest_fastpick": false,
             "$rainbowpie_ui_flag_19efcc11": false,
             "$rainbowpie_ui_flag_9ce040c1": false
+          },
+          // Better Bedrock UI
+          {
+            "requires": "($rainbowpie_ui_flag_resourcepack_identifier = 'd5e1b7c2_betterbedrock')",
+            "$rainbowpie_ui_flag_resourcepack_identifier": "d5e1b7c2_betterbedrock",
+            "$rainbowpie_ui_flag_resourcepack_displayname": "Better Bedrock UI",
+            "$rainbowpie_ui_flag_notification_features_disabled": true,
+            "$rainbowpie_ui_flag_notification_features_disabled_reason": "resourcepack",
+            "$rainbowpie_localui_screenbackground_ingamebg_ignored": true,
+            "$rainbowpie_ui_flag_hud_hotbar_mode": 0,
+            "$rainbowpie_ui_flag_disable_custom_chat_ui": true,
+            "$rainbowpieui_watermark": false
           },
           // China Version
           {

@@ -1283,13 +1283,13 @@
       },
       {
         "rainbowpie_chat@rainbowpieui_hud.rainbowpie_chat": {
-          "ignored": "$touch",
+          "ignored": "($touch or $rainbowpie_ui_flag_disable_custom_chat_ui)",
           "layer": 20
         }
       },
       {
         "rainbowpie_chat_touch@rainbowpieui_hud.rainbowpie_chat_touch": {
-          "ignored": "((not $touch) or not $rainbowpie_ui_flag_6d2ac350)",
+          "ignored": "((not $touch) or not $rainbowpie_ui_flag_6d2ac350 or $rainbowpie_ui_flag_disable_custom_chat_ui)",
           "layer": 20
         }
       }

@@ -1864,7 +1864,7 @@
                                         "visible": "(not ($rainbowpie_ui_flag_resourcepack_identifier = ''))",
                                         "size": [ "default", 10 ],
                                         "text_alignment": "left",
-                                        "text": "('\"' + '(' + $rainbowpie_ui_flag_resourcepack_identifier + ')' + '\"')",
+                                        "text": "('\" ' + '(' + $rainbowpie_ui_flag_resourcepack_identifier + ')' + '\"')",
                                         "color": [ 0.85, 0.85, 0.85 ],
                                         "alpha": 0.85,
                                         "layer": 1

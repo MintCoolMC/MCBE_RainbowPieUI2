@@ -129,6 +129,7 @@
   "$rainbowpie_ui_flag_hud_durability_warning": true,
   "$rainbowpie_ui_flag_inventory_compass_postion": 1, // 0:TOP 1:BOTTOM
   "$rainbowpie_ui_flag_inventory_stack_count_font": "OldSmoothFont",
+  "$rainbowpie_ui_flag_disable_custom_chat_ui": false,
 
   // Item ID Flags
   "$rainbowpie_ui_flag_item_clock_id": 419,
@@ -677,9 +678,10 @@
   // Theme End
 
   // Compatibility for servers or other resource packs
-  // The variables here will be overwritten when the server loads the resource package.
+  // The variables here will be overwritten when the server loads the resource packs.
   "$is_zeqa": false, // Zeqa Network (Server)
   "$cubecraft_green": "string", // CubeCraft (Server)
+  "$bb_version": 0, // Better Bedrock UI (RP)
 
   "$is_netease": false // China Version
 }
