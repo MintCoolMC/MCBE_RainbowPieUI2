@@ -2,6 +2,300 @@
 {
   "namespace": "rainbowpieui_host_options",
 
+  "color_picker": {
+    "type": "panel",
+    "size": [ "100%", 90 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "ignored": "(not $rainbowpie_ui_flag_64981341)",
+    "visible": false,
+    "bindings": [
+      {
+        "binding_name": "#message_text_box_content"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('message:' + #message_text_box_content)",
+        "target_property_name": "#formatted_message_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.14s' * #formatted_message_text) = 'message:.color')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "background@rainbowpie_ui_common.dialog_background": {
+          "size": [ 120, 90 ],
+          "offset": [ 78, 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "controls": [
+            {
+              "scrolling_panel@common.scrolling_panel": {
+                "$rainbowpie_localui_scrollbar_enabled": true,
+                "type": "panel",
+                "size": [ "100% - 2px", "100%" ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [ 0, 0 ],
+                "$scrolling_content": "rainbowpieui_host_options.color_picker_stack",
+                "$scroll_size": [ 5, "100%-4px" ],
+                "$scroll_bar_right_padding_size": [ 0, 0 ],
+                "$scroll_bar_left_padding_size": [ 0, 0 ],
+                "$show_background": false,
+                "$always_handle_scrolling": false
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "color_picker_stack": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "padding_top": {
+          "type": "panel",
+          "size": [ 0, 2 ]
+        }
+      },
+      {
+        "title_text_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "title_text@rainbowpie_ui_common.text_label": {
+                "size": [ "100% - 4px", "default" ],
+                "text": "rainbowpie.ui.host_options.color_picker",
+                "text_alignment": "left",
+                "layer": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "test@rainbowpieui_host_options.color_picker_item": {
+          "ignored": true
+        }
+      },
+      {
+        "black@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$0_color_format",
+          "$color_picker_code": "§0",
+          "$color_picker_text": "color.black"
+        }
+      },
+      {
+        "dark_blue@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$1_color_format",
+          "$color_picker_code": "§1",
+          "$color_picker_text": "color.dark_blue"
+        }
+      },
+      {
+        "dark_green@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$2_color_format",
+          "$color_picker_code": "§2",
+          "$color_picker_text": "color.dark_green"
+        }
+      },
+      {
+        "dark_aqua@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$3_color_format",
+          "$color_picker_code": "§3",
+          "$color_picker_text": "color.dark_aqua"
+        }
+      },
+      {
+        "dark_red@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$4_color_format",
+          "$color_picker_code": "§4",
+          "$color_picker_text": "color.dark_red"
+        }
+      },
+      {
+        "dark_purple@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$5_color_format",
+          "$color_picker_code": "§5",
+          "$color_picker_text": "color.dark_purple"
+        }
+      },
+      {
+        "gold@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$6_color_format",
+          "$color_picker_code": "§6",
+          "$color_picker_text": "color.gold"
+        }
+      },
+      {
+        "gray@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$7_color_format",
+          "$color_picker_code": "§7",
+          "$color_picker_text": "color.gray"
+        }
+      },
+      {
+        "dark_gray@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$8_color_format",
+          "$color_picker_code": "§8",
+          "$color_picker_text": "color.dark_gray"
+        }
+      },
+      {
+        "blue@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$9_color_format",
+          "$color_picker_code": "§9",
+          "$color_picker_text": "color.blue"
+        }
+      },
+      {
+        "green@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$a_color_format",
+          "$color_picker_code": "§a",
+          "$color_picker_text": "color.green"
+        }
+      },
+      {
+        "aqua@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$b_color_format",
+          "$color_picker_code": "§b",
+          "$color_picker_text": "color.aqua"
+        }
+      },
+      {
+        "red@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$c_color_format",
+          "$color_picker_code": "§c",
+          "$color_picker_text": "color.red"
+        }
+      },
+      {
+        "light_purple@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$d_color_format",
+          "$color_picker_code": "§d",
+          "$color_picker_text": "color.light_purple"
+        }
+      },
+      {
+        "yellow@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$e_color_format",
+          "$color_picker_code": "§e",
+          "$color_picker_text": "color.yellow"
+        }
+      },
+      {
+        "white@rainbowpieui_host_options.color_picker_item": {
+          "$color_picker_color": "$f_color_format",
+          "$color_picker_code": "§f",
+          "$color_picker_text": "color.white"
+        }
+      }
+    ]
+  },
+
+  "color_picker_item": {
+    "type": "panel",
+    "size": [ "100%", 19 ],
+    "controls": [
+      {
+        "background@rainbowpie_ui_common.text_background": {
+          "size": [ "100%", 18 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+
+          "$color_picker_color|default": [ 1.0, 1.0, 0.0 ],
+          "$color_picker_code|default": "default_code",
+          "$color_picker_text|default": "Default Color",
+
+          "controls": [
+            {
+              "color_preview": {
+                "type": "image",
+                "size": [ 14, 14 ],
+                "offset": [ 2, 0 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "texture": "textures/ui/White",
+                "color": "$color_picker_color",
+                "layer": 1
+              }
+            },
+            {
+              "color_text@rainbowpie_ui_common.text_label_notheme": {
+                "text": "$color_picker_text",
+                "color": "$color_picker_color",
+                "offset": [ 18, 0 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "layer": 2
+              }
+            },
+            {
+              "color_code@rainbowpie_ui_common.editable_label": {
+                "size": [ "100%", "100%" ],
+                "text_box_name": "('color_picker_' + $color_picker_code)",
+                "text_control": "code_display_text",
+                "controls": [
+                  {
+                    "color_text_line": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%", 10 ],
+                      "controls": [
+                        {
+                          "padding_0": {
+                            "type": "panel",
+                            "size": [ 18, 0 ]
+                          }
+                        },
+                        {
+                          "color_text@rainbowpie_ui_common.text_label_notheme": {
+                            "text": "$color_picker_text",
+                            "alpha": 0.0
+                          }
+                        },
+                        {
+                          "padding_1": {
+                            "type": "panel",
+                            "size": [ 2, 0 ]
+                          }
+                        },
+                        {
+                          "code_display_text@rainbowpie_ui_common.text_label_notheme": {
+                            "text": "$color_picker_code",
+                            "size": [ "default", "default" ],
+                            "layer": 8
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "tip_text@rainbowpie_ui_common.text_label_notheme": {
+                "text": "rainbowpie.ui.host_options.color_picker.tip",
+                "color": [ 0.5, 0.5, 0.5 ],
+                "offset": [ -2, 0 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "layer": 2
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "independent_command_helper": {
     "type": "panel",
     "size": [ "100%", 90 ],

@@ -208,7 +208,8 @@
   "$rainbowpie_ui_flag_64fd7c05": true,
   "$rainbowpie_ui_flag_f733129c": true,
   "$rainbowpie_ui_flag_a3e3c9d0": true, // Force disable title text background
-
+  "$rainbowpie_ui_flag_64981341": true, // Color Picker (Type ".color" in your chat but don't send it)
+  
   // Debug
   "$rainbowpie_ui_debug": false,
   "$rainbowpie_ui_debug_screen_animation": false,

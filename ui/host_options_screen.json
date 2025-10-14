@@ -13,6 +13,9 @@
           },
           {
             "command_helper@rainbowpieui_host_options.independent_command_helper": { }
+          },
+          {
+            "color_picker@rainbowpieui_host_options.color_picker": { }
           }
         ]
       }

@@ -42,6 +42,9 @@ rainbowpie.ui.host_options.time_title=Time:
 rainbowpie.ui.host_options.days_played=Days Played
 rainbowpie.ui.host_options.time_note=If you use this tweak, the number of days played will be reset
 
+rainbowpie.ui.host_options.color_picker=Color Picker
+rainbowpie.ui.host_options.color_picker.tip=(Click)
+
 rainbowpie.ui.serverform.vanilla_tip=Back to Vanilla style ServerFormUI
 rainbowpie.ui.serverform.serverformui_tip=Switch to Rainbow Pie UI style ServerFormUI
 
