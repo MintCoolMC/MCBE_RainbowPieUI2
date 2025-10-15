@@ -1189,7 +1189,7 @@
                                   "text": "('rainbowpie.ui.notification.features_disabled.' + $rainbowpie_ui_flag_notification_features_disabled_reason)",
                                   "variables": [
                                     {
-                                      "requires": "($rainbowpie_ui_flag_server_identifier)",
+                                      "requires": "(not ($rainbowpie_ui_flag_server_identifier = ''))",
                                       "$rainbowpie_ui_flag_notification_features_disabled_reason": "server"
                                     }
                                   ]
