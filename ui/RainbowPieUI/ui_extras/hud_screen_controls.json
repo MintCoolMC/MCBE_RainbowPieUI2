@@ -2713,6 +2713,60 @@
     "play_event": "button.hotbar_inventory_right"
   },
 
+  "anim_hotbar_slot_panel_slot1_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
+    "from": 0,
+    "to": 0,
+    "play_event": "button.slot_1"
+  },
+
+  "anim_hotbar_slot_panel_slot2_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
+    "from": 0,
+    "to": 0,
+    "play_event": "button.slot_2"
+  },
+
+  "anim_hotbar_slot_panel_slot3_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
+    "from": 0,
+    "to": 0,
+    "play_event": "button.slot_3"
+  },
+
+  "anim_hotbar_slot_panel_slot4_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
+    "from": 0,
+    "to": 0,
+    "play_event": "button.slot_4"
+  },
+
+  "anim_hotbar_slot_panel_slot5_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
+    "from": 0,
+    "to": 0,
+    "play_event": "button.slot_5"
+  },
+
+  "anim_hotbar_slot_panel_slot6_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
+    "from": 0,
+    "to": 0,
+    "play_event": "button.slot_6"
+  },
+
+  "anim_hotbar_slot_panel_slot7_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
+    "from": 0,
+    "to": 0,
+    "play_event": "button.slot_7"
+  },
+
+  "anim_hotbar_slot_panel_slot8_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
+    "from": 0,
+    "to": 0,
+    "play_event": "button.slot_8"
+  },
+
+  "anim_hotbar_slot_panel_slot9_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
+    "from": 0,
+    "to": 0,
+    "play_event": "button.slot_9"
+  },
+
   "animated_hotbar_slot_unselected_image_left@rainbowpieui_hud.hotbar_slot_selected_image": {
     "bindings": [],
     "anims": [
@@ -2756,6 +2810,254 @@
     "collection_index": "$collection_index",
     "size": [ 20, "100%" ],
     "controls": [
+      {
+        "input_mappings": {
+          "type": "stack_panel",
+          "size": [ 0, 0 ],
+          "bindings": [
+            {
+              "binding_name": "#slot_selected",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$hotbar_collection_name"
+            }
+          ],
+          "controls": [
+            {
+              "to_slot1_left_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index < 1)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot1",
+                    "to_button_id": "button.hotbar_inventory_left",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot2_left_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index < 2)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot2",
+                    "to_button_id": "button.hotbar_inventory_left",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot3_left_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index < 3)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot3",
+                    "to_button_id": "button.hotbar_inventory_left",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot4_left_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index < 4)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot4",
+                    "to_button_id": "button.hotbar_inventory_left",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot5_left_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index < 5)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot5",
+                    "to_button_id": "button.hotbar_inventory_left",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot6_left_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index < 6)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot6",
+                    "to_button_id": "button.hotbar_inventory_left",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot7_left_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index < 7)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot7",
+                    "to_button_id": "button.hotbar_inventory_left",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot8_left_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index < 8)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot8",
+                    "to_button_id": "button.hotbar_inventory_left",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot2_right_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index > 0)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot2",
+                    "to_button_id": "button.hotbar_inventory_right",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot3_right_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index > 1)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot3",
+                    "to_button_id": "button.hotbar_inventory_right",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot4_right_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index > 2)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot4",
+                    "to_button_id": "button.hotbar_inventory_right",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot5_right_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index > 3)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot5",
+                    "to_button_id": "button.hotbar_inventory_right",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot6_right_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index > 4)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot6",
+                    "to_button_id": "button.hotbar_inventory_right",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot7_right_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index > 5)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot7",
+                    "to_button_id": "button.hotbar_inventory_right",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot8_right_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index > 6)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot8",
+                    "to_button_id": "button.hotbar_inventory_right",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot9_right_input": {
+                "type": "input_panel",
+                "ignored": "($collection_index > 7)",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.slot9",
+                    "to_button_id": "button.hotbar_inventory_right",
+                    "mapping_type": "global",
+                    "consume_event": false
+                  }
+                ]
+              }
+            },
+            {
+              "to_slot0_input": {
+                "type": "stack_panel",
+                "controls": [
+                  
+                ]
+              }
+            }
+          ]
+        }
+      },
       {
         "animated_hotbar_slot_panel_left@rainbowpieui_hud.hotbar_slot_unselected_panel": {
           "$unselected_factory_control_name": "rainbowpieui_hud.animated_hotbar_slot_unselected_image_left",
