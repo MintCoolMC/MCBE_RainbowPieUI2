@@ -935,10 +935,11 @@
               "$rainbowpie_localui_background_bsf_need|default": true,
               "$rainbowpie_localui_background_longer_anim|default": false,
               "controls": [
+                // Fix that blank screen when switching screens
                 {
                   "background_backup@common.safezone_outer_matrix": {
                     "$rainbowpie_localui_screenroot_ignore_dialogs": true,
-                    "ignored": "((not $rainbowpie_localui_background_bsf_need) or $rainbowpie_localui_inventory_screen)",
+                    "ignored": "((not $is_pregame) or (not $rainbowpie_localui_background_bsf_need) or $rainbowpie_localui_inventory_screen)",
                     "alpha": 0.0,
                     "layer": -10,
                     "propagate_alpha": true,
@@ -1298,7 +1299,7 @@
                     "animation_reset_name": "screen_animation_reset",
                     "propagate_alpha": true,
                     "disable_anim_fast_forward": true,
-                    "layer": "($safezone_screen_matrix_layer - 50)",
+                    "layer": "($safezone_screen_matrix_layer - 10)",
                     "$screen_content": "rainbowpie_ui_common.screen_background"
                   }
                 },
@@ -1875,7 +1876,8 @@
             "$rainbowpie_ui_flag_notification_features_disabled_reason": "resourcepack",
             "$rainbowpie_localui_screenbackground_ingamebg_ignored": true,
             "$rainbowpie_ui_flag_hud_hotbar_mode": 0,
-            "$rainbowpie_ui_flag_disable_custom_chat_ui": true
+            "$rainbowpie_ui_flag_disable_custom_chat_ui": true,
+            "$rainbowpie_localui_background_bsf_need": false
           },
           // Dabu UI
           {
