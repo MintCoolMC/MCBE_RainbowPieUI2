@@ -952,7 +952,7 @@
                       "@rainbowpie_ui_animations.background_entrance_animation_push_fade",
                       "@rainbowpie_ui_animations.background_entrance_animation_pop_fade"
                     ],
-                    "$screen_content": "rainbowpie_ui_common.screen_background"
+                    "$rainbowpie_localui_screen_content": "rainbowpie_ui_common.screen_background"
                   }
                 }
               ]
