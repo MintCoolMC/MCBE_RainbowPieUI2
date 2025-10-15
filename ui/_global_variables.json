@@ -40,18 +40,18 @@
   "$rainbowpie_ui_alert_title": "",
   "$rainbowpie_ui_alert_text": "",
 
-  "$rainbowpie_ui_animation_container_transition_time": 0.3,
+  "$rainbowpie_ui_animation_container_transition_time": 0.25,
   "$rainbowpie_ui_animation_container_transition_effect_exit": "out_quart",
   "$rainbowpie_ui_animation_container_transition_effect_entrance": "out_quart",
-  "$rainbowpie_ui_animation_container_v2_transition_time": 0.3,
+  "$rainbowpie_ui_animation_container_v2_transition_time": 0.25,
   "$rainbowpie_ui_animation_container_v2_transition_effect_exit": "out_quart",
   "$rainbowpie_ui_animation_container_v2_transition_effect_entrance": "out_quart",
-  "$rainbowpie_ui_animation_transition_time": 0.3,
+  "$rainbowpie_ui_animation_transition_time": 0.25,
   "$rainbowpie_ui_animation_header_transition_effect_exit": "out_quart",
   "$rainbowpie_ui_animation_header_transition_effect_entrance": "out_quart",
   "$rainbowpie_ui_animation_transition_effect_exit": "out_quart",
   "$rainbowpie_ui_animation_transition_effect_entrance": "out_quart",
-  "$rainbowpie_ui_animation_chat_transition_time": 0.3,
+  "$rainbowpie_ui_animation_chat_transition_time": 0.25,
 
   // Flags
   "$rainbowpie_ui_flag_resourcepack_identifier": "", // 兼容其他资源包时的标记
