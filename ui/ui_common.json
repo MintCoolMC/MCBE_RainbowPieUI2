@@ -1873,7 +1873,6 @@
             "$rainbowpie_ui_flag_resourcepack_displayname": "Better Bedrock UI",
             "$rainbowpie_ui_flag_notification_features_disabled": true,
             "$rainbowpie_ui_flag_notification_features_disabled_reason": "resourcepack",
-            "$rainbowpie_localui_screenbackground_ingamebg_ignored": true,
             "$rainbowpie_ui_flag_hud_hotbar_mode": 0
           },
           {
