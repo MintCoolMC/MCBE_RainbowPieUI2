@@ -2550,6 +2550,72 @@
     ]
   },
 
+  "anim_hotbar_slot_selected": {
+    "anim_type": "alpha",
+    "easing": "in_out_sine",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "from": 0.0,
+    "to": 0.3
+  },
+
+  "anim_hotbar_slot_unselected": {
+    "anim_type": "alpha",
+    "easing": "in_out_sine",
+    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "from": 0.3,
+    "to": 0.0
+  },
+
+  "animated_hotbar_slot_selected_image@rainbowpieui_hud.hotbar_slot_selected_image": {
+    "anims": [
+      "@rainbowpieui_hud.anim_hotbar_slot_selected"
+    ]
+  },
+
+  "animated_hotbar_slot_unselected_image@rainbowpieui_hud.hotbar_slot_selected_image": {
+    "anims": [
+      "@rainbowpieui_hud.anim_hotbar_slot_unselected"
+    ]
+  },
+
+  "animated_hotbar_slot_panel": {
+    "type": "collection_panel",
+    "size": [ "100%", "100%" ],
+    "ignored": "(not $rainbowpie_ui_flag_5e1f3f4e)",
+
+    "$is_selected": true,
+    "$factory_name": "hotbar_slot_selected_factory",
+    "$factory_control_name": "rainbowpieui_hud.animated_hotbar_slot_selected_image",
+    "$collection_length_binding": "(1 * #slot_selected)",
+
+    "variables": [
+      {
+        "requires": "(not $is_selected)",
+        "$factory_name": "hotbar_slot_unselected_factory",
+        "$factory_control_name": "rainbowpieui_hud.animated_hotbar_slot_unselected_image",
+        "$collection_length_binding": "(1 * (not #slot_selected))"
+      }
+    ],
+
+    "factory": {
+      "name": "$factory_name",
+      "control_name": "$factory_control_name",
+      "max_children_size": 1
+    },
+    "bindings": [
+      {
+        "binding_name": "#slot_selected",
+        "binding_type": "collection",
+        "binding_collection_name": "$hotbar_collection_name"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "$collection_length_binding",
+        "target_property_name": "#collection_length"
+      }
+    ]
+  },
+
   "gui_hotbar_grid_item": {
     "type": "panel",
     "layer": 1,
@@ -2562,7 +2628,7 @@
     "controls": [
       {
         "hotbar_slot_selected_image_rounded": {
-          "ignored": "((not $rainbowpie_ui_flag_hud_hotbar_rounded) or ($rainbowpie_ui_flag_hud_hotbar_mode = 2))",
+          "ignored": "((not $rainbowpie_ui_flag_hud_hotbar_rounded) or ($rainbowpie_ui_flag_hud_hotbar_mode = 2) or $rainbowpie_ui_flag_5e1f3f4e)",
           "type": "panel",
           "size": [ 20, 24 ],
           "controls": [
@@ -2636,7 +2702,15 @@
       },
       {
         "hotbar_slot_selected_image@rainbowpieui_hud.hotbar_slot_selected_image": {
-          "ignored": "(not ((not $rainbowpie_ui_flag_hud_hotbar_rounded) or ($rainbowpie_ui_flag_hud_hotbar_mode = 2)))"
+          "ignored": "((not ((not $rainbowpie_ui_flag_hud_hotbar_rounded) or ($rainbowpie_ui_flag_hud_hotbar_mode = 2))) or $rainbowpie_ui_flag_5e1f3f4e)"
+        }
+      },
+      {
+        "animated_hotbar_slot_selected_image@rainbowpieui_hud.animated_hotbar_slot_panel": {}
+      },
+      {
+        "animated_hotbar_slot_unselected_image@rainbowpieui_hud.animated_hotbar_slot_panel": {
+          "$is_selected": false
         }
       },
       {
