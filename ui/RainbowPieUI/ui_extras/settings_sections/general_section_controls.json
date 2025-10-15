@@ -1011,38 +1011,38 @@
         }
       },
       {
-        "title_011_str@rainbowpie_ui_common.text_label": {
+        "str_test_01@rainbowpie_ui_common.text_label": {
           "$var_1": "TEST STRING",
           "text": "('This is a test string variable: %s, and this is end' * $var_1)"
         }
       },
       {
-        "title_012_str@rainbowpie_ui_common.text_label": {
+        "str_test_02@rainbowpie_ui_common.text_label": {
           "$var_1": "",
           "text": "('test \u003d ')"
         }
       },
       {
-        "title_013_str@rainbowpie_ui_common.text_label": {
+        "str_test_03@rainbowpie_ui_common.text_label": {
           "$var_1": "ABCDEF0123456789",
           "text": "('%.12s' * $var_1)"
         }
       },
       {
-        "title_014_str@rainbowpie_ui_common.text_label": {
+        "str_test_04@rainbowpie_ui_common.text_label": {
           "$var_1": "message:/time set 24000",
           "text": "('%.17s' * $var_1)"
         }
       },
       {
-        "title_015_str@rainbowpie_ui_common.text_label": {
+        "str_test_05@rainbowpie_ui_common.text_label": {
           "$var_1": 114514,
           "text": "('\"' + $var_1 + '\"')"
         }
       },
       // 比较最小数值 2x2 (4) (By DeepSeek AI)
       {
-        "title_014_str@rainbowpie_ui_common.text_label": {
+        "str_test_06@rainbowpie_ui_common.text_label": {
           "text": "#result_text",
           "property_bag": {
             "#a": 52,
@@ -1097,7 +1097,7 @@
       },
       // 比较最小数值 3x3 (9) (By DeepSeek AI)
       {
-        "title_015_str@rainbowpie_ui_common.text_label": {
+        "str_test_07@rainbowpie_ui_common.text_label": {
           "text": "#result_text",
           "property_bag": {
             "#a": 128,
@@ -1209,10 +1209,17 @@
       // 0 = 奇数
       // 1 = 偶数
       {
-        "title_015_str@rainbowpie_ui_common.text_label": {
+        "str_test_08@rainbowpie_ui_common.text_label": {
           "$var_1": 5,
           "$var_2": "($var_1 - 2 * ($var_1 / 2))",
           "text": "('\"' + $var_2 + '\"')"
+        }
+      },
+      {
+        "str_test_09@rainbowpie_ui_common.text_label": {
+          "$var_1": false,
+          "$var_2": true,
+          "text": "('\"' + $var_1 + '\"')"
         }
       },
       {

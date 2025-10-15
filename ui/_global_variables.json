@@ -553,7 +553,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_alpha": 0.8,
   "$rainbowpie_ui_theme_inventory_bgicon_fill": false,
   
-  // Inventory Background Icon
+  // Inventory Background Icon Variables //
 
   // Crafting (Player Inventory)
   "$rainbowpie_ui_theme_inventory_bgicon_crafting_texture": "",
@@ -677,15 +677,8 @@
 
   // Theme End
 
-  // Compatibility for servers or other resource packs
+  // Compatibility
   // Modify bbui's default mod settings
-  "$rainbowpie_ui_compatibility_var_override_d5e1b7c2": true,
-  // The variables here will be overwritten when the server loads the resource packs.
-  "$is_zeqa": false, // Zeqa Network (Server)
-  "$cubecraft_green": "string", // CubeCraft (Server)
-  "$bb_version": 0, // Better Bedrock UI (RP)
-  "$dabuui_bool": 0, // Dabu UI
-
-  "$is_netease": false // China Version
+  "$rainbowpie_ui_compatibility_var_override_d5e1b7c2": true
 }
 

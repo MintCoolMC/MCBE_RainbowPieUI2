@@ -1060,6 +1060,14 @@
   },
 
   "base_screen/variables_button_mappings_and_controls": {
+    // Compatibility for servers or other resource packs
+    // The variables here will be overwritten when the server loads the resource packs.
+    "$is_zeqa|default": -1, // Zeqa Network (Server)
+    "$cubecraft_green|default": -1, // CubeCraft (Server)
+    "$bb_version|default": -1, // Better Bedrock UI (RP)
+    "$dabuui_bool|default": -1, // Dabu UI (RP)
+    "$is_netease|default": -1, // China Version
+
     "modifications": [
       {
         "array_name": "variables",
@@ -1071,13 +1079,13 @@
           },
           // Zeqa Network
           {
-            "requires": "($is_zeqa)",
+            "requires": "(not ($is_zeqa = -1))",
             "$rainbowpie_ui_flag_resourcepack_identifier": "78239b75_zeqa"
           },
           // CubeCraft
           // In CubeCraft's UI resource pack, $cubecraft_green will be overwritten as an array format, which will not be equal to "string"
           {
-            "requires": "(not ($cubecraft_green = 'string'))",
+            "requires": "(not ($cubecraft_green = -1))",
             "$rainbowpie_ui_flag_resourcepack_identifier": "d29f22ac_cubecraft"
           },
           // The Hive UI
@@ -1088,17 +1096,17 @@
           },
           // Better Bedrock UI
           {
-            "requires": "(not ($bb_version = 0))",
+            "requires": "(not ($bb_version = -1))",
             "$rainbowpie_ui_flag_resourcepack_identifier": "d5e1b7c2_betterbedrock"
           },
           // Dabu UI
           {
-            "requires": "(not ($dabuui_bool = 0))",
+            "requires": "(not ($dabuui_bool = -1))",
             "$rainbowpie_ui_flag_resourcepack_identifier": "c740985b_dabuui"
           },
           // China Version
           {
-            "requires": "($is_netease)",
+            "requires": "(not ($is_netease = -1))",
             "$rainbowpie_ui_flag_resourcepack_identifier": "5c1c3f14_netease"
           },
           {
