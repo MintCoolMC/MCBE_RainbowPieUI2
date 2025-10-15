@@ -2432,6 +2432,65 @@
                     "requires": "$rainbowpie_ui_flag_hud_hotbar_rounded",
                     "$rainbowpie_localui_this_hotbar_texture": "($rainbowpie_ui_path_home + '/r_black')"
                   }
+                ],
+                "controls": [
+                  {
+                    "animated_hotbar_slot_unselected_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "collection_name": "hotbar_items",
+                      "size": [ "100%", "100%" ],
+                      "$hotbar_collection_name": "hotbar_items",
+                      "ignored": "(not $rainbowpie_ui_flag_5e1f3f4e)",
+                      "controls": [
+                        {
+                          "slot_0@rainbowpieui_hud.animated_hotbar_slot_unselected_panel": {
+                            "$collection_index": 0
+                          }
+                        },
+                        {
+                          "slot_1@rainbowpieui_hud.animated_hotbar_slot_unselected_panel": {
+                            "$collection_index": 1
+                          }
+                        },
+                        {
+                          "slot_2@rainbowpieui_hud.animated_hotbar_slot_unselected_panel": {
+                            "$collection_index": 2
+                          }
+                        },
+                        {
+                          "slot_3@rainbowpieui_hud.animated_hotbar_slot_unselected_panel": {
+                            "$collection_index": 3
+                          }
+                        },
+                        {
+                          "slot_4@rainbowpieui_hud.animated_hotbar_slot_unselected_panel": {
+                            "$collection_index": 4
+                          }
+                        },
+                        {
+                          "slot_5@rainbowpieui_hud.animated_hotbar_slot_unselected_panel": {
+                            "$collection_index": 5
+                          }
+                        },
+                        {
+                          "slot_6@rainbowpieui_hud.animated_hotbar_slot_unselected_panel": {
+                            "$collection_index": 6
+                          }
+                        },
+                        {
+                          "slot_7@rainbowpieui_hud.animated_hotbar_slot_unselected_panel": {
+                            "$collection_index": 7
+                          }
+                        },
+                        {
+                          "slot_8@rainbowpieui_hud.animated_hotbar_slot_unselected_panel": {
+                            "$collection_index": 8
+                          }
+                        }
+                      ]
+                    }
+                  }
                 ]
               }
             },
@@ -2561,6 +2620,7 @@
   "anim_hotbar_slot_unselected": {
     "anim_type": "alpha",
     "easing": "in_out_sine",
+    "destroy_at_end": "animated_hotbar_slot_unselected_image",
     "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
     "from": 0.3,
     "to": 0.0
@@ -2573,6 +2633,7 @@
   },
 
   "animated_hotbar_slot_unselected_image@rainbowpieui_hud.hotbar_slot_selected_image": {
+    "bindings": [],
     "anims": [
       "@rainbowpieui_hud.anim_hotbar_slot_unselected"
     ]
@@ -2612,6 +2673,35 @@
         "binding_type": "view",
         "source_property_name": "$collection_length_binding",
         "target_property_name": "#collection_length"
+      }
+    ]
+  },
+
+  "animated_hotbar_slot_unselected_panel": {
+    "type": "panel",
+    "collection_index": "$collection_index",
+    "size": [ 20, "100%" ],
+    "controls": [
+      {
+        "animated_hotbar_slot_panel@rainbowpieui_hud.animated_hotbar_slot_panel": {
+          "$is_selected": false,
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "$hotbar_collection_name"
+            },
+            {
+              "binding_name": "#slot_selected",
+              "binding_type": "collection",
+              "binding_collection_name": "$hotbar_collection_name"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "$collection_length_binding",
+              "target_property_name": "#collection_length"
+            }
+          ]
+        }
       }
     ]
   },
@@ -2707,11 +2797,6 @@
       },
       {
         "animated_hotbar_slot_selected_image@rainbowpieui_hud.animated_hotbar_slot_panel": {}
-      },
-      {
-        "animated_hotbar_slot_unselected_image@rainbowpieui_hud.animated_hotbar_slot_panel": {
-          "$is_selected": false
-        }
       },
       {
         "hotbar_parent": {
