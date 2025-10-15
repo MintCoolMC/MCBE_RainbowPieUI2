@@ -1895,7 +1895,9 @@
           },
           {
             "requires": "(($rainbowpie_ui_flag_resourcepack_identifier = 'd5e1b7c2_betterbedrock') and (not ($rainbowpie_ui_flag_hud_hotbar_mode = 0)))",
-            "$editor_hotbars_show_default_layout": false
+            "$editor_hotbars_show_default_layout": false,
+            "$editor_hotbar_elements_icons_and_factories_vertical_padding_size": 14,
+            "$editor_hotbar_elements_xp_bar_show_element": false
           },
           {
             "requires": "(($rainbowpie_ui_flag_resourcepack_identifier = 'd5e1b7c2_betterbedrock') and ($screen_content = 'hud.hud_content'))",
