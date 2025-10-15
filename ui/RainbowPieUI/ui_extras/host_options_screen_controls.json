@@ -9,6 +9,7 @@
     "anchor_to": "bottom_middle",
     "ignored": "(not $rainbowpie_ui_flag_64981341)",
     "visible": false,
+    "layer": 10,
     "bindings": [
       {
         "binding_name": "#message_text_box_content"
@@ -539,6 +540,7 @@
     "anchor_to": "bottom_middle",
     "ignored": "(not $rainbowpie_ui_flag_fb3b5106)",
     "visible": false,
+    "layer": 10,
     "bindings": [
       {
         "binding_name": "#message_text_box_content"
@@ -1008,6 +1010,7 @@
     "anchor_to": "bottom_middle",
     "ignored": "(not $rainbowpie_ui_flag_988450b0)",
     "visible": false,
+    "layer": 10,
     "bindings": [
       {
         "binding_name": "#message_text_box_content"
