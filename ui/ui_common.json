@@ -1866,9 +1866,26 @@
             "$rainbowpie_ui_flag_notification_features_disabled": true,
             "$rainbowpie_ui_flag_notification_features_disabled_reason": "resourcepack",
             "$rainbowpie_localui_screenbackground_ingamebg_ignored": true,
-            "$rainbowpie_ui_flag_hud_hotbar_mode": 0,
-            "$rainbowpie_ui_flag_disable_custom_chat_ui": true,
-            "$rainbowpie_ui_feature_hud_durability": false
+            "$rainbowpie_ui_flag_hud_hotbar_mode": 0
+          },
+          {
+            "requires": "(($rainbowpie_ui_flag_resourcepack_identifier = 'd5e1b7c2_betterbedrock') and $rainbowpie_ui_compatibility_var_override_d5e1b7c2)",
+            "$cps_counter_x_offset": 0,
+            "$cps_counter_y_offset": 6,
+            "$day_time_viewer_x_offset": 0,
+            "$day_time_viewer_y_offset": 2,
+            "$speed_counter_x_offset": 0,
+            "$speed_counter_y_offset": 4,
+            "$tab_list": false,
+            "$durability_viewer": false,
+            "$crosshair_item_count": false,
+            "$session_timer_x_offset": 0,
+            "$session_timer_y_offset": 0,
+            "$chat": false,
+            "$coords": false,
+            "$nether_coords_x_offset": 0,
+            "$nether_coords_y_offset": 4,
+            "$days_played": false
           },
           {
             "requires": "(($rainbowpie_ui_flag_resourcepack_identifier = 'd5e1b7c2_betterbedrock') and ($screen_content = 'hud.hud_content'))",

@@ -678,6 +678,8 @@
   // Theme End
 
   // Compatibility for servers or other resource packs
+  // Modify bbui's default mod settings
+  "$rainbowpie_ui_compatibility_var_override_d5e1b7c2": true,
   // The variables here will be overwritten when the server loads the resource packs.
   "$is_zeqa": false, // Zeqa Network (Server)
   "$cubecraft_green": "string", // CubeCraft (Server)
