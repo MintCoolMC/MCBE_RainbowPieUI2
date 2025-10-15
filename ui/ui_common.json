@@ -1145,6 +1145,7 @@
           },
           {
             "safezone_screen_overlay_matrix@common.safezone_outer_matrix": {
+              "$rainbowpie_localui_screenroot_ignore_dialogs": true,
               "$rainbowpie_localui_screen_content": "$rainbowpie_localui_overlay_screen_content",
               "ignored": "(not $rainbowpie_localui_overlay_screen)",
               "anims": "$screen_animations",
