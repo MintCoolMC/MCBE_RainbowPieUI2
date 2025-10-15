@@ -1902,6 +1902,14 @@
             "$rainbowpie_localui_screen_alias": "hud",
             "$rainbowpie_localui_screen_alias_formatted": "hud,"
           },
+          {
+            "requires": "(($rainbowpie_ui_flag_resourcepack_identifier = 'd5e1b7c2_betterbedrock') and ($screen_content = 'bb_pause.main'))",
+            "$rainbowpie_localui_modified": true,
+            "$rainbowpie_localui_screen_alias": "pause",
+            "$rainbowpie_localui_backup_screen": true,
+            "$rainbowpie_localui_backup_screen_content": "rainbowpieui_pause.pause_screen_content",
+            "$rainbowpie_localui_screenbackground_ingamebg_ignored": true
+          },
           // Dabu UI
           {
             "requires": "($rainbowpie_ui_flag_resourcepack_identifier = 'c740985b_dabuui')",
