@@ -453,29 +453,7 @@
           "anchor_to": "top_middle",
           "controls": [
             {
-              "color_preview": {
-                "type": "image",
-                "size": [ 14, 14 ],
-                "offset": [ 2, 0 ],
-                "anchor_from": "left_middle",
-                "anchor_to": "left_middle",
-                "texture": "textures/ui/White",
-                "color": "$color_picker_color",
-                "layer": 1
-              }
-            },
-            {
-              "color_text@rainbowpie_ui_common.text_label_notheme": {
-                "text": "$color_picker_text",
-                "color": "$color_picker_color",
-                "offset": [ 18, 0 ],
-                "anchor_from": "left_middle",
-                "anchor_to": "left_middle",
-                "layer": 2
-              }
-            },
-            {
-              "color_code@rainbowpie_ui_common.editable_label": {
+              "color_picker_item_panel@rainbowpie_ui_common.editable_label": {
                 "size": [ "100%", "100%" ],
                 "text_box_name": "('color_picker_' + $color_picker_code)",
                 "text_control": "code_display_text",
@@ -489,17 +467,43 @@
                         {
                           "padding_0": {
                             "type": "panel",
-                            "size": [ 18, 0 ]
+                            "size": [ 2, 0 ]
+                          }
+                        },
+                        {
+                          "color_preview_panel": {
+                            "type": "panel",
+                            "size": [ "100%c", "100%" ],
+                            "controls": [
+                              {
+                                "color_preview": {
+                                  "type": "image",
+                                  "size": [ 14, 14 ],
+                                  "anchor_from": "center",
+                                  "anchor_to": "center",
+                                  "texture": "textures/ui/White",
+                                  "color": "$color_picker_color",
+                                  "layer": 1
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "padding_1": {
+                            "type": "panel",
+                            "size": [ 2, 0 ]
                           }
                         },
                         {
                           "color_text@rainbowpie_ui_common.text_label_notheme": {
                             "text": "$color_picker_text",
-                            "alpha": 0.0
+                            "color": "$color_picker_color",
+                            "layer": 2
                           }
                         },
                         {
-                          "padding_1": {
+                          "padding_2": {
                             "type": "panel",
                             "size": [ 2, 0 ]
                           }
