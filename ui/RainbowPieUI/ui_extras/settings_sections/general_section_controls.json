@@ -888,7 +888,7 @@
               }
             },
             {
-              "item_render@common.item_renderer": {
+              "item_render@rainbowpie_ui_common.item_renderer": {
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
                 "size": [ 16, 16 ],
@@ -953,7 +953,7 @@
               }
             },
             {
-              "item_render@common.item_renderer": {
+              "item_render@rainbowpie_ui_common.item_renderer": {
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
                 "size": [ 16, 16 ],
