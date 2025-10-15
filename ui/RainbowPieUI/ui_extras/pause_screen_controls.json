@@ -885,16 +885,11 @@
 
   "top_tab@common_tabs.tab_top": {
     "$tab_panel": "rainbowpie_ui_tab.tab_panel",
-    "$toggle_tts_enabled_binding_type": "global",
     "$radio_toggle_group": true,
     "$toggle_name": "rainbowpieui_navigation_tab",
     "$toggle_group_default_selected": 10,
     "anchor_to": "top_left",
     "anchor_from": "top_left",
-    "$toggle_tts_type_priority": 1001,
-    "$toggle_tts_toggle_on_text": "",
-    "$toggle_tts_toggle_off_text": "",
-    "$toggle_tts_index_priority": 1002,
     "$tab_content": "rainbowpieui_pause.top_tab_content"
   },
 
@@ -1159,7 +1154,12 @@
                             "size": [ "fill", "100%" ],
                             "$tab_view_binding_name": "pause_navigation_tab_toggle",
                             "$tab_text": "rainbowpie.ui.pause.tab.pause",
-                            "$toggle_group_forced_index": 10
+                            "$toggle_group_forced_index": 18,
+                            "property_bag": {
+                              "#toggle_state": true
+                            },
+                            "bindings": [
+                            ]
                           }
                         },
                         {

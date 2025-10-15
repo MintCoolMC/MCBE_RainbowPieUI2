@@ -23,7 +23,6 @@
     "$rainbowpie_localui_screen_alias": "pause",
     "$rainbowpie_localui_backup_screen": true,
     "$rainbowpie_localui_backup_screen_content": "rainbowpieui_pause.pause_screen_content",
-    "cache_screen": false,
     "force_render_below": true
   },
 
