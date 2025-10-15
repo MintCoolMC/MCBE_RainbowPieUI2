@@ -918,11 +918,12 @@
       "@common.screen_entrance_animation_push_fade",
       "@common.screen_entrance_animation_pop_fade"
     ],
-    "$close_on_player_hurt": false,
     "$rainbowpie_localui_screen_alias": "null",
     "$rainbowpie_localui_screen_alias_formatted": "($rainbowpie_localui_screen_alias + ',')",
     "$rainbowpie_localui_backup_screen_content|default": "common.base_screen_empty_panel",
     "$rainbowpie_localui_overlay_screen_content|default": "common.base_screen_empty_panel",
+
+    "$close_on_player_hurt": false,
     "modifications": [
       {
         "array_name": "controls",
@@ -939,7 +940,7 @@
                     "$rainbowpie_localui_screenroot_ignore_dialogs": true,
                     "ignored": "((not $rainbowpie_localui_background_bsf_need) or $rainbowpie_localui_inventory_screen)",
                     "alpha": 0.0,
-                    "layer": -5000,
+                    "layer": -10,
                     "propagate_alpha": true,
                     "animation_reset_name": "screen_animation_reset",
                     "disable_anim_fast_forward": false,
@@ -1874,8 +1875,7 @@
             "$rainbowpie_ui_flag_notification_features_disabled_reason": "resourcepack",
             "$rainbowpie_localui_screenbackground_ingamebg_ignored": true,
             "$rainbowpie_ui_flag_hud_hotbar_mode": 0,
-            "$rainbowpie_ui_flag_disable_custom_chat_ui": true,
-            "$rainbowpieui_watermark": false
+            "$rainbowpie_ui_flag_disable_custom_chat_ui": true
           },
           // Dabu UI
           {
