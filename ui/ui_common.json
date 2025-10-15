@@ -1872,8 +1872,7 @@
             "$rainbowpie_ui_flag_resourcepack_identifier": "d5e1b7c2_betterbedrock",
             "$rainbowpie_ui_flag_resourcepack_displayname": "Better Bedrock UI",
             "$rainbowpie_ui_flag_notification_features_disabled": true,
-            "$rainbowpie_ui_flag_notification_features_disabled_reason": "resourcepack",
-            "$rainbowpie_ui_flag_hud_hotbar_mode": 0
+            "$rainbowpie_ui_flag_notification_features_disabled_reason": "resourcepack"
           },
           {
             "requires": "(($rainbowpie_ui_flag_resourcepack_identifier = 'd5e1b7c2_betterbedrock') and $rainbowpie_ui_compatibility_var_override_d5e1b7c2)",
@@ -1892,7 +1891,12 @@
             "$coords": false,
             "$nether_coords_x_offset": 0,
             "$nether_coords_y_offset": 4,
-            "$days_played": false
+            "$days_played": false,
+            "$editor_hotbars_show_default_layout": false
+          },
+          {
+            "requires": "(($rainbowpie_ui_flag_resourcepack_identifier = 'd5e1b7c2_betterbedrock') and ($rainbowpie_ui_flag_hud_hotbar_mode = 0))",
+            "$editor_hotbars_show_default_layout": true
           },
           {
             "requires": "(($rainbowpie_ui_flag_resourcepack_identifier = 'd5e1b7c2_betterbedrock') and ($screen_content = 'hud.hud_content'))",
