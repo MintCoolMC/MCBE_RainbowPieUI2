@@ -983,7 +983,7 @@
               "controls": [
                 {
                   "debug_screen_content@rainbowpie_ui_common.text_label": {
-                    "ignored": "((not $rainbowpie_ui_debug_screen_content) or (not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias)) or ($screen_content = 'rainbowpie_ui_common.screen_background'))",
+                    "ignored": "((not $rainbowpie_ui_debug_screen_content) or (not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias)) or ($rainbowpie_localui_screen_content = 'rainbowpie_ui_common.screen_background'))",
                     "anchor_from": "top_right",
                     "anchor_to": "top_right",
                     "text": "($screen_content + '\n' + $rainbowpie_localui_backup_screen_content + '\n' + $rainbowpie_localui_overlay_screen_content)"
@@ -994,7 +994,7 @@
           },
           {
             "rainbowpie_gamepad_connect_tip": {
-              "ignored": "((not $rainbowpie_ui_feature_gamepad_connect_tip) or (not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias)) or ($screen_content = 'rainbowpie_ui_common.screen_background') or $game_pad)",
+              "ignored": "((not $rainbowpie_ui_feature_gamepad_connect_tip) or (not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias)) or ($rainbowpie_localui_screen_content = 'rainbowpie_ui_common.screen_background') or $game_pad)",
               "type": "image",
               "texture": "textures/ui/White",
               "color": "$rainbowpie_ui_theme_toast_background_color",
@@ -1300,7 +1300,7 @@
                     "propagate_alpha": true,
                     "disable_anim_fast_forward": true,
                     "layer": "($safezone_screen_matrix_layer - 10)",
-                    "$screen_content": "rainbowpie_ui_common.screen_background"
+                    "$rainbowpie_localui_screen_content": "rainbowpie_ui_common.screen_background"
                   }
                 },
                 {
