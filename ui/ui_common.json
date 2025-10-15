@@ -1080,19 +1080,19 @@
           // Zeqa Network
           {
             "requires": "(not ($is_zeqa = -1))",
-            "$rainbowpie_ui_flag_resourcepack_identifier": "78239b75_zeqa"
+            "$rainbowpie_ui_flag_server_identifier": "78239b75_zeqa"
           },
           // CubeCraft
           // In CubeCraft's UI resource pack, $cubecraft_green will be overwritten as an array format, which will not be equal to "string"
           {
             "requires": "(not ($cubecraft_green = -1))",
-            "$rainbowpie_ui_flag_resourcepack_identifier": "d29f22ac_cubecraft"
+            "$rainbowpie_ui_flag_server_identifier": "d29f22ac_cubecraft"
           },
           // The Hive UI
           // This method may result in false positives, but it is the only way to detect
           {
             "requires": "((($transition_time_push_size * 1000) = 150) and (($transition_time_pop_size * 1000) = 150) and (($transition_time_push * 1000) = 150) and (($transition_time_pop * 1000) = 150) and (($container_transition_time_push * 1000) = 150) and (($container_transition_time_pop * 1000) = 150))",
-            "$rainbowpie_ui_flag_resourcepack_identifier": "290b8fe4_hivebedrock"
+            "$rainbowpie_ui_flag_server_identifier": "290b8fe4_hivebedrock"
           },
           // Better Bedrock UI
           {
@@ -1101,13 +1101,8 @@
           },
           // Dabu UI
           {
-            "requires": "(not ($dabuui_bool = -1))",
-            "$rainbowpie_ui_flag_resourcepack_identifier": "c740985b_dabuui"
-          },
-          // China Version
-          {
-            "requires": "(not ($is_netease = -1))",
-            "$rainbowpie_ui_flag_resourcepack_identifier": "5c1c3f14_netease"
+            "requires": "(not ($dabuui_bool = -1))"//,
+            // "$rainbowpie_ui_flag_resourcepack_identifier": "c740985b_dabuui"
           },
           {
             "requires": "($rainbowpie_localui_modified and not $rainbowpie_localui_inventory_screen)",
@@ -1804,9 +1799,9 @@
           },
           // Zeqa Network
           {
-            "requires": "($rainbowpie_ui_flag_resourcepack_identifier = '78239b75_zeqa')",
-            "$rainbowpie_ui_flag_resourcepack_identifier": "78239b75_zeqa",
-            "$rainbowpie_ui_flag_resourcepack_displayname": "Zeqa Network",
+            "requires": "($rainbowpie_ui_flag_server_identifier = '78239b75_zeqa')",
+            "$rainbowpie_ui_flag_server_identifier": "78239b75_zeqa",
+            "$rainbowpie_ui_flag_server_displayname": "Zeqa Network",
             "$rainbowpie_ui_flag_notification_features_disabled": true,
             "$rainbowpie_ui_flag_notification_features_disabled_reason": "server",
             "$rainbowpie_ui_flag_server_infomation_enabled": true,
@@ -1828,9 +1823,9 @@
           },
           // CubeCraft
           {
-           "requires": "($rainbowpie_ui_flag_resourcepack_identifier = 'd29f22ac_cubecraft')",
-            "$rainbowpie_ui_flag_resourcepack_identifier": "d29f22ac_cubecraft",
-            "$rainbowpie_ui_flag_resourcepack_displayname": "CubeCraft Games",
+           "requires": "($rainbowpie_ui_flag_server_identifier = 'd29f22ac_cubecraft')",
+            "$rainbowpie_ui_flag_server_identifier": "d29f22ac_cubecraft",
+            "$rainbowpie_ui_flag_server_displayname": "CubeCraft Games",
             "$rainbowpie_ui_flag_notification_features_disabled": true,
             "$rainbowpie_ui_flag_notification_features_disabled_reason": "server",
             "$rainbowpie_ui_flag_server_infomation_enabled": true,
@@ -1849,9 +1844,9 @@
           },
           // The Hive
           {
-            "requires": "($rainbowpie_ui_flag_resourcepack_identifier = '290b8fe4_hivebedrock')",
-            "$rainbowpie_ui_flag_resourcepack_identifier": "290b8fe4_hivebedrock",
-            "$rainbowpie_ui_flag_resourcepack_displayname": "The Hive",
+            "requires": "($rainbowpie_ui_flag_server_identifier = '290b8fe4_hivebedrock')",
+            "$rainbowpie_ui_flag_server_identifier": "290b8fe4_hivebedrock",
+            "$rainbowpie_ui_flag_server_displayname": "The Hive",
             "$rainbowpie_ui_flag_notification_features_disabled": true,
             "$rainbowpie_ui_flag_notification_features_disabled_reason": "server",
             "$rainbowpie_ui_flag_server_infomation_enabled": true,

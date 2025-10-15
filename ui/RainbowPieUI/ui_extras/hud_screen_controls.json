@@ -1186,7 +1186,13 @@
                             "controls": [
                               {
                                 "title_text@rainbowpie_ui_common.text_label": {
-                                  "text": "('rainbowpie.ui.notification.features_disabled.' + $rainbowpie_ui_flag_notification_features_disabled_reason)"
+                                  "text": "('rainbowpie.ui.notification.features_disabled.' + $rainbowpie_ui_flag_notification_features_disabled_reason)",
+                                  "variables": [
+                                    {
+                                      "requires": "($rainbowpie_ui_flag_server_identifier)",
+                                      "$rainbowpie_ui_flag_notification_features_disabled_reason": "server"
+                                    }
+                                  ]
                                 }
                               },
                               {
@@ -1198,7 +1204,15 @@
                               {
                                 "resourcepack_name_text@rainbowpie_ui_common.text_label": {
                                   "text": "$rainbowpie_ui_flag_resourcepack_displayname",
-                                  "color": [ 1.0, 1.0, 0.333 ]
+                                  "color": [ 1.0, 1.0, 0.333 ],
+                                  "ignored": "(not ($rainbowpie_ui_flag_server_displayname = ''))"
+                                }
+                              },
+                              {
+                                "resourcepack_name_text@rainbowpie_ui_common.text_label": {
+                                  "text": "$rainbowpie_ui_flag_server_displayname",
+                                  "color": [ 1.0, 1.0, 0.333 ],
+                                  "ignored": "($rainbowpie_ui_flag_server_displayname = '')"
                                 }
                               }
                             ]
