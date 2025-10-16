@@ -2,6 +2,10 @@
 {
   "namespace": "general_section",
 
+  "max_framerate_slider": {
+    "bindings": []
+  },
+
   "general_tab_section/treatment_ids_label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",

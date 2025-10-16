@@ -319,11 +319,6 @@
     ],
     "controls": [
       {
-        "max_framerate_slider@general_section.max_framerate_slider": {
-          "ignored": false
-        }
-      },
-      {
         "vsync_dropdown@settings_common.option_dropdown": {
           "$option_label": "options.vsync",
           "$dropdown_content": "general_section.vysnc_dropdown_content",
