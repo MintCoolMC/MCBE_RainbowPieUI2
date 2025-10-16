@@ -96,6 +96,7 @@
   "$rainbowpie_ui_flag_inventory_debug": false,
   "$rainbowpie_ui_flag_persona_debug": false,
   "$rainbowpie_ui_flag_disable_spatial_pattern_fix": true,
+  "$rainbowpie_ui_flag_inventory_cell_highlight_border": true,
 
   "$rainbowpie_ui_flag_start_splash_text": true,
   "$rainbowpie_ui_flag_pause_splash_text": false,
@@ -277,7 +278,7 @@
   "$rainbowpie_ui_flag_bce3269f": true, // InventoryUI new touch mode drop
 
   // Theme System //
-  "$rainbowpie_ui_themesystem_version": "1094",
+  "$rainbowpie_ui_themesystem_version": "1095",
 
   // Theme Info //
   "$rainbowpie_ui_theme_icon": "textures/MintUI/pack_icon",
@@ -287,7 +288,7 @@
   "$rainbowpie_ui_theme_description": "rainbowpie.ui.theme.default_description",
   "$rainbowpie_ui_theme_background_name": "Mushisland",
   "$rainbowpie_ui_theme_background_description": "Minecraft Java v1.21.4\nBliss Shader with Distant Horizons\nWorld: Terra Bukkit Plugin\n§eShot by Mintraspberry Cool",
-  "$rainbowpie_ui_theme_version": "1094",
+  "$rainbowpie_ui_theme_version": "1095",
 
   // Theme Background //
   "$rainbowpie_ui_theme_background_mask_texture_ingame": "textures/MintUI/background/background_mask",
@@ -545,8 +546,8 @@
   "$rainbowpie_ui_theme_inventory_cell_highlight_color": [ 0.3843137254901961, 0.7098039215686275, 0.192156862745098 ],
   "$rainbowpie_ui_theme_inventory_cell_highlight_alpha": 0.4,
 
-  "$rainbowpie_ui_theme_inventory_cell_highlight_pocket_color": [ 0.0, 0.5803921568627451, 1.0 ],
-  "$rainbowpie_ui_theme_inventory_cell_highlight_pocket_alpha": 0.7,
+  "$rainbowpie_ui_theme_inventory_cell_highlight_border_color": [ 1.0, 1.0, 1.0 ],
+  "$rainbowpie_ui_theme_inventory_cell_highlight_border_alpha": 0.5,
 
   "$rainbowpie_ui_theme_inventory_bgicon_enabled": true,
   "$rainbowpie_ui_theme_inventory_bgicon_texture_inventory": "",

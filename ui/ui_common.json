@@ -490,7 +490,9 @@
   },
 
   "highlight_slot_panel/white_border": {
-    "ignored": true
+    "ignored": "(not $rainbowpie_ui_flag_inventory_cell_highlight_border)",
+    "color": "$rainbowpie_ui_theme_inventory_cell_highlight_border_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_highlight_border_alpha"
   },
 
   "item_renderer": {
