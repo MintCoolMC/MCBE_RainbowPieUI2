@@ -2637,10 +2637,17 @@
   "anim_hotbar_slot_unselected": {
     "anim_type": "alpha",
     "easing": "in_out_sine",
-    "destroy_at_end": "animated_hotbar_slot_unselected_image",
     "duration": 0.25,
     "from": 0.3,
     "to": 0.0
+  },
+
+  "anim_hotbar_slot_alpha_left@rainbowpieui_hud.anim_hotbar_slot_unselected": {
+    "destroy_at_end": "animated_hotbar_slot_unselected_image_left"
+  },
+
+  "anim_hotbar_slot_alpha_right@rainbowpieui_hud.anim_hotbar_slot_unselected": {
+    "destroy_at_end": "animated_hotbar_slot_unselected_image_right"
   },
 
   "anim_hotbar_slot_offset": {
@@ -2649,12 +2656,12 @@
     "duration": 0.25
   },
 
-  "anim_hotbar_slot_unselected_left@rainbowpieui_hud.anim_hotbar_slot_offset": {
+  "anim_hotbar_slot_offset_left@rainbowpieui_hud.anim_hotbar_slot_offset": {
     "from": [ 0, 0 ],
     "to": [ "-100%x", 0 ]
   },
 
-  "anim_hotbar_slot_unselected_right@rainbowpieui_hud.anim_hotbar_slot_offset": {
+  "anim_hotbar_slot_offset_right@rainbowpieui_hud.anim_hotbar_slot_offset": {
     "from": [ 0, 0 ],
     "to": [ "100%x", 0 ]
   },
@@ -2728,73 +2735,36 @@
     "play_event": "button.hotbar_inventory_right"
   },
 
-  "anim_hotbar_slot_panel_slot1_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
-    "from": 0,
-    "to": 0,
-    "play_event": "button.slot_1"
+  "anim_hotbar_slot_destroy": {
+    "anim_type": "wait",
+    "duration": 0.0
   },
 
-  "anim_hotbar_slot_panel_slot2_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
-    "from": 0,
-    "to": 0,
-    "play_event": "button.slot_2"
+  "anim_hotbar_slot_destroy_left@rainbowpieui_hud.anim_hotbar_slot_destroy": {
+    "destroy_at_end": "animated_hotbar_slot_unselected_image_left",
+    "play_event": "button.hotbar_inventory_left"
   },
 
-  "anim_hotbar_slot_panel_slot3_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
-    "from": 0,
-    "to": 0,
-    "play_event": "button.slot_3"
-  },
-
-  "anim_hotbar_slot_panel_slot4_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
-    "from": 0,
-    "to": 0,
-    "play_event": "button.slot_4"
-  },
-
-  "anim_hotbar_slot_panel_slot5_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
-    "from": 0,
-    "to": 0,
-    "play_event": "button.slot_5"
-  },
-
-  "anim_hotbar_slot_panel_slot6_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
-    "from": 0,
-    "to": 0,
-    "play_event": "button.slot_6"
-  },
-
-  "anim_hotbar_slot_panel_slot7_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
-    "from": 0,
-    "to": 0,
-    "play_event": "button.slot_7"
-  },
-
-  "anim_hotbar_slot_panel_slot8_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
-    "from": 0,
-    "to": 0,
-    "play_event": "button.slot_8"
-  },
-
-  "anim_hotbar_slot_panel_slot9_hide@rainbowpieui_hud.anim_hotbar_slot_panel": {
-    "from": 0,
-    "to": 0,
-    "play_event": "button.slot_9"
+  "anim_hotbar_slot_destroy_right@rainbowpieui_hud.anim_hotbar_slot_destroy": {
+    "destroy_at_end": "animated_hotbar_slot_unselected_image_right",
+    "play_event": "button.hotbar_inventory_right"
   },
 
   "animated_hotbar_slot_unselected_image_left@rainbowpieui_hud.hotbar_slot_selected_image": {
-    "bindings": [],
+    "bindings": [ ],
     "anims": [
-      "@rainbowpieui_hud.anim_hotbar_slot_unselected",
-      "@rainbowpieui_hud.anim_hotbar_slot_unselected_left"
+      "@rainbowpieui_hud.anim_hotbar_slot_alpha_left",
+      "@rainbowpieui_hud.anim_hotbar_slot_offset_left",
+      "@rainbowpieui_hud.anim_hotbar_slot_destroy_left"
     ]
   },
 
   "animated_hotbar_slot_unselected_image_right@rainbowpieui_hud.hotbar_slot_selected_image": {
     "bindings": [ ],
     "anims": [
-      "@rainbowpieui_hud.anim_hotbar_slot_unselected",
-      "@rainbowpieui_hud.anim_hotbar_slot_unselected_right"
+      "@rainbowpieui_hud.anim_hotbar_slot_alpha_right",
+      "@rainbowpieui_hud.anim_hotbar_slot_offset_right",
+      "@rainbowpieui_hud.anim_hotbar_slot_destroy_right"
     ]
   },
 
