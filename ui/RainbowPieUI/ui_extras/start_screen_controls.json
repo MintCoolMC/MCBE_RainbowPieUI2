@@ -1713,7 +1713,7 @@
                                     {
                                       "gathering_panel": {
                                         "type": "panel",
-                                        "size": [ 80, "100%" ],
+                                        "size": [ "100%c", "100%" ],
                                         "layer": 32,
                                         "bindings": [
                                           {
@@ -1723,14 +1723,23 @@
                                         ],
                                         "controls": [
                                           {
-                                            "badge_and_caption@start.badge_and_caption": {
-                                              "offset": [ "100% - 35%x", -28 ],
-                                              "anchor_from": "bottom_right",
-                                              "anchor_to": "bottom_right"
+                                            "badge_and_caption_panel": {
+                                              "type": "panel",
+                                              "size": [ 0, "100%" ],
+                                              "controls": [
+                                                {
+                                                  "badge_and_caption@start.badge_and_caption": {
+                                                    "offset": [ "0px", -28 ],
+                                                    "anchor_from": "bottom_left",
+                                                    "anchor_to": "bottom_left"
+                                                  }
+                                                }
+                                              ]
                                             }
                                           },
                                           {
                                             "gathering_button@start.gathering_button": {
+                                              "size": [ "100%c", "100%" ],
                                               "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_form_fitting_button",
                                               "$button_image_size_override": [ "100%c + 8px", 28 ],
                                               "anchor_from": "right_middle",
