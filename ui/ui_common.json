@@ -533,7 +533,6 @@
     "$rainbowpie_localui_modified": true,
     "$rainbowpie_localui_screen_alias": "inventory_screen",
     "$rainbowpie_localui_inventory_screen": true,
-    "cache_screen": true,
     "force_render_below": "$desktop_screen",
     "$screen_animations|default": [
       "@rainbowpie_ui_animations.container_screen_exit_animation_push",

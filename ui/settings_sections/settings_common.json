@@ -355,7 +355,6 @@
   },
 
   "dynamic_dialog_screen": {
-    "cache_screen": false,
     "$rainbowpie_localui_modified": true,
     "$rainbowpie_localui_screen_alias": "settings",
     "$rainbowpie_localui_overlay_screen": true,
