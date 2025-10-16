@@ -2628,17 +2628,17 @@
 
   "anim_hotbar_slot_selected": {
     "anim_type": "alpha",
-    "easing": "out_cubic",
-    "duration": 0.3,
+    "easing": "in_out_sine",
+    "duration": 0.25,
     "from": 0.0,
     "to": 0.3
   },
 
   "anim_hotbar_slot_unselected": {
     "anim_type": "alpha",
-    "easing": "out_cubic",
+    "easing": "in_out_sine",
     "destroy_at_end": "animated_hotbar_slot_unselected_image",
-    "duration": 0.3,
+    "duration": 0.25,
     "from": 0.3,
     "to": 0.0
   },
@@ -2646,7 +2646,6 @@
   "anim_hotbar_slot_offset": {
     "anim_type": "offset",
     "easing": "out_cubic",
-    "destroy_at_end": "animated_hotbar_slot_unselected_image",
     "duration": 0.25
   },
 
