@@ -1154,7 +1154,8 @@
                             "size": [ "fill", "100%" ],
                             "$tab_view_binding_name": "pause_navigation_tab_toggle",
                             "$tab_text": "rainbowpie.ui.pause.tab.pause",
-                            "$toggle_group_forced_index": 10
+                            "$toggle_group_forced_index": 10,
+                            "$toggle_default_state": true
                           }
                         },
                         {
@@ -1507,29 +1508,6 @@
                           "binding_type": "view",
                           "source_control_name": "pause_navigation_tab_toggle",
                           "source_property_name": "#toggle_state",
-                          "target_property_name": "#pause_tab_selected"
-                        },
-                        {
-                          "binding_type": "view",
-                          "source_control_name": "playerlist_navigation_tab_toggle",
-                          "source_property_name": "#toggle_state",
-                          "target_property_name": "#playerlist_tab_selected"
-                        },
-                        {
-                          "binding_type": "view",
-                          "source_control_name": "persona_navigation_tab_toggle",
-                          "source_property_name": "#toggle_state",
-                          "target_property_name": "#persona_tab_selected"
-                        },
-                        {
-                          "binding_type": "view",
-                          "source_control_name": "scoreboard_navigation_tab_toggle",
-                          "source_property_name": "#toggle_state",
-                          "target_property_name": "#scoreboard_tab_selected"
-                        },
-                        {
-                          "binding_type": "view",
-                          "source_property_name": "(#pause_tab_selected or not (#playerlist_tab_selected or #persona_tab_selected or #scoreboard_tab_selected))",
                           "target_property_name": "#visible"
                         }
                       ]

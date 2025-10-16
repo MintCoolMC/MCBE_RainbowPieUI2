@@ -1256,7 +1256,8 @@
           "$tab_view_binding_name": "($rainbowpie_localui_resource_packs_type + '_selected_packs_navigation_tab_toggle')",
           "$tab_text": "rainbowpie.ui.resource_packs.tab.selected_packs",
           "$tab_content": "rainbowpieui_resource_packs.selected_packs_title_content",
-          "$toggle_group_forced_index": 0
+          "$toggle_group_forced_index": 0,
+          "$toggle_default_state": true
         }
       },
       {
