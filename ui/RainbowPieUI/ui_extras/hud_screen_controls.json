@@ -2629,7 +2629,7 @@
   "anim_hotbar_slot_selected": {
     "anim_type": "alpha",
     "easing": "out_cubic",
-    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "duration": "($rainbowpie_ui_animation_container_v2_transition_time * 1.5)",
     "from": 0.0,
     "to": 0.3
   },
@@ -2638,7 +2638,7 @@
     "anim_type": "alpha",
     "easing": "out_cubic",
     "destroy_at_end": "animated_hotbar_slot_unselected_image",
-    "duration": "$rainbowpie_ui_animation_container_v2_transition_time",
+    "duration": "($rainbowpie_ui_animation_container_v2_transition_time * 1.5)",
     "from": 0.3,
     "to": 0.0
   },
