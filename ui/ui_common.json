@@ -870,7 +870,7 @@
 
   "base_screen/variables_button_mappings_and_controls/safezone_screen_matrix": {
     "ignored": "$rainbowpie_localui_backup_screen",
-    "$rainbowpie_localui_screen_content": "$screen_content"
+    "$rainbowpie_localui_screen_content|default": "$screen_content"
   },
 
   "base_screen/loading_bars_background": {
