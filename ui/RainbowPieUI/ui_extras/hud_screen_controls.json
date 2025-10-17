@@ -2790,6 +2790,20 @@
     ]
   },
 
+  "hotbar_slot_input": {
+    "type": "input_panel",
+    "$hotbar_slot_id|default": "button.slot1",
+    "$hotbar_button_id|default": "button.hotbar_inventory_left",
+    "button_mappings": [
+      {
+        "from_button_id": "$hotbar_slot_id",
+        "to_button_id": "$hotbar_button_id",
+        "mapping_type": "global",
+        "consume_event": false
+      }
+    ]
+  },
+
   "animated_hotbar_slot_unselected_panel": {
     "type": "panel",
     "collection_index": "$collection_index",
@@ -2809,227 +2823,115 @@
           ],
           "controls": [
             {
-              "to_slot1_left_input": {
-                "type": "input_panel",
+              "to_slot1_left@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index < 1)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot1",
-                    "to_button_id": "button.hotbar_inventory_left",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot1",
+                "$hotbar_button_id": "button.hotbar_inventory_left"
               }
             },
             {
-              "to_slot2_left_input": {
-                "type": "input_panel",
+              "to_slot2_left@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index < 2)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot2",
-                    "to_button_id": "button.hotbar_inventory_left",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot2",
+                "$hotbar_button_id": "button.hotbar_inventory_left"
               }
             },
             {
-              "to_slot3_left_input": {
-                "type": "input_panel",
+              "to_slot3_left@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index < 3)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot3",
-                    "to_button_id": "button.hotbar_inventory_left",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot3",
+                "$hotbar_button_id": "button.hotbar_inventory_left"
               }
             },
             {
-              "to_slot4_left_input": {
-                "type": "input_panel",
+              "to_slot4_left@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index < 4)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot4",
-                    "to_button_id": "button.hotbar_inventory_left",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot4",
+                "$hotbar_button_id": "button.hotbar_inventory_left"
               }
             },
             {
-              "to_slot5_left_input": {
-                "type": "input_panel",
+              "to_slot5_left@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index < 5)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot5",
-                    "to_button_id": "button.hotbar_inventory_left",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot5",
+                "$hotbar_button_id": "button.hotbar_inventory_left"
               }
             },
             {
-              "to_slot6_left_input": {
-                "type": "input_panel",
+              "to_slot6_left@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index < 6)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot6",
-                    "to_button_id": "button.hotbar_inventory_left",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot6",
+                "$hotbar_button_id": "button.hotbar_inventory_left"
               }
             },
             {
-              "to_slot7_left_input": {
-                "type": "input_panel",
+              "to_slot7_left@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index < 7)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot7",
-                    "to_button_id": "button.hotbar_inventory_left",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot7",
+                "$hotbar_button_id": "button.hotbar_inventory_left"
               }
             },
             {
-              "to_slot8_left_input": {
-                "type": "input_panel",
+              "to_slot8_left@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index < 8)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot8",
-                    "to_button_id": "button.hotbar_inventory_left",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot8",
+                "$hotbar_button_id": "button.hotbar_inventory_left"
               }
             },
             {
-              "to_slot2_right_input": {
-                "type": "input_panel",
+              "to_slot2_right@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index > 0)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot2",
-                    "to_button_id": "button.hotbar_inventory_right",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot2",
+                "$hotbar_button_id": "button.hotbar_inventory_right"
               }
             },
             {
-              "to_slot3_right_input": {
-                "type": "input_panel",
+              "to_slot3_right@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index > 1)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot3",
-                    "to_button_id": "button.hotbar_inventory_right",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot3",
+                "$hotbar_button_id": "button.hotbar_inventory_right"
               }
             },
             {
-              "to_slot4_right_input": {
-                "type": "input_panel",
+              "to_slot4_right@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index > 2)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot4",
-                    "to_button_id": "button.hotbar_inventory_right",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot4",
+                "$hotbar_button_id": "button.hotbar_inventory_right"
               }
             },
             {
-              "to_slot5_right_input": {
-                "type": "input_panel",
+              "to_slot5_right@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index > 3)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot5",
-                    "to_button_id": "button.hotbar_inventory_right",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot5",
+                "$hotbar_button_id": "button.hotbar_inventory_right"
               }
             },
             {
-              "to_slot6_right_input": {
-                "type": "input_panel",
+              "to_slot6_right@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index > 4)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot6",
-                    "to_button_id": "button.hotbar_inventory_right",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot6",
+                "$hotbar_button_id": "button.hotbar_inventory_right"
               }
             },
             {
-              "to_slot7_right_input": {
-                "type": "input_panel",
+              "to_slot7_right@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index > 5)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot7",
-                    "to_button_id": "button.hotbar_inventory_right",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot7",
+                "$hotbar_button_id": "button.hotbar_inventory_right"
               }
             },
             {
-              "to_slot8_right_input": {
-                "type": "input_panel",
+              "to_slot8_right@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index > 6)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot8",
-                    "to_button_id": "button.hotbar_inventory_right",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot8",
+                "$hotbar_button_id": "button.hotbar_inventory_right"
               }
             },
             {
-              "to_slot9_right_input": {
-                "type": "input_panel",
+              "to_slot9_right@rainbowpieui_hud.hotbar_slot_input": {
                 "ignored": "($collection_index > 7)",
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.slot9",
-                    "to_button_id": "button.hotbar_inventory_right",
-                    "mapping_type": "global",
-                    "consume_event": false
-                  }
-                ]
+                "$hotbar_slot_id": "button.slot9",
+                "$hotbar_button_id": "button.hotbar_inventory_right"
               }
             }
           ]
