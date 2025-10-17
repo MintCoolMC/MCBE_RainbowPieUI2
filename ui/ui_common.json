@@ -1745,6 +1745,10 @@
             "requires": "(($rainbowpie_localui_screen_alias = 'server_form') and $game_pad)",
             "$rainbowpie_localui_backup_screen": false
           },
+          {
+            "requires": "$touch",
+            "$rainbowpie_ui_flag_5e1f3f4e": false
+          },
           // Force use Rainbow Pie UI style server_form
           {
             "requires": "($rainbowpie_ui_flag_server_form_force and ($rainbowpie_localui_screen_alias = 'server_form'))",
