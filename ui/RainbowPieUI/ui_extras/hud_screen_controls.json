@@ -1209,7 +1209,7 @@
                                 }
                               },
                               {
-                                "resourcepack_name_text@rainbowpie_ui_common.text_label": {
+                                "server_name_text@rainbowpie_ui_common.text_label": {
                                   "text": "$rainbowpie_ui_flag_server_displayname",
                                   "color": [ 1.0, 1.0, 0.333 ],
                                   "ignored": "($rainbowpie_ui_flag_server_displayname = '')"
