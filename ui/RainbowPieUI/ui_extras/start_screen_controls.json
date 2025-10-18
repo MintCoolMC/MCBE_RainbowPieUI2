@@ -1281,6 +1281,23 @@
                           }
                         },
                         {
+                          "pixelart_panel": {
+                            "type": "panel",
+                            "size": [ "100%c", "100%c" ],
+                            "offset": [ -8, -45 ],
+                            "anchor_from": "bottom_right",
+                            "anchor_to": "bottom_right",
+                            "layer": 32,
+                            "controls": [
+                              {
+                                "niko_oneshot@rainbowpieui_pixelart.niko_oneshot": {
+                                  "$pixel_size": [ 2, 2 ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
                           "more_play_option": {
                             "type": "stack_panel",
                             "size": [ "150px", "100%c" ],
