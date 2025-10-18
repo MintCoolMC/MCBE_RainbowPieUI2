@@ -1458,6 +1458,7 @@
                             "anchor_from": "bottom_right",
                             "anchor_to": "bottom_right",
                             "layer": 32,
+                            "ignored": "(not $rainbowpie_ui_flag_start_pixelart)",
                             "controls": [
                               {
                                 "niko_oneshot@rainbowpieui_pixelart.niko_oneshot": {
