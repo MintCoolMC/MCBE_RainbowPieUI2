@@ -1,6 +1,34 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "general_section",
+
+  "max_framerate_slider": {
+    "bindings": []
+  },
+
+  "general_tab_section/treatment_ids_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
+  "general_tab_section/ecomode_label_header": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
+  "general_tab_section/pause_label_header": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
+
+  "diagnostics_toggles_panel/primary_panel/heading": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "color": "$rainbowpie_ui_theme_text_text_color"
+  },
 
   "advanced_graphics_options_section/upscaling_mode": {
     "$rainbowpie_localui_dropdown_enabled": true,
@@ -310,12 +338,7 @@
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
 
-  "account_section/MinecraftAccount_id_label": {
-    "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  },
-
-  "account_section/device_id_label": {
+  "account_section/account_info_buttom/account_info_label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
@@ -340,34 +363,10 @@
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
 
-  "general_tab_section/build_info_label_panel/world_converter_label": {
+  "general_tab_section/build_info_label_panel/build_info_label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  },
-
-  "general_tab_section/build_info_label_panel/build_date_label": {
-    "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  },
-
-  "general_tab_section/build_info_label_panel/treatment_ids_label": {
-    "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  },
-
-  "general_tab_section/build_info_label_panel/protocol_version_label": {
-    "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  },
-
-  "general_tab_section/build_info_label_panel/build_id_label": {
-    "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  },
-
-  "general_tab_section/build_info_label_panel/version_label": {
-    "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "offset": [ 0, 0 ]
   },
 
   "general_tab_section/third_party_copyright_info_label_panel/copyright_label": {

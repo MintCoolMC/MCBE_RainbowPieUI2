@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "rainbowpie_ui_inventory",
 
@@ -9,6 +9,7 @@
   },
 
   "fastplace_button_toggle_base@common_toggles.light_ui_toggle": {
+    "$rainbowpie_localui_button_border_enabled": false,
     "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
     "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
     "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
@@ -73,6 +74,7 @@
   },
 
   "search_button_toggle_base@common_toggles.light_ui_toggle": {
+    "$rainbowpie_localui_button_border_enabled": false,
     "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
     "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
     "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",

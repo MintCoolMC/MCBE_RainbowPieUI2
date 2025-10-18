@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "rainbowpieui_resource_packs",
 
@@ -254,7 +254,7 @@
       },
       {
         "binding_type": "view",
-        "source_property_name": "(#name - '\n' - '§r' - '§o' - '§n' - '§m' - '§l' - '§k' - '§f' - '§e' - '§d' - '§c' - '§b' - '§a' - '§9' - '§8' - '§7' - '§6' - '§5' - '§4' - '§3' - '§2' - '§1' - '§0')",
+        "source_property_name": "('\"' + #hover_text - '\n' - '§0' - '§1' - '§2' - '§3' - '§4' - '§5' - '§6' - '§7' - '§8' - '§9' - '§a' - '§b' - '§c' - '§d' - '§e' - '§f' - '§g' - '§h' - '§i' - '§j' - '§k' - '§l' - '§m' - '§n' - '§o' - '§p' - '§q' - '§r' - '§s' - '§t' - '§u' - '§v' - '§w' - '§x' - '§y' - '§z' + '\"')",
         "target_property_name": "#formatted_name"
       },
       {
@@ -289,7 +289,7 @@
       },
       {
         "binding_type": "view",
-        "source_property_name": "(#name - '\n' - '§r' - '§o' - '§n' - '§m' - '§l' - '§k' - '§f' - '§e' - '§d' - '§c' - '§b' - '§a' - '§9' - '§8' - '§7' - '§6' - '§5' - '§4' - '§3' - '§2' - '§1' - '§0')",
+        "source_property_name": "('\"' + #hover_text - '\n' - '§0' - '§1' - '§2' - '§3' - '§4' - '§5' - '§6' - '§7' - '§8' - '§9' - '§a' - '§b' - '§c' - '§d' - '§e' - '§f' - '§g' - '§h' - '§i' - '§j' - '§k' - '§l' - '§m' - '§n' - '§o' - '§p' - '§q' - '§r' - '§s' - '§t' - '§u' - '§v' - '§w' - '§x' - '§y' - '§z' + '\"')",
         "target_property_name": "#formatted_name"
       },
       {
@@ -464,8 +464,9 @@
       {
         "banner": {
           "type": "image",
-          "texture": "($rainbowpie_ui_path_home + '/banner')",
           "fill": true,
+          "allow_debug_missing_texture": false,
+          "force_texture_reload": true,
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "size": [ "100%", 50 ],
@@ -473,42 +474,72 @@
           "bindings": [
             {
               "binding_collection_name": "$button_collection_name",
-              "binding_name": "#name",
-              "binding_type": "collection"
-            },
-            {
-              "binding_collection_name": "$button_collection_name",
-              "binding_name": "#description",
+              "binding_name": "#icon_path",
               "binding_type": "collection"
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#name = $mintui_pack_name) and (#description = $mintui_pack_description))",
-              "target_property_name": "#visible"
-            }
-          ],
-          "controls": [
+              "source_property_name": "('\"' + #icon_path - 'pack_icon.png' + 'pack_banner.png' + '\"')",
+              "target_property_name": "#texture"
+            },
             {
-              "banner_overlay": {
-                "type": "image",
-                "texture": "textures/ui/White",
-                "color": [ 0.0, 0.0, 0.0 ],
-                "alpha": 0.35
-              }
+              "binding_collection_name": "$button_collection_name",
+              "binding_name": "#icon_zip",
+              "binding_name_override": "#zip_folder",
+              "binding_type": "collection"
+            },
+            {
+              "binding_collection_name": "$button_collection_name",
+              "binding_name": "#icon_file_system",
+              "binding_name_override": "#texture_file_system",
+              "binding_type": "collection"
             }
           ]
         }
       },
       {
-        "background@rainbowpie_ui_common.text_background": {
+        "infomation_panel@rainbowpie_ui_common.text_background": {
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "size": [ "100%", 50 ],
           "layer": 12,
           "controls": [
             {
+              "debug_text@rainbowpie_ui_common.text_label": {
+                "ignored": "(not $rainbowpie_ui_debug)",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100%", "100%" ],
+                "text": "#debug_text",
+                "layer": 28,
+                "property_bag": {
+                  "#icon_path": "null",
+                  "#icon_zip": "null"
+                },
+                "bindings": [
+                  {
+                    "binding_collection_name": "$button_collection_name",
+                    "binding_name": "#icon_path",
+                    "binding_type": "collection"
+                  },
+                  {
+                    "binding_collection_name": "$button_collection_name",
+                    "binding_name": "#icon_zip",
+                    "binding_type": "collection"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('icon_path: ' + #icon_path + '\nicon_zip: ' + #icon_zip)",
+                    "target_property_name": "#debug_text"
+                  }
+                ]
+              }
+            },
+            {
               "pack_icon": {
                 "type": "image",
+                "allow_debug_missing_texture": false,
+                "force_texture_reload": true,
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
                 "size": [ 50, 50 ],
@@ -658,21 +689,21 @@
                               {
                                 "binding_type": "view",
                                 "source_property_name": "(not ((('|'+#name) - '[PML]') = ('|'+#name)))",
-                                "target_property_name": "#is_module"
+                                "target_property_name": "#is_module_pack"
                               },
                               {
                                 "binding_type": "view",
                                 "source_property_name": "(not ((('|'+#name) - '[HOTFIX]') = ('|'+#name)))",
-                                "target_property_name": "#is_hotfix"
+                                "target_property_name": "#is_hotfix_pack"
                               },
                               {
                                 "binding_type": "view",
                                 "source_property_name": "(not ((('|'+#name) - '[UITheme]') = ('|'+#name)))",
-                                "target_property_name": "#is_theme"
+                                "target_property_name": "#is_theme_pack"
                               },
                               {
                                 "binding_type": "view",
-                                "source_property_name": "(#is_module or #is_hotfix or #is_theme)",
+                                "source_property_name": "(#is_module_pack or #is_hotfix_pack or #is_theme_pack)",
                                 "target_property_name": "#visible"
                               }
                             ]
@@ -747,6 +778,124 @@
                           }
                         },
                         {
+                          "error_text": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%c", 10 ],
+                            "controls": [
+                              {
+                                "glyph_image_panel": {
+                                  "type": "panel",
+                                  "size": [ "50%y", "100%" ],
+                                  "controls": [
+                                    {
+                                      "glyph_image": {
+                                        "type": "image",
+                                        "size": [ "100%", "100%" ],
+                                        "offset": [ 0, 1 ],
+                                        "texture": "textures/ui/ErrorGlyph"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "padding_0@common.empty_panel": {
+                                  "size": [ 1, 0 ]
+                                }
+                              },
+                              {
+                                "error_number@rainbowpie_ui_common.text_label": {
+                                  "size": [ "default", "100%" ],
+                                  // "font_type": "MinecraftTen",
+                                  // "font_scale_factor": 0.8,
+                                  "text": "#num_errors",
+                                  "color": "$error_text_color",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#num_errors",
+                                      "binding_collection_name": "$button_collection_name",
+                                      "binding_type": "collection"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "padding_1@common.empty_panel": {
+                                  "size": [ 2, 0 ]
+                                }
+                              }
+                            ],
+                            "bindings": [
+                              {
+                                "binding_collection_name": "$button_collection_name",
+                                "binding_name": "#has_errors",
+                                "binding_name_override": "#visible",
+                                "binding_type": "collection"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "warning_text": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%c", 10 ],
+                            "controls": [
+                              {
+                                "glyph_image_panel": {
+                                  "type": "panel",
+                                  "size": [ "50%y", "100%" ],
+                                  "controls": [
+                                    {
+                                      "glyph_image": {
+                                        "type": "image",
+                                        "size": [ "100%", "100%" ],
+                                        "offset": [ 0, 1 ],
+                                        "texture": "textures/ui/WarningGlyph"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "padding_0@common.empty_panel": {
+                                  "size": [ 1, 0 ]
+                                }
+                              },
+                              {
+                                "warning_number@rainbowpie_ui_common.text_label": {
+                                  "size": [ "default", "100%" ],
+                                  // "font_type": "MinecraftTen",
+                                  // "font_scale_factor": 0.8,
+                                  "text": "#num_warnings",
+                                  "color": "$warning_text_color",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#num_warnings",
+                                      "binding_collection_name": "$button_collection_name",
+                                      "binding_type": "collection"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "padding_1@common.empty_panel": {
+                                  "size": [ 2, 0 ]
+                                }
+                              }
+                            ],
+                            "bindings": [
+                              {
+                                "binding_collection_name": "$button_collection_name",
+                                "binding_name": "#has_warnings",
+                                "binding_name_override": "#visible",
+                                "binding_type": "collection"
+                              }
+                            ]
+                          }
+                        },
+                        {
                           "dev_tag": {
                             "type": "stack_panel",
                             "orientation": "horizontal",
@@ -758,7 +907,22 @@
                               },
                               {
                                 "binding_type": "view",
-                                "source_property_name": "(not ((#icon_path - 'development_') = #icon_path)",
+                                "source_property_name": "(not (('\"' + #icon_path - '/development_' + '\"') = #icon_path)",
+                                "target_property_name": "#is_development_icon_path"
+                              },
+                              {
+                                "binding_collection_name": "$button_collection_name",
+                                "binding_name": "#icon_zip",
+                                "binding_type": "collection"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(not (('\"' + #icon_zip - '/development_' + '\"') = #icon_zip)",
+                                "target_property_name": "#is_development_icon_zip"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(#is_development_icon_path or #is_development_icon_zip)",
                                 "target_property_name": "#visible"
                               }
                             ],
@@ -1092,7 +1256,8 @@
           "$tab_view_binding_name": "($rainbowpie_localui_resource_packs_type + '_selected_packs_navigation_tab_toggle')",
           "$tab_text": "rainbowpie.ui.resource_packs.tab.selected_packs",
           "$tab_content": "rainbowpieui_resource_packs.selected_packs_title_content",
-          "$toggle_group_forced_index": 0
+          "$toggle_group_forced_index": 0,
+          "$toggle_default_state": true
         }
       },
       {

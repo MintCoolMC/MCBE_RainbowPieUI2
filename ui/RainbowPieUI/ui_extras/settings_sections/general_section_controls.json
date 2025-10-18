@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "rainbowpieui_general_section",
 
@@ -122,25 +122,25 @@
                   {
                     "branch@rainbowpieui_general_section.info_label": {
                       "$rainbowpie_localui_info_title": "rainbowpie.ui.about.version.branch",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_branch_type + '/' + $rainbowpieui_branch_name)"
+                      "$rainbowpie_localui_info_value": "('\"' + $rainbowpieui_branch_type + '/' + $rainbowpieui_branch_name + '\"')"
                     }
                   },
                   {
                     "commit@rainbowpieui_general_section.info_label": {
                       "$rainbowpie_localui_info_title": "rainbowpie.ui.about.version.commit",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_commit_id)"
+                      "$rainbowpie_localui_info_value": "('\"' + $rainbowpieui_commit_id + '\"')"
                     }
                   },
                   {
                     "version@rainbowpieui_general_section.info_label": {
                       "$rainbowpie_localui_info_title": "rainbowpie.ui.about.version.version",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version)"
+                      "$rainbowpie_localui_info_value": "('\"' + $rainbowpieui_engine_version_name + '.' + $rainbowpieui_patch_version + '.' + $rainbowpieui_hotfix_version + '\"')"
                     }
                   },
                   {
                     "codename@rainbowpieui_general_section.info_label": {
                       "$rainbowpie_localui_info_title": "rainbowpie.ui.about.version.codename",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_codename)"
+                      "$rainbowpie_localui_info_value": "('\"' + $rainbowpieui_codename + '\"')"
                     }
                   },
                   {
@@ -163,7 +163,7 @@
                   {
                     "subpacks@rainbowpieui_general_section.info_label": {
                       "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.subpacks",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_version_minecraft_subpacks)"
+                      "$rainbowpie_localui_info_value": "('\"' + $rainbowpieui_version_minecraft_subpacks + '\"')"
                     }
                   },
                   {
@@ -174,33 +174,33 @@
                         {
                           "target@rainbowpieui_general_section.info_label": {
                             "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.target",
-                            "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_version_minecraft_target)"
+                            "$rainbowpie_localui_info_value": "('\"' + $rainbowpieui_version_minecraft_target + '\"')"
                           }
                         },
                         {
                           "compatible@rainbowpieui_general_section.info_label": {
-                            "$minor_max": "(('§§' + $rainbowpieui_version_minecraft_max) - ($rainbowpieui_version_minecraft_bigver + '.'))",
-                            "$minor_min": "(('§§' + $rainbowpieui_version_minecraft_min) - ($rainbowpieui_version_minecraft_bigver + '.'))",
+                            "$minor_max": "($rainbowpieui_version_minecraft_max - ($rainbowpieui_version_minecraft_bigver + '.'))",
+                            "$minor_min": "($rainbowpieui_version_minecraft_min - ($rainbowpieui_version_minecraft_bigver + '.'))",
                             "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.compatible",
-                            "$rainbowpie_localui_info_value": "('§§' + $rainbowpieui_version_minecraft_bigver + '.' + $minor_min + '-' + $minor_max)"
+                            "$rainbowpie_localui_info_value": "('\"' + $rainbowpieui_version_minecraft_bigver + '.' + $minor_min + '-' + $minor_max + '\"')"
                           }
                         },
                         {
                           "target_code@rainbowpieui_general_section.info_label": {
                             "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.target_code",
-                            "$rainbowpie_localui_info_value": "('§§' + $compatibility_target_version)"
+                            "$rainbowpie_localui_info_value": "('\"' + $compatibility_target_version + '\"')"
                           }
                         },
                         {
                           "max_code@rainbowpieui_general_section.info_label": {
                             "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.max_code",
-                            "$rainbowpie_localui_info_value": "('§§' + $compatibility_max_version)"
+                            "$rainbowpie_localui_info_value": "('\"' + $compatibility_max_version + '\"')"
                           }
                         },
                         {
                           "min_code@rainbowpieui_general_section.info_label": {
                             "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.min_code",
-                            "$rainbowpie_localui_info_value": "('§§' + $compatibility_min_version)"
+                            "$rainbowpie_localui_info_value": "('\"' + $compatibility_min_version + '\"')"
                           }
                         }
                       ]
@@ -210,14 +210,14 @@
                     "resource_pack_id@rainbowpieui_general_section.info_label": {
                       "visible": "(not ($rainbowpie_ui_flag_resourcepack_identifier = ''))",
                       "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.resource_pack_id",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpie_ui_flag_resourcepack_identifier)"
+                      "$rainbowpie_localui_info_value": "('\"' + $rainbowpie_ui_flag_resourcepack_identifier + '\"')"
                     }
                   },
                   {
                     "resource_pack_displayname@rainbowpieui_general_section.info_label": {
                       "visible": "(not ($rainbowpie_ui_flag_resourcepack_displayname = ''))",
                       "$rainbowpie_localui_info_title": "rainbowpie.ui.about.compatibility.resource_pack_displayname",
-                      "$rainbowpie_localui_info_value": "('§§' + $rainbowpie_ui_flag_resourcepack_displayname)"
+                      "$rainbowpie_localui_info_value": "('\"' + $rainbowpie_ui_flag_resourcepack_displayname + '\"')"
                     }
                   }
                 ]
@@ -319,11 +319,6 @@
     ],
     "controls": [
       {
-        "max_framerate_slider@general_section.max_framerate_slider": {
-          "ignored": false
-        }
-      },
-      {
         "vsync_dropdown@settings_common.option_dropdown": {
           "$option_label": "options.vsync",
           "$dropdown_content": "general_section.vysnc_dropdown_content",
@@ -375,12 +370,16 @@
       },
       {
         "raytracing_render_distance_slider@settings_common.option_slider": {
-          "ignored": "($is_holographic)",
           "$option_label": "#raytracing_render_distance_slider_label",
           "$slider_name": "raytracing_render_distance",
           "$slider_value_binding_name": "#raytracing_render_distance",
           "$slider_tts_text_value": "#raytracing_render_distance_text_value",
           "$option_enabled_binding_name": "#raytracing_render_distance_enabled",
+          "$option_tooltip_binding_type": "global",
+          "$option_tooltip_area": "general_and_controls_sections",
+          "$option_tooltip_text_binding_name": "#rtx_renderdist_performance_tooltip_text",
+          "$option_tooltip_visible_binding_name": "#rtx_render_distance_warning_visible",
+          "$option_tooltip_icon": "textures/ui/WarningGlyph",
           "$slider_steps_binding_name": "#raytracing_render_distance_steps",
           "$label_bindings": [
             {
@@ -388,8 +387,7 @@
             }
           ],
           "controls": [
-            { "rtx_render_distance_warning@general_section.rtx_render_distance_warning": {} },
-            { "option_generic_core@settings_common.option_generic_core": {} }
+            { "option_generic_core@settings_common.option_generic_core": { } }
           ],
           "bindings": [
             {
@@ -885,7 +883,7 @@
               }
             },
             {
-              "item_render@common.item_renderer": {
+              "item_render@rainbowpie_ui_common.item_renderer": {
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
                 "size": [ 16, 16 ],
@@ -950,7 +948,7 @@
               }
             },
             {
-              "item_render@common.item_renderer": {
+              "item_render@rainbowpie_ui_common.item_renderer": {
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
                 "size": [ 16, 16 ],
@@ -1008,26 +1006,38 @@
         }
       },
       {
-        "title_011_str@rainbowpie_ui_common.text_label": {
+        "str_test_01@rainbowpie_ui_common.text_label": {
           "$var_1": "TEST STRING",
           "text": "('This is a test string variable: %s, and this is end' * $var_1)"
         }
       },
       {
-        "title_012_str@rainbowpie_ui_common.text_label": {
+        "str_test_02@rainbowpie_ui_common.text_label": {
           "$var_1": "",
           "text": "('test \u003d ')"
         }
       },
       {
-        "title_013_str@rainbowpie_ui_common.text_label": {
+        "str_test_03@rainbowpie_ui_common.text_label": {
           "$var_1": "ABCDEF0123456789",
           "text": "('%.12s' * $var_1)"
         }
       },
+      {
+        "str_test_04@rainbowpie_ui_common.text_label": {
+          "$var_1": "message:/time set 24000",
+          "text": "('%.17s' * $var_1)"
+        }
+      },
+      {
+        "str_test_05@rainbowpie_ui_common.text_label": {
+          "$var_1": 114514,
+          "text": "('\"' + $var_1 + '\"')"
+        }
+      },
       // 比较最小数值 2x2 (4) (By DeepSeek AI)
       {
-        "title_014_str@rainbowpie_ui_common.text_label": {
+        "str_test_06@rainbowpie_ui_common.text_label": {
           "text": "#result_text",
           "property_bag": {
             "#a": 52,
@@ -1082,7 +1092,7 @@
       },
       // 比较最小数值 3x3 (9) (By DeepSeek AI)
       {
-        "title_015_str@rainbowpie_ui_common.text_label": {
+        "str_test_07@rainbowpie_ui_common.text_label": {
           "text": "#result_text",
           "property_bag": {
             "#a": 128,
@@ -1188,6 +1198,23 @@
               "target_property_name": "#result_text"
             }
           ]
+        }
+      },
+      // 判断奇数偶数
+      // 0 = 奇数
+      // 1 = 偶数
+      {
+        "str_test_08@rainbowpie_ui_common.text_label": {
+          "$var_1": 5,
+          "$var_2": "($var_1 - 2 * ($var_1 / 2))",
+          "text": "('\"' + $var_2 + '\"')"
+        }
+      },
+      {
+        "str_test_09@rainbowpie_ui_common.text_label": {
+          "$var_1": false,
+          "$var_2": true,
+          "text": "('\"' + $var_1 + '\"')"
         }
       },
       {

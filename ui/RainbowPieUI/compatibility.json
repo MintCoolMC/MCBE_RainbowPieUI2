@@ -1,11 +1,11 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "rainbowpieui_compatibility_config",
 
   // Only override compatibility panels 
   "compatibility_variables": {
-    "$compatibility_target_version": 1218000,
-    "$compatibility_max_version": 1218900,
-    "$compatibility_min_version": 1218000
+    "$compatibility_target_version": 12111300,
+    "$compatibility_max_version": 12111900,
+    "$compatibility_min_version": 12111000
   }
 }

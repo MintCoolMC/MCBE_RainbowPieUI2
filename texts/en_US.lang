@@ -39,7 +39,11 @@ rainbowpie.ui.notification.features_disabled.resourcepack=You are using
 rainbowpie.ui.notification.features_disabled.text=Some features are disabled
 
 rainbowpie.ui.host_options.time_title=Time:
+rainbowpie.ui.host_options.days_played=Days Played
 rainbowpie.ui.host_options.time_note=If you use this tweak, the number of days played will be reset
+
+rainbowpie.ui.host_options.color_picker=Color Picker
+rainbowpie.ui.host_options.color_picker.tip=(Click)
 
 rainbowpie.ui.serverform.vanilla_tip=Back to Vanilla style ServerFormUI
 rainbowpie.ui.serverform.serverformui_tip=Switch to Rainbow Pie UI style ServerFormUI
@@ -136,6 +140,9 @@ rainbowpie.ui.warning.text.error=A serious error has been detected, which may af
 rainbowpie.ui.warning.text.warning=An error has been detected. If you are not using any other resource packs and are using a supported game version, please report this error to issues.
 rainbowpie.ui.warning.button.check=Check error
 rainbowpie.ui.warning.button.deactivate=Deactivate Pack
+
+rainbowpie.ui.warning.3rdparty.title=Error from third-party pack
+rainbowpie.ui.warning.3rdparty.text=There is an error in this resource pack, If this pack doesn't work, please deactivate it.
 
 rainbowpie.ui.version.warn=Warning!
 rainbowpie.ui.version.supported=Compatible Versions:

@@ -1,36 +1,36 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
-  "$rainbowpieui_ci": false,
+  "$rainbowpieui_ci": true,
   "$rainbowpieui_commit_id": "local~hash",
-  "$rainbowpieui_branch_type": "release",
+  "$rainbowpieui_branch_type": "dev",
   "$rainbowpieui_branch_name": "local~branch",
-  "$rainbowpieui_branch_display_name": "Release",
+  "$rainbowpieui_branch_display_name": "DEV",
 
-  "$rainbowpieui_engine_version": "29000",
-  "$rainbowpieui_patch_version": "10402",
+  "$rainbowpieui_engine_version": "211000",
+  "$rainbowpieui_patch_version": "10550",
   "$rainbowpieui_hotfix_version": "1",
-  "$rainbowpieui_engine_version_name": "2.9",
-  "$rainbowpieui_full_version_name": "2.9.10402.master",
+  "$rainbowpieui_engine_version_name": "2.11",
+  "$rainbowpieui_full_version_name": "2.11.10550.master",
   "$rainbowpieui_codename": "cookiecat",
   "$rainbowpieui_watermark": true,
   "$rainbowpieui_bool": true,
 
-  "$rainbowpieui_version_minecraft_subpacks": "v1.21.8x|v1.21.7x",
-  "$rainbowpieui_version_minecraft_target": "v1.21.80",
+  "$rainbowpieui_version_minecraft_subpacks": "v1.21.11x",
+  "$rainbowpieui_version_minecraft_target": "v1.21.113",
   "$rainbowpieui_version_minecraft_bigver": "v1.21",
-  "$rainbowpieui_version_minecraft_max": "v1.21.89",
-  "$rainbowpieui_version_minecraft_min": "v1.21.80",
+  "$rainbowpieui_version_minecraft_max": "v1.21.119",
+  "$rainbowpieui_version_minecraft_min": "v1.21.110",
 
   "$mintui_bool": true,
   "$mintui_base_name": "MintUI",
-  "$mintui_base_branch": "release",
-  "$mintui_base_big_version": "3.1",
-  "$mintui_base_version": "3171",
-  "$mintui_branch_name": "MintUI_RainbowPieUI_Release",
+  "$mintui_base_branch": "cookiecat",
+  "$mintui_base_major_version": "3",
+  "$mintui_base_minor_version": "2",
+  "$mintui_base_version": "3172",
   "$mintui_pack_name": "Rainbow Pie UI",
   "$mintui_pack_description": "Minecraft UI Pack\n§ehttps://mintraspberry.cool/rainbowpieui",
   "$mintui_pack_uuid": "82d610e8-0968-4c0a-a47e-38e6663ee6ff",
-  "$mintui_pack_version": "2.9.10402",
+  "$mintui_pack_version": "2.11.10550",
 
   // String
   "$rainbowpie_ui_string_about_description": "This UI made by Mintraspberry Cool with VSCode.\nOpen source so that everyone can use it freely.\nGithub: §ehttps://github.com/MintCoolMC/MCBE_RainbowPieUI2§r\nIf you want to support me, check out the link below.\n§ehttps://mintraspberry.cool/donate§r",
@@ -40,22 +40,24 @@
   "$rainbowpie_ui_alert_title": "",
   "$rainbowpie_ui_alert_text": "",
 
-  "$rainbowpie_ui_animation_container_transition_time": 0.3,
+  "$rainbowpie_ui_animation_container_transition_time": 0.25,
   "$rainbowpie_ui_animation_container_transition_effect_exit": "out_quart",
   "$rainbowpie_ui_animation_container_transition_effect_entrance": "out_quart",
-  "$rainbowpie_ui_animation_container_v2_transition_time": 0.3,
+  "$rainbowpie_ui_animation_container_v2_transition_time": 0.25,
   "$rainbowpie_ui_animation_container_v2_transition_effect_exit": "out_quart",
   "$rainbowpie_ui_animation_container_v2_transition_effect_entrance": "out_quart",
-  "$rainbowpie_ui_animation_transition_time": 0.3,
+  "$rainbowpie_ui_animation_transition_time": 0.25,
   "$rainbowpie_ui_animation_header_transition_effect_exit": "out_quart",
   "$rainbowpie_ui_animation_header_transition_effect_entrance": "out_quart",
   "$rainbowpie_ui_animation_transition_effect_exit": "out_quart",
   "$rainbowpie_ui_animation_transition_effect_entrance": "out_quart",
-  "$rainbowpie_ui_animation_chat_transition_time": 0.3,
+  "$rainbowpie_ui_animation_chat_transition_time": 0.25,
 
   // Flags
   "$rainbowpie_ui_flag_resourcepack_identifier": "", // 兼容其他资源包时的标记
   "$rainbowpie_ui_flag_resourcepack_displayname": "", // 兼容其他资源包时的显示名称
+  "$rainbowpie_ui_flag_server_identifier": "", // 兼容服务器时的标记
+  "$rainbowpie_ui_flag_server_displayname": "", // 兼容服务器时的显示名称
   "$rainbowpie_ui_flag_notification_features_disabled": false,
   "$rainbowpie_ui_flag_notification_features_disabled_reason": "", // resourcepack; server
   "$rainbowpie_ui_flag_server_infomation_enabled": false,
@@ -73,7 +75,7 @@
   "$rainbowpie_ui_flag_watermark_ignore": "release,prerelease",
   "$rainbowpie_ui_flag_watermark_awalys": "dev",
   "$rainbowpie_ui_flag_settings_account_panel": true,
-  "$rainbowpie_ui_flag_settings_quick_perspective": true,
+  "$rainbowpie_ui_flag_settings_quick_perspective": false,
   "$rainbowpie_ui_flag_tablist_selfTag": true,
   "$rainbowpie_ui_flag_play_bottom_panel": true,
   "$rainbowpie_ui_flag_about_verison_infomation": true,
@@ -86,13 +88,16 @@
   "$rainbowpie_ui_flag_hud_hidehud_clickspace": true,
   "$rainbowpie_ui_flag_hud_chat_halfscreen": true, // Chat Panel Half Screen
   "$rainbowpie_ui_flag_hud_hotbar_rounded": false,
-  "$rainbowpie_ui_flag_hud_expbar_empty_text": "o.0",
+  "$rainbowpie_ui_flag_hud_expbar_empty_text": "o.0", // When exp is empty, display this text
 
+  "$rainbowpie_ui_flag_icon_maker": false,
   "$rainbowpie_ui_flag_input_enable_profanity_filter": true,
   "$rainbowpie_ui_flag_dropdown_default_show_button": true,
   "$rainbowpie_ui_flag_disconnect_ui_modified": true,
   "$rainbowpie_ui_flag_inventory_debug": false,
   "$rainbowpie_ui_flag_persona_debug": false,
+  "$rainbowpie_ui_flag_disable_spatial_pattern_fix": true,
+  "$rainbowpie_ui_flag_inventory_cell_highlight_border": true,
 
   "$rainbowpie_ui_flag_start_splash_text": true,
   "$rainbowpie_ui_flag_pause_splash_text": false,
@@ -105,12 +110,15 @@
   "$rainbowpie_ui_flag_host_options_advanced": true,
   "$rainbowpie_ui_flag_chat_message_profanity_filter": true,
 
-  "$rainbowpie_ui_flag_start_dialog_alert": false,
-  "$rainbowpie_ui_flag_start_dialog_alert_title": "",
-  "$rainbowpie_ui_flag_start_dialog_alert_text": "",
+  "$rainbowpie_ui_flag_start_dialog_alert": true,
+  "$rainbowpie_ui_flag_start_dialog_alert_title": "Rainbow Pie UI Preview",
+  "$rainbowpie_ui_flag_start_dialog_alert_text": "You are using an CI version of Rainbow Pie UI,\nIf you find any bugs please write an issue:\n§ehttps://github.com/MintCoolMC/MCBE_RainbowPieUI2/issues",
   "$rainbowpie_ui_flag_start_dialog_alert_button": "gui.ok",
 
   "$rainbowpie_ui_flag_start_design02_gradient": false,
+  "$rainbowpie_ui_flag_start_pixelart": true,
+  "$rainbowpie_ui_flag_start_gathering_panel_ignored": false,
+  "$rainbowpie_ui_flag_start_gathering_denylist": "SoulSteel,", // hide gathering panel for these button texts
 
   "$rainbowpie_ui_flag_durabilityview_title": true,
 
@@ -128,11 +136,12 @@
   "$rainbowpie_ui_flag_hud_durability_warning": true,
   "$rainbowpie_ui_flag_inventory_compass_postion": 1, // 0:TOP 1:BOTTOM
   "$rainbowpie_ui_flag_inventory_stack_count_font": "OldSmoothFont",
+  "$rainbowpie_ui_flag_disable_custom_chat_ui": false,
 
   // Item ID Flags
   "$rainbowpie_ui_flag_item_clock_id": 419,
   "$rainbowpie_ui_flag_item_compass_id": 417,
-  "$rainbowpie_ui_flag_item_recovery_compass_id": 683,
+  "$rainbowpie_ui_flag_item_recovery_compass_id": 682,
   "$rainbowpie_ui_flag_item_chest": 54,
   "$rainbowpie_ui_flag_item_hopper": 560,
   "$rainbowpie_ui_flag_item_dropper": 125,
@@ -178,7 +187,7 @@
   "$rainbowpie_ui_flag_9920f05c": true, // Inventory UI Compass Panel
   "$rainbowpie_ui_flag_2f8a5e27": true, // StartUI Play button more option
   "$rainbowpie_ui_flag_50d7b9e9": true, // StartUI Servers Button
-  "$rainbowpie_ui_flag_0ab174e4": true, // StartUI Store Button Treatments
+  "$rainbowpie_ui_flag_1d6d26cc": true, // StartUI Store Button Art
   "$rainbowpie_ui_flag_d6bb54d8": true, // InventoryUI Global Item Search
   "$rainbowpie_ui_flag_c448d476": false, // ProgressUI World loading background blur
   "$rainbowpie_ui_flag_72873fec": true, // InventoryUI new recipe book ui animaion
@@ -202,7 +211,15 @@
   "$rainbowpie_ui_flag_73085b33": true, // Crafting Helper
   "$rainbowpie_ui_flag_5354b722": true, // Only display locator_bar when holding [TAB] key (Keyboard Only)
   "$rainbowpie_ui_flag_19efcc11": true,
-
+  "$rainbowpie_ui_flag_988450b0": true, // Independent Time Tweaker
+  "$rainbowpie_ui_flag_fb3b5106": true, // Independent Cmd Helper
+  "$rainbowpie_ui_flag_64fd7c05": true,
+  "$rainbowpie_ui_flag_f733129c": true,
+  "$rainbowpie_ui_flag_a3e3c9d0": true, // Force disable title text background
+  "$rainbowpie_ui_flag_64981341": true, // Color Picker (Type ".color" in your chat but don't send it)
+  "$rainbowpie_ui_flag_3eb56fef": false, // InventoryUI animation quick exit
+  "$rainbowpie_ui_flag_5e1f3f4e": true, // HUD Hotbar Animation
+  
   // Debug
   "$rainbowpie_ui_debug": false,
   "$rainbowpie_ui_debug_screen_animation": false,
@@ -212,6 +229,7 @@
   "$rainbowpie_ui_debug_ui_device_override": "", // windows;windows_arm;windows_mobile;android;apple_ios;apple_osx;apple_tv;console;console_xboxone;console_ps4
   "$rainbowpie_ui_debug_ui_input_override": "", // touch;mouse;game_pad
   "$rainbowpie_ui_debug_ui_new_video_settings": false,
+  "$rainbowpie_ui_debug_ui_debug": false,
   "$rainbowpie_ui_debug_ui_var_override": false, // 启用后将使用下面的值
   "$rainbowpie_ui_debug_ui_var_override_file_picking_supported": true,
   "$rainbowpie_ui_debug_ui_var_override_world_archive_support": true,
@@ -264,7 +282,7 @@
   "$rainbowpie_ui_flag_bce3269f": true, // InventoryUI new touch mode drop
 
   // Theme System //
-  "$rainbowpie_ui_themesystem_version": "1094",
+  "$rainbowpie_ui_themesystem_version": "1095",
 
   // Theme Info //
   "$rainbowpie_ui_theme_icon": "textures/MintUI/pack_icon",
@@ -274,7 +292,7 @@
   "$rainbowpie_ui_theme_description": "rainbowpie.ui.theme.default_description",
   "$rainbowpie_ui_theme_background_name": "Mushisland",
   "$rainbowpie_ui_theme_background_description": "Minecraft Java v1.21.4\nBliss Shader with Distant Horizons\nWorld: Terra Bukkit Plugin\n§eShot by Mintraspberry Cool",
-  "$rainbowpie_ui_theme_version": "1094",
+  "$rainbowpie_ui_theme_version": "1095",
 
   // Theme Background //
   "$rainbowpie_ui_theme_background_mask_texture_ingame": "textures/MintUI/background/background_mask",
@@ -532,8 +550,8 @@
   "$rainbowpie_ui_theme_inventory_cell_highlight_color": [ 0.3843137254901961, 0.7098039215686275, 0.192156862745098 ],
   "$rainbowpie_ui_theme_inventory_cell_highlight_alpha": 0.4,
 
-  "$rainbowpie_ui_theme_inventory_cell_highlight_pocket_color": [ 0.0, 0.5803921568627451, 1.0 ],
-  "$rainbowpie_ui_theme_inventory_cell_highlight_pocket_alpha": 0.7,
+  "$rainbowpie_ui_theme_inventory_cell_highlight_border_color": [ 1.0, 1.0, 1.0 ],
+  "$rainbowpie_ui_theme_inventory_cell_highlight_border_alpha": 0.5,
 
   "$rainbowpie_ui_theme_inventory_bgicon_enabled": true,
   "$rainbowpie_ui_theme_inventory_bgicon_texture_inventory": "",
@@ -544,7 +562,7 @@
   "$rainbowpie_ui_theme_inventory_bgicon_alpha": 0.8,
   "$rainbowpie_ui_theme_inventory_bgicon_fill": false,
   
-  // Inventory Background Icon
+  // Inventory Background Icon Variables //
 
   // Crafting (Player Inventory)
   "$rainbowpie_ui_theme_inventory_bgicon_crafting_texture": "",
@@ -668,11 +686,8 @@
 
   // Theme End
 
-  // Compatibility for servers or other resource packs
-  // The variables here will be overwritten when the server loads the resource package.
-  "$is_zeqa": false, // Zeqa Network (Server)
-  "$cubecraft_green": "string", // CubeCraft (Server)
-
-  "$is_netease": false // China Version
+  // Compatibility
+  // Modify bbui's default mod settings
+  "$rainbowpie_ui_compatibility_var_override_d5e1b7c2": true
 }
 

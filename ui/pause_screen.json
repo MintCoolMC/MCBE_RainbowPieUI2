@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "pause",
 
@@ -23,7 +23,6 @@
     "$rainbowpie_localui_screen_alias": "pause",
     "$rainbowpie_localui_backup_screen": true,
     "$rainbowpie_localui_backup_screen_content": "rainbowpieui_pause.pause_screen_content",
-    "cache_screen": false,
     "force_render_below": true
   },
 

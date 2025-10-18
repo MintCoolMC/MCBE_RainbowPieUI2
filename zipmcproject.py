@@ -37,4 +37,4 @@ if data.get("$rainbowpieui_branch_type") == "release":
   zip_file_name = f"{name}-v{engineversion}_{mcversion}.mcpack" 
 
 # Run the zip command
-os.system(f"zip -r \"{zip_file_name}\" . -x '.github/*' -x '.git/*' -x 'zipmcproject.py' -x 'README.md' -x 'README_CHS.md'")
+os.system(f"zip -r \"{zip_file_name}\" . -x '.github/*' -x '.git/*' -x 'zipmcproject.py' -x 'README.md' -x 'README*.md' -x '.gitignore'")

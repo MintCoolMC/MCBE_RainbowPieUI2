@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "rainbowpie_ui_animations",
 
@@ -10,7 +10,13 @@
     "from": [ "100%", "100%" ],
     "to": [ "50%", "50%" ],
     "play_event": "screen.exit_push",
-    "end_event": "screen.exit_end"
+    "end_event": "screen.exit_end",
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_3eb56fef",
+        "$rainbowpie_ui_animation_container_v2_transition_time": 0.0
+      }
+    ]
   },
 
   "container_panel_exit_animation_pop": {
@@ -21,7 +27,13 @@
     "from": [ "100%", "100%" ],
     "to": [ "50%", "50%" ],
     "play_event": "screen.exit_pop",
-    "end_event": "screen.exit_end"
+    "end_event": "screen.exit_end",
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_3eb56fef",
+        "$rainbowpie_ui_animation_container_v2_transition_time": 0.0
+      }
+    ]
   },
 
   "container_panel_entrance_animation_push": {
@@ -54,7 +66,13 @@
     "from": [ 0, 0 ],
     "to": [ "-3%", 0 ],
     "play_event": "screen.exit_push",
-    "end_event": "screen.exit_end"
+    "end_event": "screen.exit_end",
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_3eb56fef",
+        "$rainbowpie_ui_animation_container_transition_time": 0.0
+      }
+    ]
   },
 
   "container_screen_exit_animation_pop": {
@@ -65,7 +83,13 @@
     "from": [ 0, 0 ],
     "to": [ 0, "6%" ],
     "play_event": "screen.exit_pop",
-    "end_event": "screen.exit_end"
+    "end_event": "screen.exit_end",
+    "variables": [
+      {
+        "requires": "$rainbowpie_ui_flag_3eb56fef",
+        "$rainbowpie_ui_animation_container_transition_time": 0.0
+      }
+    ]
   },
 
   "container_screen_entrance_animation_push": {

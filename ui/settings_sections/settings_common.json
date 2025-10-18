@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "settings_common",
 
@@ -355,9 +355,10 @@
   },
 
   "dynamic_dialog_screen": {
-    "cache_screen": false,
     "$rainbowpie_localui_modified": true,
     "$rainbowpie_localui_screen_alias": "settings",
+    "$rainbowpie_localui_overlay_screen": true,
+    "$rainbowpie_localui_overlay_screen_content": "rainbowpieui_settings_common.settings_overlay_content",
     "$screen_content": "rainbowpieui_settings_common.settings_content",
     "$is_full_screen_layout": false
   }

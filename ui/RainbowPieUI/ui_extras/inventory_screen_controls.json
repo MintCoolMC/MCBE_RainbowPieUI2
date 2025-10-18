@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "rainbowpieui_crafting",
 
@@ -45,7 +45,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "('§§' + #item_stack_count)",
+              "source_property_name": "('\"' + #item_stack_count + '\"')",
               "target_property_name": "#item_stack_count_text"
             },
             {
@@ -654,7 +654,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "(#hover_text - '\n' - '§r' - '§o' - '§n' - '§m' - '§l' - '§k' - '§f' - '§e' - '§d' - '§c' - '§b' - '§a' - '§9' - '§8' - '§7' - '§6' - '§5' - '§4' - '§3' - '§2' - '§1' - '§0')",
+              "source_property_name": "('\"' + #hover_text - '\n' - '§0' - '§1' - '§2' - '§3' - '§4' - '§5' - '§6' - '§7' - '§8' - '§9' - '§a' - '§b' - '§c' - '§d' - '§e' - '§f' - '§g' - '§h' - '§i' - '§j' - '§k' - '§l' - '§m' - '§n' - '§o' - '§p' - '§q' - '§r' - '§s' - '§t' - '§u' - '§v' - '§w' - '§x' - '§y' - '§z' + '\"')",
               "target_property_name": "#formatted_name"
             },
             {
@@ -1509,6 +1509,10 @@
                                         "controls": [
                                           {
                                             "close_button@rainbowpie_ui_common.close_button": {
+                                              "$rainbowpie_ui_theme_closebutton_default_color": "$rainbowpie_ui_theme_inventory_header_title_color",
+                                              "$close_button_panel_size": [ "100%", "100%" ],
+                                              "layer": 10,
+                                              "size": [ "100%", "100%" ],
                                               "offset": [ 0, 0 ],
                                               "anchor_from": "center",
                                               "anchor_to": "center"
@@ -2134,7 +2138,7 @@
                               },
                               {
                                 "binding_type": "view",
-                                "source_property_name": "('§§' + #amount_current + '/' + #amount_total)",
+                                "source_property_name": "('\"' + #amount_current + '/' + #amount_total + '\"')",
                                 "target_property_name": "#text"
                               }
                             ]

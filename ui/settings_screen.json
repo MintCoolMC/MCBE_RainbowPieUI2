@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "settings",
 
@@ -298,7 +298,7 @@
         "array_name": "controls",
         "operation": "insert_back",
         "value": [
-          { "uitest_tab_section@rainbowpieui_general_section.uitest_tab_section": { "visible": false } },
+          { "uitest_tab_section@rainbowpieui_general_section.uitest_tab_section": { "ignored": "(not $rainbowpie_ui_debug)", "visible": false } },
           { "theme_section@rainbowpieui_general_section.theme_section": { "visible": false } },
           { "module_section@rainbowpieui_general_section.module_section": { "visible": false } },
           { "about_section@rainbowpieui_general_section.about_section": { "visible": false } }
@@ -344,7 +344,11 @@
     "ignored": "($rainbowpie_ui_feature_markbest)"
   },
 
-  "selector_stack_panel/controls_and_settings_selector_pane/spacer_2": {
+  "selector_stack_panel/controls_and_settings_selector_pane/spacer_04_no_spatial": {
+    "size": [ 1, 1 ]
+  },
+
+  "selector_stack_panel/controls_and_settings_selector_pane/spacer_05_no_spatial": {
     "size": [ 1, 1 ]
   },
 
@@ -352,7 +356,7 @@
     "ignored": "($rainbowpie_ui_feature_markbest)"
   },
 
-  "selector_stack_panel/controls_and_settings_selector_pane/spacer_1": {
+  "selector_stack_panel/controls_and_settings_selector_pane/spacer_1_no_spatial": {
     "size": [ 1, 1 ]
   },
 
@@ -365,8 +369,7 @@
     "ignored": "($is_publish or $rainbowpie_ui_feature_markbest)"
   },
 
-  "selector_stack_panel/controls_and_settings_selector_pane/spacer_3": {
-    "size": [ 1, 1 ],
-    "ignored": "$is_publish"
+  "selector_stack_panel/controls_and_settings_selector_pane/spacer_4_no_spatial": {
+    "size": [ 1, 1 ]
   }
 }

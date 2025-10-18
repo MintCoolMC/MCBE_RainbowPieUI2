@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "rainbowpie_ui_toggle",
 
@@ -129,6 +129,28 @@
     "$is_checked_bar_enabled|default": true,
     "$rainbowpie_localui_button_controls": [
       {
+        "button_glint": {
+          "type": "panel",
+          "size": "$button_image_size",
+          "ignored": "(not $rainbowpie_ui_flag_99d9851a)",
+          "visible": "$button_image_visible",
+          "layer": "$rainbowpie_localui_button_hover_border_layer",
+          "controls": [
+            {
+              "hover@rainbowpie_ui_button.glint_border_base": {
+                "$rainbowpie_localui_glint_size": [ 72, 72 ],
+                "$rainbowpie_localui_glint_alpha": 0.25,
+                "ignored": "(not $hover_state)",
+                "size": [ "100%", "100%" ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "layer": "($rainbowpie_localui_button_hover_border_layer - ($rainbowpie_localui_button_hover_border_layer * 2))"
+              }
+            }
+          ]
+        }
+      },
+      {
         "button_background": {
           "type": "image",
           "ignored": "(not $button_image_visible)",
@@ -143,6 +165,7 @@
         "checked_image": {
           "visible": "$is_checked_bar_enabled",
           "type": "panel",
+          "size": "$button_image_size",
           "layer": 10,
           "controls": [
             {

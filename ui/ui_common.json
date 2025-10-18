@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "common",
 
@@ -325,7 +325,7 @@
                                               },
                                               {
                                                 "binding_type": "view",
-                                                "source_property_name": "('§§' + #amount_current + '/' + #amount_total)",
+                                                "source_property_name": "('\"' + #amount_current + '/' + #amount_total + '\"')",
                                                 "target_property_name": "#text"
                                               }
                                             ]
@@ -490,7 +490,9 @@
   },
 
   "highlight_slot_panel/white_border": {
-    "ignored": true
+    "ignored": "(not $rainbowpie_ui_flag_inventory_cell_highlight_border)",
+    "color": "$rainbowpie_ui_theme_inventory_cell_highlight_border_color",
+    "alpha": "$rainbowpie_ui_theme_inventory_cell_highlight_border_alpha"
   },
 
   "item_renderer": {
@@ -533,7 +535,6 @@
     "$rainbowpie_localui_modified": true,
     "$rainbowpie_localui_screen_alias": "inventory_screen",
     "$rainbowpie_localui_inventory_screen": true,
-    "cache_screen": true,
     "force_render_below": "$desktop_screen",
     "$screen_animations|default": [
       "@rainbowpie_ui_animations.container_screen_exit_animation_push",
@@ -869,7 +870,7 @@
 
   "base_screen/variables_button_mappings_and_controls/safezone_screen_matrix": {
     "ignored": "$rainbowpie_localui_backup_screen",
-    "$rainbowpie_localui_screen_content": "$screen_content"
+    "$rainbowpie_localui_screen_content|default": "$screen_content"
   },
 
   "base_screen/loading_bars_background": {
@@ -908,6 +909,7 @@
   "base_screen": {
     "$rainbowpie_localui_modified|default": false,
     "$rainbowpie_localui_backup_screen|default": false,
+    "$rainbowpie_localui_overlay_screen|default": false,
     "$rainbowpie_localui_inventory_screen|default": false,
     "$rainbowpie_localui_screenbackground_ingameSafezoneOnly|default": false,
     "$rainbowpie_localui_screenbackground_ingamebg_ignored|default": false,
@@ -917,10 +919,12 @@
       "@common.screen_entrance_animation_push_fade",
       "@common.screen_entrance_animation_pop_fade"
     ],
-    "$close_on_player_hurt": false,
     "$rainbowpie_localui_screen_alias": "null",
     "$rainbowpie_localui_screen_alias_formatted": "($rainbowpie_localui_screen_alias + ',')",
     "$rainbowpie_localui_backup_screen_content|default": "common.base_screen_empty_panel",
+    "$rainbowpie_localui_overlay_screen_content|default": "common.base_screen_empty_panel",
+
+    "$close_on_player_hurt": false,
     "modifications": [
       {
         "array_name": "controls",
@@ -932,12 +936,13 @@
               "$rainbowpie_localui_background_bsf_need|default": true,
               "$rainbowpie_localui_background_longer_anim|default": false,
               "controls": [
+                // Fix that blank screen when switching screens
                 {
                   "background_backup@common.safezone_outer_matrix": {
                     "$rainbowpie_localui_screenroot_ignore_dialogs": true,
-                    "ignored": "((not $rainbowpie_localui_background_bsf_need) or $rainbowpie_localui_inventory_screen)",
+                    "ignored": "((not $is_pregame) or (not $rainbowpie_localui_background_bsf_need) or $rainbowpie_localui_inventory_screen)",
                     "alpha": 0.0,
-                    "layer": -5000,
+                    "layer": -10,
                     "propagate_alpha": true,
                     "animation_reset_name": "screen_animation_reset",
                     "disable_anim_fast_forward": false,
@@ -948,7 +953,7 @@
                       "@rainbowpie_ui_animations.background_entrance_animation_push_fade",
                       "@rainbowpie_ui_animations.background_entrance_animation_pop_fade"
                     ],
-                    "$screen_content": "rainbowpie_ui_common.screen_background"
+                    "$rainbowpie_localui_screen_content": "rainbowpie_ui_common.screen_background"
                   }
                 }
               ]
@@ -979,10 +984,10 @@
               "controls": [
                 {
                   "debug_screen_content@rainbowpie_ui_common.text_label": {
-                    "ignored": "((not $rainbowpie_ui_debug_screen_content) or (not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias)) or ($screen_content = 'rainbowpie_ui_common.screen_background'))",
+                    "ignored": "((not $rainbowpie_ui_debug_screen_content) or (not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias)) or ($rainbowpie_localui_screen_content = 'rainbowpie_ui_common.screen_background'))",
                     "anchor_from": "top_right",
                     "anchor_to": "top_right",
-                    "text": "($screen_content + '\n' + $rainbowpie_localui_backup_screen_content)"
+                    "text": "($screen_content + '\n' + $rainbowpie_localui_backup_screen_content + '\n' + $rainbowpie_localui_overlay_screen_content)"
                   }
                 }
               ]
@@ -990,7 +995,7 @@
           },
           {
             "rainbowpie_gamepad_connect_tip": {
-              "ignored": "((not $rainbowpie_ui_feature_gamepad_connect_tip) or (not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias)) or ($screen_content = 'rainbowpie_ui_common.screen_background') or $game_pad)",
+              "ignored": "((not $rainbowpie_ui_feature_gamepad_connect_tip) or (not (($rainbowpie_ui_flag_overlay_screen_alias - $rainbowpie_localui_screen_alias_formatted) = $rainbowpie_ui_flag_overlay_screen_alias)) or ($rainbowpie_localui_screen_content = 'rainbowpie_ui_common.screen_background') or $game_pad)",
               "type": "image",
               "texture": "textures/ui/White",
               "color": "$rainbowpie_ui_theme_toast_background_color",
@@ -1056,6 +1061,14 @@
   },
 
   "base_screen/variables_button_mappings_and_controls": {
+    // Compatibility for servers or other resource packs
+    // The variables here will be overwritten when the server loads the resource packs.
+    "$is_zeqa|default": -1, // Zeqa Network (Server)
+    "$cubecraft_green|default": -1, // CubeCraft (Server)
+    "$bb_version|default": -1, // Better Bedrock UI (RP)
+    "$dabuui_bool|default": -1, // Dabu UI (RP)
+    "$is_netease|default": -1, // China Version
+
     "modifications": [
       {
         "array_name": "variables",
@@ -1067,25 +1080,30 @@
           },
           // Zeqa Network
           {
-            "requires": "($is_zeqa)",
-            "$rainbowpie_ui_flag_resourcepack_identifier": "78239b75_zeqa"
+            "requires": "(not ($is_zeqa = -1))",
+            "$rainbowpie_ui_flag_server_identifier": "78239b75_zeqa"
           },
           // CubeCraft
           // In CubeCraft's UI resource pack, $cubecraft_green will be overwritten as an array format, which will not be equal to "string"
           {
-            "requires": "(not ($cubecraft_green = 'string'))",
-            "$rainbowpie_ui_flag_resourcepack_identifier": "d29f22ac_cubecraft"
+            "requires": "(not ($cubecraft_green = -1))",
+            "$rainbowpie_ui_flag_server_identifier": "d29f22ac_cubecraft"
           },
           // The Hive UI
           // This method may result in false positives, but it is the only way to detect
           {
             "requires": "((($transition_time_push_size * 1000) = 150) and (($transition_time_pop_size * 1000) = 150) and (($transition_time_push * 1000) = 150) and (($transition_time_pop * 1000) = 150) and (($container_transition_time_push * 1000) = 150) and (($container_transition_time_pop * 1000) = 150))",
-            "$rainbowpie_ui_flag_resourcepack_identifier": "290b8fe4_hivebedrock"
+            "$rainbowpie_ui_flag_server_identifier": "290b8fe4_hivebedrock"
           },
-          // China Version
+          // Better Bedrock UI
           {
-            "requires": "($is_netease)",
-            "$rainbowpie_ui_flag_resourcepack_identifier": "5c1c3f14_netease"
+            "requires": "(not ($bb_version = -1))",
+            "$rainbowpie_ui_flag_resourcepack_identifier": "d5e1b7c2_betterbedrock"
+          },
+          // Dabu UI
+          {
+            "requires": "(not ($dabuui_bool = -1))"//,
+            // "$rainbowpie_ui_flag_resourcepack_identifier": "c740985b_dabuui"
           },
           {
             "requires": "($rainbowpie_localui_modified and not $rainbowpie_localui_inventory_screen)",
@@ -1129,6 +1147,18 @@
               "propagate_alpha": true,
               "disable_anim_fast_forward": true,
               "layer": "$safezone_screen_matrix_layer"
+            }
+          },
+          {
+            "safezone_screen_overlay_matrix@common.safezone_outer_matrix": {
+              "$rainbowpie_localui_screenroot_ignore_dialogs": true,
+              "$rainbowpie_localui_screen_content": "$rainbowpie_localui_overlay_screen_content",
+              "ignored": "(not $rainbowpie_localui_overlay_screen)",
+              "anims": "$screen_animations",
+              "animation_reset_name": "screen_animation_reset",
+              "propagate_alpha": true,
+              "disable_anim_fast_forward": true,
+              "layer": "($safezone_screen_matrix_layer + 150)"
             }
           }
         ]
@@ -1273,8 +1303,8 @@
                     "animation_reset_name": "screen_animation_reset",
                     "propagate_alpha": true,
                     "disable_anim_fast_forward": true,
-                    "layer": "($safezone_screen_matrix_layer - 50)",
-                    "$screen_content": "rainbowpie_ui_common.screen_background"
+                    "layer": "($safezone_screen_matrix_layer - 10)",
+                    "$rainbowpie_localui_screen_content": "rainbowpie_ui_common.screen_background"
                   }
                 },
                 {
@@ -1683,6 +1713,11 @@
             "$game_pad": true
           },
           {
+            "requires": "$rainbowpie_ui_debug_ui_debug",
+            "$debug_settings": true,
+            "$is_publish": false
+          },
+          {
             "requires": "$rainbowpie_ui_debug_ui_var_override",
             "$file_picking_supported": "$rainbowpie_ui_debug_ui_var_override_file_picking_supported",
             "$world_archive_support": "$rainbowpie_ui_debug_ui_var_override_world_archive_support",
@@ -1691,6 +1726,10 @@
             "$trial": "$rainbowpie_ui_debug_ui_var_override_trial",
             "$is_publish": "$rainbowpie_ui_debug_ui_var_override_is_publish",
             "$education_edition": "$rainbowpie_ui_debug_ui_var_override_education_edition"
+          },
+          {
+            "requires": "$rainbowpie_ui_flag_disable_spatial_pattern_fix",
+            "$settings_spatial_pattern_fix_enabled": false
           },
           // 对部分不同的场景优化
           {
@@ -1705,6 +1744,10 @@
           {
             "requires": "(($rainbowpie_localui_screen_alias = 'server_form') and $game_pad)",
             "$rainbowpie_localui_backup_screen": false
+          },
+          {
+            "requires": "$touch",
+            "$rainbowpie_ui_flag_5e1f3f4e": false
           },
           // Force use Rainbow Pie UI style server_form
           {
@@ -1731,6 +1774,7 @@
             "requires": "$rainbowpie_ui_debug_ui_new_video_settings",
             "$new_video_settings": true
           },
+          // settings ui
           {
             "requires": "($rainbowpie_localui_screen_alias = 'settings')",
             "$export_template_disabled": false
@@ -1760,9 +1804,9 @@
           },
           // Zeqa Network
           {
-            "requires": "($rainbowpie_ui_flag_resourcepack_identifier = '78239b75_zeqa')",
-            "$rainbowpie_ui_flag_resourcepack_identifier": "78239b75_zeqa",
-            "$rainbowpie_ui_flag_resourcepack_displayname": "Zeqa Network",
+            "requires": "($rainbowpie_ui_flag_server_identifier = '78239b75_zeqa')",
+            "$rainbowpie_ui_flag_server_identifier": "78239b75_zeqa",
+            "$rainbowpie_ui_flag_server_displayname": "Zeqa Network",
             "$rainbowpie_ui_flag_notification_features_disabled": true,
             "$rainbowpie_ui_flag_notification_features_disabled_reason": "server",
             "$rainbowpie_ui_flag_server_infomation_enabled": true,
@@ -1784,9 +1828,9 @@
           },
           // CubeCraft
           {
-           "requires": "($rainbowpie_ui_flag_resourcepack_identifier = 'd29f22ac_cubecraft')",
-            "$rainbowpie_ui_flag_resourcepack_identifier": "d29f22ac_cubecraft",
-            "$rainbowpie_ui_flag_resourcepack_displayname": "CubeCraft Games",
+           "requires": "($rainbowpie_ui_flag_server_identifier = 'd29f22ac_cubecraft')",
+            "$rainbowpie_ui_flag_server_identifier": "d29f22ac_cubecraft",
+            "$rainbowpie_ui_flag_server_displayname": "CubeCraft Games",
             "$rainbowpie_ui_flag_notification_features_disabled": true,
             "$rainbowpie_ui_flag_notification_features_disabled_reason": "server",
             "$rainbowpie_ui_flag_server_infomation_enabled": true,
@@ -1805,9 +1849,9 @@
           },
           // The Hive
           {
-            "requires": "($rainbowpie_ui_flag_resourcepack_identifier = '290b8fe4_hivebedrock')",
-            "$rainbowpie_ui_flag_resourcepack_identifier": "290b8fe4_hivebedrock",
-            "$rainbowpie_ui_flag_resourcepack_displayname": "The Hive",
+            "requires": "($rainbowpie_ui_flag_server_identifier = '290b8fe4_hivebedrock')",
+            "$rainbowpie_ui_flag_server_identifier": "290b8fe4_hivebedrock",
+            "$rainbowpie_ui_flag_server_displayname": "The Hive",
             "$rainbowpie_ui_flag_notification_features_disabled": true,
             "$rainbowpie_ui_flag_notification_features_disabled_reason": "server",
             "$rainbowpie_ui_flag_server_infomation_enabled": true,
@@ -1821,6 +1865,59 @@
             "$rainbowpie_ui_module_chest_fastpick": false,
             "$rainbowpie_ui_flag_19efcc11": false,
             "$rainbowpie_ui_flag_9ce040c1": false
+          },
+          // Better Bedrock UI
+          {
+            "requires": "($rainbowpie_ui_flag_resourcepack_identifier = 'd5e1b7c2_betterbedrock')",
+            "$rainbowpie_ui_flag_resourcepack_identifier": "d5e1b7c2_betterbedrock",
+            "$rainbowpie_ui_flag_resourcepack_displayname": "Better Bedrock UI",
+            "$rainbowpie_ui_flag_notification_features_disabled": true,
+            "$rainbowpie_ui_flag_notification_features_disabled_reason": "resourcepack"
+          },
+          {
+            "requires": "(($rainbowpie_ui_flag_resourcepack_identifier = 'd5e1b7c2_betterbedrock') and $rainbowpie_ui_compatibility_var_override_d5e1b7c2)",
+            "$cps_counter_x_offset": 0,
+            "$cps_counter_y_offset": 6,
+            "$day_time_viewer_x_offset": 0,
+            "$day_time_viewer_y_offset": 2,
+            "$speed_counter_x_offset": 0,
+            "$speed_counter_y_offset": 4,
+            "$tab_list": false,
+            "$durability_viewer": false,
+            "$crosshair_item_count": false,
+            "$session_timer_x_offset": 0,
+            "$session_timer_y_offset": 0,
+            "$chat": false,
+            "$coords": false,
+            "$nether_coords_x_offset": 0,
+            "$nether_coords_y_offset": 4,
+            "$days_played": false
+          },
+          {
+            "requires": "(($rainbowpie_ui_flag_resourcepack_identifier = 'd5e1b7c2_betterbedrock') and (not ($rainbowpie_ui_flag_hud_hotbar_mode = 0)))",
+            "$editor_hotbars_show_default_layout": false,
+            "$editor_hotbar_elements_icons_and_factories_vertical_padding_size": 14,
+            "$editor_hotbar_elements_xp_bar_show_element": false
+          },
+          {
+            "requires": "(($rainbowpie_ui_flag_resourcepack_identifier = 'd5e1b7c2_betterbedrock') and ($screen_content = 'hud.hud_content'))",
+            "$use_loading_bars": false,
+            "$rainbowpie_localui_screen_watermark": false,
+            "$rainbowpie_localui_modified": false,
+            "$rainbowpie_localui_screen_alias": "hud",
+            "$rainbowpie_localui_screen_alias_formatted": "hud,"
+          },
+          {
+            "requires": "(($rainbowpie_ui_flag_resourcepack_identifier = 'd5e1b7c2_betterbedrock') and ($screen_content = 'bb_pause.main'))",
+            "$rainbowpie_localui_modified": false,
+            "$rainbowpie_localui_screen_alias": "pause",
+            "$rainbowpie_localui_screenbackground_ingamebg_ignored": true
+          },
+          // Dabu UI
+          {
+            "requires": "($rainbowpie_ui_flag_resourcepack_identifier = 'c740985b_dabuui')",
+            "$rainbowpie_ui_flag_resourcepack_identifier": "c740985b_dabuui",
+            "$rainbowpie_ui_flag_resourcepack_displayname": "护眼大补丸"
           },
           // China Version
           {

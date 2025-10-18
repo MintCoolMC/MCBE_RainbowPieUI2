@@ -9,6 +9,7 @@
   },
 
   "search_button_toggle_base@common_toggles.light_ui_toggle": {
+    "$rainbowpie_localui_button_border_enabled": false,
     "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
     "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
     "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
@@ -237,7 +238,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "('§§' + #custom_dropdown_length)",
+              "source_property_name": "('\"' + #custom_dropdown_length + '\"')",
               "target_property_name": "#custom_dropdown_length_str"
             }
           ]
@@ -470,7 +471,9 @@
                 "$button_image_size": [ "100%", "100%" ],
                 "$pressed_button_name": "button.submit_custom_form",
                 "size": [ "100%c", "100%" ],
-                "$button_text": "gui.submit",
+                "$button_text": "#submit_text",
+                "$button_text_binding_type": "global",
+                "$button_binding_condition": "once",
                 "enabled": true,
                 "bindings": [
                   {
@@ -545,7 +548,9 @@
           "$button_image_size": [ "100%", "100% - 1px" ],
           "$pressed_button_name": "button.submit_custom_form",
           "size": [ "100%", 32 ],
-          "$button_text": "gui.submit",
+          "$button_text": "#submit_text",
+          "$button_text_binding_type": "global",
+          "$button_binding_condition": "once",
           "enabled": true,
           "bindings": [
             {
@@ -925,7 +930,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "(#form_button_text - '\n' - '§r' - '§o' - '§n' - '§m' - '§l' - '§k' - '§f' - '§e' - '§d' - '§c' - '§b' - '§a' - '§9' - '§8' - '§7' - '§6' - '§5' - '§4' - '§3' - '§2' - '§1' - '§0')",
+              "source_property_name": "('\"' + #hover_text - '\n' - '§0' - '§1' - '§2' - '§3' - '§4' - '§5' - '§6' - '§7' - '§8' - '§9' - '§a' - '§b' - '§c' - '§d' - '§e' - '§f' - '§g' - '§h' - '§i' - '§j' - '§k' - '§l' - '§m' - '§n' - '§o' - '§p' - '§q' - '§r' - '§s' - '§t' - '§u' - '§v' - '§w' - '§x' - '§y' - '§z' + '\"')",
               "target_property_name": "#formatted_text"
             },
             {

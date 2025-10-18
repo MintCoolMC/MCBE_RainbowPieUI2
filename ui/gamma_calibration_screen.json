@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "gamma_calibration",
 
@@ -36,7 +36,6 @@
 
   "gamma_calibration_screen": {
     "$rainbowpie_localui_screen_alias": "gamma_calibration",
-    "force_render_below": true,
     "$transition_time_push": "$rainbowpie_ui_animation_transition_time",
     "$transition_time_pop": "$rainbowpie_ui_animation_transition_time",
     "$transition_time_push_size": "$rainbowpie_ui_animation_transition_time",

@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "ui_defs": [
     // MintUI
@@ -83,6 +83,7 @@
     "ui/RainbowPieUI/ui_extras/xbl_friend_finder_controls.json",
     "ui/RainbowPieUI/compatibility.json",
     "ui/RainbowPieUI/module_pack.json",
+    "ui/RainbowPieUI/pixelart.json",
     "ui/RainbowPieUI/rainbowpie_ui_animations.json",
     "ui/RainbowPieUI/rainbowpie_ui_controls.json",
     "ui/RainbowPieUI/rainbowpie_ui_inventory_and_container.json",

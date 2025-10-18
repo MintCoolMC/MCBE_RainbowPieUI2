@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "pdp",
 
@@ -42,7 +42,7 @@
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
 
-  "description_inner_panel/description_stack_panel/title_stack_panel/title_text_panel/title_label": {
+  "description_inner_panel/description_stack_panel/title_stack_panel/title_text_panel/title_panel/title_label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
@@ -63,11 +63,6 @@
   },
 
   "appearance_status_content/last_update_panel/last_update_label": {
-    "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  },
-
-  "in_realms_plus_button_content/alignment_text_panel/text": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },

@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "world_section",
 
@@ -410,7 +410,7 @@
     "size": [ 1, 1 ]
   },
 
-  "addons_selector_panel/spacer": {
+  "addons_selector_panel/spacer_01": {
     "size": [ 1, 1 ]
   },
 

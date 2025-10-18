@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "rainbowpie_ui_tab",
 
@@ -15,7 +15,33 @@
     "$tab_content_offset|default": [ 0, 0 ],
     "$tab_content_anchor|default": "center",
     "$rainbowpie_localui_button_text_color|default": [],
+    "$hover_state|default": false,
+    "$rainbowpie_localui_button_hover_border_layer|default": 50,
     "controls": [
+      {
+        "button_glint": {
+          "type": "panel",
+          "size": "$tab_image_size",
+          "offset": "$tab_image_offset",
+          "anchor_to": "$tab_image_anchor",
+          "anchor_from": "$tab_image_anchor",
+          "ignored": "(not $rainbowpie_ui_flag_99d9851a)",
+          "layer": "$rainbowpie_localui_button_hover_border_layer",
+          "controls": [
+            {
+              "hover@rainbowpie_ui_button.glint_border_base": {
+                "$rainbowpie_localui_glint_size": [ 72, 72 ],
+                "$rainbowpie_localui_glint_alpha": 0.25,
+                "ignored": "(not $hover_state)",
+                "size": [ "100%", "100%" ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "layer": "($rainbowpie_localui_button_hover_border_layer - ($rainbowpie_localui_button_hover_border_layer * 2))"
+              }
+            }
+          ]
+        }
+      },
       {
         "checked_image": {
           "visible": "$is_checked_bar_enabled",

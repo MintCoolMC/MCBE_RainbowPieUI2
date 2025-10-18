@@ -39,7 +39,11 @@ rainbowpie.ui.notification.features_disabled.resourcepack=您正在使用
 rainbowpie.ui.notification.features_disabled.text=某些功能將被禁用
 
 rainbowpie.ui.host_options.time_title=時間:
+rainbowpie.ui.host_options.days_played=已玩天數
 rainbowpie.ui.host_options.time_note=如果你使用這項調整，遊玩天數將會被重置。
+
+rainbowpie.ui.host_options.color_picker=顏色選擇器
+rainbowpie.ui.host_options.color_picker.tip=(點選)
 
 rainbowpie.ui.serverform.vanilla_tip=回到原版樣式的 ServerFormUI
 rainbowpie.ui.serverform.serverformui_tip=切換到 Rainbow Pie UI 樣式的 ServerFormUI
@@ -136,6 +140,9 @@ rainbowpie.ui.warning.text.error=檢查到一個嚴重的錯誤，這可能會�
 rainbowpie.ui.warning.text.warning=檢查到一個錯誤。如果你沒有使用其他資源套件并且正在使用受支持的游戲版本，請把此錯誤報告到issues。
 rainbowpie.ui.warning.button.check=查看報錯
 rainbowpie.ui.warning.button.deactivate=禁用資源套件
+
+rainbowpie.ui.warning.3rdparty.title=來自第三方資源套件的錯誤
+rainbowpie.ui.warning.3rdparty.text=此資源套件導致了錯誤，如果這個錯誤讓你無法操作請停用這個套件。
 
 rainbowpie.ui.version.warn=版本警告！
 rainbowpie.ui.version.supported=相容的版本：

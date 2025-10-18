@@ -1,6 +1,401 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "rainbowpieui_storage_management",
+
+  "pack_description_sub_item@storage_management.texture_icon_text": {
+    "$check_visible": true,
+    "$text_controls": [
+      {
+        "panel": {
+          "type": "stack_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "main_label@storage_management.common_label": {
+                "size": [ "65%", 10 ],
+
+                "text": "$name_text",
+                "color": "$body_text_color",
+                "bindings": "$name_bindings"
+              }
+            },
+            {
+              "desc_label@storage_management.common_label": {
+                "size": [ "100% - 4px", 20 ],
+
+                "$description_name": "('#sub_' + $panel_prefix + _description)",
+                "$description_binding_collection": "($panel_prefix + _panel)",
+
+                "text": "$description_name",
+                "color": "$light_button_secondary_default_text_color",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "$description_binding_collection",
+                    "binding_name": "$description_name"
+                  },
+                  {
+                    "binding_type": "collection_details"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "glyphs_and_version": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", 10 ],
+          "layer": 4,
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -5, 0 ],
+          "controls": [
+            {
+              "glyph_warning@storage_management.base_glyph": {
+                "$binding_name": "warning",
+                "$glyph_texture": "textures/ui/WarningGlyph"
+              }
+            },
+            {
+              "glyph_error@storage_management.base_glyph": {
+                "$binding_name": "error",
+                "$glyph_texture": "textures/ui/ErrorGlyph"
+              }
+            },
+            {
+              "glyph_update@storage_management.base_glyph": {
+                "$binding_name": "update",
+                "$glyph_texture": "textures/ui/UpdateGlyph"
+              }
+            },
+            {
+              "version_label@storage_management.common_label": {
+                "size": [ "default", "default" ],
+
+                "$version_name": "('#sub_' + $panel_prefix + _version)",
+                "$version_binding_visible": "('#sub_' + $panel_prefix + _valid)",
+                "$version_binding_collection": "($panel_prefix + _panel)",
+
+                "text": "$version_name",
+                "color": "$light_button_secondary_default_text_color",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "$version_binding_collection",
+                    "binding_name": "$version_name"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "$version_binding_collection",
+                    "binding_name": "$version_binding_visible",
+                    "binding_name_override": "#visible"
+                  },
+                  {
+                    "binding_type": "collection_details"
+                  }
+                ]
+              }
+            },
+            {
+              "padding_version_label": {
+                "type": "panel",
+                "size": [ 4, "100%" ],
+                "controls": [
+                  {
+                    "driven@rainbowpieui_settings_common.driven": {
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "size": [ 1, 8 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "size_label@storage_management.common_label": {
+                "size": [ "default", "default" ],
+                "text": "$size_text",
+                "color": "$light_button_secondary_default_text_color",
+                "bindings": "$size_bindings"
+              }
+            },
+            {
+              "dev_tag": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "bindings": [
+                  {
+                    "binding_name_override": "#texture",
+                    "binding_type": "$texture_binding_type",
+                    "binding_collection_name": "$texture_binding_collection",
+                    "binding_name": "$button_texture"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not (('\"' + #texture - 'development_' + '\"') = #texture)",
+                    "target_property_name": "#is_development_icon_path"
+                  },
+                  {
+                    "binding_name_override": "#zip_folder",
+                    "binding_type": "$texture_binding_type",
+                    "binding_collection_name": "$texture_binding_collection",
+                    "binding_name": "$button_texture_zip"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not (('\"' + #zip_folder - 'development_' + '\"') = #zip_folder)",
+                    "target_property_name": "#is_development_icon_zip"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#is_development_icon_path or #is_development_icon_zip)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "padding_version_label": {
+                      "type": "panel",
+                      "size": [ 4, "100%" ],
+                      "controls": [
+                        {
+                          "driven@rainbowpieui_settings_common.driven": {
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "size": [ 1, 8 ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "dev_tag_label@rainbowpie_ui_common.text_label": {
+                      "layer": 1,
+                      "size": [ "default", "default" ],
+                      "text": "DEV",
+                      "color": [ 1.0, 1.0, 0.333 ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "resource_toggle": {
+    "type": "panel",
+    "size": [ "100%", "100%cm" ],
+    "controls": [
+      {
+        "content_toggle@common.toggle": {
+          "size": [ "100%", "100%c" ],
+
+          "checked_control": "default",
+          "unchecked_control": "unchecked",
+          "checked_hover_control": "hover",
+          "unchecked_hover_control": "unchecked_hover",
+          "checked_locked_control": "default",
+          "unchecked_locked_control": "unchecked",
+          "checked_locked_hover_control": "hover",
+          "unchecked_locked_hover_control": "unchecked_hover",
+
+          "$toggle_grid_collection_name": "($panel_prefix + _panel)",
+          "$toggle_name": "($panel_prefix + _item_dropdown)",
+          "$toggle_binding_type": "collection",
+          "$toggle_state_binding_name": "($panel_prefix + _toggle_check)",
+
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+
+          "bindings": [
+            {
+              "binding_name": "('#' + $panel_prefix + _isSelected)",
+              "binding_name_override": "#toggle_state",
+              "binding_type": "collection",
+              "binding_collection_name": "($panel_prefix + _panel)"
+            }
+          ],
+
+          "controls": [
+            {
+              "default@$item_template": {
+                "$button_state": "default",
+                "$checked_state": true
+              }
+            },
+            {
+              "hover@$item_template": {
+                "$button_state": "hover",
+                "$checked_state": true,
+                "layer": 4
+              }
+            },
+            {
+              "unchecked@$item_template": {
+                "$button_state": "default",
+                "$checked_state": false
+              }
+            },
+            {
+              "unchecked_hover@$item_template": {
+                "$button_state": "hover",
+                "$checked_state": false,
+                "layer": 4
+              }
+            }
+          ]
+        }
+      },
+      {
+        "item_button_panel": {
+          "type": "input_panel",
+          "modal": true,
+          "inline_modal": true,
+          "focus_enabled": false,
+          "layer": 1,
+          "size": [ 0, 0 ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name_override": "#visible",
+              "binding_name": "('#' + $panel_prefix + _optionsVisible)",
+              "binding_collection_name": "($panel_prefix + _panel)"
+            },
+            {
+              "binding_name": "#is_using_gamepad",
+              "binding_name_override": "#modal",
+              "binding_type": "global"
+            }
+          ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "button.deselect_resource",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.deselect_resource",
+              "mapping_type": "global",
+              "consume_event": false
+            },
+            {
+              "from_button_id": "button.menu_left",
+              "to_button_id": "button.menu_left",
+              "mapping_type": "global",
+              "scope": "view"
+            },
+            {
+              "from_button_id": "button.menu_right",
+              "to_button_id": "button.menu_right",
+              "mapping_type": "global",
+              "scope": "view"
+            }
+          ],
+          "controls": [
+            {
+              "button_panel_background": {
+                "type": "image",
+                "size": [ "100%c + 4px", "100%c + 4px" ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "texture": "textures/ui/White",
+                "color": [ 0.12941176470588237, 0.12941176470588237, 0.12941176470588237 ],
+                "alpha": 0.7,
+                "layer": 20,
+                "controls": [
+                  {
+                    "button_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "size": [ "100%c", 24 ],
+                      "controls": [
+                        {
+                          "generate_texture_list_button@storage_management.sub_item_tray_button": {
+                            "ignored": "(not ($panel_prefix = resource) or true)",
+                            "size": [ "100%y", "100%" ],
+
+                            "$glyph_size": [ 11, 17 ],
+                            "$pressed_button_name": "button.generateTextureList",
+                            "$button_texture": "textures/ui/update",
+
+                            "bindings": [
+                              {
+                                "binding_type": "collection_details"
+                              },
+                              {
+                                "binding_type": "collection",
+                                "binding_collection_name": "($panel_prefix + _panel)",
+                                "binding_name": "('#sub_' + $panel_prefix + _generate_texture_list_button_visible)",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "delete_button@storage_management.sub_item_tray_button": {
+                            "size": [ "100%y", "100%" ],
+                            "$glyph_size": [ 15, 17 ],
+                            "$pressed_button_name": "button.deleteResources",
+                            "$button_texture": "textures/ui/trash",
+                            "$button_tts_header": "storageManager.multiselectDelete",
+                            "bindings": [
+                              {
+                                "binding_type": "collection_details"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "share_button@storage_management.sub_item_tray_button": {
+                            "ignored": true,
+                            "size": [ "100%y", "100%" ],
+                            "$glyph_size": [ 16, 15 ],
+                            "$pressed_button_name": "button.shareResources",
+                            "$button_texture": "textures/ui/windowsshare",
+                            "bindings": [
+                              {
+                                "binding_type": "collection_details"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "dependency_button@storage_management.sub_item_tray_button": {
+                            "ignored": "(($panel_prefix = world) or ($panel_prefix = world_template))",
+                            "size": [ "100%y", "100%" ],
+                            "$glyph_size": [ 13, 20 ],
+                            "$pressed_button_name": "button.warningDependency",
+                            "$button_texture": "#pack_info_texture",
+                            "$button_texture_binding_type": "collection",
+                            "$button_texture_collection_name": "($panel_prefix + _panel)",
+                            "bindings": [
+                              {
+                                "binding_type": "collection_details"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
 
   "navigation_tab_panel": {
     "type": "stack_panel",

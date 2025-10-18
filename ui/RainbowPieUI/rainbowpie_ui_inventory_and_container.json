@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "rainbowpie_ui_inventory_and_container",
 
@@ -69,7 +69,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "(#hover_text - '\n' - '§r' - '§o' - '§n' - '§m' - '§l' - '§k' - '§f' - '§e' - '§d' - '§c' - '§b' - '§a' - '§9' - '§8' - '§7' - '§6' - '§5' - '§4' - '§3' - '§2' - '§1' - '§0')",
+              "source_property_name": "('\"' + #hover_text - '\n' - '§0' - '§1' - '§2' - '§3' - '§4' - '§5' - '§6' - '§7' - '§8' - '§9' - '§a' - '§b' - '§c' - '§d' - '§e' - '§f' - '§g' - '§h' - '§i' - '§j' - '§k' - '§l' - '§m' - '§n' - '§o' - '§p' - '§q' - '§r' - '§s' - '§t' - '§u' - '§v' - '§w' - '§x' - '§y' - '§z' + '\"')",
               "target_property_name": "#formatted_name"
             },
             {
@@ -91,6 +91,7 @@
 
   "container_item@common.container_item": {
     "size": [ "100%y", "100%" ],
+    "$collection_index|default": -1,
     "$cell_image_size|default": [ "100%y", "100%" ],
     "$item_renderer_panel_size|default": [ "100%y", "100%" ],
     "$item_renderer_size|default": [ "100%y", "88.89%" ],
@@ -108,47 +109,56 @@
     "controls": [
       {
         "container_item_0@rainbowpie_ui_inventory_and_container.container_item": {
-          "collection_index": "($collection_index_start + 0)"
+          "$collection_index": "($collection_index_start + 0)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_1@rainbowpie_ui_inventory_and_container.container_item": {
-          "collection_index": "($collection_index_start + 1)"
+          "$collection_index": "($collection_index_start + 1)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_2@rainbowpie_ui_inventory_and_container.container_item": {
-          "collection_index": "($collection_index_start + 2)"
+          "$collection_index": "($collection_index_start + 2)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_3@rainbowpie_ui_inventory_and_container.container_item": {
-          "collection_index": "($collection_index_start + 3)"
+          "$collection_index": "($collection_index_start + 3)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_4@rainbowpie_ui_inventory_and_container.container_item": {
-          "collection_index": "($collection_index_start + 4)"
+          "$collection_index": "($collection_index_start + 4)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_5@rainbowpie_ui_inventory_and_container.container_item": {
-          "collection_index": "($collection_index_start + 5)"
+          "$collection_index": "($collection_index_start + 5)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_6@rainbowpie_ui_inventory_and_container.container_item": {
-          "collection_index": "($collection_index_start + 6)"
+          "$collection_index": "($collection_index_start + 6)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_7@rainbowpie_ui_inventory_and_container.container_item": {
-          "collection_index": "($collection_index_start + 7)"
+          "$collection_index": "($collection_index_start + 7)",
+          "collection_index": "$collection_index"
         }
       },
       {
         "container_item_8@rainbowpie_ui_inventory_and_container.container_item": {
-          "collection_index": "($collection_index_start + 8)"
+          "$collection_index": "($collection_index_start + 8)",
+          "collection_index": "$collection_index"
         }
       }
     ]

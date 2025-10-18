@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "rainbowpie_module_hud_selected_item_id",
 
@@ -17,7 +17,7 @@
             {
               "binding_type": "view",
               "source_control_name": "selected_slot_item_id_aux",
-              "source_property_name": "('§§' + #selected_item_id_aux_int)",
+              "source_property_name": "('\"' + #selected_item_id_aux_int + '\"')",
               "target_property_name": "#selected_item_id_aux_str"
             }
           ]

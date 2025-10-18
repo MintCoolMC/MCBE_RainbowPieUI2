@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "rainbowpieui_verified_pack",
 
@@ -17,6 +17,13 @@
           "$rainbowpie_localui_packverifiy_packname": "Rainbow Pie UI (Old)",
           "$rainbowpie_localui_packverifiy_packauther": "MintCoolMC"
         }
+      },
+      {
+        "dabuui@rainbowpieui_manifest_validation.verified_pack_item": {
+          "$rainbowpie_localui_packverifiy_packuuid": "4d24c49f-6893-408d-88d7-99b8cea7dce3",
+          "$rainbowpie_localui_packverifiy_packname": "护眼大补丸",
+          "$rainbowpie_localui_packverifiy_packauther": "黑山大叔 橘猫sama"
+        }
       }
     ]
   },
@@ -33,6 +40,12 @@
         "old_rainbowpie@rainbowpieui_manifest_validation.verified_pack_description_item": {
           "$rainbowpie_localui_packverifiy_packuuid": "2a6c2264-0401-4cd8-aad8-824fa7672084",
           "$rainbowpie_localui_packverifiy_packdesc": "Rainbow Pie UI By Mintraspberry Cool\n§cDO NOT USE WITH NEW PACK!!!§r\nWebsite: §ehttps://mintraspberry.cool/rainbowpieui"
+        }
+      },
+      {
+        "dabuui@rainbowpieui_manifest_validation.verified_pack_description_item": {
+          "$rainbowpie_localui_packverifiy_packuuid": "4d24c49f-6893-408d-88d7-99b8cea7dce3",
+          "$rainbowpie_localui_packverifiy_packdesc": "§b护眼大补丸§r\nB站作者@黑山大叔 @橘猫sama\n§7(此资源包与Rainbow Pie UI互相兼容)§r\n§7(This resource pack is compatible with Rainbow Pie ​​UI)§r"
         }
       }
     ]

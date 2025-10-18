@@ -1,4 +1,4 @@
-// VERSION: 2.9.10402.1 (v1.21.80)
+// VERSION: 2.11.10550.1 (v1.21.113)
 {
   "namespace": "rainbowpieui_progress",
 
@@ -478,9 +478,13 @@
                                 "binding_name_override": "#clip_ratio"
                               }
                             ],
+                            "property_bag": {
+                              "#loading_bar_visible": true
+                            },
                             "bindings": [
                               {
-                                "binding_name": "#loading_bar_visible"
+                                "binding_name": "#loading_bar_visible",
+                                "ignored": "(not $is_pregame)"
                               },
                               {
                                 "binding_name": "#loading_bar_percentage"
@@ -497,9 +501,13 @@
                           "fancy_progress_loading_bars_wait@rainbowpie_ui_common.progress_loading_bars": {
                             "size": [ "90%", 3 ],
                             "layer": 15,
+                            "property_bag": {
+                              "#loading_bar_visible": true
+                            },
                             "bindings": [
                               {
-                                "binding_name": "#loading_bar_visible"
+                                "binding_name": "#loading_bar_visible",
+                                "ignored": "(not $is_pregame)"
                               },
                               {
                                 "binding_name": "#loading_bar_percentage"
