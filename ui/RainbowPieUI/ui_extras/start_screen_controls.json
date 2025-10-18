@@ -1732,6 +1732,7 @@
                                         "type": "panel",
                                         "size": [ "100%c", "100%" ],
                                         "layer": 32,
+                                        "ignored": "$rainbowpie_ui_flag_start_gathering_panel_ignored",
                                         "bindings": [
                                           {
                                             "binding_name": "#gathering_enabled",
@@ -1770,7 +1771,7 @@
                                       "gathering_panel_padding": {
                                         "type": "panel",
                                         "size": [ 4, 0 ],
-                                        "ignored": "(not $rainbowpie_ui_flag_282dd0a5)",
+                                        "ignored": "$rainbowpie_ui_flag_start_gathering_panel_ignored",
                                         "bindings": [
                                           {
                                             "binding_name": "#gathering_enabled",

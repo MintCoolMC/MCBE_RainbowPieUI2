@@ -115,6 +115,7 @@
   "$rainbowpie_ui_flag_start_dialog_alert_button": "gui.ok",
 
   "$rainbowpie_ui_flag_start_design02_gradient": false,
+  "$rainbowpie_ui_flag_start_gathering_panel_ignored": false,
 
   "$rainbowpie_ui_flag_durabilityview_title": true,
 
