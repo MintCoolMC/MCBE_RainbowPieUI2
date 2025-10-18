@@ -541,7 +541,7 @@
       {
         "watermark_draw@rainbowpie_ui_common.watermark_draw": {
           "ignored": "(((($rainbowpie_ui_flag_watermark_awalys - $rainbowpieui_branch_type) = $rainbowpie_ui_flag_watermark_awalys) and (not $rainbowpie_localui_screen_watermark)) or $rainbowpie_localui_screenbackground_ignored)",
-          "layer": 50
+          "layer": 1
         }
       }
     ]
