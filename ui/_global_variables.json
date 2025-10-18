@@ -116,6 +116,7 @@
 
   "$rainbowpie_ui_flag_start_design02_gradient": false,
   "$rainbowpie_ui_flag_start_gathering_panel_ignored": false,
+  "$rainbowpie_ui_flag_start_gathering_denylist": "SoulSteel,", // hide gathering panel for these button texts
 
   "$rainbowpie_ui_flag_durabilityview_title": true,
 

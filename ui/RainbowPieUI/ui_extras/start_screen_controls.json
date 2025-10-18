@@ -1735,8 +1735,25 @@
                                         "ignored": "$rainbowpie_ui_flag_start_gathering_panel_ignored",
                                         "bindings": [
                                           {
-                                            "binding_name": "#gathering_enabled",
-                                            "binding_name_override": "#visible"
+                                            "binding_name": "#gathering_enabled"
+                                          },
+                                          {
+                                            "binding_name": "#gathering_button_text"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(#gathering_button_text + ',')",
+                                            "target_property_name": "#gathering_name"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not (($rainbowpie_ui_flag_start_gathering_denylist - #gathering_name) = $rainbowpie_ui_flag_start_gathering_denylist))",
+                                            "target_property_name": "#gathering_denylisted"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(#gathering_enabled and (not #gathering_denylisted))",
+                                            "target_property_name": "#visible"
                                           }
                                         ],
                                         "controls": [
@@ -1774,8 +1791,25 @@
                                         "ignored": "$rainbowpie_ui_flag_start_gathering_panel_ignored",
                                         "bindings": [
                                           {
-                                            "binding_name": "#gathering_enabled",
-                                            "binding_name_override": "#visible"
+                                            "binding_name": "#gathering_enabled"
+                                          },
+                                          {
+                                            "binding_name": "#gathering_button_text"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(#gathering_button_text + ',')",
+                                            "target_property_name": "#gathering_name"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not (($rainbowpie_ui_flag_start_gathering_denylist - #gathering_name) = $rainbowpie_ui_flag_start_gathering_denylist))",
+                                            "target_property_name": "#gathering_denylisted"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(#gathering_enabled and (not #gathering_denylisted))",
+                                            "target_property_name": "#visible"
                                           }
                                         ]
                                       }
