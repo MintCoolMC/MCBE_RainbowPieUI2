@@ -2,6 +2,34 @@
 {
   "namespace": "rainbowpieui_start",
 
+  "icon_maker_icon": {
+    "type": "image",
+    "size": [ 15, 15 ],
+    "texture": "($rainbowpie_ui_path_theme + '/icon/start/background')",
+    "color": "$text_color",
+    "layer": 8
+  },
+
+  "icon_maker_toggle_base@common_toggles.light_ui_toggle": {
+    "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
+    "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
+    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
+    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
+    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
+    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
+    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
+    "$button_content": "rainbowpieui_start.icon_maker_icon",
+
+    "$radio_toggle_group": true,
+    "$toggle_name": "rainbowpie_start_icon_maker",
+    "$toggle_group_default_selected": 1001,
+
+    "$toggle_group_forced_index": 0,
+
+    "$toggle_view_binding_name": ""
+  },
+
   "friends_icon": {
     "type": "image",
     "texture": "textures/ui/friendsbutton/navbar-friends-icon",
@@ -834,6 +862,148 @@
   "start_screen_content": {
     "type": "panel",
     "controls": [
+      {
+        "icon_maker_screen": {
+          "type": "panel",
+          "visible": false,
+          "ignored": "(not $rainbowpie_ui_flag_icon_maker)",
+          "controls": [
+            {
+              "background": {
+                "type": "image",
+                "texture": "textures/ui/Black",
+                "layer": 120
+              }
+            },
+            {
+              "modal_input@common.input_panel": {
+                "layer": 128,
+                "controls": [
+                  {
+                    "close_button@rainbowpieui_start.icon_maker_toggle_base": {
+                      "size": [ "100%y", "28px" ],
+                      "offset": [ -8, 8 ],
+                      "anchor_to": "top_right",
+                      "anchor_from": "top_right",
+                      "layer": 32,
+                      "$button_image_size": [ "100%", "100%" ],
+                      "$toggle_view_binding_name": "hide_icon_maker",
+                      "$button_content": "rainbowpieui_start.close_button_icon",
+                      "$button_mappings": [
+                        {
+                          "from_button_id": "button.menu_select",
+                          "to_button_id": "button.menu_select",
+                          "mapping_type": "pressed"
+                        },
+                        {
+                          "from_button_id": "button.menu_ok",
+                          "to_button_id": "button.menu_ok",
+                          "mapping_type": "pressed"
+                        },
+                        {
+                          "from_button_id": "button.menu_cancel",
+                          "to_button_id": "button.menu_select",
+                          "mapping_type": "global"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "icon_maker_background": {
+                      "type": "image",
+                      "size": [ "100%y", "100%" ],
+                      "texture": "textures/ui/White",
+                      "color": [ 0.196078431372549, 0.6588235294117647, 0.3215686274509804 ],
+                      "layer": 16,
+                      "controls": [
+                        {
+                          "icon_background": {
+                            "type": "image",
+                            "size": [ "100%", "100%" ],
+                            "allow_debug_missing_texture": false,
+                            "force_texture_reload": true,
+                            "texture": "($rainbowpie_ui_path_home + '/icon_maker/icon_bg')",
+                            "layer": 1
+                          }
+                        },
+                        {
+                          "ui_name_background": {
+                            "type": "image",
+                            "size": [ "100%", "22%" ],
+                            "anchor_to": "bottom_middle",
+                            "anchor_from": "bottom_middle",
+                            "texture": "textures/ui/Black",
+                            "alpha": 0.4,
+                            "layer": 16,
+                            "controls": [
+                              {
+                                "ui_name_text@rainbowpie_ui_common.text_label_notheme": {
+                                  "text": "$rainbowpie_ui_theme_global_title_text",
+                                  "font_type": "MinecraftTen",
+                                  "font_scale_factor": 6.0
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.menu_select",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_secondary_select",
+                    "to_button_id": "button.menu_secondary_select",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.menu_ok",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_up",
+                    "to_button_id": "button.menu_up",
+                    "mapping_type": "global",
+                    "scope": "view"
+                  },
+                  {
+                    "from_button_id": "button.menu_down",
+                    "to_button_id": "button.menu_down",
+                    "mapping_type": "global",
+                    "scope": "view"
+                  },
+                  {
+                    "from_button_id": "button.menu_left",
+                    "to_button_id": "button.menu_left",
+                    "mapping_type": "global",
+                    "scope": "view"
+                  },
+                  {
+                    "from_button_id": "button.menu_right",
+                    "to_button_id": "button.menu_right",
+                    "mapping_type": "global",
+                    "scope": "view"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "show_icon_maker",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
       {
         "background_dialog_screen": {
           "type": "panel",
@@ -1812,6 +1982,22 @@
                                             "target_property_name": "#visible"
                                           }
                                         ]
+                                      }
+                                    },
+                                    {
+                                      "icon_maker_button@rainbowpieui_start.icon_maker_toggle_base": {
+                                        "size": [ "100%y", "100%" ],
+                                        "$button_image_size": [ "100%", "100%" ],
+                                        "$toggle_group_forced_index": 1000,
+                                        "$toggle_view_binding_name": "show_icon_maker",
+                                        "ignored": "(not $rainbowpie_ui_flag_icon_maker)"
+                                      }
+                                    },
+                                    {
+                                      "icon_maker_button_padding": {
+                                        "type": "panel",
+                                        "size": [ 4, 0 ],
+                                        "ignored": "(not $rainbowpie_ui_flag_icon_maker)"
                                       }
                                     },
                                     {

@@ -90,6 +90,7 @@
   "$rainbowpie_ui_flag_hud_hotbar_rounded": false,
   "$rainbowpie_ui_flag_hud_expbar_empty_text": "o.0", // When exp is empty, display this text
 
+  "$rainbowpie_ui_flag_icon_maker": false,
   "$rainbowpie_ui_flag_input_enable_profanity_filter": true,
   "$rainbowpie_ui_flag_dropdown_default_show_button": true,
   "$rainbowpie_ui_flag_disconnect_ui_modified": true,
