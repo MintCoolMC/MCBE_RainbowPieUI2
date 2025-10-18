@@ -36,7 +36,6 @@
 
   "gamma_calibration_screen": {
     "$rainbowpie_localui_screen_alias": "gamma_calibration",
-    "force_render_below": true,
     "$transition_time_push": "$rainbowpie_ui_animation_transition_time",
     "$transition_time_pop": "$rainbowpie_ui_animation_transition_time",
     "$transition_time_push_size": "$rainbowpie_ui_animation_transition_time",
