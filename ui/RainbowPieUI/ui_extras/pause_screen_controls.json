@@ -164,6 +164,24 @@
                 ],
                 "$rainbowpie_localui_screen_content": [
                   {
+                    "pixelart_panel": {
+                      "type": "panel",
+                      "size": [ "100%c", "100%c" ],
+                      "offset": [ -8, -45 ],
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right",
+                      "layer": 32,
+                      "ignored": "(not $rainbowpie_ui_flag_pause_pixelart)",
+                      "controls": [
+                        {
+                          "niko_oneshot@rainbowpieui_pixelart.niko_oneshot": {
+                            "$pixel_size": [ 2, 2 ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
                     "bottom_button_panel": {
                       "type": "panel",
                       "size": [ "100%c", "28px" ],
