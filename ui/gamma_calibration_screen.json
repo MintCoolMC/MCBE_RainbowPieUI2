@@ -1,23 +1,13 @@
-// VERSION: 2.11.10555.1 (v1.21.113)
+// VERSION: 2.11.10555.1 (v1.21.120)
 {
   "namespace": "gamma_calibration",
-
-  "image_panel/centering_panel/image_label": {
-    "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  },
 
   "message_panel/message_label": {
     "font_type": "$rainbowpie_ui_theme_global_font_name",
     "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
   },
 
-  "calibration_slider/centering_panel/slider_label": {
-    "font_type": "$rainbowpie_ui_theme_global_font_name",
-    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
-  },
-
-  "calibration_slider/slider_control/slider": {
+  "calibration_slider/slider": {
     "$rainbowpie_localui_sliderbar_enabled": true
   },
 
@@ -26,6 +16,19 @@
     "$rainbowpie_localui_button_default_color": [ 0.196078431372549, 0.6588235294117647, 0.3215686274509804 ],
     "$rainbowpie_localui_button_hover_color": [ 0.196078431372549, 0.6588235294117647, 0.301961 ],
     "$rainbowpie_localui_button_pressed_color": [ 0.196078431372549, 0.6588235294117647, 0.301961 ],
+    "$rainbowpie_localui_button_default_alpha": 0.5,
+    "$rainbowpie_localui_button_hover_alpha": 0.4,
+    "$rainbowpie_localui_button_pressed_alpha": 0.4,
+    "$rainbowpie_localui_button_text_default_color": [ 1.0, 1.0, 1.0 ],
+    "$rainbowpie_localui_button_text_hover_color": [ 1.0, 1.0, 1.0 ],
+    "$rainbowpie_localui_button_text_pressed_color": [ 1.0, 1.0, 1.0 ]
+  },
+
+  "reset_button": {
+    "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+    "$rainbowpie_localui_button_default_color": [ 0.85098, 0.301961, 0.301961 ],
+    "$rainbowpie_localui_button_hover_color": [ 0.85098, 0.301961, 0.301961 ],
+    "$rainbowpie_localui_button_pressed_color": [ 0.85098, 0.301961, 0.301961 ],
     "$rainbowpie_localui_button_default_alpha": 0.5,
     "$rainbowpie_localui_button_hover_alpha": 0.4,
     "$rainbowpie_localui_button_pressed_alpha": 0.4,

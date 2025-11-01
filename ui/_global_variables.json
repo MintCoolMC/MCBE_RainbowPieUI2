@@ -1,4 +1,4 @@
-// VERSION: 2.11.10555.1 (v1.21.113)
+// VERSION: 2.11.10555.1 (v1.21.120)
 {
   "$rainbowpieui_ci": true,
   "$rainbowpieui_commit_id": "local~hash",
@@ -15,11 +15,11 @@
   "$rainbowpieui_watermark": true,
   "$rainbowpieui_bool": true,
 
-  "$rainbowpieui_version_minecraft_subpacks": "v1.21.11x",
-  "$rainbowpieui_version_minecraft_target": "v1.21.113",
+  "$rainbowpieui_version_minecraft_subpacks": "v1.21.12x",
+  "$rainbowpieui_version_minecraft_target": "v1.21.120",
   "$rainbowpieui_version_minecraft_bigver": "v1.21",
-  "$rainbowpieui_version_minecraft_max": "v1.21.119",
-  "$rainbowpieui_version_minecraft_min": "v1.21.110",
+  "$rainbowpieui_version_minecraft_max": "v1.21.129",
+  "$rainbowpieui_version_minecraft_min": "v1.21.120",
 
   "$mintui_bool": true,
   "$mintui_base_name": "MintUI",
