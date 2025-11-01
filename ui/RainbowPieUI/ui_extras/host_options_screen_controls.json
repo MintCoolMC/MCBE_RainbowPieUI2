@@ -1280,6 +1280,36 @@
               }
             },
             {
+              "weather_command_control": {
+                "type": "panel",
+                "ignored": "(not $rainbowpie_ui_flag_c0ce2018)",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "rainbowpie_time_slider",
+                    "source_property_name": "#fin_time_int",
+                    "target_property_name": "#fin_time_int"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('\"/time set ' + #fin_time_int + '\"')",
+                    "target_property_name": "#item_name"
+                  }
+                ]
+              }
+            },
+            {
+              "weather_fast_command@rainbowpieui_chat.fast_command_button": {
+                "size": [ "100% - 4px", 30 ],
+                "offset": [ 0, -2 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "$fast_command_command_control": "weather_command_control",
+                "$fast_command_button_content": "rainbowpieui_host_options.time_tweaker_result_button_content",
+                "ignored": "(not $rainbowpie_ui_flag_c0ce2018)"
+              }
+            },
+            {
               "weather_button@host_options.main_dark_button": {
                 "size": [ "100% - 4px", 30 ],
                 "offset": [ 0, -2 ],
@@ -1287,7 +1317,8 @@
                 "anchor_to": "bottom_middle",
                 "$button_content": "rainbowpieui_host_options.time_tweaker_result_button_content",
                 "$pressed_button_name": "rainbowpie.sub_command",
-                "layer": 2
+                "layer": 2,
+                "ignored": "$rainbowpie_ui_flag_c0ce2018"
               }
             },
             {
@@ -1300,6 +1331,7 @@
                 "layer": 3,
                 "visible": false,
                 "consume_hover_events": false,
+                "ignored": "$rainbowpie_ui_flag_c0ce2018",
                 "button_mappings": [
                   {
                     "from_button_id": "button.menu_select",
@@ -1341,7 +1373,7 @@
                 "anchor_from": "bottom_middle",
                 "anchor_to": "bottom_middle",
                 "layer": 4,
-                "ignored": "(not $rainbowpie_ui_flag_988450b0)",
+                "ignored": "($rainbowpie_ui_flag_c0ce2018 or not $rainbowpie_ui_flag_988450b0)",
                 "visible": false,
                 "consume_hover_events": false,
                 "property_bag": {

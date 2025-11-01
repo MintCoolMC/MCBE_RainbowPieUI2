@@ -220,6 +220,7 @@
   "$rainbowpie_ui_flag_64981341": true, // Color Picker (Type ".color" in your chat but don't send it)
   "$rainbowpie_ui_flag_3eb56fef": false, // InventoryUI animation quick exit
   "$rainbowpie_ui_flag_5e1f3f4e": true, // HUD Hotbar Animation
+  "$rainbowpie_ui_flag_c0ce2018": true, // Time Tweaker Fast Command
   
   // Debug
   "$rainbowpie_ui_debug": false,

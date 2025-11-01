@@ -5,7 +5,7 @@
   "fast_command_button": {
     "type": "panel",
     "$fast_command_command|default": "fast_command",
-    "$fast_command_command_text_control|default": "",
+    "$fast_command_command_control|default": "",
     "$fast_command_button_text|default": "",
     "$fast_command_button_content|default": "common.empty_panel",
     "$fast_command_button_desc|default": "",
@@ -90,14 +90,14 @@
                     "binding_type": "view",
                     "source_property_name": "#command",
                     "target_property_name": "#item_name",
-                    "ignored": "(not ($fast_command_command_text_control = ''))"
+                    "ignored": "(not ($fast_command_command_control = ''))"
                   },
                   {
                     "binding_type": "view",
-                    "source_control_name": "$fast_command_command_text_control",
+                    "source_control_name": "$fast_command_command_control",
                     "source_property_name": "#item_name",
                     "target_property_name": "#item_name",
-                    "ignored": "($fast_command_command_text_control = '')"
+                    "ignored": "($fast_command_command_control = '')"
                   }
                 ]
               }
