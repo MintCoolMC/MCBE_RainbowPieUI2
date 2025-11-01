@@ -1,4 +1,4 @@
-// VERSION: 2.11.10550.1 (v1.21.113)
+// VERSION: 2.11.10555.1 (v1.21.113)
 {
   "$rainbowpieui_ci": true,
   "$rainbowpieui_commit_id": "local~hash",
@@ -7,10 +7,10 @@
   "$rainbowpieui_branch_display_name": "DEV",
 
   "$rainbowpieui_engine_version": "211000",
-  "$rainbowpieui_patch_version": "10550",
+  "$rainbowpieui_patch_version": "10555",
   "$rainbowpieui_hotfix_version": "1",
   "$rainbowpieui_engine_version_name": "2.11",
-  "$rainbowpieui_full_version_name": "2.11.10550.master",
+  "$rainbowpieui_full_version_name": "2.11.10555.master",
   "$rainbowpieui_codename": "cookiecat",
   "$rainbowpieui_watermark": true,
   "$rainbowpieui_bool": true,
@@ -30,7 +30,7 @@
   "$mintui_pack_name": "Rainbow Pie UI",
   "$mintui_pack_description": "Minecraft UI Pack\n§ehttps://mintraspberry.cool/rainbowpieui",
   "$mintui_pack_uuid": "82d610e8-0968-4c0a-a47e-38e6663ee6ff",
-  "$mintui_pack_version": "2.11.10550",
+  "$mintui_pack_version": "2.11.10555",
 
   // String
   "$rainbowpie_ui_string_about_description": "This UI made by Mintraspberry Cool with VSCode.\nOpen source so that everyone can use it freely.\nGithub: §ehttps://github.com/MintCoolMC/MCBE_RainbowPieUI2§r\nIf you want to support me, check out the link below.\n§ehttps://mintraspberry.cool/donate§r",
