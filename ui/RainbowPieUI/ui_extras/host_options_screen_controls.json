@@ -648,9 +648,21 @@
           "anchor_to": "bottom_left",
           "controls": [
             {
-              "padding_btn1n3": {
+              "padding_btn1": {
                 "type": "panel",
-                "size": [ 52, 0 ]
+                "size": [ 26, 0 ],
+                "bindings": [
+                  {
+                    "binding_name": "#keyboard_button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "padding_btn3": {
+                "type": "panel",
+                "size": [ 26, 0 ]
               }
             },
             {
