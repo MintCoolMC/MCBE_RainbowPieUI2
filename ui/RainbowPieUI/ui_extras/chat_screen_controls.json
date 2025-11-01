@@ -9,6 +9,7 @@
     "$fast_command_button_text|default": "",
     "$fast_command_button_content|default": "common.empty_panel",
     "$fast_command_button_desc|default": "",
+    "$fast_command_auto_send|default": true,
     "controls": [
       {
         "command_button@common_buttons.light_text_button": {
@@ -24,6 +25,10 @@
               "requires": "(not ($fast_command_button_content = 'common.empty_panel'))",
               "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
               "$button_content": "$fast_command_button_content"
+            },
+            {
+              "requires": "(not $fast_command_auto_send)",
+              "$pressed_button_name": "rainbowpie.send"
             }
           ]
         }
