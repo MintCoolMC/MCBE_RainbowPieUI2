@@ -198,15 +198,15 @@
                       "$fast_command_command": "/reload all",
                       "$fast_command_button_text": "profileScreen.reload",
                       "$fast_command_button_icon": "textures/ui/refresh_light",
-                      "ignored": false
+                      "ignored": true
                     }
                   },
                   {
                     "test@rainbowpieui_chat.quick_command_button": {
-                      "$fast_command_command": "fast_command",
+                      "$fast_command_command": "/me fast_command",
                       "$fast_command_button_text": "fast_command",
                       "$fast_command_button_icon": "textures/ui/icons/icon_deals",
-                      "ignored": false
+                      "ignored": true
                     }
                   }
                 ]
