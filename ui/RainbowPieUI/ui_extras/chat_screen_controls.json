@@ -2,6 +2,262 @@
 {
   "namespace": "rainbowpieui_chat",
 
+  "quick_command_button_panel": {
+    "type": "panel",
+    "size": [ "100%c", "100%c" ],
+    "controls": [
+      {
+        "button_content_panel": {
+          "type": "panel",
+          "size": [ "100%c + 4px", "100%c + 4px" ],
+          "controls": [
+            {
+              "button_content": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100%c", "100%cm" ],
+                "controls": [
+                  {
+                    "button_icon": {
+                      "type": "image",
+                      "texture": "$fast_command_button_icon",
+                      "size": [ 16, 16 ]
+                    }
+                  },
+                  {
+                    "padding": {
+                      "type": "panel",
+                      "size": [ 2, 0 ]
+                    }
+                  },
+                  {
+                    "button_text_panel": {
+                      "type": "panel",
+                      "size": [ "100%c", 16 ],
+                      "controls": [
+                        {
+                          "button_text@rainbowpie_ui_common.text_label_notheme": {
+                            "size": [ "default", "default" ],
+                            "text": "$button_text",
+                            "color": "$text_color"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "quick_command_button": {
+    "type": "panel",
+    "size": [ "100%cm + 2px", 23 ],
+    "$fast_command_command|default": "fast_command",
+    "$fast_command_command_control|default": "",
+    "$fast_command_button_text|default": "fast_command",
+    "$fast_command_button_icon|default": "",
+    "$fast_command_auto_send|default": true,
+    "controls": [
+      {
+        "command_button@common_buttons.light_content_button": {
+          "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_form_fitting_button",
+          "$button_content_size_override": [ "100%c", "100%c" ],
+          "$button_image_size_override": [ "100%c", "100%c" ],
+          "$pressed_button_name": "button.send",
+          "$button_text": "$fast_command_button_text",
+          "$button_type_panel": "rainbowpieui_chat.quick_command_button_panel",
+          "size": [ "100%c", 24 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 1,
+          "variables": [
+            {
+              "requires": "(not $fast_command_auto_send)",
+              "$pressed_button_name": "rainbowpie.send"
+            }
+          ]
+        }
+      },
+      {
+        "deselect_text_box": {
+          "type": "input_panel",
+          "size": [ "100%sm", "100%sm" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "consume_hover_events": false,
+          "layer": 5,
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.text_edit_box_deselected",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.text_edit_box_deselected",
+              "mapping_type": "pressed"
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#keyboard_being_used",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "command_text@rainbowpie_ui_common.editable_label": {
+          "size": [ "100%sm", "100%sm" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "text_box_name": "#message_text_box",
+          "text_control": "command_text_control",
+          "consume_hover_events": false,
+          "layer": 4,
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.keyboard_toggle",
+              "mapping_type": "pressed",
+              "consume_event": false
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.keyboard_toggle",
+              "mapping_type": "pressed",
+              "consume_event": false
+            }
+          ],
+          "controls": [
+            {
+              "command_text_control": {
+                "type": "label",
+                "text": "#item_name",
+                "visible": false,
+                "property_bag": {
+                  "#command": "$fast_command_command",
+                  "#property_field": "#item_name"
+                },
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "#command",
+                    "target_property_name": "#item_name",
+                    "ignored": "(not ($fast_command_command_control = ''))"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$fast_command_command_control",
+                    "source_property_name": "#item_name",
+                    "target_property_name": "#item_name",
+                    "ignored": "($fast_command_command_control = '')"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "quick_command_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "background@rainbowpie_ui_common.text_background": {
+          "size": [ "100%", "100%c" ],
+          "offset": [ 0, -27 ],
+          "layer": 8,
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@rainbowpieui_chat.chat_quick_command_panel_back_animation",
+            "@rainbowpieui_chat.chat_quick_command_panel_back_animation_pop",
+            "@rainbowpieui_chat.chat_quick_command_panel_animation",
+            "@rainbowpieui_chat.chat_quick_command_panel_animation_pop"
+          ],
+          "controls": [
+            {
+              "commands": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100% - 4px", "100%cm" ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "controls": [
+                  // add yours here
+                  {
+                    "reload@rainbowpieui_chat.quick_command_button": {
+                      "$fast_command_command": "/reload all",
+                      "$fast_command_button_text": "profileScreen.reload",
+                      "$fast_command_button_icon": "textures/ui/refresh_light",
+                      "ignored": false
+                    }
+                  },
+                  {
+                    "test@rainbowpieui_chat.quick_command_button": {
+                      "$fast_command_command": "fast_command",
+                      "$fast_command_button_text": "fast_command",
+                      "$fast_command_button_icon": "textures/ui/icons/icon_deals",
+                      "ignored": false
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "chat_quick_command_panel_back_animation": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, -27 ],
+    "to": [ 0, 20 ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "chat_quick_command_panel_back_animation_pop": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_header_transition_effect_exit",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, -27 ],
+    "to": [ 0, 20 ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "chat_quick_command_panel_animation": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 20 ],
+    "to": [ 0, -27 ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "chat_quick_command_panel_animation_pop": {
+    "anim_type": "offset",
+    "easing": "$rainbowpie_ui_animation_transition_effect_entrance",
+    "duration": "$rainbowpie_ui_animation_transition_time",
+    "from": [ 0, 20 ],
+    "to": [ 0, -27 ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
   "fast_command_button": {
     "type": "panel",
     "$fast_command_command|default": "fast_command",

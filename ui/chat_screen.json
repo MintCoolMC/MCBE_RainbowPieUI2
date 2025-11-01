@@ -225,14 +225,25 @@
               "size": [ "100%", "100%" ],
               "controls": [
                 {
-                  "messages_parent_panel": {
-                    "type": "panel",
+                  "messages_inner_panel": {
+                    "type": "stack_panel",
                     "size": [ "fill", "100%" ],
                     "controls": [
                       {
-                        "messages_panel@chat.messages_scrolling_panel": {}
+                        "messages_parent_panel": {
+                          "type": "panel",
+                          "size": [ "100%", "fill" ],
+                          "controls": [
+                            {
+                              "messages_panel@chat.messages_scrolling_panel": { }
+                            },
+                            { "autocomplete_commands_panel@chat.commands_panel": { "layer": 3 } }
+                          ]
+                        }
                       },
-                      { "autocomplete_commands_panel@chat.commands_panel": { "layer": 3 } }
+                      {
+                        "quick_command_panel@rainbowpieui_chat.quick_command_panel": { }
+                      }
                     ]
                   }
                 },
