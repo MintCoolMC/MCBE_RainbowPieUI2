@@ -209,6 +209,16 @@
         "operation": "insert_front",
         "value": [
           {
+            "test_fast_command@rainbowpieui_chat.fast_command_button": {
+              "size": [ 24, 24 ],
+              "$fast_command_command": "/me fast_command",
+              "$fast_command_button_text": "Test",
+              "$fast_command_button_content": "chat.gear_image",
+              "$fast_command_button_desc": "/me fast_command",
+              "ignored": true
+            }
+          },
+          {
             "messages_stack_panel": {
               "type": "stack_panel",
               "orientation": "horizontal",

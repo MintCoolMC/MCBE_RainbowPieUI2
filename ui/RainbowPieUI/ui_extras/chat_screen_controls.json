@@ -2,6 +2,112 @@
 {
   "namespace": "rainbowpieui_chat",
 
+  "fast_command_button": {
+    "type": "panel",
+    "$fast_command_command|default": "fast_command",
+    "$fast_command_command_text_control|default": "",
+    "$fast_command_button_text|default": "",
+    "$fast_command_button_content|default": "common.empty_panel",
+    "$fast_command_button_desc|default": "",
+    "controls": [
+      {
+        "command_button@common_buttons.light_text_button": {
+          "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
+          "$pressed_button_name": "button.send",
+          "$button_text": "$fast_command_button_text",
+          "$rainbowpie_localui_button_desc_enabled": "(not ($fast_command_button_desc = ''))",
+          "$rainbowpie_localui_button_desc_text": "$fast_command_button_desc",
+          "size": [ "100%", "100%" ],
+          "layer": 1,
+          "variables": [
+            {
+              "requires": "(not ($fast_command_button_content = 'common.empty_panel'))",
+              "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
+              "$button_content": "$fast_command_button_content"
+            }
+          ]
+        }
+      },
+      {
+        "deselect_text_box": {
+          "type": "input_panel",
+          "size": [ "100%", "100%" ],
+          "consume_hover_events": false,
+          "layer": 5,
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.text_edit_box_deselected",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.text_edit_box_deselected",
+              "mapping_type": "pressed"
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#keyboard_being_used",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "command_text@rainbowpie_ui_common.editable_label": {
+          "size": [ "100%", "100%" ],
+          "text_box_name": "#message_text_box",
+          "text_control": "command_text_control",
+          "consume_hover_events": false,
+          "layer": 4,
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.keyboard_toggle",
+              "mapping_type": "pressed",
+              "consume_event": false
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.keyboard_toggle",
+              "mapping_type": "pressed",
+              "consume_event": false
+            }
+          ],
+          "controls": [
+            {
+              "command_text_control": {
+                "type": "label",
+                "text": "#item_name",
+                "visible": false,
+                "property_bag": {
+                  "#command": "$fast_command_command",
+                  "#property_field": "#item_name"
+                },
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "#command",
+                    "target_property_name": "#item_name",
+                    "ignored": "(not ($fast_command_command_text_control = ''))"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$fast_command_command_text_control",
+                    "source_property_name": "#item_name",
+                    "target_property_name": "#item_name",
+                    "ignored": "($fast_command_command_text_control = '')"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "editable_message_text": {
     "type": "panel",
     "size": [ "100%", "100%c" ],

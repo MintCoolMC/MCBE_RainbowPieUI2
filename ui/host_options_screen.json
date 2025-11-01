@@ -2,6 +2,20 @@
 {
   "namespace": "host_options",
 
+  "host_main_buttons": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "gamemode_fast_command_panel@rainbowpieui_host_options.gamemode_fast_command_panel": { }
+          }
+        ]
+      }
+    ]
+  },
+
   "host_panel": {
     "modifications": [
       {

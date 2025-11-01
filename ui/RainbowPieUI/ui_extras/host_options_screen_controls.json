@@ -2,6 +2,84 @@
 {
   "namespace": "rainbowpieui_host_options",
 
+  "default_gamemode_icon": {
+    "type": "image",
+    "size": [ 18, 18 ],
+    "texture": "textures/ui/gear"
+  },
+
+  "survival_icon": {
+    "type": "image",
+    "size": [ 18, 18 ],
+    "texture": "textures/ui/regeneration_effect"
+  },
+
+  "creative_icon": {
+    "type": "image",
+    "size": [ 18, 18 ],
+    "texture": "textures/ui/haste_effect"
+  },
+
+  "adventure_icon": {
+    "type": "image",
+    "size": [ 18, 18 ],
+    "texture": "textures/ui/speed_effect"
+  },
+
+  "spectator_icon": {
+    "type": "image",
+    "size": [ 18, 18 ],
+    "texture": "textures/ui/night_vision_effect"
+  },
+
+  "gamemode_fast_command_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", 32 ],
+    "controls": [
+      {
+        "default@rainbowpieui_chat.fast_command_button": {
+          "size": [ "100%y", "100%" ],
+          "$fast_command_command": "/gamemode default",
+          "$fast_command_button_content": "rainbowpieui_host_options.default_gamemode_icon",
+          "$fast_command_button_desc": "createWorldScreen.gameMode.serverDefault"
+        }
+      },
+      {
+        "survival@rainbowpieui_chat.fast_command_button": {
+          "size": [ "100%y", "100%" ],
+          "$fast_command_command": "/gamemode survival",
+          "$fast_command_button_content": "rainbowpieui_host_options.survival_icon",
+          "$fast_command_button_desc": "gameMode.survival"
+        }
+      },
+      {
+        "creative@rainbowpieui_chat.fast_command_button": {
+          "size": [ "100%y", "100%" ],
+          "$fast_command_command": "/gamemode creative",
+          "$fast_command_button_content": "rainbowpieui_host_options.creative_icon",
+          "$fast_command_button_desc": "gameMode.creative"
+        }
+      },
+      {
+        "adventure@rainbowpieui_chat.fast_command_button": {
+          "size": [ "100%y", "100%" ],
+          "$fast_command_command": "/gamemode adventure",
+          "$fast_command_button_content": "rainbowpieui_host_options.adventure_icon",
+          "$fast_command_button_desc": "gameMode.adventure"
+        }
+      },
+      {
+        "spectator@rainbowpieui_chat.fast_command_button": {
+          "size": [ "100%y", "100%" ],
+          "$fast_command_command": "/gamemode spectator",
+          "$fast_command_button_content": "rainbowpieui_host_options.spectator_icon",
+          "$fast_command_button_desc": "gameMode.spectator"
+        }
+      }
+    ]
+  },
+
   "color_picker": {
     "type": "panel",
     "size": [ "100%", 90 ],
