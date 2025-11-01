@@ -1,0 +1,56 @@
+// VERSION: 2.11.10555.1 (v1.21.120)
+{
+  "namespace": "rainbowpie_module_hivebedrock",
+
+  "quick_commands@rainbowpie_module_hivebedrock.hivebedrock": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", "100%cm" ],
+    "controls": [
+      {
+        "friends@rainbowpieui_chat.quick_command_button": {
+          "$fast_command_command": "/friends",
+          "$fast_command_button_text": "Friends",
+          "$fast_command_button_icon": "textures/items/hive/hub/friends"
+        }
+      },
+      {
+        "party@rainbowpieui_chat.quick_command_button": {
+          "$fast_command_command": "/party",
+          "$fast_command_button_text": "Party",
+          "$fast_command_button_icon": "textures/items/hive/hub/party"
+        }
+      },
+      {
+        "queue@rainbowpieui_chat.quick_command_button": {
+          "$fast_command_command": "/queue",
+          "$fast_command_button_text": "Queue",
+          "$fast_command_button_icon": "textures/items/hive/hub/compass"
+        }
+      },
+      {
+        "report@rainbowpieui_chat.quick_command_button": {
+          "$fast_command_command": "/report",
+          "$fast_command_button_text": "Report",
+          "$fast_command_button_icon": "textures/items/hive/hub/checkpoint"
+        }
+      },
+      {
+        "customserver@rainbowpieui_chat.quick_command_button": {
+          "$fast_command_command": "/customserver",
+          "$fast_command_button_text": "Custom Server"
+        }
+      },
+      {
+        "connection@rainbowpieui_chat.quick_command_button": {
+          "$fast_command_command": "/connection",
+          "$fast_command_button_text": "Connection"
+        }
+      }
+    ]
+  },
+
+  "hivebedrock": {
+    "ignored": "(not $rainbowpie_ui_module_hivebedrock)"
+  }
+}

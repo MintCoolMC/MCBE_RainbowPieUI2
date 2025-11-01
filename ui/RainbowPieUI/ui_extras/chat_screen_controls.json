@@ -21,13 +21,15 @@
                     "button_icon": {
                       "type": "image",
                       "texture": "$fast_command_button_icon",
-                      "size": [ 16, 16 ]
+                      "size": [ 16, 16 ],
+                      "ignored": "($fast_command_button_icon = '')"
                     }
                   },
                   {
                     "padding": {
                       "type": "panel",
-                      "size": [ 2, 0 ]
+                      "size": [ 2, 0 ],
+                      "ignored": "($fast_command_button_icon = '')"
                     }
                   },
                   {
@@ -193,6 +195,9 @@
                 "anchor_to": "top_middle",
                 "controls": [
                   // add yours here
+                  {
+                    "hivebedrock_commands@rainbowpie_module_hivebedrock.quick_commands": {}
+                  },
                   {
                     "reload@rainbowpieui_chat.quick_command_button": {
                       "$fast_command_command": "/reload all",

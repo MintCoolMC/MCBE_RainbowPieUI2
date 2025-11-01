@@ -1862,6 +1862,7 @@
             "$rainbowpie_ui_flag_server_infomation_description": "Hive Games © 2025",
             "$rainbowpie_ui_flag_custom_server_icon": true,
             "$rainbowpie_ui_flag_custom_server_icon_name": "hivebedrock",
+            "$rainbowpie_ui_module_hivebedrock": true,
             "$rainbowpie_ui_module_chest_fastpick": false,
             "$rainbowpie_ui_flag_19efcc11": false,
             "$rainbowpie_ui_flag_9ce040c1": false

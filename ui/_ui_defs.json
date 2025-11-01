@@ -20,6 +20,8 @@
     "ui/RainbowPieUI/module/hud_compass.json",
     "ui/RainbowPieUI/module/hud_selected_item_id.json",
     "ui/RainbowPieUI/module/inventory_actions.json",
+    // Server Modules
+    "ui/RainbowPieUI/module/hivebedrock.json",
 
     "ui/RainbowPieUI/module_lib/hud_item.json",
     "ui/RainbowPieUI/screen/music_player_screen.json",
