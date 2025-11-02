@@ -1812,6 +1812,7 @@
                                         "type": "panel",
                                         "size": [ "100%", "100%" ],
                                         "layer": 12,
+                                        "$color_picker_auto": true,
                                         "controls": [
                                           {
                                             "colorpicker_scrolling@rainbowpieui_chat.colorpicker_scrolling_panel": {
