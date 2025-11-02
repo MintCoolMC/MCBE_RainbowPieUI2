@@ -1210,7 +1210,13 @@
     "$toggle_tts_toggle_on_text": "",
     "$toggle_tts_toggle_off_text": "",
     "$toggle_tts_index_priority": 1002,
-    "$tab_content": "rainbowpieui_chat.top_tab_content"
+    "$tab_content": "rainbowpieui_chat.top_tab_content",
+    "variables": [
+      {
+        "requires": "($toggle_group_forced_index = $toggle_group_default_selected)",
+        "$toggle_default_state": true
+      }
+    ]
   },
 
   "top_tab_content": {
@@ -1254,7 +1260,13 @@
 
     "$toggle_group_forced_index": 1000,
 
-    "$toggle_view_binding_name": ""
+    "$toggle_view_binding_name": "",
+    "variables": [
+      {
+        "requires": "($toggle_group_forced_index = $toggle_group_default_selected)",
+        "$toggle_default_state": true
+      }
+    ]
   },
 
   "second_message_panel@rainbowpieui_chat.editable_message_text": {

@@ -414,6 +414,7 @@
   },
 
   "chat_screen": {
+    "cache_screen": true,
     "close_on_player_hurt": false,
     "$rainbowpie_localui_screen_watermark": false,
     "$rainbowpie_localui_modified": true,
