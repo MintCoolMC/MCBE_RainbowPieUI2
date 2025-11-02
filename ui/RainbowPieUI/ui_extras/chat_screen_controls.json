@@ -172,6 +172,16 @@
   "quick_command_panel": {
     "type": "panel",
     "size": [ "100%", "100%c" ],
+    "bindings": [
+      {
+        "binding_name": "#host_main_visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not #host_main_visible)",
+        "target_property_name": "#visible"
+      }
+    ],
     "controls": [
       {
         "background@rainbowpie_ui_common.text_background": {
