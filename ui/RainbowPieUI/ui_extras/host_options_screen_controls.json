@@ -504,12 +504,91 @@
     ]
   },
 
+  "color_picker_button_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "color_text_line": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 10 ],
+          "controls": [
+            {
+              "padding_0": {
+                "type": "panel",
+                "size": [ 2, 0 ]
+              }
+            },
+            {
+              "color_preview_panel": {
+                "type": "panel",
+                "size": [ "100%c", "100%" ],
+                "controls": [
+                  {
+                    "color_preview": {
+                      "type": "image",
+                      "size": [ 14, 14 ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "texture": "textures/ui/White",
+                      "color": "$color_picker_color",
+                      "layer": 1
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "padding_1": {
+                "type": "panel",
+                "size": [ 2, 0 ]
+              }
+            },
+            {
+              "color_text@rainbowpie_ui_common.text_label_notheme": {
+                "text": "$color_picker_text",
+                "color": "$color_picker_color",
+                "layer": 2
+              }
+            },
+            {
+              "padding_2": {
+                "type": "panel",
+                "size": [ 2, 0 ]
+              }
+            },
+            {
+              "code_display_text@rainbowpie_ui_common.text_label_notheme": {
+                "text": "$color_picker_code",
+                "size": [ "default", "default" ],
+                "layer": 8
+              }
+            }
+          ]
+        }
+      },
+      {
+        "tip_text@rainbowpie_ui_common.text_label_notheme": {
+          "text": "rainbowpie.ui.host_options.color_picker.tip",
+          "color": [ 0.5, 0.5, 0.5 ],
+          "offset": [ -2, 0 ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "layer": 2
+        }
+      }
+    ]
+  },
+
   "color_picker_item": {
     "type": "panel",
     "size": [ "100%", 19 ],
     "$color_picker_color|default": [ 1.0, 1.0, 0.0 ],
     "$color_picker_code|default": "default_code",
     "$color_picker_text|default": "Default Color",
+    "$color_picker_auto|default": false,
+    "$command_control": "('color_picker_' + $color_picker_code)",
     "bindings": [
       {
         "binding_name": "#message_text_box_content"
@@ -537,10 +616,34 @@
     ],
     "controls": [
       {
+        "$command_control@rainbowpieui_chat.fast_command_button": {
+          "size": [ "100%", 18 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "$button_image_size": [ "100%", "100%" ],
+          "$button_content_size": [ "100%", "100%" ],
+          "$fast_command_command_control": "$command_control",
+          "$fast_command_button_content": "rainbowpieui_host_options.color_picker_button_content",
+          "$fast_command_auto_send": false,
+          "ignored": "(not $color_picker_auto)",
+          "bindings": [
+            {
+              "binding_name": "#message_text_box_content"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('\"' + #message_text_box_content + $color_picker_code + '\"')",
+              "target_property_name": "#item_name"
+            }
+          ]
+        }
+      },
+      {
         "background@rainbowpie_ui_common.text_background": {
           "size": [ "100%", 18 ],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
+          "ignored": "$color_picker_auto",
           "controls": [
             {
               "color_picker_item_panel@rainbowpie_ui_common.editable_label": {

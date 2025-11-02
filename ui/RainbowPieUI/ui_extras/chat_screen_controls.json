@@ -1418,6 +1418,31 @@
     ]
   },
 
+  "colorpicker_scrolling_content": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      
+    ]
+  },
+
+  "colorpicker_scrolling_panel@common.scrolling_panel": {
+    "$rainbowpie_localui_scrollbar_enabled": true,
+    "type": "panel",
+    "size": [ "100% - 2px", "100%" ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [ 0, 0 ],
+    // "$scrolling_content": "rainbowpieui_chat.colorpicker_scrolling_content",
+    "$scrolling_content": "rainbowpieui_host_options.color_picker_stack",
+    "$scroll_size": [ 5, "100%-4px" ],
+    "$scroll_bar_right_padding_size": [ 0, 0 ],
+    "$scroll_bar_left_padding_size": [ 0, 0 ],
+    "$jump_to_bottom_on_update": false,
+    "$show_background": false,
+    "$always_handle_scrolling": false
+  },
+
   "playerlist_grid": {
     "type": "grid",
     "size": [ "100%", "default" ],
@@ -1493,6 +1518,11 @@
     "from": [ -150, 20 ]
   },
 
+  "color_picker_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "textures/ui/color_picker"
+  },
 
   "chat_messages_and_playerlist": {
     "ignored": "($game_pad or (not $rainbowpie_ui_feature_command_chat))",
@@ -1549,27 +1579,118 @@
                       "size": [ "100%", "100%" ],
                       "controls": [
                         {
-                          "playerlist_scrolling_panel": {
+                          "tab_panel_with_content_panel_chat": {
                             "type": "panel",
                             "size": [ "100%", "100%" ],
-                            "layer": 12,
-                            "controls": [
-                              {
-                                "playerlist_scrolling@rainbowpieui_chat.playerlist_scrolling_panel": {
-                                  "layer": 1
-                                }
-                              }
-                            ],
                             "bindings": [
                               {
-                                "binding_name": "#chat_visible",
-                                "binding_name_override": "#visible"
+                                "binding_name": "#chat_visible"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "open_second_chat",
+                                "source_property_name": "#toggle_state",
+                                "target_property_name": "#second_chat_opened"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(#chat_visible and #second_chat_opened)",
+                                "target_property_name": "#visible"
+                              }
+                            ],
+                            "controls": [
+                              {
+                                "tab_panel": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
+                                  "anchor_to": "top_middle",
+                                  "anchor_from": "top_middle",
+                                  "size": [ "100%", 22 ],
+                                  "controls": [
+                                    {
+                                      "playerlist_navigation_tab@rainbowpieui_chat.top_tab": {
+                                        "size": [ "fill", "100%" ],
+                                        "$toggle_name": "rainbowpieui_chat_tools_navigation_tab",
+                                        "$toggle_group_default_selected": 21,
+                                        "$tab_view_binding_name": "chat_playerlist_navigation_tab_toggle",
+                                        "$tab_text": "rainbowpie.ui.chat.tab.playerlist",
+                                        "$toggle_group_forced_index": 21
+                                      }
+                                    },
+                                    {
+                                      "colorpicker_navigation_tab@rainbowpieui_chat.top_tab": {
+                                        "size": [ "100%y", "100%" ],
+                                        "$toggle_name": "rainbowpieui_chat_tools_navigation_tab",
+                                        "$toggle_group_default_selected": 21,
+                                        "$tab_view_binding_name": "chat_colorpicker_navigation_tab_toggle",
+                                        "$tab_content": "rainbowpieui_chat.color_picker_icon",
+                                        "$toggle_group_forced_index": 22
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "content_panel": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
+                                  "anchor_to": "bottom_middle",
+                                  "anchor_from": "bottom_middle",
+                                  "size": [ "100%", "100% - 22px" ],
+                                  "controls": [
+                                    {
+                                      "playerlist_scrolling_panel": {
+                                        "type": "panel",
+                                        "size": [ "100%", "100%" ],
+                                        "layer": 12,
+                                        "controls": [
+                                          {
+                                            "playerlist_scrolling@rainbowpieui_chat.playerlist_scrolling_panel": {
+                                              "layer": 1
+                                            }
+                                          }
+                                        ],
+                                        "bindings": [
+                                          {
+                                            "binding_type": "view",
+                                            "source_control_name": "chat_playerlist_navigation_tab_toggle",
+                                            "source_property_name": "#toggle_state",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "colorpicker_scrolling_panel": {
+                                        "type": "panel",
+                                        "size": [ "100%", "100%" ],
+                                        "layer": 12,
+                                        "$color_picker_auto": true,
+                                        "controls": [
+                                          {
+                                            "colorpicker_scrolling@rainbowpieui_chat.colorpicker_scrolling_panel": {
+                                              "layer": 1
+                                            }
+                                          }
+                                        ],
+                                        "bindings": [
+                                          {
+                                            "binding_type": "view",
+                                            "source_control_name": "chat_colorpicker_navigation_tab_toggle",
+                                            "source_property_name": "#toggle_state",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
                               }
                             ]
                           }
                         },
                         {
-                          "tab_panel_with_content_panel": {
+                          "tab_panel_with_content_panel_command": {
                             "type": "panel",
                             "size": [ "100%", "100%" ],
                             "controls": [
@@ -1628,6 +1749,30 @@
                                           }
                                         ]
                                       }
+                                    },
+                                    {
+                                      "colorpicker_navigation_tab@rainbowpieui_chat.top_tab": {
+                                        "size": [ "100%y", "100%" ],
+                                        "$tab_view_binding_name": "colorpicker_navigation_tab_toggle",
+                                        "$tab_content": "rainbowpieui_chat.color_picker_icon",
+                                        "$toggle_group_forced_index": 12,
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#chat_visible"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_control_name": "open_second_chat",
+                                            "source_property_name": "#toggle_state",
+                                            "target_property_name": "#second_chat_opened"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "((not #chat_visible) and #second_chat_opened)",
+                                            "target_property_name": "#enabled"
+                                          }
+                                        ]
+                                      }
                                     }
                                   ]
                                 }
@@ -1656,6 +1801,28 @@
                                           {
                                             "binding_type": "view",
                                             "source_control_name": "playerlist_navigation_tab_toggle",
+                                            "source_property_name": "#toggle_state",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "colorpicker_scrolling_panel": {
+                                        "type": "panel",
+                                        "size": [ "100%", "100%" ],
+                                        "layer": 12,
+                                        "controls": [
+                                          {
+                                            "colorpicker_scrolling@rainbowpieui_chat.colorpicker_scrolling_panel": {
+                                              "layer": 1
+                                            }
+                                          }
+                                        ],
+                                        "bindings": [
+                                          {
+                                            "binding_type": "view",
+                                            "source_control_name": "colorpicker_navigation_tab_toggle",
                                             "source_property_name": "#toggle_state",
                                             "target_property_name": "#visible"
                                           }
