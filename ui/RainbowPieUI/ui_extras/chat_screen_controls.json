@@ -176,8 +176,10 @@
       {
         "background@rainbowpie_ui_common.text_background": {
           "size": [ "100%", "100%c" ],
+          "max_size": [ "100%", 23 ],
           "offset": [ 0, -27 ],
           "layer": 8,
+          "clips_children": true,
           "animation_reset_name": "screen_animation_reset",
           "anims": [
             "@rainbowpieui_chat.chat_quick_command_panel_back_animation",
@@ -203,15 +205,34 @@
                       "$fast_command_command": "/reload all",
                       "$fast_command_button_text": "profileScreen.reload",
                       "$fast_command_button_icon": "textures/ui/refresh_light",
-                      "ignored": true
+                      "ignored": "(not $rainbowpie_ui_flag_chat_quick_command_tests)"
                     }
                   },
                   {
-                    "test@rainbowpieui_chat.quick_command_button": {
+                    "test_1@rainbowpieui_chat.quick_command_button": {
                       "$fast_command_command": "/me fast_command",
                       "$fast_command_button_text": "fast_command",
                       "$fast_command_button_icon": "textures/ui/icons/icon_deals",
-                      "ignored": true
+                      "ignored": "(not $rainbowpie_ui_flag_chat_quick_command_tests)"
+                    }
+                  },
+                  {
+                    "test_2@rainbowpieui_chat.quick_command_button": {
+                      "$fast_command_command_control": "test_2",
+                      "$fast_command_button_text": "test_string",
+                      "$fast_command_button_icon": "textures/ui/icons/icon_new",
+                      "$fast_command_auto_send": false,
+                      "ignored": "(not $rainbowpie_ui_flag_chat_quick_command_tests)",
+                      "bindings": [
+                        {
+                          "binding_name": "#message_text_box_content"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('\"' + #message_text_box_content + ' test_string' + '\"')",
+                          "target_property_name": "#item_name"
+                        }
+                      ]
                     }
                   }
                 ]

@@ -99,6 +99,7 @@
   "$rainbowpie_ui_flag_persona_debug": false,
   "$rainbowpie_ui_flag_disable_spatial_pattern_fix": true,
   "$rainbowpie_ui_flag_inventory_cell_highlight_border": true,
+  "$rainbowpie_ui_flag_chat_quick_command_tests": true,
 
   "$rainbowpie_ui_flag_start_splash_text": true,
   "$rainbowpie_ui_flag_pause_splash_text": false,
