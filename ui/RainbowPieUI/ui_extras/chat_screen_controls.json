@@ -61,6 +61,21 @@
     "size": [ "100%cm + 2px", 23 ],
     "$fast_command_command|default": "fast_command",
     "$fast_command_command_control|default": "",
+    "$fast_command_command_bindings|default": [
+      {
+        "binding_type": "view",
+        "source_property_name": "#command",
+        "target_property_name": "#item_name",
+        "ignored": "(not ($fast_command_command_control = ''))"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "$fast_command_command_control",
+        "source_property_name": "#item_name",
+        "target_property_name": "#item_name",
+        "ignored": "($fast_command_command_control = '')"
+      }
+    ],
     "$fast_command_button_text|default": "fast_command",
     "$fast_command_button_icon|default": "",
     "$fast_command_auto_send|default": true,
@@ -146,21 +161,7 @@
                   "#command": "$fast_command_command",
                   "#property_field": "#item_name"
                 },
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "#command",
-                    "target_property_name": "#item_name",
-                    "ignored": "(not ($fast_command_command_control = ''))"
-                  },
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "$fast_command_command_control",
-                    "source_property_name": "#item_name",
-                    "target_property_name": "#item_name",
-                    "ignored": "($fast_command_command_control = '')"
-                  }
-                ]
+                "bindings": "$fast_command_command_bindings"
               }
             }
           ]
@@ -298,6 +299,21 @@
     "type": "panel",
     "$fast_command_command|default": "fast_command",
     "$fast_command_command_control|default": "",
+    "$fast_command_command_bindings|default": [
+      {
+        "binding_type": "view",
+        "source_property_name": "#command",
+        "target_property_name": "#item_name",
+        "ignored": "(not ($fast_command_command_control = ''))"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "$fast_command_command_control",
+        "source_property_name": "#item_name",
+        "target_property_name": "#item_name",
+        "ignored": "($fast_command_command_control = '')"
+      }
+    ],
     "$fast_command_button_text|default": "",
     "$fast_command_button_content|default": "common.empty_panel",
     "$fast_command_button_desc|default": "",
@@ -382,21 +398,7 @@
                   "#command": "$fast_command_command",
                   "#property_field": "#item_name"
                 },
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "#command",
-                    "target_property_name": "#item_name",
-                    "ignored": "(not ($fast_command_command_control = ''))"
-                  },
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "$fast_command_command_control",
-                    "source_property_name": "#item_name",
-                    "target_property_name": "#item_name",
-                    "ignored": "($fast_command_command_control = '')"
-                  }
-                ]
+                "bindings": "$fast_command_command_bindings"
               }
             }
           ]
@@ -425,40 +427,106 @@
     ],
     "controls": [
       {
-        "message_text@rainbowpie_ui_common.editable_label": {
-          "size": [ "100%", "100%c" ],
+        "message_stack": {
+          "type": "stack_panel",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "text_box_name": "message_text",
-          "text_control": "message_display_text",
+          "size": [ "100%", "100%c" ],
           "controls": [
             {
-              "message_display_text": {
-                "type": "label",
-                "color": "$chat_text_color",
-                "enable_profanity_filter": "$rainbowpie_ui_flag_chat_message_profanity_filter",
-                "localize": false,
-                "size": [ "100%", "default" ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "text": "#item_name",
-                "text_tts": "#text_tts",
-                "font_type": "$chat_font_type",
-                "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
-                "font_scale_factor": "$chat_font_scale_factor",
-                "line_padding": "$chat_line_spacing",
-                "anims": ["@rainbowpieui_chat.chat_message_panel_animation"],
-                "variables": [
+              "message_text@rainbowpie_ui_common.editable_label": {
+                "size": [ "100%", "100%c" ],
+                "text_box_name": "message_text",
+                "text_control": "message_display_text",
+                "controls": [
                   {
-                    "requires": "($rainbowpie_ui_flag_chat_use_ui_font and ($chat_font_type = 'default'))",
-                    "$chat_font_type": "$rainbowpie_ui_theme_global_font_name"
+                    "message_display_text": {
+                      "type": "label",
+                      "color": "$chat_text_color",
+                      "enable_profanity_filter": "$rainbowpie_ui_flag_chat_message_profanity_filter",
+                      "localize": false,
+                      "size": [ "100%", "default" ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "text": "#item_name",
+                      "text_tts": "#text_tts",
+                      "font_type": "$chat_font_type",
+                      "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+                      "font_scale_factor": "$chat_font_scale_factor",
+                      "line_padding": "$chat_line_spacing",
+                      "anims": [ "@rainbowpieui_chat.chat_message_panel_animation" ],
+                      "variables": [
+                        {
+                          "requires": "($rainbowpie_ui_flag_chat_use_ui_font and ($chat_font_type = 'default'))",
+                          "$chat_font_type": "$rainbowpie_ui_theme_global_font_name"
+                        }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "#text",
+                          "target_property_name": "#item_name"
+                        }
+                      ]
+                    }
                   }
-                ],
-                "bindings": [
+                ]
+              }
+            },
+            {
+              "chat_command_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%c" ],
+                "controls": [
                   {
-                    "binding_type": "view",
-                    "source_property_name": "#text",
-                    "target_property_name": "#item_name"
+                    "commands": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%", "100%cm" ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "controls": [
+                        // Add yours here
+                        {
+                          "hivebedrock_commands@rainbowpie_module_hivebedrock.chat_commands": { }
+                        },
+                        {
+                          "repeat@rainbowpieui_chat.quick_command_button": {
+                            "$fast_command_command_bindings": [
+                              {
+                                "binding_name": "#message_text_box_content"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "('\"' + #message_text_box_content + #text + '\"')",
+                                "target_property_name": "#item_name"
+                              }
+                            ],
+                            "$fast_command_button_text": "Repeat",
+                            "$fast_command_button_icon": "textures/ui/plus",
+                            "ignored": "(not $rainbowpie_ui_flag_chat_quick_command_tests)"
+                          }
+                        },
+                        {
+                          "reply@rainbowpieui_chat.quick_command_button": {
+                            "$fast_command_command_bindings": [
+                              {
+                                "binding_name": "#message_text_box_content"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "('\"' + 'Reply -> ' + #text + ': ' + #message_text_box_content + '\"')",
+                                "target_property_name": "#item_name"
+                              }
+                            ],
+                            "$fast_command_button_text": "Reply",
+                            "$fast_command_button_icon": "textures/ui/arrow_active",
+                            "$fast_command_auto_send": false,
+                            "ignored": "(not $rainbowpie_ui_flag_chat_quick_command_tests)"
+                          }
+                        }
+                      ]
+                    }
                   }
                 ]
               }

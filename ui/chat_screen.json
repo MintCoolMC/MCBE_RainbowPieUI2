@@ -13,7 +13,9 @@
         "$rainbowpie_ui_theme_global_font_name",
         "$rainbowpie_ui_theme_global_font_backup_name",
         "$rainbowpie_ui_flag_chat_use_ui_font",
-        "$rainbowpie_ui_flag_chatui_default_font"
+        "$rainbowpie_ui_flag_chatui_default_font",
+        // Internal Modules
+        "$rainbowpie_ui_module_hivebedrock"
       ]
     }
   },
