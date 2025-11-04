@@ -24,7 +24,7 @@
           "$fast_command_command_bindings": [
             {
               "binding_type": "view",
-              "source_property_name": "('\"' + #text - '§b§7' - '§b¡§7' - $message_invite_tr - $message_invite_ru - $message_invite_pt - $message_invite_nl - $message_invite_ko - $message_invite_ja - $message_invite_it - $message_invite_fr - $message_invite_es - $message_invite_en - $message_invite_de - $message_invite_cn + '\"')",
+              "source_property_name": "('\"' + #text - '§b¡' - $message_invite_tr - $message_invite_ru - $message_invite_pt - $message_invite_nl - $message_invite_ko - $message_invite_ja - $message_invite_it - $message_invite_fr - $message_invite_es - $message_invite_en - $message_invite_de - $message_invite_cn - '§0' - '§1' - '§2' - '§3' - '§4' - '§5' - '§6' - '§7' - '§8' - '§9' - '§a' - '§b' - '§c' - '§d' - '§e' - '§f' - '§g' - '§h' - '§i' - '§j' - '§k' - '§l' - '§m' - '§n' - '§o' - '§p' - '§q' - '§r' - '§s' - '§t' - '§u' - '§v' - '§w' - '§x' - '§y' - '§z' + '\"')",
               "target_property_name": "#player_name"
             },
             {
@@ -39,7 +39,7 @@
           "bindings": [
             {
               "binding_type": "view",
-              "source_property_name": "(not (('\"' + #text - '§b§7' - '§b¡§7' - $message_invite_tr - $message_invite_ru - $message_invite_pt - $message_invite_nl - $message_invite_ko - $message_invite_ja - $message_invite_it - $message_invite_fr - $message_invite_es - $message_invite_en - $message_invite_de - $message_invite_cn + '\"') = #text))",
+              "source_property_name": "(not (('\"' + #text - $message_invite_tr - $message_invite_ru - $message_invite_pt - $message_invite_nl - $message_invite_ko - $message_invite_ja - $message_invite_it - $message_invite_fr - $message_invite_es - $message_invite_en - $message_invite_de - $message_invite_cn + '\"') = #text))",
               "target_property_name": "#visible"
             }
           ]
