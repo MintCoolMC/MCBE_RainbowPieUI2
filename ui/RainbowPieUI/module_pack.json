@@ -6,7 +6,7 @@
     "controls": [
       {
         "cubecraft@rainbowpie_ui_module_list.module_item": {
-          "$module_icon_texture": "($rainbowpie_ui_path_home + '/server_icon/cubecraft')",
+          "$module_icon_texture": "($rainbowpie_ui_path_home + '/server_logo/cubecraft')",
           "$module_name": "CubeCraft",
           "$module_version": "1.0",
           "$module_author": "MintCoolMC",
@@ -20,7 +20,7 @@
       },
       {
         "hivebedrock@rainbowpie_ui_module_list.module_item": {
-          "$module_icon_texture": "($rainbowpie_ui_path_home + '/server_icon/hivebedrock')",
+          "$module_icon_texture": "($rainbowpie_ui_path_home + '/server_logo/hivebedrock')",
           "$module_name": "The Hive",
           "$module_version": "1.0",
           "$module_author": "MintCoolMC",
