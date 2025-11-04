@@ -34,7 +34,45 @@
             }
           ],
           "$fast_command_button_text": "Accept",
-          "$fast_command_button_icon": "textures/items/hive/hub/party",
+          "$fast_command_button_icon": "textures/ui/confirm",
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (('\"' + #text - $message_invite_tr - $message_invite_ru - $message_invite_pt - $message_invite_nl - $message_invite_ko - $message_invite_ja - $message_invite_it - $message_invite_fr - $message_invite_es - $message_invite_en - $message_invite_de - $message_invite_cn + '\"') = #text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "party_deny@rainbowpieui_chat.quick_command_button": {
+          "$message_invite_cn": "§b希望你加入 Ta 的队伍！",
+          "$message_invite_de": "§b möchte, dass du seiner/ihrer Party beitrittst!",
+          "$message_invite_en": "§b wants you to join their party!",
+          "$message_invite_es": "§b quiere que te unas a su grupo!",
+          "$message_invite_fr": "§b veut t'ajouter à son équipe !",
+          "$message_invite_it": "§b vuole che tu ti unisca al suo gruppo!",
+          "$message_invite_ja": "§b さんがあなたをパーティーに招待しています！",
+          "$message_invite_ko": "§b이(가) 파티에 가입하고 싶어 합니다!",
+          "$message_invite_nl": "§b wil dat je deelneemt aan zijn/haar groep!",
+          "$message_invite_pt": "§b quer que você entre no grupo dele(a)!",
+          "$message_invite_ru": "§b приглашает вас в свою группу!",
+          "$message_invite_tr": "§b§c, onun grubuna katılmanı istiyor!",
+          "$fast_command_command_bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "('\"' + #text - '§b¡' - $message_invite_tr - $message_invite_ru - $message_invite_pt - $message_invite_nl - $message_invite_ko - $message_invite_ja - $message_invite_it - $message_invite_fr - $message_invite_es - $message_invite_en - $message_invite_de - $message_invite_cn - '§0' - '§1' - '§2' - '§3' - '§4' - '§5' - '§6' - '§7' - '§8' - '§9' - '§a' - '§b' - '§c' - '§d' - '§e' - '§f' - '§g' - '§h' - '§i' - '§j' - '§k' - '§l' - '§m' - '§n' - '§o' - '§p' - '§q' - '§r' - '§s' - '§t' - '§u' - '§v' - '§w' - '§x' - '§y' - '§z' + '\"')",
+              "target_property_name": "#player_name"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('\"' + '/party deny ' + #player_name + '\"')",
+              "target_property_name": "#item_name"
+            }
+          ],
+          "$fast_command_button_text": "Deny",
+          "$fast_command_button_icon": "textures/ui/cancel",
           "visible": false,
           "bindings": [
             {
