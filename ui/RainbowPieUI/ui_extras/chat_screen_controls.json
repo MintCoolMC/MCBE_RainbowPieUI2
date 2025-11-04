@@ -209,6 +209,9 @@
                 "controls": [
                   // add yours here
                   {
+                    "cubecraft_commands@rainbowpie_module_cubecraft.quick_commands": { }
+                  },
+                  {
                     "hivebedrock_commands@rainbowpie_module_hivebedrock.quick_commands": {}
                   },
                   {
@@ -487,6 +490,9 @@
                       "anchor_to": "top_middle",
                       "controls": [
                         // Add yours here
+                        {
+                          "cubecraft_commands@rainbowpie_module_cubecraft.chat_commands": { }
+                        },
                         {
                           "hivebedrock_commands@rainbowpie_module_hivebedrock.chat_commands": { }
                         },

@@ -21,6 +21,7 @@
     "ui/RainbowPieUI/module/hud_selected_item_id.json",
     "ui/RainbowPieUI/module/inventory_actions.json",
     // Server Modules
+    "ui/RainbowPieUI/module/cubecraft.json",
     "ui/RainbowPieUI/module/hivebedrock.json",
 
     "ui/RainbowPieUI/module_lib/hud_item.json",

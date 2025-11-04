@@ -1,0 +1,87 @@
+// VERSION: 2.11.10567.1 (v1.21.120)
+{
+  "namespace": "rainbowpie_module_cubecraft",
+
+  "chat_commands@rainbowpie_module_cubecraft.cubecraft": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", "100%cm" ],
+    "controls": [
+      {
+        "party_accept@rainbowpieui_chat.quick_command_button": {
+          "$message_invite_en_0": "§aTo accept this request, type §e/party accept ",
+          "$message_invite_en_1": "§a or use the Social Menu.",
+          "$fast_command_command_bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "('\"' + #text - $message_invite_en_0 - $message_invite_en_1 - '§0' - '§1' - '§2' - '§3' - '§4' - '§5' - '§6' - '§7' - '§8' - '§9' - '§a' - '§b' - '§c' - '§d' - '§e' - '§f' - '§g' - '§h' - '§i' - '§j' - '§k' - '§l' - '§m' - '§n' - '§o' - '§p' - '§q' - '§r' - '§s' - '§t' - '§u' - '§v' - '§w' - '§x' - '§y' - '§z' + '\"')",
+              "target_property_name": "#player_name"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('\"' + '/party accept ' + #player_name + '\"')",
+              "target_property_name": "#item_name"
+            }
+          ],
+          "$fast_command_button_text": "Accept",
+          "$fast_command_button_icon": "textures/ui/confirm",
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (('\"' + #text - $message_invite_en_0 + '\"') = #text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "party_deny@rainbowpieui_chat.quick_command_button": {
+          "$message_invite_en_0": "§aTo accept this request, type §e/party accept ",
+          "$message_invite_en_1": "§a or use the Social Menu.",
+          "$fast_command_command_bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "('\"' + #text - $message_invite_en_0 - $message_invite_en_1 - '§0' - '§1' - '§2' - '§3' - '§4' - '§5' - '§6' - '§7' - '§8' - '§9' - '§a' - '§b' - '§c' - '§d' - '§e' - '§f' - '§g' - '§h' - '§i' - '§j' - '§k' - '§l' - '§m' - '§n' - '§o' - '§p' - '§q' - '§r' - '§s' - '§t' - '§u' - '§v' - '§w' - '§x' - '§y' - '§z' + '\"')",
+              "target_property_name": "#player_name"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('\"' + '/party deny ' + #player_name + '\"')",
+              "target_property_name": "#item_name"
+            }
+          ],
+          "$fast_command_button_text": "Deny",
+          "$fast_command_button_icon": "textures/ui/cancel",
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (('\"' + #text - $message_invite_en_0 + '\"') = #text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "quick_commands@rainbowpie_module_cubecraft.cubecraft": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", "100%cm" ],
+    "controls": [
+      {
+        "ping@rainbowpieui_chat.quick_command_button": {
+          "$fast_command_command": "/ping",
+          "$fast_command_button_text": "Ping",
+          "ignored": true
+        }
+      }
+    ]
+  },
+
+  "cubecraft": {
+    "ignored": "(not $rainbowpie_ui_module_cubecraft)"
+  }
+}

@@ -269,6 +269,7 @@
 
   // Rainbow Pie UI Internal Modules (Server)
   "$rainbowpie_ui_module_hivebedrock": false,
+  "$rainbowpie_ui_module_cubecraft": false,
 
   // Rainbow Pie UI ModuleFlags
   "$rainbowpie_ui_moduleflag_chest_fastpick_redstone_blocks": true,

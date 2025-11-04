@@ -5,6 +5,20 @@
   "module_list@rainbowpie_ui_module_list.module_list_panel": {
     "controls": [
       {
+        "cubecraft@rainbowpie_ui_module_list.module_item": {
+          "$module_icon_texture": "($rainbowpie_ui_path_home + '/server_icon/cubecraft')",
+          "$module_name": "CubeCraft",
+          "$module_version": "1.0",
+          "$module_author": "MintCoolMC",
+          "$module_description": "CubeCraft Quick Commands",
+          "$module_state_check": "$rainbowpie_ui_module_cubecraft",
+          "$module_max_engine_version": "999999",
+          "$module_max_engine_patch_version": "999999",
+          "$module_min_engine_version": "0",
+          "$module_min_engine_patch_version": "0"
+        }
+      },
+      {
         "hivebedrock@rainbowpie_ui_module_list.module_item": {
           "$module_icon_texture": "($rainbowpie_ui_path_home + '/server_icon/hivebedrock')",
           "$module_name": "The Hive",

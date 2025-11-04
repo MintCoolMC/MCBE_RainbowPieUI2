@@ -15,6 +15,7 @@
         "$rainbowpie_ui_flag_chat_use_ui_font",
         "$rainbowpie_ui_flag_chatui_default_font",
         // Internal Modules
+        "$rainbowpie_ui_module_cubecraft",
         "$rainbowpie_ui_module_hivebedrock"
       ]
     }

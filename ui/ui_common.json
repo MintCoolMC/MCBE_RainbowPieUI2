@@ -1841,6 +1841,7 @@
             "$rainbowpie_ui_flag_server_infomation_description": "© ZIAX LTD 2025",
             "$rainbowpie_ui_flag_custom_server_icon": true,
             "$rainbowpie_ui_flag_custom_server_icon_name": "cubecraft",
+            "$rainbowpie_ui_module_cubecraft": true,
             "$rainbowpie_ui_flag_scoreboard_default_font": true,
             "$rainbowpie_ui_module_chest_fastpick": false,
             "$rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled": false,
