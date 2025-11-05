@@ -2,6 +2,27 @@
 {
   "namespace": "rainbowpie_ui_common",
 
+  "factory_panel": {
+    "type": "collection_panel",
+    "$factory_name|default": "rainbowpie_ui_default_factory",
+    "$factory_control_name|default": "common.empty_panel",
+    "$factory_max_children_size|default": 1,
+    "$factory_variables|default": [],
+    "$factory_property|default": {
+      "#collection_length": 1
+    },
+    "$factory_bindings|default": [],
+
+    "factory": {
+      "name": "$factory_name",
+      "control_name": "$factory_control_name",
+      "max_children_size": "$factory_max_children_size",
+      "factory_variables": "$factory_variables"
+    },
+    "property_bag": "$factory_property",
+    "bindings": "$factory_bindings"
+  },
+
   "editable_label": {
     "type": "edit_box",
     "focus_enabled": true,
