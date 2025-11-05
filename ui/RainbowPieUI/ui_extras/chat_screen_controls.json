@@ -1379,126 +1379,125 @@
     "$always_handle_scrolling": false
   },
 
-  "player_grid_item": {
+  "player_button_content": {
     "type": "panel",
-    "size": [ "100%", 29 ],
+    "size": [ "100%", "100%" ],
     "controls": [
       {
-        "sub_command_button@common_buttons.light_content_button": {
-          "anchor_from": "bottom_middle",
-          "anchor_to": "bottom_middle",
-          "size": [ "100%", "100% - 1px" ],
+        "player_image": {
+          "type": "image",
+          "texture": "#texture",
+          "size": [ 26, 26 ],
+          "offset": [ 1, 0 ],
+          "texture_file_system": "#texture_source",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
           "layer": 2,
-          "$rainbowpie_localui_button_default_alpha": 0,
-          "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_content_button",
-          "$button_image_size": [ "100%", "100%" ],
-          "$pressed_button_name": "button.sub_command",
           "bindings": [
             {
-              "binding_name": "#host_teleport_players_visible",
-              "binding_name_override": "#visible"
+              "binding_name": "#texture",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection"
             },
             {
-              "binding_name": "#gamertag",
+              "binding_name": "#texture_source",
               "binding_type": "collection",
-              "binding_collection_name": "players_collection",
-              "binding_name_override": "#sub_command"
+              "binding_collection_name": "players_collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "#texture_source",
+              "target_property_name": "#texture_file_system"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#texture_source = 'RawPath'))",
+              "target_property_name": "#is_local_picture"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#is_local_picture)",
+              "target_property_name": "#visible"
             }
           ]
         }
       },
       {
-        "background@rainbowpie_ui_common.text_background": {
+        "player_image_local": {
+          "type": "image",
+          "texture": "textures/ui/icon_steve",
+          "size": [ 26, 26 ],
+          "offset": [ 1, 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#texture_source",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#texture_source = 'RawPath'))",
+              "target_property_name": "#is_local_picture"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "#is_local_picture",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "player_name@rainbowpie_ui_common.title_label": {
+          "font_scale_factor": 1.4,
+          "text_alignment": "left",
+          "text": "#gamertag",
+          "size": [ "100% - 32px", "default" ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [ 30, 0 ],
+          "layer": 3,
+          "bindings": [
+            {
+              "binding_name": "#gamertag",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "player_grid_item": {
+    "type": "panel",
+    "size": [ "100%", 29 ],
+    "controls": [
+      {
+        "player_button@rainbowpieui_chat.fast_command_button": {
+          "size": [ "100%", 28 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
-          "size": [ "100%", "100% - 1px" ],
-          "layer": 8,
-          "controls": [
+          "$button_image_size": [ "100%", "100%" ],
+          "$button_content_size": [ "100%", "100%" ],
+          "$fast_command_button_content": "rainbowpieui_chat.player_button_content",
+          "$fast_command_auto_send": false,
+          "$fast_command_command_bindings": [
             {
-              "player_image": {
-                "type": "image",
-                "texture": "#texture",
-                "size": [ 26, 26 ],
-                "offset": [ 1, 0 ],
-                "texture_file_system": "#texture_source",
-                "anchor_from": "left_middle",
-                "anchor_to": "left_middle",
-                "layer": 2,
-                "bindings": [
-                  {
-                    "binding_name": "#texture",
-                    "binding_type": "collection",
-                    "binding_collection_name": "players_collection"
-                  },
-                  {
-                    "binding_name": "#texture_source",
-                    "binding_type": "collection",
-                    "binding_collection_name": "players_collection"
-                  },
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "#texture_source",
-                    "target_property_name": "#texture_file_system"
-                  },
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "(not (#texture_source = 'RawPath'))",
-                    "target_property_name": "#is_local_picture"
-                  },
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "(not (#is_local_picture)",
-                    "target_property_name": "#visible"
-                  }
-                ]
-              }
+              "binding_name": "#message_text_box_content"
             },
             {
-              "player_image_local": {
-                "type": "image",
-                "texture": "textures/ui/icon_steve",
-                "size": [ 26, 26 ],
-                "offset": [ 1, 0 ],
-                "anchor_from": "left_middle",
-                "anchor_to": "left_middle",
-                "layer": 2,
-                "bindings": [
-                  {
-                    "binding_name": "#texture_source",
-                    "binding_type": "collection",
-                    "binding_collection_name": "players_collection"
-                  },
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "(not (#texture_source = 'RawPath'))",
-                    "target_property_name": "#is_local_picture"
-                  },
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "#is_local_picture",
-                    "target_property_name": "#visible"
-                  }
-                ]
-              }
+              "binding_name": "#gamertag",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection"
             },
             {
-              "player_name@rainbowpie_ui_common.title_label": {
-                "font_scale_factor": 1.4,
-                "text_alignment": "left",
-                "text": "#gamertag",
-                "size": [ "100% - 32px", "default" ],
-                "anchor_from": "left_middle",
-                "anchor_to": "left_middle",
-                "offset": [ 30, 0 ],
-                "layer": 3, 
-                "bindings": [
-                  {
-                    "binding_name": "#gamertag",
-                    "binding_type": "collection",
-                    "binding_collection_name": "players_collection"
-                  }
-                ]
-              }
+              "binding_type": "view",
+              "source_property_name": "('\"' + #message_text_box_content + #gamertag + '\"')",
+              "target_property_name": "#item_name"
             }
           ]
         }
