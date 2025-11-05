@@ -139,6 +139,8 @@
   "$rainbowpie_ui_flag_inventory_compass_postion": 1, // 0:TOP 1:BOTTOM
   "$rainbowpie_ui_flag_inventory_stack_count_font": "OldSmoothFont",
   "$rainbowpie_ui_flag_disable_custom_chat_ui": false,
+  "$rainbowpie_ui_flag_chat_chat_commands_enabled": true,
+  "$rainbowpie_ui_flag_chat_quick_commands_enabled": true,
 
   // Item ID Flags
   "$rainbowpie_ui_flag_item_clock_id": 419,

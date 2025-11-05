@@ -173,6 +173,7 @@
   "quick_command_panel": {
     "type": "panel",
     "size": [ "100%", "100%c" ],
+    "ignored": "(not $rainbowpie_ui_flag_chat_quick_commands_enabled)",
     "bindings": [
       {
         "binding_name": "#host_main_visible"
@@ -480,6 +481,7 @@
               "chat_command_panel": {
                 "type": "panel",
                 "size": [ "100%", "100%c" ],
+                "ignored": "(not $rainbowpie_ui_flag_chat_chat_commands_enabled)",
                 "controls": [
                   {
                     "commands": {
