@@ -143,11 +143,11 @@
   "$rainbowpie_ui_flag_chat_quick_commands_enabled": true,
 
   // Item ID Flags
-  "$rainbowpie_ui_flag_item_clock_id": 419,
-  "$rainbowpie_ui_flag_item_compass_id": 417,
-  "$rainbowpie_ui_flag_item_recovery_compass_id": 682,
+  "$rainbowpie_ui_flag_item_clock_id": 418,
+  "$rainbowpie_ui_flag_item_compass_id": 416,
+  "$rainbowpie_ui_flag_item_recovery_compass_id": 681,
   "$rainbowpie_ui_flag_item_chest": 54,
-  "$rainbowpie_ui_flag_item_hopper": 560,
+  "$rainbowpie_ui_flag_item_hopper": 559,
   "$rainbowpie_ui_flag_item_dropper": 125,
   "$rainbowpie_ui_flag_item_dispenser": 23,
   "$rainbowpie_ui_flag_item_crafter": -313,
