@@ -293,7 +293,6 @@
                   },
                   {
                     "tellraw@rainbowpieui_chat.quick_command_button": {
-                      "$command_text_0": "",
                       "$fast_command_command_bindings": [
                         {
                           "binding_name": "#message_text_box_content"
