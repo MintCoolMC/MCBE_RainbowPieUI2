@@ -2,6 +2,10 @@
 {
   "namespace": "chat",
 
+  "chat_bottom_panel/chat_settings": {
+    "ignored": "($rainbowpie_ui_flag_b3c44822)"
+  },
+
   "messages_stack_panel": {
     "factory": {
       "name": "messages_factory",
@@ -30,18 +34,6 @@
   },
 
   "chat_screen_content/popup_factory": {
-    "$rainbowpie_localui_this_control_ids": {
-      "chat_setting_popup": "@chat_settings.chat_settings_popup"
-    },
-    "control_ids": "$rainbowpie_localui_this_control_ids",
-    "variables": [
-      {
-        "requires": "$rainbowpie_ui_flag_b3c44822",
-        "$rainbowpie_localui_this_control_ids": {
-          "chat_setting_popup": "@rainbowpieui_chat.chat_settings_panel"
-        }
-      }
-    ]
   },
 
   "auto_complete_panel_contents_with_item/auto_complete_item_renderer": {
@@ -212,6 +204,9 @@
         "operation": "insert_front",
         "value": [
           {
+            "chat_settings_factory@rainbowpieui_chat.chat_settings_factory_panel": {}
+          },
+          {
             "test_fast_command@rainbowpieui_chat.fast_command_button": {
               "size": [ 24, 24 ],
               "$fast_command_command": "/me fast_command",
@@ -254,13 +249,23 @@
                   "chat_messages_padding": {
                     "type": "panel",
                     "size": [ 150, "100%" ],
-                    "ignored": "(not $rainbowpie_ui_feature_command_chat)",
                     "visible": false,
                     "bindings": [
                       {
                         "binding_type": "view",
                         "source_control_name": "open_second_chat",
-                        "source_property_name": "(#toggle_state)",
+                        "source_property_name": "#toggle_state",
+                        "target_property_name": "#second_chat_opened"
+                      },
+                      {
+                        "binding_type": "view",
+                        "source_control_name": "open_chat_settings",
+                        "source_property_name": "#toggle_state",
+                        "target_property_name": "#chat_settings_opened"
+                      },
+                      {
+                        "binding_type": "view",
+                        "source_property_name": "(#second_chat_opened or #chat_settings_opened)",
                         "target_property_name": "#visible"
                       }
                     ]
@@ -268,9 +273,6 @@
                 }
               ]
             }
-          },
-          {
-            "chat_settings_animation_panel@rainbowpieui_chat.chat_settings_animation_panel": {}
           },
           {
             "maximized_input_dialog_panel@rainbowpieui_chat.maximized_input_dialog_panel": {}
@@ -383,6 +385,19 @@
               "$pressed_button_name": "button.chat_next_message",
               "size": [ 26, 27 ],
               "ignored": "(not $touch)"
+            }
+          }
+        ]
+      },
+      {
+        "control_name": "chat_settings",
+        "operation": "insert_after",
+        "value": [
+          {
+            "rainbowpie_chat_settings@rainbowpieui_chat.chat_settings_button": {
+              "$toggle_group_forced_index": 1,
+              "$toggle_view_binding_name": "open_chat_settings",
+              "ignored": "(not $rainbowpie_ui_flag_b3c44822)"
             }
           }
         ]

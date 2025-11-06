@@ -2,6 +2,65 @@
 {
   "namespace": "rainbowpieui_chat",
 
+  "chat_settings_factory_panel": {
+    "type": "panel",
+    "size": [ "100%", "100% - 47px" ],
+    "offset": [ 0, 20 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "chat_settings_factory@rainbowpie_ui_common.factory_panel": {
+          "$factory_name": "rainbowpie_chat_settings_factory",
+          "$factory_control_name": "rainbowpieui_chat.chat_settings_panel",
+          "$factory_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "open_chat_settings",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#chat_settings_opened"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#chat_settings_opened * 1)",
+              "target_property_name": "#collection_length"
+            }
+          ]
+        }
+      },
+      {
+        "animation_panel_factory@rainbowpie_ui_common.factory_panel": {
+          "$factory_name": "rainbowpie_chat_settings_factory",
+          "$factory_control_name": "rainbowpieui_chat.chat_settings_animation_panel",
+          "$factory_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "open_chat_settings",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#chat_settings_opened"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not #chat_settings_opened) * 1)",
+              "target_property_name": "#collection_length"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "chat_settings_button@rainbowpie_ui_common.toggle_button": {
+    "size": [ 26, 27 ],
+    "$button_image_size": [ "100% - 1px", "100% - 2px" ],
+    "$focus_id": "chat_settings_button_focus_id",
+    "$focus_override_up": "coordinate_dropdown_focus_id",
+    "$button_content": "chat.gear_image",
+    "$button_tts_header": "chat.settings",
+    "$toggle_name": "rainbowpie_chat_settings_toggle",
+    "$toggle_group_default_selected": -1
+  },
+
   "quick_command_button_panel": {
     "type": "panel",
     "size": [ "100%c", "100%c" ],
@@ -557,33 +616,13 @@
     "to": [ 0, 0 ]
   },
 
-  "chat_settings_panel_hidden": {
-    "anim_type": "offset",
-    "duration": 0,
-    "to": [ "200%", 0 ],
-    "from": [ "200%", 0 ],
-    "play_event": "button.close_chat_settings"
-  },
-
-  "chat_settings_panel_hidden2": {
-    "anim_type": "offset",
-    "duration": 0,
-    "to": [ "200%", 0 ],
-    "from": [ "200%", 0 ]
-  },
-
   "chat_settings_panel_hidden_animation": {
     "anim_type": "offset",
     "easing": "$rainbowpie_ui_animation_transition_effect_entrance",
+    "destroy_at_end": "chat_settings_animation_panel",
     "duration": "$rainbowpie_ui_animation_transition_time",
     "from": [ 0, 0 ],
-    "to": [ "100%x", 0 ],
-    "play_event": "button.close_chat_settings",
-    "next": "@rainbowpieui_chat.chat_settings_panel_hidden2"
-  },
-
-  "chat_settings_panel_hidden_animation2@rainbowpieui_chat.chat_settings_panel_hidden_animation": {
-    "play_event": "button.reset_chat_settings"
+    "to": [ "100%x", 0 ]
   },
 
   "chat_settings_animation_panel": {
@@ -596,13 +635,9 @@
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "size": [ 150, "100%" ],
-          "offset": [ "200%", 0 ],
           "layer": 102,
-          "animation_reset_name": "button.open_chat_settings",
           "anims": [
-            "@rainbowpieui_chat.chat_settings_panel_hidden2",
-            "@rainbowpieui_chat.chat_settings_panel_hidden_animation",
-            "@rainbowpieui_chat.chat_settings_panel_hidden_animation2"
+            "@rainbowpieui_chat.chat_settings_panel_hidden_animation"
           ],
           "controls": [
             {
@@ -633,124 +668,63 @@
     "layer": 100,
     "controls": [
       {
-        "modal_input_panel@rainbowpieui_chat.modal_input_panel": {
+        "chat_settings_background@rainbowpie_ui_common.title_background": {
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "size": [ 150, "100%" ],
+          "offset": [ 0, 0 ],
+          "layer": 102,
+          "anims": [
+            "@rainbowpieui_chat.chat_settings_panel_animation"
+          ],
           "controls": [
             {
-              "chat_settings_background@rainbowpie_ui_common.title_background": {
-                "anchor_from": "right_middle",
-                "anchor_to": "right_middle",
-                "size": [ 150, "100%" ],
-                "offset": [ 0, 0 ],
-                "layer": 102,
-                "anims": [
-                  "@rainbowpieui_chat.chat_settings_panel_animation",
-                  "@rainbowpieui_chat.chat_settings_panel_hidden"
-                ],
+              "modal_input_panel@rainbowpieui_chat.modal_input_panel": {
                 "controls": [
                   {
-                    "modal_input_panel@rainbowpieui_chat.modal_input_panel": {
+                    "header_background@rainbowpie_ui_common.text_background": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "size": [ "100%", 20 ],
+                      "layer": 24,
                       "controls": [
                         {
-                          "header_background@rainbowpie_ui_common.text_background": {
-                            "anchor_from": "top_middle",
-                            "anchor_to": "top_middle",
-                            "size": [ "100%", 20 ],
-                            "layer": 24,
-                            "controls": [
-                              {
-                                "back_button_content_panel@rainbowpie_ui_controls.back_content_panel": {
-                                  "$back_button_text": "gui.exit",
-                                  "$back_button_pressed_button_name": "button.close_chat_settings",
-                                  "offset": [ 2, 0 ],
-                                  "layer": 24
-                                }
-                              },
-                              {
-                                "title@rainbowpie_ui_common.title_label": {
-                                  "text": "chat.settings",
-                                  "layer": 20
-                                }
-                              }
-                            ]
+                          "title@rainbowpie_ui_common.title_label": {
+                            "text": "chat.settings",
+                            "layer": 20
                           }
-                        },
-                        {
-                          "chat_setting_scrolling_panel@chat_settings.chat_setting_scrolling_panel": {
-                            "$rainbowpie_localui_toggle_enabled": true,
-                            "$rainbowpie_localui_sliderbar_enabled": true,
-                            "$rainbowpie_localui_scrollbar_enabled": true,
-                            "$scroll_size": [ 4, "100% - 4px" ],
-                            "$scroll_bar_left_padding_size": [ 1.5, 0 ],
-                            "$scroll_bar_right_padding_size": [ 0.5, 0 ],
-                            "anchor_from": "bottom_middle",
-                            "anchor_to": "bottom_middle",
-                            "size": [ "100% - 4px", "100% - 20px" ],
-                            "layer": 12
-                          }
-                        }
-                      ],
-                      "button_mappings": [
-                        {
-                          "from_button_id": "button.menu_select",
-                          "to_button_id": "button.menu_select",
-                          "mapping_type": "pressed"
-                        },
-                        {
-                          "from_button_id": "button.menu_ok",
-                          "to_button_id": "button.menu_ok",
-                          "mapping_type": "pressed"
                         }
                       ]
                     }
+                  },
+                  {
+                    "chat_setting_scrolling_panel@chat_settings.chat_setting_scrolling_panel": {
+                      "$rainbowpie_localui_toggle_enabled": true,
+                      "$rainbowpie_localui_sliderbar_enabled": true,
+                      "$rainbowpie_localui_scrollbar_enabled": true,
+                      "$scroll_size": [ 4, "100% - 4px" ],
+                      "$scroll_bar_left_padding_size": [ 1.5, 0 ],
+                      "$scroll_bar_right_padding_size": [ 0.5, 0 ],
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "size": [ "100% - 4px", "100% - 20px" ],
+                      "layer": 12
+                    }
+                  }
+                ],
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.menu_select",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.menu_ok",
+                    "mapping_type": "pressed"
                   }
                 ]
               }
-            }
-          ],
-          "button_mappings": [
-            {
-              "from_button_id": "button.menu_select",
-              "to_button_id": "button.close_chat_settings",
-              "mapping_type": "pressed"
-            },
-            {
-              "from_button_id": "button.menu_secondary_select",
-              "to_button_id": "button.menu_secondary_select",
-              "mapping_type": "pressed"
-            },
-            {
-              "from_button_id": "button.menu_ok",
-              "to_button_id": "button.close_chat_settings",
-              "mapping_type": "pressed"
-            },
-            {
-              "from_button_id": "button.menu_cancel",
-              "to_button_id": "button.close_chat_settings",
-              "mapping_type": "global"
-            },
-            {
-              "from_button_id": "button.menu_up",
-              "to_button_id": "button.menu_up",
-              "mapping_type": "global",
-              "scope": "view"
-            },
-            {
-              "from_button_id": "button.menu_down",
-              "to_button_id": "button.menu_down",
-              "mapping_type": "global",
-              "scope": "view"
-            },
-            {
-              "from_button_id": "button.menu_left",
-              "to_button_id": "button.menu_left",
-              "mapping_type": "global",
-              "scope": "view"
-            },
-            {
-              "from_button_id": "button.menu_right",
-              "to_button_id": "button.menu_right",
-              "mapping_type": "global",
-              "scope": "view"
             }
           ]
         }
@@ -1619,13 +1593,6 @@
     "size": [ 170, "100% - 47px" ],
     "offset": [ 0, 20 ],
     "layer": 150,
-    "animation_reset_name": "button.close_chat_settings",
-    "anims": [
-      "@rainbowpieui_chat.chat_messages_and_playerlist_panel_shown2",
-      "@rainbowpieui_chat.chat_messages_and_playerlist_panel_hidden2",
-      "@rainbowpieui_chat.chat_messages_and_playerlist_panel_shown",
-      "@rainbowpieui_chat.chat_messages_and_playerlist_panel_hidden"
-    ],
     "controls": [
       {
         "stack_panel": {
@@ -1645,6 +1612,17 @@
                     "binding_type": "view",
                     "source_control_name": "close_second_chat",
                     "source_property_name": "#toggle_state",
+                    "target_property_name": "#second_chat_closed"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "open_chat_settings",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#chat_settings_opened"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#second_chat_closed or #chat_settings_opened)",
                     "target_property_name": "#visible"
                   }
                 ]
@@ -1947,40 +1925,55 @@
         }
       },
       {
-        "open_second_chat_button@rainbowpieui_chat.second_chat_toggle_base": {
-          "size": [ 20, 25 ],
-          "layer": 20,
-          "anchor_from": "right_middle",
-          "anchor_to": "right_middle",
-          "$button_text": "<",
-          "$toggle_group_forced_index": 1000,
-          "$toggle_view_binding_name": "open_second_chat",
+        "second_chat_button_panel": {
+          "type": "panel",
           "bindings": [
             {
               "binding_type": "view",
-              "source_control_name": "open_second_chat",
+              "source_control_name": "open_chat_settings",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
             }
-          ]
-        }
-      },
-      {
-        "close_second_chat_button@rainbowpieui_chat.second_chat_toggle_base": {
-          "size": [ 20, 25 ],
-          "offset": [ -150, 0 ],
-          "layer": 20,
-          "$button_text": ">",
-          "anchor_from": "right_middle",
-          "anchor_to": "right_middle",
-          "$toggle_group_forced_index": 1001,
-          "$toggle_view_binding_name": "close_second_chat",
-          "bindings": [
+          ],
+          "controls": [
             {
-              "binding_type": "view",
-              "source_control_name": "open_second_chat",
-              "source_property_name": "(#toggle_state)",
-              "target_property_name": "#visible"
+              "open_second_chat_button@rainbowpieui_chat.second_chat_toggle_base": {
+                "size": [ 20, 25 ],
+                "layer": 20,
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "$button_text": "<",
+                "$toggle_group_forced_index": 1000,
+                "$toggle_view_binding_name": "open_second_chat",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "open_second_chat",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "close_second_chat_button@rainbowpieui_chat.second_chat_toggle_base": {
+                "size": [ 20, 25 ],
+                "offset": [ -150, 0 ],
+                "layer": 20,
+                "$button_text": ">",
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "$toggle_group_forced_index": 1001,
+                "$toggle_view_binding_name": "close_second_chat",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "open_second_chat",
+                    "source_property_name": "(#toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
             }
           ]
         }

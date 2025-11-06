@@ -2,6 +2,32 @@
 {
   "namespace": "rainbowpie_ui_common",
 
+  "toggle_button@common_toggles.light_ui_toggle": {
+    "$unchecked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked",
+    "$checked_control": "rainbowpie_ui_toggle.toggle_content_button_checked",
+    "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_hover",
+    "$checked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_hover",
+    "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked",
+    "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_unchecked_locked_hover",
+    "$checked_locked_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked",
+    "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_content_button_checked_locked_hover",
+
+    "$button_content": "common.empty_panel",
+    "$button_type_panel": "common_buttons.new_ui_binding_button_label",
+    "$button_text_binding_type": "none",
+    "$button_binding_condition": "none",
+    "$button_text_grid_collection_name": "none",
+    "$button_text": "",
+    "$button_offset": [ 0, 0 ],
+
+    "$toggle_name": "rainbowpie_ui_default_toggle",
+    "$toggle_group_default_selected": -1,
+
+    "$toggle_group_forced_index": 0,
+
+    "$toggle_view_binding_name": ""
+  },
+
   "factory_panel": {
     "type": "collection_panel",
     "$factory_name|default": "rainbowpie_ui_default_factory",
