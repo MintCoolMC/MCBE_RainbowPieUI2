@@ -1543,42 +1543,6 @@
     "$always_handle_scrolling": false
   },
 
-  "chat_messages_and_playerlist_panel_hidden": {
-    "ignored": "$rainbowpie_ui_flag_82f66bc6",
-    "anim_type": "offset",
-    "duration": 0,
-    "to": [ "200%", 20 ],
-    "from": [ "200%", 20 ],
-    "play_event": "button.open_chat_settings"
-  },
-
-  "chat_messages_and_playerlist_panel_shown": {
-    "ignored": "$rainbowpie_ui_flag_82f66bc6",
-    "anim_type": "offset",
-    "duration": 0,
-    "to": [ 0, 20 ],
-    "from": [ 0, 20 ]
-  },
-
-  "chat_messages_and_playerlist_panel_hidden2": {
-    "ignored": "(not $rainbowpie_ui_flag_82f66bc6)",
-    "anim_type": "offset",
-    "easing": "$rainbowpie_ui_animation_transition_effect_entrance",
-    "duration": "$rainbowpie_ui_animation_transition_time",
-    "to": [ -150, 20 ],
-    "from": [ 0, 20 ],
-    "play_event": "button.open_chat_settings"
-  },
-
-  "chat_messages_and_playerlist_panel_shown2": {
-    "ignored": "(not $rainbowpie_ui_flag_82f66bc6)",
-    "anim_type": "offset",
-    "easing": "$rainbowpie_ui_animation_transition_effect_entrance",
-    "duration": "$rainbowpie_ui_animation_transition_time",
-    "to": [ 0, 20 ],
-    "from": [ -150, 20 ]
-  },
-
   "color_picker_icon": {
     "type": "image",
     "size": [ 16, 16 ],
