@@ -8,6 +8,7 @@
     "offset": [ 0, 20 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
+    "ignored": "(not $rainbowpie_ui_flag_b3c44822)",
     "controls": [
       {
         "chat_settings_factory@rainbowpie_ui_common.factory_panel": {
