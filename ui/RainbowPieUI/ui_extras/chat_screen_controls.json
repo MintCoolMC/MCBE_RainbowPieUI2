@@ -238,8 +238,17 @@
         "binding_name": "#host_main_visible"
       },
       {
+        "binding_name": "#host_teleport_main_visible"
+      },
+      {
+        "binding_name": "#host_time_visible"
+      },
+      {
+        "binding_name": "#host_weather_visible"
+      },
+      {
         "binding_type": "view",
-        "source_property_name": "(not #host_main_visible)",
+        "source_property_name": "(not (#host_main_visible or #host_teleport_main_visible or #host_time_visible or #host_weather_visible))",
         "target_property_name": "#visible"
       }
     ],
