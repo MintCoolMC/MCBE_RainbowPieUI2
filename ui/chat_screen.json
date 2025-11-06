@@ -68,17 +68,21 @@
             "binding_collection_name": "auto_complete"
           },
           {
-            "binding_name": "#host_teleport_main_visible"
-          },
-          {
-            "binding_name": "#host_time_visible"
-          },
-          {
-            "binding_name": "#host_weather_visible"
+            "binding_type": "view",
+            "source_property_name": "('\"' + #auto_complete_text - '\n' - '§0' - '§1' - '§2' - '§3' - '§4' - '§5' - '§6' - '§7' - '§8' - '§9' - '§a' - '§b' - '§c' - '§d' - '§e' - '§f' - '§g' - '§h' - '§i' - '§j' - '§k' - '§l' - '§m' - '§n' - '§o' - '§p' - '§q' - '§r' - '§s' - '§t' - '§u' - '§v' - '§w' - '§x' - '§y' - '§z' + '\"')",
+            "target_property_name": "#formatted_auto_complete_text"
           },
           {
             "binding_type": "view",
-            "source_property_name": "(not (#auto_complete_text = '') and not #host_teleport_main_visible and not #host_time_visible and not #host_weather_visible)",
+            "source_property_name": "('cmd:' + #formatted_auto_complete_text)",
+            "target_property_name": "#formatted_command_text"
+          },
+          {
+            "binding_name": "#is_using_gamepad"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(not ((#formatted_auto_complete_text = '') or (#formatted_auto_complete_text = '...') or (('%.5s' * #formatted_command_text) = 'cmd:/')) and not #is_using_gamepad)",
             "target_property_name": "#enabled"
           }
         ]
