@@ -466,21 +466,11 @@
                 "$tooltip_text_binding_name": "Now you can use your CPU to fry eggs! :D",
                 "bindings": [
                   {
-                    "binding_name": "#render_distance_slider_label"
+                    "binding_name": "#render_distance"
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "(not ((#render_distance_slider_label - '96 ') = #render_distance_slider_label))",
-                    "target_property_name": "#is_96_distance"
-                  },
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "(not ((#render_distance_slider_label - '96+ ') = #render_distance_slider_label))",
-                    "target_property_name": "#is_96plus_distance"
-                  },
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "(#is_96_distance or #is_96plus_distance)",
+                    "source_property_name": "(#render_distance > 90)",
                     "target_property_name": "#visible"
                   }
                 ]
@@ -500,29 +490,13 @@
                 "$tooltip_chevron_anchor": "top_right",
                 "$tooltip_popup_chevron_offset": [ "-30%x", "-10px" ],
                 "$tooltip_popup_chevron_texture": "textures/ui/tooltip_inverted_chevron",
-                "property_bag": {
-                  "#is_96_distance": false,
-                  "#is_96plus_distance": false
-                },
                 "bindings": [
                   {
-                    "binding_name": "#render_distance_slider_label"
+                    "binding_name": "#render_distance"
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "(not ((#render_distance_slider_label - '96 ') = #render_distance_slider_label))",
-                    "target_property_name": "#is_96_distance",
-                    "ignored": "(not $rainbowpie_ui_flag_3520da91)"
-                  },
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "(not ((#render_distance_slider_label - '96+ ') = #render_distance_slider_label))",
-                    "target_property_name": "#is_96plus_distance",
-                    "ignored": "(not $rainbowpie_ui_flag_3520da91)"
-                  },
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "(not (#is_96_distance or #is_96plus_distance))",
+                    "source_property_name": "(#render_distance < 91)",
                     "target_property_name": "#visible"
                   }
                 ]
