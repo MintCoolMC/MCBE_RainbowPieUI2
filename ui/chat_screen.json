@@ -352,26 +352,6 @@
         "operation": "insert_after",
         "value": [
           {
-            "autocompleteback@common_buttons.light_text_button": {
-              "$button_image_size": [ "100% - 1px", "100% - 2px" ],
-              "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-              "$button_text": "TAB▲",
-              "$pressed_button_name": "button.chat_autocomplete_back",
-              "size": [ 26, 27 ],
-              "ignored": "(not $touch)"
-            }
-          },
-          {
-            "autocomplete@common_buttons.light_text_button": {
-              "$button_image_size": [ "100% - 1px", "100% - 2px" ],
-              "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
-              "$button_text": "TAB▼",
-              "$pressed_button_name": "button.chat_autocomplete",
-              "size": [ 26, 27 ],
-              "ignored": "(not $touch)"
-            }
-          },
-          {
             "previous@common_buttons.light_text_button": {
               "$button_image_size": [ "100% - 1px", "100% - 2px" ],
               "$button_state_panel": "rainbowpie_ui_button.rainbowpie_ui_text_button",
