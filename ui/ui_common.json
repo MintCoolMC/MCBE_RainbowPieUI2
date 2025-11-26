@@ -1896,7 +1896,8 @@
             "$rainbowpie_ui_module_hivebedrock": true,
             "$rainbowpie_ui_module_chest_fastpick": false,
             "$rainbowpie_ui_flag_19efcc11": false,
-            "$rainbowpie_ui_flag_9ce040c1": false
+            "$rainbowpie_ui_flag_9ce040c1": false,
+            "$rainbowpie_ui_moduleflag_inventory_actions_drop_all_item_enabled": false
           },
           // Better Bedrock UI
           {
