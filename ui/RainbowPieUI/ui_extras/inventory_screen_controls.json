@@ -1549,7 +1549,7 @@
                 "anchor_from": "bottom_middle",
                 "size": [ "70.23809523809524%", "40.22346368715084%" ], // 118x72
                 "offset": [ 0, "-45.25139664804469%"],
-                "visible": "($top_half_variant = 'crafting.crafting_panel_top_half')",
+                "ignored": "(not ($top_half_variant = 'crafting.crafting_panel_top_half'))",
                 "controls": [
                   {
                     "crafting_label@crafting.crafting_label": {
@@ -1718,7 +1718,7 @@
                 "anchor_from": "bottom_middle",
                 "size": [ "96.42857142857143%", "40.22346368715084%" ], // 162x72
                 "offset": [ 0, "-45.25139664804469%"],
-                "visible": "($top_half_variant = 'crafting.survival_panel_top_half')",
+                "ignored": "(not ($top_half_variant = 'crafting.survival_panel_top_half'))",
                 "controls": [
                   {
                     "crafting_panel": {

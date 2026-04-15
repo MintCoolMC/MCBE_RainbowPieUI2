@@ -1106,7 +1106,8 @@
         "value": [
           {
             "requires": "($screen_content = 'common.base_screen_empty_panel')",
-            "$rainbowpie_localui_modified": true
+            "$rainbowpie_localui_modified": true,
+            "$rainbowpie_localui_screenbackground_ingamebg_ignored": true
           },
           // Zeqa Network
           {
